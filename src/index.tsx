@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { AppContainer } from 'react-hot-loader'
 
 // Your top level component
 import App from './App'
@@ -14,13 +13,8 @@ if (typeof document !== 'undefined') {
     ? ReactDOM.render
     : ReactDOM.hydrate || ReactDOM.render
 
-  const render = Component => {
-    renderMethod(
-      <AppContainer>
-        <Component />
-      </AppContainer>,
-      document.getElementById('root')
-    )
+  const render = (Component: Function) => {
+    renderMethod(<Component />, document.getElementById('root'))
   }
 
   // Render!

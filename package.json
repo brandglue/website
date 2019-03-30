@@ -8,20 +8,30 @@
     "serve": "serve dist -p 3000 -s"
   },
   "dependencies": {
-    "@babel/core": "^7.0.0-0",
-    "@types/react": "^16.8.8",
-    "axios": "^0.18.0",
+    "@reach/router": "1.2.1",
     "netlify-cms": "^2.9.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-hot-loader": "^4.3.12",
     "react-static": "^6.0.18",
     "react-static-plugin-styled-components": "^6.3.0",
-    "react-static-plugin-typescript": "^3.2.0",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
+    "@types/node": "^11.12.2",
+    "@types/reach__router": "^1.2.3",
+    "@types/react": "^16.8.10",
+    "@types/react-dom": "^16.8.3",
+    "@types/react-hot-loader": "^4.1.0",
+    "@types/styled-components": "^4.1.12",
+    "@types/webpack-env": "^1.13.9",
     "eslint-config-react-tools": "1.x.x",
+    "react-static-plugin-typescript": "^3.2.0",
     "serve": "^10.1.1"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all"
   }
 }

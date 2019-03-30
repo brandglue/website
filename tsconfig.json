@@ -1,19 +1,31 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
-    "target": "es2015",
-    "module": "esnext",
-    "lib": ["es2015", "dom"],
-    "moduleResolution": "node",
-    "skipLibCheck": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "allowJs": true,
-    "jsx": "react",
-    "sourceMap": true,
-    "removeComments": false,
     "strict": true,
+
+    // transpilation options
     "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": ["dom", "es2015", "es2016"],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es2015",
+
+    // typechecking options
+    "allowJs": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+  
+    // path resolution
     "baseUrl": "./",
-    "paths": {},
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@theme/*": ["src/theme/*"],
+    },
   },
+  "exclude": ["dist/**/*", "public/**/*", "node_modules"]
 }
