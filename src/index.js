@@ -13,10 +13,11 @@ if (typeof document !== 'undefined') {
   const renderMethod = module.hot
     ? ReactDOM.render
     : ReactDOM.hydrate || ReactDOM.render
-  const render = Comp => {
+
+  const render = Component => {
     renderMethod(
       <AppContainer>
-        <Comp />
+        <Component />
       </AppContainer>,
       document.getElementById('root')
     )
