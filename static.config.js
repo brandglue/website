@@ -10,14 +10,5 @@ export default {
 
   entry: path.join(__dirname, 'src', 'index.tsx'),
   
-  getRoutes: async () => [
-    {
-      path: '/',
-      component: 'src/pages/Homepage',
-    },
-    {
-      path: 'about',
-      component: 'src/pages/About',
-    }
-  ],
+  getRoutes: async () => [],
 };
