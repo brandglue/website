@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
-export default () => {
+export const About: FunctionComponent = () => {
   return (
     <div>
       Cool about page
     </div>
   );
 }
+
+export default About;

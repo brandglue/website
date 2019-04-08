@@ -7,6 +7,38 @@ const colorMap = {
   mediumGray: '#888',
 }
 
+export interface ITheme {
+  colors: {
+    primary: string;
+    secondary: string;
+    blue: string;
+    darkBlue: string;
+    gold: string;
+    black: string;
+    white: string;
+    mediumGray: string;
+  }
+  fontFamily: string;
+  fontSize: {
+    h1: number;
+    h2: number;
+    h3: number;
+    h4: number;
+    medium: number;
+  }
+  padding: {
+    page: number;
+    small: number;
+    medium: number;
+    large: number;
+  }
+  margin: {
+    small: number;
+    medium: number;
+    large: number;
+  }
+}
+
 export default {
   colors: {
     primary: colorMap.blue,

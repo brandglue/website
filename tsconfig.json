@@ -23,9 +23,11 @@
     "baseUrl": "./",
     "paths": {
       "@components/*": ["src/components/*"],
+      "@constants/*": ["src/constants/*"],
+      "@models/*": ["src/models/*"],
       "@pages/*": ["src/pages/*"],
       "@theme/*": ["src/theme/*"],
     },
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
 }

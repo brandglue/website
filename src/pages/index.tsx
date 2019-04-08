@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
 
-export const Homepage = () => (
+export const Homepage: FunctionComponent = () => (
   <Banner>
     <TaglineWrapper>
       <PrimaryTagline1>We are a</PrimaryTagline1>

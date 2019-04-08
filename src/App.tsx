@@ -4,7 +4,7 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import theme from './theme/Theme';
+import theme from './theme/theme';
 
 class App extends Component {
   render() {
@@ -12,7 +12,7 @@ class App extends Component {
       <ThemeProvider theme={theme}>
         <RootStyles>
           <Root>
-            <Header />
+            <Header logo='test'/>
             <Routes />
             <Footer />
           </Root>
@@ -22,7 +22,7 @@ class App extends Component {
   }
 }
 
-// todo: figure out using the css`` function here
+// TODO: figure out using the css`` function here
 const RootStyles = styled.div`
   background: ${({theme}) => theme.colors.white};
   color: ${({theme}) => theme.colors.black};

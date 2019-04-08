@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { Link } from '@reach/router'
-import styled from 'styled-components';
 
-export const Header = () => (
+import { ROUTES } from '@constants/routes';
+import styled from '@theme/styled';
+
+interface IOwnProps {
+  logo: string
+}
+
+export const Header: FunctionComponent<IOwnProps> = ({ logo }) => (
   <Wrapper>
-    <Logo to="/">
-      <img src='' alt='BrandGlue logo' />
+    <Logo to={`/`}>
+      <img src={logo} alt='BrandGlue logo' />
     </Logo>
     <Menu>
-      <StyledLink to="/about">About</StyledLink>
-      <StyledLink to="/services">Services</StyledLink>
-      <StyledLink to="/case-studies">Case Studies</StyledLink>
-      <StyledLink to="/blog">Blog</StyledLink>
-      <StyledLink to="/contact">Contact</StyledLink>
+      <StyledLink to={`/${ROUTES.ABOUT}`}>About</StyledLink>
+      <StyledLink to={`/${ROUTES.SERVICES}`}>Services</StyledLink>
+      <StyledLink to={`/${ROUTES.CASE_STUDIES}`}>Case Studies</StyledLink>
+      <StyledLink to={`/${ROUTES.BLOG}`}>Blog</StyledLink>
+      <StyledLink to={`/${ROUTES.CONTACT}`}>Contact</StyledLink>
     </Menu>
   </Wrapper>
 );
@@ -32,7 +38,6 @@ const Menu = styled.nav`
   flex: 0 1 80%;
 `;
 
-// todo: extend Link
 const StyledLink = styled(Link)`
   text-transform: uppercase;
   margin-right: ${({theme}) => theme.margin.medium}px;
