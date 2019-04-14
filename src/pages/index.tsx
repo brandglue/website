@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react';
-import styled from 'styled-components';
+
+import styled, { css } from '@theme/styled';
 
 export const Homepage: FunctionComponent = () => (
   <Banner>
@@ -25,7 +26,11 @@ const TaglineWrapper = styled.div`
 `;
 
 const PrimaryTagline1 = styled.div`
-  background: ${({theme}) => theme.colors.darkBlue};
+  ${({ theme }) => css`
+    background: theme.colors.darkBlue;
+  `};
+
+  /* background: ${({theme}) => theme.colors.darkBlue}; */
   font-size: ${({theme}) => theme.fontSize.h1}px;
   color: ${({theme}) => theme.colors.white};
 `;
