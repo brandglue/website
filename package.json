@@ -9,25 +9,26 @@
   },
   "dependencies": {
     "@reach/router": "1.2.1",
-    "netlify-cms": "^2.9.0",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "react-hot-loader": "^4.3.12",
-    "react-static": "^6.0.18",
-    "react-static-plugin-styled-components": "^6.3.0",
-    "styled-components": "^4.2.0"
+    "react": "16.8.1",
+    "react-dom": "16.8.1",
+    "react-hot-loader": "4.3.12",
+    "react-static": "7.0.7",
+    "react-static-plugin-styled-components": "7.0.0",
+    "react-static-plugin-typescript": "7.0.0",
+    "styled-components": "4.2.0"
   },
   "devDependencies": {
-    "@types/node": "^11.12.2",
-    "@types/reach__router": "^1.2.3",
-    "@types/react": "^16.8.10",
-    "@types/react-dom": "^16.8.3",
-    "@types/react-hot-loader": "^4.1.0",
-    "@types/styled-components": "^4.1.12",
-    "@types/webpack-env": "^1.13.9",
-    "eslint-config-react-tools": "1.x.x",
-    "react-static-plugin-typescript": "^3.2.0",
-    "serve": "^10.1.1"
+    "@babel/core": "7.0.0",
+    "@types/node": "11.12.2",
+    "@types/reach__router": "1.2.3",
+    "@types/react": "16.8.10",
+    "@types/react-dom": "16.8.3",
+    "@types/react-hot-loader": "4.1.0",
+    "@types/styled-components": "4.1.14",
+    "@types/webpack-env": "1.13.9",
+    "eslint-config-react-tools": "1.1.7",
+    "serve": "11.0.0",
+    "typescript": "^3.5.0-dev.20190413"
   },
   "prettier": {
     "semi": true,

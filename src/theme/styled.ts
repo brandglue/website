@@ -8,6 +8,7 @@ import { ITheme } from './theme';
 const {
   default: styled,
   css,
+  createGlobalStyle,
   keyframes,
   withTheme,
   ThemeProvider,
@@ -16,6 +17,7 @@ const {
 
 export {
   css,
+  createGlobalStyle,
   keyframes,
   withTheme,
   ThemeProvider,
