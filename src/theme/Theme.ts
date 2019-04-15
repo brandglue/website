@@ -9,14 +9,7 @@ const colorMap = {
 
 export interface ITheme {
   colors: {
-    primary: string;
-    secondary: string;
-    blue: string;
-    darkBlue: string;
-    gold: string;
-    black: string;
-    white: string;
-    mediumGray: string;
+    [key in keyof typeof colorMap]: string;
   }
   fontFamily: string;
   fontSize: {
@@ -39,10 +32,8 @@ export interface ITheme {
   }
 }
 
-export default {
+export const theme: ITheme = {
   colors: {
-    primary: colorMap.blue,
-    secondary: colorMap.gold,
     blue: colorMap.blue,
     darkBlue: colorMap.darkBlue,
     gold: colorMap.gold,

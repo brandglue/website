@@ -12,8 +12,7 @@ const {
   keyframes,
   withTheme,
   ThemeProvider,
-  // https://github.com/styled-components/styled-components/issues/890
-} = styledComponents as ThemedStyledComponentsModule<any> as ThemedStyledComponentsModule<ITheme>;
+} = styledComponents as ThemedStyledComponentsModule<ITheme>;
 
 export {
   css,
