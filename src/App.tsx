@@ -4,7 +4,7 @@ import { Root, Routes } from 'react-static';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import theme from '@theme/theme';
-import styled, { createGlobalStyle, css, ThemeProvider } from '@theme/styled';
+import styled, { css, ThemeProvider } from '@theme/styled';
 
 class App extends Component {
   render() {
@@ -13,7 +13,7 @@ class App extends Component {
         <RootStyles>
           <Root>
             <Header logo='test'/>
-            <Routes />
+            {/* <Routes /> */}
             <Footer />
           </Root>
         </RootStyles>

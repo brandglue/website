@@ -4,7 +4,7 @@ export default {
   siteRoot: 'https://brandglue.com',
 
   plugins: [
-    ['react-static-plugin-typescript', { typeCheck: true }], // TODO: figure out typechecking on commit
+    ['react-static-plugin-typescript', { typeCheck: true }],
     'react-static-plugin-styled-components',
   ],
 

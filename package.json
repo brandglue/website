@@ -30,6 +30,9 @@
     "serve": "11.0.0",
     "typescript": "^3.5.0-dev.20190413"
   },
+  "resolutions": {
+    "react-static/webpack-dev-server": "~3.1.10"
+  },
   "prettier": {
     "semi": true,
     "singleQuote": true,
