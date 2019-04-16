@@ -3290,7 +3290,7 @@ eslint-visitor-keys@^1.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
   integrity sha512-qzm/XxIbxm/FHyH341ZrbnMUpe+5Bocte9xkmFMzPMjRaZMcXww+MpBptFvtU+79L362nqiLhekCxCxDPaUMBQ==
 
-eslint@^5.14.1:
+eslint@5.16, eslint@^5.14.1:
   version "5.16.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.16.0.tgz#a1e3ac1aae4a3fbd8296fcf8f7ab7314cbb6abea"
   integrity sha512-S3Rz11i7c8AA5JPv7xAH+dOyq/Cu/VXHiHXBPOU1k/JAM5dXqQPt3qcrhpHSorXmrpu2g0gkIBVXAqCpzfoZIg==
@@ -6694,6 +6694,11 @@ react-static-plugin-reach-router@7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/react-static-plugin-reach-router/-/react-static-plugin-reach-router-7.0.0.tgz#4a2a9d5c43291fe29cebc88235a7641a1f8c247c"
   integrity sha512-54lGGgYthTVLYmPqeUBrv1sAHjxXKXm8Fg8vNEoTGapDS4nq6Hi+IwC0tLljxgAzk3Noh7tn1FcUCIs7YGPjeA==
+
+react-static-plugin-sitemap@7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/react-static-plugin-sitemap/-/react-static-plugin-sitemap-7.0.0.tgz#4bf43db91cad21fedbeb02c8db02cc1dd168867c"
+  integrity sha512-mIi5wzJoizMJlt9sEZuzr6dDXOWAqE2mKMdW2X9jhStZlgaKDjQ1AwtAF7IhsfwhYZfEeZQuYa3lq+gojFXqvg==
 
 react-static-plugin-styled-components@7.0.0:
   version "7.0.0"
