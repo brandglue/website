@@ -12,7 +12,7 @@ export const App = () => {
       <Root>
         <GlobalStyles />
         <Header logo='test'/>
-        {/* <Routes path="" /> */}
+        <Routes />
         <Footer />
       </Root>
     </ThemeProvider>

@@ -6685,6 +6685,14 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
 
+react-static-plugin-source-filesystem@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/react-static-plugin-source-filesystem/-/react-static-plugin-source-filesystem-7.0.0.tgz#865c76748d038a8d1bccdd005bec04c3c674f61a"
+  integrity sha512-lV/xo4913komwJgq7vHJhspPttU3+qIXUDVTQKASOcrihcrZno3bZlbqMx88ajv8br0KfVEVGjM14iXTDj2Iuw==
+  dependencies:
+    chokidar "^2.1.5"
+    glob "^7.1.3"
+
 react-static-plugin-styled-components@7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/react-static-plugin-styled-components/-/react-static-plugin-styled-components-7.0.0.tgz#2eacd3f445d88882c9b2e8aab84e0bfcbd5efed5"
