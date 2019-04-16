@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Root, Routes } from 'react-static';
+import { Router } from '@reach/router';
 
 import Header from '@components/Header';
 import Footer from '@components/Footer';
@@ -12,7 +13,11 @@ export const App = () => {
       <Root>
         <GlobalStyles />
         <Header logo='test'/>
-        <Routes />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Router>
+            <Routes path="*"/>
+          </Router>
+        </Suspense>
         <Footer />
       </Root>
     </ThemeProvider>
