@@ -7,27 +7,29 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": ["dom", "es2015", "es2016"],
-    "module": "es2015",
+    "lib": ["dom", "es6", "es7"],
+    "module": "es6",
     "moduleResolution": "node",
     "removeComments": false,
     "sourceMap": true,
-    "target": "es2015",
+    "target": "es6",
 
     // typechecking options
     "allowJs": true,
     "noEmit": true,
     "skipLibCheck": true,
-  
+
     // path resolution
     "baseUrl": "./",
     "paths": {
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
+      "@helpers/*": ["src/helpers/*"],
+      "@images/*": ["src/images/*"],
       "@models/*": ["src/models/*"],
       "@pages/*": ["src/pages/*"],
-      "@theme/*": ["src/theme/*"],
-    },
+      "@theme/*": ["src/theme/*"]
+    }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "global.d.ts"]
 }

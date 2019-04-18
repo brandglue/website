@@ -5,12 +5,10 @@ const colorMap = {
   black: '#000',
   white: '#fff',
   mediumGray: '#888',
-}
+};
 
 export interface ITheme {
-  colors: {
-    [key in keyof typeof colorMap]: string;
-  }
+  colors: { [key in keyof typeof colorMap]: string };
   fontFamily: string;
   fontSize: {
     h1: number;
@@ -18,18 +16,18 @@ export interface ITheme {
     h3: number;
     h4: number;
     medium: number;
-  }
+  };
   padding: {
     page: number;
     small: number;
     medium: number;
     large: number;
-  }
+  };
   margin: {
     small: number;
     medium: number;
     large: number;
-  }
+  };
 }
 
 export const theme: ITheme = {
@@ -43,8 +41,8 @@ export const theme: ITheme = {
   },
   fontFamily: 'Lato, Arial, "sans-serif"',
   fontSize: {
-    h1: 32,
-    h2: 24,
+    h1: 48,
+    h2: 32,
     h3: 18,
     h4: 14,
     medium: 14,
@@ -59,5 +57,5 @@ export const theme: ITheme = {
     small: 4,
     medium: 8,
     large: 16,
-  }
+  },
 };

@@ -12,16 +12,16 @@ export const App = () => {
     <ThemeProvider theme={theme}>
       <Root>
         <GlobalStyles />
-        <Header logo='test'/>
+        <Header logo="test" />
         <Suspense fallback={<div>Loading...</div>}>
           <Router>
-            <Routes path="*"/>
+            <Routes path="*" />
           </Router>
         </Suspense>
         <Footer />
       </Root>
     </ThemeProvider>
-  )
+  );
 };
 
 const GlobalStyles = createGlobalStyle`
@@ -30,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
       background: ${theme.colors.white};
       color: ${theme.colors.black};
       font-family: ${theme.fontFamily};
-      font-size: ${theme.fontSize.medium};
+      font-size: ${theme.fontSize.medium}px;
     `};
   }
 `;

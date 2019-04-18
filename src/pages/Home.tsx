@@ -1,54 +1,73 @@
-import React, { FunctionComponent } from 'react';
+import React, { FC } from 'react';
 
+import { hexToRgb } from '@helpers/styleUtils';
+import homepageHero from '@images/homepage-hero.webp';
 import styled, { css } from '@theme/styled';
 
-export const Homepage: FunctionComponent = () => (
-  <Banner>
-    <TaglineWrapper>
-      <PrimaryTagline1>We are a</PrimaryTagline1>
-      <PrimaryTagline2>social media agency</PrimaryTagline2>
-      <SubTagline1>reaching your audience in the places</SubTagline1>
-      <SubTagline2>they hang out most</SubTagline2>
-    </TaglineWrapper>
-  </Banner>
+export const Homepage: FC = () => (
+  <Hero>
+    <Tagline>
+      <TaglineSection>
+        <PrimaryTagline>
+          We are a <br /> social media agency
+        </PrimaryTagline>
+      </TaglineSection>
+      <TaglineSection>
+        <SecondaryTagline>
+          reaching your audience in the places <br /> they hang out most.
+        </SecondaryTagline>
+      </TaglineSection>
+    </Tagline>
+  </Hero>
 );
 
-const Banner = styled.div`
+// TODO: Add WebP fallback handling: https://css-tricks.com/using-webp-images/
+const Hero = styled.div`
   position: relative;
-  background: ${({theme}) => theme.colors.mediumGray};
-  height: 300px;
+  overflow: hidden;
+  height: 0;
+  border: 0;
+  padding-bottom: 56.25%;
+  background-image: url(${homepageHero});
+  background-size: cover;
 `;
 
-const TaglineWrapper = styled.div`
+const Tagline = styled.div`
   position: absolute;
   left: 10%;
   bottom: 20px;
 `;
 
-const PrimaryTagline1 = styled.div`
+const TaglineSection = styled.div`
+  margin-bottom: 0;
+`;
+
+// https://css-tricks.com/multi-line-padded-text/
+const multlinePaddedText = css`
   ${({ theme }) => css`
-    background: theme.colors.darkBlue;
+    display: inline;
+    background: rgba(${hexToRgb(theme.colors.darkBlue)}, 0.75);
+    font-weight: normal;
+    color: ${theme.colors.white};
+    padding: 10px 0;
+    line-height: 1.54;
+    box-shadow: 10px 0 0 rgba(${hexToRgb(theme.colors.darkBlue)}, 0.75),
+      -10px 0 0 rgba(${hexToRgb(theme.colors.darkBlue)}, 0.75);
   `};
-
-  /* background: ${({theme}) => theme.colors.darkBlue}; */
-  font-size: ${({theme}) => theme.fontSize.h1}px;
-  color: ${({theme}) => theme.colors.white};
 `;
 
-const PrimaryTagline2 = styled.div`
-  background: ${({theme}) => theme.colors.darkBlue};
-  font-size: ${({theme}) => theme.fontSize.h1}px;
-  color: ${({theme}) => theme.colors.white};
+const PrimaryTagline = styled.h1`
+  ${({ theme }) => css`
+    font-size: ${theme.fontSize.h1}px;
+    ${multlinePaddedText}
+  `};
 `;
 
-const SubTagline1 = styled.div`
-  background: ${({theme}) => theme.colors.darkBlue};
-  color: ${({theme}) => theme.colors.white};
-`;
-
-const SubTagline2 = styled.div`
-  background: ${({theme}) => theme.colors.darkBlue};
-  color: ${({theme}) => theme.colors.white};
+const SecondaryTagline = styled.h2`
+  ${({ theme }) => css`
+    font-size: ${theme.fontSize.h2}px;
+    ${multlinePaddedText}
+  `};
 `;
 
 export default Homepage;
