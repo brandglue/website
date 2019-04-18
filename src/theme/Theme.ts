@@ -1,3 +1,5 @@
+import { number } from 'prop-types';
+
 const colorMap = {
   blue: 'blue',
   darkBlue: '#2525b1',
@@ -24,9 +26,11 @@ export interface ITheme {
     large: number;
   };
   margin: {
+    xSmall: number;
     small: number;
     medium: number;
     large: number;
+    xLarge: number;
   };
 }
 
@@ -54,8 +58,10 @@ export const theme: ITheme = {
     large: 16,
   },
   margin: {
-    small: 4,
-    medium: 8,
-    large: 16,
+    xSmall: 4,
+    small: 8,
+    medium: 16,
+    large: 24,
+    xLarge: 32,
   },
 };

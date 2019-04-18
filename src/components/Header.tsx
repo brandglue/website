@@ -1,17 +1,14 @@
-import React, { FunctionComponent } from 'react';
-import { Link } from '@reach/router'
+import React, { FC } from 'react';
+import { Link } from '@reach/router';
 
+import { BrandglueLogo } from '@components/icons/BrandglueLogo';
 import { ROUTES } from '@constants/routes';
-import styled from '@theme/styled';
+import styled, { css } from '@theme/styled';
 
-interface IOwnProps {
-  logo: string
-}
-
-export const Header: FunctionComponent<IOwnProps> = ({ logo }) => (
+export const Header: FC = () => (
   <Wrapper>
     <Logo to={`/`}>
-      <img src={logo} alt='BrandGlue logo' />
+      <BrandglueLogo />
     </Logo>
     <Menu>
       <StyledLink to={`/${ROUTES.ABOUT}`}>About</StyledLink>
@@ -23,25 +20,37 @@ export const Header: FunctionComponent<IOwnProps> = ({ logo }) => (
   </Wrapper>
 );
 
-const Wrapper = styled.div`
+const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
-  padding: 0 ${({theme}) => theme.padding.page}px;
+  padding: 0 ${({ theme }) => theme.padding.page}px;
+  margin: ${({ theme }) => theme.margin.medium}px 0;
 `;
 
 const Logo = styled(Link)`
-  flex: 0 0 20%;
+  flex: 0 0 220px;
 `;
 
 const Menu = styled.nav`
+  flex: 1 1 auto;
   display: flex;
-  flex: 0 1 80%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20%;
 `;
 
 const StyledLink = styled(Link)`
-  text-transform: uppercase;
-  margin-right: ${({theme}) => theme.margin.medium}px;
-  text-decoration: none;
+  ${({ theme }) => css`
+    text-transform: uppercase;
+    color: ${theme.colors.black};
+    margin-right: ${theme.margin.xLarge}px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-bottom: 2px solid ${theme.colors.gold};
+    }
+  `};
 `;
 
 export default Header;

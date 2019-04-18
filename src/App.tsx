@@ -12,7 +12,7 @@ export const App = () => {
     <ThemeProvider theme={theme}>
       <Root>
         <GlobalStyles />
-        <Header logo="test" />
+        <Header />
         <Suspense fallback={<div>Loading...</div>}>
           <Router>
             <Routes path="*" />
@@ -31,6 +31,7 @@ const GlobalStyles = createGlobalStyle`
       color: ${theme.colors.black};
       font-family: ${theme.fontFamily};
       font-size: ${theme.fontSize.medium}px;
+      margin: 0;
     `};
   }
 `;
