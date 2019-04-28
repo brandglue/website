@@ -1,67 +1,66 @@
-import { number } from 'prop-types';
+export enum Breakpoints {
+  zero = '0',
+  tiny = '320px',
+  small = '480px',
+  medium = '768px',
+  large = '1024px',
+  giant = '1920px',
+}
 
-const colorMap = {
-  blue: 'blue',
-  darkBlue: '#2525b1',
-  gold: 'gold',
-  black: '#000',
-  white: '#fff',
-  mediumGray: '#888',
-};
+export enum Colors {
+  blue = 'blue',
+  darkBlue = '#2525b1',
+  gold = 'gold',
+  black = '#000',
+  white = '#fff',
+  mediumGray = '#888',
+}
+
+export enum FontFamilies {
+  primary = 'Lato, Arial, sans-serif',
+}
+
+export enum FontSizes {
+  default = '18px',
+  tiny = '12px',
+  small = '14px',
+  h1 = '48px',
+  h2 = '32px',
+  h3 = '24px',
+  h4 = '18px',
+  h5 = '16px',
+}
+
+export enum Spacings {
+  space0 = '4px',
+  space1 = '8px',
+  space2 = '16px',
+  space3 = '24px',
+  space4 = '32px',
+  space5 = '48px',
+}
+
+export type IBreakpointKeys = keyof typeof Breakpoints;
+export type IColorKeys = keyof typeof Colors;
+export type IFontFamilyKeys = keyof typeof FontFamilies;
+export type IFontSizeKeys = keyof typeof FontSizes;
+export type IMarginKeys = keyof typeof Spacings;
+export type IPaddingKeys = keyof typeof Spacings;
 
 export interface ITheme {
-  colors: { [key in keyof typeof colorMap]: string };
-  fontFamily: string;
-  fontSize: {
-    h1: number;
-    h2: number;
-    h3: number;
-    h4: number;
-    medium: number;
-  };
-  padding: {
-    page: number;
-    small: number;
-    medium: number;
-    large: number;
-  };
-  margin: {
-    xSmall: number;
-    small: number;
-    medium: number;
-    large: number;
-    xLarge: number;
-  };
+  breakpoints: { [key in IBreakpointKeys]: string };
+  colors: { [key in IColorKeys]: string };
+  fontFamilies: { [key in IFontFamilyKeys]: string };
+  fontSizes: { [key in IFontSizeKeys]: string };
+  margin: { [key in IMarginKeys]: string };
+  padding: { [key in IPaddingKeys]: string };
 }
 
 export const theme: ITheme = {
-  colors: {
-    blue: colorMap.blue,
-    darkBlue: colorMap.darkBlue,
-    gold: colorMap.gold,
-    black: colorMap.black,
-    white: colorMap.white,
-    mediumGray: colorMap.mediumGray,
-  },
-  fontFamily: 'Lato, Arial, "sans-serif"',
-  fontSize: {
-    h1: 48,
-    h2: 32,
-    h3: 18,
-    h4: 14,
-    medium: 14,
-  },
-  padding: {
-    page: 40,
-    small: 4,
-    medium: 8,
-    large: 16,
-  },
-  margin: {
-    xSmall: 4,
-    small: 8,
-    medium: 16,
-    large: 24,
-    xLarge: 32,
-  },
+  breakpoints: Breakpoints,
+  colors: Colors,
+  fontFamilies: FontFamilies,
+  fontSizes: FontSizes,
+  margin: Spacings,
+  padding: Spacings,
 };
