@@ -40,6 +40,7 @@ export enum Spacings {
   space5 = '48px',
 }
 
+// convience types
 export type IBreakpointKeys = keyof typeof Breakpoints;
 export type IColorKeys = keyof typeof Colors;
 export type IFontFamilyKeys = keyof typeof FontFamilies;

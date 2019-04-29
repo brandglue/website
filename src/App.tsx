@@ -29,8 +29,8 @@ const GlobalStyles = createGlobalStyle`
     ${({ theme }) => css`
       background: ${theme.colors.white};
       color: ${theme.colors.black};
-      font-family: ${theme.fontFamily};
-      font-size: ${theme.fontSize.medium}px;
+      font-family: ${theme.fontFamilies.primary};
+      font-size: ${theme.fontSizes.default};
       margin: 0;
     `};
   }

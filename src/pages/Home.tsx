@@ -58,14 +58,14 @@ const multlinePaddedText = css`
 
 const PrimaryTagline = styled.h1`
   ${({ theme }) => css`
-    font-size: ${theme.fontSizes.h1}px;
+    font-size: ${theme.fontSizes.h1};
     ${multlinePaddedText}
   `};
 `;
 
 const SecondaryTagline = styled.h2`
   ${({ theme }) => css`
-    font-size: ${theme.fontSizes.h2}px;
+    font-size: ${theme.fontSizes.h2};
     ${multlinePaddedText}
   `};
 `;

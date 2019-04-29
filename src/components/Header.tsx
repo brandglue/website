@@ -23,8 +23,8 @@ export const Header: FC = () => (
 const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
-  padding: 0 ${({ theme }) => theme.padding.page}px;
-  margin: ${({ theme }) => theme.margin.medium}px 0;
+  padding: 0 ${({ theme }) => theme.padding.space5};
+  margin: ${({ theme }) => theme.margin.space2} 0;
 `;
 
 const Logo = styled(Link)`
@@ -43,7 +43,7 @@ const StyledLink = styled(Link)`
   ${({ theme }) => css`
     text-transform: uppercase;
     color: ${theme.colors.black};
-    margin-right: ${theme.margin.xLarge}px;
+    margin-right: ${theme.margin.space5};
     text-decoration: none;
     border-bottom: 2px solid transparent;
 

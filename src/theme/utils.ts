@@ -1,46 +1,39 @@
 import { css } from '@theme/styled';
-import { Breakpoints, IBreakpointKeys, ITheme } from '@theme/theme';
-
-interface Props {
-  theme: ITheme;
-}
-
-export interface IOrientation {
-  landscape: 'landscape';
-  portrait: 'portrait';
-}
-
-// TODO: type the keys as IBreakpointKeys
-export interface IMediaQueries {
-  [key: string]: Function;
-}
+import { Breakpoints, IBreakpointKeys } from '@theme/theme';
+import { FlattenSimpleInterpolation } from 'styled-components';
 
 /*
   Creates min-width breakpoint functions
   @returns IMediaQueries object
 */
-export function mediaQuery(breakpoints: Breakpoints): IMediaQueries {
+type IOrientation = 'landscape' | 'portrait';
+type IMediaQueries = Record<
+  IBreakpointKeys,
+  (styles: FlattenSimpleInterpolation, orientation?: IOrientation) => any
+>;
+
+export function minMediaQueries(
+  breakpoints: typeof Breakpoints,
+): IMediaQueries {
   return Object.keys(breakpoints).reduce(
     (mediaQueries, breakpoint) => {
-      mediaQueries[breakpoint] = (
-        orientation: IOrientation,
-        ...styles: string[]
-      ) => {
+      /* must assert keys as IBreakpointKeys per: https://github.com/Microsoft/TypeScript/pull/12253 */
+      const key = breakpoint as IBreakpointKeys;
+
+      mediaQueries[key] = (cssToUse: any, orientation?: IOrientation) => {
         if (orientation) {
           return css`
-            @media (min-width: ${Breakpoints[breakpoint as IBreakpointKeys]}) {
-              /* https://stackoverflow.com/questions/34179897/typescript-and-spread-operator */
-              // @ts-ignore
-              ${css(...styles)}
+            @media (min-width: ${Breakpoints[
+                breakpoint as IBreakpointKeys
+              ]}) and (orientation: ${orientation}) {
+              ${cssToUse}
             }
           `;
         }
 
         return css`
-          @media (min-width: ${Breakpoints[breakpoint as IBreakpointKeys]}) {
-            /* https://stackoverflow.com/questions/34179897/typescript-and-spread-operator */
-            // @ts-ignore
-            ${css(...styles)}
+          @media (min-width: ${Breakpoints[key]}) {
+            ${cssToUse}
           }
         `;
       };
@@ -51,37 +44,14 @@ export function mediaQuery(breakpoints: Breakpoints): IMediaQueries {
   );
 }
 
-// /*
-//   Breakpoint function
-// */
-// export function mediaMin(
-//   breakpoint: IBreakpointKeys,
-//   cssToUse: string,
-//   orientation: IOrientation,
-// ) {
-//   return (props: Props) => {
-//     const mediaSize = props.theme.breakpoints[breakpoint];
-
-//     if (orientation) {
-//       return css`
-//         @media (min-width: ${mediaSize}px and orientation: ${orientation}) {
-//           ${cssToUse}
-//       }`;
-//     }
-
-//     return css`
-//       @media (min-width: ${mediaSize}px) {
-//         ${cssToUse};
-//       }
-//     `;
-//   };
-// }
+// create media query functions for export
+export const minMediaQuery: IMediaQueries = minMediaQueries(Breakpoints);
 
 /*
   Convert hex (shorthand or longhand) color values to RGB
   Example: background: rgba(${({theme}) => hexToRgb(theme.colors.black)}, 0.8);
 */
-export function hexToRgb(hex: String): String {
+export function hexToRgb(hex: string): string {
   const hexChars = 'a-f\\d';
   const match3 = `#?[${hexChars}]{3}`;
   const match6 = `#?[${hexChars}]{6}`;
@@ -126,15 +96,15 @@ interface sizeMap {
   [size: number]: number;
 }
 
-export function linearInterpolation(property: string, map: sizeMap): String {
-  const sizes = Object.keys(map);
+// export function linearInterpolation(property: string, map: sizeMap): String {
+//   const sizes = Object.keys(map);
 
-  if (sizes.length > 2) {
-    throw Error('Fluid sizing map needs at least two points.');
-  }
+//   if (sizes.length > 2) {
+//     throw Error('Fluid sizing map needs at least two points.');
+//   }
 
-  const sortedSizes = sizes.sort();
+//   const sortedSizes = sizes.sort();
 
-  for (const size in sizes) {
-  }
-}
+//   for (const size in sizes) {
+//   }
+// }
