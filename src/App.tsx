@@ -6,6 +6,7 @@ import Header from '@components/Header';
 import Footer from '@components/Footer';
 import { theme } from '@theme/theme';
 import { createGlobalStyle, css, ThemeProvider } from '@theme/styled';
+import { fluidFontSize, minMediaQuery } from '@theme/utils';
 
 export const App = () => {
   return (
@@ -30,8 +31,8 @@ const GlobalStyles = createGlobalStyle`
       background: ${theme.colors.white};
       color: ${theme.colors.black};
       font-family: ${theme.fontFamilies.primary};
-      font-size: ${theme.fontSizes.default};
       margin: 0;
+      ${fluidFontSize.default()}
     `};
   }
 `;

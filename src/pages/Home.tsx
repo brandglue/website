@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import homepageHero from '@images/homepage-hero.webp';
 import styled, { css } from '@theme/styled';
-import { hexToRgb } from '@theme/utils';
+import { fluidFontSize, hexToRgb } from '@theme/utils';
 
 export const Homepage: FC = () => (
   <Hero>
@@ -58,14 +58,14 @@ const multlinePaddedText = css`
 
 const PrimaryTagline = styled.h1`
   ${({ theme }) => css`
-    font-size: ${theme.fontSizes.h1};
     ${multlinePaddedText}
+    ${fluidFontSize.h1()}
   `};
 `;
 
 const SecondaryTagline = styled.h2`
   ${({ theme }) => css`
-    font-size: ${theme.fontSizes.h2};
+    ${fluidFontSize.h2()}
     ${multlinePaddedText}
   `};
 `;
