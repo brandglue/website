@@ -10,89 +10,48 @@ import {
 import { FlattenSimpleInterpolation } from 'styled-components';
 
 /*
-  Creates min-width breakpoint functions
+  Creates object with min-width media query functions for each breakpoint
   @returns IMediaQueries object
 */
-type IOrientation = 'landscape' | 'portrait';
-type IMediaQueries = Record<
-  IBreakpointKeys,
-  (styles: FlattenSimpleInterpolation, orientation?: IOrientation) => any
->;
+export const minMediaQuery = (function() {
+  type IOrientation = 'landscape' | 'portrait';
+  type IMediaQueries = Record<
+    IBreakpointKeys,
+    (styles: FlattenSimpleInterpolation, orientation?: IOrientation) => any
+  >;
 
-export function minMediaQueries(
-  breakpoints: typeof Breakpoints,
-): IMediaQueries {
-  return Object.keys(breakpoints).reduce(
-    (mediaQueries, breakpoint) => {
-      /* must assert keys as IBreakpointKeys per: https://github.com/Microsoft/TypeScript/pull/12253 */
-      const key = breakpoint as IBreakpointKeys;
+  function generateMinMediaQueries(): IMediaQueries {
+    /* must assert keys as desired type per: https://github.com/Microsoft/TypeScript/pull/12253 */
+    const breakpointKeys = Object.keys(Breakpoints) as IBreakpointKeys[];
 
-      mediaQueries[key] = (cssToUse, orientation?) => {
-        if (orientation) {
+    return breakpointKeys.reduce(
+      (mediaQueries, breakpoint) => {
+        mediaQueries[breakpoint] = (cssToUse, orientation?) => {
+          if (orientation) {
+            return css`
+              @media (min-width: ${Breakpoints[
+                  breakpoint
+                ]}px) and (orientation: ${orientation}) {
+                ${cssToUse}
+              }
+            `;
+          }
+
           return css`
-            @media (min-width: ${Breakpoints[
-                breakpoint as IBreakpointKeys
-              ]}px) and (orientation: ${orientation}) {
+            @media (min-width: ${Breakpoints[breakpoint]}px) {
               ${cssToUse}
             }
           `;
-        }
+        };
 
-        return css`
-          @media (min-width: ${Breakpoints[key]}px) {
-            ${cssToUse}
-          }
-        `;
-      };
-
-      return mediaQueries;
-    },
-    {} as IMediaQueries,
-  );
-}
-
-// create media query functions for export
-export const minMediaQuery: IMediaQueries = minMediaQueries(Breakpoints);
-
-/*
-  Convert hex (shorthand or longhand) color values to RGB
-  Example: background: rgba(${({theme}) => hexToRgb(theme.colors.black)}, 0.8);
-*/
-export function hexToRgb(hex: string): string {
-  const hexChars = 'a-f\\d';
-  const match3 = `#?[${hexChars}]{3}`;
-  const match6 = `#?[${hexChars}]{6}`;
-  const nonHexChars = new RegExp(`[^#${hexChars}]`, 'gi');
-  const validHexSize = new RegExp(`^${match3}$|^${match6}$`, 'i');
-
-  // TODO: convert this to use a Hex tinytype
-  if (
-    typeof hex !== 'string' ||
-    nonHexChars.test(hex) ||
-    !validHexSize.test(hex)
-  ) {
-    throw new TypeError('Expected a valid hex string');
+        return mediaQueries;
+      },
+      {} as IMediaQueries,
+    );
   }
 
-  let hexValue = hex.replace(/^#/, '');
-
-  if (hexValue.length === 3) {
-    hexValue =
-      hexValue[0] +
-      hexValue[0] +
-      hexValue[1] +
-      hexValue[1] +
-      hexValue[2] +
-      hexValue[2];
-  }
-
-  const num = parseInt(hexValue, 16);
-  const red = (num >> 16) & 255;
-  const green = (num >> 8) & 255;
-  const blue = num & 255;
-
-  return `${red},${green},${blue}`;
-}
+  return generateMinMediaQueries();
+})();
 
 /*
   Pixel-based fluid sizing function
@@ -103,6 +62,7 @@ export const fluidFontSize = (function() {
   type IFluidFontSizes = Record<ITextTagKeys, () => any>;
 
   function generateFluidFontSizes(): IFluidFontSizes {
+    /* must assert keys as desired type per: https://github.com/Microsoft/TypeScript/pull/12253 */
     const textTagKeys = Object.keys(TextTags) as ITextTagKeys[];
 
     return textTagKeys.reduce(
@@ -169,3 +129,43 @@ export const fluidFontSize = (function() {
 
   return generateFluidFontSizes();
 })();
+
+/*
+  Convert hex (shorthand or longhand) color values to RGB
+  Example: background: rgba(${({theme}) => hexToRgb(theme.colors.black)}, 0.8);
+*/
+export function hexToRgb(hex: string): string {
+  const hexChars = 'a-f\\d';
+  const match3 = `#?[${hexChars}]{3}`;
+  const match6 = `#?[${hexChars}]{6}`;
+  const nonHexChars = new RegExp(`[^#${hexChars}]`, 'gi');
+  const validHexSize = new RegExp(`^${match3}$|^${match6}$`, 'i');
+
+  // TODO: convert this to use a Hex tinytype
+  if (
+    typeof hex !== 'string' ||
+    nonHexChars.test(hex) ||
+    !validHexSize.test(hex)
+  ) {
+    throw new TypeError('Expected a valid hex string');
+  }
+
+  let hexValue = hex.replace(/^#/, '');
+
+  if (hexValue.length === 3) {
+    hexValue =
+      hexValue[0] +
+      hexValue[0] +
+      hexValue[1] +
+      hexValue[1] +
+      hexValue[2] +
+      hexValue[2];
+  }
+
+  const num = parseInt(hexValue, 16);
+  const red = (num >> 16) & 255;
+  const green = (num >> 8) & 255;
+  const blue = num & 255;
+
+  return `${red},${green},${blue}`;
+}
