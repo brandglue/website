@@ -24,11 +24,11 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
-      "@helpers/*": ["src/helpers/*"],
       "@images/*": ["src/images/*"],
       "@models/*": ["src/models/*"],
       "@pages/*": ["src/pages/*"],
-      "@theme/*": ["src/theme/*"]
+      "@theme/*": ["src/theme/*"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": ["src/**/*", "global.d.ts"]

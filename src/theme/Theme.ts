@@ -1,3 +1,5 @@
+import Hex, { IHex } from '@models/Hex';
+
 export enum Breakpoints {
   zero = 0,
   tiny = 320,
@@ -16,14 +18,15 @@ export enum BreakpointsByKey {
   giant = 'giant',
 }
 
-export enum Colors {
-  blue = 'blue',
-  darkBlue = '#2525b1',
-  gold = 'gold',
-  black = '#000',
-  white = '#fff',
-  mediumGray = '#888',
-}
+// Enum doesn't support tinytypes yet so using a const instead
+export const Colors = {
+  blue: Hex('#005ADD'),
+  darkBlue: Hex('#003575'),
+  gold: Hex('#FFB000'),
+  black: Hex('#000'),
+  white: Hex('#fff'),
+  mediumGray: Hex('#828487'),
+};
 
 export enum FontFamilies {
   primary = 'Lato, Arial, sans-serif',
@@ -47,7 +50,7 @@ export type IPaddingKeys = keyof typeof Spacings;
 
 export interface ITheme {
   breakpoints: { [key in IBreakpointKeys]: number };
-  colors: { [key in IColorKeys]: string };
+  colors: { [key in IColorKeys]: IHex };
   fontFamilies: { [key in IFontFamilyKeys]: string };
   margin: { [key in IMarginKeys]: string };
   padding: { [key in IPaddingKeys]: string };

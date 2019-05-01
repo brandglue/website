@@ -1,3 +1,6 @@
+import { FlattenSimpleInterpolation } from 'styled-components';
+
+import Hex, { IHex } from '@models/Hex';
 import { css } from '@theme/styled';
 import {
   Breakpoints,
@@ -7,7 +10,6 @@ import {
   ITextTagKeys,
   TextTags,
 } from '@theme/theme';
-import { FlattenSimpleInterpolation } from 'styled-components';
 
 /*
   Creates object with min-width media query functions for each breakpoint
@@ -134,22 +136,7 @@ export const fluidFontSize = (function() {
   Convert hex (shorthand or longhand) color values to RGB
   Example: background: rgba(${({theme}) => hexToRgb(theme.colors.black)}, 0.8);
 */
-export function hexToRgb(hex: string): string {
-  const hexChars = 'a-f\\d';
-  const match3 = `#?[${hexChars}]{3}`;
-  const match6 = `#?[${hexChars}]{6}`;
-  const nonHexChars = new RegExp(`[^#${hexChars}]`, 'gi');
-  const validHexSize = new RegExp(`^${match3}$|^${match6}$`, 'i');
-
-  // TODO: convert this to use a Hex tinytype
-  if (
-    typeof hex !== 'string' ||
-    nonHexChars.test(hex) ||
-    !validHexSize.test(hex)
-  ) {
-    throw new TypeError('Expected a valid hex string');
-  }
-
+export function hexToRgb(hex: IHex): string {
   let hexValue = hex.replace(/^#/, '');
 
   if (hexValue.length === 3) {
