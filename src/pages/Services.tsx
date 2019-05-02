@@ -1,5 +1,5 @@
-import React, { FunctionComponent } from 'react';
+import React, { FC } from 'react';
 
-export const Services: FunctionComponent = () => <div></div>;
+export const Services: FC = () => <div />;
 
 export default Services;

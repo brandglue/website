@@ -6,7 +6,7 @@
   "scripts": {
     "analyze": "react-static build --analyze",
     "build": "react-static build",
-    "lint": "eslint . --ext .ts,.tsx --cache",
+    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --fix",
     "stage": "react-static build --staging",
     "start": "react-static start",
     "serve": "serve dist -p 3000"
@@ -17,7 +17,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "*": [
       "eslint --fix",
       "git add"
     ]
@@ -43,7 +43,10 @@
     "@types/react-hot-loader": "4.1.0",
     "@types/styled-components": "4.1.14",
     "@types/webpack-env": "1.13.9",
-    "eslint": "5.16",
+    "@typescript-eslint/eslint-plugin": "1.7.0",
+    "@typescript-eslint/parser": "1.7.0",
+    "babel-eslint": "10.0.1",
+    "eslint": "5.16.0",
     "eslint-config-prettier": "4.2.0",
     "eslint-plugin-prettier": "3.0.1",
     "eslint-plugin-react": "7.12.4",

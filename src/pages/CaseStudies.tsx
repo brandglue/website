@@ -1,5 +1,5 @@
-import React, { FunctionComponent } from 'react';
+import React, { FC } from 'react';
 
-export const CaseStudies: FunctionComponent = () => <div></div>;
+export const CaseStudies: FC = () => <div />;
 
 export default CaseStudies;

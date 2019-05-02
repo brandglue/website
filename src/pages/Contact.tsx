@@ -1,5 +1,5 @@
-import React, { FunctionComponent } from 'react';
+import React, { FC } from 'react';
 
-export const Contact: FunctionComponent = () => <div></div>;
+export const Contact: FC = () => <div />;
 
 export default Contact;

@@ -1,6 +1,6 @@
 import { FlattenSimpleInterpolation } from 'styled-components';
 
-import Hex, { IHex } from '@models/Hex';
+import { IHex } from '@models/Hex';
 import { css } from '@theme/styled';
 import {
   Breakpoints,
@@ -19,7 +19,7 @@ export const minMediaQuery = (function() {
   type IOrientation = 'landscape' | 'portrait';
   type IMediaQueries = Record<
     IBreakpointKeys,
-    (styles: FlattenSimpleInterpolation, orientation?: IOrientation) => any
+    (styles: FlattenSimpleInterpolation, orientation?: IOrientation) => unknown
   >;
 
   function generateMinMediaQueries(): IMediaQueries {
@@ -48,6 +48,7 @@ export const minMediaQuery = (function() {
 
         return mediaQueries;
       },
+      // eslint-disable-next-line @typescript-eslint/no-object-literal-type-assertion
       {} as IMediaQueries,
     );
   }
@@ -61,7 +62,7 @@ export const minMediaQuery = (function() {
   Inspiration: https://www.smashingmagazine.com/2017/05/fluid-responsive-typography-css-poly-fluid-sizing/
 */
 export const fluidFontSize = (function() {
-  type IFluidFontSizes = Record<ITextTagKeys, () => any>;
+  type IFluidFontSizes = Record<ITextTagKeys, () => FlattenSimpleInterpolation>;
 
   function generateFluidFontSizes(): IFluidFontSizes {
     /* must assert keys as desired type per: https://github.com/Microsoft/TypeScript/pull/12253 */
@@ -74,12 +75,12 @@ export const fluidFontSize = (function() {
             BreakpointsByKey,
           ) as IBreakpointKeys[];
 
-          const basefontSize = fluidFontMatrix[BreakpointsByKey.zero][tag];
+          const basefontSize = fluidFontMatrix[BreakpointsByKey.Zero][tag];
           let styles = [`font-size: ${basefontSize}px`];
 
           breakpointKeys.forEach((currentBreakpoint, index) => {
             // ignore the base case since this was handled above
-            if (currentBreakpoint === BreakpointsByKey.zero) return;
+            if (currentBreakpoint === BreakpointsByKey.Zero) return;
 
             const currentBreakpointWidth = Breakpoints[currentBreakpoint];
             const currentSize = fluidFontMatrix[currentBreakpoint][tag];
@@ -115,6 +116,7 @@ export const fluidFontSize = (function() {
 
         return fluidFontSizes;
       },
+      // eslint-disable-next-line @typescript-eslint/no-object-literal-type-assertion
       {} as IFluidFontSizes,
     );
   }

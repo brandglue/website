@@ -1,11 +1,7 @@
-import React, { FunctionComponent } from 'react';
+import React, { FC } from 'react';
 
-export const About: FunctionComponent = () => {
-  return (
-    <div>
-      Cool about page
-    </div>
-  );
-}
+export const About: FC = () => {
+  return <div>Cool about page</div>;
+};
 
 export default About;

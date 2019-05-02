@@ -11,13 +11,12 @@ export default App;
 if (typeof document !== 'undefined') {
   const target = document.getElementById('root');
 
-  const renderMethod = target && target.hasChildNodes()
-    ? ReactDOM.hydrate
-    : ReactDOM.render;
+  const renderMethod =
+    target && target.hasChildNodes() ? ReactDOM.hydrate : ReactDOM.render;
 
   const render = (Component: Function) => {
     renderMethod(<Component />, target);
-  }
+  };
 
   // Render!
   render(App);
@@ -26,6 +25,6 @@ if (typeof document !== 'undefined') {
   if (module && module.hot) {
     module.hot.accept('./App', () => {
       render(App);
-    })
+    });
   }
 }

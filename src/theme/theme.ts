@@ -1,44 +1,44 @@
 import Hex, { IHex } from '@models/Hex';
 
 export enum Breakpoints {
-  zero = 0,
-  tiny = 320,
-  small = 480,
-  medium = 768,
-  large = 1024,
-  giant = 1920,
+  Zero = 0,
+  Tiny = 320,
+  Small = 480,
+  Medium = 768,
+  Large = 1024,
+  Giant = 1920,
 }
 
 export enum BreakpointsByKey {
-  zero = 'zero',
-  tiny = 'tiny',
-  small = 'small',
-  medium = 'medium',
-  large = 'large',
-  giant = 'giant',
+  Zero = 'Zero',
+  Tiny = 'Tiny',
+  Small = 'Small',
+  Medium = 'Medium',
+  Large = 'Large',
+  Giant = 'Giant',
 }
 
 // Enum doesn't support tinytypes yet so using a const instead
 export const Colors = {
-  blue: Hex('#005ADD'),
-  darkBlue: Hex('#003575'),
-  gold: Hex('#FFB000'),
-  black: Hex('#000'),
-  white: Hex('#fff'),
-  mediumGray: Hex('#828487'),
+  Blue: Hex('#005ADD'),
+  DarkBlue: Hex('#003575'),
+  Gold: Hex('#FFB000'),
+  Black: Hex('#000'),
+  White: Hex('#fff'),
+  MediumGray: Hex('#828487'),
 };
 
 export enum FontFamilies {
-  primary = 'Lato, Arial, sans-serif',
+  Primary = 'Lato, Arial, sans-serif',
 }
 
 export enum StaticSpacings {
-  space0 = '4px',
-  space1 = '8px',
-  space2 = '16px',
-  space3 = '24px',
-  space4 = '32px',
-  space5 = '48px',
+  Space0 = '4px',
+  Space1 = '8px',
+  Space2 = '16px',
+  Space3 = '24px',
+  Space4 = '32px',
+  Space5 = '48px',
 }
 
 // convenience types
@@ -49,57 +49,58 @@ export type IMarginKeys = keyof typeof StaticSpacings;
 export type IPaddingKeys = keyof typeof StaticSpacings;
 
 export interface ITheme {
-  breakpoints: { [key in IBreakpointKeys]: number };
-  colors: { [key in IColorKeys]: IHex };
-  fontFamilies: { [key in IFontFamilyKeys]: string };
-  margin: { [key in IMarginKeys]: string };
-  padding: { [key in IPaddingKeys]: string };
+  Breakpoints: { [key in IBreakpointKeys]: number };
+  Colors: { [key in IColorKeys]: IHex };
+  FontFamilies: { [key in IFontFamilyKeys]: string };
+  Margin: { [key in IMarginKeys]: string };
+  Padding: { [key in IPaddingKeys]: string };
 }
 
 export const theme: ITheme = {
-  breakpoints: Breakpoints,
-  colors: Colors,
-  fontFamilies: FontFamilies,
-  margin: StaticSpacings,
-  padding: StaticSpacings,
+  Breakpoints,
+  Colors,
+  FontFamilies,
+  Margin: StaticSpacings,
+  Padding: StaticSpacings,
 };
 
 export enum TextTags {
-  subtext = 'subtext',
-  default = 'default',
-  h5 = 'h5',
-  h4 = 'h4',
-  h3 = 'h3',
-  h2 = 'h2',
-  h1 = 'h1',
+  Subtext = 'Subtext',
+  Default = 'Default',
+  H5 = 'H5',
+  H4 = 'H4',
+  H3 = 'H3',
+  H2 = 'H2',
+  H1 = 'H1',
 }
 
 export type ITextTagKeys = keyof typeof TextTags;
 
 export const fluidFontMatrix = (function() {
   const orderedBreakpoints = [
-    BreakpointsByKey.zero,
-    BreakpointsByKey.tiny,
-    BreakpointsByKey.small,
-    BreakpointsByKey.medium,
-    BreakpointsByKey.large,
-    BreakpointsByKey.giant,
+    BreakpointsByKey.Zero,
+    BreakpointsByKey.Tiny,
+    BreakpointsByKey.Small,
+    BreakpointsByKey.Medium,
+    BreakpointsByKey.Large,
+    BreakpointsByKey.Giant,
   ];
 
   const orderedTextTags = [
-    TextTags.subtext,
-    TextTags.default,
-    TextTags.h5,
-    TextTags.h4,
-    TextTags.h3,
-    TextTags.h2,
-    TextTags.h1,
+    TextTags.Subtext,
+    TextTags.Default,
+    TextTags.H5,
+    TextTags.H4,
+    TextTags.H3,
+    TextTags.H2,
+    TextTags.H1,
   ];
 
   type ITextSizes = { [key in TextTags]: number };
   type IFluidFontMatrix = { [key in IBreakpointKeys]: ITextSizes };
 
   function generateFluidFontMatrix(): IFluidFontMatrix {
+    // eslint-disable-next-line @typescript-eslint/no-object-literal-type-assertion
     const matrix = {} as IFluidFontMatrix;
 
     // starting fontSize used to generate the matrix in both directions
@@ -117,18 +118,16 @@ export const fluidFontMatrix = (function() {
     const tagScale = 1.25;
 
     orderedBreakpoints.forEach((breakpoint, bIndex) => {
+      // eslint-disable-next-line @typescript-eslint/no-object-literal-type-assertion
       matrix[breakpoint] = {} as ITextSizes;
 
-      const previousBase =
-        matrix[orderedBreakpoints[bIndex - 1]] &&
-        matrix[orderedBreakpoints[bIndex - 1]][orderedTextTags[0]];
+      const baseTag = orderedTextTags[0];
 
-      // only scale up across breakpoints at the breakpoints
-      // that most likely signify a different device
+      // only scale up across breakpoints at the breakpoints that most likely signify a different device
       let activeBreakpointScale;
       switch (breakpoint) {
-        case BreakpointsByKey.medium:
-        case BreakpointsByKey.giant: {
+        case BreakpointsByKey.Medium:
+        case BreakpointsByKey.Giant: {
           activeBreakpointScale = breakpointScale;
           break;
         }
@@ -137,16 +136,22 @@ export const fluidFontMatrix = (function() {
         }
       }
 
-      const currentBase = previousBase
-        ? previousBase * activeBreakpointScale
-        : seedBaseSize;
+      // find the base text size that sets the pattern for each breakpoint size
+      let currentBaseSize = 0;
+      if (bIndex === 0) {
+        currentBaseSize = seedBaseSize;
+      } else {
+        const previousBreakpoint = orderedBreakpoints[bIndex - 1];
+        const previousBaseTag = matrix[previousBreakpoint][baseTag];
+        currentBaseSize = previousBaseTag * activeBreakpointScale;
+      }
 
-      orderedTextTags.forEach((size, sIndex) => {
-        const previousTagBase = matrix[breakpoint][orderedTextTags[sIndex - 1]];
+      orderedTextTags.forEach((tag, tIndex) => {
+        const previousTextTag = matrix[breakpoint][orderedTextTags[tIndex - 1]];
 
-        matrix[breakpoint][size] = previousTagBase
-          ? previousTagBase * tagScale
-          : currentBase;
+        matrix[breakpoint][tag] = previousTextTag
+          ? previousTextTag * tagScale
+          : currentBaseSize;
       });
     });
 

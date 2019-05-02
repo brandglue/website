@@ -30,11 +30,11 @@ export const App: FC = () => {
 const GlobalStyles = createGlobalStyle`
   body {
     ${({ theme }) => css`
-      background: ${theme.colors.white};
-      color: ${theme.colors.black};
-      font-family: ${theme.fontFamilies.primary};
+      background: ${theme.Colors.White};
+      color: ${theme.Colors.Black};
+      font-family: ${theme.FontFamilies.Primary};
       margin: 0;
-      ${fluidFontSize.default()}
+      ${fluidFontSize.Default()}
     `};
   }
 `;

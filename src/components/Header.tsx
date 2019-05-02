@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Link } from '@reach/router';
 
 import { BrandglueLogo } from '@components/icons/BrandglueLogo';
-import { ROUTES } from '@constants/routes';
+import { Routes } from '@constants/routes';
 import styled, { css } from '@theme/styled';
 
 export const Header: FC = () => (
@@ -11,11 +11,11 @@ export const Header: FC = () => (
       <BrandglueLogo />
     </Logo>
     <Menu>
-      <StyledLink to={`/${ROUTES.ABOUT}`}>About</StyledLink>
-      <StyledLink to={`/${ROUTES.SERVICES}`}>Services</StyledLink>
-      <StyledLink to={`/${ROUTES.CASE_STUDIES}`}>Case Studies</StyledLink>
-      <StyledLink to={`/${ROUTES.BLOG}`}>Blog</StyledLink>
-      <StyledLink to={`/${ROUTES.CONTACT}`}>Contact</StyledLink>
+      <StyledLink to={`/${Routes.About}`}>About</StyledLink>
+      <StyledLink to={`/${Routes.Services}`}>Services</StyledLink>
+      <StyledLink to={`/${Routes.CaseStudies}`}>Case Studies</StyledLink>
+      <StyledLink to={`/${Routes.Blog}`}>Blog</StyledLink>
+      <StyledLink to={`/${Routes.Contact}`}>Contact</StyledLink>
     </Menu>
   </Wrapper>
 );
@@ -23,8 +23,8 @@ export const Header: FC = () => (
 const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
-  padding: 0 ${({ theme }) => theme.padding.space5};
-  margin: ${({ theme }) => theme.margin.space2} 0;
+  padding: 0 ${({ theme }) => theme.Padding.Space5};
+  margin: ${({ theme }) => theme.Margin.Space2} 0;
 `;
 
 const Logo = styled(Link)`
@@ -42,13 +42,13 @@ const Menu = styled.nav`
 const StyledLink = styled(Link)`
   ${({ theme }) => css`
     text-transform: uppercase;
-    color: ${theme.colors.black};
-    margin-right: ${theme.margin.space5};
+    color: ${theme.Colors.Black};
+    margin-right: ${theme.Margin.Space5};
     text-decoration: none;
     border-bottom: 2px solid transparent;
 
     &:hover {
-      border-bottom: 2px solid ${theme.colors.gold};
+      border-bottom: 2px solid ${theme.Colors.Gold};
     }
   `};
 `;

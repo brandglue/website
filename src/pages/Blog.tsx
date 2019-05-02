@@ -1,5 +1,5 @@
-import React, { FunctionComponent } from 'react';
+import React, { FC } from 'react';
 
-export const Blog: FunctionComponent = () => <div></div>;
+export const Blog: FC = () => <div />;
 
 export default Blog;

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-export default () => {
-  return (
-    <div>Cool footer</div>
-  );
-}
+export const Footer: FC = () => {
+  return <div>Cool footer</div>;
+};
+
+export default Footer;

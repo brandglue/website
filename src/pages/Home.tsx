@@ -46,28 +46,24 @@ const TaglineSection = styled.div`
 const multlinePaddedText = css`
   ${({ theme }) => css`
     display: inline;
-    background: rgba(${hexToRgb(theme.colors.darkBlue)}, 0.75);
+    background: rgba(${hexToRgb(theme.Colors.DarkBlue)}, 0.75);
     font-weight: normal;
-    color: ${theme.colors.white};
+    color: ${theme.Colors.White};
     padding: 10px 0;
     line-height: 1.54;
-    box-shadow: 10px 0 0 rgba(${hexToRgb(theme.colors.darkBlue)}, 0.75),
-      -10px 0 0 rgba(${hexToRgb(theme.colors.darkBlue)}, 0.75);
+    box-shadow: 10px 0 0 rgba(${hexToRgb(theme.Colors.DarkBlue)}, 0.75),
+      -10px 0 0 rgba(${hexToRgb(theme.Colors.DarkBlue)}, 0.75);
   `};
 `;
 
 const PrimaryTagline = styled.h1`
-  ${({ theme }) => css`
-    ${multlinePaddedText}
-    ${fluidFontSize.h1()}
-  `};
+  ${multlinePaddedText}
+  ${fluidFontSize.H1()}
 `;
 
 const SecondaryTagline = styled.h2`
-  ${({ theme }) => css`
-    ${fluidFontSize.h2()}
-    ${multlinePaddedText}
-  `};
+  ${fluidFontSize.H2()}
+  ${multlinePaddedText}
 `;
 
 export default Homepage;
