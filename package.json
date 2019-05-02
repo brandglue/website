@@ -1,6 +1,8 @@
 {
   "name": "brandglue-website",
   "private": true,
+  "license": "UNLICENSED",
+  "repository": "https://github.com/brandglue/website",
   "scripts": {
     "analyze": "react-static build --analyze",
     "build": "react-static build",
