@@ -1,3 +1,24 @@
 {
-  "extends": "react-app"
+  "extends": ["plugin:react/recommended", "plugin:prettier/recommended"],
+  "plugins": ["react-hooks"],
+  "rules": {
+    "react/jsx-sort-props": [
+      1,
+      {
+        "reservedFirst": true
+      }
+    ],
+    "react/sort-comp": [
+      2,
+      {
+        "order": [
+          "static-methods",
+          "instance-variables",
+          "lifecycle",
+          "everything-else",
+          "render"
+        ]
+      }
+    ]
+  }
 }
