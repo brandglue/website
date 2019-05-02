@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import { Root, Routes } from 'react-static';
 import { Router } from '@reach/router';
 
+import SiteHead from './SiteHead';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import { theme } from '@theme/theme';
@@ -12,6 +13,7 @@ export const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Root>
+        <SiteHead />
         <GlobalStyles />
         <Header />
         <Suspense fallback={<div>Loading...</div>}>
