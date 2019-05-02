@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { FC, Suspense } from 'react';
 import { Root, Routes } from 'react-static';
 import { Router } from '@reach/router';
 
@@ -7,9 +7,9 @@ import Header from '@components/Header';
 import Footer from '@components/Footer';
 import { theme } from '@theme/theme';
 import { createGlobalStyle, css, ThemeProvider } from '@theme/styled';
-import { fluidFontSize, minMediaQuery } from '@theme/utils';
+import { fluidFontSize } from '@theme/utils';
 
-export const App = () => {
+export const App: FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <Root>

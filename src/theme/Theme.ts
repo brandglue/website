@@ -32,7 +32,7 @@ export enum FontFamilies {
   primary = 'Lato, Arial, sans-serif',
 }
 
-export enum Spacings {
+export enum StaticSpacings {
   space0 = '4px',
   space1 = '8px',
   space2 = '16px',
@@ -45,8 +45,8 @@ export enum Spacings {
 export type IBreakpointKeys = keyof typeof Breakpoints;
 export type IColorKeys = keyof typeof Colors;
 export type IFontFamilyKeys = keyof typeof FontFamilies;
-export type IMarginKeys = keyof typeof Spacings;
-export type IPaddingKeys = keyof typeof Spacings;
+export type IMarginKeys = keyof typeof StaticSpacings;
+export type IPaddingKeys = keyof typeof StaticSpacings;
 
 export interface ITheme {
   breakpoints: { [key in IBreakpointKeys]: number };
@@ -60,8 +60,8 @@ export const theme: ITheme = {
   breakpoints: Breakpoints,
   colors: Colors,
   fontFamilies: FontFamilies,
-  margin: Spacings,
-  padding: Spacings,
+  margin: StaticSpacings,
+  padding: StaticSpacings,
 };
 
 export enum TextTags {
