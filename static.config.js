@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'path';
 
 export default {
   siteRoot: 'https://brandglue.com',
@@ -7,8 +7,8 @@ export default {
     [
       require.resolve('react-static-plugin-typescript'),
       {
-        typeCheck: true
-      }
+        typeCheck: true,
+      },
     ],
     require.resolve('react-static-plugin-reach-router'),
     require.resolve('react-static-plugin-styled-components'),
@@ -40,6 +40,6 @@ export default {
     {
       path: '/services',
       template: 'src/pages/Services',
-    }
-  ]
+    },
+  ],
 };

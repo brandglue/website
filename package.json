@@ -19,6 +19,9 @@
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "eslint --fix"
+    ],
+    "*.tsx": [
+      "stylelint"
     ]
   },
   "dependencies": {
@@ -26,10 +29,12 @@
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-hot-loader": "4.8.4",
+    "react-ideal-image": "0.0.5",
     "react-static": "7.0.10",
     "react-static-plugin-reach-router": "7.0.10",
     "react-static-plugin-sitemap": "7.0.10",
     "react-static-plugin-styled-components": "7.0.10",
+    "react-waypoint": "8.0.3",
     "styled-components": "4.2.0",
     "webpack-dev-server": "3.3.1"
   },
@@ -51,9 +56,13 @@
     "eslint-plugin-react": "7.12.4",
     "eslint-plugin-react-hooks": "1.6.0",
     "husky": "2.2.0",
+    "image-webpack-loader": "4.6.0",
+    "jimp": "0.6.4",
     "lint-staged": "8.1.5",
+    "lqip-loader": "2.2.0",
     "prettier": "1.17.0",
     "react-static-plugin-typescript": "7.0.10",
+    "responsive-loader": "1.2.0",
     "serve": "11.0.0",
     "stylelint": "10.0.1",
     "stylelint-config-prettier": "5.1.0",

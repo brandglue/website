@@ -7,17 +7,53 @@
 
   See: https://stackoverflow.com/a/36151803
 */
+
+// these image interface is based on the return type of the image loaders in the node.api.js
+// if those loaders are changed, this interface will also likely need to change
+interface IImage {
+  height: number;
+  path: string;
+  width: number;
+}
+
+interface IImageGroup {
+  preSrc: string;
+  src: {
+    height: number;
+    images: IImage[];
+    placeholder: string;
+    src: string;
+    srcSet: string;
+    width: number;
+  };
+}
+
+declare module '*.gif' {
+  const value: IImageGroup;
+  export default value;
+}
+
 declare module '*.jpg' {
-  const value: any;
+  const value: IImageGroup;
+  export default value;
+}
+
+declare module '*.jpeg' {
+  const value: IImageGroup;
   export default value;
 }
 
 declare module '*.png' {
-  const value: any;
+  const value: IImageGroup;
   export default value;
 }
 
 declare module '*.webp' {
-  const value: any;
+  const value: unknown;
   export default value;
 }
+
+/*
+  Declare modules below for 3rd-party packages that have no current type definition
+*/
+declare module 'react-ideal-image';
