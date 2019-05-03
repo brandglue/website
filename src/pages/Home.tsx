@@ -6,16 +6,17 @@ import styled, { css } from '@theme/styled';
 import { fluidFontSize, hexToRgb } from '@theme/utils';
 
 export const Homepage: FC = () => (
-  <IdealImage
-    height={hero.src.height}
-    placeholder={{ lqip: hero.preSrc }}
-    src={hero.src.src}
-    srcSet={hero.src.images.map(image => ({
-      ...image,
-      src: image.path,
-    }))}
-    width={hero.src.width}
-  >
+  <Wrapper>
+    <IdealImage
+      height={hero.src.height}
+      placeholder={{ lqip: hero.preSrc }}
+      src={hero.src.src}
+      srcSet={hero.src.images.map(image => ({
+        ...image,
+        src: image.path,
+      }))}
+      width={hero.src.width}
+    />
     <Tagline>
       <TaglineSection>
         <PrimaryTagline>
@@ -28,19 +29,12 @@ export const Homepage: FC = () => (
         </SecondaryTagline>
       </TaglineSection>
     </Tagline>
-  </IdealImage>
+  </Wrapper>
 );
 
-// TODO: Add WebP fallback handling: https://css-tricks.com/using-webp-images/
-// const Hero = styled.div`
-//   position: relative;
-//   overflow: hidden;
-//   height: 0;
-//   border: 0;
-//   padding-bottom: 56.25%;
-//   background-image: url(${homepageHero});
-//   background-size: cover;
-// `;
+const Wrapper = styled.div`
+  position: relative;
+`;
 
 const Tagline = styled.div`
   position: absolute;
