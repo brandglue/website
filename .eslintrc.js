@@ -22,7 +22,7 @@
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/no-use-before-define': [
         'error',
-        { functions: false, classes: true, variables: true, typedefs: true }
+        { functions: false, classes: true, variables: true, typedefs: true },
       ],
       'react/jsx-sort-props': [
         1,
@@ -43,6 +43,8 @@
         },
       ],
       'react/prop-types': 'off',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
     },
     settings: {
       react: {

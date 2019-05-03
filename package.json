@@ -11,10 +11,14 @@
     "start": "react-static start",
     "serve": "serve dist -p 3000"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint-staged"
+    }
+  },
   "lint-staged": {
-    "*": [
-      "eslint --fix",
-      "git add"
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
     ]
   },
   "dependencies": {
