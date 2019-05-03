@@ -1,22 +1,13 @@
 import React, { FC } from 'react';
-import IdealImage from 'react-ideal-image';
 
+import Image from '@components/Image';
 import hero from '@images/homepage-hero.jpg';
 import styled, { css } from '@theme/styled';
 import { fluidFontSize, hexToRgb } from '@theme/utils';
 
 export const Homepage: FC = () => (
   <Wrapper>
-    <IdealImage
-      height={hero.src.height}
-      placeholder={{ lqip: hero.preSrc }}
-      src={hero.src.src}
-      srcSet={hero.src.images.map(image => ({
-        ...image,
-        src: image.path,
-      }))}
-      width={hero.src.width}
-    />
+    <Image img={hero} />
     <Tagline>
       <TaglineSection>
         <PrimaryTagline>

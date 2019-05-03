@@ -27,6 +27,7 @@
       "@images/*": ["src/images/*"],
       "@models/*": ["src/models/*"],
       "@pages/*": ["src/pages/*"],
+      "@src/*": ["src/*"],
       "@theme/*": ["src/theme/*"],
       "@utils/*": ["src/utils/*"]
     }
