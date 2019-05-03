@@ -1,3 +1,3 @@
-# React-Static - Blank Template
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a06db11b-6d7c-4a03-b307-eb2644b3830a/deploy-status)](https://app.netlify.com/sites/brave-kilby-8a8ba4/deploys)
 
-To use this template, run `react-static create` and select the `blank` template.
+Welcome to the BrandGlue website!
