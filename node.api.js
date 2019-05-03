@@ -21,6 +21,7 @@ export default () => ({
               {
                 loader: 'responsive-loader',
                 options: {
+                  adapter: require('responsive-loader/sharp'),
                   sizes: [300, 600, 900, 1200],
                   name: '[path][name]-[width].[ext]',
                 },

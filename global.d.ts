@@ -57,3 +57,4 @@ declare module '*.webp' {
   Declare modules below for 3rd-party packages that have no current type definition
 */
 declare module 'react-ideal-image';
+declare module 'responsive-loader/sharp';
