@@ -1,7 +1,8 @@
 import path from 'path';
 
 export default {
-  siteRoot: 'https://brandglue.com',
+  // TODO: change to https://brandglue.com/ when ready for live deploy
+  siteRoot: 'https://brave-kilby-8a8ba4.netlify.com/',
 
   plugins: [
     [
