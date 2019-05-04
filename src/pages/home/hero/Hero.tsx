@@ -5,7 +5,7 @@ import hero from '@images/homepage-hero.jpg';
 import styled, { css } from '@theme/styled';
 import { fluidFontSize, hexToRgb } from '@theme/utils';
 
-export const Homepage: FC = () => (
+const Hero: FC = () => (
   <Wrapper>
     <Image img={hero} />
     <Tagline>
@@ -61,4 +61,4 @@ const SecondaryTagline = styled.h2`
   ${multlinePaddedText}
 `;
 
-export default Homepage;
+export default Hero;

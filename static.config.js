@@ -20,7 +20,7 @@ export default {
   getRoutes: () => [
     {
       path: '/',
-      template: 'src/pages/Home',
+      template: 'src/pages/home/Home',
     },
     {
       path: '/about',

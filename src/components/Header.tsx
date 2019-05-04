@@ -25,7 +25,7 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   padding: 0 ${({ theme }) => theme.Padding.Page};
-  margin: ${({ theme }) => theme.Margin.Space2} 0;
+  margin: ${({ theme }) => theme.Margin.StaticSpace3} 0;
 `;
 
 const Logo = styled(Link)`
@@ -35,16 +35,15 @@ const Logo = styled(Link)`
 const Menu = styled.nav`
   flex: 1 1 auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  margin-left: 20%;
 `;
 
 const StyledLink = styled(Link)`
   ${({ theme }) => css`
     text-transform: uppercase;
     color: ${theme.Colors.Black};
-    margin-right: ${theme.Margin.Space5};
+    margin-right: ${theme.Margin.FontSpace10};
     text-decoration: none;
     border-bottom: 2px solid transparent;
 

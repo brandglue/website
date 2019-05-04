@@ -32,22 +32,47 @@ export enum FontFamilies {
   Primary = 'Lato, Arial, sans-serif',
 }
 
-export enum StaticSpacings {
-  Space0 = '4px',
-  Space1 = '8px',
-  Space2 = '16px',
-  Space3 = '24px',
-  Space4 = '32px',
-  Space5 = '48px',
-  Page = '10%',
+export enum Spacings {
+  StaticSpace0 = '5px',
+  StaticSpace1 = '10px',
+  StaticSpace2 = '15px',
+  StaticSpace3 = '20px',
+  StaticSpace4 = '25px',
+  StaticSpace5 = '30px',
+  StaticSpace6 = '35px',
+  StaticSpace7 = '40px',
+  StaticSpace8 = '45px',
+  StaticSpace9 = '50px',
+  StaticSpace10 = '55px',
+  DynamicSpace1 = '2vw',
+  DynamicSpace2 = '4vw',
+  DynamicSpace3 = '6vw',
+  DynamicSpace4 = '8vw',
+  DynamicSpace5 = '10vw',
+  DynamicSpace6 = '12vw',
+  DynamicSpace7 = '14vw',
+  DynamicSpace8 = '16vw',
+  DynamicSpace9 = '18vw',
+  DynamicSpace10 = '20vw',
+  Page = '10vw', // special case for typical page padding
+  FontSpace1 = '0.2em',
+  FontSpace2 = '0.4em',
+  FontSpace3 = '0.6em',
+  FontSpace4 = '0.8em',
+  FontSpace5 = '1em',
+  FontSpace6 = '1.2em',
+  FontSpace7 = '1.4em',
+  FontSpace8 = '1.6em',
+  FontSpace9 = '1.8em',
+  FontSpace10 = '2em',
 }
 
 // convenience types
 export type IBreakpointKeys = keyof typeof Breakpoints;
 export type IColorKeys = keyof typeof Colors;
 export type IFontFamilyKeys = keyof typeof FontFamilies;
-export type IMarginKeys = keyof typeof StaticSpacings;
-export type IPaddingKeys = keyof typeof StaticSpacings;
+export type IMarginKeys = keyof typeof Spacings;
+export type IPaddingKeys = keyof typeof Spacings;
 
 export interface ITheme {
   Breakpoints: { [key in IBreakpointKeys]: number };
@@ -61,8 +86,8 @@ export const theme: ITheme = {
   Breakpoints,
   Colors,
   FontFamilies,
-  Margin: StaticSpacings,
-  Padding: StaticSpacings,
+  Margin: Spacings,
+  Padding: Spacings,
 };
 
 export enum TypeScaleByKeys {
