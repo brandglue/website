@@ -33,6 +33,7 @@ const GlobalStyles = createGlobalStyle`
       background: ${theme.Colors.White};
       color: ${theme.Colors.Black};
       font-family: ${theme.FontFamilies.Primary};
+      line-height: 1.5;
       margin: 0;
       ${fluidFontSize.Baseline()}
     `};

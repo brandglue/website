@@ -3,22 +3,24 @@ import React, { FC } from 'react';
 import Image from '@components/Image';
 import hero from '@images/homepage-hero.jpg';
 import styled, { css } from '@theme/styled';
-import { fluidFontSize, hexToRgb } from '@theme/utils';
+import { fluidFontSize } from '@theme/utils';
 
 const Hero: FC = () => (
   <Wrapper>
     <Image img={hero} />
     <Tagline>
-      <TaglineSection>
+      <div>
         <PrimaryTagline>
-          We are a <br /> social media agency
+          We are a<Break />
+          social media agency
         </PrimaryTagline>
-      </TaglineSection>
-      <TaglineSection>
+      </div>
+      <div>
         <SecondaryTagline>
-          reaching your audience in the places <br /> they hang out most.
+          reaching your audience in the places
+          <Break /> they hang out most.
         </SecondaryTagline>
-      </TaglineSection>
+      </div>
     </Tagline>
   </Wrapper>
 );
@@ -29,36 +31,37 @@ const Wrapper = styled.div`
 
 const Tagline = styled.div`
   position: absolute;
-  left: 10%;
-  bottom: 20px;
-`;
-
-const TaglineSection = styled.div`
-  margin-bottom: 0;
+  left: ${({ theme }) => theme.Spacings.Page};
+  bottom: ${({ theme }) => theme.Spacings.StaticSpace6};
 `;
 
 // https://css-tricks.com/multi-line-padded-text/
 const multlinePaddedText = css`
   ${({ theme }) => css`
     display: inline;
-    background: rgba(${hexToRgb(theme.Colors.DarkBlue)}, 0.75);
-    font-weight: normal;
+    background: ${theme.Colors.DarkBlue};
     color: ${theme.Colors.White};
-    padding: 10px 0;
-    line-height: 1.54;
-    box-shadow: 10px 0 0 rgba(${hexToRgb(theme.Colors.DarkBlue)}, 0.75),
-      -10px 0 0 rgba(${hexToRgb(theme.Colors.DarkBlue)}, 0.75);
+    padding: ${theme.Spacings.StaticSpace1};
+    box-decoration-break: clone;
   `};
 `;
 
 const PrimaryTagline = styled.h1`
   ${multlinePaddedText}
-  ${fluidFontSize.StepUp6()}
+  ${fluidFontSize.StepUp4()}
+  font-weight: 700;
+  line-height: 1.3;
 `;
 
 const SecondaryTagline = styled.h2`
-  ${fluidFontSize.StepUp4()}
   ${multlinePaddedText}
+  ${fluidFontSize.StepUp1()}
+  font-weight: 700;
+  line-height: 1.7;
+`;
+
+const Break = styled.br`
+  line-height: 0.1;
 `;
 
 export default Hero;

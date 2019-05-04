@@ -35,14 +35,14 @@ export const Clients: FC = () => (
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 13vw 13vw 13vw 13vw;
-  grid-template-rows: 13vw 13vw 13vw;
+  grid-template-columns: 12vw 12vw 12vw 12vw;
+  grid-template-rows: 12vw 12vw 12vw;
   grid-column-gap: 3vw;
-  grid-row-gap: 2vw;
+  grid-row-gap: 1vw;
   justify-items: center;
   align-items: center;
   justify-content: center;
-  padding: ${({ theme }) => theme.Padding.StaticSpace3} 0;
+  padding: ${({ theme }) => theme.Spacings.StaticSpace3} 0;
 `;
 
 const Logo = styled(Image)`
