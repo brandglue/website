@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Link } from '@reach/router';
 
-import { BrandglueLogo } from '@components/icons/BrandglueLogo';
+import { BrandglueLogo } from '@icons/BrandglueLogo';
 import { Routes } from '@constants/routes';
 import styled, { css } from '@theme/styled';
 import { fluidFontSize } from '@theme/utils';

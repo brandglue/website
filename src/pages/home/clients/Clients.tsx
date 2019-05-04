@@ -1,6 +1,9 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 
+import Button from '@components/Button';
+import HorizontalDivider from '@components/HorizontalDivider';
 import Image from '@components/Image';
+import { useTheme } from '@hooks/useTheme';
 import quickbooks from '@images/logo-quickbooks.jpg';
 import kayak from '@images/logo-kayak.jpg';
 import microsoft from '@images/logo-microsoft.jpg';
@@ -13,25 +16,43 @@ import good from '@images/logo-good.jpg';
 import shortel from '@images/logo-shortel.jpg';
 import pgi from '@images/logo-pgi.jpg';
 import youtube from '@images/logo-youtube.jpg';
-
 import styled from '@theme/styled';
 
-export const Clients: FC = () => (
-  <Grid>
-    <Logo img={microsoft} />
-    <Logo img={intel} />
-    <Logo img={kayak} />
-    <Logo img={quickbooks} />
-    <Logo img={intuit} />
-    <Logo img={mint} />
-    <Logo img={dsg} />
-    <Logo img={youtube} />
-    <Logo img={suns} />
-    <Logo img={good} />
-    <Logo img={shortel} />
-    <Logo img={pgi} />
-  </Grid>
-);
+export const Clients: FC = () => {
+  const [isOpen, setOpen] = useState(false);
+  const theme = useTheme();
+
+  return (
+    <>
+      <Grid>
+        <Image img={microsoft} />
+        <Image img={intel} />
+        <Image img={kayak} />
+        <Image img={quickbooks} />
+
+        {isOpen && (
+          <>
+            <Image img={intuit} />
+            <Image img={mint} />
+            <Image img={dsg} />
+            <Image img={youtube} />
+            <Image img={suns} />
+            <Image img={good} />
+            <Image img={shortel} />
+            <Image img={pgi} />
+          </>
+        )}
+      </Grid>
+      <AccordianSelector onClick={() => setOpen(!isOpen)}>
+        See More Clients
+      </AccordianSelector>
+      <HorizontalDivider
+        color={theme.Colors.Gold}
+        height={theme.Spacings.StaticSpace5}
+      />
+    </>
+  );
+};
 
 const Grid = styled.div`
   display: grid;
@@ -45,8 +66,6 @@ const Grid = styled.div`
   padding: ${({ theme }) => theme.Spacings.StaticSpace3} 0;
 `;
 
-const Logo = styled(Image)`
-  /* max-width: 200px; */
-`;
+const AccordianSelector = styled(Button)``;
 
 export default Clients;

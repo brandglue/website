@@ -24,6 +24,8 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@icons/*": ["src/icons/*"],
       "@images/*": ["src/images/*"],
       "@models/*": ["src/models/*"],
       "@pages/*": ["src/pages/*"],
