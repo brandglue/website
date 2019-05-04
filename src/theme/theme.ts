@@ -39,6 +39,7 @@ export enum StaticSpacings {
   Space3 = '24px',
   Space4 = '32px',
   Space5 = '48px',
+  Page = '10%',
 }
 
 // convenience types
@@ -64,94 +65,84 @@ export const theme: ITheme = {
   Padding: StaticSpacings,
 };
 
-export enum TextTags {
-  Subtext = 'Subtext',
-  Default = 'Default',
-  H5 = 'H5',
-  H4 = 'H4',
-  H3 = 'H3',
-  H2 = 'H2',
-  H1 = 'H1',
+export enum TypeScaleByKeys {
+  StepUp8 = 'StepUp8',
+  StepUp7 = 'StepUp7',
+  StepUp6 = 'StepUp6',
+  StepUp5 = 'StepUp5',
+  StepUp4 = 'StepUp4',
+  StepUp3 = 'StepUp3',
+  StepUp2 = 'StepUp2',
+  StepUp1 = 'StepUp1',
+  Baseline = 'Baseline',
+  StepDown1 = 'StepDown1',
+  StepDown2 = 'StepDown2',
+  StepDown3 = 'StepDown3',
+  StepDown4 = 'StepDown4',
 }
 
-export type ITextTagKeys = keyof typeof TextTags;
-
 export const fluidFontMatrix = (function() {
-  const orderedBreakpoints = [
-    BreakpointsByKey.Zero,
-    BreakpointsByKey.Tiny,
-    BreakpointsByKey.Small,
-    BreakpointsByKey.Medium,
-    BreakpointsByKey.Large,
-    BreakpointsByKey.Giant,
-  ];
+  // Uses the Golden Ratio
+  const typeRatio = 1.618;
 
-  const orderedTextTags = [
-    TextTags.Subtext,
-    TextTags.Default,
-    TextTags.H5,
-    TextTags.H4,
-    TextTags.H3,
-    TextTags.H2,
-    TextTags.H1,
-  ];
+  // Uses the Golden Ditonic Scale, which doubles every other factor
+  // https://blog.envylabs.com/responsive-typographic-scales-in-css-b9f60431d1c4
+  const doublingFactor = 2;
 
-  type ITextSizes = { [key in TextTags]: number };
-  type IFluidFontMatrix = { [key in IBreakpointKeys]: ITextSizes };
+  // Sets the step factor used to compute the type scale
+  const typeScaleByStep = {
+    [TypeScaleByKeys.StepUp8]: 8,
+    [TypeScaleByKeys.StepUp7]: 7,
+    [TypeScaleByKeys.StepUp6]: 6,
+    [TypeScaleByKeys.StepUp5]: 5,
+    [TypeScaleByKeys.StepUp4]: 4,
+    [TypeScaleByKeys.StepUp3]: 3,
+    [TypeScaleByKeys.StepUp2]: 2,
+    [TypeScaleByKeys.StepUp1]: 1,
+    [TypeScaleByKeys.Baseline]: 1, // special, gets handled separately below
+    [TypeScaleByKeys.StepDown1]: -1,
+    [TypeScaleByKeys.StepDown2]: -2,
+    [TypeScaleByKeys.StepDown3]: -3,
+    [TypeScaleByKeys.StepDown4]: -4,
+  };
+
+  // roughly uses a 1.125 breakpoint scale
+  // upscaling the fontSize across the breakpoints is helpful
+  // however only scale up across breakpoints that most likely signify a different device
+  const baselineFontSizeByBreakpoint = {
+    [BreakpointsByKey.Zero]: 16,
+    [BreakpointsByKey.Tiny]: 16,
+    [BreakpointsByKey.Small]: 16,
+    [BreakpointsByKey.Medium]: 18,
+    [BreakpointsByKey.Large]: 18,
+    [BreakpointsByKey.Giant]: 20.25,
+  };
+
+  type ITypeScaleKeys = keyof typeof TypeScaleByKeys;
+  type IFontSizes = { [key in TypeScaleByKeys]: number };
+  type IFluidFontMatrix = { [key in IBreakpointKeys]: IFontSizes };
 
   function generateFluidFontMatrix(): IFluidFontMatrix {
     // eslint-disable-next-line @typescript-eslint/no-object-literal-type-assertion
     const matrix = {} as IFluidFontMatrix;
 
-    // starting fontSize used to generate the matrix in both directions
-    // the value is based on the goal to have the `default` fontSize = 16 at the smallest breakpoint
-    const seedBaseSize = 16 / 1.25;
+    const breakpointKeys = Object.keys(BreakpointsByKey) as IBreakpointKeys[];
+    const typeScaleKeys = Object.keys(TypeScaleByKeys) as ITypeScaleKeys[];
 
-    // upscaling the fontSize across the breakpoints is helpful
-    // this scale is based on the Major Second Scale
-    // https://medium.com/sketch-app-sources/exploring-responsive-type-scales-cf1da541be54
-    const breakpointScale = 1.125;
-
-    // upscaling the fontSize across the font tags (p -> h1) is fundamental
-    // this scale uses the Major Third Scale
-    // https://medium.com/sketch-app-sources/exploring-responsive-type-scales-cf1da541be54
-    const tagScale = 1.25;
-
-    orderedBreakpoints.forEach((breakpoint, bIndex) => {
+    breakpointKeys.forEach(breakpoint => {
       // eslint-disable-next-line @typescript-eslint/no-object-literal-type-assertion
-      matrix[breakpoint] = {} as ITextSizes;
+      matrix[breakpoint] = {} as IFontSizes;
 
-      const baseTag = orderedTextTags[0];
+      const baselineFontSize = baselineFontSizeByBreakpoint[breakpoint];
 
-      // only scale up across breakpoints at the breakpoints that most likely signify a different device
-      let activeBreakpointScale;
-      switch (breakpoint) {
-        case BreakpointsByKey.Medium:
-        case BreakpointsByKey.Giant: {
-          activeBreakpointScale = breakpointScale;
-          break;
+      typeScaleKeys.forEach(typeScale => {
+        if (typeScale === TypeScaleByKeys.Baseline) {
+          matrix[breakpoint][typeScale] = baselineFontSize;
+        } else {
+          const step = typeScaleByStep[typeScale];
+          matrix[breakpoint][typeScale] =
+            typeRatio ** (step / doublingFactor) * baselineFontSize;
         }
-        default: {
-          activeBreakpointScale = 1;
-        }
-      }
-
-      // find the base text size that sets the pattern for each breakpoint size
-      let currentBaseSize = 0;
-      if (bIndex === 0) {
-        currentBaseSize = seedBaseSize;
-      } else {
-        const previousBreakpoint = orderedBreakpoints[bIndex - 1];
-        const previousBaseTag = matrix[previousBreakpoint][baseTag];
-        currentBaseSize = previousBaseTag * activeBreakpointScale;
-      }
-
-      orderedTextTags.forEach((tag, tIndex) => {
-        const previousTextTag = matrix[breakpoint][orderedTextTags[tIndex - 1]];
-
-        matrix[breakpoint][tag] = previousTextTag
-          ? previousTextTag * tagScale
-          : currentBaseSize;
       });
     });
 

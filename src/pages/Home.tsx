@@ -53,11 +53,11 @@ const multlinePaddedText = css`
 
 const PrimaryTagline = styled.h1`
   ${multlinePaddedText}
-  ${fluidFontSize.H1()}
+  ${fluidFontSize.StepUp6()}
 `;
 
 const SecondaryTagline = styled.h2`
-  ${fluidFontSize.H2()}
+  ${fluidFontSize.StepUp4()}
   ${multlinePaddedText}
 `;
 

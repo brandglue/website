@@ -15,13 +15,13 @@ export const App: FC = () => {
       <Root>
         <SiteHead />
         <GlobalStyles />
-        <Header />
         <Suspense fallback={<div>Loading...</div>}>
+          <Header />
           <Router>
             <Routes path="*" />
           </Router>
+          <Footer />
         </Suspense>
-        <Footer />
       </Root>
     </ThemeProvider>
   );
@@ -34,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
       color: ${theme.Colors.Black};
       font-family: ${theme.FontFamilies.Primary};
       margin: 0;
-      ${fluidFontSize.Default()}
+      ${fluidFontSize.Baseline()}
     `};
   }
 `;

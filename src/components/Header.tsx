@@ -4,6 +4,7 @@ import { Link } from '@reach/router';
 import { BrandglueLogo } from '@components/icons/BrandglueLogo';
 import { Routes } from '@constants/routes';
 import styled, { css } from '@theme/styled';
+import { fluidFontSize } from '@theme/utils';
 
 export const Header: FC = () => (
   <Wrapper>
@@ -23,7 +24,7 @@ export const Header: FC = () => (
 const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
-  padding: 0 ${({ theme }) => theme.Padding.Space5};
+  padding: 0 ${({ theme }) => theme.Padding.Page};
   margin: ${({ theme }) => theme.Margin.Space2} 0;
 `;
 
@@ -50,6 +51,8 @@ const StyledLink = styled(Link)`
     &:hover {
       border-bottom: 2px solid ${theme.Colors.Gold};
     }
+
+    ${fluidFontSize.StepDown1()};
   `};
 `;
 

@@ -7,8 +7,7 @@ import {
   BreakpointsByKey,
   fluidFontMatrix,
   IBreakpointKeys,
-  ITextTagKeys,
-  TextTags,
+  TypeScaleByKeys,
 } from '@theme/theme';
 
 /*
@@ -62,34 +61,39 @@ export const minMediaQuery = (function() {
   Inspiration: https://www.smashingmagazine.com/2017/05/fluid-responsive-typography-css-poly-fluid-sizing/
 */
 export const fluidFontSize = (function() {
-  type IFluidFontSizes = Record<ITextTagKeys, () => FlattenSimpleInterpolation>;
+  type IFluidFontSizes = Record<
+    TypeScaleByKeys,
+    () => FlattenSimpleInterpolation
+  >;
 
   function generateFluidFontSizes(): IFluidFontSizes {
     /* must assert keys as desired type per: https://github.com/Microsoft/TypeScript/pull/12253 */
-    const textTagKeys = Object.keys(TextTags) as ITextTagKeys[];
+    const typeScaleKeys = Object.keys(TypeScaleByKeys) as TypeScaleByKeys[];
 
-    return textTagKeys.reduce(
-      (fluidFontSizes, tag) => {
-        fluidFontSizes[tag] = () => {
+    return typeScaleKeys.reduce(
+      (fluidFontSizes, typeScale) => {
+        fluidFontSizes[typeScale] = () => {
           const breakpointKeys = Object.keys(
             BreakpointsByKey,
           ) as IBreakpointKeys[];
 
-          const basefontSize = fluidFontMatrix[BreakpointsByKey.Zero][tag];
-          let styles = [`font-size: ${basefontSize}px`];
+          let styles: string[] = [];
 
           breakpointKeys.forEach((currentBreakpoint, index) => {
-            // ignore the base case since this was handled above
-            if (currentBreakpoint === BreakpointsByKey.Zero) return;
+            if (currentBreakpoint === BreakpointsByKey.Zero) {
+              const fontSize =
+                fluidFontMatrix[BreakpointsByKey.Zero][typeScale];
+              return styles.push(`font-size: ${fontSize}px`);
+            }
 
             const currentBreakpointWidth = Breakpoints[currentBreakpoint];
-            const currentSize = fluidFontMatrix[currentBreakpoint][tag];
+            const currentSize = fluidFontMatrix[currentBreakpoint][typeScale];
             const nextBreakpointWidth = Breakpoints[breakpointKeys[index + 1]];
             const nextSize =
               nextBreakpointWidth &&
-              fluidFontMatrix[breakpointKeys[index + 1]][tag];
+              fluidFontMatrix[breakpointKeys[index + 1]][typeScale];
 
-            if (nextSize) {
+            if (nextSize && nextSize !== currentSize) {
               // compute linear interpolation
               const slope =
                 (nextSize - currentSize) /
@@ -101,11 +105,15 @@ export const fluidFontSize = (function() {
                 yIntercept,
               )}px)`;
 
-              styles.push(generateMediaQuery(currentBreakpoint, fontSize));
-            } else {
-              styles.push(
+              return styles.push(
+                generateMediaQuery(currentBreakpoint, fontSize),
+              );
+            } else if (!nextSize) {
+              return styles.push(
                 generateMediaQuery(currentBreakpoint, `${currentSize}px`),
               );
+            } else {
+              return; // don't add extra media queries unless needed
             }
           });
 
