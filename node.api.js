@@ -1,38 +1,37 @@
 export default () => ({
   webpack: (config, { defaultLoaders }) => {
+    const existingLoaders = config.module.rules[0].oneOf;
+    const loaders = [...existingLoaders];
+
     /*
-      CAUTION:
-      The current mix of plugins in static.config.js and here results in the 
-      typescriptLoader being first if the oneOf array. THIS MAY CHANGE IN THE FUTURE.
-      If other plugins are added/removed, the ordering may change and this code may break.
+      CAUTION
+      This code removes the last loader, which is assumed to be the fileLoader
+      If that assumption changes for some reason, this code will not behave as expected.
     */
-    const typescriptLoader = config.module.rules[0].oneOf[0];
+    loaders.length = loaders.length - 1;
+
+    const imageLoader = {
+      test: /\.(gif|png|jpe?g)$/i,
+      use: [
+        'lqip-loader',
+        {
+          loader: 'responsive-loader',
+          options: {
+            adapter: require('responsive-loader/sharp'),
+            sizes: [300, 600, 900, 1200],
+            name: '[path][name]-[width].[ext]',
+          },
+        },
+        'image-webpack-loader',
+      ],
+    };
 
     config.module.rules = [
       {
-        oneOf: [
-          typescriptLoader,
-          defaultLoaders.jsLoaderExt,
-          defaultLoaders.cssLoader,
-          {
-            test: /\.(gif|png|jpe?g)$/i,
-            use: [
-              'lqip-loader',
-              {
-                loader: 'responsive-loader',
-                options: {
-                  adapter: require('responsive-loader/sharp'),
-                  sizes: [300, 600, 900, 1200],
-                  name: '[path][name]-[width].[ext]',
-                },
-              },
-              'image-webpack-loader',
-            ],
-          },
-          defaultLoaders.fileLoader,
-        ],
+        oneOf: [...loaders, imageLoader, defaultLoaders.fileLoader],
       },
     ];
+
     return config;
   },
 });
