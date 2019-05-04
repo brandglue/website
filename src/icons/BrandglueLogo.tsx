@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+
 import Svg from '@components/Svg';
 
 interface IOwnProps extends React.SVGAttributes<SVGSVGElement> {

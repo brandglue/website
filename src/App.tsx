@@ -2,12 +2,13 @@ import React, { FC, Suspense } from 'react';
 import { Root, Routes } from 'react-static';
 import { Router } from '@reach/router';
 
-import SiteHead from './SiteHead';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import { theme } from '@theme/theme';
 import { createGlobalStyle, css, ThemeProvider } from '@theme/styled';
 import { fluidFontSize } from '@theme/utils';
+
+import SiteHead from './SiteHead';
 
 export const App: FC = () => {
   return (

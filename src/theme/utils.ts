@@ -1,4 +1,4 @@
-import { FlattenSimpleInterpolation } from 'styled-components';
+import * as styledComponents from 'styled-components';
 
 import { IHex } from '@models/Hex';
 import { css } from '@theme/styled';
@@ -18,7 +18,10 @@ export const minMediaQuery = (function() {
   type IOrientation = 'landscape' | 'portrait';
   type IMediaQueries = Record<
     IBreakpointKeys,
-    (styles: FlattenSimpleInterpolation, orientation?: IOrientation) => unknown
+    (
+      styles: styledComponents.FlattenSimpleInterpolation,
+      orientation?: IOrientation,
+    ) => unknown
   >;
 
   function generateMinMediaQueries(): IMediaQueries {
@@ -63,7 +66,7 @@ export const minMediaQuery = (function() {
 export const fluidFontSize = (function() {
   type IFluidFontSizes = Record<
     TypeScaleByKeys,
-    () => FlattenSimpleInterpolation
+    () => styledComponents.FlattenSimpleInterpolation
   >;
 
   function generateFluidFontSizes(): IFluidFontSizes {

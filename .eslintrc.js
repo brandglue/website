@@ -3,6 +3,9 @@
     extends: [
       'plugin:@typescript-eslint/recommended',
       'plugin:react/recommended',
+      'plugin:import/errors',
+      'plugin:import/warnings',
+      'plugin:import/typescript',
       'plugin:prettier/recommended',
       'prettier/@typescript-eslint',
       'prettier/react',
@@ -17,6 +20,18 @@
       },
     },
     rules: {
+      'import/no-named-as-default': 'off',
+      'import/order': [
+        'error',
+        {
+          'newlines-between': 'always',
+          groups: [
+            ['builtin', 'external'],
+            'internal',
+            ['sibling', 'parent', 'index'],
+          ],
+        },
+      ],
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/interface-name-prefix': 'always',
       '@typescript-eslint/no-non-null-assertion': 'off',
@@ -49,6 +64,10 @@
     settings: {
       react: {
         version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
+      },
+      'import/resolver': {
+        // find aliases in tsconfig.json
+        typescript: {},
       },
     },
   };
