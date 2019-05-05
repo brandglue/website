@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Link } from '@reach/router';
 
-import { BrandglueLogo } from '@icons/BrandglueLogo';
+import BrandGlueLogo from '@icons/BrandGlueLogo';
 import { Routes } from '@constants/routes';
 import styled, { css } from '@theme/styled';
 import { fluidFontSize } from '@theme/utils';
@@ -9,7 +9,7 @@ import { fluidFontSize } from '@theme/utils';
 export const Header: FC = () => (
   <Wrapper>
     <Logo to={`/`}>
-      <BrandglueLogo />
+      <BrandGlueLogo />
     </Logo>
     <Menu>
       <StyledLink to={`/${Routes.About}`}>About</StyledLink>
@@ -25,7 +25,7 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   padding: 0 ${({ theme }) => theme.Spacings.Page};
-  margin: ${({ theme }) => theme.Spacings.StaticSpace4} 0;
+  margin: ${({ theme }) => theme.Spacings.StaticSpace04} 0;
 `;
 
 const Logo = styled(Link)`
@@ -43,7 +43,7 @@ const StyledLink = styled(Link)`
   ${({ theme }) => css`
     text-transform: uppercase;
     color: ${theme.Colors.Black};
-    margin-right: ${theme.Spacings.FontSpace9};
+    margin-right: ${theme.Spacings.FontSpace09};
     text-decoration: none;
     border-bottom: 2px solid transparent;
 

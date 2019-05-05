@@ -60,10 +60,9 @@ const Grid = styled.div`
   grid-auto-rows: 12vw 12vw 12vw;
   grid-column-gap: 3vw;
   grid-row-gap: 1vw;
-  justify-items: center;
-  align-items: center;
   justify-content: center;
-  padding: ${({ theme }) => theme.Spacings.StaticSpace3} 0;
+  align-items: center;
+  padding: ${({ theme }) => theme.Spacings.StaticSpace03} 0;
 `;
 
 const AccordianSelector = styled(Button)`
@@ -71,7 +70,7 @@ const AccordianSelector = styled(Button)`
   justify-content: center;
   align-items: center;
   color: ${({ theme }) => theme.Colors.White};
-  margin-top: ${({ theme }) => theme.Spacings.StaticSpace0};
+  margin-top: ${({ theme }) => theme.Spacings.StaticSpace00};
   margin-left: ${({ theme }) => theme.Spacings.Page};
   text-transform: uppercase;
   font-weight: 700;
@@ -79,7 +78,7 @@ const AccordianSelector = styled(Button)`
 `;
 
 const StyledCaret = styled(Caret)`
-  margin-left: ${({ theme }) => theme.Spacings.StaticSpace0};
+  margin-left: ${({ theme }) => theme.Spacings.StaticSpace00};
   ${({ shouldRotate }) =>
     !shouldRotate &&
     css`
@@ -89,7 +88,7 @@ const StyledCaret = styled(Caret)`
 
 const HorizontalDivider = styled.div`
   background: ${({ theme }) => theme.Colors.Gold};
-  height: ${({ theme }) => theme.Spacings.StaticSpace0};
+  height: ${({ theme }) => theme.Spacings.StaticSpace00};
 `;
 
 export default Clients;

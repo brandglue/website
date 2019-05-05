@@ -4,6 +4,7 @@ import styled from '@theme/styled';
 
 interface IOwnProps extends React.HTMLAttributes<HTMLButtonElement> {
   isDisabled?: boolean;
+  to?: string; // allow Button styling to be used for links via SC's "as" prop
   type?: 'button' | 'submit' | 'reset';
 }
 

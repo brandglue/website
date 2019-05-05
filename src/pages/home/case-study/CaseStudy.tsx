@@ -40,7 +40,7 @@ const Divider = styled.div`
     align-items: center;
     background: ${theme.Colors.DarkBlue};
     color: ${theme.Colors.White};
-    padding: ${theme.Spacings.StaticSpace3} 0 ${theme.Spacings.StaticSpace9};
+    padding: ${theme.Spacings.StaticSpace03} 0 ${theme.Spacings.StaticSpace12};
   `};
 `;
 
@@ -58,11 +58,11 @@ const Wrapper = styled.div`
 
 const Logo = styled(Image)`
   flex: 0 1 200px;
-  margin-right: ${({ theme }) => theme.Spacings.DynamicSpace2};
+  margin-right: ${({ theme }) => theme.Spacings.DynamicSpace02};
 `;
 
 const Text = styled.div`
-  padding-left: ${({ theme }) => theme.Spacings.DynamicSpace2};
+  padding-left: ${({ theme }) => theme.Spacings.DynamicSpace02};
   border-left: 1px solid ${({ theme }) => theme.Colors.White};
 `;
 
@@ -75,7 +75,7 @@ const Headline = styled.h4`
 const CtaButton = styled(ButtonCurved)`
   position: absolute;
   bottom: 0;
-  right: ${({ theme }) => theme.Spacings.DynamicSpace9};
+  right: ${({ theme }) => theme.Spacings.DynamicSpace09};
   color: ${({ theme }) => theme.Colors.Gold};
 `;
 

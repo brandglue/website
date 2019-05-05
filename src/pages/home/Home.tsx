@@ -4,6 +4,7 @@ import Hero from './hero/Hero';
 import Clients from './clients/Clients';
 import Team from './team/Team';
 import CaseStudy from './case-study/CaseStudy';
+import Services from './services/Services';
 
 export const Homepage: FC = () => (
   <>
@@ -11,6 +12,7 @@ export const Homepage: FC = () => (
     <Clients />
     <Team />
     <CaseStudy />
+    <Services />
   </>
 );
 

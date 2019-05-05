@@ -8,19 +8,22 @@ export const ButtonPrimary = styled(Button)`
     color: ${theme.Colors.White};
     border: 1px solid transparent;
     border-radius: 4px;
-    padding: ${theme.Spacings.FontSpace2};
+    padding: ${theme.Spacings.FontSpace02};
     ${fluidFontSize.Baseline()};
+    text-decoration: none;
 
     &:hover {
       background: ${theme.Colors.DarkBlue};
       border: 1px solid transparent;
       opacity: 0.9;
+      text-decoration: none;
     }
 
     &:active,
     &:focus {
       background: ${theme.Colors.DarkBlue};
       border: 1px solid ${theme.Colors.Blue};
+      text-decoration: none;
     }
 
     &[disabled] {

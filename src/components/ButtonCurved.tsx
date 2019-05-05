@@ -9,7 +9,7 @@ export const ButtonCurved = styled(Button)`
     color: currentColor;
     border-top: 1px solid currentColor;
     border-right: 1px solid currentColor;
-    padding: ${theme.Spacings.FontSpace2};
+    padding: ${theme.Spacings.FontSpace02};
     ${fluidFontSize.Baseline()};
 
     &:before {

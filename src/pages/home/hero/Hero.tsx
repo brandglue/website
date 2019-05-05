@@ -32,7 +32,7 @@ const Wrapper = styled.div`
 const Tagline = styled.div`
   position: absolute;
   left: ${({ theme }) => theme.Spacings.Page};
-  bottom: ${({ theme }) => theme.Spacings.StaticSpace6};
+  bottom: ${({ theme }) => theme.Spacings.StaticSpace06};
 `;
 
 // https://css-tricks.com/multi-line-padded-text/
@@ -41,7 +41,7 @@ const multlinePaddedText = css`
     display: inline;
     background: ${theme.Colors.DarkBlue};
     color: ${theme.Colors.White};
-    padding: ${theme.Spacings.StaticSpace1};
+    padding: ${theme.Spacings.StaticSpace01};
     box-decoration-break: clone;
   `};
 `;

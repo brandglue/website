@@ -43,7 +43,7 @@ const GlobalStyles = createGlobalStyle`
   /* basic resets for common tags */
   p, h1, h2, h3, h4, h5 {
     margin: 0;
-    margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace1};
+    margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace01};
   }
 `;
 
