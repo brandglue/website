@@ -1,9 +1,7 @@
 import React, { FC } from 'react';
 import IdealImage from 'react-ideal-image';
 
-interface IProps {
-  alt: string;
-  className?: string;
+interface IProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   img: IImageGroup;
 }
 

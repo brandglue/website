@@ -2,16 +2,14 @@ import React, { FC } from 'react';
 
 import styled from '@theme/styled';
 
-interface IOwnProps extends React.HTMLAttributes<HTMLButtonElement> {
-  isDisabled?: boolean;
+interface IOwnProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   to?: string; // allow Button styling to be used for links via SC's "as" prop
-  type?: 'button' | 'submit' | 'reset';
 }
 
 export const Button: FC<IOwnProps> = props => (
   <StyledButton
     className={props.className}
-    disabled={props.isDisabled}
+    disabled={props.disabled}
     onClick={props.onClick}
     type={props.type}
   >
@@ -21,7 +19,7 @@ export const Button: FC<IOwnProps> = props => (
 
 Button.defaultProps = {
   className: '',
-  isDisabled: false,
+  disabled: false,
   onClick: () => undefined,
   type: 'button',
 };
