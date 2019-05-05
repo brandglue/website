@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import CurvedButton from '@components/CurvedButton';
+import ButtonCurved from '@components/ButtonCurved';
 import CurvedBadge from '@components/CurvedBadge';
 import Image from '@components/Image';
 import Caret from '@icons/Caret';
@@ -72,10 +72,11 @@ const Headline = styled.h4`
   ${fluidFontSize.StepUp1()};
 `;
 
-const CtaButton = styled(CurvedButton)`
+const CtaButton = styled(ButtonCurved)`
   position: absolute;
   bottom: 0;
   right: ${({ theme }) => theme.Spacings.DynamicSpace9};
+  color: ${({ theme }) => theme.Colors.Gold};
 `;
 
 const StyledCaret = styled(Caret)`

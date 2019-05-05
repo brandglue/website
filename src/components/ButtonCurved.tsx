@@ -2,13 +2,13 @@ import Button from '@components/Button';
 import styled, { css } from '@theme/styled';
 import { fluidFontSize } from '@theme/utils';
 
-export const CurvedButton = styled(Button)`
+export const ButtonCurved = styled(Button)`
   ${({ theme }) => css`
     position: relative;
     background: transparent;
-    color: ${theme.Colors.White};
-    border-top: 1px solid ${theme.Colors.White};
-    border-right: 1px solid ${theme.Colors.White};
+    color: currentColor;
+    border-top: 1px solid currentColor;
+    border-right: 1px solid currentColor;
     padding: ${theme.Spacings.FontSpace2};
     ${fluidFontSize.Baseline()};
 
@@ -18,23 +18,23 @@ export const CurvedButton = styled(Button)`
       bottom: 44px;
       left: 0px;
       width: 80px;
-      border-top: 1px solid ${theme.Colors.White};
+      border-top: 1px solid currentColor;
       transform: rotate(148deg);
       transform-origin: 0% 0%;
     }
 
     &:hover {
       background: transparent;
-      border-top: 1px solid ${theme.Colors.White};
-      border-right: 1px solid ${theme.Colors.White};
+      border-top: 1px solid currentColor;
+      border-right: 1px solid currentColor;
       opacity: 0.9;
     }
 
     &:active,
     &:focus {
       background: transparent;
-      border-top: 1px solid ${theme.Colors.White};
-      border-right: 1px solid ${theme.Colors.White};
+      border-top: 1px solid currentColor;
+      border-right: 1px solid currentColor;
     }
 
     &[disabled] {
@@ -45,4 +45,4 @@ export const CurvedButton = styled(Button)`
   `};
 `;
 
-export default CurvedButton;
+export default ButtonCurved;

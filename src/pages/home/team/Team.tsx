@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import Image from '@components/Image';
-import PrimaryButton from '@components/PrimaryButton';
+import ButtonPrimary from '@components/ButtonPrimary';
 import joey from '@images/team-joey-ponce.jpg';
 import hannah from '@images/team-hannah-lushin.jpg';
 import michelle from '@images/team-michelle-heathers.jpg';
@@ -34,7 +34,7 @@ export const Team: FC = () => (
         <Image alt="hannah-lushin" img={hannah} />
       </TeamPhotos>
 
-      <PrimaryButton>Learn More About Us</PrimaryButton>
+      <ButtonPrimary>Learn More About Us</ButtonPrimary>
     </Wrapper>
   </>
 );
