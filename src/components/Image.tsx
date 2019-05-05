@@ -2,12 +2,14 @@ import React, { FC } from 'react';
 import IdealImage from 'react-ideal-image';
 
 interface IProps {
+  alt: string;
   className?: string;
   img: IImageGroup;
 }
 
-export const Image: FC<IProps> = ({ className, img }) => (
+export const Image: FC<IProps> = ({ alt, className, img }) => (
   <IdealImage
+    alt={alt}
     className={className}
     height={img.src.height}
     placeholder={{ lqip: img.preSrc }}
@@ -21,6 +23,7 @@ export const Image: FC<IProps> = ({ className, img }) => (
 );
 
 Image.defaultProps = {
+  alt: '',
   className: '',
 };
 

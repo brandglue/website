@@ -2,9 +2,7 @@ import React, { FC, useState } from 'react';
 
 import Button from '@components/Button';
 import CurvedBadge from '@components/CurvedBadge';
-import HorizontalDivider from '@components/HorizontalDivider';
 import Image from '@components/Image';
-import { useTheme } from '@hooks/useTheme';
 import Caret from '@icons/Caret';
 import quickbooks from '@images/logo-quickbooks.jpg';
 import kayak from '@images/logo-kayak.jpg';
@@ -23,39 +21,35 @@ import { fluidFontSize } from '@theme/utils';
 
 export const Clients: FC = () => {
   const [isOpen, setOpen] = useState(false);
-  const theme = useTheme();
 
   return (
     <>
       <Grid>
-        <Image img={microsoft} />
-        <Image img={intel} />
-        <Image img={kayak} />
-        <Image img={quickbooks} />
+        <Image alt="microsoft" img={microsoft} />
+        <Image alt="intel" img={intel} />
+        <Image alt="kayak" img={kayak} />
+        <Image alt="quickbooks" img={quickbooks} />
 
         {isOpen && (
           <>
-            <Image img={intuit} />
-            <Image img={mint} />
-            <Image img={dsg} />
-            <Image img={youtube} />
-            <Image img={suns} />
-            <Image img={good} />
-            <Image img={shortel} />
-            <Image img={pgi} />
+            <Image alt="intuit" img={intuit} />
+            <Image alt="mint" img={mint} />
+            <Image alt="dicks-sporting-goods" img={dsg} />
+            <Image alt="youtube" img={youtube} />
+            <Image alt="phoenix-suns" img={suns} />
+            <Image alt="good" img={good} />
+            <Image alt="shortel" img={shortel} />
+            <Image alt="pgi" img={pgi} />
           </>
         )}
       </Grid>
       <CurvedBadge>
         <AccordianSelector onClick={() => setOpen(!isOpen)}>
-          See More Clients
+          {`See ${isOpen ? 'Fewer' : 'More'} Clients`}
           <StyledCaret shouldRotate={isOpen} />
         </AccordianSelector>
       </CurvedBadge>
-      <HorizontalDivider
-        color={theme.Colors.Gold}
-        height={theme.Spacings.StaticSpace0}
-      />
+      <HorizontalDivider />
     </>
   );
 };
@@ -86,10 +80,15 @@ const AccordianSelector = styled(Button)`
 const StyledCaret = styled(Caret)`
   margin-left: ${({ theme }) => theme.Spacings.StaticSpace0};
   ${({ shouldRotate }) =>
-    shouldRotate &&
+    !shouldRotate &&
     css`
       transform: rotate(180deg);
     `}
+`;
+
+const HorizontalDivider = styled.div`
+  background: ${({ theme }) => theme.Colors.Gold};
+  height: ${({ theme }) => theme.Spacings.StaticSpace0};
 `;
 
 export default Clients;

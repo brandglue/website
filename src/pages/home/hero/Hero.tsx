@@ -7,7 +7,7 @@ import { fluidFontSize } from '@theme/utils';
 
 const Hero: FC = () => (
   <Wrapper>
-    <Image img={hero} />
+    <Image alt="homepage-hero" img={hero} />
     <Tagline>
       <div>
         <PrimaryTagline>
