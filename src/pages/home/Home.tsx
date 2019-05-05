@@ -5,6 +5,7 @@ import Clients from './clients/Clients';
 import Team from './team/Team';
 import CaseStudy from './case-study/CaseStudy';
 import Services from './services/Services';
+import Contact from './contact/Contact';
 
 export const Homepage: FC = () => (
   <>
@@ -13,6 +14,7 @@ export const Homepage: FC = () => (
     <Team />
     <CaseStudy />
     <Services />
+    <Contact />
   </>
 );
 

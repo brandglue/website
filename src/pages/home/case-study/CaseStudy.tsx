@@ -1,8 +1,10 @@
 import React, { FC } from 'react';
+import { Link } from '@reach/router';
 
 import ButtonCurved from '@components/ButtonCurved';
 import CurvedBadge from '@components/CurvedBadge';
 import Image from '@components/Image';
+import { Routes } from '@constants/routes';
 import Caret from '@icons/Caret';
 import intuit from '@images/logo-intuit.jpg';
 import styled, { css } from '@theme/styled';
@@ -24,7 +26,7 @@ export const CaseStudy: FC = () => (
           </div>
         </Text>
       </Wrapper>
-      <CtaButton>
+      <CtaButton as={Link} to={`/${Routes.CaseStudies}`}>
         See More Case Studies <StyledCaret />
       </CtaButton>
     </Divider>

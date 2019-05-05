@@ -4,6 +4,7 @@ import { fluidFontSize } from '@theme/utils';
 
 export const ButtonPrimary = styled(Button)`
   ${({ theme }) => css`
+    max-width: 250px;
     background: ${theme.Colors.DarkBlue};
     color: ${theme.Colors.White};
     border: 1px solid transparent;

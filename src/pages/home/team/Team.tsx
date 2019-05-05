@@ -20,7 +20,7 @@ export const Team: FC = () => (
     </Divider>
     <Wrapper>
       <SectionTitle>Meet the Team</SectionTitle>
-      <p>
+      <SectionText>
         <strong>We are small in number because we are big on talent.</strong>{' '}
         Collectively we have over 30 years of experience with making social
         media, marketing, and design work together to produce something
@@ -28,7 +28,7 @@ export const Team: FC = () => (
         collaboration. The folks below are the team that would work on your
         social outlets. Get to know each of us, learn a bit more about the
         family, and if you want to, reach out!
-      </p>
+      </SectionText>
       <TeamPhotos>
         <Image alt="michelle-heathers" img={michelle} />
         <Image alt="zach-welch" img={zach} />
@@ -62,12 +62,16 @@ const Divider = styled.div`
 
 const Wrapper = styled.div`
   padding: ${({ theme }) =>
-    `${theme.Spacings.StaticSpace05} ${theme.Spacings.Page}`};
+    `${theme.Spacings.StaticSpace10} ${theme.Spacings.Page}`};
+`;
+
+const SectionText = styled.p`
+  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace03};
 `;
 
 const TeamPhotos = styled.div`
   display: flex;
-  margin: ${({ theme }) => theme.Spacings.StaticSpace03} 0;
+  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace03};
 `;
 
 export default Team;

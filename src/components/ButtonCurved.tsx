@@ -10,14 +10,15 @@ export const ButtonCurved = styled(Button)`
     border-top: 1px solid currentColor;
     border-right: 1px solid currentColor;
     padding: ${theme.Spacings.FontSpace02};
+    text-decoration: none;
     ${fluidFontSize.Baseline()};
 
     &:before {
       content: '';
       position: absolute;
-      bottom: 44px;
+      bottom: 50px;
       left: 0px;
-      width: 80px;
+      width: 90px;
       border-top: 1px solid currentColor;
       transform: rotate(148deg);
       transform-origin: 0% 0%;
@@ -27,6 +28,7 @@ export const ButtonCurved = styled(Button)`
       background: transparent;
       border-top: 1px solid currentColor;
       border-right: 1px solid currentColor;
+      text-decoration: none;
       opacity: 0.9;
     }
 
@@ -35,6 +37,7 @@ export const ButtonCurved = styled(Button)`
       background: transparent;
       border-top: 1px solid currentColor;
       border-right: 1px solid currentColor;
+      text-decoration: none;
     }
 
     &[disabled] {

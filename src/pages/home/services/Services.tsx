@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
+import { Link } from '@reach/router';
 
 import ButtonCurved from '@components/ButtonCurved';
+import { Routes } from '@constants/routes';
 import Caret from '@icons/Caret';
 import CommunityManagement from '@icons/CommunityManagement';
 import ContentStrategy from '@icons/ContentStrategy';
@@ -25,8 +27,8 @@ export const Services: FC = () => (
       <ServicesText>
         <strong>The world of Social Media is getting bigger daily.</strong> And
         with this, so are all the ways you can connect with your audience, teach
-        them about your brand, and build loyalty. The obvious issue here:
-        Who&quot;s got time to manage it all? That&quot;s where we come in. With
+        them about your brand, and build loyalty. The obvious issue here:{' '}
+        {"Who's"} got time to manage it all? {"That's"} where we come in. With
         our combined expertise, and a good chunk of time spent getting to know
         you, we will help you accomplish your mission in the social sphere.{' '}
         <strong>Here are the ways we do it:</strong>
@@ -69,7 +71,7 @@ export const Services: FC = () => (
           <GridLabel>Data Analysis</GridLabel>
         </GridItem>
       </Grid>
-      <CtaButton>
+      <CtaButton as={Link} to={`/${Routes.Services}`}>
         Learn More About Our Services <StyledCaret />
       </CtaButton>
     </Wrapper>
@@ -80,13 +82,13 @@ export const Services: FC = () => (
 const Wrapper = styled.div`
   position: relative;
   padding: ${({ theme }) =>
-    `${theme.Spacings.StaticSpace05} ${theme.Spacings.Page} ${
+    `${theme.Spacings.StaticSpace10} ${theme.Spacings.Page} ${
       theme.Spacings.StaticSpace19
     }`};
 `;
 
 const ServicesText = styled.p`
-  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace05};
+  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace08};
 `;
 
 const Grid = styled.div`
