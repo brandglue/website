@@ -58,7 +58,7 @@ const Divider = styled.div`
 
 const Wrapper = styled.div`
   padding: ${({ theme }) =>
-    `${theme.Spacings.StaticSpace3} ${theme.Spacings.Page}`};
+    `${theme.Spacings.StaticSpace5} ${theme.Spacings.Page}`};
 `;
 
 const Title = styled.h3`

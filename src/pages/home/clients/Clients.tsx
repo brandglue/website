@@ -72,6 +72,7 @@ const AccordianSelector = styled(Button)`
   align-items: center;
   color: ${({ theme }) => theme.Colors.White};
   margin-top: ${({ theme }) => theme.Spacings.StaticSpace0};
+  margin-left: ${({ theme }) => theme.Spacings.Page};
   text-transform: uppercase;
   font-weight: 700;
   ${fluidFontSize.Baseline()};

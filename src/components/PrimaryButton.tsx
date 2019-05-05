@@ -9,7 +9,7 @@ export const PrimaryButton = styled(Button)`
     border: 1px solid transparent;
     border-radius: 4px;
     padding: ${theme.Spacings.FontSpace2};
-    ${fluidFontSize.StepUp1()};
+    ${fluidFontSize.Baseline()};
 
     &:hover {
       background: ${theme.Colors.DarkBlue};
