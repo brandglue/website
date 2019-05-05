@@ -36,6 +36,7 @@ const StyledHorizontalRule = styled.hr<IStyles>`
   ${({ color, styleHeight }) => css`
     background: ${color};
     height: ${styleHeight};
+    margin: 0;
   `};
 `;
 

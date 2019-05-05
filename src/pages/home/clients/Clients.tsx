@@ -1,9 +1,11 @@
 import React, { FC, useState } from 'react';
 
 import Button from '@components/Button';
+import CurvedBadge from '@components/CurvedBadge';
 import HorizontalDivider from '@components/HorizontalDivider';
 import Image from '@components/Image';
 import { useTheme } from '@hooks/useTheme';
+import Caret from '@icons/Caret';
 import quickbooks from '@images/logo-quickbooks.jpg';
 import kayak from '@images/logo-kayak.jpg';
 import microsoft from '@images/logo-microsoft.jpg';
@@ -16,7 +18,8 @@ import good from '@images/logo-good.jpg';
 import shortel from '@images/logo-shortel.jpg';
 import pgi from '@images/logo-pgi.jpg';
 import youtube from '@images/logo-youtube.jpg';
-import styled from '@theme/styled';
+import styled, { css } from '@theme/styled';
+import { fluidFontSize } from '@theme/utils';
 
 export const Clients: FC = () => {
   const [isOpen, setOpen] = useState(false);
@@ -43,12 +46,15 @@ export const Clients: FC = () => {
           </>
         )}
       </Grid>
-      <AccordianSelector onClick={() => setOpen(!isOpen)}>
-        See More Clients
-      </AccordianSelector>
+      <CurvedBadge>
+        <AccordianSelector onClick={() => setOpen(!isOpen)}>
+          See More Clients
+          <StyledCaret shouldRotate={isOpen} />
+        </AccordianSelector>
+      </CurvedBadge>
       <HorizontalDivider
         color={theme.Colors.Gold}
-        height={theme.Spacings.StaticSpace5}
+        height={theme.Spacings.StaticSpace0}
       />
     </>
   );
@@ -57,7 +63,7 @@ export const Clients: FC = () => {
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 12vw 12vw 12vw 12vw;
-  grid-template-rows: 12vw 12vw 12vw;
+  grid-auto-rows: 12vw 12vw 12vw;
   grid-column-gap: 3vw;
   grid-row-gap: 1vw;
   justify-items: center;
@@ -66,6 +72,24 @@ const Grid = styled.div`
   padding: ${({ theme }) => theme.Spacings.StaticSpace3} 0;
 `;
 
-const AccordianSelector = styled(Button)``;
+const AccordianSelector = styled(Button)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ${({ theme }) => theme.Colors.White};
+  margin-top: ${({ theme }) => theme.Spacings.StaticSpace0};
+  text-transform: uppercase;
+  font-weight: 700;
+  ${fluidFontSize.Baseline()};
+`;
+
+const StyledCaret = styled(Caret)`
+  margin-left: ${({ theme }) => theme.Spacings.StaticSpace0};
+  ${({ shouldRotate }) =>
+    shouldRotate &&
+    css`
+      transform: rotate(180deg);
+    `}
+`;
 
 export default Clients;

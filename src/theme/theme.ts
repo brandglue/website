@@ -25,7 +25,7 @@ export const Colors = {
   Gold: Hex('#FFB000'),
   Black: Hex('#000'),
   White: Hex('#fff'),
-  MediumGray: Hex('#828487'),
+  Gray: Hex('#828487'),
 };
 
 export enum FontFamilies {
