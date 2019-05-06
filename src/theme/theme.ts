@@ -23,6 +23,8 @@ export const Colors = {
   Blue: Hex('#005ADD'),
   DarkBlue: Hex('#003575'),
   Gold: Hex('#FFB000'),
+  Green: Hex('#20af32'),
+  Red: Hex('#c30909'),
   Black: Hex('#000'),
   White: Hex('#fff'),
   Gray00: Hex('#d5d6d6'),

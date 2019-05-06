@@ -1,10 +1,13 @@
 import React, { FC, useState } from 'react';
 
+import Anchor from '@components/Anchor';
 import ButtonPrimary from '@components/ButtonPrimary';
 import Input from '@components/Input';
 import SectionTitle from '@components/SectionTitle';
 import TextArea from '@components/TextArea';
+import { Routes } from '@constants/routes';
 import styled from '@theme/styled';
+import { fluidFontSize, hexToRgb } from '@theme/utils';
 import encodeFormData from '@utils/encodeFormData';
 
 export const Contact: FC = () => {
@@ -13,6 +16,8 @@ export const Contact: FC = () => {
   const [company, setCompany] = useState('');
   const [title, setTitle] = useState('');
   const [message, setMessage] = useState('');
+  const [hasSubmitted, setSubmitted] = useState(false);
+  const [formError, setFormError] = useState(undefined);
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setName(e.target.value);
@@ -28,6 +33,10 @@ export const Contact: FC = () => {
   const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (formError) {
+      setFormError(undefined);
+    }
+
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -40,8 +49,8 @@ export const Contact: FC = () => {
         message,
       }),
     })
-      .then(() => alert('Success!'))
-      .catch(error => alert(error));
+      .then(() => setSubmitted(true))
+      .catch(error => setFormError(error));
   };
 
   return (
@@ -59,43 +68,62 @@ export const Contact: FC = () => {
         name="contact"
         onSubmit={handleSubmit}
       >
-        <Group>
-          <input name="contact" type="hidden" value="contact" />
-          <Input
-            name="name"
-            onChange={handleNameChange}
-            placeholder="Name"
-            value={name}
-          />
-          <Input
-            name="email"
-            onChange={handleEmailChange}
-            placeholder="Email"
-            type="email"
-            value={email}
-          />
-          <Input
-            name="company"
-            onChange={handleCompanyChange}
-            placeholder="Company"
-            value={company}
-          />
-          <Input
-            name="title"
-            onChange={handleTitleChange}
-            placeholder="Title"
-            value={title}
-          />
-        </Group>
-        <Group>
-          <TextArea
-            name="message"
-            onChange={handleMessageChange}
-            placeholder="In a few words, what are your needs?"
-            value={message}
-          />
-          <ButtonPrimary>Request Assessment</ButtonPrimary>
-        </Group>
+        {!hasSubmitted ? (
+          <>
+            <GroupWrapper>
+              <Group>
+                <input name="contact" type="hidden" value="contact" />
+                <Input
+                  name="name"
+                  onChange={handleNameChange}
+                  placeholder="Name"
+                  value={name}
+                />
+                <Input
+                  name="email"
+                  onChange={handleEmailChange}
+                  placeholder="Email"
+                  type="email"
+                  value={email}
+                />
+                <Input
+                  name="company"
+                  onChange={handleCompanyChange}
+                  placeholder="Company"
+                  value={company}
+                />
+                <Input
+                  name="title"
+                  onChange={handleTitleChange}
+                  placeholder="Title"
+                  value={title}
+                />
+              </Group>
+              <Group>
+                <TextArea
+                  name="message"
+                  onChange={handleMessageChange}
+                  placeholder="In a few words, what are your needs?"
+                  value={message}
+                />
+                <ButtonPrimary type="submit">Request Assessment</ButtonPrimary>
+              </Group>
+            </GroupWrapper>
+            {formError && <Error>{formError}</Error>}
+          </>
+        ) : (
+          <Success>
+            <SuccessTitle>Thank You!</SuccessTitle>
+            <p>Your assessment is on {"it's"} way to us.</p>
+            <p>{"We'll"} reach out soon to follow-up with you.</p>
+            <p>
+              In the meanwhile, check out our{' '}
+              <Anchor to={`/${Routes.Blog}`}>blog</Anchor> or{' '}
+              <Anchor to={`/${Routes.CaseStudies}`}>case studies</Anchor> to
+              learn more.
+            </p>
+          </Success>
+        )}
       </Form>
     </Wrapper>
   );
@@ -112,6 +140,11 @@ const SectionText = styled.p`
 
 const Form = styled.form`
   display: flex;
+  flex-flow: column;
+`;
+
+const GroupWrapper = styled.div`
+  display: flex;
 `;
 
 const Group = styled.div`
@@ -126,6 +159,26 @@ const Group = styled.div`
   input:last-child {
     margin-bottom: 0;
   }
+`;
+
+const SuccessTitle = styled.h3`
+  text-transform: uppercase;
+  ${fluidFontSize.StepUp1()};
+`;
+
+const Success = styled.div`
+  background: rgba(${({ theme }) => hexToRgb(theme.Colors.Green)}, 0.5);
+  border: 1px solid ${({ theme }) => theme.Colors.Green};
+  border-radius: 4px;
+  padding: ${({ theme }) => theme.Spacings.FontSpace02};
+`;
+
+const Error = styled.div`
+  background: rgba(${({ theme }) => hexToRgb(theme.Colors.Red)}, 0.5);
+  color: ${({ theme }) => theme.Colors.Red};
+  border: 1px solid ${({ theme }) => theme.Colors.Red};
+  padding: ${({ theme }) => theme.Spacings.FontSpace02};
+  margin-top: ${({ theme }) => theme.Spacings.StaticSpace03};
 `;
 
 export default Contact;
