@@ -27,6 +27,7 @@ const AnimatedLogo = styled(BrandGlueIconLogoOnly)`
   max-width: 100px;
   max-height: 100px;
   animation: ${rotate360} 1.5s linear infinite;
+  color: ${({ theme }) => theme.Colors.Gray02};
 `;
 
 export default Spinner;

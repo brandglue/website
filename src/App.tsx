@@ -1,10 +1,12 @@
-import React, { FC, Suspense } from 'react';
+import React, { FC, Suspense, useLayoutEffect, useState } from 'react';
 import { Root, Routes } from 'react-static';
 import { Router } from '@reach/router';
 
 import Spinner from '@components/Spinner';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
+import { IAppState } from '@models/AppState';
+import { AppState } from '@src/AppState';
 import { theme } from '@theme/theme';
 import styled, { createGlobalStyle, css, ThemeProvider } from '@theme/styled';
 import { fluidFontSize } from '@theme/utils';
@@ -12,26 +14,46 @@ import { fluidFontSize } from '@theme/utils';
 import SiteHead from './SiteHead';
 
 export const App: FC = () => {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useLayoutEffect(() => {
+    if (window !== undefined) {
+      const handleResize = () => setWindowWidth(window.innerWidth);
+
+      handleResize();
+
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, [windowWidth]);
+
+  const state: IAppState = {
+    isDesktop: windowWidth >= theme.Breakpoints.Large,
+    isMobile: windowWidth < theme.Breakpoints.Large,
+  };
+
   return (
-    <ThemeProvider theme={theme}>
-      <Root>
-        <SiteHead />
-        <GlobalStyles />
-        <Suspense
-          fallback={
-            <SpinnerWrapper>
-              <Spinner />
-            </SpinnerWrapper>
-          }
-        >
-          <Header />
-          <Router>
-            <Routes path="*" />
-          </Router>
-          <Footer />
-        </Suspense>
-      </Root>
-    </ThemeProvider>
+    <AppState.Provider value={state}>
+      <ThemeProvider theme={theme}>
+        <Root>
+          <SiteHead />
+          <GlobalStyles />
+          <Suspense
+            fallback={
+              <SpinnerWrapper>
+                <Spinner />
+              </SpinnerWrapper>
+            }
+          >
+            <Header />
+            <Router>
+              <Routes path="*" />
+            </Router>
+            <Footer />
+          </Suspense>
+        </Root>
+      </ThemeProvider>
+    </AppState.Provider>
   );
 };
 

@@ -20,7 +20,7 @@ export const Footer: FC = () => (
           <LinkedIn />
         </Social>
       </Contact>
-      <BrandGlueLogoIconOnly />
+      <BrandGlueLogoIconOnly width={200} />
     </Container>
     <Copyright>
       &copy; {new Date().getFullYear()} BrandGlue. All Rights Reserved.
@@ -40,6 +40,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace08};
+  color: ${({ theme }) => theme.Colors.Gray01};
 `;
 
 const Contact = styled.address`
@@ -53,8 +54,6 @@ const Title = styled.h4`
 `;
 
 const Info = styled.p`
-  color: ${({ theme }) => theme.Colors.Gray01};
-
   &:last-of-type {
     margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace03};
   }
