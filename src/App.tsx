@@ -2,10 +2,11 @@ import React, { FC, Suspense } from 'react';
 import { Root, Routes } from 'react-static';
 import { Router } from '@reach/router';
 
+import Spinner from '@components/Spinner';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import { theme } from '@theme/theme';
-import { createGlobalStyle, css, ThemeProvider } from '@theme/styled';
+import styled, { createGlobalStyle, css, ThemeProvider } from '@theme/styled';
 import { fluidFontSize } from '@theme/utils';
 
 import SiteHead from './SiteHead';
@@ -16,7 +17,13 @@ export const App: FC = () => {
       <Root>
         <SiteHead />
         <GlobalStyles />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense
+          fallback={
+            <SpinnerWrapper>
+              <Spinner />
+            </SpinnerWrapper>
+          }
+        >
           <Header />
           <Router>
             <Routes path="*" />
@@ -45,6 +52,14 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace01};
   }
+`;
+
+const SpinnerWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 `;
 
 export default App;
