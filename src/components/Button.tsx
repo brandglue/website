@@ -50,7 +50,7 @@ const StyledButton = styled.button`
   }
 
   &[disabled] {
-    color: ${({ theme }) => theme.Colors.Gray};
+    color: ${({ theme }) => theme.Colors.Gray02};
     pointer-events: none;
     cursor: default;
   }

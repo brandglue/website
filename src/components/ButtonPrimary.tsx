@@ -28,7 +28,7 @@ export const ButtonPrimary = styled(Button)`
     }
 
     &[disabled] {
-      background: ${theme.Colors.Gray};
+      background: ${theme.Colors.Gray02};
       pointer-events: none;
       cursor: default;
     }

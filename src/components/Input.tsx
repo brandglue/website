@@ -40,7 +40,7 @@ const StyledInput = styled.input`
   margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace01};
   padding: ${({ theme }) => theme.Spacings.FontSpace04};
   color: ${({ theme }) => theme.Colors.Black};
-  border: 1px solid ${({ theme }) => theme.Colors.Gray};
+  border: 1px solid ${({ theme }) => theme.Colors.Gray02};
   ${fluidFontSize.Baseline()};
 
   &:focus,

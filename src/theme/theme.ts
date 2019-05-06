@@ -25,7 +25,11 @@ export const Colors = {
   Gold: Hex('#FFB000'),
   Black: Hex('#000'),
   White: Hex('#fff'),
-  Gray: Hex('#828487'),
+  Gray00: Hex('#d5d6d6'),
+  Gray01: Hex('#b1b3b5'),
+  Gray02: Hex('#828487'),
+  Gray03: Hex('#666'),
+  Gray04: Hex('#333'),
 };
 
 export enum FontFamilies {
