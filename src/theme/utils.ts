@@ -1,4 +1,4 @@
-import * as styledComponents from 'styled-components';
+import * as sc from 'styled-components';
 
 import { IHex } from '@models/Hex';
 import { css } from '@theme/styled';
@@ -8,6 +8,7 @@ import {
   fluidFontMatrix,
   IBreakpointKeys,
   TypeScaleByKeys,
+  ITheme,
 } from '@theme/theme';
 
 /*
@@ -16,13 +17,16 @@ import {
 */
 export const minMediaQuery = (function() {
   type IOrientation = 'landscape' | 'portrait';
-  type IMediaQueries = Record<
-    IBreakpointKeys,
-    (
-      styles: styledComponents.FlattenSimpleInterpolation,
-      orientation?: IOrientation,
-    ) => unknown
-  >;
+  type ICss = (
+    styles:
+      | sc.SimpleInterpolation[]
+      | sc.FlattenInterpolation<sc.ThemeProps<ITheme>>,
+    orientation?: IOrientation,
+  ) =>
+    | sc.FlattenSimpleInterpolation
+    | sc.FlattenInterpolation<sc.ThemeProps<ITheme>>;
+
+  type IMediaQueries = Record<IBreakpointKeys, ICss>;
 
   function generateMinMediaQueries(): IMediaQueries {
     /* must assert keys as desired type per: https://github.com/Microsoft/TypeScript/pull/12253 */
@@ -66,7 +70,7 @@ export const minMediaQuery = (function() {
 export const fluidFontSize = (function() {
   type IFluidFontSizes = Record<
     TypeScaleByKeys,
-    () => styledComponents.FlattenSimpleInterpolation
+    () => sc.FlattenSimpleInterpolation
   >;
 
   function generateFluidFontSizes(): IFluidFontSizes {
