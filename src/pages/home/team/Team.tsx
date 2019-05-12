@@ -10,7 +10,7 @@ import hannah from '@images/team-hannah-lushin.jpg';
 import michelle from '@images/team-michelle-heathers.jpg';
 import zach from '@images/team-zach-welch.jpg';
 import styled, { css } from '@theme/styled';
-import { fluidFontSize } from '@theme/utils';
+import { fluidFontSize, minMediaQuery } from '@theme/utils';
 
 export const Team: FC = () => (
   <>
@@ -66,12 +66,13 @@ const Wrapper = styled.div`
 `;
 
 const SectionText = styled.p`
-  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace03};
+  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace05};
 `;
 
 const TeamPhotos = styled.div`
-  display: flex;
-  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace03};
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace05};
 `;
 
 export default Team;

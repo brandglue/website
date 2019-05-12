@@ -17,7 +17,7 @@ import shortel from '@images/logo-shortel.jpg';
 import pgi from '@images/logo-pgi.jpg';
 import youtube from '@images/logo-youtube.jpg';
 import styled, { css } from '@theme/styled';
-import { fluidFontSize } from '@theme/utils';
+import { fluidFontSize, minMediaQuery } from '@theme/utils';
 
 export const Clients: FC = () => {
   const [isOpen, setOpen] = useState(false);
@@ -56,10 +56,8 @@ export const Clients: FC = () => {
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 12vw 12vw 12vw 12vw;
-  grid-auto-rows: 12vw 12vw 12vw;
-  grid-column-gap: 3vw;
-  grid-row-gap: 1vw;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 5vw;
   justify-content: center;
   align-items: center;
   padding: ${({ theme }) => theme.Spacings.StaticSpace03} 0;
@@ -74,7 +72,7 @@ const AccordianSelector = styled(Button)`
   margin-left: ${({ theme }) => theme.Spacings.Page};
   text-transform: uppercase;
   font-weight: 700;
-  ${fluidFontSize.Baseline()};
+  ${fluidFontSize.StepDown1()};
 `;
 
 const StyledCaret = styled(Caret)`

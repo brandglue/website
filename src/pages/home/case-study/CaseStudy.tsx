@@ -42,11 +42,12 @@ const Divider = styled.div`
     align-items: center;
     background: ${theme.Colors.DarkBlue};
     color: ${theme.Colors.White};
-    padding: ${theme.Spacings.StaticSpace03} 0 ${theme.Spacings.StaticSpace12};
+    padding: ${theme.Spacings.StaticSpace03} 0 ${theme.Spacings.StaticSpace15};
   `};
 `;
 
 const Title = styled.div`
+  ${fluidFontSize.StepDown1()};
   text-transform: uppercase;
   font-weight: 700;
   margin-left: ${({ theme }) => theme.Spacings.Page};

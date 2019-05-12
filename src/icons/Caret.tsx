@@ -11,10 +11,8 @@ export const Caret: FC<IOwnProps> = ({ className = '' }) => (
   <Svg
     aria-labelledby="caretTitle"
     className={className}
-    height="7"
     role="img"
     viewBox="0 0 13 7"
-    width="13"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title id="caretTitle">Caret</title>

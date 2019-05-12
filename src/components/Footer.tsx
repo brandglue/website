@@ -1,26 +1,44 @@
 import React, { FC } from 'react';
 
 import BrandGlueLogoIconOnly from '@icons/BrandglueLogoIconOnly';
-import Facebook from '@icons/Facebook';
-import LinkedIn from '@icons/LinkedIn';
-import Twitter from '@icons/Twitter';
-import styled from '@theme/styled';
-import { fluidFontSize } from '@theme/utils';
+import FacebookIcon from '@icons/Facebook';
+import LinkedInIcon from '@icons/LinkedIn';
+import TwitterIcon from '@icons/Twitter';
+import styled, { css } from '@theme/styled';
+import { fluidFontSize, minMediaQuery } from '@theme/utils';
 
 export const Footer: FC = () => (
   <Wrapper>
     <Container>
       <Contact>
         <Title>Contact</Title>
-        <Info>(360)207-4583</Info>
-        <Info>hello@brandglue.com</Info>
+        <Info href="tel:360-207-4583">(360) 207-4583</Info>
+        <Info href="mailto:hello@brandglue.com">hello@brandglue.com</Info>
         <Social>
-          <Facebook />
-          <Twitter />
-          <LinkedIn />
+          <a href="https://www.facebook.com/BrandGlue">
+            <FacebookIcon
+              css={`
+                width: 30px;
+              `}
+            />
+          </a>
+          <a href="https://twitter.com/glue">
+            <TwitterIcon
+              css={`
+                width: 30px;
+              `}
+            />
+          </a>
+          <a href="https://www.linkedin.com/company/brandglue-com">
+            <LinkedInIcon
+              css={`
+                width: 30px;
+              `}
+            />
+          </a>
         </Social>
       </Contact>
-      <BrandGlueLogoIconOnly width={200} />
+      <StyledBrandGlueLogoIconOnly />
     </Container>
     <Copyright>
       &copy; {new Date().getFullYear()} BrandGlue. All Rights Reserved.
@@ -38,9 +56,17 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-between;
-  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace08};
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
   color: ${({ theme }) => theme.Colors.Gray01};
+  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace08};
+
+  ${minMediaQuery.Medium(css`
+    flex-flow: row;
+    justify-content: space-between;
+    text-align: initial;
+  `)}
 `;
 
 const Contact = styled.address`
@@ -51,9 +77,13 @@ const Contact = styled.address`
 const Title = styled.h4`
   color: ${({ theme }) => theme.Colors.Gold};
   text-transform: uppercase;
+  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace03};
 `;
 
-const Info = styled.p`
+const Info = styled.a`
+  text-decoration: none;
+  color: ${({ theme }) => theme.Colors.Gray01};
+
   &:last-of-type {
     margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace03};
   }
@@ -61,10 +91,16 @@ const Info = styled.p`
 
 const Social = styled.div`
   display: flex;
+  justify-content: center;
 
   svg {
     margin-right: ${({ theme }) => theme.Spacings.StaticSpace02};
   }
+`;
+
+const StyledBrandGlueLogoIconOnly = styled(BrandGlueLogoIconOnly)`
+  width: 50px;
+  margin-top: ${({ theme }) => theme.Spacings.StaticSpace03};
 `;
 
 const Copyright = styled.div`

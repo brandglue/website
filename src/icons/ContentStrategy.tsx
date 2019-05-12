@@ -10,10 +10,8 @@ export const ContentStrategy: FC<IOwnProps> = ({ className = '' }) => (
   <Svg
     aria-labelledby="ContentStrategyTitle"
     className={className}
-    height="152"
     role="img"
     viewBox="0 0 152 152"
-    width="152"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title id="ContentStrategyTitle">ContentStrategy Icon</title>

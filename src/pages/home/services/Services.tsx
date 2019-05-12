@@ -93,7 +93,7 @@ const ServicesText = styled.p`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 18vw 18vw 18vw;
+  grid-template-columns: repeat(auto-fit, 1fr);
   grid-gap: 3vw;
   justify-content: center;
   align-items: flex-start;

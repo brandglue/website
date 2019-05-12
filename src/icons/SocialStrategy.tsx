@@ -10,14 +10,12 @@ export const SocialStrategy: FC<IOwnProps> = ({ className = '' }) => (
   <Svg
     aria-labelledby="SocialStrategyTitle"
     className={className}
-    height="152"
     role="img"
     viewBox="0 0 152 152"
-    width="152"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title id="SocialStrategyTitle">SocialStrategy Icon</title>
-    <circle className="st0" cx="76" cy="76" r="76" />
+    <circle cx="76" cy="76" fill="#2a7de1" r="76" />
     <path
       d="M139.74 76.8c0 28.99-19.27 53.48-45.7 61.34a63.916 63.916 0 0 1-18.3 2.66c-7.04 0-13.81-1.13-20.14-3.23-25.48-8.44-43.86-32.46-43.86-60.77 0-35.34 28.65-64 64-64s64 28.66 64 64z"
       fill="#fff"

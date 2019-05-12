@@ -4,7 +4,6 @@ import Svg from '@components/Svg';
 
 interface IOwnProps extends React.SVGAttributes<SVGSVGElement> {
   className?: string;
-  width?: number;
 }
 
 export const BrandGlueLogoIconOnly: FC<IOwnProps> = props => (
@@ -13,7 +12,6 @@ export const BrandGlueLogoIconOnly: FC<IOwnProps> = props => (
     className={props.className}
     role="img"
     viewBox="0 0 178.1 180"
-    width={props.width}
     xmlns="http://www.w3.org/2000/svg"
   >
     <title id="BrandGlueLogoIconOnlyTitle">BrandGlueLogoIconOnly Icon</title>
@@ -24,7 +22,6 @@ export const BrandGlueLogoIconOnly: FC<IOwnProps> = props => (
 
 BrandGlueLogoIconOnly.defaultProps = {
   className: '',
-  width: 30,
 };
 
 export default BrandGlueLogoIconOnly;

@@ -12,8 +12,8 @@ export const Anchor: FC<IOwnProps> = props => (
 );
 
 const StyledAnchor = styled(Link)`
-  color: ${({ theme }) => theme.Colors.DarkBlue};
-  text-decoration: underline;
+  color: currentColor;
+  text-decoration: none;
 `;
 
 export default Anchor;

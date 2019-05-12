@@ -85,7 +85,7 @@ const DesktopWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   padding: 0 ${({ theme }) => theme.Spacings.Page};
-  margin: ${({ theme }) => theme.Spacings.StaticSpace04} 0;
+  margin: ${({ theme }) => theme.Spacings.StaticSpace02} 0;
 `;
 
 const DesktopMenu = styled.nav`

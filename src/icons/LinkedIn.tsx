@@ -10,10 +10,8 @@ export const LinkedIn: FC<IOwnProps> = ({ className = '' }) => (
   <Svg
     aria-labelledby="LinkedInTitle"
     className={className}
-    height="40.06"
     role="img"
     viewBox="0 0 40.06 40.06"
-    width="40.06"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title id="LinkedInTitle">LinkedIn Icon</title>

@@ -9,6 +9,7 @@ const Svg = styled.svg.attrs({
   'aria-hidden': 'true',
   focusable: 'false',
 })`
+  width: 20px;
   color: inherit;
   fill: currentColor;
   pointer-events: none; /* Required for MS Edge to prevent clicks on SVG elements */

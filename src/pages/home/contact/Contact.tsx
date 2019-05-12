@@ -1,13 +1,13 @@
 import React, { FC, useState } from 'react';
 
-import Anchor from '@components/Anchor';
 import ButtonPrimary from '@components/ButtonPrimary';
 import Input from '@components/Input';
 import SectionTitle from '@components/SectionTitle';
 import TextArea from '@components/TextArea';
+import TextLink from '@components/TextLink';
 import { Routes } from '@constants/routes';
-import styled from '@theme/styled';
-import { fluidFontSize, hexToRgb } from '@theme/utils';
+import styled, { css } from '@theme/styled';
+import { fluidFontSize, hexToRgb, minMediaQuery } from '@theme/utils';
 import encodeFormData from '@utils/encodeFormData';
 
 export const Contact: FC = () => {
@@ -62,7 +62,7 @@ export const Contact: FC = () => {
         <strong>for free!</strong> Just fill out the form below and {"we'll"} be
         in touch within 24hrs.
       </SectionText>
-      <Form
+      <ContactForm
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         name="contact"
@@ -118,13 +118,13 @@ export const Contact: FC = () => {
             <p>{"We'll"} reach out soon to follow-up with you.</p>
             <p>
               In the meanwhile, check out our{' '}
-              <Anchor to={`/${Routes.Blog}`}>blog</Anchor> or{' '}
-              <Anchor to={`/${Routes.CaseStudies}`}>case studies</Anchor> to
+              <TextLink to={`/${Routes.Blog}`}>blog</TextLink> or{' '}
+              <TextLink to={`/${Routes.CaseStudies}`}>case studies</TextLink> to
               learn more.
             </p>
           </Success>
         )}
-      </Form>
+      </ContactForm>
     </Wrapper>
   );
 };
@@ -138,13 +138,18 @@ const SectionText = styled.p`
   margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace03};
 `;
 
-const Form = styled.form`
+const ContactForm = styled.form`
   display: flex;
   flex-flow: column;
 `;
 
 const GroupWrapper = styled.div`
   display: flex;
+  flex-flow: column;
+
+  ${minMediaQuery.Medium(css`
+    flex-flow: row;
+  `)}
 `;
 
 const Group = styled.div`
@@ -152,13 +157,15 @@ const Group = styled.div`
   display: flex;
   flex-flow: column;
 
-  &:first-child {
-    margin-right: ${({ theme }) => theme.Spacings.StaticSpace05};
-  }
+  ${minMediaQuery.Medium(css`
+    &:first-child {
+      margin-right: ${({ theme }) => theme.Spacings.StaticSpace05};
+    }
 
-  input:last-child {
-    margin-bottom: 0;
-  }
+    input:last-child {
+      margin-bottom: 0;
+    }
+  `)}
 `;
 
 const SuccessTitle = styled.h3`

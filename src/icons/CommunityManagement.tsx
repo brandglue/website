@@ -10,10 +10,8 @@ export const CommunityManagement: FC<IOwnProps> = ({ className = '' }) => (
   <Svg
     aria-labelledby="CommunityManagementTitle"
     className={className}
-    height="152"
     role="img"
     viewBox="0 0 152 152"
-    width="152"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title id="CommunityManagementTitle">CommunityManagement Icon</title>
