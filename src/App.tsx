@@ -31,8 +31,11 @@ export const App: FC = () => {
   }, [windowWidth]);
 
   const state: IAppState = {
-    isDesktop: windowWidth >= theme.Breakpoints.Large,
-    isMobile: windowWidth < theme.Breakpoints.Large,
+    isLargeFormFactor: windowWidth >= theme.Breakpoints.Large,
+    isMediumFormFactor:
+      windowWidth >= theme.Breakpoints.Medium &&
+      windowWidth < theme.Breakpoints.Large,
+    isSmallFormFactor: windowWidth < theme.Breakpoints.Medium,
   };
 
   return (

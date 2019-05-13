@@ -1,6 +1,6 @@
 import React, { FC, useContext } from 'react';
 
-import Anchor from '@components/Anchor';
+import NavLink from '@components/links/NavLink';
 import BrandGlueLogo from '@icons/BrandGlueLogo';
 import { Routes } from '@constants/routes';
 import { AppState } from '@src/AppState';
@@ -10,41 +10,52 @@ import { fluidFontSize, minMediaQuery } from '@theme/utils';
 export const Header: FC = () => {
   const appState = useContext(AppState);
 
-  const mobileMenu = (
+  const smallFormFactorMenu = (
     <header>
       <Logo to={`/`}>
         <BrandGlueLogo />
       </Logo>
-      <MobileMenu>
-        <MobileLink to={`/${Routes.About}`}>About</MobileLink>
-        <MobileLink to={`/${Routes.Services}`}>Services</MobileLink>
-        <MobileLink to={`/${Routes.CaseStudies}`}>Case Studies</MobileLink>
-        <MobileLink to={`/${Routes.Blog}`}>Blog</MobileLink>
-      </MobileMenu>
+      <SmallFormFactorMenu>
+        <SmallFormFactorLink to={`/${Routes.About}`}>About</SmallFormFactorLink>
+        <SmallFormFactorLink to={`/${Routes.Services}`}>
+          Services
+        </SmallFormFactorLink>
+        <SmallFormFactorLink to={`/${Routes.CaseStudies}`}>
+          Case Studies
+        </SmallFormFactorLink>
+        <SmallFormFactorLink to={`/${Routes.Blog}`}>Blog</SmallFormFactorLink>
+      </SmallFormFactorMenu>
     </header>
   );
 
-  const desktopMenu = (
-    <DesktopWrapper>
+  const largeFormFactorMenu = (
+    <LargeFormFactorWrapper>
       <Logo to={`/`}>
         <BrandGlueLogo />
       </Logo>
-      <DesktopMenu>
-        <DesktopLink to={`/${Routes.About}`}>About</DesktopLink>
-        <DesktopLink to={`/${Routes.Services}`}>Services</DesktopLink>
-        <DesktopLink to={`/${Routes.CaseStudies}`}>Case Studies</DesktopLink>
-        <DesktopLink to={`/${Routes.Blog}`}>Blog</DesktopLink>
-        <DesktopLink to={`/${Routes.Contact}`}>Contact</DesktopLink>
-      </DesktopMenu>
-    </DesktopWrapper>
+      <LargeFormFactorMenu>
+        <LargeFormFactorLink to={`/${Routes.About}`}>About</LargeFormFactorLink>
+        <LargeFormFactorLink to={`/${Routes.Services}`}>
+          Services
+        </LargeFormFactorLink>
+        <LargeFormFactorLink to={`/${Routes.CaseStudies}`}>
+          Case Studies
+        </LargeFormFactorLink>
+        <LargeFormFactorLink to={`/${Routes.Blog}`}>Blog</LargeFormFactorLink>
+        <LargeFormFactorLink to={`/${Routes.Contact}`}>
+          Contact
+        </LargeFormFactorLink>
+      </LargeFormFactorMenu>
+    </LargeFormFactorWrapper>
   );
 
-  return appState.isDesktop ? desktopMenu : mobileMenu;
+  return appState.isLargeFormFactor ? largeFormFactorMenu : smallFormFactorMenu;
 };
 
-const Logo = styled(Anchor)`
+const Logo = styled(NavLink)`
   display: block;
   width: 50%;
+  max-width: 220px;
   margin: ${({ theme }) => theme.Spacings.StaticSpace01} auto;
 
   ${minMediaQuery.Medium(css`
@@ -52,21 +63,17 @@ const Logo = styled(Anchor)`
   `)}
 `;
 
-const MobileMenu = styled.nav`
+const SmallFormFactorMenu = styled.nav`
   display: flex;
   justify-content: center;
   align-items: flex-start;
   text-align: center;
 `;
 
-const MobileLink = styled(Anchor)`
+const SmallFormFactorLink = styled(NavLink)`
   flex: 1 1 auto;
-  display: inline-flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
   color: ${({ theme }) => theme.Colors.Black};
+  text-transform: uppercase;
   padding: ${({ theme }) => theme.Spacings.FontSpace02};
   border-right: 1px solid ${({ theme }) => theme.Colors.Gray00};
   ${fluidFontSize.StepDown1()};
@@ -74,32 +81,42 @@ const MobileLink = styled(Anchor)`
   &:last-child {
     border: none;
   }
+
+  &.isActive {
+    background: ${({ theme }) => theme.Colors.Gold};
+    color: ${({ theme }) => theme.Colors.White};
+  }
 `;
 
-const DesktopWrapper = styled.header`
+const LargeFormFactorWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   padding: 0 ${({ theme }) => theme.Spacings.Page};
   margin: ${({ theme }) => theme.Spacings.StaticSpace04} 0;
 `;
 
-const DesktopMenu = styled.nav`
+const LargeFormFactorMenu = styled.nav`
   flex: 1 1 auto;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 `;
 
-const DesktopLink = styled(Anchor)`
-  text-transform: uppercase;
+const LargeFormFactorLink = styled(NavLink)`
   color: ${({ theme }) => theme.Colors.Black};
-  margin-right: ${({ theme }) => theme.Spacings.FontSpace09};
-  text-decoration: none;
+  text-transform: uppercase;
   border-bottom: 2px solid transparent;
+  padding: ${({ theme }) => theme.Spacings.FontSpace02};
+  margin-right: ${({ theme }) => theme.Spacings.FontSpace09};
   ${fluidFontSize.StepDown1()};
 
   &:hover {
     border-bottom: 2px solid ${({ theme }) => theme.Colors.Gold};
+  }
+
+  &.isActive {
+    background: ${({ theme }) => theme.Colors.Gold};
+    color: ${({ theme }) => theme.Colors.White};
   }
 `;
 

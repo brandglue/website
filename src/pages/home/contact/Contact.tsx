@@ -1,12 +1,12 @@
 import React, { FC, useState } from 'react';
 
-import ButtonPrimary from '@components/ButtonPrimary';
-import Input from '@components/Input';
-import SectionText from '@components/SectionText';
-import SectionTitle from '@components/SectionTitle';
-import SectionWrapper from '@components/SectionWrapper';
-import TextArea from '@components/TextArea';
-import TextLink from '@components/TextLink';
+import PrimaryButton from '@components/buttons/PrimaryButton';
+import Input from '@components/forms/Input';
+import SectionText from '@components/sections/SectionText';
+import SectionTitle from '@components/sections/SectionTitle';
+import SectionWrapper from '@components/sections/SectionWrapper';
+import TextArea from '@components/forms/TextArea';
+import NavTextLink from '@components/links/NavTextLink';
 import { Routes } from '@constants/routes';
 import styled, { css } from '@theme/styled';
 import { fluidFontSize, hexToRgb, minMediaQuery } from '@theme/utils';
@@ -110,7 +110,7 @@ export const Contact: FC = () => {
                   placeholder="In a few words, what are your needs?"
                   value={message}
                 />
-                <ButtonPrimary type="submit">Request Assessment</ButtonPrimary>
+                <PrimaryButton type="submit">Request Assessment</PrimaryButton>
               </Group>
             </GroupWrapper>
             {formError && <Error>{formError}</Error>}
@@ -122,9 +122,11 @@ export const Contact: FC = () => {
             <p>{"We'll"} reach out soon to follow-up with you.</p>
             <p>
               In the meanwhile, check out our{' '}
-              <TextLink to={`/${Routes.Blog}`}>blog</TextLink> or{' '}
-              <TextLink to={`/${Routes.CaseStudies}`}>case studies</TextLink> to
-              learn more.
+              <NavTextLink to={`/${Routes.Blog}`}>blog</NavTextLink> or{' '}
+              <NavTextLink to={`/${Routes.CaseStudies}`}>
+                case studies
+              </NavTextLink>{' '}
+              to learn more.
             </p>
           </Success>
         )}

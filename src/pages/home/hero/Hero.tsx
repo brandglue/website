@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
 
-import Image from '@components/Image';
+import Image from '@components/images/Image';
 import hero from '@images/homepage-hero.jpg';
 import styled, { css } from '@theme/styled';
 import { minMediaQuery } from '@theme/utils';
 
 const Hero: FC = () => {
   const primaryTagline = `We are a \nsocial media agency`;
-  const secondaryTagline = `Reaching your audience in the places \nthey hang out most`;
+  const secondaryTagline = `reaching your audience in the places \nthey hang out most`;
 
   return (
     <Wrapper>
@@ -37,6 +37,7 @@ const Tagline = styled.div`
   `)};
 
   ${minMediaQuery.Medium(css`
+    top: initial;
     left: ${({ theme }) => theme.Spacings.Page};
     bottom: ${({ theme }) => theme.Spacings.StaticSpace06};
     transform: initial;
@@ -50,6 +51,10 @@ const multlinePaddedText = css`
   display: inline;
   padding: 7px;
   box-decoration-break: clone;
+
+  ${minMediaQuery.Large(css`
+    padding: 12px;
+  `)}
 `;
 
 const PrimaryTagline = styled.h1`
@@ -59,12 +64,14 @@ const PrimaryTagline = styled.h1`
   ${multlinePaddedText}
 
   ${minMediaQuery.Medium(css`
-    font-size: 60px;
+    font-size: 40px;
+    line-height: 1.5;
     white-space: pre-wrap;
   `)}
 
-  ${minMediaQuery.Giant(css`
-    font-size: 80px;
+  ${minMediaQuery.Large(css`
+    font-size: 60px;
+    line-height: 1.4;
   `)}
 `;
 
@@ -75,12 +82,13 @@ const SecondaryTagline = styled.h2`
   ${multlinePaddedText}
 
   ${minMediaQuery.Medium(css`
-    font-size: 60px;
+    font-size: 24px;
+    line-height: 1.5;
     white-space: pre-wrap;
   `)}
 
-  ${minMediaQuery.Giant(css`
-    font-size: 80px;
+  ${minMediaQuery.Large(css`
+    font-size: 32px;
   `)}
 `;
 

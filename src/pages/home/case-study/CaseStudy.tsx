@@ -1,10 +1,10 @@
 import React, { FC, useContext } from 'react';
 
-import Anchor from '@components/Anchor';
-import ButtonCurved from '@components/ButtonCurved';
-import ButtonOutline from '@components/ButtonOutline';
+import NavLink from '@components/links/NavLink';
+import CurvedButton from '@components/buttons/CurvedButton';
+import OutlineButton from '@components/buttons/OutlineButton';
 import CurvedBadge from '@components/CurvedBadge';
-import Image from '@components/Image';
+import Image from '@components/images/Image';
 import { Routes } from '@constants/routes';
 import Caret from '@icons/Caret';
 import intuit from '@images/logo-intuit.jpg';
@@ -23,21 +23,22 @@ export const CaseStudy: FC = () => {
       <PageDivider>
         <Container>
           <Logo alt="intuit-accountants" img={intuit} />
-          <Divider />
-          <Headline>Growing Twitter the Right Way:</Headline>
-          <Text>
-            {`See How We Helped Intuit Accountants \n Get The Right Audience at the Right Price`}
-          </Text>
+          <Description>
+            <Headline>Growing Twitter the Right Way:</Headline>
+            <Text>
+              {`See How We Helped Intuit Accountants \n Get The Right Audience at the Right Price`}
+            </Text>
+          </Description>
         </Container>
-        {appState.isMobile ? (
+        {appState.isSmallFormFactor ? (
           // TODO: Update this link to the proper case study link
-          <MobileCta as={Anchor} to={`/${Routes.CaseStudies}`}>
+          <SmallFormFactorCta as={NavLink} to={`/${Routes.CaseStudies}`}>
             See Case Study <StyledCaret />
-          </MobileCta>
+          </SmallFormFactorCta>
         ) : (
-          <DesktopCta as={Anchor} to={`/${Routes.CaseStudies}`}>
+          <LargeFormFactorCta as={NavLink} to={`/${Routes.CaseStudies}`}>
             See Case Study <StyledCaret />
-          </DesktopCta>
+          </LargeFormFactorCta>
         )}
       </PageDivider>
     </>
@@ -68,33 +69,35 @@ const Container = styled.div`
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: center;
   margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace05};
 
   ${minMediaQuery.Medium(css`
     flex-flow: row;
+    align-items: center;
+    margin-bottom: 0;
   `)};
 `;
 
 const Logo = styled(Image)`
   flex: 0 1 200px;
-`;
-
-const Divider = styled.div`
-  height: 1px;
-  width: 100%;
-  background: ${({ theme }) => theme.Colors.White};
-  margin: ${({ theme }) => theme.Spacings.DynamicSpace02} 0;
+  border-bottom: 1px solid ${({ theme }) => theme.Colors.White};
+  padding-bottom: ${({ theme }) => theme.Spacings.DynamicSpace02};
+  margin-bottom: ${({ theme }) => theme.Spacings.DynamicSpace02};
 
   ${minMediaQuery.Medium(css`
-    width: 1px;
-    height: 100%;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-right: 1px solid ${({ theme }) => theme.Colors.White};
+    padding-right: ${({ theme }) => theme.Spacings.DynamicSpace02};
+    margin-right: ${({ theme }) => theme.Spacings.DynamicSpace02};
   `)}
 `;
 
-const Text = styled.div`
+const Description = styled.div`
   ${minMediaQuery.Medium(css`
-    white-space: pre-wrap;
+    display: flex;
+    flex-flow: column;
   `)}
 `;
 
@@ -104,11 +107,17 @@ const Headline = styled.h4`
   color: ${({ theme }) => theme.Colors.Gold};
 `;
 
-const MobileCta = styled(ButtonOutline)`
+const Text = styled.div`
+  ${minMediaQuery.Medium(css`
+    white-space: pre-wrap;
+  `)}
+`;
+
+const SmallFormFactorCta = styled(OutlineButton)`
   color: ${({ theme }) => theme.Colors.Gold};
 `;
 
-const DesktopCta = styled(ButtonCurved)`
+const LargeFormFactorCta = styled(CurvedButton)`
   position: absolute;
   bottom: 0;
   right: ${({ theme }) => theme.Spacings.DynamicSpace09};

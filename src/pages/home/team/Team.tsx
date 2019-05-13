@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 
-import Anchor from '@components/Anchor';
-import Image from '@components/Image';
-import ButtonPrimary from '@components/ButtonPrimary';
-import SectionText from '@components/SectionText';
-import SectionTitle from '@components/SectionTitle';
-import SectionWrapper from '@components/SectionWrapper';
+import NavLink from '@components/links/NavLink';
+import Image from '@components/images/Image';
+import PrimaryButton from '@components/buttons/PrimaryButton';
+import SectionText from '@components/sections/SectionText';
+import SectionTitle from '@components/sections/SectionTitle';
+import SectionWrapper from '@components/sections/SectionWrapper';
 import { Routes } from '@constants/routes';
 import joey from '@images/team-joey-ponce.jpg';
 import hannah from '@images/team-hannah-lushin.jpg';
@@ -34,9 +34,9 @@ export const Team: FC = () => (
       <Image alt="joey-ponce" img={joey} />
       <Image alt="hannah-lushin" img={hannah} />
     </TeamPhotos>
-    <ButtonPrimary as={Anchor} to={`/${Routes.About}`}>
+    <PrimaryButton as={NavLink} to={`/${Routes.About}`}>
       Learn More About Us
-    </ButtonPrimary>
+    </PrimaryButton>
   </SectionWrapper>
 );
 

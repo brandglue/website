@@ -1,10 +1,10 @@
-import Anchor from '@components/Anchor';
+import NavLink from '@components/links/NavLink';
 import styled from '@theme/styled';
 
-export const TextLink = styled(Anchor)`
+export const NavTextLink = styled(NavLink)`
   display: inline;
   color: ${({ theme }) => theme.Colors.DarkBlue};
   text-decoration: underline;
 `;
 
-export default TextLink;
+export default NavTextLink;

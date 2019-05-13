@@ -1,8 +1,8 @@
-import Button from '@components/Button';
+import Button from '@components/buttons/Button';
 import styled, { css } from '@theme/styled';
 import { fluidFontSize } from '@theme/utils';
 
-export const ButtonOutline = styled(Button)`
+export const OutlineButton = styled(Button)`
   ${({ theme }) => css`
     max-width: 250px;
     color: currentColor;
@@ -32,4 +32,4 @@ export const ButtonOutline = styled(Button)`
   `};
 `;
 
-export default ButtonOutline;
+export default OutlineButton;

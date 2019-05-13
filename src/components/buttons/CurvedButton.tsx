@@ -1,8 +1,8 @@
-import Button from '@components/Button';
+import Button from '@components/buttons/Button';
 import styled, { css } from '@theme/styled';
 import { fluidFontSize } from '@theme/utils';
 
-export const ButtonCurved = styled(Button)`
+export const CurvedButton = styled(Button)`
   ${({ theme }) => css`
     position: relative;
     background: transparent;
@@ -16,7 +16,7 @@ export const ButtonCurved = styled(Button)`
     &:before {
       content: '';
       position: absolute;
-      bottom: 50px;
+      bottom: 48px;
       left: 0px;
       width: 90px;
       border-top: 1px solid currentColor;
@@ -48,4 +48,4 @@ export const ButtonCurved = styled(Button)`
   `};
 `;
 
-export default ButtonCurved;
+export default CurvedButton;

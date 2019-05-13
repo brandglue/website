@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import styled, { css } from '@theme/styled';
-import { fluidFontSize } from '@theme/utils';
+import { fluidFontSize, minMediaQuery } from '@theme/utils';
 
 export const HireDivider: FC = () => (
   <>
@@ -23,7 +23,6 @@ const PageDivider = styled.div`
     display: flex;
     flex-flow: column;
     justify-content: center;
-    align-items: center;
     background: ${theme.Colors.DarkBlue};
     color: ${theme.Colors.White};
     text-transform: uppercase;
@@ -33,6 +32,10 @@ const PageDivider = styled.div`
     div:first-child {
       color: ${theme.Colors.Gold};
     }
+
+    ${minMediaQuery.Medium(css`
+      align-items: center;
+    `)}
   `};
 `;
 

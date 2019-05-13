@@ -1,8 +1,8 @@
 import React, { FC, useState } from 'react';
 
-import ButtonOutline from '@components/ButtonOutline';
-import Image from '@components/Image';
-import SectionWrapper from '@components/SectionWrapper';
+import OutlineButton from '@components/buttons/OutlineButton';
+import Image from '@components/images/Image';
+import SectionWrapper from '@components/sections/SectionWrapper';
 import Caret from '@icons/Caret';
 import quickbooks from '@images/logo-quickbooks.jpg';
 import kayak from '@images/logo-kayak.jpg';
@@ -57,14 +57,18 @@ export const Clients: FC = () => {
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 5vw;
   justify-content: center;
   align-items: center;
   margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace03};
+
+  ${minMediaQuery.Small(css`
+    grid-template-columns: repeat(4, 1fr);
+  `)}
 `;
 
-const CtaButton = styled(ButtonOutline)`
+const CtaButton = styled(OutlineButton)`
   color: ${({ theme }) => theme.Colors.DarkBlue};
 `;
 

@@ -15,27 +15,21 @@ export const Footer: FC = () => (
         <Info href="tel:360-207-4583">(360) 207-4583</Info>
         <Info href="mailto:hello@brandglue.com">hello@brandglue.com</Info>
         <Social>
-          <a href="https://www.facebook.com/BrandGlue">
-            <FacebookIcon
-              css={`
-                width: 30px;
-              `}
-            />
-          </a>
-          <a href="https://twitter.com/glue">
-            <TwitterIcon
-              css={`
-                width: 30px;
-              `}
-            />
-          </a>
-          <a href="https://www.linkedin.com/company/brandglue-com">
-            <LinkedInIcon
-              css={`
-                width: 30px;
-              `}
-            />
-          </a>
+          <SocialIcon>
+            <a href="https://www.facebook.com/BrandGlue">
+              <FacebookIcon />
+            </a>
+          </SocialIcon>
+          <SocialIcon>
+            <a href="https://twitter.com/glue">
+              <TwitterIcon />
+            </a>
+          </SocialIcon>
+          <SocialIcon>
+            <a href="https://www.linkedin.com/company/brandglue-com">
+              <LinkedInIcon />
+            </a>
+          </SocialIcon>
         </Social>
       </Contact>
       <StyledBrandGlueLogoIconOnly />
@@ -93,13 +87,22 @@ const Social = styled.div`
   display: flex;
   justify-content: center;
 
-  svg {
-    margin-right: ${({ theme }) => theme.Spacings.StaticSpace02};
+  ${minMediaQuery.Medium(css`
+    justify-content: flex-start;
+  `)}
+`;
+
+const SocialIcon = styled.div`
+  width: 30px;
+  margin-right: ${({ theme }) => theme.Spacings.StaticSpace02};
+
+  &:last-child {
+    margin-right: 0;
   }
 `;
 
 const StyledBrandGlueLogoIconOnly = styled(BrandGlueLogoIconOnly)`
-  width: 50px;
+  width: 15vw;
   margin-top: ${({ theme }) => theme.Spacings.StaticSpace03};
 `;
 

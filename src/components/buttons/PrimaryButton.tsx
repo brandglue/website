@@ -1,10 +1,10 @@
-import Button from '@components/Button';
+import Button from '@components/buttons/Button';
 import styled, { css } from '@theme/styled';
 import { fluidFontSize } from '@theme/utils';
 
-export const ButtonPrimary = styled(Button)`
+export const PrimaryButton = styled(Button)`
   ${({ theme }) => css`
-    max-width: 250px;
+    max-width: 300px;
     background: ${theme.Colors.DarkBlue};
     color: ${theme.Colors.White};
     border: 1px solid transparent;
@@ -32,4 +32,4 @@ export const ButtonPrimary = styled(Button)`
   `};
 `;
 
-export default ButtonPrimary;
+export default PrimaryButton;

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
-import Anchor from '@components/Anchor';
-import ButtonPrimary from '@components/ButtonPrimary';
+import NavLink from '@components/links/NavLink';
+import PrimaryButton from '@components/buttons/PrimaryButton';
 import { Routes } from '@constants/routes';
 import CommunityManagement from '@icons/CommunityManagement';
 import ContentStrategy from '@icons/ContentStrategy';
@@ -12,9 +12,9 @@ import NewsfeedOptimization from '@icons/NewsfeedOptimization';
 import PaidAdvertising from '@icons/PaidAdvertising';
 import SocialStrategy from '@icons/SocialStrategy';
 import TargetAudiencePersonas from '@icons/TargetAudiencePersonas';
-import SectionText from '@components/SectionText';
-import SectionTitle from '@components/SectionTitle';
-import SectionWrapper from '@components/SectionWrapper';
+import SectionText from '@components/sections/SectionText';
+import SectionTitle from '@components/sections/SectionTitle';
+import SectionWrapper from '@components/sections/SectionWrapper';
 import styled, { css } from '@theme/styled';
 import { fluidFontSize, minMediaQuery } from '@theme/utils';
 
@@ -43,45 +43,63 @@ export const Services: FC = () => {
         </SectionText>
         <Grid>
           <GridItem>
-            <SocialStrategy />
+            <GridIcon>
+              <SocialStrategy />
+            </GridIcon>
             <GridLabel>Social Strategy</GridLabel>
           </GridItem>
           <GridItem>
-            <TargetAudiencePersonas />
+            <GridIcon>
+              <TargetAudiencePersonas />
+            </GridIcon>
             <GridLabel>Target Audience Personas</GridLabel>
           </GridItem>
           <GridItem>
-            <PaidAdvertising />
+            <GridIcon>
+              <PaidAdvertising />
+            </GridIcon>
             <GridLabel>Paid Advertising</GridLabel>
           </GridItem>
           <GridItem>
-            <ContentStrategy />
+            <GridIcon>
+              <ContentStrategy />
+            </GridIcon>
             <GridLabel>Content Strategy</GridLabel>
           </GridItem>
           <GridItem>
-            <GraphicDesign />
+            <GridIcon>
+              <GraphicDesign />
+            </GridIcon>
             <GridLabel>Graphic Design</GridLabel>
           </GridItem>
           <GridItem>
-            <CommunityManagement />
+            <GridIcon>
+              <CommunityManagement />
+            </GridIcon>
             <GridLabel>Community Management</GridLabel>
           </GridItem>
           <GridItem>
-            <NewsfeedOptimization />
+            <GridIcon>
+              <NewsfeedOptimization />
+            </GridIcon>
             <GridLabel>Newsfeed Optimization</GridLabel>
           </GridItem>
           <GridItem>
-            <CustomerService />
+            <GridIcon>
+              <CustomerService />
+            </GridIcon>
             <GridLabel>Customer Service</GridLabel>
           </GridItem>
           <GridItem>
-            <DataAnalysis />
+            <GridIcon>
+              <DataAnalysis />
+            </GridIcon>
             <GridLabel>Data Analysis</GridLabel>
           </GridItem>
         </Grid>
-        <ButtonPrimary as={Anchor} to={`/${Routes.Services}`}>
+        <PrimaryButton as={NavLink} to={`/${Routes.Services}`}>
           Learn More About Our Services
-        </ButtonPrimary>
+        </PrimaryButton>
       </SectionWrapper>
       <Divider />
     </>
@@ -97,7 +115,9 @@ const Grid = styled.div`
   margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace07};
 
   ${minMediaQuery.Medium(css`
-    grid-template-columns: repeat(3, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5vw;
+    margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace09};
   `)}
 `;
 
@@ -107,6 +127,10 @@ const GridItem = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+`;
+
+const GridIcon = styled.div`
+  width: 50%;
 `;
 
 const GridLabel = styled.div`
