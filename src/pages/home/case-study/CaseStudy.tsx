@@ -1,81 +1,114 @@
-import React, { FC } from 'react';
-import { Link } from '@reach/router';
+import React, { FC, useContext } from 'react';
 
+import Anchor from '@components/Anchor';
 import ButtonCurved from '@components/ButtonCurved';
+import ButtonOutline from '@components/ButtonOutline';
 import CurvedBadge from '@components/CurvedBadge';
 import Image from '@components/Image';
 import { Routes } from '@constants/routes';
 import Caret from '@icons/Caret';
 import intuit from '@images/logo-intuit.jpg';
+import { AppState } from '@src/AppState';
 import styled, { css } from '@theme/styled';
-import { fluidFontSize } from '@theme/utils';
+import { fluidFontSize, minMediaQuery } from '@theme/utils';
 
-export const CaseStudy: FC = () => (
-  <>
-    <CurvedBadge>
-      <Title>Featured Case Study</Title>
-    </CurvedBadge>
-    <Divider>
-      <Wrapper>
-        <Logo alt="intuit-accountants" img={intuit} />
-        <Text>
+export const CaseStudy: FC = () => {
+  const appState = useContext(AppState);
+
+  return (
+    <>
+      <CurvedBadge>
+        <Title>Featured Case Study</Title>
+      </CurvedBadge>
+      <PageDivider>
+        <Container>
+          <Logo alt="intuit-accountants" img={intuit} />
+          <Divider />
           <Headline>Growing Twitter the Right Way:</Headline>
-          <div>
-            See How We Helped Intuit Accountants
-            <br /> Get The Right Audience at the Right Price
-          </div>
-        </Text>
-      </Wrapper>
-      <CtaButton as={Link} to={`/${Routes.CaseStudies}`}>
-        See More Case Studies <StyledCaret />
-      </CtaButton>
-    </Divider>
-  </>
-);
+          <Text>
+            {`See How We Helped Intuit Accountants \n Get The Right Audience at the Right Price`}
+          </Text>
+        </Container>
+        {appState.isMobile ? (
+          // TODO: Update this link to the proper case study link
+          <MobileCta as={Anchor} to={`/${Routes.CaseStudies}`}>
+            See Case Study <StyledCaret />
+          </MobileCta>
+        ) : (
+          <DesktopCta as={Anchor} to={`/${Routes.CaseStudies}`}>
+            See Case Study <StyledCaret />
+          </DesktopCta>
+        )}
+      </PageDivider>
+    </>
+  );
+};
 
-const Divider = styled.div`
+const Title = styled.h3`
+  ${fluidFontSize.StepDown1()};
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 0 ${({ theme }) => theme.Spacings.Page};
+`;
+
+const PageDivider = styled.div`
   ${({ theme }) => css`
-    position: relative;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
     background: ${theme.Colors.DarkBlue};
     color: ${theme.Colors.White};
-    padding: ${theme.Spacings.StaticSpace03} 0 ${theme.Spacings.StaticSpace15};
+    padding: ${theme.Spacings.StaticSpace05} ${theme.Spacings.StaticSpace03};
+
+    ${minMediaQuery.Medium(css`
+      position: relative;
+      padding: ${theme.Spacings.StaticSpace03} 0 ${theme.Spacings.StaticSpace15};
+    `)}
   `};
 `;
 
-const Title = styled.div`
-  ${fluidFontSize.StepDown1()};
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-left: ${({ theme }) => theme.Spacings.Page};
-`;
-
-const Wrapper = styled.div`
+const Container = styled.div`
   display: flex;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace05};
+
+  ${minMediaQuery.Medium(css`
+    flex-flow: row;
+  `)};
 `;
 
 const Logo = styled(Image)`
   flex: 0 1 200px;
-  margin-right: ${({ theme }) => theme.Spacings.DynamicSpace02};
+`;
+
+const Divider = styled.div`
+  height: 1px;
+  width: 100%;
+  background: ${({ theme }) => theme.Colors.White};
+  margin: ${({ theme }) => theme.Spacings.DynamicSpace02} 0;
+
+  ${minMediaQuery.Medium(css`
+    width: 1px;
+    height: 100%;
+  `)}
 `;
 
 const Text = styled.div`
-  padding-left: ${({ theme }) => theme.Spacings.DynamicSpace02};
-  border-left: 1px solid ${({ theme }) => theme.Colors.White};
+  ${minMediaQuery.Medium(css`
+    white-space: pre-wrap;
+  `)}
 `;
 
 const Headline = styled.h4`
-  color: ${({ theme }) => theme.Colors.Gold};
-  text-transform: uppercase;
   ${fluidFontSize.StepUp1()};
+  text-transform: uppercase;
+  color: ${({ theme }) => theme.Colors.Gold};
 `;
 
-const CtaButton = styled(ButtonCurved)`
+const MobileCta = styled(ButtonOutline)`
+  color: ${({ theme }) => theme.Colors.Gold};
+`;
+
+const DesktopCta = styled(ButtonCurved)`
   position: absolute;
   bottom: 0;
   right: ${({ theme }) => theme.Spacings.DynamicSpace09};
@@ -83,6 +116,7 @@ const CtaButton = styled(ButtonCurved)`
 `;
 
 const StyledCaret = styled(Caret)`
+  width: 20px;
   transform: rotate(90deg);
 `;
 

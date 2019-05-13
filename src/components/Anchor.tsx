@@ -8,10 +8,17 @@ interface IOwnProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 }
 
 export const Anchor: FC<IOwnProps> = props => (
-  <StyledAnchor to={props.to}>{props.children}</StyledAnchor>
+  <StyledAnchor className={props.className} to={props.to}>
+    {props.children}
+  </StyledAnchor>
 );
 
+Anchor.defaultProps = {
+  className: '',
+};
+
 const StyledAnchor = styled(Link)`
+  display: inline-block;
   color: currentColor;
   text-decoration: none;
 `;

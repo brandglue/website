@@ -1,39 +1,25 @@
 import React, { FC, useContext } from 'react';
-import { Link } from '@reach/router';
 
+import Anchor from '@components/Anchor';
 import BrandGlueLogo from '@icons/BrandGlueLogo';
-import BrandGlueLogoIconOnly from '@icons/BrandglueLogoIconOnly';
 import { Routes } from '@constants/routes';
 import { AppState } from '@src/AppState';
-import styled from '@theme/styled';
-import { fluidFontSize } from '@theme/utils';
+import styled, { css } from '@theme/styled';
+import { fluidFontSize, minMediaQuery } from '@theme/utils';
 
 export const Header: FC = () => {
   const appState = useContext(AppState);
 
   const mobileMenu = (
     <header>
+      <Logo to={`/`}>
+        <BrandGlueLogo />
+      </Logo>
       <MobileMenu>
-        <MobileLink to={`/`}>
-          <BrandGlueLogoIconOnly width={20} />
-          <Label>Home</Label>
-        </MobileLink>
-        <MobileLink to={`/${Routes.About}`}>
-          <BrandGlueLogoIconOnly width={20} />
-          <Label>About</Label>
-        </MobileLink>
-        <MobileLink to={`/${Routes.Services}`}>
-          <BrandGlueLogoIconOnly width={20} />
-          <Label>Services</Label>
-        </MobileLink>
-        <MobileLink to={`/${Routes.CaseStudies}`}>
-          <BrandGlueLogoIconOnly width={20} />
-          <Label>Case Studies</Label>
-        </MobileLink>
-        <MobileLink to={`/${Routes.Blog}`}>
-          <BrandGlueLogoIconOnly width={20} />
-          <Label>Blog</Label>
-        </MobileLink>
+        <MobileLink to={`/${Routes.About}`}>About</MobileLink>
+        <MobileLink to={`/${Routes.Services}`}>Services</MobileLink>
+        <MobileLink to={`/${Routes.CaseStudies}`}>Case Studies</MobileLink>
+        <MobileLink to={`/${Routes.Blog}`}>Blog</MobileLink>
       </MobileMenu>
     </header>
   );
@@ -56,11 +42,24 @@ export const Header: FC = () => {
   return appState.isDesktop ? desktopMenu : mobileMenu;
 };
 
-const MobileMenu = styled.nav`
-  display: flex;
+const Logo = styled(Anchor)`
+  display: block;
+  width: 50%;
+  margin: ${({ theme }) => theme.Spacings.StaticSpace01} auto;
+
+  ${minMediaQuery.Medium(css`
+    flex: 0 0 220px;
+  `)}
 `;
 
-const MobileLink = styled(Link)`
+const MobileMenu = styled.nav`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+`;
+
+const MobileLink = styled(Anchor)`
   flex: 1 1 auto;
   display: inline-flex;
   flex-flow: column;
@@ -70,22 +69,18 @@ const MobileLink = styled(Link)`
   color: ${({ theme }) => theme.Colors.Black};
   padding: ${({ theme }) => theme.Spacings.FontSpace02};
   border-right: 1px solid ${({ theme }) => theme.Colors.Gray00};
+  ${fluidFontSize.StepDown1()};
 
   &:last-child {
     border: none;
   }
 `;
 
-const Label = styled.div`
-  margin-top: ${({ theme }) => theme.Spacings.StaticSpace00};
-  ${fluidFontSize.StepDown1()};
-`;
-
 const DesktopWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   padding: 0 ${({ theme }) => theme.Spacings.Page};
-  margin: ${({ theme }) => theme.Spacings.StaticSpace02} 0;
+  margin: ${({ theme }) => theme.Spacings.StaticSpace04} 0;
 `;
 
 const DesktopMenu = styled.nav`
@@ -95,11 +90,7 @@ const DesktopMenu = styled.nav`
   align-items: center;
 `;
 
-const Logo = styled(Link)`
-  flex: 0 0 220px;
-`;
-
-const DesktopLink = styled(Link)`
+const DesktopLink = styled(Anchor)`
   text-transform: uppercase;
   color: ${({ theme }) => theme.Colors.Black};
   margin-right: ${({ theme }) => theme.Spacings.FontSpace09};

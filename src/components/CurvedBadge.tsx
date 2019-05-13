@@ -10,7 +10,7 @@ const Badge = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 40vw;
+  width: 60vw;
   height: 35px;
   background: ${({ theme }) => theme.Colors.Gold};
   color: ${({ theme }) => theme.Colors.White};
@@ -27,7 +27,7 @@ const Badge = styled.div`
   }
 
   ${minMediaQuery.Medium(css`
-    width: 30vw;
+    width: 40vw;
   `)}
 `;
 

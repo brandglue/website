@@ -2,7 +2,9 @@ import React, { FC, useState } from 'react';
 
 import ButtonPrimary from '@components/ButtonPrimary';
 import Input from '@components/Input';
+import SectionText from '@components/SectionText';
 import SectionTitle from '@components/SectionTitle';
+import SectionWrapper from '@components/SectionWrapper';
 import TextArea from '@components/TextArea';
 import TextLink from '@components/TextLink';
 import { Routes } from '@constants/routes';
@@ -54,13 +56,15 @@ export const Contact: FC = () => {
   };
 
   return (
-    <Wrapper>
+    <SectionWrapper>
       <SectionTitle>Ready to get to work? We are.</SectionTitle>
       <SectionText>
-        Overwhelmed with the possilibities and options of social media? Not sure
-        where to focus your attention? We are here to help you figure that out{' '}
-        <strong>for free!</strong> Just fill out the form below and {"we'll"} be
-        in touch within 24hrs.
+        <p>
+          Overwhelmed with the possilibities and options of social media? Not
+          sure where to focus your attention? We are here to help you figure
+          that out <strong>for free!</strong> Just fill out the form below and{' '}
+          {"we'll"} be in touch within 24hrs.
+        </p>
       </SectionText>
       <ContactForm
         data-netlify="true"
@@ -125,18 +129,9 @@ export const Contact: FC = () => {
           </Success>
         )}
       </ContactForm>
-    </Wrapper>
+    </SectionWrapper>
   );
 };
-
-const Wrapper = styled.div`
-  padding: ${({ theme }) =>
-    `${theme.Spacings.StaticSpace05} ${theme.Spacings.Page}`};
-`;
-
-const SectionText = styled.p`
-  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace03};
-`;
 
 const ContactForm = styled.form`
   display: flex;

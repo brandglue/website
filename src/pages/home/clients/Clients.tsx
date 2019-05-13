@@ -1,8 +1,8 @@
 import React, { FC, useState } from 'react';
 
-import Button from '@components/Button';
-import CurvedBadge from '@components/CurvedBadge';
+import ButtonOutline from '@components/ButtonOutline';
 import Image from '@components/Image';
+import SectionWrapper from '@components/SectionWrapper';
 import Caret from '@icons/Caret';
 import quickbooks from '@images/logo-quickbooks.jpg';
 import kayak from '@images/logo-kayak.jpg';
@@ -17,13 +17,17 @@ import shortel from '@images/logo-shortel.jpg';
 import pgi from '@images/logo-pgi.jpg';
 import youtube from '@images/logo-youtube.jpg';
 import styled, { css } from '@theme/styled';
-import { fluidFontSize, minMediaQuery } from '@theme/utils';
+import { minMediaQuery } from '@theme/utils';
 
 export const Clients: FC = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <>
+    <SectionWrapper
+      css={`
+        text-align: center;
+      `}
+    >
       <Grid>
         <Image alt="microsoft" img={microsoft} />
         <Image alt="intel" img={intel} />
@@ -43,14 +47,11 @@ export const Clients: FC = () => {
           </>
         )}
       </Grid>
-      <CurvedBadge>
-        <AccordianSelector onClick={() => setOpen(!isOpen)}>
-          {`See ${isOpen ? 'Fewer' : 'More'} Clients`}
-          <StyledCaret shouldRotate={isOpen} />
-        </AccordianSelector>
-      </CurvedBadge>
-      <HorizontalDivider />
-    </>
+      <CtaButton onClick={() => setOpen(!isOpen)}>
+        {`See ${isOpen ? 'Fewer' : 'More'} Clients`}{' '}
+        <StyledCaret shouldRotate={isOpen} />
+      </CtaButton>
+    </SectionWrapper>
   );
 };
 
@@ -60,33 +61,21 @@ const Grid = styled.div`
   grid-gap: 5vw;
   justify-content: center;
   align-items: center;
-  padding: ${({ theme }) => theme.Spacings.StaticSpace03} 0;
+  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace03};
 `;
 
-const AccordianSelector = styled(Button)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: ${({ theme }) => theme.Colors.White};
-  margin-top: ${({ theme }) => theme.Spacings.StaticSpace00};
-  margin-left: ${({ theme }) => theme.Spacings.Page};
-  text-transform: uppercase;
-  font-weight: 700;
-  ${fluidFontSize.StepDown1()};
+const CtaButton = styled(ButtonOutline)`
+  color: ${({ theme }) => theme.Colors.DarkBlue};
 `;
 
 const StyledCaret = styled(Caret)`
+  width: 15px;
   margin-left: ${({ theme }) => theme.Spacings.StaticSpace00};
   ${({ shouldRotate }) =>
     !shouldRotate &&
     css`
       transform: rotate(180deg);
     `}
-`;
-
-const HorizontalDivider = styled.div`
-  background: ${({ theme }) => theme.Colors.Gold};
-  height: ${({ theme }) => theme.Spacings.StaticSpace00};
 `;
 
 export default Clients;
