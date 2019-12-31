@@ -3,6 +3,10 @@
   "compilerOptions": {
     "strict": true,
 
+    // incremental caching
+    "incremental": true,
+    "tsBuildInfoFile": "./buildcache/tsBuildInfo",
+
     // transpilation options
     "esModuleInterop": true,
     "isolatedModules": true,

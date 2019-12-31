@@ -33,7 +33,7 @@
         },
       ],
       '@typescript-eslint/explicit-function-return-type': 'off',
-      '@typescript-eslint/interface-name-prefix': 'always',
+      '@typescript-eslint/interface-name-prefix': [1, { "prefixWithI": "always" }],
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/no-use-before-define': [
         'error',
