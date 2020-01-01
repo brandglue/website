@@ -11,8 +11,7 @@ import joey from '@images/team-joey-ponce.jpg';
 import hannah from '@images/team-hannah-lushin.jpg';
 import michelle from '@images/team-michelle-heathers.jpg';
 import zach from '@images/team-zach-welch.jpg';
-import styled, { css } from '@theme/styled';
-import { minMediaQuery } from '@theme/utils';
+import styled from '@theme/styled';
 
 export const Team: FC = () => (
   <SectionWrapper>

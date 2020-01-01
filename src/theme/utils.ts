@@ -32,31 +32,27 @@ export const minMediaQuery = (function() {
     /* must assert keys as desired type per: https://github.com/Microsoft/TypeScript/pull/12253 */
     const breakpointKeys = Object.keys(Breakpoints) as IBreakpointKeys[];
 
-    return breakpointKeys.reduce(
-      (mediaQueries, breakpoint) => {
-        mediaQueries[breakpoint] = (cssToUse, orientation?) => {
-          if (orientation) {
-            return css`
-              @media (min-width: ${Breakpoints[
-                  breakpoint
-                ]}px) and (orientation: ${orientation}) {
-                ${cssToUse}
-              }
-            `;
-          }
-
+    return breakpointKeys.reduce((mediaQueries, breakpoint) => {
+      mediaQueries[breakpoint] = (cssToUse, orientation?) => {
+        if (orientation) {
           return css`
-            @media (min-width: ${Breakpoints[breakpoint]}px) {
+            @media (min-width: ${Breakpoints[
+                breakpoint
+              ]}px) and (orientation: ${orientation}) {
               ${cssToUse}
             }
           `;
-        };
+        }
 
-        return mediaQueries;
-      },
-      // eslint-disable-next-line @typescript-eslint/no-object-literal-type-assertion
-      {} as IMediaQueries,
-    );
+        return css`
+          @media (min-width: ${Breakpoints[breakpoint]}px) {
+            ${cssToUse}
+          }
+        `;
+      };
+
+      return mediaQueries;
+    }, {} as IMediaQueries);
   }
 
   return generateMinMediaQueries();
@@ -77,63 +73,56 @@ export const fluidFontSize = (function() {
     /* must assert keys as desired type per: https://github.com/Microsoft/TypeScript/pull/12253 */
     const typeScaleKeys = Object.keys(TypeScaleByKeys) as TypeScaleByKeys[];
 
-    return typeScaleKeys.reduce(
-      (fluidFontSizes, typeScale) => {
-        fluidFontSizes[typeScale] = () => {
-          const breakpointKeys = Object.keys(
-            BreakpointsByKey,
-          ) as IBreakpointKeys[];
+    return typeScaleKeys.reduce((fluidFontSizes, typeScale) => {
+      fluidFontSizes[typeScale] = () => {
+        const breakpointKeys = Object.keys(
+          BreakpointsByKey,
+        ) as IBreakpointKeys[];
 
-          let styles: string[] = [];
+        const styles: string[] = [];
 
-          breakpointKeys.forEach((currentBreakpoint, index) => {
-            if (currentBreakpoint === BreakpointsByKey.Zero) {
-              const fontSize =
-                fluidFontMatrix[BreakpointsByKey.Zero][typeScale];
-              return styles.push(`font-size: ${fontSize}px`);
-            }
+        breakpointKeys.forEach((currentBreakpoint, index) => {
+          if (currentBreakpoint === BreakpointsByKey.Zero) {
+            const fontSize = fluidFontMatrix[BreakpointsByKey.Zero][typeScale];
+            return styles.push(`font-size: ${fontSize}px`);
+          }
 
-            const currentBreakpointWidth = Breakpoints[currentBreakpoint];
-            const currentSize = fluidFontMatrix[currentBreakpoint][typeScale];
-            const nextBreakpointWidth = Breakpoints[breakpointKeys[index + 1]];
-            const nextSize =
-              nextBreakpointWidth &&
-              fluidFontMatrix[breakpointKeys[index + 1]][typeScale];
+          const currentBreakpointWidth = Breakpoints[currentBreakpoint];
+          const currentSize = fluidFontMatrix[currentBreakpoint][typeScale];
+          const nextBreakpointWidth = Breakpoints[breakpointKeys[index + 1]];
+          const nextSize =
+            nextBreakpointWidth &&
+            fluidFontMatrix[breakpointKeys[index + 1]][typeScale];
 
-            if (nextSize && nextSize !== currentSize) {
-              // compute linear interpolation
-              const slope =
-                (nextSize - currentSize) /
-                (nextBreakpointWidth - currentBreakpointWidth);
-              const yIntercept = currentSize - slope * currentBreakpointWidth;
-              const sign = yIntercept > 0 ? '+' : '-';
+          if (nextSize && nextSize !== currentSize) {
+            // compute linear interpolation
+            const slope =
+              (nextSize - currentSize) /
+              (nextBreakpointWidth - currentBreakpointWidth);
+            const yIntercept = currentSize - slope * currentBreakpointWidth;
+            const sign = yIntercept > 0 ? '+' : '-';
 
-              const fontSize = `calc(${slope * 100}vw ${sign} ${Math.abs(
-                yIntercept,
-              )}px)`;
+            const fontSize = `calc(${slope * 100}vw ${sign} ${Math.abs(
+              yIntercept,
+            )}px)`;
 
-              return styles.push(
-                generateMediaQuery(currentBreakpoint, fontSize),
-              );
-            } else if (!nextSize) {
-              return styles.push(
-                generateMediaQuery(currentBreakpoint, `${currentSize}px`),
-              );
-            } else {
-              return; // don't add extra media queries unless needed
-            }
-          });
+            return styles.push(generateMediaQuery(currentBreakpoint, fontSize));
+          } else if (!nextSize) {
+            return styles.push(
+              generateMediaQuery(currentBreakpoint, `${currentSize}px`),
+            );
+          } else {
+            return; // don't add extra media queries unless needed
+          }
+        });
 
-          return css`
-            ${styles.join('\n')}
-          `;
-        };
+        return css`
+          ${styles.join('\n')}
+        `;
+      };
 
-        return fluidFontSizes;
-      },
-      // eslint-disable-next-line @typescript-eslint/no-object-literal-type-assertion
-      {} as IFluidFontSizes,
-    );
+      return fluidFontSizes;
+    }, {} as IFluidFontSizes);
   }
 
   function generateMediaQuery(

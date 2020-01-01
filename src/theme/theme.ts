@@ -160,14 +160,12 @@ export const fluidFontMatrix = (function() {
   type IFluidFontMatrix = { [key in IBreakpointKeys]: IFontSizes };
 
   function generateFluidFontMatrix(): IFluidFontMatrix {
-    // eslint-disable-next-line @typescript-eslint/no-object-literal-type-assertion
     const matrix = {} as IFluidFontMatrix;
 
     const breakpointKeys = Object.keys(BreakpointsByKey) as IBreakpointKeys[];
     const typeScaleKeys = Object.keys(TypeScaleByKeys) as ITypeScaleKeys[];
 
     breakpointKeys.forEach(breakpoint => {
-      // eslint-disable-next-line @typescript-eslint/no-object-literal-type-assertion
       matrix[breakpoint] = {} as IFontSizes;
 
       const baselineFontSize = baselineFontSizeByBreakpoint[breakpoint];

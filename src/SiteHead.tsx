@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
 import { Head } from 'react-static';
+import React, { FC } from 'react';
 
 export const SiteHead: FC = () => {
   return (

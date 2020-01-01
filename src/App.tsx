@@ -1,6 +1,7 @@
-import React, { FC, Suspense, useLayoutEffect, useState } from 'react';
 import { Root, Routes } from 'react-static';
+import React, { FC, Suspense, useLayoutEffect, useState } from 'react';
 import { Router } from '@reach/router';
+
 /* ref: https://github.com/DefinitelyTyped/DefinitelyTyped/issues/31245 */
 /* eslint-disable-next-line  */
 import * as types from 'styled-components/cssprop';

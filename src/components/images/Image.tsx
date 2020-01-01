@@ -1,28 +1,42 @@
 import React, { FC } from 'react';
-import IdealImage from 'react-ideal-image';
+import cx from 'classnames';
+import styled from 'styled-components';
+import {
+  LazyLoadImage,
+  LazyLoadImageProps,
+} from 'react-lazy-load-image-component';
 
-interface IProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+interface IProps extends LazyLoadImageProps {
   img: IImageGroup;
 }
 
-export const Image: FC<IProps> = ({ alt, className, img }) => (
-  <IdealImage
-    alt={alt}
-    className={className}
-    height={img.src.height}
-    placeholder={{ lqip: img.preSrc }}
-    src={img.src.src}
-    srcSet={img.src.images.map(image => ({
-      ...image,
-      src: image.path,
-    }))}
-    width={img.src.width}
-  />
-);
+export const Image: FC<IProps> = ({ alt, className, img, scrollPosition }) => {
+  const {
+    preSrc,
+    src: { ...respImg },
+  } = img;
+  const imageClassName = cx(className);
+  console.log(img);
+
+  return (
+    <StyledLazyLoadImage
+      alt={alt}
+      className={imageClassName}
+      placeholderSrc={preSrc}
+      scrollPosition={scrollPosition}
+      src={respImg.src}
+      srcSet={respImg.srcSet}
+    />
+  );
+};
 
 Image.defaultProps = {
   alt: '',
   className: '',
 };
+
+const StyledLazyLoadImage = styled(LazyLoadImage)`
+  max-width: 100%;
+`;
 
 export default Image;

@@ -1,5 +1,6 @@
 {
   module.exports = {
+    root: true,
     extends: [
       'plugin:@typescript-eslint/recommended',
       'plugin:react/recommended',
@@ -13,10 +14,13 @@
     plugins: ['react-hooks'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
-      ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
-      sourceType: 'module', // Allows for the use of imports
+      // Allows for the parsing of modern ECMAScript features
+      ecmaVersion: 2019,
+      // Allows for the use of imports
+      sourceType: 'module',
       ecmaFeatures: {
-        jsx: true, // Allows for the parsing of JSX
+        // Allows for the parsing of JSX
+        jsx: true,
       },
     },
     rules: {
@@ -24,7 +28,7 @@
       'import/order': [
         'error',
         {
-          'newlines-between': 'always',
+          'newlines-between': 'ignore', // temp hack while trying to get aliases to get recognized as separate from external imports
           groups: [
             ['builtin', 'external'],
             'internal',
@@ -33,7 +37,10 @@
         },
       ],
       '@typescript-eslint/explicit-function-return-type': 'off',
-      '@typescript-eslint/interface-name-prefix': [1, { "prefixWithI": "always" }],
+      '@typescript-eslint/interface-name-prefix': [
+        1,
+        { prefixWithI: 'always' },
+      ],
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/no-use-before-define': [
         'error',
@@ -63,12 +70,23 @@
     },
     settings: {
       react: {
-        version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
+        // Tells eslint-plugin-react to automatically detect the version of React to use
+        version: 'detect',
       },
       'import/resolver': {
         // find aliases in tsconfig.json
-        typescript: {},
+        typescript: {
+          directory: 'tsconfig.json',
+        },
       },
+      'import/ignore': [
+        // ignore linting node_modules for import-related rules
+        'node_modules',
+      ],
+      'import/external-module-folders': [
+        // ensure node_modules are viewed as external modules
+        'node_modules',
+      ],
     },
   };
 }

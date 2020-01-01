@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import BrandGlueLogoIconOnly from '@icons/BrandglueLogoIconOnly';
+import BrandGlueLogoIconOnly from '@icons/BrandGlueLogoIconOnly';
 import FacebookIcon from '@icons/Facebook';
 import LinkedInIcon from '@icons/LinkedIn';
 import TwitterIcon from '@icons/Twitter';
@@ -43,9 +43,7 @@ export const Footer: FC = () => (
 const Wrapper = styled.div`
   background: ${({ theme }) => theme.Colors.Gray04};
   padding: ${({ theme }) =>
-    `${theme.Spacings.DynamicSpace02} ${theme.Spacings.DynamicSpace02} ${
-      theme.Spacings.StaticSpace03
-    }`};
+    `${theme.Spacings.DynamicSpace02} ${theme.Spacings.DynamicSpace02} ${theme.Spacings.StaticSpace03}`};
 `;
 
 const Container = styled.div`

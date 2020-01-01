@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import BrandGlueIconLogoOnly from '@icons/BrandglueLogoIconOnly';
+import BrandGlueIconLogoOnly from '@icons/BrandGlueLogoIconOnly';
 import styled, { keyframes } from '@theme/styled';
 
 export const Spinner: FC<React.HTMLAttributes<SVGAElement>> = props => (

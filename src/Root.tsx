@@ -22,9 +22,19 @@ if (typeof document !== 'undefined') {
   render(App);
 
   // Hot Module Replacement
-  if (module && module.hot) {
-    module.hot.accept('./App', () => {
+
+  /* 
+    For some reason the module.hot is failing typechecking even though
+    the recommend solutions online are being followed: namely installing the 
+    @types/node and @types/webpack-env packages. Using the 'any' hack below to
+    work around things
+  */
+
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  if (module && (module as any).hot) {
+    (module as any).hot.accept('./App', () => {
       render(App);
     });
   }
+  /* eslint-enable @typescript-eslint/no-explicit-any */
 }

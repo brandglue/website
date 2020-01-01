@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 const Svg = styled.svg.attrs({
+  'aria-hidden': 'true',
   /*
     IE & Edge respect the focusable attribute that was introduced in SVG Tiny 1.2
     and later deprecated with SVG 2. Must add focusable="false" to prevent IE and Edge from
     focusing all SVGs
   */
-  'aria-hidden': 'true',
   focusable: 'false',
 })`
   width: 100%;

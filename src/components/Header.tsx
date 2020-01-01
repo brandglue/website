@@ -1,8 +1,8 @@
 import React, { FC, useContext } from 'react';
 
 import NavLink from '@components/links/NavLink';
-import BrandGlueLogo from '@icons/BrandGlueLogo';
 import { Routes } from '@constants/routes';
+import BrandGlueLogo from '@icons/BrandGlueLogo';
 import { AppState } from '@src/AppState';
 import styled, { css } from '@theme/styled';
 import { fluidFontSize, minMediaQuery } from '@theme/utils';
