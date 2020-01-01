@@ -16,7 +16,6 @@ export const Image: FC<IProps> = ({ alt, className, img, scrollPosition }) => {
     src: { ...respImg },
   } = img;
   const imageClassName = cx(className);
-  console.log(img);
 
   return (
     <StyledLazyLoadImage
