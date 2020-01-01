@@ -1,7 +1,0 @@
-node_modules
-/artifacts/
-/dist/
-/tmp/
-
-# ensure linting of eslint config files
-!.eslintrc.js

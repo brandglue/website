@@ -1,10 +1,10 @@
 {
   module.exports = {
-    endOfLine: "lf",
+    endOfLine: 'lf',
     jsxSingleQuote: false,
     semi: true,
     singleQuote: true,
-    trailingComma: "all",
-    tabWidth: 2
+    trailingComma: 'all',
+    tabWidth: 2,
   };
 }

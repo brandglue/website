@@ -6,23 +6,15 @@
   "scripts": {
     "analyze": "react-static build --analyze",
     "build": "react-static build",
-    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --fix && stylelint '*/**/*.tsx'",
+    "lint": "eslint --ignore-path .gitignore '*/**/*.{js,ts,tsx}' --fix && stylelint '*/**/*.tsx'",
+    "check-format": "yarn run prettier --list-different",
+    "check-types": "tsc",
+    "format": "yarn run prettier --write",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx)\"",
     "stage": "react-static build --staging",
     "start": "react-static start",
-    "serve": "serve dist -p 3000"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn run lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "eslint --fix"
-    ],
-    "*.tsx": [
-      "stylelint"
-    ]
+    "serve": "serve dist -p 3000",
+    "validate": "yarn run check-types && yarn run check-format && yarn run lint && yarn run build"
   },
   "dependencies": {
     "@reach/router": "1.2.1",

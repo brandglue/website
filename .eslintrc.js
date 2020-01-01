@@ -1,17 +1,6 @@
 {
   module.exports = {
     root: true,
-    extends: [
-      'plugin:@typescript-eslint/recommended',
-      'plugin:react/recommended',
-      'plugin:import/errors',
-      'plugin:import/warnings',
-      'plugin:import/typescript',
-      'plugin:prettier/recommended',
-      'prettier/@typescript-eslint',
-      'prettier/react',
-    ],
-    plugins: ['react-hooks'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
       // Allows for the parsing of modern ECMAScript features
@@ -22,6 +11,21 @@
         // Allows for the parsing of JSX
         jsx: true,
       },
+    },
+    extends: [
+      'plugin:@typescript-eslint/eslint-recommended',
+      'plugin:@typescript-eslint/recommended',
+      'plugin:react/recommended',
+      'plugin:import/errors',
+      'plugin:import/warnings',
+      'plugin:import/typescript',
+      'plugin:prettier/recommended',
+      'prettier/@typescript-eslint',
+      'prettier/react',
+    ],
+    plugins: ['react-hooks'],
+    env: {
+      browser: true,
     },
     rules: {
       'import/no-named-as-default': 'off',
