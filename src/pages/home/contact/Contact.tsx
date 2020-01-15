@@ -69,6 +69,7 @@ export const Contact: FC = () => {
       <ContactForm
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        data-testid="contact"
         name="contact"
         onSubmit={handleSubmit}
       >
@@ -78,12 +79,14 @@ export const Contact: FC = () => {
               <Group>
                 <input name="contact" type="hidden" value="contact" />
                 <Input
+                  aria-label="Name"
                   name="name"
                   onChange={handleNameChange}
                   placeholder="Name"
                   value={name}
                 />
                 <Input
+                  aria-label="email"
                   name="email"
                   onChange={handleEmailChange}
                   placeholder="Email"
@@ -91,12 +94,14 @@ export const Contact: FC = () => {
                   value={email}
                 />
                 <Input
+                  aria-label="company"
                   name="company"
                   onChange={handleCompanyChange}
                   placeholder="Company"
                   value={company}
                 />
                 <Input
+                  aria-label="title"
                   name="title"
                   onChange={handleTitleChange}
                   placeholder="Title"
@@ -105,6 +110,7 @@ export const Contact: FC = () => {
               </Group>
               <Group>
                 <TextArea
+                  aria-label="message"
                   name="message"
                   onChange={handleMessageChange}
                   placeholder="In a few words, what are your needs?"

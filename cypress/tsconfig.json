@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "../node_modules",
+    "lib": ["dom", "es6", "es7"],
+    "module": "es6",
+    "outDir": "./dist/",
+    "target": "es6",
+    "types": ["cypress", "@types/testing-library__cypress"],
+    "strict": true
+  },
+  "include": ["**/*.ts", "test.d.ts"]
+}

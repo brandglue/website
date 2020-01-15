@@ -1,7 +1,6 @@
 {
   module.exports = {
     root: true,
-    parser: '@typescript-eslint/parser',
     parserOptions: {
       // Allows for the parsing of modern ECMAScript features
       ecmaVersion: 2019,
@@ -13,19 +12,16 @@
       },
     },
     extends: [
-      'plugin:@typescript-eslint/eslint-recommended',
-      'plugin:@typescript-eslint/recommended',
       'plugin:react/recommended',
       'plugin:import/errors',
       'plugin:import/warnings',
-      'plugin:import/typescript',
       'plugin:prettier/recommended',
-      'prettier/@typescript-eslint',
       'prettier/react',
     ],
-    plugins: ['react-hooks'],
+    plugins: ['react-hooks', 'eslint-plugin-cypress'],
     env: {
       browser: true,
+      'cypress/globals': true,
     },
     rules: {
       'import/no-named-as-default': 'off',
@@ -39,16 +35,6 @@
             ['sibling', 'parent', 'index'],
           ],
         },
-      ],
-      '@typescript-eslint/explicit-function-return-type': 'off',
-      '@typescript-eslint/interface-name-prefix': [
-        1,
-        { prefixWithI: 'always' },
-      ],
-      '@typescript-eslint/no-non-null-assertion': 'off',
-      '@typescript-eslint/no-use-before-define': [
-        'error',
-        { functions: false, classes: true, variables: true, typedefs: true },
       ],
       'react/jsx-sort-props': [
         1,
@@ -72,6 +58,35 @@
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
     },
+    overrides: [
+      {
+        files: ['*.ts', '*.tsx'],
+        parser: '@typescript-eslint/parser',
+        extends: [
+          'plugin:@typescript-eslint/eslint-recommended',
+          'plugin:@typescript-eslint/recommended',
+          'plugin:import/typescript',
+          'prettier/@typescript-eslint',
+        ],
+        rules: {
+          '@typescript-eslint/explicit-function-return-type': 'off',
+          '@typescript-eslint/interface-name-prefix': [
+            1,
+            { prefixWithI: 'always' },
+          ],
+          '@typescript-eslint/no-non-null-assertion': 'off',
+          '@typescript-eslint/no-use-before-define': [
+            'error',
+            {
+              functions: false,
+              classes: true,
+              variables: true,
+              typedefs: true,
+            },
+          ],
+        },
+      },
+    ],
     settings: {
       react: {
         // Tells eslint-plugin-react to automatically detect the version of React to use

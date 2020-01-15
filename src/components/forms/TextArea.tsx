@@ -5,15 +5,7 @@ import { fluidFontSize } from '@theme/utils';
 
 export const TextArea: FC<React.TextareaHTMLAttributes<
   HTMLTextAreaElement
->> = props => (
-  <StyledTextArea
-    className={props.className}
-    name={props.name}
-    onChange={props.onChange}
-    placeholder={props.placeholder}
-    value={props.value}
-  />
-);
+>> = props => <StyledTextArea {...props} />;
 
 TextArea.defaultProps = {
   className: '',

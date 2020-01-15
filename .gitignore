@@ -3,5 +3,6 @@
 /artifacts/
 /tmp/
 /buildcache/
-
 .eslintcache
+cypress/videos
+cypress/screenshots
