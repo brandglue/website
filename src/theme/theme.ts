@@ -6,7 +6,9 @@ export enum Breakpoints {
   Small = 480,
   Medium = 768,
   Large = 1024,
+  XLarge = 1366,
   Giant = 1920,
+  SuperNova = 2560,
 }
 
 export enum BreakpointsByKey {
@@ -15,7 +17,9 @@ export enum BreakpointsByKey {
   Small = 'Small',
   Medium = 'Medium',
   Large = 'Large',
+  XLarge = 'XLarge',
   Giant = 'Giant',
+  SuperNova = 'SuperNova',
 }
 
 // Enum doesn't support tinytypes yet so using a const instead
@@ -152,7 +156,9 @@ export const fluidFontMatrix = (function() {
     [BreakpointsByKey.Small]: 16,
     [BreakpointsByKey.Medium]: 18,
     [BreakpointsByKey.Large]: 18,
+    [BreakpointsByKey.XLarge]: 18,
     [BreakpointsByKey.Giant]: 20.25,
+    [BreakpointsByKey.SuperNova]: 22.75,
   };
 
   type ITypeScaleKeys = keyof typeof TypeScaleByKeys;

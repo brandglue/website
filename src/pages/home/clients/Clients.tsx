@@ -64,7 +64,7 @@ const Grid = styled.div`
   margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace03};
 
   ${minMediaQuery.Small(css`
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   `)}
 `;
 

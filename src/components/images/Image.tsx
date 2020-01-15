@@ -1,44 +1,47 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
-import {
-  LazyLoadImage,
-  LazyLoadImageProps,
-} from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/black-and-white.css';
 
-interface IProps extends LazyLoadImageProps {
+interface IProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   img: IImageGroup;
 }
 
-export const Image: FC<IProps> = ({ alt, className, img, scrollPosition }) => {
-  const [previousSrc, setPreviousSrc] = useState();
-
+export const Image: FC<IProps> = ({ alt, className, img, sizes }) => {
   const {
-    preSrc: placeholderSrc,
     src: { ...respImg },
   } = img;
 
+  let fallbackSizes = '';
+  if (!sizes) {
+    // find width of largest image in the srcset array
+    let maxImageWidth = 0;
+    const imgSizes = [];
+    respImg.images.forEach(img => {
+      maxImageWidth = Math.max(maxImageWidth, img.width);
+      imgSizes.push(`(max-width: ${img.width}px) ${img.width}px`);
+    });
+    imgSizes.push(` ${maxImageWidth}px`);
+    fallbackSizes = imgSizes.join(',');
+  }
+
   return (
-    <StyledLazyLoadImage
-      afterLoad={() => setPreviousSrc(img.src)}
+    <StyledImage
       alt={alt}
       className={className}
-      effect="black-and-white"
-      placeholderSrc={placeholderSrc}
-      scrollPosition={scrollPosition}
+      sizes={sizes || fallbackSizes}
       src={respImg.src}
       srcSet={respImg.srcSet}
-      visibleByDefault={img.src === previousSrc}
     />
   );
 };
 
 Image.defaultProps = {
   alt: '',
-  className: undefined,
+  className: '',
 };
 
-const StyledLazyLoadImage = styled(LazyLoadImage)`
+const StyledImage = styled.img`
+  width: auto;
+  height: auto;
   max-width: 100%;
 `;
 

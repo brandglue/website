@@ -81,6 +81,10 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace01};
   }
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
 `;
 
 const SpinnerWrapper = styled.div`

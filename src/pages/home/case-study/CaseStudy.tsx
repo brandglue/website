@@ -22,7 +22,9 @@ export const CaseStudy: FC = () => {
       </CurvedBadge>
       <PageDivider>
         <Container>
-          <Logo alt="intuit-accountants" img={intuit} />
+          <Logo>
+            <Image alt="intuit-accountants" img={intuit} />
+          </Logo>
           <Description>
             <Headline>Growing Twitter the Right Way:</Headline>
             <Text>
@@ -78,8 +80,7 @@ const Container = styled.div`
   `)};
 `;
 
-const Logo = styled(Image)`
-  flex: 0 1 200px;
+const Logo = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.Colors.White};
   padding-bottom: ${({ theme }) => theme.Spacings.DynamicSpace02};
   margin-bottom: ${({ theme }) => theme.Spacings.DynamicSpace02};
