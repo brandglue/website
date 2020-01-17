@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import Image from '@components/images/Image';
 import hero from '@images/homepage-hero.jpg';
 import styled, { css } from '@theme/styled';
-import { minMediaQuery } from '@theme/utils';
+import { hexToRgb, minMediaQuery } from '@theme/utils';
 
 const Hero: FC = () => {
   const primaryTagline = `We are a \nsocial media agency`;
@@ -13,12 +13,8 @@ const Hero: FC = () => {
     <Wrapper>
       <Image alt="homepage-hero" img={hero} />
       <Tagline>
-        <div>
-          <PrimaryTagline>{primaryTagline}</PrimaryTagline>
-        </div>
-        <div>
-          <SecondaryTagline>{secondaryTagline}</SecondaryTagline>
-        </div>
+        <PrimaryTagline>{primaryTagline}</PrimaryTagline>
+        <SecondaryTagline>{secondaryTagline}</SecondaryTagline>
       </Tagline>
     </Wrapper>
   );
@@ -29,6 +25,11 @@ const Wrapper = styled.div`
 `;
 
 const Tagline = styled.div`
+  background: rgba(${({ theme }) => hexToRgb(theme.Colors.DarkBlue)}, 0.8);
+  color: ${({ theme }) => theme.Colors.White};
+  display: inline;
+  padding: 7px;
+
   ${minMediaQuery.Small(css`
     position: absolute;
     top: 50%;
@@ -42,15 +43,6 @@ const Tagline = styled.div`
     bottom: ${({ theme }) => theme.Spacings.StaticSpace06};
     transform: initial;
   `)};
-`;
-
-// https://css-tricks.com/multi-line-padded-text/
-const multlinePaddedText = css`
-  background: ${({ theme }) => theme.Colors.DarkBlue};
-  color: ${({ theme }) => theme.Colors.White};
-  display: inline;
-  padding: 7px;
-  box-decoration-break: clone;
 
   ${minMediaQuery.Large(css`
     padding: 12px;
@@ -61,7 +53,6 @@ const PrimaryTagline = styled.h1`
   font-weight: 700;
   font-size: 20px;
   line-height: 1.7;
-  ${multlinePaddedText}
 
   ${minMediaQuery.Medium(css`
     font-size: 40px;
@@ -79,7 +70,6 @@ const SecondaryTagline = styled.h2`
   font-size: 16px;
   font-weight: 700;
   line-height: 1.7;
-  ${multlinePaddedText}
 
   ${minMediaQuery.Medium(css`
     font-size: 24px;
