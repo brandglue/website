@@ -1,14 +1,21 @@
 import Hex, { IHex } from '@models/Hex';
 
+const breakpoints = ['480px', '768px', '1024px', '1920px', '2560px'];
+const fontSizes = [13, 16, 20, 26, 33, 42, 53, 68, 86];
+const lineHeights = [22, 27, 33, 41, 51, 64, 84, 106, 133];
+const space = [0, 4, 7, 11, 17, 27, 44, 70, 113];
+const maxColWidth = 1250;
+const hzColPadding = 17;
+const maxPageWidth = 2560;
+// const space = [0, 2, 4, 8, 16, 32, 64, 128, 256, 512];
+
 export enum Breakpoints {
   Zero = 0,
   Tiny = 320,
   Small = 480,
   Medium = 768,
   Large = 1024,
-  XLarge = 1366,
   Giant = 1920,
-  SuperNova = 2560,
 }
 
 export enum BreakpointsByKey {
@@ -93,16 +100,32 @@ export type IFontFamilyKeys = keyof typeof FontFamilies;
 export type ISpacingsKeys = keyof typeof Spacings;
 
 export interface ITheme {
+  breakpoints: string[];
   Breakpoints: { [key in IBreakpointKeys]: number };
+  colors: { [key in IColorKeys]: IHex };
   Colors: { [key in IColorKeys]: IHex };
   FontFamilies: { [key in IFontFamilyKeys]: string };
+  fontSizes: number[];
+  hzColPadding: number;
+  lineHeights: number[];
+  maxColWidth: number;
+  maxPageWidth: number;
+  space: number[];
   Spacings: { [key in ISpacingsKeys]: string };
 }
 
 export const theme: ITheme = {
+  breakpoints,
   Breakpoints,
+  colors: Colors,
   Colors,
   FontFamilies,
+  fontSizes,
+  hzColPadding,
+  lineHeights,
+  maxColWidth,
+  maxPageWidth,
+  space,
   Spacings,
 };
 

@@ -1,132 +1,70 @@
-import React, { FC, useContext } from 'react';
+import React, { FC } from 'react';
 
-import NavLink from '@components/links/NavLink';
-import CurvedButton from '@components/buttons/CurvedButton';
-import OutlineButton from '@components/buttons/OutlineButton';
-import CurvedBadge from '@components/CurvedBadge';
+import Box from '@components/containers/Box';
+import Column from '@components/containers/Column';
+import { P } from '@components/text/Text';
+import { H5 } from '@components/text/Heading';
 import Image from '@components/images/Image';
 import { Routes } from '@constants/routes';
 import Caret from '@icons/Caret';
-import intuit from '@images/logo-intuit.jpg';
-import { AppState } from '@src/AppState';
+import intuit from '@images/logo-intuit-no-bg.png';
 import styled, { css } from '@theme/styled';
-import { fluidFontSize, minMediaQuery } from '@theme/utils';
+import { minMediaQuery } from '@theme/utils';
+import NavTextLink from '@components/links/NavTextLink';
 
 export const CaseStudy: FC = () => {
-  const appState = useContext(AppState);
-
   return (
-    <>
-      <CurvedBadge>
-        <Title>Featured Case Study</Title>
-      </CurvedBadge>
-      <PageDivider>
-        <Container>
-          <Logo>
-            <Image alt="intuit-accountants" img={intuit} />
-          </Logo>
-          <Description>
-            <Headline>Growing Twitter the Right Way:</Headline>
-            <Text>
-              {`See How We Helped Intuit Accountants \n Get The Right Audience at the Right Price`}
-            </Text>
-          </Description>
-        </Container>
-        {appState.isSmallFormFactor ? (
-          // TODO: Update this link to the proper case study link
-          <SmallFormFactorCta as={NavLink} to={`/${Routes.CaseStudies}`}>
-            See Case Study <StyledCaret />
-          </SmallFormFactorCta>
-        ) : (
-          <LargeFormFactorCta as={NavLink} to={`/${Routes.CaseStudies}`}>
-            See Case Study <StyledCaret />
-          </LargeFormFactorCta>
-        )}
-      </PageDivider>
-    </>
+    <Box bg="DarkBlue" py={5}>
+      <Container variant="flex">
+        <Logo variant="flexItem">
+          <Image alt="intuit-accountants" img={intuit} />
+        </Logo>
+        <Box flex="0 0 500px" variant="flexItem">
+          <H5 color="Gold" m="auto" textTransform="uppercase">
+            Growing Twitter the Right Way:
+          </H5>
+          <P color="White">
+            {`See How We Helped Intuit Accountants \n Get The Right Audience at the Right Price`}
+            {/* TODO: Update this link to the proper case study link */}
+            <NavTextLink color="Blue" pl={1} to={`/${Routes.CaseStudies}`}>
+              See Case Study <StyledCaret />
+            </NavTextLink>
+          </P>
+        </Box>
+      </Container>
+    </Box>
   );
 };
 
-const Title = styled.h3`
-  ${fluidFontSize.StepDown1()};
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 0 0 0 ${({ theme }) => theme.Spacings.Page};
-`;
-
-const PageDivider = styled.div`
-  ${({ theme }) => css`
-    background: ${theme.Colors.DarkBlue};
-    color: ${theme.Colors.White};
-    padding: ${theme.Spacings.StaticSpace05} ${theme.Spacings.StaticSpace03};
-
-    ${minMediaQuery.Medium(css`
-      position: relative;
-      padding: ${theme.Spacings.StaticSpace03} 0 ${theme.Spacings.StaticSpace15};
-    `)}
-  `};
-`;
-
-const Container = styled.div`
-  display: flex;
+const Container = styled(Column)`
   flex-flow: column;
-  justify-content: center;
-  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace05};
+  justify-content: flex-start;
+  margin-bottom: ${({ theme }) => theme.space[5]}px;
+  padding: ${({ theme }) => theme.space[5]}px;
 
   ${minMediaQuery.Medium(css`
     flex-flow: row;
-    align-items: center;
     margin-bottom: 0;
   `)};
 `;
 
-const Logo = styled.div`
+const Logo = styled(Box)`
+  flex: 0 0 200px;
   border-bottom: 1px solid ${({ theme }) => theme.Colors.White};
-  padding-bottom: ${({ theme }) => theme.Spacings.DynamicSpace02};
-  margin-bottom: ${({ theme }) => theme.Spacings.DynamicSpace02};
+  padding-bottom: ${({ theme }) => theme.space[5]}px;
+  margin-bottom: ${({ theme }) => theme.space[5]}px;
 
   ${minMediaQuery.Medium(css`
     border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 0;
     border-right: 1px solid ${({ theme }) => theme.Colors.White};
-    padding-right: ${({ theme }) => theme.Spacings.DynamicSpace02};
-    margin-right: ${({ theme }) => theme.Spacings.DynamicSpace02};
+    padding: 0 ${({ theme }) => theme.space[5]}px 0 0;
+    margin: 0 ${({ theme }) => theme.space[5]}px 0 0;
   `)}
-`;
-
-const Description = styled.div`
-  ${minMediaQuery.Medium(css`
-    display: flex;
-    flex-flow: column;
-  `)}
-`;
-
-const Headline = styled.h4`
-  ${fluidFontSize.StepUp1()};
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.Colors.Gold};
-`;
-
-const Text = styled.div`
-  ${minMediaQuery.Medium(css`
-    white-space: pre-wrap;
-  `)}
-`;
-
-const SmallFormFactorCta = styled(OutlineButton)`
-  color: ${({ theme }) => theme.Colors.Gold};
-`;
-
-const LargeFormFactorCta = styled(CurvedButton)`
-  position: absolute;
-  bottom: 0;
-  right: ${({ theme }) => theme.Spacings.DynamicSpace09};
-  color: ${({ theme }) => theme.Colors.Gold};
 `;
 
 const StyledCaret = styled(Caret)`
-  width: 20px;
+  /* TODO: Update this to use styled system so the width changes with font size */
+  width: 16px;
   transform: rotate(90deg);
 `;
 

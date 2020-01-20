@@ -58,3 +58,4 @@ declare module '*.webp' {
 */
 declare module 'react-ideal-image';
 declare module 'responsive-loader/sharp';
+declare module 'fluid-system';

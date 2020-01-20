@@ -5,39 +5,41 @@ import FacebookIcon from '@icons/Facebook';
 import LinkedInIcon from '@icons/LinkedIn';
 import TwitterIcon from '@icons/Twitter';
 import styled, { css } from '@theme/styled';
-import { fluidFontSize, minMediaQuery } from '@theme/utils';
+import { minMediaQuery } from '@theme/utils';
 
 export const Footer: FC = () => (
-  <Wrapper>
-    <Container>
-      <Contact>
-        <Title>Contact</Title>
-        <Info href="tel:360-207-4583">(360) 207-4583</Info>
-        <Info href="mailto:hello@brandglue.com">hello@brandglue.com</Info>
-        <Social>
-          <SocialIcon>
-            <a href="https://www.facebook.com/BrandGlue">
-              <FacebookIcon />
-            </a>
-          </SocialIcon>
-          <SocialIcon>
-            <a href="https://twitter.com/glue">
-              <TwitterIcon />
-            </a>
-          </SocialIcon>
-          <SocialIcon>
-            <a href="https://www.linkedin.com/company/brandglue-com">
-              <LinkedInIcon />
-            </a>
-          </SocialIcon>
-        </Social>
-      </Contact>
-      <StyledBrandGlueLogoIconOnly />
-    </Container>
+  <>
+    <Wrapper>
+      <Container>
+        <Contact>
+          <Title>Contact Us</Title>
+          <Info href="tel:+1-360-207-4583">+1 (360) 207-4583</Info>
+          <Info href="mailto:hello@brandglue.com">hello@brandglue.com</Info>
+          <Social>
+            <SocialIcon>
+              <a href="https://www.facebook.com/BrandGlue">
+                <FacebookIcon />
+              </a>
+            </SocialIcon>
+            <SocialIcon>
+              <a href="https://twitter.com/glue">
+                <TwitterIcon />
+              </a>
+            </SocialIcon>
+            <SocialIcon>
+              <a href="https://www.linkedin.com/company/brandglue-com">
+                <LinkedInIcon />
+              </a>
+            </SocialIcon>
+          </Social>
+        </Contact>
+        <StyledBrandGlueLogoIconOnly />
+      </Container>
+    </Wrapper>
     <Copyright>
       &copy; {new Date().getFullYear()} BrandGlue. All Rights Reserved.
     </Copyright>
-  </Wrapper>
+  </>
 );
 
 const Wrapper = styled.div`
@@ -100,14 +102,15 @@ const SocialIcon = styled.div`
 `;
 
 const StyledBrandGlueLogoIconOnly = styled(BrandGlueLogoIconOnly)`
-  width: 15vw;
+  width: 80px;
   margin-top: ${({ theme }) => theme.Spacings.StaticSpace03};
 `;
 
 const Copyright = styled.div`
+  background: ${({ theme }) => theme.Colors.Black};
   color: ${({ theme }) => theme.Colors.Gray01};
   text-align: center;
-  ${fluidFontSize.StepDown2()};
+  padding: ${({ theme }) => theme.space[5]}px;
 `;
 
 export default Footer;

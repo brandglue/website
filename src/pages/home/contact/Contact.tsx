@@ -1,15 +1,17 @@
 import React, { FC, useState } from 'react';
 
 import PrimaryButton from '@components/buttons/PrimaryButton';
+import Box from '@components/containers/Box';
+import Column from '@components/containers/Column';
 import Input from '@components/forms/Input';
-import SectionText from '@components/sections/SectionText';
-import SectionTitle from '@components/sections/SectionTitle';
-import SectionWrapper from '@components/sections/SectionWrapper';
 import TextArea from '@components/forms/TextArea';
 import NavTextLink from '@components/links/NavTextLink';
+import SectionTitle from '@components/sections/SectionTitle';
+import { H3 } from '@components/text/Heading';
+import { P } from '@components/text/Text';
 import { Routes } from '@constants/routes';
 import styled, { css } from '@theme/styled';
-import { fluidFontSize, hexToRgb, minMediaQuery } from '@theme/utils';
+import { hexToRgb, minMediaQuery } from '@theme/utils';
 import encodeFormData from '@utils/encodeFormData';
 
 export const Contact: FC = () => {
@@ -56,16 +58,14 @@ export const Contact: FC = () => {
   };
 
   return (
-    <SectionWrapper>
+    <Column py={7}>
       <SectionTitle>Ready to get to work? We are.</SectionTitle>
-      <SectionText>
-        <p>
-          Overwhelmed with the possilibities and options of social media? Not
-          sure where to focus your attention? We are here to help you figure
-          that out <strong>for free!</strong> Just fill out the form below and{' '}
-          {"we'll"} be in touch within 24hrs.
-        </p>
-      </SectionText>
+      <P pb={5}>
+        Overwhelmed with the possilibities and options of social media? Not sure
+        where to focus your attention? We are here to help you figure that out{' '}
+        <strong>for free!</strong> Just fill out the form below and {"we'll"} be
+        in touch within 24hrs.
+      </P>
       <ContactForm
         data-netlify="true"
         data-netlify-honeypot="bot-field"
@@ -75,7 +75,11 @@ export const Contact: FC = () => {
       >
         {!hasSubmitted ? (
           <>
-            <GroupWrapper>
+            <Box
+              alignItems="flex-start"
+              flexDirection={['column', null, 'row']}
+              variant="flex"
+            >
               <Group>
                 <input name="contact" type="hidden" value="contact" />
                 <Input
@@ -118,12 +122,12 @@ export const Contact: FC = () => {
                 />
                 <PrimaryButton type="submit">Request Assessment</PrimaryButton>
               </Group>
-            </GroupWrapper>
+            </Box>
             {formError && <Error>{formError}</Error>}
           </>
         ) : (
           <Success>
-            <SuccessTitle>Thank You!</SuccessTitle>
+            <H3>Thank You!</H3>
             <p>Your assessment is on {"it's"} way to us.</p>
             <p>{"We'll"} reach out soon to follow-up with you.</p>
             <p>
@@ -137,22 +141,13 @@ export const Contact: FC = () => {
           </Success>
         )}
       </ContactForm>
-    </SectionWrapper>
+    </Column>
   );
 };
 
 const ContactForm = styled.form`
   display: flex;
   flex-flow: column;
-`;
-
-const GroupWrapper = styled.div`
-  display: flex;
-  flex-flow: column;
-
-  ${minMediaQuery.Medium(css`
-    flex-flow: row;
-  `)}
 `;
 
 const Group = styled.div`
@@ -169,11 +164,6 @@ const Group = styled.div`
       margin-bottom: 0;
     }
   `)}
-`;
-
-const SuccessTitle = styled.h3`
-  text-transform: uppercase;
-  ${fluidFontSize.StepUp1()};
 `;
 
 const Success = styled.div`

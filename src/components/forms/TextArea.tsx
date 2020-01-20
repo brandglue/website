@@ -14,7 +14,7 @@ TextArea.defaultProps = {
 
 const StyledTextArea = styled.textarea`
   height: 100%;
-  min-height: 100px;
+  min-height: 200px;
   margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace01};
   padding: ${({ theme }) => theme.Spacings.FontSpace04};
   color: ${({ theme }) => theme.Colors.Black};

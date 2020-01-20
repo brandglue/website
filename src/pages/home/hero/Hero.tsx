@@ -1,85 +1,45 @@
 import React, { FC } from 'react';
 
+import Box from '@components/containers/Box';
+import Column from '@components/containers/Column';
+import { H1, H3 } from '@components/text/Heading';
 import Image from '@components/images/Image';
 import hero from '@images/homepage-hero.jpg';
 import styled, { css } from '@theme/styled';
-import { hexToRgb, minMediaQuery } from '@theme/utils';
+import { minMediaQuery } from '@theme/utils';
 
 const Hero: FC = () => {
-  const primaryTagline = `We are a \nsocial media agency`;
-  const secondaryTagline = `reaching your audience in the places \nthey hang out most`;
-
   return (
-    <Wrapper>
-      <Image alt="homepage-hero" img={hero} />
-      <Tagline>
-        <PrimaryTagline>{primaryTagline}</PrimaryTagline>
-        <SecondaryTagline>{secondaryTagline}</SecondaryTagline>
+    <Box position="relative">
+      <HeroImage alt="homepage-hero" img={hero} />
+      <Tagline justifyContent="center" variant="flex">
+        <Box variant="flexItem">
+          <H1 lineHeight={['41px', '51px', '64px']} m="auto">
+            We are a social media agency
+          </H1>
+          <H3>Reaching your audience in the places they hang out most</H3>
+        </Box>
       </Tagline>
-    </Wrapper>
+    </Box>
   );
 };
 
-const Wrapper = styled.div`
-  position: relative;
+const HeroImage = styled(Image)`
+  filter: brightness(0.8);
 `;
 
-const Tagline = styled.div`
-  background: rgba(${({ theme }) => hexToRgb(theme.Colors.DarkBlue)}, 0.8);
+const Tagline = styled(Column)`
   color: ${({ theme }) => theme.Colors.White};
-  display: inline;
-  padding: 7px;
 
-  ${minMediaQuery.Small(css`
+  ${minMediaQuery.Medium(css`
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 0 ${({ theme }) => theme.Spacings.StaticSpace01};
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-flow: column;
+    text-align: center;
   `)};
-
-  ${minMediaQuery.Medium(css`
-    top: initial;
-    left: ${({ theme }) => theme.Spacings.Page};
-    bottom: ${({ theme }) => theme.Spacings.StaticSpace06};
-    transform: initial;
-  `)};
-
-  ${minMediaQuery.Large(css`
-    padding: 12px;
-  `)}
-`;
-
-const PrimaryTagline = styled.h1`
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.7;
-
-  ${minMediaQuery.Medium(css`
-    font-size: 40px;
-    line-height: 1.5;
-    white-space: pre-wrap;
-  `)}
-
-  ${minMediaQuery.Large(css`
-    font-size: 60px;
-    line-height: 1.4;
-  `)}
-`;
-
-const SecondaryTagline = styled.h2`
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.7;
-
-  ${minMediaQuery.Medium(css`
-    font-size: 24px;
-    line-height: 1.5;
-    white-space: pre-wrap;
-  `)}
-
-  ${minMediaQuery.Large(css`
-    font-size: 32px;
-  `)}
 `;
 
 export default Hero;

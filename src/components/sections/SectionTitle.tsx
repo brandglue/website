@@ -1,12 +1,10 @@
+import { H2 } from '@components/text/Heading';
 import styled from '@theme/styled';
-import { fluidFontSize } from '@theme/utils';
 
-export const SectionTitle = styled.h2`
+export const SectionTitle = styled(H2)`
   color: ${({ theme }) => theme.Colors.DarkBlue};
   text-transform: uppercase;
-  line-height: 1.3;
   white-space: pre-wrap;
-  ${fluidFontSize.StepUp4()};
 `;
 
 export default SectionTitle;

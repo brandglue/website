@@ -1,42 +1,18 @@
 import React, { FC } from 'react';
 
-import styled, { css } from '@theme/styled';
-import { fluidFontSize, minMediaQuery } from '@theme/utils';
+import Box from '@components/containers/Box';
+import Column from '@components/containers/Column';
+import { H5 } from '@components/text/Heading';
 
 export const HireDivider: FC = () => (
-  <>
-    <HorizontalDivider />
-    <PageDivider>
-      <div>Social experts. Loyal partners. Data-driven results.</div>
-      <div>{"That's what you get when you hire BrandGlue."}</div>
-    </PageDivider>
-  </>
+  <Box bg="DarkBlue" color="White" p={5}>
+    <Column>
+      <H5 color="Gold" m="initial">
+        Social experts. Loyal partners. Data-driven results.
+      </H5>
+      <H5>{"That's what you get when you hire BrandGlue."}</H5>
+    </Column>
+  </Box>
 );
-
-const HorizontalDivider = styled.div`
-  background: ${({ theme }) => theme.Colors.Gold};
-  height: ${({ theme }) => theme.Spacings.StaticSpace00};
-`;
-
-const PageDivider = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    background: ${theme.Colors.DarkBlue};
-    color: ${theme.Colors.White};
-    text-transform: uppercase;
-    padding: ${theme.Spacings.FontSpace04};
-    ${fluidFontSize.StepUp1()};
-
-    div:first-child {
-      color: ${theme.Colors.Gold};
-    }
-
-    ${minMediaQuery.Medium(css`
-      align-items: center;
-    `)}
-  `};
-`;
 
 export default HireDivider;

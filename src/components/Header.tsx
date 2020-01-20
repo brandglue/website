@@ -91,8 +91,9 @@ const SmallFormFactorLink = styled(NavLink)`
 const LargeFormFactorWrapper = styled.header`
   display: flex;
   justify-content: space-between;
-  padding: 0 ${({ theme }) => theme.Spacings.Page};
+  padding: 0 ${({ theme }) => theme.space[3]}px;
   margin: ${({ theme }) => theme.Spacings.StaticSpace04} 0;
+  max-width: ${({ theme }) => theme.maxPageWidth}px;
 `;
 
 const LargeFormFactorMenu = styled.nav`

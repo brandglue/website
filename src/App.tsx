@@ -2,9 +2,8 @@ import { Root, Routes } from 'react-static';
 import React, { FC, Suspense, useLayoutEffect, useState } from 'react';
 import { Router } from '@reach/router';
 
-/* ref: https://github.com/DefinitelyTyped/DefinitelyTyped/issues/31245 */
-/* eslint-disable-next-line  */
-import * as types from 'styled-components/cssprop';
+// /* ref: https://github.com/DefinitelyTyped/DefinitelyTyped/issues/31245 */
+/// <reference types="styled-components/cssprop" />
 
 import Spinner from '@components/Spinner';
 import Header from '@components/Header';
