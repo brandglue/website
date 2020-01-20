@@ -6,7 +6,6 @@ import { P } from '@components/text/Text';
 import { H5 } from '@components/text/Heading';
 import Image from '@components/images/Image';
 import { Routes } from '@constants/routes';
-import Caret from '@icons/Caret';
 import intuit from '@images/logo-intuit-no-bg.png';
 import styled, { css } from '@theme/styled';
 import { minMediaQuery } from '@theme/utils';
@@ -27,7 +26,7 @@ export const CaseStudy: FC = () => {
             {`See How We Helped Intuit Accountants \n Get The Right Audience at the Right Price`}
             {/* TODO: Update this link to the proper case study link */}
             <NavTextLink color="Blue" pl={1} to={`/${Routes.CaseStudies}`}>
-              See Case Study <StyledCaret />
+              See Case Study &gt;
             </NavTextLink>
           </P>
         </Box>
@@ -60,12 +59,6 @@ const Logo = styled(Box)`
     padding: 0 ${({ theme }) => theme.space[5]}px 0 0;
     margin: 0 ${({ theme }) => theme.space[5]}px 0 0;
   `)}
-`;
-
-const StyledCaret = styled(Caret)`
-  /* TODO: Update this to use styled system so the width changes with font size */
-  width: 16px;
-  transform: rotate(90deg);
 `;
 
 export default CaseStudy;

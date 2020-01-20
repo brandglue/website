@@ -22,4 +22,9 @@ export const NavTextLink = styled(Link)<StyledSystemProps>`
   ${fluid(typography)}
 `;
 
+NavTextLink.defaultProps = {
+  fontSize: [1, null, null, null, 2, 3],
+  lineHeight: [1, null, null, null, 2, 3],
+};
+
 export default NavTextLink;
