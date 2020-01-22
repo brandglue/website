@@ -22,7 +22,7 @@ export const Services: FC = () => {
   return (
     <Box borderBottom="50px solid" borderColor="Blue">
       <Column py={7}>
-        <SectionTitle>What we offer you</SectionTitle>
+        <SectionTitle>What we do for you</SectionTitle>
         <P mb={6}>
           <strong>The world of Social Media is getting bigger daily.</strong>{' '}
           And with this, so are all the ways you can connect with your audience,
@@ -189,9 +189,10 @@ const Grid = styled.div`
 
 const GridItem = styled.div`
   display: flex;
-  padding: ${({ theme }) => theme.space[6]}px;
+  padding: ${({ theme }) => theme.space[5]}px;
 
   ${minMediaQuery.Medium(css`
+    min-height: 200px;
     border: 1px solid transparent;
     border-top: 1px solid ${({ theme }) => theme.Colors.Gray00};
     border-left: 1px solid ${({ theme }) => theme.Colors.Gray00};
@@ -237,7 +238,7 @@ const GridItem = styled.div`
 `;
 
 const GridIcon = styled.div`
-  width: 100px;
+  width: 200px;
   margin-right: ${({ theme }) => theme.space[4]}px;
 `;
 
