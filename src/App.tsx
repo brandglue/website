@@ -5,9 +5,9 @@ import { Router } from '@reach/router';
 // /* ref: https://github.com/DefinitelyTyped/DefinitelyTyped/issues/31245 */
 /// <reference types="styled-components/cssprop" />
 
-import Spinner from '@components/Spinner';
-import Header from '@components/Header';
-import Footer from '@components/Footer';
+import Spinner from '@components/spinners/Spinner';
+import Header from '@src/partials/Header';
+import Footer from '@src/partials/Footer';
 import { IAppState } from '@models/AppState';
 import { AppState } from '@src/AppState';
 import { theme } from '@theme/theme';
