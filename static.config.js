@@ -28,7 +28,7 @@ export default {
     },
     {
       path: '/blog',
-      template: 'src/pages/Blog',
+      template: 'src/pages/blog/Blog',
     },
     {
       path: '/case-studies',

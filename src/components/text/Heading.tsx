@@ -25,7 +25,7 @@ const H1 = styled.h1<StyledSystemProps>`
 
 H1.defaultProps = {
   fontSize: [4, null, 5, 6, 7, 8],
-  lineHeight: [4, null, 5, 6, 7, 8],
+  lineHeight: [4, null, 4, 5, 6, 7],
 };
 
 const H2 = styled.h2<StyledSystemProps>`
@@ -37,7 +37,7 @@ const H2 = styled.h2<StyledSystemProps>`
 
 H2.defaultProps = {
   fontSize: [3, null, 4, 5, 6, 7],
-  lineHeight: [3, null, 4, 5, 6, 7],
+  lineHeight: [3, null, 3, 4, 5, 6],
 };
 
 const H3 = styled.h3<StyledSystemProps>`
