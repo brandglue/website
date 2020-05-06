@@ -1,11 +1,10 @@
+// only used for typechecking
+// actual transpilation is handled by Babel
+
 {
   "compileOnSave": false,
   "compilerOptions": {
     "strict": true,
-
-    // incremental caching
-    "incremental": true,
-    "tsBuildInfoFile": "./buildcache/tsBuildInfo",
 
     // transpilation options
     "esModuleInterop": true,
@@ -31,12 +30,14 @@
       "@hooks/*": ["src/hooks/*"],
       "@icons/*": ["src/icons/*"],
       "@images/*": ["src/images/*"],
+      "@layout/*": ["src/layout/*"],
       "@models/*": ["src/models/*"],
       "@pages/*": ["src/pages/*"],
+      "@partials/*": ["src/partials/*"],
       "@src/*": ["src/*"],
       "@theme/*": ["src/theme/*"],
       "@utils/*": ["src/utils/*"]
     }
   },
-  "include": ["src/**/*", "global.d.ts"]
+  "include": ["src/**/*", "src/global.d.ts"]
 }

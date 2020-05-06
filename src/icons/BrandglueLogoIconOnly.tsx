@@ -6,7 +6,7 @@ interface IOwnProps extends React.SVGAttributes<SVGSVGElement> {
   className?: string;
 }
 
-export const BrandGlueLogoIconOnly: FC<IOwnProps> = props => (
+export const BrandGlueLogoIconOnly: FC<IOwnProps> = (props) => (
   <Svg
     aria-labelledby="BrandGlueLogoIconOnlyTitle"
     className={props.className}

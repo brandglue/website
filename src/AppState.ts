@@ -3,9 +3,9 @@ import React from 'react';
 import { IAppState } from '@models/AppState';
 
 const initialState: IAppState = {
-  isLargeFormFactor: false,
-  isMediumFormFactor: false,
-  isSmallFormFactor: false,
+  isLargeDevice: false,
+  isMediumDevice: false,
+  isSmallDevice: false,
 };
 
 export const AppState = React.createContext(initialState);

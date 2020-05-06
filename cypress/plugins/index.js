@@ -39,6 +39,6 @@ const options = {
   webpackOptions,
 };
 
-module.exports = on => {
+module.exports = (on) => {
   on('file:preprocessor', webpack(options));
 };

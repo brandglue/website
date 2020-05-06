@@ -15,7 +15,7 @@ export const Image: FC<IProps> = ({ alt, className, img, sizes }) => {
     // find width of largest image in the srcset array
     let maxImageWidth = 0;
     const imgSizes = [];
-    respImg.images.forEach(img => {
+    respImg.images.forEach((img) => {
       maxImageWidth = Math.max(maxImageWidth, img.width);
       imgSizes.push(`(max-width: ${img.width}px) ${img.width}px`);
     });

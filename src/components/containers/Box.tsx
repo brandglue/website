@@ -31,13 +31,14 @@ type StyledSystemProps = BorderProps &
   SpaceProps &
   TypographyProps & { variant?: string } & ICustomTextProps;
 
-const Box = styled.div<StyledSystemProps>`
+export const Box = styled.div<StyledSystemProps>`
   ${variant({
     variants: {
       flex: {
         display: 'flex',
       },
       flexItem: {
+        flex: 'auto',
         minWidth: '0',
       },
       grid: {
@@ -56,5 +57,3 @@ const Box = styled.div<StyledSystemProps>`
   ${fluid(typography)}
   ${customTextProps}
 `;
-
-export default Box;

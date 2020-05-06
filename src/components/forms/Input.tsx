@@ -19,7 +19,7 @@ interface IOwnProps extends React.InputHTMLAttributes<HTMLInputElement> {
     | 'url';
 }
 
-export const Input: FC<IOwnProps> = props => <StyledInput {...props} />;
+export const Input: FC<IOwnProps> = (props) => <StyledInput {...props} />;
 
 Input.defaultProps = {
   className: '',

@@ -145,7 +145,7 @@ export enum TypeScaleByKeys {
   StepDown4 = 'StepDown4',
 }
 
-export const fluidFontMatrix = (function() {
+export const fluidFontMatrix = (function () {
   // Uses the Golden Ratio
   const typeRatio = 1.618;
 
@@ -194,12 +194,12 @@ export const fluidFontMatrix = (function() {
     const breakpointKeys = Object.keys(BreakpointsByKey) as IBreakpointKeys[];
     const typeScaleKeys = Object.keys(TypeScaleByKeys) as ITypeScaleKeys[];
 
-    breakpointKeys.forEach(breakpoint => {
+    breakpointKeys.forEach((breakpoint) => {
       matrix[breakpoint] = {} as IFontSizes;
 
       const baselineFontSize = baselineFontSizeByBreakpoint[breakpoint];
 
-      typeScaleKeys.forEach(typeScale => {
+      typeScaleKeys.forEach((typeScale) => {
         if (typeScale === TypeScaleByKeys.Baseline) {
           matrix[breakpoint][typeScale] = baselineFontSize;
         } else {

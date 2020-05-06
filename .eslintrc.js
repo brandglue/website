@@ -3,7 +3,7 @@
     root: true,
     parserOptions: {
       // Allows for the parsing of modern ECMAScript features
-      ecmaVersion: 2019,
+      ecmaVersion: 2020,
       // Allows for the use of imports
       sourceType: 'module',
       ecmaFeatures: {
@@ -70,9 +70,13 @@
         ],
         rules: {
           '@typescript-eslint/explicit-function-return-type': 'off',
-          '@typescript-eslint/interface-name-prefix': [
-            1,
-            { prefixWithI: 'always' },
+          '@typescript-eslint/naming-convention': [
+            'error',
+            {
+              selector: 'interface',
+              format: ['StrictPascalCase'],
+              prefix: ['I'],
+            },
           ],
           '@typescript-eslint/no-non-null-assertion': 'off',
           '@typescript-eslint/no-use-before-define': [
@@ -84,6 +88,7 @@
               typedefs: true,
             },
           ],
+          '@typescript-eslint/explicit-module-boundary-types': 'off',
         },
       },
     ],

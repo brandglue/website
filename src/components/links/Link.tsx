@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
-import { Link, LinkProps, LinkGetProps } from '@reach/router';
+import { LinkGetProps } from '@reach/router';
+import { Link, GatsbyLinkProps } from 'gatsby';
 import cx from 'classnames';
 
-export const WrappedLink: FC<LinkProps<{}>> = props => {
+export const WrappedLink: FC<GatsbyLinkProps<unknown>> = (props) => {
   const isActive = ({ isCurrent, isPartiallyCurrent }: LinkGetProps) => {
     /*
       IMPORTANT:

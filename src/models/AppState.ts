@@ -1,5 +1,5 @@
 export interface IAppState {
-  isLargeFormFactor: boolean;
-  isMediumFormFactor: boolean;
-  isSmallFormFactor: boolean;
+  isLargeDevice: boolean;
+  isMediumDevice: boolean;
+  isSmallDevice: boolean;
 }

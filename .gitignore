@@ -1,8 +1,7 @@
 # production
-/dist
-/artifacts/
-/tmp/
-/buildcache/
+.cache
+/public
 .eslintcache
 cypress/videos
 cypress/screenshots
+coverage

@@ -6,7 +6,7 @@ interface IOwnProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   to?: string; // allow Button styling to be used for links via SC's "as" prop
 }
 
-export const Button: FC<IOwnProps> = props => (
+export const Button: FC<IOwnProps> = (props) => (
   <StyledButton
     className={props.className}
     disabled={props.disabled}

@@ -15,7 +15,7 @@ import {
   Creates object with min-width media query functions for each breakpoint
   @returns IMediaQueries object
 */
-export const minMediaQuery = (function() {
+export const minMediaQuery = (function () {
   type IOrientation = 'landscape' | 'portrait';
   type ICss = (
     styles:
@@ -63,7 +63,7 @@ export const minMediaQuery = (function() {
   Takes at least two points and uses linear-interpolation to estimate the full line
   Inspiration: https://www.smashingmagazine.com/2017/05/fluid-responsive-typography-css-poly-fluid-sizing/
 */
-export const fluidFontSize = (function() {
+export const fluidFontSize = (function () {
   type IFluidFontSizes = Record<
     TypeScaleByKeys,
     () => sc.FlattenSimpleInterpolation

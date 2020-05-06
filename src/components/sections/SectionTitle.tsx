@@ -6,5 +6,3 @@ export const SectionTitle = styled(H2)`
   text-transform: uppercase;
   white-space: pre-wrap;
 `;
-
-export default SectionTitle;

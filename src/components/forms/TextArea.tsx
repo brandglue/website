@@ -3,9 +3,9 @@ import React, { FC } from 'react';
 import styled from '@theme/styled';
 import { fluidFontSize } from '@theme/utils';
 
-export const TextArea: FC<React.TextareaHTMLAttributes<
-  HTMLTextAreaElement
->> = props => <StyledTextArea {...props} />;
+export const TextArea: FC<React.TextareaHTMLAttributes<HTMLTextAreaElement>> = (
+  props,
+) => <StyledTextArea {...props} />;
 
 TextArea.defaultProps = {
   className: '',
