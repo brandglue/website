@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: brandglue/website
-  site_domain: https://brandglue.netlify.app/
+  site_domain: https://brandglue.netlify.app
 
 media_folder: static/assets
 public_folder: /assets
