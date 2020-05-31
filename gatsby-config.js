@@ -1,8 +1,5 @@
 const path = require('path');
 
-// TODO: change to https://brandglue.com/ when ready for live deploy
-// siteRoot: 'https://brave-kilby-8a8ba4.netlify.com/',
-
 module.exports = {
   plugins: [
     'gatsby-plugin-typescript',
