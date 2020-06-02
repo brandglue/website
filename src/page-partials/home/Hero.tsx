@@ -29,7 +29,7 @@ const Hero: FC = () => {
     <Container>
       <HeroImage alt="homepage-hero" fluid={hero.file.childImageSharp.fluid} />
       <Tagline justifyContent="center" variant="flex">
-        <Box variant="flexItem" flexGrow={0}>
+        <Box flexGrow={0} variant="flexItem">
           <H1 lineHeight={['41px', '51px', '64px']} m="auto">
             We are a social media agency
           </H1>

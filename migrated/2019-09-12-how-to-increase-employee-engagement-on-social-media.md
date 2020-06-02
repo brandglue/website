@@ -1,0 +1,50 @@
+---
+title: How to Increase Employee Engagement on Social Media
+author: Michelle Heathers
+type: post
+date: 2019-09-12T13:00:46+00:00
+url: /blog/tips/how-to-increase-employee-engagement-on-social-media
+featured_image: /wp-content/uploads/2019/09/091119_HowToIncreaseEmployeeEngagementOnSocialMedia_BG.jpg
+classic-editor-remember:
+  - block-editor
+post_layout:
+  - default
+categories:
+  - Tips
+tags:
+  - employee engagement
+  - employees
+  - LinkedIn
+  - professional growth
+
+---
+Employees are a company’s best asset. Their dedication and loyalty is what makes your business successful, and collectively they have the power to ensure your company’s social media presence [continues to flourish][1].
+
+Long gone are the days of discouraging social media activity while at work. Yes, there should be clear social media policies in place, but these should be encouraging rather than restrictive. Trust your employees. Empower them to speak openly and freely about their work, their ideas, and their passion for the industry on social media. Their personal and professional networks are valuable, and continual interaction with industry-related content on social media can open up doors for both your company and the employee.
+
+BrandGlue has helped clients launch and manage employee engagement initiatives through dedicated platforms, and while these are certainly effective, they often come with hefty price tags. Especially for companies just starting to build and grow their social media efforts, that may not be in the cards. So what if you want to figure out how to increase employee engagement on social media without a costly platform? Here are a few tips!
+
+**Make It Personal**
+
+Social media is the place to celebrate accomplishments! [Ensure nothing goes overlooked][2]. Has anyone received an industry recognition or award? Been featured in a media outlet? Or even achieved a monumental personal goal such as organizing a charity fundraiser or completing a triathlon? Tout your employee’s accomplishments, call them out by name, and post photos. Employees love seeing their co-workers featured and employees appreciate the recognition; it’s a simple way to build relationships among employees and foster a positive company culture while also giving your company’s social presence a boost.
+
+You could even build in an award or incentive tied to employee engagement. Did 20 employees post with your company hashtag this week? Randomly choose one of them to receive a prize—I bet you’ll get 30 posts next week!
+
+**Empower Them to Share**
+
+While some employees may be very active on social media, others may shy away. Most companies don’t have mandatory social media interaction as part of their policies, but they do make it easier for employees who may not quite know where to start.&nbsp;
+
+Investing in professional headshots and providing pre-sized cover photos for Twitter and LinkedIn with your company branding is a simple way to help your employees feel more confident in their professional social presence, and also increase your company’s visibility. Host weekly or monthly Lunch ‘N Learn events and showcase the different aspects of finding, posting and engaging with industry content.
+
+But let’s be honest; you certainly don’t want employees spending too much time on social media at work. Perhaps a simple weekly newsletter that highlights top posts or thought leadership articles for easy sharing and engaging will make it a quick and easy venture. Since social media provides each of us with a platform from which to speak, employees can utilize the content in the weekly emails to build out their own &#8220;brand&#8221; and thought leadership. Any of the posts that are included in the weekly recap can be taken and each employee&#8217;s own point-of-view and expertise can be added. The weekly recap email makes this very easy to do &#8212; the content is already provided!&nbsp;
+
+**Invest in their Future**
+
+In today&#8217;s modern workforce, being connected on social media (in particular, LinkedIn and Twitter) is a huge asset. Employees who are engaged and active are more known in their company, gain increased visibility, and often get more opportunities to be promoted.
+
+Investing time in a professional social media presence is also a way for employees to grow their careers, even if that means beyond your organization. If a company truly cares about its employees, they will encourage any growth is an investment in both parties’ best interests. Nowadays, employers assess a person&#8217;s LinkedIn profile sometimes more than their actual resume. If they see someone who is active on social at their current company, it can help that person have an edge in the application process.&nbsp;
+
+The bottom line is that it often doesn’t take a genius idea or an elaborate campaign to start growing a company’s social presence; many times, it can start with tapping into the best resource that you already have—your employees.
+
+ [1]: http://localhost/brandglue/old-website/blog/tips/3-steps-to-effectively-measure-your-social-media-marketing-strategy
+ [2]: http://localhost/brandglue/old-website/blog/tips/why-you-should-stop-thinking-of-social-media-as-marketing

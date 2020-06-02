@@ -1,0 +1,50 @@
+---
+title: 'BrandGlue Employee Spotlight: Hannah Lushin'
+author: Michelle Heathers
+type: post
+date: 2019-12-18T14:00:00+00:00
+url: /blog/news/brandglue-employee-spotlight-hannah-lushin
+featured_image: /wp-content/uploads/2019/10/10219_HannahLushin-EmployeeSpotlight_BG.jpg
+classic-editor-remember:
+  - block-editor
+post_layout:
+  - default
+categories:
+  - News
+tags:
+  - BrandGlue
+  - social media campaigns
+  - social media marketing
+
+---
+I’ve really enjoyed highlighting our amazing employees in their own blog over the past couple of weeks. Not only do I get to learn more about them, but it’s a great opportunity for our clients to as well!&nbsp;
+
+This week’s employee spotlight blog features BrandGlue Account Director, [Hannah Lushin][1]. Hannah has truly been an amazing asset to our team over the past two years, and has led some of our most successful client campaigns to date. She has more than 10 years of social media experience and leverages her industry knowledge paired with current social media trends to execute unique and creative content marketing and paid social media campaigns. 
+
+1.**How did you get started working in social media?**
+
+I was in college when a few social media “milestones” happened: Twitter became relevant, and companies started leveraging Facebook to promote their businesses. I joined Twitter not long after it launched at the urging of my boyfriend (now husband), who recommended I use it as a way to get connected with others in the PR/marketing industry. A Twitter DM is actually the way I landed my first job out of college &#8211; thanks, Hubs!
+
+When Facebook Pages started growing, I saw an opportunity for my two family businesses (and for myself as a marketer). I created and started managing those few accounts while in college, in exchange for the ability to include experience as a “social media manager” on my resume.&nbsp;
+
+2. **What&#8217;s one thing you love about BrandGlue?**
+
+Being a fully remote company could spell disaster, but BrandGlue does it right. Our teams may be spread out across the country, but we’re constantly communicating via video, audio, chat, email … you name it! Here, WFH doesn’t mean we’re stranded or hung out to dry. We support our teammates and hold each other accountable every single day.
+
+3. **Have any WFH (work from home) tips, since we are a fully remote team?**
+
+While a strong, supportive team is important, working from home is also very reliant on your own personality. If you’re the type to roll out of bed and stumble into the office at 8:59am, great! But that’s not me. My morning routine is what sets me up for success each day, allowing for structure without diminishing creativity.
+
+4. **What do you do on a typical weekend?**
+
+I have an almost-two-year-old, so lots of chasing her around! My husband works nights, so I try to get the kiddo and I out of the house in the mornings to let him sleep. We like coffee (me) and croissants (her) from Starbucks, then will usually run errands or buy things from Target we don’t need. When the hubs is available, we try to plan dinners with friends (or in reality, catch up on Netflix).
+
+5. **What&#8217;s a current hobby, book you’re reading, or podcast you&#8217;re listening to that you&#8217;d recommend?**
+
+I just finished Margaret Atwood’s _The Testaments_, which I LOVED and highly recommend. I don’t listen to a ton of podcasts anymore since I no longer have a daily commute to work, but I like catching up on NPR’s _Wait, Wait … Don’t Tell Me_ when I’m in the car.
+
+_Did you miss our last employee spotlight blogs? Learn more about Senior Social Media Strategist, [Rai Masuda][2], and Creative Director, [Joey Ponce][3]!_
+
+ [1]: https://www.linkedin.com/in/hannahlushin/
+ [2]: http://localhost/brandglue/old-website/blog/news/brandglue-employee-spotlight-rai-masuda
+ [3]: http://localhost/brandglue/old-website/blog/news/brandglue-employee-spotlight-joey-ponce

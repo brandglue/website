@@ -6,10 +6,12 @@ import { Box } from '@components/containers/Box';
 import { Column } from '@components/containers/Column';
 import { SectionTitle } from '@components/sections/SectionTitle';
 import { P } from '@components/text/Text';
+import { H3 } from '@components/text/Heading';
+import { Excerpts } from '@page-partials/blog/Excerpts';
 
 export const Blog: FC = () => {
-  const images = useStaticQuery(graphql`
-    query {
+  const images = useStaticQuery<GatsbyTypes.ImageQuery>(graphql`
+    query Image {
       hero: file(
         sourceInstanceName: { eq: "images" }
         relativePath: { eq: "blog-hero.jpg" }
@@ -25,7 +27,7 @@ export const Blog: FC = () => {
 
   return (
     <>
-      <Image alt="blog-hero" fluid={images.hero.childImageSharp.fluid} />
+      <Image alt="blog-hero" fluid={images?.hero?.childImageSharp?.fluid} />
       <Box>
         <Column py={6}>
           <SectionTitle>
@@ -34,6 +36,8 @@ export const Blog: FC = () => {
           <P>Here&apos;s what we&apos;ve got to say about it.</P>
         </Column>
       </Box>
+      <H3>Latest Posts</H3>
+      <Excerpts />
     </>
   );
 };

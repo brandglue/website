@@ -1,0 +1,69 @@
+---
+title: 5 Ways to Generate More Traffic to Your Website From Social Media
+author: Zach Welch
+type: post
+date: 2019-06-05T13:00:23+00:00
+url: /blog/tips/5-ways-to-generate-more-traffic-to-your-website-from-social-media
+featured_image: /wp-content/uploads/2019/07/090319_5WaysToGenerateMoreTrafficToYourWebsiteFromSocialMedia_BG.jpg
+classic-editor-remember:
+  - block-editor
+post_layout:
+  - default
+categories:
+  - Tips
+tags:
+  - social media referrals
+  - social media seo
+  - social media strategy
+  - website traffic
+
+---
+Ask any business executive what they’d like most in the world, and they’ll probably say “more customers.” For online businesses, realizing this dream typically happens through generating more website traffic. There are various marketing strategies that can be implemented to help increase website traffic, and social media should be near the top of the list. Below are 5 ways that social media can help brands and businesses increase website traffic. 
+
+### **Ensure Your Social Outlets are Complete**
+
+What’s the first thing people see when they visit your social media pages? Your brand’s social profile!
+
+It’s vital to ensure your social outlets look professional with quality graphics, good copywriting, and consistent branding. Your content should inform, intrigue and inspire both existing customers and potential new customers. And as your visitors scroll deeper into your social channel, they should also have a clear and frictionless way to learn more by visiting your website.
+
+All of your social channels should include a link to your website prominently displayed in the header. Facebook and Instagram feature [call-to-action buttons][1] that business pages can also take advantage of to make their website even more prominent. 
+
+But how do people find your social media channels? If they aren’t referred there by your company website, chances are they Googled you. Depending on their search query, your social outlets will show up directly under your website and some of them even display a preview of your content. Having a quality social media presence will make a good first impression.
+
+### **Have a Robust Content Calendar** 
+
+Posting [consistent, quality content][2] is key to a good social media presence. If this seems daunting, keep in mind that content can often be repurposed multiple times before it’s “retired.”
+
+Your blog is a perfect source of content for social media posts and should be used as much as possible. One quality blog can be repurposed several times across a few weeks (or even longer if it’s evergreen content!). Since [organic reach continues to dwindle][3], the chance that the same person will see that same post is fairly small. The key is to change up the graphic and copy so it looks fresh on your page. And of course, always include a link to your website in the post.
+
+However, it’s important to remember not to get lazy. Every piece of content must serve a purpose. I’m a big believer in quality over quantity &#8212; especially when it comes to social media. If your content starts to appear forced, isn’t relevant, and isn’t optimized, your audience won’t click. 
+
+And keep in mind that your posts impact more than just your social outlets. Many Facebook, Twitter and LinkedIn posts are indexed by Google, making them serve as backlinks to your website and boosting your SEO.
+
+### **Make Content Shareable and Engaging**
+
+What’s better than knowing people are reading your blog content? Seeing that they’ve shared it with their friends and coworkers! Shares are a high-value engagement&#8211;they’re an authentic personal endorsement for your brand and content to all of that person’s closest social media followers. 
+
+Think about what would encourage you to share a piece of content, and strive to achieve that inspiration of action for your readers. The more your followers share your content, the more people will have the opportunity to see it and click the link back to your website. Contests and sweepstakes can be a good tactic to encourage shares and clicks to your website, but be wary of doing too many as the [Facebook algorithm cracks down][4] on “engagement-bait” and overly promotional content. 
+
+### **Be Visual**
+
+Just think about how many posts you can scroll through on your mobile phone in just a few minutes &#8212; hundreds! Nowadays, content must be “thumb-stopping.” 
+
+Did you know that visual content is more likely to trigger an engagement than other types of content? And you don’t have to be a Photoshop wizard to start. Tools like Canva make it easier than ever for small businesses to design their own quality content. Graphics will make your audience more likely to click your social update, _and_ share it themselves! But, don’t forget to always include a link to your website as well, along with your fancy graphics. 
+
+### **Consider a Budget**
+
+Okay, so you have a good social media presence driving a decent amount of website traffic but you&#8217;re ready to take it to the next level. Now, i[t’s time to invest.][5] 
+
+This is a chance to elevate your social media strategy and ensure you are truly reaching those who care about your content most. You will have the opportunity to test different audiences, different types of content, and truly start seeing a jump in your results. 
+
+The great thing about social media advertising is that it is often much less expensive than other forms of advertising. Depending on your target audience and your goals, you can typically drive much more efficient results than display, PPC, direct mail, and other common advertising methods. And, if you have the website pixel installed, you can see traffic generated from your social ads convert into customers. Is there anything more beautiful than that?
+
+Hopefully these tips will empower you to start seeing consistent referral traffic to your website from your social channels. If you have any questions, or need advice for starting your paid media plan, BrandGlue is happy to help!
+
+ [1]: https://www.facebook.com/business/news/call-to-action-button
+ [2]: http://localhost/brandglue/old-website/blog/tips/12-step-social-media-marketing-checklist-for-daily-weekly-monthly-and-quarterly-efforts
+ [3]: http://localhost/brandglue/old-website/blog/tips/is-newsfeed-optimization-dead
+ [4]: https://newsroom.fb.com/news/2017/12/news-feed-fyi-fighting-engagement-bait-on-facebook/
+ [5]: http://localhost/brandglue/old-website/blog/tips/7-step-checklist-for-running-your-next-social-media-marketing-campaign

@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 
-import Hero from '@partials/home/hero/Hero';
-import Team from '@partials/home/team/Team';
-import Clients from '@partials/home/clients/Clients';
-import CaseStudy from '@partials/home/case-study/CaseStudy';
-import Services from '@partials/home/services/Services';
-import Contact from '@partials/home/contact/Contact';
+import Hero from '@page-partials/home/Hero';
+import Team from '@page-partials/home/Team';
+import Clients from '@page-partials/home/Clients';
+import CaseStudy from '@page-partials/home/CaseStudy';
+import Services from '@page-partials/home/Services';
+import Contact from '@page-partials/common/Contact';
 
 export const Home: FC = () => (
   <div style={{ fontSize: 0 }}>

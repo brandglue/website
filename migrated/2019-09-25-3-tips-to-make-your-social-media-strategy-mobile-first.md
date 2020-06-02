@@ -1,0 +1,63 @@
+---
+title: 3 Tips to Make Your Social Media Strategy Mobile-First
+author: Zach Welch
+type: post
+date: 2019-09-25T13:00:32+00:00
+url: /blog/tips/3-tips-to-make-your-social-media-strategy-mobile-first
+featured_image: /wp-content/uploads/2019/04/091119_HowToMakeYourSocialMediaStrategyMobileFirst_BG.jpg
+classic-editor-remember:
+  - block-editor
+post_layout:
+  - default
+categories:
+  - Tips
+tags:
+  - aspect ratio
+  - mobile
+  - mobile first
+  - social media graphics
+  - social media strategy
+  - social media video
+  - video captions
+
+---
+Unless you’ve been living under a rock for the past decade, you know that mobile device usage is rapidly increasing. And with that comes the increase of people using their devices to access social media apps. While this is likely no surprise, the below stats show just how sharp the mobile curve is getting.&nbsp;
+
+Did you know:
+
+  * [88%][1] of Facebook users access the social network from a mobile device
+  * [95%][1] of all Facebook visits are made on smartphones and tablets
+  * A recent study from [eMarketer][2] shows that by 2021, more than half of social media users will be mobile ONLY!
+
+With the [ever-evolving social landscape][3], brands and businesses must meet their customers where they are to be truly effective. Yes, it’s true that the majority of social usage might not be on mobile for all companies (which you can check by visiting your social network’s analytics section), but if you’re one of the majority of businesses whose followers and prospective customers are primarily interacting with your brand from their mobile device, here are three tips to optimize your social media strategy accordingly.
+
+**Minimize Text**
+
+Short and quippy captions (if it’s part of your brand voice) often work best on social media. In fact, Facebook recently recognized the importance of short captions with [their platform update][4] that limits posts to 3 lines on mobile. When crafting your copy, think carefully about your words. What unnecessary words can you cut out? On Facebook and LinkedIn, don’t forget that when posting a link, the preview contains an editable headline—no need to repeat that information in your caption as well!
+
+This also goes for any text on your graphics. Keep in mind that phone screens are small; be sure to only include the most vital information on your image to get your message across effectively.
+
+**Update Aspect Ratios**
+
+It’s time to embrace portrait over landscape and vertical over horizontal. It may seem counterintuitive, but especially for Facebook and Instagram, your social posts and ads should include square or vertical images when possible. Check out the graphic below. See how much more room your vertical photo or video takes up in the feed? Optimizing your content accordingly can make a huge difference in ensuring your content is seen!<figure class="wp-block-image">
+
+![][5]</figure> 
+
+**Optimize Video**
+
+Earlier this year, [a survey of U.S. consumers][6] found that 92% of viewers watch videos with the sound off on mobile and 83% on desktop.
+
+The good news is that Facebook has made it easier than ever to add captions to your videos. After your video is uploaded, the platform can auto-generate captions and then a Facebook rep (if you have the time to wait 2 days) or you (immediately) can review and make any necessary edits to the captions.&nbsp;
+
+A recent report from Facebook revealed that [adding captions increase view time by 12%][7]. And trust us, any little boost in your content and algorithm recognition is definitely worth the few minutes of extra time.&nbsp;
+
+If you haven’t been making the effort to [optimize your content][8], it’s not too late to start since the mobile boom is likely to continue growing. Of course, there’s no telling how user behavior will evolve in the future and how social media managers must adapt. But for now, hopefully these three simple tips can help reach your audience more effectively on social media.
+
+ [1]: https://blog.hootsuite.com/facebook-statistics/
+ [2]: https://www.emarketer.com/content/more-than-half-of-social-network-users-will-be-mobile-only-in-2019
+ [3]: http://localhost/brandglue/old-website/blog/tips/6-tips-on-how-to-work-with-social-platform-algorithms-to-maximize-post-performance
+ [4]: https://www.facebook.com/business/help/313270659381227?hc_location=ufi&utm_content=bufferae7d5&utm_medium=social&utm_source=twitter&utm_campaign=buffer
+ [5]: https://lh5.googleusercontent.com/HsbQaCcvuAyDEA0WmEGt0prd8zbY178qnxFvXpu8mO_Sh0ZZ2_FRvpxrz7GjgxUXmlGeb8BwOsILjtfA1JDWAsLzRqSK9OH_jzFJHA_fmJ_NGoa7JT3GtN9qWCl1Z6Lv7hCN4dxk
+ [6]: https://www.broadcastingcable.com/news/mobile-videos-often-watched-without-audio-study-finds
+ [7]: https://www.facebook.com/business/news/updated-features-for-video-ads
+ [8]: http://localhost/brandglue/old-website/blog/tips/how-to-maximize-video-content-across-your-social-networks

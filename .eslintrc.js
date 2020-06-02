@@ -1,3 +1,5 @@
+const path = require('path');
+
 {
   module.exports = {
     root: true,
@@ -18,7 +20,7 @@
       'plugin:prettier/recommended',
       'prettier/react',
     ],
-    plugins: ['react-hooks', 'eslint-plugin-cypress'],
+    plugins: ['react-hooks', 'cypress', 'graphql'],
     env: {
       browser: true,
       'cypress/globals': true,
@@ -57,6 +59,17 @@
       'react/prop-types': 'off',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
+      'graphql/template-strings': [
+        'error',
+        {
+          env: 'relay',
+          tagName: 'graphql',
+          schemaJsonFilepath: path.resolve(
+            __dirname,
+            '__generated__/gatsby-introspection.json',
+          ),
+        },
+      ],
     },
     overrides: [
       {

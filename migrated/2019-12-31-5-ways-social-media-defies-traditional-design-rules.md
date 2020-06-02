@@ -1,0 +1,55 @@
+---
+title: 5 Ways Social Media Defies Traditional Design Rules
+author: Joey Ponce
+type: post
+date: 2019-12-31T14:00:00+00:00
+url: /blog/media-design/5-ways-social-media-defies-traditional-design-rules
+featured_image: /wp-content/uploads/2019/04/091119_5WaysSocialMediaDefiesTraditionalDesignRules_BG.jpg
+classic-editor-remember:
+  - block-editor
+post_layout:
+  - default
+categories:
+  - 'Media &amp; Design'
+tags:
+  - graphic design
+  - social media design
+  - social media strategy
+
+---
+With over a <a href="http://localhost/brandglue/old-website/blog/news/brandglue-employee-spotlight-joey-ponce" target="_blank" rel="noreferrer noopener" aria-label="decade of design experience (opens in a new tab)">decade of design experience</a>, I’ve worked on a variety of projects across a number of industries—from whitepapers to posters to brochures. While it’s true that each medium will command its own set of best practices, when it comes to social media, it’s possible that the standard set of rules can get completely tossed out the window. (But, that’s what keeps it interesting!)
+
+Here are a few points that any social media manager or designer should consider when developing a strategy for creative social media content. 
+
+**It’s Okay to Leave Information Out**
+
+Many design projects involve creating a “standalone” piece, meaning that all of the necessary details must be included within the piece itself. On social media, that’s often not the case. Social media designers and content managers must remember that all elements of a post can work together to communicate various details. Particularly on Facebook—a graphic or video that will be used with a link preview can afford to leave important information, such as dates or campaign titles, for the headline text. And on Instagram Stories, the logo isn’t necessarily needed as it will automatically appear on the Story anyway.
+
+Another reason to limit information included within a graphic or video is due to [Facebook’s strict text specifications][1] that can result in limited audience reach, especially if there is any chance the content will be used in an ad.&nbsp;  
+
+
+**Aim For A “Scroll Stopper”**
+
+Brands have to do everything they can to cut through the clutter on social media. Newsfeeds are more competitive than ever, and—especially on mobile—thumbs can scroll so quickly that your content can be completely missed. 
+
+[Try to stand out][2] with interesting imagery and unique composition. Angles that might not work for other mediums might be perfect for social media. If your brand has very strict guidelines on fonts and colors, it might be worth exploring how to bend the rules just a bit to get maximum engagement and visibility on social media. 
+
+For video, keep in mind that an intro and outro title slide aren’t always needed. It’s best to cut right to the meat of the video. Facebook’s guidelines say that just a short three seconds are all brands have to capture their audiences’ attention, so put your best foot forward from the very start.&nbsp;  
+
+
+**Experiment With Colors**
+
+For social media, and digital channels in general, it’s important to stick to RGB colors, as they have a more vibrant and exciting appeal. That’s not to say that your designs should always be bright and bold, but experiment with contrasting shades and pops of color in just the right places to tease those eyeballs as they scroll over your content. Again, you may have to push back just a bit on the traditional brand guidelines to achieve your goal.
+
+**Size Matters**
+
+Many design pieces have one set of specs, but in social media, there’s a good chance that the same piece of content is going to be used across a variety of channels and placements. From Twitter to Instagram Stories, social media designers should get familiar with repurposing the same piece of content in a variety of specs and best practices to work across any platform. 
+
+**Always Be Flexible**
+
+Social media trends can come and go in mere hours. While brands shouldn’t always be chasing the latest trend, if there is an authentic fit, just one perfect post could literally gain your brand thousands (or millions!) of views. A good social media designer will understand the importance of not sacrificing quality in order to respond quickly. 
+
+Social media managers are also at each platform’s whim—just one layout or algorithm change away from having to switch up their entire game plan. I enjoy being able to brainstorm with the team when these changes happen and offer my perspective on how to overcome hurdles and capitalize on new opportunities. I absolutely encourage other social media designers to <a href="http://localhost/brandglue/old-website/blog/tips/5-design-must-haves-before-creating-your-social-adhttp://localhost/brandglue/old-website/blog/tips/5-design-must-haves-before-creating-your-social-ad" target="_blank" rel="noreferrer noopener" aria-label="stay up-to-date on each platform’s best practices (opens in a new tab)">stay up-to-date on each platform’s best practices</a> so they can execute accordingly. 
+
+ [1]: https://www.facebook.com/business/help/980593475366490?id=1240182842783684
+ [2]: http://localhost/brandglue/old-website/blog/tips/simple-tools-to-create-eye-catching-visual-content

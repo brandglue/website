@@ -1,0 +1,56 @@
+---
+title: Simple Tools To Create Eye-Catching Visual Content
+author: Michelle Heathers
+type: post
+date: 2014-08-04T11:00:36+00:00
+url: /blog/tips/simple-tools-to-create-eye-catching-visual-content
+featured_image: /wp-content/uploads/2014/07/DeathtoStock_Wired7-copy-copy.jpg
+post_layout:
+  - default
+categories:
+  - Tips
+tags:
+  - Facebook
+  - Pinterest
+  - Twitter
+
+---
+It can take more than a witty one-liner to grab your fans’ attention while they’re scrolling through their social media feeds. Stop them in their tracks and make them pay attention with eye-catching visual content. Don’t have a graphic designer on staff? Consider hiring us at BrandGlue! Go here to get a [free Social Media Assement][1].
+
+If a graphic designer is out of budget, [these tools][2] will have you create strong visual content for your social outlets.
+
+**1. Design infographics**
+
+No one wants to read a long list of statistics. Organize the information in a unique and eye-catching manner to better get your point across. [Easelly][3] is an easy to use tool (hence the name). Choose from a variety of backgrounds, add other objects, upload your own images and data to create an infographic your audiences will love.
+
+**2. Create Video Slideshows**
+
+Slideshows are a fun way to share how customers are using your product, introduce a new product, give your fans a peek behind the scenes of your company’s day-to-day business or just have fun.
+
+Similar to Easelly, [Slidely][4] allows you to upload your own photos or videos and does all of the hard work compiling them into a video slideshow for you. It even has the option to add filters and background music. Another feature of Slidely is the ability to easily share your presentation to all of your social platforms, as well as email them to friends and embed them in a website.
+
+**3. Replace Slides with Animated Video**
+
+[PowToon][5] offers an alternative to that same old, same old. Now you can create free, animated, _interesting_ videos and presentations. PowToon is ideal for [product demos][6], business presentations and teaser trailers about your company.
+
+Depending on your time and needs, PowToon allows you to select from a pre-created template or take the reigns and customize your own.
+
+This tool is best used when creating a video with a little humor, which can be a critical component of a social media campaign. If you have the funny but need the medium, PowToon is a good option for you.
+
+**4. Create Graphic Designs**
+
+If you don’t have time to learn Photoshop or Illustrator, try [Canva][7] on for size. It’s perfect for creating Facebook cover photos, Twitter headers, pinnable images, posters and more.
+
+You have complete control over the text, images and colors, as well as the option to include professional stock photos for $1 each.
+
+Ditch the boring, cookie-cutter content and take control of your visual presence on social media with these free and simple-to-use tools. Go ahead, mix things up and see how your audience reacts.
+
+_Photo courtesy of Death to Stock Photo._
+
+ [1]: http://localhost/brandglue/old-website/free-assessment
+ [2]: http://www.socialmediaexaminer.com/tools-to-create-visual-content/
+ [3]: http://www.easel.ly/
+ [4]: http://slidely.com/
+ [5]: http://www.powtoon.com/
+ [6]: http://www.socialmediaexaminer.com/how-to-explainer-videos/
+ [7]: https://www.canva.com/

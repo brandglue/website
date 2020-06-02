@@ -33,11 +33,11 @@
       "@layout/*": ["src/layout/*"],
       "@models/*": ["src/models/*"],
       "@pages/*": ["src/pages/*"],
-      "@partials/*": ["src/partials/*"],
+      "@page-partials/*": ["src/page-partials/*"],
       "@src/*": ["src/*"],
       "@theme/*": ["src/theme/*"],
       "@utils/*": ["src/utils/*"]
     }
   },
-  "include": ["src/**/*", "src/global.d.ts"]
+  "include": ["src/**/*", "src/global.d.ts", "__generated__/gatsby-types.d.ts"]
 }

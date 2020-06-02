@@ -1,0 +1,54 @@
+---
+title: 4 Simple Tools To Track Google+ Performance
+author: Michelle Heathers
+type: post
+date: 2014-07-28T11:00:09+00:00
+url: /blog/tips/4-simple-tools-to-track-google-performance
+featured_image: /wp-content/uploads/2014/07/shutterstock_181909451.jpg
+post_layout:
+  - default
+categories:
+  - Tips
+tags:
+  - Google+
+
+---
+With over 300 million users and the ability to search social content and double engagement on Twitter, Google+ is a key social platform when it comes to reaching your audience online.
+
+Social Media Examiner shared [four tools][1] to track the analytics behind Google+, identify your key audiences and boost engagement:
+
+**1. Find Influencers and Evangelists**
+
+[The Ripples feature][2] is simple to use, free and is built into Google+. The most useful aspect is being able to identify which of your followers engages with you the most. Being able to identify your brand’s online cheerleader allows you to develop a stronger relationship.
+
+**2. Improve Google+ Updates**
+
+A more indepth look at your page’s performance can be found using [Steady Demand][3]. It’s wealth of information and analytics is endless. From peak times to post to get the best engagement, to mentions, hashtags and key influencers, all of the details are in one place.
+
+The best part? Steady Demand will alert you when one of your posts performs poorly and even give suggestions to improve the post’s quality based on past strong performers.
+
+**3. Customize Content Based on Location**
+
+Similar to Ripples and Steady Demand, [CircleCount][4] identifies your important followers and tracks each post’s performance and engagement quality.
+
+Tracking performance and engagement quality are necessary, but knowing where your followers come from is crucial as well. CircleCount’s Follow Map is a neat visual that allows you to do just that. Knowing where your main target bases are can help you create the most appealing content for your largest audience.
+
+**4. Compare Performance Across Channels**
+
+Knowing how Google+ stacks up to the performance of your other social media channels allows you to better evaluate your strategy. Being able to compare performance all in one place is even better. That’s where [SumAll][5] comes in.
+
+A one-stop shop for social media analytics, SumAll compares your Google+ performance to your efforts on Instagram, Facebook, Twitter and Tumblr—and those are just a few of the sites included! You can connect at least 30 tools and services to your account.
+
+With this free tool, you will be able to better understand what works and what doesn’t work on each platform.
+
+**When you have the right tools to gauge your growth, audience, engagement and conversions, it’s easier than ever to maximize your Google+ updates.**
+
+**Have you used any of these tools? How do you measure your Google+ performance?** Let us know in the comments below.
+
+_Photo courtesy of Shutterstock._
+
+ [1]: http://www.socialmediaexaminer.com/tools-to-measure-google-plus/
+ [2]: https://plus.google.com/ripple/details
+ [3]: https://www.steadydemand.com/
+ [4]: http://www.circlecount.com/
+ [5]: https://sumall.com/

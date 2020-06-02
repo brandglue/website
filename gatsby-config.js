@@ -1,8 +1,18 @@
 const path = require('path');
 
 module.exports = {
+  siteMetadata: {
+    title: 'BrandGlue',
+    description: 'BrandGlue website',
+    siteUrl: 'https://brandglue.netlify.app',
+  },
   plugins: [
-    'gatsby-plugin-typescript',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-netlify-cms',
+    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-plugin-root-import',
       options: {
@@ -14,10 +24,23 @@ module.exports = {
         '@layout': path.join(__dirname, 'src/layout'),
         '@models': path.join(__dirname, 'src/models'),
         '@pages': path.join(__dirname, 'src/pages'),
-        '@partials': path.join(__dirname, 'src/partials'),
+        '@page-partials': path.join(__dirname, 'src/page-partials'),
         '@src': path.join(__dirname, 'src'),
         '@theme': path.join(__dirname, 'src/theme'),
         '@utils': path.join(__dirname, 'src/utils'),
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-typegen',
+      options: {
+        outputPath: `${__dirname}/__generated__/gatsby-types.d.ts`,
+        emitSchema: {
+          '__generated__/gatsby-introspection.json': true,
+          '__generated__/gatsby-schema.graphql': true,
+        },
+        emitPluginDocuments: {
+          '__generated__/gatsby-plugin-documents.graphql': true,
+        },
       },
     },
     {
@@ -27,10 +50,12 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
-    'gatsby-plugin-netlify-cms',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'blog-posts',
+        path: `${__dirname}/src/posts/blog`,
+      },
+    },
   ],
 };

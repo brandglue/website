@@ -1,0 +1,89 @@
+---
+title: 'Your Social Channels Deserve Better: 5 Tips for Creating Riveting Content'
+author: Michelle Heathers
+type: post
+date: 2018-04-02T23:01:54+00:00
+url: /blog/tips/your-social-channels-deserve-better-5-tips-for-creating-riveting-content
+featured_image: /wp-content/uploads/2018/04/Your-Social-Channels-Deserve-Better_-5-Tips-for-Creating-Riveting-Content.png
+post_layout:
+  - default
+categories:
+  - 'Media &amp; Design'
+  - Tips
+
+---
+Does anyone care what you post on your social channels?
+
+Your first response is probably, “Of course they care! That’s why I’m posting.”
+
+But take a second and think about it. Is your target audience captivated by your Facebook feed? Do your Twitter notifications explode with comments and retweets of your tweets? Do those [ads you’re running][1] pop when they appear on the screen?
+
+It’s easy to assume people care about what we’re doing—our latest FB Live video, our newest product upgrade, our Twitter poll. Of course, we think that way, because everything about our business matters to us, so we assume it matters to everyone else, too.
+
+Chances are, a lot fewer people care than you think. Sure, your mom and your aunt from Florida might “Like” your Facebook page posts, but they aren’t your end customer. They don’t fit the persona your product or service is targeted towards.
+
+Where does that leave your social channels?
+
+More importantly, how can you get into the business of creating riveting content?
+
+Here are 5 tips to get you started.
+
+## **1. Keep it short and sweet**
+
+The pulse of social media is like that of a 100-yard sprinter. Fast.
+
+Which means people don’t have time to wade through a 5-paragraph (or even a 2-paragraph) Facebook post describing every aspect of your product in detail.
+
+The goal is to drop snippets of content so irresistible your audience can’t help but notice, and short enough that they’ll actually stop to pay attention. And when they do, the post should make them want to click through to see what all the fuss is about. Speaking of which…
+
+## **2. Use CTAs**
+
+Don’t underestimate the power of a call to action. Let’s face it: people are lazy. If you want them to do something, you need to make it unmistakably clear. For example, a post about your new product should read something like this:
+
+We’re excited to announce our new XYZ product. **Check it out today** >> [link to the product]
+
+That boldfaced sentence is the CTA, telling people (nicely, of course) to visit your website to learn more about the new product. Rather than simply stating you have a new product available, go one step further and encourage people to act.
+
+When writing a CTA, also create a sense of urgency. Notice it doesn’t say “check it out,” because that could be anytime between now and 50 years into the future. You want them to act today, immediately, now &#8212; before you lose their attention to the ever-present demands of life, work, and the next post in the feed.
+
+The goal is to get people to take some type of action – such as visiting your website, learning about your product, or reading your latest blog post &#8212; rather than going their merry way, never again to think about what you have to offer.
+
+To paraphrase a line from _Field of Dreams_, “If you call them to action, they will come.”
+
+## **3. Make your posts visually appealing** 
+
+Not every social post uses an image. Which is unfortunate since every post could benefit from some sort of visual. Not only do they help catch the eye and stand out, visuals also enhance performance. [Tweets that use images receive 150% more retweets][2]. And on Facebook, a post that contains an image sees [2.3x more engagement][3] than a text-only post.
+
+Whether a custom designed graphic, an image from the blog post you’re linking to, or an image you take from a site like Shutterstock, creating a visual piece to accompany your copy will help boost your engagement and draw attention to your posts.
+
+Just make sure the image or graphic you use looks good &#8212; the only thing worse than no image is a low-quality image.
+
+## **4. Mix up owned and curated content**
+
+Another thing to consider when looking at your social content strategy is the source of your content. What topics are you posting on, and where are your CTAs (because you’re using those now) driving people?
+
+The top priority should be your website. If people aren’t visiting your site, how will they learn more about your products or know how to contact you for more information? However, if your social posts only talk about your products, services, events, and latest blog posts, your feeds will become redundant.
+
+Another consideration is company size. Large corporations with a variety of product offerings, an established place in the industry, and plenty of resources can easily churn out tons of valuable owned content. But for those SMBs or even solopreneur companies, creating content may be important, but so are a-million-and-one other things. It can be hard to find time to roll out a consistent flow of owned content.
+
+The fix is to mix it up with curated content. Blog posts from other sites provide a wealth of content you can take advantage of. Here are just a few topic ideas to get you started:
+
+  * Industry trends and predictions
+  * Coverage of significant events
+  * The latest news and buzz from around your industry
+  * PR, news coverage, or awards for your company or product
+
+## **5. Don’t create content in a vacuum**
+
+By that I mean that every part of your social posting strategy should work together, while also complementing your overarching business goals. Strategy and planning are key parts of execution. How do your posts create a unified brand that sets your company apart as offering great value, whether through sharing information directly related to your business or providing thought leadership in your industry? And how does every single tweet and Facebook post you share contribute to your overall ROI?
+
+Think about and answer those questions, and you’ll have a head start on the path to social media success.
+
+These 5 tips provide a great foundation as you evaluate, or perhaps begin to build, your social content strategy. At BrandGlue, we’re passionate about everything related to social media marketing — including great content. If your social channels need a [content curation boost][4], email us at <hello@brandglue.com>. We’d love to help you out!
+
+Have your own tips to share? Leave them in the comments below!
+
+ [1]: http://localhost/brandglue/old-website/blog/social-media-tips/5-design-must-haves-before-creating-your-social-ad
+ [2]: https://blog.bufferapp.com/the-power-of-twitters-new-expanded-images-and-how-to-make-the-most-of-it
+ [3]: http://buzzsumo.com/blog/how-to-massively-boost-your-blog-traffic-with-these-5-awesome-image-stats/
+ [4]: http://localhost/brandglue/old-website/#services-bg
