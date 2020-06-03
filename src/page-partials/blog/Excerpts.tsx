@@ -27,26 +27,31 @@ export const Excerpts: React.FC = () => {
   return (
     <>
       {posts?.map(({ node: post }, index: number) => {
-        post.frontmatter && post.frontmatter.slug && (
-          <div key={index}>
-            <article className={post.frontmatter.featured ? 'is-featured' : ''}>
-              <header>
+        return (
+          post.frontmatter &&
+          post.frontmatter.slug && (
+            <div key={index}>
+              <article
+                className={post.frontmatter.featured ? 'is-featured' : ''}
+              >
+                <header>
+                  <p>
+                    <Link to={post.frontmatter.slug}>
+                      {post.frontmatter.title}
+                    </Link>
+                    <span> &bull; </span>
+                    <span>{post.frontmatter.date}</span>
+                  </p>
+                </header>
                 <p>
-                  <Link to={post.frontmatter.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <span>{post.frontmatter.date}</span>
+                  {post.excerpt}
+                  <br />
+                  <br />
+                  <Link to={post.frontmatter.slug}>Keep Reading →</Link>
                 </p>
-              </header>
-              <p>
-                {post.excerpt}
-                <br />
-                <br />
-                <Link to={post.frontmatter.slug}>Keep Reading →</Link>
-              </p>
-            </article>
-          </div>
+              </article>
+            </div>
+          )
         );
       })}
     </>

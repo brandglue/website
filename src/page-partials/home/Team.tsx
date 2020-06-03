@@ -12,8 +12,8 @@ import styled from '@theme/styled';
 import { hexToRgb } from '@theme/utils';
 
 export const Team: FC = () => {
-  const images = useStaticQuery(graphql`
-    query {
+  const images = useStaticQuery<GatsbyTypes.TeamImagesQuery>(graphql`
+    query TeamImages {
       joey: file(
         sourceInstanceName: { eq: "images" }
         relativePath: { eq: "team-joey-ponce.jpg" }
@@ -95,17 +95,23 @@ export const Team: FC = () => {
           >
             <Image
               alt="michelle-heathers"
-              fluid={images.michelle.childImageSharp.fluid}
+              fluid={images?.michelle?.childImageSharp?.fluid}
             />
-            <Image alt="zach-welch" fluid={images.zach.childImageSharp.fluid} />
-            <Image alt="joey-ponce" fluid={images.joey.childImageSharp.fluid} />
+            <Image
+              alt="zach-welch"
+              fluid={images?.zach?.childImageSharp?.fluid}
+            />
+            <Image
+              alt="joey-ponce"
+              fluid={images?.joey?.childImageSharp?.fluid}
+            />
             <Image
               alt="hannah-lushin"
-              fluid={images.hannah.childImageSharp.fluid}
+              fluid={images?.hannah?.childImageSharp?.fluid}
             />
             <Image
               alt="sharon bell"
-              fluid={images.sharon.childImageSharp.fluid}
+              fluid={images?.sharon?.childImageSharp?.fluid}
             />
           </Box>
           <Box justifyContent="flex-end" variant="flex">

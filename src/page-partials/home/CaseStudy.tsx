@@ -12,8 +12,8 @@ import { minMediaQuery } from '@theme/utils';
 import NavTextLink from '@components/links/NavTextLink';
 
 export const CaseStudy: FC = () => {
-  const intuitLogo = useStaticQuery(graphql`
-    query {
+  const intuitLogo = useStaticQuery<GatsbyTypes.FeaturedCaseStudyQuery>(graphql`
+    query FeaturedCaseStudy {
       file(
         sourceInstanceName: { eq: "images" }
         relativePath: { eq: "logo-intuit-no-bg.png" }
@@ -33,7 +33,7 @@ export const CaseStudy: FC = () => {
         <Logo variant="flexItem">
           <Image
             alt="intuit-accountants"
-            fluid={intuitLogo.file.childImageSharp.fluid}
+            fluid={intuitLogo?.file?.childImageSharp?.fluid}
           />
         </Logo>
         <Box flex="0 0 500px" variant="flexItem">

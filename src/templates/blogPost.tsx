@@ -1,11 +1,16 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Image from 'gatsby-image';
+
+import { useBlogHeroImage } from '@hooks/queries/useBlogHeroImage';
 
 interface IProps {
   data: GatsbyTypes.BlogPostQuery;
 }
 
 const BlogPost: React.FC<IProps> = ({ data }) => {
+  const blogHeroImage = useBlogHeroImage();
+
   if (!data.markdownRemark?.frontmatter || !data.markdownRemark.html) {
     return null;
   }
@@ -13,13 +18,20 @@ const BlogPost: React.FC<IProps> = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark;
 
   return (
-    <div>
+    <>
+      <Image alt="blog-hero" fluid={blogHeroImage?.fluid} />
       <div>
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div>
+          <Image
+            alt=""
+            fluid={frontmatter.cover_image?.childImageSharp?.fluid}
+          />
+          <h1>{frontmatter.title}</h1>
+          <h2>{frontmatter.date}</h2>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -33,6 +45,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        cover_image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

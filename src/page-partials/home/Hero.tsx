@@ -10,8 +10,8 @@ import styled, { css } from '@theme/styled';
 import { minMediaQuery } from '@theme/utils';
 
 const Hero: FC = () => {
-  const hero = useStaticQuery(graphql`
-    query {
+  const hero = useStaticQuery<GatsbyTypes.HomepageHeroImageQuery>(graphql`
+    query HomepageHeroImage {
       file(
         sourceInstanceName: { eq: "images" }
         relativePath: { eq: "homepage-hero.jpg" }
@@ -27,7 +27,10 @@ const Hero: FC = () => {
 
   return (
     <Container>
-      <HeroImage alt="homepage-hero" fluid={hero.file.childImageSharp.fluid} />
+      <HeroImage
+        alt="homepage-hero"
+        fluid={hero?.file?.childImageSharp?.fluid}
+      />
       <Tagline justifyContent="center" variant="flex">
         <Box flexGrow={0} variant="flexItem">
           <H1 lineHeight={['41px', '51px', '64px']} m="auto">

@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 
 import { Box } from '@components/containers/Box';
@@ -7,27 +6,15 @@ import { Column } from '@components/containers/Column';
 import { SectionTitle } from '@components/sections/SectionTitle';
 import { P } from '@components/text/Text';
 import { H3 } from '@components/text/Heading';
+import { useBlogHeroImage } from '@hooks/queries/useBlogHeroImage';
 import { Excerpts } from '@page-partials/blog/Excerpts';
 
 export const Blog: FC = () => {
-  const images = useStaticQuery<GatsbyTypes.ImageQuery>(graphql`
-    query Image {
-      hero: file(
-        sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "blog-hero.jpg" }
-      ) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
+  const blogHeroImage = useBlogHeroImage();
 
   return (
     <>
-      <Image alt="blog-hero" fluid={images?.hero?.childImageSharp?.fluid} />
+      <Image alt="blog-hero" fluid={blogHeroImage?.fluid} />
       <Box>
         <Column py={6}>
           <SectionTitle>

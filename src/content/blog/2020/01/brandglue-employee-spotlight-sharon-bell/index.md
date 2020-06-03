@@ -1,23 +1,15 @@
 ---
 title: 'BrandGlue Employee Spotlight: Sharon Bell'
 author: Michelle Heathers
-type: post
-date: 2020-01-15T14:00:00+00:00
-url: /blog/news/brandglue-employee-spotlight-sharon-bell
-featured_image: /wp-content/uploads/2019/10/10219_SharonBell-EmployeeSpotlight_BG.jpg
-classic-editor-remember:
-  - block-editor
-post_layout:
-  - default
+date: 2020-01-15
+slug: /blog/news/brandglue-employee-spotlight-sharon-bell
+cover_image: ./SharonBell-EmployeeSpotlight.jpg
 categories:
   - News
-tags:
-  - BrandGlue
-  - social media marketing
-  - social media strategy
-
+featured: false
 ---
-Our next employee spotlight features Social Media Manager, [Sharon Bell][1]. Sharon joined the team in May of last year after taking a few months off for the birth of her daughter. She brought with her more than a decade of social media knowledge and experience managing seven-figure social advertising budgets. It’s been a delight working with her to implement and execute new campaigns for our clients. 
+
+Our next employee spotlight features Social Media Manager, [Sharon Bell][1]. Sharon joined the team in May of last year after taking a few months off for the birth of her daughter. She brought with her more than a decade of social media knowledge and experience managing seven-figure social advertising budgets. It’s been a delight working with her to implement and execute new campaigns for our clients.
 
 1.**How did you get started working in social media?**
 
@@ -41,8 +33,8 @@ Reply All is one podcast I never miss. It’s a unique blend of humor, tech, and
 
 _Did you miss our last employee spotlight blog featuring our other team members? Read more about_ [_Rai Masuda_][3]_,_ [_Joey Ponce_][4]_, and_ [_Hannah Lushin_][5]_!_
 
- [1]: https://www.linkedin.com/in/sharonmbell/
- [2]: https://gimletmedia.com/shows/reply-all/6nh3wk
- [3]: http://localhost/brandglue/old-website/blog/news/brandglue-employee-spotlight-rai-masuda
- [4]: http://localhost/brandglue/old-website/blog/news/brandglue-employee-spotlight-joey-ponce
- [5]: http://localhost/brandglue/old-website/blog/news/brandglue-employee-spotlight-hannah-lushin
+[1]: https://www.linkedin.com/in/sharonmbell/
+[2]: https://gimletmedia.com/shows/reply-all/6nh3wk
+[3]: http://localhost/brandglue/old-website/blog/news/brandglue-employee-spotlight-rai-masuda
+[4]: http://localhost/brandglue/old-website/blog/news/brandglue-employee-spotlight-joey-ponce
+[5]: http://localhost/brandglue/old-website/blog/news/brandglue-employee-spotlight-hannah-lushin

@@ -22,7 +22,7 @@ const path = require('path');
     ],
     plugins: ['react-hooks', 'cypress', 'graphql'],
     env: {
-      browser: true,
+      'browser': true,
       'cypress/globals': true,
     },
     rules: {
@@ -31,7 +31,7 @@ const path = require('path');
         'error',
         {
           'newlines-between': 'ignore', // temp hack while trying to get aliases to get recognized as separate from external imports
-          groups: [
+          'groups': [
             ['builtin', 'external'],
             'internal',
             ['sibling', 'parent', 'index'],
@@ -106,7 +106,7 @@ const path = require('path');
       },
     ],
     settings: {
-      react: {
+      'react': {
         // Tells eslint-plugin-react to automatically detect the version of React to use
         version: 'detect',
       },
