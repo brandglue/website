@@ -4,8 +4,8 @@ import Image from 'gatsby-image';
 import { Box } from '@components/containers/Box';
 import { Column } from '@components/containers/Column';
 import { SectionTitle } from '@components/sections/SectionTitle';
-import { P } from '@components/text/Text';
-import { H3 } from '@components/text/Heading';
+import { P, H3 } from '@components/text/Text';
+
 import { useBlogHeroImage } from '@hooks/queries/useBlogHeroImage';
 import { Excerpts } from '@page-partials/blog/Excerpts';
 

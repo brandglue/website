@@ -1,4 +1,4 @@
-import { H2 } from '@components/text/Heading';
+import { H2 } from '@components/text/Text';
 import styled from '@theme/styled';
 
 export const SectionTitle = styled(H2)`

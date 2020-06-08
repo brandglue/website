@@ -130,8 +130,6 @@ const Container = styled(Box)`
   align-items: flex-start;
   margin: auto;
   padding: ${({ theme }) => theme.space[7]}px 0;
-  /* background: ${({ theme }) => theme.Colors.Gray00};
-   */
   background: linear-gradient(
     180deg,
     rgba(${({ theme }) => hexToRgb(theme.Colors.White)}, 1) 0%,

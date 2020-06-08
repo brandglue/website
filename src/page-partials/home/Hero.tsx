@@ -4,8 +4,8 @@ import Image from 'gatsby-image';
 
 import { Box } from '@components/containers/Box';
 import { Column } from '@components/containers/Column';
-import { H1, H3 } from '@components/text/Heading';
-import { P } from '@components/text/Text';
+import { H1, H3, P } from '@components/text/Text';
+
 import styled, { css } from '@theme/styled';
 import { minMediaQuery } from '@theme/utils';
 
