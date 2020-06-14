@@ -18,9 +18,8 @@ export {
   css,
   createGlobalStyle,
   keyframes,
+  styled,
   withTheme,
   ThemeContext,
   ThemeProvider,
 };
-
-export default styled;

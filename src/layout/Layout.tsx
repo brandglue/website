@@ -1,7 +1,7 @@
 import React, { FC, useLayoutEffect, useState } from 'react';
 
-import Footer from '@layout/Footer';
-import Header from '@layout/Header';
+import { Footer } from '@layout/Footer';
+import { Header } from '@layout/Header';
 import { IAppState } from '@models/AppState';
 import { AppState } from '@src/AppState';
 import { theme } from '@theme/theme';

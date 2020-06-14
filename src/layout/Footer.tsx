@@ -1,16 +1,18 @@
 import React, { FC } from 'react';
 
+import { Box } from '@components/boxes/Box';
+import { H4 } from '@components/text/Text';
 import BrandGlueLogoIconOnly from '@icons/BrandGlueLogoIconOnly';
 import FacebookIcon from '@icons/Facebook';
 import LinkedInIcon from '@icons/LinkedIn';
 import TwitterIcon from '@icons/Twitter';
-import styled, { css } from '@theme/styled';
+import { css, styled } from '@theme/styled';
 import { minMediaQuery } from '@theme/utils';
 
 export const Footer: FC = () => (
   <>
     <Wrapper>
-      <Container>
+      <Container variant="centered">
         <Contact>
           <Title>Contact Us</Title>
           <Info href="tel:+1-360-207-4583">+1 (360) 207-4583</Info>
@@ -43,24 +45,25 @@ export const Footer: FC = () => (
 );
 
 const Wrapper = styled.div`
-  background: ${({ theme }) => theme.Colors.Gray04};
-  padding: ${({ theme }) =>
-    `${theme.Spacings.DynamicSpace02} ${theme.Spacings.DynamicSpace02} ${theme.Spacings.StaticSpace03}`};
+  ${({ theme }) => css`
+    background: ${theme.Colors.Gray04};
+    padding: ${theme.Spacings.DynamicSpace02} ${theme.Spacings.DynamicSpace02}
+      ${theme.Spacings.StaticSpace03};
+  `};
 `;
 
-const Container = styled.div`
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  text-align: center;
-  color: ${({ theme }) => theme.Colors.Gray01};
-  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace08};
+const Container = styled(Box)`
+  ${({ theme }) => css`
+    text-align: center;
+    color: ${theme.Colors.Gray01};
+    margin-bottom: ${theme.Spacings.StaticSpace08};
 
-  ${minMediaQuery.Medium(css`
-    flex-flow: row;
-    justify-content: space-between;
-    text-align: initial;
-  `)}
+    ${minMediaQuery.Medium(css`
+      flex-flow: row;
+      justify-content: space-between;
+      text-align: initial;
+    `)}
+  `}
 `;
 
 const Contact = styled.address`
@@ -68,19 +71,23 @@ const Contact = styled.address`
   flex-flow: column;
 `;
 
-const Title = styled.h4`
-  color: ${({ theme }) => theme.Colors.Gold};
-  text-transform: uppercase;
-  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace03};
+const Title = styled(H4)`
+  ${({ theme }) => css`
+    color: ${theme.Colors.Gold};
+    text-transform: uppercase;
+    margin-bottom: ${theme.Spacings.StaticSpace03};
+  `}
 `;
 
 const Info = styled.a`
-  text-decoration: none;
-  color: ${({ theme }) => theme.Colors.Gray01};
+  ${({ theme }) => css`
+    text-decoration: none;
+    color: ${theme.Colors.Gray01};
 
-  &:last-of-type {
-    margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace03};
-  }
+    &:last-of-type {
+      margin-bottom: ${theme.Spacings.StaticSpace03};
+    }
+  `}
 `;
 
 const Social = styled.div`
@@ -107,10 +114,10 @@ const StyledBrandGlueLogoIconOnly = styled(BrandGlueLogoIconOnly)`
 `;
 
 const Copyright = styled.div`
-  background: ${({ theme }) => theme.Colors.Black};
-  color: ${({ theme }) => theme.Colors.Gray01};
-  text-align: center;
-  padding: ${({ theme }) => theme.space[5]}px;
+  ${({ theme }) => css`
+    background: ${theme.Colors.Black};
+    color: ${theme.Colors.Gray01};
+    text-align: center;
+    padding: ${theme.space[5]}px;
+  `}
 `;
-
-export default Footer;

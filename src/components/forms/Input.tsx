@@ -1,7 +1,9 @@
 import React, { FC } from 'react';
+import { border, color, layout, space, typography } from 'styled-system';
+import fluid from 'fluid-system';
 
-import styled from '@theme/styled';
-import { fluidFontSize } from '@theme/utils';
+import { StyledSystemProps } from '@src/theme/systemProps';
+import { css, styled } from '@theme/styled';
 
 interface IOwnProps extends React.InputHTMLAttributes<HTMLInputElement> {
   // restrict type further than the 'string' type provided by React typings
@@ -19,7 +21,9 @@ interface IOwnProps extends React.InputHTMLAttributes<HTMLInputElement> {
     | 'url';
 }
 
-export const Input: FC<IOwnProps> = (props) => <StyledInput {...props} />;
+export const Input: FC<IOwnProps & StyledSystemProps> = (props) => (
+  <StyledInput {...props} />
+);
 
 Input.defaultProps = {
   className: '',
@@ -28,16 +32,52 @@ Input.defaultProps = {
 };
 
 const StyledInput = styled.input`
-  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace01};
-  padding: ${({ theme }) => theme.Spacings.FontSpace04};
-  color: ${({ theme }) => theme.Colors.Black};
-  border: 1px solid ${({ theme }) => theme.Colors.Gray02};
-  ${fluidFontSize.Baseline()};
+  ${({ theme }) => css`
+    margin-bottom: ${theme.Spacings.StaticSpace01};
+    padding: ${theme.Spacings.FontSpace04};
+    color: ${theme.Colors.Black};
+    border: 1px solid ${theme.Colors.Gray02};
 
-  &:focus,
-  &:active {
-    outline-color: ${({ theme }) => theme.Colors.DarkBlue};
-  }
+    &:focus,
+    &:active {
+      outline-color: ${({ theme }) => theme.Colors.DarkBlue};
+    }
+  `}
+
+  ${border}
+  ${color}
+  ${layout}
+  ${space}
+  ${fluid(typography)}
 `;
 
-export default Input;
+export const TextArea: FC<
+  React.TextareaHTMLAttributes<HTMLTextAreaElement> & StyledSystemProps
+> = (props) => <StyledTextArea {...props} />;
+
+TextArea.defaultProps = {
+  className: '',
+  placeholder: '',
+};
+
+const StyledTextArea = styled.textarea`
+  ${({ theme }) => css`
+    height: 100%;
+    min-height: 200px;
+    margin-bottom: ${theme.Spacings.StaticSpace01};
+    padding: ${theme.Spacings.FontSpace04};
+    color: ${theme.Colors.Black};
+    border: 1px solid ${theme.Colors.Gray02};
+
+    &:focus,
+    &:active {
+      outline-color: ${theme.Colors.DarkBlue};
+    }
+  `}
+
+  ${border}
+  ${color}
+  ${layout}
+  ${space}
+  ${fluid(typography)}
+`;

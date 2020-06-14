@@ -1,27 +1,64 @@
 import React, { FC, useContext } from 'react';
 
-import NavLink from '@components/links/NavLink';
-import { Routes } from '@constants/routes';
+import { NavLink } from '@components/links/NavLink';
+import { Routes, RouteLabels } from '@constants/routes';
 import BrandGlueLogo from '@icons/BrandGlueLogo';
 import { AppState } from '@src/AppState';
-import styled, { css } from '@theme/styled';
-import { fluidFontSize, minMediaQuery } from '@theme/utils';
+import { css, styled } from '@theme/styled';
+import { minMediaQuery } from '@theme/utils';
+
+interface IMenuItem {
+  label: string;
+  to: Routes;
+}
+
+const smallMenuItems: IMenuItem[] = [
+  {
+    label: RouteLabels.About,
+    to: Routes.About,
+  },
+  {
+    label: RouteLabels.Services,
+    to: Routes.Services,
+  },
+  {
+    label: RouteLabels.CaseStudies,
+    to: Routes.CaseStudies,
+  },
+  {
+    label: RouteLabels.Blog,
+    to: Routes.Blog,
+  },
+];
+
+const largeMenuItems: IMenuItem[] = [
+  ...smallMenuItems,
+  {
+    label: RouteLabels.Contact,
+    to: Routes.Contact,
+  },
+];
 
 export const Header: FC = () => {
   const appState = useContext(AppState);
 
   const smallDeviceMenu = (
     <header>
-      <Logo to={`/`}>
+      <Logo to={`/`} variant="button">
         <BrandGlueLogo />
       </Logo>
       <SmallDeviceMenu>
-        <SmallDeviceLink to={`/${Routes.About}`}>About</SmallDeviceLink>
-        <SmallDeviceLink to={`/${Routes.Services}`}>Services</SmallDeviceLink>
-        <SmallDeviceLink to={`/${Routes.CaseStudies}`}>
-          Case Studies
-        </SmallDeviceLink>
-        <SmallDeviceLink to={`/${Routes.Blog}`}>Blog</SmallDeviceLink>
+        {smallMenuItems.map((item) => {
+          return (
+            <SmallDeviceLink
+              key={item.label}
+              to={`/${item.to}`}
+              variant="button"
+            >
+              {item.label}
+            </SmallDeviceLink>
+          );
+        })}
       </SmallDeviceMenu>
     </header>
   );
@@ -32,13 +69,17 @@ export const Header: FC = () => {
         <BrandGlueLogo />
       </Logo>
       <LargeDeviceMenu>
-        <LargeDeviceLink to={`/${Routes.About}`}>About</LargeDeviceLink>
-        <LargeDeviceLink to={`/${Routes.Services}`}>Services</LargeDeviceLink>
-        <LargeDeviceLink to={`/${Routes.CaseStudies}`}>
-          Case Studies
-        </LargeDeviceLink>
-        <LargeDeviceLink to={`/${Routes.Blog}`}>Blog</LargeDeviceLink>
-        <LargeDeviceLink to={`/${Routes.Contact}`}>Contact</LargeDeviceLink>
+        {largeMenuItems.map((item) => {
+          return (
+            <LargeDeviceLink
+              key={item.label}
+              to={`/${item.to}`}
+              variant="button"
+            >
+              {item.label}
+            </LargeDeviceLink>
+          );
+        })}
       </LargeDeviceMenu>
     </LargeDeviceWrapper>
   );
@@ -50,7 +91,7 @@ const Logo = styled(NavLink)`
   display: block;
   width: 50%;
   max-width: 220px;
-  margin: ${({ theme }) => theme.Spacings.StaticSpace01} auto;
+  margin: ${({ theme }) => theme.space[3]}px auto;
 
   ${minMediaQuery.Medium(css`
     flex: 0 0 220px;
@@ -65,29 +106,32 @@ const SmallDeviceMenu = styled.nav`
 `;
 
 const SmallDeviceLink = styled(NavLink)`
-  flex: 1 1 auto;
-  color: ${({ theme }) => theme.Colors.Black};
-  text-transform: uppercase;
-  padding: ${({ theme }) => theme.Spacings.FontSpace02};
-  border-right: 1px solid ${({ theme }) => theme.Colors.Gray00};
-  ${fluidFontSize.StepDown1()};
+  ${({ theme }) => css`
+    flex: 1 1 auto;
+    color: ${theme.Colors.Black};
+    text-transform: uppercase;
+    padding: ${theme.space[3]}px;
+    border-right: 1px solid ${theme.Colors.Gray00};
 
-  &:last-child {
-    border: none;
-  }
+    &:last-child {
+      border: none;
+    }
 
-  &.isActive {
-    background: ${({ theme }) => theme.Colors.Gold};
-    color: ${({ theme }) => theme.Colors.White};
-  }
+    &.isActive {
+      background: ${theme.Colors.Gold};
+      color: ${theme.Colors.White};
+    }
+  `}
 `;
 
 const LargeDeviceWrapper = styled.header`
-  display: flex;
-  justify-content: space-between;
-  padding: 0 ${({ theme }) => theme.space[3]}px;
-  margin: ${({ theme }) => theme.Spacings.StaticSpace04} 0;
-  max-width: ${({ theme }) => theme.maxPageWidth}px;
+  ${({ theme }) => css`
+    display: flex;
+    justify-content: space-between;
+    padding: 0 ${theme.space[3]}px;
+    margin: ${theme.space[4]}px 0;
+    max-width: ${theme.maxPageWidth}px;
+  `}
 `;
 
 const LargeDeviceMenu = styled.nav`
@@ -98,21 +142,20 @@ const LargeDeviceMenu = styled.nav`
 `;
 
 const LargeDeviceLink = styled(NavLink)`
-  color: ${({ theme }) => theme.Colors.Black};
-  text-transform: uppercase;
-  border-bottom: 2px solid transparent;
-  padding: ${({ theme }) => theme.Spacings.FontSpace02};
-  margin-right: ${({ theme }) => theme.Spacings.FontSpace09};
-  ${fluidFontSize.StepDown1()};
+  ${({ theme }) => css`
+    color: ${theme.Colors.Black};
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    padding: ${theme.space[3]}px;
+    margin-right: ${theme.space[4]}px;
 
-  &:hover {
-    border-bottom: 2px solid ${({ theme }) => theme.Colors.Gold};
-  }
+    &:hover {
+      border-bottom: 2px solid ${theme.Colors.Gold};
+    }
 
-  &.isActive {
-    background: ${({ theme }) => theme.Colors.Gold};
-    color: ${({ theme }) => theme.Colors.White};
-  }
+    &.isActive {
+      background: ${theme.Colors.Gold};
+      color: ${theme.Colors.White};
+    }
+  `}
 `;
-
-export default Header;

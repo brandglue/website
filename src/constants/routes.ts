@@ -8,6 +8,12 @@ export enum Routes {
   Services = 'services',
 }
 
-// export const ROUTE_LABELS = {
-//   [ROUTES.ABOUT]: 'About',
-// }
+export const RouteLabels = {
+  P404: '404',
+  About: 'About',
+  Blog: 'Blog',
+  CaseStudies: 'Case Studies',
+  Contact: 'Contact',
+  Homepage: 'Homepage',
+  Services: 'Services',
+};

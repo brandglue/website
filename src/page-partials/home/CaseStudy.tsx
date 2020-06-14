@@ -2,14 +2,13 @@ import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 
-import { Box } from '@components/containers/Box';
-import { Column } from '@components/containers/Column';
+import { Box } from '@components/boxes/Box';
 import { P, H5 } from '@components/text/Text';
 
 import { Routes } from '@constants/routes';
-import styled, { css } from '@theme/styled';
+import { css, styled } from '@theme/styled';
 import { minMediaQuery } from '@theme/utils';
-import NavTextLink from '@components/links/NavTextLink';
+import { NavLink } from '@components/links/NavLink';
 
 export const CaseStudy: FC = () => {
   const intuitLogo = useStaticQuery<GatsbyTypes.FeaturedCaseStudyQuery>(graphql`
@@ -29,7 +28,7 @@ export const CaseStudy: FC = () => {
 
   return (
     <Box bg="DarkBlue" py={5}>
-      <Container variant="flex">
+      <Container variant="column">
         <Logo variant="flexItem">
           <Image
             alt="intuit-accountants"
@@ -43,9 +42,9 @@ export const CaseStudy: FC = () => {
           <P color="White">
             {`See How We Helped Intuit Accountants \n Get The Right Audience at the Right Price`}
             {/* TODO: Update this link to the proper case study link */}
-            <NavTextLink color="Blue" pl={1} to={`/${Routes.CaseStudies}`}>
+            <NavLink color="Blue" pl={1} to={`/${Routes.CaseStudies}`}>
               See Case Study &gt;
-            </NavTextLink>
+            </NavLink>
           </P>
         </Box>
       </Container>
@@ -53,30 +52,35 @@ export const CaseStudy: FC = () => {
   );
 };
 
-const Container = styled(Column)`
-  flex-flow: column;
-  justify-content: flex-start;
-  margin-bottom: ${({ theme }) => theme.space[5]}px;
-  padding: ${({ theme }) => theme.space[5]}px;
+const Container = styled(Box)`
+  ${({ theme }) => css`
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    margin-bottom: ${theme.space[5]}px;
+    padding: ${theme.space[5]}px;
 
-  ${minMediaQuery.Medium(css`
-    flex-flow: row;
-    margin-bottom: 0;
-  `)};
+    ${minMediaQuery.Medium(css`
+      flex-flow: row;
+      margin-bottom: 0;
+    `)};
+  `}
 `;
 
 const Logo = styled(Box)`
-  flex: 0 0 200px;
-  border-bottom: 1px solid ${({ theme }) => theme.Colors.White};
-  padding-bottom: ${({ theme }) => theme.space[5]}px;
-  margin-bottom: ${({ theme }) => theme.space[5]}px;
+  ${({ theme }) => css`
+    flex: 0 0 200px;
+    border-bottom: 1px solid ${theme.Colors.White};
+    padding-bottom: ${theme.space[5]}px;
+    margin-bottom: ${theme.space[5]}px;
 
-  ${minMediaQuery.Medium(css`
-    border-bottom: none;
-    border-right: 1px solid ${({ theme }) => theme.Colors.White};
-    padding: 0 ${({ theme }) => theme.space[5]}px 0 0;
-    margin: 0 ${({ theme }) => theme.space[5]}px 0 0;
-  `)}
+    ${minMediaQuery.Medium(css`
+      border-bottom: none;
+      border-right: 1px solid ${theme.Colors.White};
+      padding: 0 ${theme.space[5]}px 0 0;
+      margin: 0 ${theme.space[5]}px 0 0;
+    `)}
+  `}
 `;
 
 export default CaseStudy;

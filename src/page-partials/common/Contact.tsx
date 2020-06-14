@@ -1,17 +1,14 @@
 import React, { FC, useState } from 'react';
 
-import PrimaryButton from '@components/buttons/PrimaryButton';
-import { Box } from '@components/containers/Box';
-import { Column } from '@components/containers/Column';
-import Input from '@components/forms/Input';
-import TextArea from '@components/forms/TextArea';
-import NavTextLink from '@components/links/NavTextLink';
-import { SectionTitle } from '@components/sections/SectionTitle';
-import { H3, P } from '@components/text/Text';
+import { Button } from '@components/buttons/Button';
+import { Box } from '@components/boxes/Box';
+import { Input, TextArea } from '@components/forms/Input';
+import { NavLink } from '@components/links/NavLink';
+import { H2, H3, P } from '@components/text/Text';
 import { Routes } from '@constants/routes';
-import styled, { css } from '@theme/styled';
+import { css, styled } from '@theme/styled';
 import { hexToRgb, minMediaQuery } from '@theme/utils';
-import encodeFormData from '@utils/encodeFormData';
+import { encodeFormData } from '@utils/encodeFormData';
 
 export const Contact: FC = () => {
   const [name, setName] = useState('');
@@ -57,8 +54,8 @@ export const Contact: FC = () => {
   };
 
   return (
-    <Column py={7}>
-      <SectionTitle>Ready to get to work? We are.</SectionTitle>
+    <Box py={7} variant="column">
+      <H2>Ready to get to work? We are.</H2>
       <P pb={5}>
         Overwhelmed with the possilibities and options of social media? Not sure
         where to focus your attention? We are here to help you figure that out{' '}
@@ -119,7 +116,9 @@ export const Contact: FC = () => {
                   placeholder="In a few words, what are your needs?"
                   value={message}
                 />
-                <PrimaryButton type="submit">Request Assessment</PrimaryButton>
+                <Button type="submit" variant="primary">
+                  Request Assessment
+                </Button>
               </Group>
             </Box>
             {formError && <Error>{formError}</Error>}
@@ -127,20 +126,18 @@ export const Contact: FC = () => {
         ) : (
           <Success>
             <H3>Thank You!</H3>
-            <p>Your assessment is on {"it's"} way to us.</p>
-            <p>{"We'll"} reach out soon to follow-up with you.</p>
-            <p>
+            <P>Your assessment is on {"it's"} way to us.</P>
+            <P>{"We'll"} reach out soon to follow-up with you.</P>
+            <P>
               In the meanwhile, check out our{' '}
-              <NavTextLink to={`/${Routes.Blog}`}>blog</NavTextLink> or{' '}
-              <NavTextLink to={`/${Routes.CaseStudies}`}>
-                case studies
-              </NavTextLink>{' '}
-              to learn more.
-            </p>
+              <NavLink to={`/${Routes.Blog}`}>blog</NavLink> or{' '}
+              <NavLink to={`/${Routes.CaseStudies}`}>case studies</NavLink> to
+              learn more.
+            </P>
           </Success>
         )}
       </ContactForm>
-    </Column>
+    </Box>
   );
 };
 
@@ -166,18 +163,20 @@ const Group = styled.div`
 `;
 
 const Success = styled.div`
-  background: rgba(${({ theme }) => hexToRgb(theme.Colors.Green)}, 0.5);
-  border: 1px solid ${({ theme }) => theme.Colors.Green};
-  border-radius: 4px;
-  padding: ${({ theme }) => theme.Spacings.FontSpace02};
+  ${({ theme }) => css`
+    background: rgba(${hexToRgb(theme.Colors.Green)}, 0.5);
+    border: 1px solid ${theme.Colors.Green};
+    border-radius: 4px;
+    padding: ${theme.Spacings.FontSpace02};
+  `}
 `;
 
 const Error = styled.div`
-  background: rgba(${({ theme }) => hexToRgb(theme.Colors.Red)}, 0.5);
-  color: ${({ theme }) => theme.Colors.Red};
-  border: 1px solid ${({ theme }) => theme.Colors.Red};
-  padding: ${({ theme }) => theme.Spacings.FontSpace02};
-  margin-top: ${({ theme }) => theme.Spacings.StaticSpace03};
+  ${({ theme }) => css`
+    background: rgba(${hexToRgb(theme.Colors.Red)}, 0.5);
+    color: ${theme.Colors.Red};
+    border: 1px solid ${theme.Colors.Red};
+    padding: ${theme.Spacings.FontSpace02};
+    margin-top: ${theme.Spacings.StaticSpace03};
+  `}
 `;
-
-export default Contact;

@@ -2,14 +2,13 @@ import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 
-import { Box } from '@components/containers/Box';
-import { Column } from '@components/containers/Column';
+import { Box } from '@components/boxes/Box';
 import { H1, H3, P } from '@components/text/Text';
 
-import styled, { css } from '@theme/styled';
+import { css, styled } from '@theme/styled';
 import { minMediaQuery } from '@theme/utils';
 
-const Hero: FC = () => {
+export const Hero: FC = () => {
   const hero = useStaticQuery<GatsbyTypes.HomepageHeroImageQuery>(graphql`
     query HomepageHeroImage {
       file(
@@ -31,7 +30,7 @@ const Hero: FC = () => {
         alt="homepage-hero"
         fluid={hero?.file?.childImageSharp?.fluid}
       />
-      <Tagline justifyContent="center" variant="flex">
+      <Tagline justifyContent="center" variant="column">
         <Box flexGrow={0} variant="flexItem">
           <H1 lineHeight={['41px', '51px', '64px']} m="auto">
             We are a social media agency
@@ -55,7 +54,8 @@ const Container = styled(Box)`
   font-size: 0;
 `;
 
-const Tagline = styled(Column)`
+const Tagline = styled(Box)`
+  display: flex;
   color: ${({ theme }) => theme.Colors.White};
 
   ${minMediaQuery.Medium(css`
@@ -68,5 +68,3 @@ const Tagline = styled(Column)`
     text-align: center;
   `)};
 `;
-
-export default Hero;

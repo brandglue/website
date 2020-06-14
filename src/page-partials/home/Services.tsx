@@ -1,9 +1,8 @@
 import React, { FC } from 'react';
 
-import { Box } from '@components/containers/Box';
-import { Column } from '@components/containers/Column';
-import NavTextLink from '@components/links/NavTextLink';
-import { P } from '@components/text/Text';
+import { Box } from '@components/boxes/Box';
+import { NavLink } from '@components/links/NavLink';
+import { H2, P } from '@components/text/Text';
 import { Routes } from '@constants/routes';
 import CommunityManagement from '@icons/CommunityManagement';
 import ContentStrategy from '@icons/ContentStrategy';
@@ -14,15 +13,14 @@ import NewsfeedOptimization from '@icons/NewsfeedOptimization';
 import PaidAdvertising from '@icons/PaidAdvertising';
 import SocialStrategy from '@icons/SocialStrategy';
 import TargetAudiencePersonas from '@icons/TargetAudiencePersonas';
-import { SectionTitle } from '@components/sections/SectionTitle';
-import styled, { css } from '@theme/styled';
+import { css, styled } from '@theme/styled';
 import { hexToRgb, minMediaQuery } from '@theme/utils';
 
 export const Services: FC = () => {
   return (
     <Box borderBottom="50px solid" borderColor="Blue">
-      <Column py={7}>
-        <SectionTitle>What we do for you</SectionTitle>
+      <Box py={7} variant="column">
+        <H2>What we do for you</H2>
         <P mb={6}>
           <strong>The world of Social Media is getting bigger daily.</strong>{' '}
           And with this, so are all the ways you can connect with your audience,
@@ -43,9 +41,7 @@ export const Services: FC = () => {
                 Insert a sentence of text here describing this service and why
                 it matters
               </P>
-              <NavTextLink to={`/${Routes.Services}`}>
-                Learn more &gt;
-              </NavTextLink>
+              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
             </GridText>
           </GridItem>
           <GridItem>
@@ -58,9 +54,7 @@ export const Services: FC = () => {
                 Insert a sentence of text here describing this service and why
                 it matters
               </P>
-              <NavTextLink to={`/${Routes.Services}`}>
-                Learn more &gt;
-              </NavTextLink>
+              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
             </GridText>
           </GridItem>
           <GridItem>
@@ -73,9 +67,7 @@ export const Services: FC = () => {
                 Insert a sentence of text here describing this service and why
                 it matters
               </P>
-              <NavTextLink to={`/${Routes.Services}`}>
-                Learn more &gt;
-              </NavTextLink>
+              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
             </GridText>
           </GridItem>
           <GridItem>
@@ -88,9 +80,7 @@ export const Services: FC = () => {
                 Insert a sentence of text here describing this service and why
                 it matters
               </P>
-              <NavTextLink to={`/${Routes.Services}`}>
-                Learn more &gt;
-              </NavTextLink>
+              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
             </GridText>
           </GridItem>
           <GridItem>
@@ -103,9 +93,7 @@ export const Services: FC = () => {
                 Insert a sentence of text here describing this service and why
                 it matters
               </P>
-              <NavTextLink to={`/${Routes.Services}`}>
-                Learn more &gt;
-              </NavTextLink>
+              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
             </GridText>
           </GridItem>
           <GridItem>
@@ -118,9 +106,7 @@ export const Services: FC = () => {
                 Insert a sentence of text here describing this service and why
                 it matters
               </P>
-              <NavTextLink to={`/${Routes.Services}`}>
-                Learn more &gt;
-              </NavTextLink>
+              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
             </GridText>
           </GridItem>
           <GridItem>
@@ -133,9 +119,7 @@ export const Services: FC = () => {
                 Insert a sentence of text here describing this service and why
                 it matters
               </P>
-              <NavTextLink to={`/${Routes.Services}`}>
-                Learn more &gt;
-              </NavTextLink>
+              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
             </GridText>
           </GridItem>
           <GridItem>
@@ -148,9 +132,7 @@ export const Services: FC = () => {
                 Insert a sentence of text here describing this service and why
                 it matters
               </P>
-              <NavTextLink to={`/${Routes.Services}`}>
-                Learn more &gt;
-              </NavTextLink>
+              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
             </GridText>
           </GridItem>
           <GridItem>
@@ -163,13 +145,11 @@ export const Services: FC = () => {
                 Insert a sentence of text here describing this service and why
                 it matters
               </P>
-              <NavTextLink to={`/${Routes.Services}`}>
-                Learn more &gt;
-              </NavTextLink>
+              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
             </GridText>
           </GridItem>
         </Grid>
-      </Column>
+      </Box>
     </Box>
   );
 };
@@ -188,53 +168,54 @@ const Grid = styled.div`
 `;
 
 const GridItem = styled.div`
-  display: flex;
-  padding: ${({ theme }) => theme.space[5]}px;
+  ${({ theme }) => css`
+    display: flex;
+    padding: ${theme.space[5]}px;
 
-  ${minMediaQuery.Medium(css`
-    min-height: 200px;
-    border: 1px solid transparent;
-    border-top: 1px solid ${({ theme }) => theme.Colors.Gray00};
-    border-left: 1px solid ${({ theme }) => theme.Colors.Gray00};
-    &:nth-child(-n + 2) {
-      border-top: 1px solid ${({ theme }) => theme.Colors.Gray00};
-    }
-    &:nth-child(odd) {
-      border-left: 1px solid ${({ theme }) => theme.Colors.Gray00};
-    }
-    &:nth-child(-n + 3) {
-      border-top: 1px solid transparent;
-    }
-    &:first-child,
-    &:nth-child(3n + 1) {
-      border-left: 1px solid transparent;
-    }
-
-    ${NavTextLink} {
-      visibility: hidden;
-      opacity: 0;
-    }
-
-    &:hover {
-      cursor: pointer;
-      background-color: ${({ theme }) => theme.Colors.White};
-      border: 1px solid ${({ theme }) => theme.Colors.Blue};
-      box-shadow: 0 0 1px 1px
-          rgba(${({ theme }) => hexToRgb(theme.Colors.Blue)}, 0.3),
-        0 0 15px 0 rgba(${({ theme }) => hexToRgb(theme.Colors.Gray01)}, 0.2);
-      border-radius: 3px;
-      transform: scale(1.025);
-      transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
-        transform 0.3s ease-in-out;
-      z-index: 1;
-
-      ${NavTextLink} {
-        visibility: visible;
-        opacity: 1;
-        transition: opacity 0.3s ease-in-out;
+    ${minMediaQuery.Medium(css`
+      min-height: 200px;
+      border: 1px solid transparent;
+      border-top: 1px solid ${theme.Colors.Gray00};
+      border-left: 1px solid ${theme.Colors.Gray00};
+      &:nth-child(-n + 2) {
+        border-top: 1px solid ${theme.Colors.Gray00};
       }
-    }
-  `)}
+      &:nth-child(odd) {
+        border-left: 1px solid ${theme.Colors.Gray00};
+      }
+      &:nth-child(-n + 3) {
+        border-top: 1px solid transparent;
+      }
+      &:first-child,
+      &:nth-child(3n + 1) {
+        border-left: 1px solid transparent;
+      }
+
+      ${NavLink} {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: ${theme.Colors.White};
+        border: 1px solid ${theme.Colors.Blue};
+        box-shadow: 0 0 1px 1px rgba(${hexToRgb(theme.Colors.Blue)}, 0.3),
+          0 0 15px 0 rgba(${hexToRgb(theme.Colors.Gray01)}, 0.2);
+        border-radius: 3px;
+        transform: scale(1.025);
+        transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+          transform 0.3s ease-in-out;
+        z-index: 1;
+
+        ${NavLink} {
+          visibility: visible;
+          opacity: 1;
+          transition: opacity 0.3s ease-in-out;
+        }
+      }
+    `)}
+  `}
 `;
 
 const GridIcon = styled.div`
@@ -257,5 +238,3 @@ const GridLabel = styled(P)`
     margin-top: ${({ theme }) => theme.space[2]}px;
   }
 `;
-
-export default Services;

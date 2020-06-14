@@ -13,7 +13,6 @@ export const GlobalStyles = createGlobalStyle`
       font-family: ${theme.FontFamilies.Primary};
       line-height: 1.5;
       margin: 0;
-      ${fluidFontSize.Baseline()}
     `};
   }
 

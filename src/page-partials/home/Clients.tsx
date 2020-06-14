@@ -2,8 +2,7 @@ import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 
-import { Column } from '@components/containers/Column';
-import { Box } from '@components/containers/Box';
+import { Box } from '@components/boxes/Box';
 
 export const Clients: FC = () => {
   const images = useStaticQuery<GatsbyTypes.ClientLogosQuery>(graphql`
@@ -72,7 +71,7 @@ export const Clients: FC = () => {
   `);
 
   return (
-    <Column py={6}>
+    <Box py={6} variant="column">
       <Box
         alignItems="center"
         gridGap={6}
@@ -95,8 +94,6 @@ export const Clients: FC = () => {
         />
         <Image alt="youtube" fluid={images?.youtube?.childImageSharp?.fluid} />
       </Box>
-    </Column>
+    </Box>
   );
 };
-
-export default Clients;

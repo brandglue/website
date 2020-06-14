@@ -4,10 +4,10 @@ const breakpoints = ['480px', '768px', '1024px', '1920px', '2560px'];
 const fontSizes = [13, 16, 20, 26, 33, 42, 53, 68, 86];
 const lineHeights = [22, 27, 33, 41, 51, 64, 84, 106, 133];
 const space = [0, 4, 7, 11, 17, 27, 44, 70, 113];
+
 const maxColWidth = 1250;
 const hzColPadding = 17;
 const maxPageWidth = 2560;
-// const space = [0, 2, 4, 8, 16, 32, 64, 128, 256, 512];
 
 export enum Breakpoints {
   Zero = 0,

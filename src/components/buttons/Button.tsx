@@ -1,20 +1,27 @@
 import React, { FC } from 'react';
+import {
+  border,
+  color,
+  flexbox,
+  grid,
+  layout,
+  position,
+  space,
+  typography,
+  variant,
+} from 'styled-system';
+import fluid from 'fluid-system';
 
-import styled from '@theme/styled';
+import { customText, StyledSystemProps } from '@src/theme/systemProps';
+import { styled } from '@theme/styled';
 
 interface IOwnProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  to?: string; // allow Button styling to be used for links via SC's "as" prop
+  // allow Button styling to be used for links via styled-component's "as" prop
+  to?: string;
 }
 
-export const Button: FC<IOwnProps> = (props) => (
-  <StyledButton
-    className={props.className}
-    disabled={props.disabled}
-    onClick={props.onClick}
-    type={props.type}
-  >
-    {props.children}
-  </StyledButton>
+export const Button: FC<IOwnProps & StyledSystemProps> = (props) => (
+  <StyledButton {...props}>{props.children}</StyledButton>
 );
 
 Button.defaultProps = {
@@ -54,6 +61,78 @@ const StyledButton = styled.button`
     pointer-events: none;
     cursor: default;
   }
-`;
 
-export default Button;
+${({ theme }) =>
+  variant({
+    variants: {
+      primary: {
+        'maxWidth': '300px',
+        'background': `${theme.Colors.DarkBlue}`,
+        'color': `${theme.Colors.White}`,
+        'border': '1px solid transparent',
+        'borderRadius': '4px',
+
+        '&:hover': {
+          background: `${theme.Colors.DarkBlue}`,
+          border: '1px solid transparent',
+          opacity: 0.9,
+        },
+
+        '&:active': {
+          background: `${theme.Colors.DarkBlue}`,
+          border: `1px solid ${theme.Colors.Blue}`,
+        },
+
+        '&:focus': {
+          background: `${theme.Colors.DarkBlue}`,
+          border: `1px solid ${theme.Colors.Blue}`,
+        },
+
+        '&[disabled]': {
+          background: `${theme.Colors.Gray02}`,
+          pointerEvents: 'none',
+          cursor: 'default',
+        },
+      },
+      outline: {
+        'maxWidth': '250px',
+        'color': 'currentColor',
+        'border': '1px solid currentColor',
+        'borderRadius': '4px',
+        'textDecoration': 'none',
+
+        '&:hover': {
+          border: '1px solid currentColor',
+          textDecoration: 'none',
+        },
+
+        '&:active': {
+          border: '1px solid currentColor',
+          textDecoration: 'none',
+        },
+
+        '&:focus': {
+          border: '1px solid currentColor',
+          textDecoration: 'none',
+        },
+
+        '&[disabled]': {
+          background: `${theme.Colors.Gray02}`,
+          border: `1px solid ${theme.Colors.Gray02}`,
+          pointerEvents: 'none',
+          cursor: 'default',
+        },
+      },
+    },
+  })}
+
+  ${border}
+  ${color}
+  ${flexbox}
+  ${grid}
+  ${layout}
+  ${position}
+  ${space}
+  ${fluid(typography)}
+  ${customText}
+`;

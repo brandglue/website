@@ -5,14 +5,15 @@ import {
   SpaceProps,
   typography,
   TypographyProps,
+  variant,
 } from 'styled-system';
 import fluid from 'fluid-system';
 
-import { customTextProps, ICustomTextProps } from '@theme/customProps';
-import styled from '@theme/styled';
+import { customText, StyledSystemProps } from '@src/theme/systemProps';
+import { styled } from '@theme/styled';
 
 type StyledSystemTextProps = ColorProps & SpaceProps & TypographyProps;
-type StyledSystemHeadingProps = StyledSystemTextProps & ICustomTextProps;
+type StyledSystemHeadingProps = StyledSystemProps;
 
 const standardFontSizes = [1, null, null, null, 2, 3];
 const standardLineHeights = [1, null, null, null, 2, 3];
@@ -21,7 +22,7 @@ const H1 = styled.h1<StyledSystemHeadingProps>`
   ${color}
   ${space}
   ${fluid(typography)}
-  ${customTextProps}
+  ${customText}
 `;
 
 H1.defaultProps = {
@@ -30,22 +31,34 @@ H1.defaultProps = {
 };
 
 const H2 = styled.h2<StyledSystemHeadingProps>`
+  ${({ theme }) =>
+    variant({
+      variants: {
+        sectionTitle: {
+          color: `${theme.Colors.DarkBlue}`,
+          textTransform: 'uppercase',
+          whiteSpace: 'pre-wrap',
+        },
+      },
+    })}
+
   ${color}
   ${space}
   ${fluid(typography)}
-  ${customTextProps}
+  ${customText}
 `;
 
 H2.defaultProps = {
   fontSize: [3, null, 4, 5, 6, 7],
   lineHeight: [3, null, 3, 4, 5, 6],
+  variant: 'sectionTitle',
 };
 
 const H3 = styled.h3<StyledSystemHeadingProps>`
   ${color}
   ${space}
   ${fluid(typography)}
-  ${customTextProps}
+  ${customText}
 `;
 
 H3.defaultProps = {
@@ -57,7 +70,7 @@ const H4 = styled.h4<StyledSystemHeadingProps>`
   ${color}
   ${space}
   ${fluid(typography)}
-  ${customTextProps}
+  ${customText}
 `;
 
 H4.defaultProps = {
@@ -70,7 +83,7 @@ const H5 = styled.h5<StyledSystemHeadingProps>`
   ${color}
   ${space}
   ${fluid(typography)}
-  ${customTextProps}
+  ${customText}
 `;
 
 H5.defaultProps = {

@@ -4,9 +4,7 @@ import Image from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
-import { Box } from '@components/containers/Box';
-import { Column } from '@components/containers/Column';
-import { SectionTitle } from '@components/sections/SectionTitle';
+import { Box } from '@components/boxes/Box';
 import {
   Em,
   H1,
@@ -21,7 +19,7 @@ import {
   Ul,
 } from '@components/text/Text';
 import { useBlogHeroImage } from '@hooks/queries/useBlogHeroImage';
-import styled from '@theme/styled';
+import { styled } from '@theme/styled';
 
 interface IProps {
   data: GatsbyTypes.BlogPostQuery;
@@ -53,8 +51,8 @@ const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
       }}
     >
       <Image alt="blog-hero" fluid={blogHeroImage?.fluid} />
-      <Column py={7}>
-        <SectionTitle>{frontmatter.title}</SectionTitle>
+      <Box py={7} variant="column">
+        <H2>{frontmatter.title}</H2>
         <PostHeader variant="flex">
           <span>
             <Author>{frontmatter.author}</Author>
@@ -73,7 +71,7 @@ const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
           />
           <MDXRenderer>{body}</MDXRenderer>
         </div>
-      </Column>
+      </Box>
     </MDXProvider>
   );
 };
