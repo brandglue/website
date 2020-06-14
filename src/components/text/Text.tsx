@@ -14,16 +14,8 @@ import styled from '@theme/styled';
 type StyledSystemTextProps = ColorProps & SpaceProps & TypographyProps;
 type StyledSystemHeadingProps = StyledSystemTextProps & ICustomTextProps;
 
-const P = styled.p<StyledSystemTextProps>`
-  ${color}
-  ${space}
-  ${fluid(typography)}
-`;
-
-P.defaultProps = {
-  fontSize: [1, null, null, null, 2, 3],
-  lineHeight: [1, null, null, null, 2, 3],
-};
+const standardFontSizes = [1, null, null, null, 2, 3];
+const standardLineHeights = [1, null, null, null, 2, 3];
 
 const H1 = styled.h1<StyledSystemHeadingProps>`
   ${color}
@@ -86,4 +78,72 @@ H5.defaultProps = {
   lineHeight: [1, null, null, null, 3, 4],
 };
 
-export { H1, H2, H3, H4, H5, P };
+const P = styled.p<StyledSystemTextProps>`
+  ${color}
+  ${space}
+  ${fluid(typography)}
+`;
+
+P.defaultProps = {
+  fontSize: standardFontSizes,
+  lineHeight: standardLineHeights,
+};
+
+const Ul = styled.ul<StyledSystemTextProps>`
+  list-style: disc;
+  ${color}
+  ${space}
+  ${fluid(typography)}
+`;
+
+Ul.defaultProps = {
+  fontSize: standardFontSizes,
+  lineHeight: standardLineHeights,
+};
+
+const Ol = styled.ol<StyledSystemTextProps>`
+  list-style: decimal;
+  ${color}
+  ${space}
+  ${fluid(typography)}
+`;
+
+Ol.defaultProps = {
+  fontSize: standardFontSizes,
+  lineHeight: standardLineHeights,
+};
+
+const Li = styled.li<StyledSystemTextProps>`
+  ${color}
+  ${space}
+  ${fluid(typography)}
+`;
+
+Li.defaultProps = {
+  fontSize: standardFontSizes,
+  lineHeight: standardLineHeights,
+};
+
+const Em = styled.em<StyledSystemTextProps>`
+  ${color}
+  ${space}
+  ${fluid(typography)}
+`;
+
+Em.defaultProps = {
+  fontSize: standardFontSizes,
+  lineHeight: standardLineHeights,
+};
+
+const Strong = styled.strong<StyledSystemTextProps>`
+  ${color}
+  ${space}
+  ${fluid(typography)}
+`;
+
+Strong.defaultProps = {
+  fontSize: standardFontSizes,
+  lineHeight: standardLineHeights,
+};
+
+export { H1, H2, H3, H4, H5, P, Ul, Ol, Li, Em, Strong };

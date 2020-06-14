@@ -1,30 +1,59 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { MDXProvider } from '@mdx-js/react';
 
 import { Box } from '@components/containers/Box';
 import { Column } from '@components/containers/Column';
 import { SectionTitle } from '@components/sections/SectionTitle';
+import {
+  Em,
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  Li,
+  Ol,
+  P,
+  Strong,
+  Ul,
+} from '@components/text/Text';
 import { useBlogHeroImage } from '@hooks/queries/useBlogHeroImage';
 import styled from '@theme/styled';
-import { minMediaQuery } from '@theme/utils';
+
 interface IProps {
   data: GatsbyTypes.BlogPostQuery;
 }
 
-const BlogPost: React.FC<IProps> = ({ data }) => {
+const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
   const blogHeroImage = useBlogHeroImage();
 
-  if (!data.markdownRemark?.frontmatter || !data.markdownRemark.html) {
+  if (!mdx?.frontmatter || !mdx.body) {
     return null;
   }
 
-  const { frontmatter, html } = data.markdownRemark;
+  const { body, frontmatter } = mdx;
 
   return (
-    <>
+    <MDXProvider
+      components={{
+        em: Em,
+        h1: H1,
+        h2: H2,
+        h3: H3,
+        h4: H4,
+        h5: H5,
+        li: Li,
+        ol: Ol,
+        p: P,
+        strong: Strong,
+        ul: Ul,
+      }}
+    >
       <Image alt="blog-hero" fluid={blogHeroImage?.fluid} />
-      <Column>
+      <Column py={7}>
         <SectionTitle>{frontmatter.title}</SectionTitle>
         <PostHeader variant="flex">
           <span>
@@ -42,10 +71,10 @@ const BlogPost: React.FC<IProps> = ({ data }) => {
             alt=""
             fluid={frontmatter.cover_image?.childImageSharp?.fluid}
           />
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+          <MDXRenderer>{body}</MDXRenderer>
         </div>
       </Column>
-    </>
+    </MDXProvider>
   );
 };
 
@@ -77,8 +106,8 @@ export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPost($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      html
+    mdx(frontmatter: { slug: { eq: $slug } }) {
+      body
       frontmatter {
         author
         categories

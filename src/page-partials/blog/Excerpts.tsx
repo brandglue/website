@@ -6,7 +6,7 @@ export const Excerpts: React.FC = () => {
     GatsbyTypes.AllBlogPostsQuery
   >(graphql`
     query AllBlogPosts {
-      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
         edges {
           node {
             excerpt(pruneLength: 400)
@@ -22,7 +22,7 @@ export const Excerpts: React.FC = () => {
     }
   `);
 
-  const posts = allBlogPostsQuery?.allMarkdownRemark?.edges;
+  const posts = allBlogPostsQuery?.allMdx?.edges;
 
   return (
     <>

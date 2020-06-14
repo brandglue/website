@@ -7,12 +7,32 @@ module.exports = {
     siteUrl: 'https://brandglue.netlify.app',
   },
   plugins: [
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
     'gatsby-plugin-netlify-cms',
-    'gatsby-transformer-remark',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-styled-components',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-mdx',
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        extensions: ['.mdx', '.md'],
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'blog-posts',
+        path: `${__dirname}/src/content/blog`,
+      },
+    },
     {
       resolve: 'gatsby-plugin-root-import',
       options: {
@@ -41,20 +61,6 @@ module.exports = {
         emitPluginDocuments: {
           '__generated__/gatsby-plugin-documents.graphql': true,
         },
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: 'blog-posts',
-        path: `${__dirname}/src/content/blog`,
       },
     },
   ],
