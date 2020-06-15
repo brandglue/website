@@ -1,24 +1,13 @@
-import {
-  color,
-  ColorProps,
-  space,
-  SpaceProps,
-  typography,
-  TypographyProps,
-  variant,
-} from 'styled-system';
+import { color, space, typography, variant } from 'styled-system';
 import fluid from 'fluid-system';
 
-import { customText, StyledSystemProps } from '@src/theme/systemProps';
-import { styled } from '@theme/styled';
-
-type StyledSystemTextProps = ColorProps & SpaceProps & TypographyProps;
-type StyledSystemHeadingProps = StyledSystemProps;
+import { customText, StyledSystemTextProps } from '@src/theme/systemProps';
+import { styled, css } from '@theme/styled';
 
 const standardFontSizes = [1, null, null, null, 2, 3];
 const standardLineHeights = [1, null, null, null, 2, 3];
 
-export const H1 = styled.h1<StyledSystemHeadingProps>`
+export const H1 = styled.h1<StyledSystemTextProps>`
   ${color}
   ${space}
   ${fluid(typography)}
@@ -30,7 +19,7 @@ H1.defaultProps = {
   lineHeight: [4, null, 4, 5, 6, 7],
 };
 
-export const H2 = styled.h2<StyledSystemHeadingProps>`
+export const H2 = styled.h2<StyledSystemTextProps>`
   ${({ theme }) =>
     variant({
       variants: {
@@ -54,7 +43,7 @@ H2.defaultProps = {
   variant: 'sectionTitle',
 };
 
-export const H3 = styled.h3<StyledSystemHeadingProps>`
+export const H3 = styled.h3<StyledSystemTextProps>`
   ${color}
   ${space}
   ${fluid(typography)}
@@ -66,7 +55,7 @@ H3.defaultProps = {
   lineHeight: [2, null, 3, 4, 5, 6],
 };
 
-export const H4 = styled.h4<StyledSystemHeadingProps>`
+export const H4 = styled.h4<StyledSystemTextProps>`
   ${color}
   ${space}
   ${fluid(typography)}
@@ -78,7 +67,7 @@ H4.defaultProps = {
   lineHeight: [1, null, null, 2, 3, 4],
 };
 
-export const H5 = styled.h5<StyledSystemHeadingProps>`
+export const H5 = styled.h5<StyledSystemTextProps>`
   text-transform: uppercase;
   ${color}
   ${space}
@@ -102,6 +91,17 @@ P.defaultProps = {
   lineHeight: standardLineHeights,
 };
 
+export const Span = styled.span<StyledSystemTextProps>`
+  ${color}
+  ${space}
+  ${fluid(typography)}
+`;
+
+Span.defaultProps = {
+  fontSize: standardFontSizes,
+  lineHeight: standardLineHeights,
+};
+
 export const Ul = styled.ul<StyledSystemTextProps>`
   list-style: disc;
   ${color}
@@ -116,6 +116,8 @@ Ul.defaultProps = {
 
 export const Ol = styled.ol<StyledSystemTextProps>`
   list-style: decimal;
+  margin: ${({ theme }) => theme.spacings.pixelSpace05};
+
   ${color}
   ${space}
   ${fluid(typography)}
@@ -127,6 +129,8 @@ Ol.defaultProps = {
 };
 
 export const Li = styled.li<StyledSystemTextProps>`
+  margin-bottom: ${({ theme }) => theme.spacings.pixelSpace05};
+
   ${color}
   ${space}
   ${fluid(typography)}
@@ -138,6 +142,8 @@ Li.defaultProps = {
 };
 
 export const Em = styled.em<StyledSystemTextProps>`
+  font-style: italic;
+
   ${color}
   ${space}
   ${fluid(typography)}
@@ -149,6 +155,8 @@ Em.defaultProps = {
 };
 
 export const Strong = styled.strong<StyledSystemTextProps>`
+  font-weight: 700;
+
   ${color}
   ${space}
   ${fluid(typography)}

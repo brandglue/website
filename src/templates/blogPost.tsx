@@ -15,17 +15,18 @@ import {
   Li,
   Ol,
   P,
+  Span,
   Strong,
   Ul,
 } from '@components/text/Text';
 import { useBlogHeroImage } from '@hooks/queries/useBlogHeroImage';
-import { styled } from '@theme/styled';
+import { styled, css } from '@theme/styled';
 
 interface IProps {
   data: GatsbyTypes.BlogPostQuery;
 }
 
-const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
+export const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
   const blogHeroImage = useBlogHeroImage();
 
   if (!mdx?.frontmatter || !mdx.body) {
@@ -55,52 +56,64 @@ const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
         <H2>{frontmatter.title}</H2>
         <PostHeader variant="flex">
           <span>
-            <Author>{frontmatter.author}</Author>
-            <Date>{frontmatter.date}</Date>
+            <Author fontSize={[2, null, null, null, 3, 4]}>
+              {frontmatter.author}
+            </Author>
+            <Date fontSize={[2, null, null, null, 3, 4]}>
+              {frontmatter.date}
+            </Date>
           </span>
-          <span>
-            {frontmatter.categories?.map((category) => {
-              return <Category key={category}>{category}</Category>;
-            })}
-          </span>
+          {frontmatter.categories?.map((category) => {
+            return <Category key={category}>{category}</Category>;
+          })}
         </PostHeader>
-        <div>
+        <>
           <Image
             alt=""
             fluid={frontmatter.cover_image?.childImageSharp?.fluid}
           />
           <MDXRenderer>{body}</MDXRenderer>
-        </div>
+        </>
       </Box>
     </MDXProvider>
   );
 };
 
 const PostHeader = styled(Box)`
-  justify-content: space-between;
-  border-top: 4px solid ${({ theme }) => theme.colors.blue};
-  padding-top: ${({ theme }) => theme.space[3]}px;
+  ${({ theme }) => css`
+    justify-content: space-between;
+    border-top: 4px solid ${theme.colors.blue};
+    padding-top: ${theme.spacings.pixelSpace03};
+    margin-top: ${theme.spacings.pixelSpace03};
+  `}
 `;
 
-const Author = styled.span`
-  color: ${({ theme }) => theme.colors.gold};
-  text-transform: uppercase;
-  border-right: 1px solid ${({ theme }) => theme.colors.gray02};
-  padding-right: ${({ theme }) => theme.space[3]}px;
-  margin-right: ${({ theme }) => theme.space[3]}px;
+const Author = styled(Span)`
+  ${({ theme }) => css`
+    color: ${theme.colors.gold};
+    text-transform: uppercase;
+    border-right: 1px solid ${theme.colors.gray02};
+    padding-right: ${theme.spacings.pixelSpace03};
+    margin-right: ${theme.spacings.pixelSpace03};
+  `}
 `;
 
-const Date = styled.span`
-  text-transform: uppercase;
+const Date = styled(Span)`
+  ${({ theme }) => css`
+    text-transform: uppercase;
+    color: ${theme.colors.gray02};
+  `}
 `;
 
-const Category = styled.span`
-  background: ${({ theme }) => theme.colors.blue};
-  color: ${({ theme }) => theme.colors.white};
-  padding: ${({ theme }) => theme.space[1]}px;
+const Category = styled(Span)`
+  ${({ theme }) => css`
+    background: ${theme.colors.blue};
+    color: ${theme.colors.white};
+    padding: ${theme.spacings.pixelSpace01} ${theme.spacings.pixelSpace02};
+  `}
 `;
 
-export default BlogPost;
+export default BlogPost; // needed for gatsby-node
 
 export const pageQuery = graphql`
   query BlogPost($slug: String!) {

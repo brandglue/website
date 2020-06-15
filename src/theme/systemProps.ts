@@ -21,14 +21,18 @@ interface ICustomTextProps {
     | 'break-spaces';
 }
 
-export type StyledSystemProps = BorderProps &
-  ColorProps &
+export type StyledSystemTextProps = ColorProps &
+  SpaceProps &
+  TypographyProps &
+  ICustomTextProps & { variant?: string };
+
+export type StyledSystemLayoutProps = BorderProps &
   FlexboxProps &
   GridProps &
   LayoutProps &
-  PositionProps &
-  SpaceProps &
-  TypographyProps & { variant?: string } & ICustomTextProps;
+  PositionProps & { variant?: string };
+
+export type StyledSystemProps = StyledSystemTextProps & StyledSystemLayoutProps;
 
 export const customText = system({
   textTransform: true,
