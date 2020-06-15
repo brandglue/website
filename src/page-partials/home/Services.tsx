@@ -16,6 +16,79 @@ import TargetAudiencePersonas from '@icons/TargetAudiencePersonas';
 import { css, styled } from '@theme/styled';
 import { hexToRgb, minMediaQuery } from '@theme/utils';
 
+interface IGridItems {
+  icon: React.ReactElement;
+  label: string;
+  description: string;
+  to: Routes;
+}
+
+const gridItems: IGridItems[] = [
+  {
+    icon: <SocialStrategy />,
+    label: 'Social Strategy',
+    description:
+      'Insert a sentence of text here describing this service and why it matters',
+    to: Routes.Services,
+  },
+  {
+    icon: <TargetAudiencePersonas />,
+    label: 'Target Audience Personas',
+    description:
+      'Insert a sentence of text here describing this service and why it matters',
+    to: Routes.Services,
+  },
+  {
+    icon: <PaidAdvertising />,
+    label: 'Paid Advertising',
+    description:
+      'Insert a sentence of text here describing this service and why it matters',
+    to: Routes.Services,
+  },
+  {
+    icon: <ContentStrategy />,
+    label: 'Content Strategy',
+    description:
+      'Insert a sentence of text here describing this service and why it matters',
+    to: Routes.Services,
+  },
+  {
+    icon: <GraphicDesign />,
+    label: 'Graphic Design',
+    description:
+      'Insert a sentence of text here describing this service and why it matters',
+    to: Routes.Services,
+  },
+  {
+    icon: <CommunityManagement />,
+    label: 'Community Management',
+    description:
+      'Insert a sentence of text here describing this service and why it matters',
+    to: Routes.Services,
+  },
+  {
+    icon: <NewsfeedOptimization />,
+    label: 'Newsfeed Optimization',
+    description:
+      'Insert a sentence of text here describing this service and why it matters',
+    to: Routes.Services,
+  },
+  {
+    icon: <CustomerService />,
+    label: 'Customer Service',
+    description:
+      'Insert a sentence of text here describing this service and why it matters',
+    to: Routes.Services,
+  },
+  {
+    icon: <DataAnalysis />,
+    label: 'Data Analysis',
+    description:
+      'Insert a sentence of text here describing this service and why it matters',
+    to: Routes.Services,
+  },
+];
+
 export const Services: FC = () => {
   return (
     <Box borderBottom="50px solid" borderColor="Blue">
@@ -31,123 +104,20 @@ export const Services: FC = () => {
           social sphere. <strong>Here are the ways we do it:</strong>
         </P>
         <Grid>
-          <GridItem>
-            <GridIcon>
-              <SocialStrategy />
-            </GridIcon>
-            <GridText>
-              <GridLabel>Social Strategy</GridLabel>
-              <P>
-                Insert a sentence of text here describing this service and why
-                it matters
-              </P>
-              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
-            </GridText>
-          </GridItem>
-          <GridItem>
-            <GridIcon>
-              <TargetAudiencePersonas />
-            </GridIcon>
-            <GridText>
-              <GridLabel>Target Audience Personas</GridLabel>
-              <P>
-                Insert a sentence of text here describing this service and why
-                it matters
-              </P>
-              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
-            </GridText>
-          </GridItem>
-          <GridItem>
-            <GridIcon>
-              <PaidAdvertising />
-            </GridIcon>
-            <GridText>
-              <GridLabel>Paid Advertising</GridLabel>
-              <P>
-                Insert a sentence of text here describing this service and why
-                it matters
-              </P>
-              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
-            </GridText>
-          </GridItem>
-          <GridItem>
-            <GridIcon>
-              <ContentStrategy />
-            </GridIcon>
-            <GridText>
-              <GridLabel>Content Strategy</GridLabel>
-              <P>
-                Insert a sentence of text here describing this service and why
-                it matters
-              </P>
-              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
-            </GridText>
-          </GridItem>
-          <GridItem>
-            <GridIcon>
-              <GraphicDesign />
-            </GridIcon>
-            <GridText>
-              <GridLabel>Graphic Design</GridLabel>
-              <P>
-                Insert a sentence of text here describing this service and why
-                it matters
-              </P>
-              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
-            </GridText>
-          </GridItem>
-          <GridItem>
-            <GridIcon>
-              <CommunityManagement />
-            </GridIcon>
-            <GridText>
-              <GridLabel>Community Management</GridLabel>
-              <P>
-                Insert a sentence of text here describing this service and why
-                it matters
-              </P>
-              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
-            </GridText>
-          </GridItem>
-          <GridItem>
-            <GridIcon>
-              <NewsfeedOptimization />
-            </GridIcon>
-            <GridText>
-              <GridLabel>Newsfeed Optimization</GridLabel>
-              <P>
-                Insert a sentence of text here describing this service and why
-                it matters
-              </P>
-              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
-            </GridText>
-          </GridItem>
-          <GridItem>
-            <GridIcon>
-              <CustomerService />
-            </GridIcon>
-            <GridText>
-              <GridLabel>Customer Service</GridLabel>
-              <P>
-                Insert a sentence of text here describing this service and why
-                it matters
-              </P>
-              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
-            </GridText>
-          </GridItem>
-          <GridItem>
-            <GridIcon>
-              <DataAnalysis />
-            </GridIcon>
-            <GridText>
-              <GridLabel>Data Analysis</GridLabel>
-              <P>
-                Insert a sentence of text here describing this service and why
-                it matters
-              </P>
-              <NavLink to={`/${Routes.Services}`}>Learn more &gt;</NavLink>
-            </GridText>
-          </GridItem>
+          {gridItems.map((item) => {
+            return (
+              <GridItem key={item.label}>
+                <GridIcon>{item.icon}</GridIcon>
+                <GridText>
+                  <GridLabel>{item.label}</GridLabel>
+                  <P>{item.description}</P>
+                  <NavLink to={`/${item.to}`}>
+                    {'Learn more' + String.fromCharCode(62)}
+                  </NavLink>
+                </GridText>
+              </GridItem>
+            );
+          })}
         </Grid>
       </Box>
     </Box>
