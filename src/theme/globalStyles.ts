@@ -1,7 +1,6 @@
 import reset from 'styled-reset';
 
 import { createGlobalStyle, css } from '@theme/styled';
-import { fluidFontSize } from '@theme/utils';
 
 export const GlobalStyles = createGlobalStyle`
   ${reset}
