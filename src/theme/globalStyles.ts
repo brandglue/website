@@ -7,9 +7,9 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     ${({ theme }) => css`
-      background: ${theme.Colors.White};
-      color: ${theme.Colors.Black};
-      font-family: ${theme.FontFamilies.Primary};
+      background: ${theme.colors.white};
+      color: ${theme.colors.black};
+      font-family: ${theme.fontFamilies.primary};
       line-height: 1.5;
       margin: 0;
     `};
@@ -18,7 +18,7 @@ export const GlobalStyles = createGlobalStyle`
   /* basic resets for common tags */
   p, h1, h2, h3, h4, h5 {
     margin: 0;
-    margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace01};
+    margin-bottom: ${({ theme }) => theme.spacings.pixelSpace01};
   }
 
   *, *:before, *:after {

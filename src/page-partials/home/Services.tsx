@@ -159,11 +159,11 @@ const Grid = styled.div`
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace07};
+  margin-bottom: ${({ theme }) => theme.spacings.pixelSpace07};
 
   ${minMediaQuery.Medium(css`
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: ${({ theme }) => theme.Spacings.StaticSpace09};
+    margin-bottom: ${({ theme }) => theme.spacings.pixelSpace08};
   `)}
 `;
 
@@ -175,13 +175,13 @@ const GridItem = styled.div`
     ${minMediaQuery.Medium(css`
       min-height: 200px;
       border: 1px solid transparent;
-      border-top: 1px solid ${theme.Colors.Gray00};
-      border-left: 1px solid ${theme.Colors.Gray00};
+      border-top: 1px solid ${theme.colors.gray00};
+      border-left: 1px solid ${theme.colors.gray00};
       &:nth-child(-n + 2) {
-        border-top: 1px solid ${theme.Colors.Gray00};
+        border-top: 1px solid ${theme.colors.gray00};
       }
       &:nth-child(odd) {
-        border-left: 1px solid ${theme.Colors.Gray00};
+        border-left: 1px solid ${theme.colors.gray00};
       }
       &:nth-child(-n + 3) {
         border-top: 1px solid transparent;
@@ -198,10 +198,10 @@ const GridItem = styled.div`
 
       &:hover {
         cursor: pointer;
-        background-color: ${theme.Colors.White};
-        border: 1px solid ${theme.Colors.Blue};
-        box-shadow: 0 0 1px 1px rgba(${hexToRgb(theme.Colors.Blue)}, 0.3),
-          0 0 15px 0 rgba(${hexToRgb(theme.Colors.Gray01)}, 0.2);
+        background-color: ${theme.colors.white};
+        border: 1px solid ${theme.colors.blue};
+        box-shadow: 0 0 1px 1px rgba(${hexToRgb(theme.colors.blue)}, 0.3),
+          0 0 15px 0 rgba(${hexToRgb(theme.colors.gray01)}, 0.2);
         border-radius: 3px;
         transform: scale(1.025);
         transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
@@ -232,7 +232,7 @@ const GridLabel = styled(P)`
   &:after {
     content: '';
     display: block;
-    background: ${({ theme }) => theme.Colors.DarkBlue};
+    background: ${({ theme }) => theme.colors.darkBlue};
     height: 1px;
     width: 48px;
     margin-top: ${({ theme }) => theme.space[2]}px;

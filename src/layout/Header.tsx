@@ -108,18 +108,18 @@ const SmallDeviceMenu = styled.nav`
 const SmallDeviceLink = styled(NavLink)`
   ${({ theme }) => css`
     flex: 1 1 auto;
-    color: ${theme.Colors.Black};
+    color: ${theme.colors.black};
     text-transform: uppercase;
     padding: ${theme.space[3]}px;
-    border-right: 1px solid ${theme.Colors.Gray00};
+    border-right: 1px solid ${theme.colors.gray00};
 
     &:last-child {
       border: none;
     }
 
     &.isActive {
-      background: ${theme.Colors.Gold};
-      color: ${theme.Colors.White};
+      background: ${theme.colors.gold};
+      color: ${theme.colors.white};
     }
   `}
 `;
@@ -130,7 +130,7 @@ const LargeDeviceWrapper = styled.header`
     justify-content: space-between;
     padding: 0 ${theme.space[3]}px;
     margin: ${theme.space[4]}px 0;
-    max-width: ${theme.maxPageWidth}px;
+    max-width: ${theme.spacings.maxPageWidth}px;
   `}
 `;
 
@@ -143,19 +143,19 @@ const LargeDeviceMenu = styled.nav`
 
 const LargeDeviceLink = styled(NavLink)`
   ${({ theme }) => css`
-    color: ${theme.Colors.Black};
+    color: ${theme.colors.black};
     text-transform: uppercase;
     border-bottom: 2px solid transparent;
     padding: ${theme.space[3]}px;
     margin-right: ${theme.space[4]}px;
 
     &:hover {
-      border-bottom: 2px solid ${theme.Colors.Gold};
+      border-bottom: 2px solid ${theme.colors.gold};
     }
 
     &.isActive {
-      background: ${theme.Colors.Gold};
-      color: ${theme.Colors.White};
+      background: ${theme.colors.gold};
+      color: ${theme.colors.white};
     }
   `}
 `;

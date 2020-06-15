@@ -33,14 +33,14 @@ Input.defaultProps = {
 
 const StyledInput = styled.input`
   ${({ theme }) => css`
-    margin-bottom: ${theme.Spacings.StaticSpace01};
-    padding: ${theme.Spacings.FontSpace04};
-    color: ${theme.Colors.Black};
-    border: 1px solid ${theme.Colors.Gray02};
+    margin-bottom: ${theme.spacings.pixelSpace01};
+    padding: ${theme.spacings.emSpace04};
+    color: ${theme.colors.black};
+    border: 1px solid ${theme.colors.gray02};
 
     &:focus,
     &:active {
-      outline-color: ${({ theme }) => theme.Colors.DarkBlue};
+      outline-color: ${({ theme }) => theme.colors.darkBlue};
     }
   `}
 
@@ -64,14 +64,14 @@ const StyledTextArea = styled.textarea`
   ${({ theme }) => css`
     height: 100%;
     min-height: 200px;
-    margin-bottom: ${theme.Spacings.StaticSpace01};
-    padding: ${theme.Spacings.FontSpace04};
-    color: ${theme.Colors.Black};
-    border: 1px solid ${theme.Colors.Gray02};
+    margin-bottom: ${theme.spacings.pixelSpace01};
+    padding: ${theme.spacings.emSpace04};
+    color: ${theme.colors.black};
+    border: 1px solid ${theme.colors.gray02};
 
     &:focus,
     &:active {
-      outline-color: ${theme.Colors.DarkBlue};
+      outline-color: ${theme.colors.darkBlue};
     }
   `}
 

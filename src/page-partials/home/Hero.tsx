@@ -56,7 +56,7 @@ const Container = styled(Box)`
 
 const Tagline = styled(Box)`
   display: flex;
-  color: ${({ theme }) => theme.Colors.White};
+  color: ${({ theme }) => theme.colors.white};
 
   ${minMediaQuery.Medium(css`
     position: absolute;

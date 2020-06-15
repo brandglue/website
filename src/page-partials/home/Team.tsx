@@ -133,8 +133,8 @@ const Container = styled(Box)`
     padding: ${theme.space[7]}px 0;
     background: linear-gradient(
       180deg,
-      rgba(${hexToRgb(theme.Colors.White)}, 1) 0%,
-      rgba(${hexToRgb(theme.Colors.Gray00)}, 1) 100%
+      rgba(${hexToRgb(theme.colors.white)}, 1) 0%,
+      rgba(${hexToRgb(theme.colors.gray00)}, 1) 100%
     );
   `}
 `;

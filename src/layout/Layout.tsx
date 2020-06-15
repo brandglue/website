@@ -4,7 +4,7 @@ import { Footer } from '@layout/Footer';
 import { Header } from '@layout/Header';
 import { IAppState } from '@models/AppState';
 import { AppState } from '@src/AppState';
-import { theme } from '@theme/theme';
+import { Breakpoints } from '@theme/theme';
 
 export const Layout: FC = ({ children }) => {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -21,11 +21,10 @@ export const Layout: FC = ({ children }) => {
   }, [windowWidth]);
 
   const state: IAppState = {
-    isLargeDevice: windowWidth >= theme.Breakpoints.Large,
+    isLargeDevice: windowWidth >= Breakpoints.Large,
     isMediumDevice:
-      windowWidth >= theme.Breakpoints.Medium &&
-      windowWidth < theme.Breakpoints.Large,
-    isSmallDevice: windowWidth < theme.Breakpoints.Medium,
+      windowWidth >= Breakpoints.Medium && windowWidth < Breakpoints.Large,
+    isSmallDevice: windowWidth < Breakpoints.Medium,
   };
 
   return (

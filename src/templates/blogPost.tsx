@@ -78,14 +78,14 @@ const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
 
 const PostHeader = styled(Box)`
   justify-content: space-between;
-  border-top: 4px solid ${({ theme }) => theme.Colors.Blue};
+  border-top: 4px solid ${({ theme }) => theme.colors.blue};
   padding-top: ${({ theme }) => theme.space[3]}px;
 `;
 
 const Author = styled.span`
-  color: ${({ theme }) => theme.Colors.Gold};
+  color: ${({ theme }) => theme.colors.gold};
   text-transform: uppercase;
-  border-right: 1px solid ${({ theme }) => theme.Colors.Gray02};
+  border-right: 1px solid ${({ theme }) => theme.colors.gray02};
   padding-right: ${({ theme }) => theme.space[3]}px;
   margin-right: ${({ theme }) => theme.space[3]}px;
 `;
@@ -95,8 +95,8 @@ const Date = styled.span`
 `;
 
 const Category = styled.span`
-  background: ${({ theme }) => theme.Colors.Blue};
-  color: ${({ theme }) => theme.Colors.White};
+  background: ${({ theme }) => theme.colors.blue};
+  color: ${({ theme }) => theme.colors.white};
   padding: ${({ theme }) => theme.space[1]}px;
 `;
 

@@ -46,17 +46,17 @@ export const Footer: FC = () => (
 
 const Wrapper = styled.div`
   ${({ theme }) => css`
-    background: ${theme.Colors.Gray04};
-    padding: ${theme.Spacings.DynamicSpace02} ${theme.Spacings.DynamicSpace02}
-      ${theme.Spacings.StaticSpace03};
+    background: ${theme.colors.gray04};
+    padding: ${theme.spacings.viewportSpace02} ${theme.spacings.viewportSpace02}
+      ${theme.spacings.pixelSpace03};
   `};
 `;
 
 const Container = styled(Box)`
   ${({ theme }) => css`
     text-align: center;
-    color: ${theme.Colors.Gray01};
-    margin-bottom: ${theme.Spacings.StaticSpace08};
+    color: ${theme.colors.gray01};
+    margin-bottom: ${theme.spacings.pixelSpace08};
 
     ${minMediaQuery.Medium(css`
       flex-flow: row;
@@ -73,19 +73,19 @@ const Contact = styled.address`
 
 const Title = styled(H4)`
   ${({ theme }) => css`
-    color: ${theme.Colors.Gold};
+    color: ${theme.colors.gold};
     text-transform: uppercase;
-    margin-bottom: ${theme.Spacings.StaticSpace03};
+    margin-bottom: ${theme.spacings.pixelSpace03};
   `}
 `;
 
 const Info = styled.a`
   ${({ theme }) => css`
     text-decoration: none;
-    color: ${theme.Colors.Gray01};
+    color: ${theme.colors.gray01};
 
     &:last-of-type {
-      margin-bottom: ${theme.Spacings.StaticSpace03};
+      margin-bottom: ${theme.spacings.pixelSpace03};
     }
   `}
 `;
@@ -101,7 +101,7 @@ const Social = styled.div`
 
 const SocialIcon = styled.div`
   width: 30px;
-  margin-right: ${({ theme }) => theme.Spacings.StaticSpace02};
+  margin-right: ${({ theme }) => theme.spacings.pixelSpace02};
 
   &:last-child {
     margin-right: 0;
@@ -110,13 +110,13 @@ const SocialIcon = styled.div`
 
 const StyledBrandGlueLogoIconOnly = styled(BrandGlueLogoIconOnly)`
   width: 80px;
-  margin-top: ${({ theme }) => theme.Spacings.StaticSpace03};
+  margin-top: ${({ theme }) => theme.spacings.pixelSpace03};
 `;
 
 const Copyright = styled.div`
   ${({ theme }) => css`
-    background: ${theme.Colors.Black};
-    color: ${theme.Colors.Gray01};
+    background: ${theme.colors.black};
+    color: ${theme.colors.gray01};
     text-align: center;
     padding: ${theme.space[5]}px;
   `}

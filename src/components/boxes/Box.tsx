@@ -25,9 +25,9 @@ export const Box = styled.div<StyledSystemProps>`
           alignItems: 'center',
         },
         column: {
-          maxWidth: `${theme.maxColWidth}px`,
-          paddingLeft: `${theme.hzColPadding}px`,
-          paddingRight: `${theme.hzColPadding}px`,
+          maxWidth: `${theme.spacings.maxColWidth}`,
+          paddingLeft: `${theme.spacings.hzColPadding}`,
+          paddingRight: `${theme.spacings.hzColPadding}`,
           margin: 'auto',
         },
         flex: {

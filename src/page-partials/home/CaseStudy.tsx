@@ -70,13 +70,13 @@ const Container = styled(Box)`
 const Logo = styled(Box)`
   ${({ theme }) => css`
     flex: 0 0 200px;
-    border-bottom: 1px solid ${theme.Colors.White};
+    border-bottom: 1px solid ${theme.colors.white};
     padding-bottom: ${theme.space[5]}px;
     margin-bottom: ${theme.space[5]}px;
 
     ${minMediaQuery.Medium(css`
       border-bottom: none;
-      border-right: 1px solid ${theme.Colors.White};
+      border-right: 1px solid ${theme.colors.white};
       padding: 0 ${theme.space[5]}px 0 0;
       margin: 0 ${theme.space[5]}px 0 0;
     `)}

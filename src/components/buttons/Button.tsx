@@ -57,7 +57,7 @@ const StyledButton = styled.button`
   }
 
   &[disabled] {
-    color: ${({ theme }) => theme.Colors.Gray02};
+    color: ${({ theme }) => theme.colors.gray02};
     pointer-events: none;
     cursor: default;
   }
@@ -67,29 +67,30 @@ ${({ theme }) =>
     variants: {
       primary: {
         'maxWidth': '300px',
-        'background': `${theme.Colors.DarkBlue}`,
-        'color': `${theme.Colors.White}`,
+        'background': `${theme.colors.darkBlue}`,
+        'color': `${theme.colors.white}`,
         'border': '1px solid transparent',
         'borderRadius': '4px',
+        'padding': `${theme.spacings.emSpace02}`,
 
         '&:hover': {
-          background: `${theme.Colors.DarkBlue}`,
+          background: `${theme.colors.darkBlue}`,
           border: '1px solid transparent',
           opacity: 0.9,
         },
 
         '&:active': {
-          background: `${theme.Colors.DarkBlue}`,
-          border: `1px solid ${theme.Colors.Blue}`,
+          background: `${theme.colors.darkBlue}`,
+          border: `1px solid ${theme.colors.blue}`,
         },
 
         '&:focus': {
-          background: `${theme.Colors.DarkBlue}`,
-          border: `1px solid ${theme.Colors.Blue}`,
+          background: `${theme.colors.darkBlue}`,
+          border: `1px solid ${theme.colors.blue}`,
         },
 
         '&[disabled]': {
-          background: `${theme.Colors.Gray02}`,
+          background: `${theme.colors.gray02}`,
           pointerEvents: 'none',
           cursor: 'default',
         },
@@ -100,6 +101,7 @@ ${({ theme }) =>
         'border': '1px solid currentColor',
         'borderRadius': '4px',
         'textDecoration': 'none',
+        'padding': `${theme.spacings.emSpace02}`,
 
         '&:hover': {
           border: '1px solid currentColor',
@@ -117,8 +119,8 @@ ${({ theme }) =>
         },
 
         '&[disabled]': {
-          background: `${theme.Colors.Gray02}`,
-          border: `1px solid ${theme.Colors.Gray02}`,
+          background: `${theme.colors.gray02}`,
+          border: `1px solid ${theme.colors.gray02}`,
           pointerEvents: 'none',
           cursor: 'default',
         },

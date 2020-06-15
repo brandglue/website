@@ -153,7 +153,7 @@ const Group = styled.div`
 
   ${minMediaQuery.Medium(css`
     &:first-child {
-      margin-right: ${({ theme }) => theme.Spacings.StaticSpace05};
+      margin-right: ${({ theme }) => theme.spacings.pixelSpace05};
     }
 
     input:last-child {
@@ -164,19 +164,19 @@ const Group = styled.div`
 
 const Success = styled.div`
   ${({ theme }) => css`
-    background: rgba(${hexToRgb(theme.Colors.Green)}, 0.5);
-    border: 1px solid ${theme.Colors.Green};
+    background: rgba(${hexToRgb(theme.colors.green)}, 0.5);
+    border: 1px solid ${theme.colors.green};
     border-radius: 4px;
-    padding: ${theme.Spacings.FontSpace02};
+    padding: ${theme.spacings.emSpace02};
   `}
 `;
 
 const Error = styled.div`
   ${({ theme }) => css`
-    background: rgba(${hexToRgb(theme.Colors.Red)}, 0.5);
-    color: ${theme.Colors.Red};
-    border: 1px solid ${theme.Colors.Red};
-    padding: ${theme.Spacings.FontSpace02};
-    margin-top: ${theme.Spacings.StaticSpace03};
+    background: rgba(${hexToRgb(theme.colors.red)}, 0.5);
+    color: ${theme.colors.red};
+    border: 1px solid ${theme.colors.red};
+    padding: ${theme.spacings.emSpace02};
+    margin-top: ${theme.spacings.pixelSpace03};
   `}
 `;

@@ -46,7 +46,7 @@ export const NavLink = styled(WrappedLink)<StyledSystemProps>`
         },
         textLink: {
           display: 'inline',
-          color: `${theme.Colors.Blue}`,
+          color: `${theme.colors.blue}`,
           textDecoration: 'underline',
         },
       },

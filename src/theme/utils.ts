@@ -2,7 +2,7 @@ import * as sc from 'styled-components';
 
 import { IHex } from '@models/Hex';
 import { css } from '@theme/styled';
-import { Breakpoints, IBreakpointKeys, ITheme } from '@theme/theme';
+import { Breakpoints, ITheme } from '@theme/theme';
 
 /*
   Creates object with min-width media query functions for each breakpoint
@@ -19,6 +19,7 @@ export const minMediaQuery = (function () {
     | sc.FlattenSimpleInterpolation
     | sc.FlattenInterpolation<sc.ThemeProps<ITheme>>;
 
+  type IBreakpointKeys = keyof typeof Breakpoints;
   type IMediaQueries = Record<IBreakpointKeys, ICss>;
 
   function generateMinMediaQueries(): IMediaQueries {
