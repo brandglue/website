@@ -30,7 +30,8 @@ export type StyledSystemLayoutProps = BorderProps &
   FlexboxProps &
   GridProps &
   LayoutProps &
-  PositionProps & { variant?: string };
+  PositionProps &
+  SpaceProps & { variant?: string };
 
 export type StyledSystemProps = StyledSystemTextProps & StyledSystemLayoutProps;
 

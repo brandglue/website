@@ -1,10 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Image from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
 import { Box } from '@components/boxes/Box';
+import { Image } from '@components/images/Image';
 import {
   Em,
   H1,
@@ -51,7 +51,7 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
         ul: Ul,
       }}
     >
-      <Image alt="blog-hero" fluid={blogHeroImage?.fluid} />
+      <Image alt={'blog-hero'} fluid={blogHeroImage?.fluid} />
       <Box py={7} variant="column">
         <H2>{frontmatter.title}</H2>
         <PostHeader variant="flex">
@@ -67,13 +67,12 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
             return <Category key={category}>{category}</Category>;
           })}
         </PostHeader>
-        <>
-          <Image
-            alt=""
-            fluid={frontmatter.cover_image?.childImageSharp?.fluid}
-          />
-          <MDXRenderer>{body}</MDXRenderer>
-        </>
+        <Image
+          alt={frontmatter.cover_image?.name}
+          fluid={frontmatter.cover_image?.childImageSharp?.fluid}
+          my={4}
+        />
+        <MDXRenderer>{body}</MDXRenderer>
       </Box>
     </MDXProvider>
   );
@@ -113,7 +112,7 @@ const Category = styled(Span)`
   `}
 `;
 
-export default BlogPost; // needed for gatsby-node
+export default BlogPost; // default export needed for gatsby-node
 
 export const pageQuery = graphql`
   query BlogPost($slug: String!) {
@@ -123,9 +122,11 @@ export const pageQuery = graphql`
         author
         categories
         cover_image {
+          name
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
+            fluid(maxWidth: 1250) {
+              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluidLimitPresentationSize
             }
           }
         }

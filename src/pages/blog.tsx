@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import Image from 'gatsby-image';
 
 import { Box } from '@components/boxes/Box';
+import { Image } from '@components/images/Image';
 import { P, H2, H3 } from '@components/text/Text';
 
 import { useBlogHeroImage } from '@hooks/queries/useBlogHeroImage';

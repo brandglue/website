@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Image from 'gatsby-image';
 
 import { Box } from '@components/boxes/Box';
+import { Image } from '@components/images/Image';
 import { H2, P } from '@components/text/Text';
 import { NavLink } from '@components/links/NavLink';
 import { Routes } from '@constants/routes';

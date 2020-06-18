@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Image from 'gatsby-image';
 
 import { Box } from '@components/boxes/Box';
+import { Image } from '@components/images/Image';
 
 export const Clients: FC = () => {
   const images = useStaticQuery<GatsbyTypes.ClientLogosQuery>(graphql`
