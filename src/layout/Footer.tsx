@@ -2,10 +2,12 @@ import React, { FC } from 'react';
 
 import { Box } from '@components/boxes/Box';
 import { H4 } from '@components/text/Text';
-import BrandGlueLogoIconOnly from '@icons/BrandGlueLogoIconOnly';
-import FacebookIcon from '@icons/Facebook';
-import LinkedInIcon from '@icons/LinkedIn';
-import TwitterIcon from '@icons/Twitter';
+import {
+  BrandGlueLogoIconOnly,
+  Facebook as FacebookIcon,
+  LinkedIn as LinkedInIcon,
+  Twitter as TwitterIcon,
+} from '@icons/index';
 import { css, styled } from '@theme/styled';
 import { minMediaQuery } from '@theme/utils';
 

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import BrandGlueIconLogoOnly from '@icons/BrandGlueLogoIconOnly';
+import { BrandGlueLogoIconOnly } from '@icons/BrandGlueLogoIconOnly';
 import { keyframes, styled } from '@theme/styled';
 
 export const Spinner: FC<React.HTMLAttributes<SVGAElement>> = (props) => (
@@ -20,7 +20,7 @@ const rotate360 = keyframes`
   }
 `;
 
-const AnimatedLogo = styled(BrandGlueIconLogoOnly)`
+const AnimatedLogo = styled(BrandGlueLogoIconOnly)`
   display: block;
   width: 100%;
   height: 100%;

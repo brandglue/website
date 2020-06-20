@@ -35,5 +35,3 @@ export const PaidAdvertising: FC<IOwnProps> = ({ className = '' }) => (
     />
   </Svg>
 );
-
-export default PaidAdvertising;

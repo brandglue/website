@@ -42,5 +42,3 @@ export const DataAnalysis: FC<IOwnProps> = ({ className = '' }) => (
     </g>
   </Svg>
 );
-
-export default DataAnalysis;

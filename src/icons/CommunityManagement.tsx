@@ -46,5 +46,3 @@ export const CommunityManagement: FC<IOwnProps> = ({ className = '' }) => (
     </g>
   </Svg>
 );
-
-export default CommunityManagement;

@@ -23,5 +23,3 @@ export const BrandGlueLogoIconOnly: FC<IOwnProps> = (props) => (
 BrandGlueLogoIconOnly.defaultProps = {
   className: '',
 };
-
-export default BrandGlueLogoIconOnly;

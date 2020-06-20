@@ -30,5 +30,3 @@ export const SocialStrategy: FC<IOwnProps> = ({ className = '' }) => (
     />
   </Svg>
 );
-
-export default SocialStrategy;

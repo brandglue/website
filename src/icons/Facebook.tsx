@@ -21,5 +21,3 @@ export const Facebook: FC<IOwnProps> = ({ className = '' }) => (
     />
   </Svg>
 );
-
-export default Facebook;

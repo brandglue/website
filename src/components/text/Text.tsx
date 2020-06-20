@@ -2,7 +2,7 @@ import { color, space, typography, variant } from 'styled-system';
 import fluid from 'fluid-system';
 
 import { customText, StyledSystemTextProps } from '@src/theme/systemProps';
-import { styled, css } from '@theme/styled';
+import { styled } from '@theme/styled';
 
 const standardFontSizes = [1, null, null, null, 2, 3];
 const standardLineHeights = [1, null, null, null, 2, 3];

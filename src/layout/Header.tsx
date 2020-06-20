@@ -2,7 +2,7 @@ import React, { FC, useContext } from 'react';
 
 import { NavLink } from '@components/links/NavLink';
 import { Routes, RouteLabels } from '@constants/routes';
-import BrandGlueLogo from '@icons/BrandGlueLogo';
+import { BrandGlueLogo } from '@icons/index';
 import { AppState } from '@src/AppState';
 import { css, styled } from '@theme/styled';
 import { minMediaQuery } from '@theme/utils';

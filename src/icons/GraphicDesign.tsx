@@ -80,5 +80,3 @@ export const GraphicDesign: FC<IOwnProps> = ({ className = '' }) => (
     </g>
   </Svg>
 );
-
-export default GraphicDesign;

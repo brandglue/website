@@ -31,5 +31,3 @@ export const CustomerService: FC<IOwnProps> = ({ className = '' }) => (
     />
   </Svg>
 );
-
-export default CustomerService;

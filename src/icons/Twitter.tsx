@@ -21,5 +21,3 @@ export const Twitter: FC<IOwnProps> = ({ className = '' }) => (
     />
   </Svg>
 );
-
-export default Twitter;

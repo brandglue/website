@@ -21,5 +21,3 @@ export const LinkedIn: FC<IOwnProps> = ({ className = '' }) => (
     />
   </Svg>
 );
-
-export default LinkedIn;

@@ -19,5 +19,3 @@ export const Caret: FC<IOwnProps> = ({ className = '' }) => (
     <polygon id="Shape" points="0 6.24 6.24 0 12.49 6.24" />
   </Svg>
 );
-
-export default Caret;

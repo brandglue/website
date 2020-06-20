@@ -52,5 +52,3 @@ export const NewsfeedOptimization: FC<IOwnProps> = ({ className = '' }) => (
     />
   </Svg>
 );
-
-export default NewsfeedOptimization;

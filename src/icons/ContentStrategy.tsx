@@ -46,5 +46,3 @@ export const ContentStrategy: FC<IOwnProps> = ({ className = '' }) => (
     </g>
   </Svg>
 );
-
-export default ContentStrategy;

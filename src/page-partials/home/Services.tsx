@@ -4,15 +4,17 @@ import { Box } from '@components/boxes/Box';
 import { NavLink } from '@components/links/NavLink';
 import { H2, P } from '@components/text/Text';
 import { Routes } from '@constants/routes';
-import CommunityManagement from '@icons/CommunityManagement';
-import ContentStrategy from '@icons/ContentStrategy';
-import CustomerService from '@icons/CustomerService';
-import DataAnalysis from '@icons/DataAnalysis';
-import GraphicDesign from '@icons/GraphicDesign';
-import NewsfeedOptimization from '@icons/NewsfeedOptimization';
-import PaidAdvertising from '@icons/PaidAdvertising';
-import SocialStrategy from '@icons/SocialStrategy';
-import TargetAudiencePersonas from '@icons/TargetAudiencePersonas';
+import {
+  CommunityManagement,
+  ContentStrategy,
+  CustomerService,
+  DataAnalysis,
+  GraphicDesign,
+  NewsfeedOptimization,
+  PaidAdvertising,
+  SocialStrategy,
+  TargetAudiencePersonas,
+} from '@icons/index';
 import { css, styled } from '@theme/styled';
 import { hexToRgb, minMediaQuery } from '@theme/utils';
 
