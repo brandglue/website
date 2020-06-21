@@ -3,14 +3,14 @@ title: 5 Ways Digital Marketers Can Tap Into the Power of Social Video
 author: Michelle Heathers
 type: post
 date: 2018-04-25T16:36:29+00:00
-url: /blog/tips/5-ways-digital-marketers-tap-power-social-video
-featured_image: /wp-content/uploads/2018/04/BG-blog-5-Ways-Digital-Marketers-Can-Into-Tap-the-Power-of-Social-Video.png
+slug: /blog/tips/5-ways-digital-marketers-tap-power-social-video
+cover_image: /wp-content/uploads/2018/04/BG-blog-5-Ways-Digital-Marketers-Can-Into-Tap-the-Power-of-Social-Video.png
 post_layout:
   - default
 categories:
   - Tips
-
 ---
+
 <span style="font-weight: 400;">If you run in marketing circles, you’ve heard it by now:</span> **Social video is big.**
 
 <span style="font-weight: 400;">In fact, it’s huge, and for good reason. The use of video has seen explosive growth in recent years. Here are a few stats to wrap your head around:</span>
@@ -96,9 +96,9 @@ categories:
 
 _<span style="font-weight: 400;">What video tactics have you found to be successful? Let us know in the comments below!</span>_
 
- [1]: https://zephoria.com/top-15-valuable-facebook-statistics/
- [2]: http://www.businessinsider.com/delete-facebook-statistics-nearly-10-percent-americans-deleted-facebook-account-study-2018-4
- [3]: https://blog.hubspot.com/marketing/how-long-should-videos-be-on-instagram-twitter-facebook-youtube
- [4]: https://www.business2community.com/facebook/state-facebook-video-year-2017-video-length-time-watched-01834666
- [5]: http://localhost/brandglue/old-website/blog/social-media-tips/5-creative-video-ideas-for-social-media
- [6]: http://localhost/brandglue/old-website/#services-bg
+[1]: https://zephoria.com/top-15-valuable-facebook-statistics/
+[2]: http://www.businessinsider.com/delete-facebook-statistics-nearly-10-percent-americans-deleted-facebook-account-study-2018-4
+[3]: https://blog.hubspot.com/marketing/how-long-should-videos-be-on-instagram-twitter-facebook-youtube
+[4]: https://www.business2community.com/facebook/state-facebook-video-year-2017-video-length-time-watched-01834666
+[5]: http://localhost/brandglue/old-website/blog/social-media-tips/5-creative-video-ideas-for-social-media
+[6]: http://localhost/brandglue/old-website/#services-bg

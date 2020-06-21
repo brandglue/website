@@ -3,16 +3,16 @@ title: 'The Rising Cost of Paid Reach on Facebook: Is It Worth It?'
 author: Zach Welch
 type: post
 date: 2014-07-07T11:00:22+00:00
-url: /blog/tips/the-rising-cost-of-paid-reach-on-facebook-is-it-worth-it
-featured_image: /wp-content/uploads/2014/06/cost-per-reach-v1.8.jpg
+slug: /blog/tips/the-rising-cost-of-paid-reach-on-facebook-is-it-worth-it
+cover_image: /wp-content/uploads/2014/06/cost-per-reach-v1.8.jpg
 post_layout:
   - default
 categories:
   - Tips
 tags:
   - Facebook
-
 ---
+
 You’ve no doubt heard grumblings about the ever-elusive organic reach on Facebook that resulted from [adjustments to the News Feed algorithm][1].
 
 However, an even more important change that should be at the forefront of every marketer’s mind is the decline of paid reach on Facebook. Flightpath tracked the CPM of three of its major clients, finding that paid reach has grown from roughly $3 in February to more than $10 in June. This means that your hard earned dollars spent on Facebook ads are not getting as much bang for their buck.
@@ -20,14 +20,14 @@ However, an even more important change that should be at the forefront of every 
 Flightpath Senior Director of Digital Marketing John Lee [elaborated on this issue in a blog post][2]:
 
 > “There is always the possibility this decline in paid reach was caused by minor changes in content and scheduling, but for the most part we have followed a consistent campaign strategy since implementing promoted posts. It seems highly unlikely that we would see this trend across multiple clients all within the same time frame. One thing to note is that although paid reach decreased, engagement levels appeared to remain the same.
-> 
+>
 > &nbsp;
-> 
+>
 > So what does this mean? It’s hard to say for certain but it could force companies to dish out even more money to reach the same number of fans. In other words, expect the cost of effective promoted posts to rise (especially as more and more brands start to utilize this advertising option).”
 
 Similar to the stone age days of traditional print and broadcast advertising, **understanding your target audience is critical now more than ever.** It’s not going to be cost effective to try and reach a blanket of fans and hope that your brand is relevant to a portion of them. Instead, you need to focus your promoted post efforts on those who meet your target customer criteria. Moving forward, focus on increasing engagement rates and ramping up influencer marketing strategies to see continued success on Facebook.
 
 _Images courtesy of_ [_Flightpath_][2]_._
 
- [1]: https://www.facebook.com/business/news/Organic-Reach-on-Facebook
- [2]: http://www.flightpath.com/insights/index.php/2014/06/future-facebook-paid-reach/
+[1]: https://www.facebook.com/business/news/Organic-Reach-on-Facebook
+[2]: http://www.flightpath.com/insights/index.php/2014/06/future-facebook-paid-reach/

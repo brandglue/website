@@ -3,14 +3,14 @@ title: 'Don’t #Hashtag #Everything: A Guide for Social Media Marketers on How 
 author: Michelle Heathers
 type: post
 date: 2018-04-12T20:24:55+00:00
-url: /blog/tips/dont-hashtag-everything-guide-for-social-media-marketers-how-to-handle-hashtags
-featured_image: /wp-content/uploads/2018/04/BG-blog-Don’t-Hashtag-Everything_-A-Guide-for-Social-Media-Marketers-on-How-to-Handle-Hashtags.png
+slug: /blog/tips/dont-hashtag-everything-guide-for-social-media-marketers-how-to-handle-hashtags
+cover_image: /wp-content/uploads/2018/04/BG-blog-Don’t-Hashtag-Everything_-A-Guide-for-Social-Media-Marketers-on-How-to-Handle-Hashtags.png
 post_layout:
   - default
 categories:
   - Tips
-
 ---
+
 <span style="font-weight: 400;">There’s no denying that hashtags have found a home in the world of social media. And it’s not just the millennials taking pictures of their Saturday breakfast or photo junkies letting you know their most recent pic was #nofilter. As part of the social currency, hashtags turn up in business posts, ads, and other social marketing efforts. Which brings up the question, should digital marketers jump on the bandwagon wholeheartedly, or proceed with more caution?</span>
 
 <span style="font-weight: 400;">Sure, hashtags are fine if you’re a college student posting about your week of spring vacation at the beach, or a football fan talking about the latest news. But for marketers, what benefit is there, if any, from using hashtags?</span>
@@ -78,5 +78,5 @@ categories:
 
 _<span style="font-weight: 400;">What’s your take on hashtags? We’d love to hear your thoughts in the comments!</span>_
 
- [1]: http://localhost/brandglue/old-website/blog/social-media/your-social-channels-deserve-better-5-tips-for-creating-riveting-content
- [2]: http://localhost/brandglue/old-website/#services-bg
+[1]: http://localhost/brandglue/old-website/blog/social-media/your-social-channels-deserve-better-5-tips-for-creating-riveting-content
+[2]: http://localhost/brandglue/old-website/#services-bg

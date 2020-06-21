@@ -3,29 +3,29 @@ title: 'Timeline for Facebook Fan Pages: What You Need to Know'
 author: Zach Welch
 type: post
 date: 2012-03-08T21:30:47+00:00
-url: /blog/news/timeline-for-facebook-fan-pages-what-you-need-to-know
-featured_image: /wp-content/uploads/2012/03/coke-timelines-screeshot-540x3344.jpg
+slug: /blog/news/timeline-for-facebook-fan-pages-what-you-need-to-know
+cover_image: /wp-content/uploads/2012/03/coke-timelines-screeshot-540x3344.jpg
 post_layout:
   - default
 categories:
   - News
 tags:
   - Facebook
-
 ---
-****Timeline for Brand Pages****
+
+\***\*Timeline for Brand Pages\*\***
 
 Well, we knew this was coming. We just weren’t sure exactly what it would look like and when it was coming. We have been researching the changes all day and how it will impact social strategy. We’ll first walk you through a few of the basics, followed by our take on the changes and how they will affect you.
 
 **Some of the basics:**
 
-  * All fan pages have until March 30th to adapt to the new Timeline. Everyone will automatically be switched over on that day.
-  * Apps and campaigns are now found within a “box” under the cover photo, giving tabs even less prominence then they already had.
-  * The welcome tab, or fan-gate, has been removed.
-  * A new cover photo will need to be put up for each fan page.
-  * We can now ‘pin’ a post to the top of the fan page wall, for up to 7 days. This highlights the particular post and will be seen first by anyone who comes back to the fan page wall.
-  * Starred posts and Milestones help specific posts be highlighted, though not pinned to the top of the fan page wall.
-  * There is a new admin interface, enabling you, as an admin, to see what is going on in analytics and posts quickly and easily.
+- All fan pages have until March 30th to adapt to the new Timeline. Everyone will automatically be switched over on that day.
+- Apps and campaigns are now found within a “box” under the cover photo, giving tabs even less prominence then they already had.
+- The welcome tab, or fan-gate, has been removed.
+- A new cover photo will need to be put up for each fan page.
+- We can now ‘pin’ a post to the top of the fan page wall, for up to 7 days. This highlights the particular post and will be seen first by anyone who comes back to the fan page wall.
+- Starred posts and Milestones help specific posts be highlighted, though not pinned to the top of the fan page wall.
+- There is a new admin interface, enabling you, as an admin, to see what is going on in analytics and posts quickly and easily.
 
 **How has our engagement philosophy changed due to the release of Timeline?**
 
@@ -37,5 +37,5 @@ While designers are elated with the change, our focus remains unchanged. Other a
 
 Now don’t get us wrong; you should certainly work to create aesthetically pleasing cover art and leverage the new changes in any and every way you can! However, we believe that at the end of the day, the brands that are focused on creating interesting, relevant, and engaging content will be the most successful on Facebook and actually reach their fans.<strong id="internal-source-marker_0.051245546666905284"><br /> </strong>
 
- [1]: http://localhost/brandglue/old-website/wp-content/uploads/2012/03/coke-timelines-screeshot-540x3344.jpg
- [2]: http://briancarteryeah.com/blog/facebook/rant-why-facebook-timeline-for-pages-doesnt-matter-and-you-should-get-back-to-work/
+[1]: http://localhost/brandglue/old-website/wp-content/uploads/2012/03/coke-timelines-screeshot-540x3344.jpg
+[2]: http://briancarteryeah.com/blog/facebook/rant-why-facebook-timeline-for-pages-doesnt-matter-and-you-should-get-back-to-work/

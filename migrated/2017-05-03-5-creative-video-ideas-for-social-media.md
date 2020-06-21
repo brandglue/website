@@ -3,8 +3,8 @@ title: 5 Creative Video Ideas for Social Media
 author: Zach Welch
 type: post
 date: 2017-05-03T20:05:16+00:00
-url: /blog/tips/5-creative-video-ideas-for-social-media
-featured_image: /wp-content/uploads/2017/05/BG-blog-5-Creative-Video-Ideas-for-Social-Media.png
+slug: /blog/tips/5-creative-video-ideas-for-social-media
+cover_image: /wp-content/uploads/2017/05/BG-blog-5-Creative-Video-Ideas-for-Social-Media.png
 post_layout:
   - default
 categories:
@@ -14,8 +14,8 @@ tags:
   - Facebook
   - Instagram
   - Twitter
-
 ---
+
 <span style="font-weight: 400;">We’ve all heard how important video is for social media. We are expecting that </span>[<span style="font-weight: 400;">video will account for 69% of all consumer traffic by 2017</span>][1] <span style="font-weight: 400;">and that </span>[<span style="font-weight: 400;">social will be the front door</span>][2] <span style="font-weight: 400;">to capture that traffic (if you want to nerd out over the data check out the </span>[<span style="font-weight: 400;">Cisco research</span>][3]<span style="font-weight: 400;">). But is it really worth it to your bottom line to hire a videographer for your team? What’s the true ROI from video? How can you convince your boss that it’s worth the money you want to spend on video? The good news is that video doesn’t have to be expensive and even if you don’t have a video department, there are things you can do internally to help boost your video presence online. We’ve pulled together some of our favorite examples of clever videos online that won’t break your marketing budget. </span>
 
 **15-Second Interview Video**
@@ -45,8 +45,6 @@ tags:
   </div>
 </blockquote>
 
-
-
 **Use Dots and String**
 
 {{< youtube OGtUDffAdy8 >}}
@@ -66,10 +64,6 @@ tags:
   </div>
 </blockquote>
 
-
-
-
-
 **How to Video**
 
 <span style="font-weight: 400;">Another easy idea is to set up recording your screen and create a “how-to” or “product tour” video with practical tips for your audience. These can be as simple as 15-seconds or as elaborate as 20-minutes. Often times your audience needs more hand-holding when it comes to using your product and video is a quick way to get that hand-holding to a lot of people at once. Here’s an example of a how-to video on setting up Instagram (which you should probably do, if you have not already): </span>
@@ -86,6 +80,6 @@ tags:
 
 What creative videos have you seen? Share in a comment!
 
- [1]: http://www.theguardian.com/small-business-network/2014/jan/14/video-content-marketing-media-online
- [2]: https://blog.hootsuite.com/video-social-media-trend-2016/
- [3]: http://www.cisco.com/c/en/us/solutions/collateral/service-provider/ip-ngn-ip-next-generation-network/white_paper_c11-481360.html
+[1]: http://www.theguardian.com/small-business-network/2014/jan/14/video-content-marketing-media-online
+[2]: https://blog.hootsuite.com/video-social-media-trend-2016/
+[3]: http://www.cisco.com/c/en/us/solutions/collateral/service-provider/ip-ngn-ip-next-generation-network/white_paper_c11-481360.html

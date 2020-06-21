@@ -3,31 +3,31 @@ title: 'Sharpening your Facebook Community Management skills: The 80/20 rule for
 author: Michelle Heathers
 type: post
 date: 2011-11-14T23:45:48+00:00
-url: /blog/tips/facebook-community-management-explained-the-8020-posting-rule-for-status-updates
-featured_image: /wp-content/uploads/2011/11/blog12.jpg
+slug: /blog/tips/facebook-community-management-explained-the-8020-posting-rule-for-status-updates
+cover_image: /wp-content/uploads/2011/11/blog12.jpg
 post_layout:
   - default
 categories:
   - Tips
 tags:
   - Facebook
-
 ---
+
 If you&#8217;re a social media community manager, than you most likely have heard about the 80/20 rule. It&#8217;s a hard rule to follow, let alone get it right. Let me explain first what it is, then how to accomplish it.
 
 Really, it&#8217;s quite simple. All of the content pushed out on your Facebook fan page should fall into roughly two categories:
 
-**1. Content directly related to your brand and product and is self-promotional.** 
+**1. Content directly related to your brand and product and is self-promotional.**
 
 **2. Content indirectly related to your brand and product and adds value to your fans, thus building loyalty.**
 
 Let me explain a bit further. By **directly relates**, I&#8217;m referring to:
 
-  * Product pushes
-  * Coupons
-  * The latest news from your development team
-  * Ticket sales
-  * Holiday-related status updates that push your product
+- Product pushes
+- Coupons
+- The latest news from your development team
+- Ticket sales
+- Holiday-related status updates that push your product
 
 Here are some examples of what I call direct product pushes:
 

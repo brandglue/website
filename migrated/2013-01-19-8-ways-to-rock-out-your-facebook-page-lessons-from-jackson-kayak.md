@@ -3,16 +3,16 @@ title: '8 Ways to Rock Out Your Facebook Page: Lessons from Jackson Kayak'
 author: Zach Welch
 type: post
 date: 2013-01-20T06:30:59+00:00
-url: /blog/tips/8-ways-to-rock-out-your-facebook-page-lessons-from-jackson-kayak
-featured_image: /wp-content/uploads/2013/09/casestudy-JacksonKayak-pg8.jpg
+slug: /blog/tips/8-ways-to-rock-out-your-facebook-page-lessons-from-jackson-kayak
+cover_image: /wp-content/uploads/2013/09/casestudy-JacksonKayak-pg8.jpg
 post_layout:
   - default
 categories:
   - Tips
 tags:
   - Facebook
-
 ---
+
 We recently featured the social media work we&#8217;ve down with Jackson Kayak, the leading kayak manufacturer in the world. You can view our full deck showcasing our work [here][1].
 
 Taken from our experience with Jackson Kayak, here are **8 actionable steps you can take towards building a stronger presence on Facebook:**
@@ -27,10 +27,10 @@ Facebook has an algorithm called Edgerank that hides a significant portion of yo
 
 Here are some ways to do that:
 
-  * Caption Contest
-  * Multiple Choice
-  * Fill-in-the-blank
-  * Inspirational Quotes
+- Caption Contest
+- Multiple Choice
+- Fill-in-the-blank
+- Inspirational Quotes
 
 Tip: Use photos in status updates. Not only does visual content naturally do well, Edgerank prefers it.
 
@@ -60,5 +60,5 @@ Lots of brands run sweepstakes on Facebook. A major benefit is that they can be 
 
 Want more tips for your Facebook fan page? Get your [free social media assessment][2] from our team.
 
- [1]: http://localhost/brandglue/old-website/case-studies/jackson-kayak-navigating-the-rapidly-changing-waters-of-social-media
- [2]: http://localhost/brandglue/old-website/free-assessment
+[1]: http://localhost/brandglue/old-website/case-studies/jackson-kayak-navigating-the-rapidly-changing-waters-of-social-media
+[2]: http://localhost/brandglue/old-website/free-assessment

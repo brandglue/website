@@ -3,15 +3,15 @@ title: 4 Ways to Optimize Facebook Dynamic Ads
 author: Zach Welch
 type: post
 date: 2018-10-03T17:01:06+00:00
-url: /blog/tips/4-ways-to-optimize-facebook-dynamic-ads
-featured_image: /wp-content/uploads/2018/10/BG-Blog-4-Ways-to-Optimize-Facebook-Dynamic-Ads.png
+slug: /blog/tips/4-ways-to-optimize-facebook-dynamic-ads
+cover_image: /wp-content/uploads/2018/10/BG-Blog-4-Ways-to-Optimize-Facebook-Dynamic-Ads.png
 post_layout:
   - default
 categories:
   - Advertising
   - Tips
-
 ---
+
 <span style="font-weight: 400;">Sometimes it’s fun to remember the good ‘ole days of Facebook, when you’d push out an organic post for a brand and it’d garner 100 likes in an hour. While this still definitely happens, it is no longer the norm like it was ten years ago. Today, it’s a pay to play game, and being a Facebook ads expert is a must-have for social media marketers. In this blog I’m going to dig into Facebook dynamic ads &#8212; what they are, how to set them up, and how to optimize them for your brand. Let’s dig in!</span>
 
 <span style="font-weight: 400;">Dynamic ads, unlike static ads, are highly personalized. They have a much higher conversion rate than most other ads because the content changes with time and consumer behavior. Dynamic ads are also more likely to get people to visit and buy from your website repeatedly.</span>
@@ -87,6 +87,6 @@ categories:
 
 _<span style="font-weight: 400;">What are some of your favorite Facebook dynamic ad creation tricks? Let me know in the comments below!</span>_
 
- [1]: http://localhost/brandglue/old-website/blog/social-media-tips/5-design-must-haves-before-creating-your-social-ad
- [2]: https://www.jonloomer.com/2018/05/17/optimize-facebook-dynamic-product-ads/
- [3]: http://localhost/brandglue/old-website/blog/social-media-tips/5-content-strategies-from-big-brands-to-increase-engagement-on-social-media
+[1]: http://localhost/brandglue/old-website/blog/social-media-tips/5-design-must-haves-before-creating-your-social-ad
+[2]: https://www.jonloomer.com/2018/05/17/optimize-facebook-dynamic-product-ads/
+[3]: http://localhost/brandglue/old-website/blog/social-media-tips/5-content-strategies-from-big-brands-to-increase-engagement-on-social-media

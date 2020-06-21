@@ -3,8 +3,8 @@ title: 'Millennials and Social Media Marketing: 3 Tips for B2Bs to Capture Futur
 author: Michelle Heathers
 type: post
 date: 2017-05-09T17:01:07+00:00
-url: /blog/news/millennials-and-social-media-marketing-3-tips-for-b2bs-to-capture-future-buyers-today
-featured_image: /wp-content/uploads/2017/05/Millennials-and-Social-Media-Marketing-3-Tips-for-B2Bs-to-Capture-Future-Buyers-Today.png
+slug: /blog/news/millennials-and-social-media-marketing-3-tips-for-b2bs-to-capture-future-buyers-today
+cover_image: /wp-content/uploads/2017/05/Millennials-and-Social-Media-Marketing-3-Tips-for-B2Bs-to-Capture-Future-Buyers-Today.png
 post_layout:
   - default
 categories:
@@ -16,8 +16,8 @@ tags:
   - Pinterest
   - Snapchat
   - Twitter
-
 ---
+
 <span style="font-weight: 400;">Millennials. That elusive group ranging in age from 18 to 33, soon to become (yes, the years will fly by!) the B2B buyers and decision-makers of the future. How will they make those decisions and interact with B2B brands? </span>**While the future is never fully clear, B2B businesses need to prepare** **_now_** **for a future of Millennial buyers.** <span style="font-weight: 400;">This includes adapting your social media marketing strategy. Below I list out 3 tips that will help you position your B2B social efforts for success. I used a recent Pew Research Center study, </span>[<span style="font-weight: 400;">Millennials in Adulthood</span>][1]<span style="font-weight: 400;">, to help inform these tips.</span>
 
 ## <span style="color: #000000;"><b><b>Be Adaptable</b></b></span>
@@ -38,7 +38,7 @@ tags:
 
 ## <span style="color: #000000;"><b>Be Trustful</b></span>
 
- <span style="font-weight: 400;">Millennials are the most untrusting generation. When asked, “Generally speaking, would you say that most people can be trusted or that you can’t be too careful when dealing with people?”, only 19% of Millennials said that most people can be trusted. Think it’s hard </span>_<span style="font-weight: 400;">now</span>_ <span style="font-weight: 400;">to get people to trust a brand? It’s only going to get harder. </span>
+<span style="font-weight: 400;">Millennials are the most untrusting generation. When asked, “Generally speaking, would you say that most people can be trusted or that you can’t be too careful when dealing with people?”, only 19% of Millennials said that most people can be trusted. Think it’s hard </span>_<span style="font-weight: 400;">now</span>_ <span style="font-weight: 400;">to get people to trust a brand? It’s only going to get harder. </span>
 
 <iframe class="giphy-embed" src="//giphy.com/embed/9qlG9iHtTIaje" width="480" height="352" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
@@ -52,12 +52,12 @@ tags:
 
 <span style="font-weight: 400;">Here at BrandGlue, we’ve had the privilege of working with a wide variety of B2B brands, helping them optimize their social media strategy and efforts to capture their audience, </span>[<span style="font-weight: 400;">drive leads</span>][8]<span style="font-weight: 400;">, and help retain current customers through helpful content. If you’re struggling to have a vision for how to setup your B2B social efforts for success for the future, shoot us an email at </span>[<span style="font-weight: 400;">hello@brandglue.com</span>][9]<span style="font-weight: 400;">. We’d love to assist you!</span>
 
- [1]: http://www.pewsocialtrends.org/2014/03/07/millennials-in-adulthood/
- [2]: http://www.businessinsider.com/update-a-breakdown-of-the-demographics-for-each-of-the-different-social-networks-2015-6
- [3]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/body1.png
- [4]: http://localhost/brandglue/old-website/free-assessment
- [5]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/body2.jpg
- [6]: http://giphy.com/gifs/portlandia-9qlG9iHtTIaje
- [7]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/body3.png
- [8]: http://localhost/brandglue/old-website/portfolio/pgi
- [9]: mailto:hello@brandglue.com
+[1]: http://www.pewsocialtrends.org/2014/03/07/millennials-in-adulthood/
+[2]: http://www.businessinsider.com/update-a-breakdown-of-the-demographics-for-each-of-the-different-social-networks-2015-6
+[3]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/body1.png
+[4]: http://localhost/brandglue/old-website/free-assessment
+[5]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/body2.jpg
+[6]: http://giphy.com/gifs/portlandia-9qlG9iHtTIaje
+[7]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/body3.png
+[8]: http://localhost/brandglue/old-website/portfolio/pgi
+[9]: mailto:hello@brandglue.com

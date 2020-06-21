@@ -3,8 +3,8 @@ title: 4 Important Considerations to Make Before Jumping Into eCommerce on Socia
 author: Michelle Heathers
 type: post
 date: 2017-04-18T16:30:00+00:00
-url: /blog/tips/4-important-considerations-to-make-before-jumping-into-ecommerce-on-social-media
-featured_image: /wp-content/uploads/2014/10/blog-10-06-2014-4importantconsiderationstomakebeforejumpingintoecommerceonsocialmedia.jpg
+slug: /blog/tips/4-important-considerations-to-make-before-jumping-into-ecommerce-on-social-media
+cover_image: /wp-content/uploads/2014/10/blog-10-06-2014-4importantconsiderationstomakebeforejumpingintoecommerceonsocialmedia.jpg
 post_layout:
   - default
 categories:
@@ -13,8 +13,8 @@ categories:
 tags:
   - Facebook
   - Twitter
-
 ---
+
 It seems that there’s a new game in town and all the big social networks want to play. What is it? eCommerce.
 
 Facebook has toyed with this concept in the past with mixed results, allowing users to buy gifts for their friends with 1-click buying. They’ve also accepted payments for games. Now, they’re integrating a buy button in their platform so users can make purchases without ever having to leave Facebook.
@@ -43,5 +43,5 @@ Lastly, it is critical to never put your eggs into one basket, so to speak, with
 
 **What do you think of the implementation of eCommerce on social media platforms?** Are you prepared to embrace it, or are you planning on waiting to see how it all plays out before jumping in the game? Let us know in the comments!
 
- [1]: http://mashable.com/2014/07/17/twitter-acquires-cardspring/
- [2]: http://www.amazon.com/gp/socialmedia/amazoncart/ref=amazoncart_surl_amazonbasketlp
+[1]: http://mashable.com/2014/07/17/twitter-acquires-cardspring/
+[2]: http://www.amazon.com/gp/socialmedia/amazoncart/ref=amazoncart_surl_amazonbasketlp

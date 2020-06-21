@@ -3,14 +3,14 @@ title: 7-Step Checklist for Running Your Next Social Media Marketing Campaign
 author: Michelle Heathers
 type: post
 date: 2018-05-16T16:00:39+00:00
-url: /blog/tips/7-step-checklist-for-running-your-next-social-media-marketing-campaign
-featured_image: /wp-content/uploads/2018/05/BG-blog-7-Step-Checklist-for-Running-Your-Next-Social-Media-Marketing-Campaign.png
+slug: /blog/tips/7-step-checklist-for-running-your-next-social-media-marketing-campaign
+cover_image: /wp-content/uploads/2018/05/BG-blog-7-Step-Checklist-for-Running-Your-Next-Social-Media-Marketing-Campaign.png
 post_layout:
   - default
 categories:
   - Tips
-
 ---
+
 <span style="font-weight: 400;">If you work in digital marketing, at some point you’ll need to run a social media marketing campaign as part of your overall digital marketing efforts. However, coming up with a specific campaign can be a daunting task. Rather than opening up a spreadsheet and randomly piecing a strategy together, a better approach is to take it one step at a time. Below I’ve put together a 7-step checklist that’s easy to use and will ensure you cover all the various aspects that are needed for an effective social media marketing campaign.</span>
 
 ## **Step 1: List out campaign objectives and goals.**
@@ -117,4 +117,4 @@ categories:
 
 _<span style="font-weight: 400;">What tips do you have for running a social campaign? We’d love to hear your thoughts in the comments!</span>_
 
- [1]: https://blog.bufferapp.com/utm-guide
+[1]: https://blog.bufferapp.com/utm-guide

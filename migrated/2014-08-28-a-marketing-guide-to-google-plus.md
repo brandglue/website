@@ -3,16 +3,16 @@ title: A Marketing Guide to Google+
 author: Zach Welch
 type: post
 date: 2014-08-28T11:00:47+00:00
-url: /blog/tips/a-marketing-guide-to-google-plus
-featured_image: /wp-content/uploads/2014/08/shutterstock_195103625.jpg
+slug: /blog/tips/a-marketing-guide-to-google-plus
+cover_image: /wp-content/uploads/2014/08/shutterstock_195103625.jpg
 post_layout:
   - default
 categories:
   - Tips
 tags:
   - Google+
-
 ---
+
 Google+ is sometimes seen as the middle child of the social networks. Although it flies under the radar of the likes of Facebook and Twitter, Google+ can offer a wide range of options to market your brand online.
 
 Don’t know where to start? Or maybe you initially jumped on the Google+ bandwagon and now you are a little lost as to what to do from here? There is a plethora of information out there on social media marketing. What to do, what not to do, tips and tricks, content strategies, social advertising, etc. It can be overwhelming at times.
@@ -21,13 +21,13 @@ Don’t know where to start? Or maybe you initially jumped on the Google+ bandwa
 
 The resources cover topics such as:
 
-  * The basics: Gaining exposure, participating in communities, etc.
-  * Marketing from a community: Specifically how to use the network to grow your business
-  * Promoting contests: Key examples of how to use Google+ as your core social media contest strategy
-  * Google+ post ads: How to optimize them to reach a wider audience
-  * Hosting hangouts and helpouts: Connect with your followers on a more personal level by offering advice, interviewing influencers, etc.
-  * Specific third-party tools for Google+ marketing
+- The basics: Gaining exposure, participating in communities, etc.
+- Marketing from a community: Specifically how to use the network to grow your business
+- Promoting contests: Key examples of how to use Google+ as your core social media contest strategy
+- Google+ post ads: How to optimize them to reach a wider audience
+- Hosting hangouts and helpouts: Connect with your followers on a more personal level by offering advice, interviewing influencers, etc.
+- Specific third-party tools for Google+ marketing
 
 _Photo courtesy of Shutterstock._
 
- [1]: http://www.socialmediaexaminer.com/google-plus-marketing-resources/
+[1]: http://www.socialmediaexaminer.com/google-plus-marketing-resources/

@@ -3,16 +3,16 @@ title: What the New Changes to the Facebook Algorithm Means For Marketers and Br
 author: Zach Welch
 type: post
 date: 2014-04-20T22:55:06+00:00
-url: /blog/news/what-the-new-changes-to-the-facebook-algorithm-means-for-marketers-and-brands
-featured_image: /wp-content/uploads/2014/11/blog-11-20-2014-WhattheNewChangestotheFacebookAlgorithmMeansForMarketersandBrands-.jpg
+slug: /blog/news/what-the-new-changes-to-the-facebook-algorithm-means-for-marketers-and-brands
+cover_image: /wp-content/uploads/2014/11/blog-11-20-2014-WhattheNewChangestotheFacebookAlgorithmMeansForMarketersandBrands-.jpg
 post_layout:
   - default
 categories:
   - News
 tags:
   - Facebook
-
 ---
+
 If you haven’t seen the news, [Facebook has announced][1] some changes to it’s algorithm&#8230;again. Facebook has already launched a number of features that will allow users to be able to easily unfollow people and pages that overwhelm their News Feed or that they find annoying. Users will be able to give feedback about their News Feeds &#8211; when they hide a story, they’ll be given the option to see less from that person or page. If a user asks to see less, they will be given the option to unfollow them so they don’t see any further stories at all.
 
 The changes to the algorithm boil down to this: beginning in the new year, [users will see fewer overly promotional posts][2] in their News Feeds. This is Facebook’s way of saying, “If it feels like an ad, don’t post it to your page. Create an ad.”
@@ -31,8 +31,8 @@ To request a free social media assessment so that you can adjust to these change
 
 &nbsp;
 
- [1]: http://bit.ly/1qtZeMt
- [2]: http://on.fb.me/1t6h3MJ
- [3]: http://mklnd.com/1t5Z3Ba
- [4]: https://twitter.com/MartinBeck
- [5]: mailto:hell@brandglue.com
+[1]: http://bit.ly/1qtZeMt
+[2]: http://on.fb.me/1t6h3MJ
+[3]: http://mklnd.com/1t5Z3Ba
+[4]: https://twitter.com/MartinBeck
+[5]: mailto:hell@brandglue.com

@@ -3,8 +3,8 @@ title: 'Social Media Analytics: Looking at the Big Picture'
 author: Zach Welch
 type: post
 date: 2017-04-12T11:00:28+00:00
-url: /blog/tips/social-media-analytics-looking-at-the-big-picture
-featured_image: /wp-content/uploads/2014/09/blog-09-01-2014-socialmedianalyticslookingatthebigpicture.jpg
+slug: /blog/tips/social-media-analytics-looking-at-the-big-picture
+cover_image: /wp-content/uploads/2014/09/blog-09-01-2014-socialmedianalyticslookingatthebigpicture.jpg
 post_layout:
   - default
 categories:
@@ -15,8 +15,8 @@ tags:
   - Google+
   - Instagram
   - Twitter
-
 ---
+
 Social media marketers are constantly having to prove their value to the company with measurable results. The problem is that almost everything can be measured now, from audience size and engagement to content type and the best time of day to post. But just because it can be measured doesn’t necessarily mean it should be &#8212; so how do you decide what to watch and what to ignore?
 
 Don’t focus on the “vanity metrics” that you think will make you look successful; instead, keep watch on the bigger picture analytics. [Simply Measured shared four kinds of analysis][1] that will help you take a different look at your social channels and look at things in a different way.
@@ -47,6 +47,6 @@ Tumblr is best known for viral content because the main action users take is reb
 
 **Are there any analyses that you pay special attention to? How do you translate metrics into value for business-minded executives? Let us know in the comments.**
 
- [1]: http://simplymeasured.com/blog/2014/06/27/4-overlooked-types-of-social-media-analysis/
- [2]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.18.25-AM.png
- [3]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.29.05-AM.png
+[1]: http://simplymeasured.com/blog/2014/06/27/4-overlooked-types-of-social-media-analysis/
+[2]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.18.25-AM.png
+[3]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.29.05-AM.png

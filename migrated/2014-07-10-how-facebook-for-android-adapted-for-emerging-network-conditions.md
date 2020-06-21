@@ -3,16 +3,16 @@ title: How Facebook for Android Adapted for Emerging Network Conditions
 author: Zach Welch
 type: post
 date: 2014-07-10T11:00:26+00:00
-url: /blog/news/how-facebook-for-android-adapted-for-emerging-network-conditions
-featured_image: /wp-content/uploads/2014/06/shutterstock_182643410.jpg
+slug: /blog/news/how-facebook-for-android-adapted-for-emerging-network-conditions
+cover_image: /wp-content/uploads/2014/06/shutterstock_182643410.jpg
 post_layout:
   - default
 categories:
   - News
 tags:
   - Facebook
-
 ---
+
 In order to test the Facebook for Android app in emerging network conditions, a team of product managers and engineers traveled to Africa to see first hand how their app held up. Seventy-five percent of Facebook users live outside of the U.S., so it’s important that all of Facebook’s products work efficiently around the world.
 
 The result? The PM’s and engineers used up their monthly data allowance in 40 minutes.
@@ -27,14 +27,14 @@ First, we investigated the use of alternative compression formats for image tran
 
 Some other key tidbits that came from the Africa test:
 
-  * The tests of Android after the trip resulted in a 50 percent reduction of data use.
-  * Start time has been roughly cut in half.
-  * After embracing OkHttp, a networking stack open-sourced by Square, reports of slow or failed image loads dropped by almost 90 percent.
-  * Facebook for Android app size has been slashed by 65 percent.
+- The tests of Android after the trip resulted in a 50 percent reduction of data use.
+- Start time has been roughly cut in half.
+- After embracing OkHttp, a networking stack open-sourced by Square, reports of slow or failed image loads dropped by almost 90 percent.
+- Facebook for Android app size has been slashed by 65 percent.
 
 After the trip, the team now tests all major features in emerging networking conditions and make adjustments as necessary. They are also working to implement similar tweaks to the other apps in the Facebook family, including Messenger and Instagram.
 
 _Image courtesy of_ [_Shutterstock_][2]_._
 
- [1]: https://code.facebook.com/posts/485459238254631/improving-facebook-on-android
- [2]: http://www.shutterstock.com/
+[1]: https://code.facebook.com/posts/485459238254631/improving-facebook-on-android
+[2]: http://www.shutterstock.com/

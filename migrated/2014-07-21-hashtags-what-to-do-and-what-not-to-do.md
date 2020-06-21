@@ -3,16 +3,16 @@ title: 'Hashtags: What To Do And What Not To Do'
 author: Michelle Heathers
 type: post
 date: 2014-07-21T11:00:02+00:00
-url: /blog/tips/hashtags-what-to-do-and-what-not-to-do
-featured_image: /wp-content/uploads/2014/07/hashtags.jpg
+slug: /blog/tips/hashtags-what-to-do-and-what-not-to-do
+cover_image: /wp-content/uploads/2014/07/hashtags.jpg
 post_layout:
   - default
 categories:
   - Tips
 tags:
   - Twitter
-
 ---
+
 With great power comes great responsibility. Hashtags have the power to elevate your social campaign, but they also have the power to ruin your brand’s reputation if used improperly. They can highlight trends, tie campaigns to chosen keywords, and isolate conversations. Understanding when to use hashtags and which terms to tie to your brand is critical.
 
 [TopRank Online Marketing][1] shared the following examples of good and bad hashtag strategy in brand social messaging:
@@ -21,7 +21,7 @@ With great power comes great responsibility. Hashtags have the power to elevate 
 
 Yes, adding trending hashtags to every tweet can increase short-term traffic, but your followers will see right through the practice. A good rule of thumb when selecting hashtags is to pick those that make sense with your brand message.
 
-**Do: Create a branded hashtag.** 
+**Do: Create a branded hashtag.**
 
 This could come in the form of your company tagline, product names or campaign title. Consistently use the hashtag in your posts as well as give followers an incentive to use it as well. Over time, the audience will tie that tag to your brand, and you can track engagement via hashtag searches.
 
@@ -47,6 +47,6 @@ Replace these common blunders with the best practices and you are on your way to
 
 _Photo credit: Wikimedia._
 
- [1]: http://www.toprankblog.com/2014/04/hashtag-marketing/
- [2]: http://www.statista.com/chart/2032/hashtags-affect-interaction/
- [3]: http://localhost/brandglue/old-website/wp-content/uploads/2014/07/statista-300x214.jpg
+[1]: http://www.toprankblog.com/2014/04/hashtag-marketing/
+[2]: http://www.statista.com/chart/2032/hashtags-affect-interaction/
+[3]: http://localhost/brandglue/old-website/wp-content/uploads/2014/07/statista-300x214.jpg

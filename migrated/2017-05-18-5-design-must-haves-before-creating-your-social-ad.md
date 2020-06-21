@@ -3,20 +3,20 @@ title: 5 Design Must Haves Before Creating Your Social Ad
 author: Joey Ponce
 type: post
 date: 2017-05-18T20:43:49+00:00
-url: /blog/tips/5-design-must-haves-before-creating-your-social-ad
-featured_image: /wp-content/uploads/2017/05/BG-blog-5-Design-Must-Haves-Before-Creating-Your-Social-Ad.png
+slug: /blog/tips/5-design-must-haves-before-creating-your-social-ad
+cover_image: /wp-content/uploads/2017/05/BG-blog-5-Design-Must-Haves-Before-Creating-Your-Social-Ad.png
 post_layout:
   - default
 categories:
   - 'Media &amp; Design'
   - Tips
-
 ---
-****<span style="font-weight: 400;">You’ve probably found yourself in the position at one point or another asking yourself, “Do we really need to spend money on graphic design?” Especially when you are thinking about presenting facts, you can’t help but wonder how much of a difference visuals really make. </span>
+
+\*\*\*\*<span style="font-weight: 400;">You’ve probably found yourself in the position at one point or another asking yourself, “Do we really need to spend money on graphic design?” Especially when you are thinking about presenting facts, you can’t help but wonder how much of a difference visuals really make. </span>
 
 <span style="font-weight: 400;">As a designer, I’m (of course) biased, but here at BrandGlue we don’t just share our opinions &#8212; everything we do is backed by data. Powerful design can be your brand’s best friend, particularly when it comes to social advertising. With that said, every brand and audience is unique, so it’s always a good idea to conduct A/B tests with your own audience. </span>**The bottom line is: design choices influence audience behavior.** <span style="font-weight: 400;">So in order to connect with your people on the right level, here are 5 things that you should be thinking about before you create your social ad design:</span>
 
-  1. ****Know Your Audience****
+1. \***\*Know Your Audience\*\***
 
 <span style="font-weight: 400;">Who are you speaking to? It’s easy to say, “oh, we need this to be broad and speak to everyone.” But the reality is,</span> **if you are speaking to everyone, you are speaking to no one.** <span style="font-weight: 400;">The design that your grandma responds to vs. your daughter is going to be vastly different. Don’t take the lazy road. Do your research to understand who your audience is for that particular post and craft an ad that fits that niche. </span>
 
@@ -82,10 +82,10 @@ _<span style="font-weight: 400;">Here is an example of a traditional graph that 
 
 joey Ponce | joey@brandglue.com
 
- [1]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/Dollar-Shave-Clube-Screenshot-760x399.png
- [2]: https://www.bannersnack.com/blog/social-media-ad-infographic-2015/
- [3]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/skillsharefbad.png
- [4]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/obamacare_chart_lg.jpg
- [5]: https://vwo.com/ab-testing/
- [6]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/graphsample.jpg
- [7]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/be03106f2478497481a43180334157a3.jpg
+[1]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/Dollar-Shave-Clube-Screenshot-760x399.png
+[2]: https://www.bannersnack.com/blog/social-media-ad-infographic-2015/
+[3]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/skillsharefbad.png
+[4]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/obamacare_chart_lg.jpg
+[5]: https://vwo.com/ab-testing/
+[6]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/graphsample.jpg
+[7]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/be03106f2478497481a43180334157a3.jpg

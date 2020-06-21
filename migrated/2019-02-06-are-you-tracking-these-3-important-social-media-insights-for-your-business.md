@@ -3,50 +3,39 @@ title: Are You Tracking These 3 Important Social Media Insights for Your Busines
 author: Zach Welch
 type: post
 date: 2019-02-06T19:21:35+00:00
-url: /blog/news/are-you-tracking-these-3-important-social-media-insights-for-your-business
-featured_image: /wp-content/uploads/2019/04/091019_AreYourTrackingThese3ImportantSMinsights_BG.jpg
+slug: /blog/news/are-you-tracking-these-3-important-social-media-insights-for-your-business
+cover_image: /wp-content/uploads/2019/04/091019_AreYourTrackingThese3ImportantSMinsights_BG.jpg
 classic-editor-remember:
   - block-editor
 post_layout:
   - default
 categories:
   - News
-
 ---
-On social media, every update you share, interaction you receive, and new follower you generate provides data about your marketing strategy. While there are hundreds of social media metrics that your business could be monitoring, not every metric carries the same weight. &nbsp;  
 
+On social media, every update you share, interaction you receive, and new follower you generate provides data about your marketing strategy. While there are hundreds of social media metrics that your business could be monitoring, not every metric carries the same weight. &nbsp;
 
-If you want to determine the true success of your social media marketing efforts, I recommend that you start with these three insights.  
+If you want to determine the true success of your social media marketing efforts, I recommend that you start with these three insights.
 
+### **Understand Engagement**
 
-### **Understand Engagement**   
+On the surface, this metric exists simply to show you how engaged your audience is with your content on social. However, there are additional valuable insights engagement rates can provide. Examining social media engagement will allow you to understand how your strategy is performing with your audience. Analyzing engagement can help your business post the right content at the right time.
 
+Additionally, this metric allows you to see how your owned content compares to the curated content your business shares. Curated content is a great way to show your audience that you are keeping up with the latest industry news, yet you want to make sure you have plenty of owned content filling your social channels. [Owned content][1] helps your business build trust, provides useful company information, and shows off the vast industry knowledge you possess.
 
-On the surface, this metric exists simply to show you how engaged your audience is with your content on social. However, there are additional valuable insights engagement rates can provide. Examining social media engagement will allow you to understand how your strategy is performing with your audience. Analyzing engagement can help your business post the right content at the right time.  
+### **Track Brand Followers**
 
+Every business wants to see their [number of social media followers grow][2] each month, but simply having a large social following does not equate to brand success. By tracking your brand followers, you can determine the value of your following. Your brand’s message needs to reach the right people in order to be effective.
 
-Additionally, this metric allows you to see how your owned content compares to the curated content your business shares. Curated content is a great way to show your audience that you are keeping up with the latest industry news, yet you want to make sure you have plenty of owned content filling your social channels. [Owned content][1] helps your business build trust, provides useful company information, and shows off the vast industry knowledge you possess.  
+While you can still rejoice each month when you see a rise in your social following, take the time to gauge the quality of followers you’ve gained to ensure you’re getting the most out of your content strategy. Each social platform has an area in their metrics section that showcases information about followers. Watch this area closely to make sure that you’re attracting the right audience for your brand.
 
+### **Monitor Your Mentions**
 
-### **Track Brand Followers**  
+Whether or not your company agrees with the saying, “the customer is always right,” they should always, at the very least, be listened to. Brand monitoring allows you to track conversations about your company and its’ products by tracking a few keywords. Doing so can provide insights to help you better understand and target your desired audience. Your company will be able to easily see where your audience resides, what they care about, and even find potential influencers to build a relationship with.
 
-
-Every business wants to see their [number of social media followers grow][2] each month, but simply having a large social following does not equate to brand success. By tracking your brand followers, you can determine the value of your following. Your brand’s message needs to reach the right people in order to be effective.   
-
-
-While you can still rejoice each month when you see a rise in your social following, take the time to gauge the quality of followers you’ve gained to ensure you’re getting the most out of your content strategy. Each social platform has an area in their metrics section that showcases information about followers. Watch this area closely to make sure that you’re attracting the right audience for your brand.  
-
-
-### **Monitor Your Mentions**  
-
-
-Whether or not your company agrees with the saying, “the customer is always right,” they should always, at the very least, be listened to. Brand monitoring allows you to track conversations about your company and its’ products by tracking a few keywords. Doing so can provide insights to help you better understand and target your desired audience. Your company will be able to easily see where your audience resides, what they care about, and even find potential influencers to build a relationship with.  
-
-
-Keyword tracking also gives you the ability to quickly and efficiently put out any fires that may start. Publicly addressing concerns about your company or its’ products will show current followers (and potential new ones) that you care about customer satisfaction and are constantly working to build trust with them. Tracking also gives you the chance to join in on customer conversations and even use them to showcase positive mentions on your own platforms.   
-
+Keyword tracking also gives you the ability to quickly and efficiently put out any fires that may start. Publicly addressing concerns about your company or its’ products will show current followers (and potential new ones) that you care about customer satisfaction and are constantly working to build trust with them. Tracking also gives you the chance to join in on customer conversations and even use them to showcase positive mentions on your own platforms.
 
 Analyzing your social media performance metrics and statistics is important for every business. The above three insights can help you determine where to focus your energy when it comes to the data you collect. With so many social metrics available to marketers, focusing on fewer metrics and working to grow those will help you succeed with your targeted goals.
 
- [1]: http://localhost/brandglue/old-website/blog/tips/4-ways-to-increase-organic-twitter-traffic-and-conversions
- [2]: http://localhost/brandglue/old-website/blog/tips/looking-to-grow-your-following-on-instagram-follow-these-6-simple-steps
+[1]: http://localhost/brandglue/old-website/blog/tips/4-ways-to-increase-organic-twitter-traffic-and-conversions
+[2]: http://localhost/brandglue/old-website/blog/tips/looking-to-grow-your-following-on-instagram-follow-these-6-simple-steps

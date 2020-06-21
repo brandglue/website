@@ -3,15 +3,15 @@ title: With Facebook Groups Now Allowing Fan Pages to Join, Here are 4 Ways to U
 author: Michelle Heathers
 type: post
 date: 2018-10-17T19:53:36+00:00
-url: /blog/news/with-facebook-groups-now-allowing-fan-pages-to-join-here-are-4-ways-to-use-them-to-further-your-business
-featured_image: /wp-content/uploads/2018/10/With-Facebook-Groups-Now-Allowing-Fan-Pages-to-Join-Here-are-4-Ways-to-Use-Them-to-Further-Your-Business.png
+slug: /blog/news/with-facebook-groups-now-allowing-fan-pages-to-join-here-are-4-ways-to-use-them-to-further-your-business
+cover_image: /wp-content/uploads/2018/10/With-Facebook-Groups-Now-Allowing-Fan-Pages-to-Join-Here-are-4-Ways-to-Use-Them-to-Further-Your-Business.png
 post_layout:
   - default
 categories:
   - News
   - Tips
-
 ---
+
 <span style="font-weight: 400;">Have you considered using a Facebook Group for your business? While starting and maintaining a Facebook Group may seem a little intimidating and does require time and energy each week, there are some big benefits. Facebook Groups are a great way to add more value to your audience. With the recent addition by Facebook to allow fan pages to join Facebook Groups, starting and maintaining a group for your brand is an initiative worth considering. Below I’ve laid out 4 tactics to help further your business with Facebook Groups. </span>
 
 ## **Tactic 1: Set the Rules**
@@ -44,6 +44,6 @@ categories:
 
 <span style="font-weight: 400;">Now that you have 4 tried and true tactics, get started with a Facebook Group for your brand. And make sure and let us know how it goes. If you know of any companies doing a fantastic job with Facebook Groups, let us know in the comments.</span>
 
- [1]: http://localhost/brandglue/old-website/blog/social-media/7-step-checklist-for-running-your-next-social-media-marketing-campaign
- [2]: http://localhost/brandglue/old-website/blog/social-media-tips/why-you-should-stop-thinking-of-social-media-as-marketing
- [3]: http://localhost/brandglue/old-website/blog/social-media/5-lessons-marketers-can-learn-from-taylor-swift
+[1]: http://localhost/brandglue/old-website/blog/social-media/7-step-checklist-for-running-your-next-social-media-marketing-campaign
+[2]: http://localhost/brandglue/old-website/blog/social-media-tips/why-you-should-stop-thinking-of-social-media-as-marketing
+[3]: http://localhost/brandglue/old-website/blog/social-media/5-lessons-marketers-can-learn-from-taylor-swift

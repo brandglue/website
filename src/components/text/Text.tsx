@@ -2,10 +2,10 @@ import { color, space, typography, variant } from 'styled-system';
 import fluid from 'fluid-system';
 
 import { customText, StyledSystemTextProps } from '@src/theme/systemProps';
-import { styled } from '@theme/styled';
+import { styled, css } from '@theme/styled';
+import { rhythm } from '@theme/theme';
 
-const standardFontSizes = [1, null, null, null, 2, 3];
-const standardLineHeights = [1, null, null, null, 2, 3];
+const { standardFontSizes, standardLineHeights } = rhythm;
 
 export const H1 = styled.h1<StyledSystemTextProps>`
   ${color}
@@ -81,6 +81,10 @@ H5.defaultProps = {
 };
 
 export const P = styled.p<StyledSystemTextProps>`
+  ${({ theme }) => css`
+    margin-bottom: ${theme.spacings.emSpace04};
+  `}
+
   ${color}
   ${space}
   ${fluid(typography)}
@@ -103,7 +107,11 @@ Span.defaultProps = {
 };
 
 export const Ul = styled.ul<StyledSystemTextProps>`
-  list-style: disc;
+  ${({ theme }) => css`
+    list-style: disc;
+    margin: ${theme.spacings.pixelSpace05} ${theme.spacings.emSpace04};
+  `}
+
   ${color}
   ${space}
   ${fluid(typography)}
@@ -115,8 +123,10 @@ Ul.defaultProps = {
 };
 
 export const Ol = styled.ol<StyledSystemTextProps>`
-  list-style: decimal;
-  margin: ${({ theme }) => theme.spacings.pixelSpace05};
+  ${({ theme }) => css`
+    list-style: decimal;
+    margin: ${theme.spacings.pixelSpace05} ${theme.spacings.emSpace04};
+  `}
 
   ${color}
   ${space}
@@ -163,6 +173,17 @@ export const Strong = styled.strong<StyledSystemTextProps>`
 `;
 
 Strong.defaultProps = {
+  fontSize: standardFontSizes,
+  lineHeight: standardLineHeights,
+};
+
+export const A = styled.a<StyledSystemTextProps>`
+  ${color}
+  ${space}
+  ${fluid(typography)}
+`;
+
+A.defaultProps = {
   fontSize: standardFontSizes,
   lineHeight: standardLineHeights,
 };

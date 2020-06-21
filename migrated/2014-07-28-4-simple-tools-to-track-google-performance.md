@@ -3,16 +3,16 @@ title: 4 Simple Tools To Track Google+ Performance
 author: Michelle Heathers
 type: post
 date: 2014-07-28T11:00:09+00:00
-url: /blog/tips/4-simple-tools-to-track-google-performance
-featured_image: /wp-content/uploads/2014/07/shutterstock_181909451.jpg
+slug: /blog/tips/4-simple-tools-to-track-google-performance
+cover_image: /wp-content/uploads/2014/07/shutterstock_181909451.jpg
 post_layout:
   - default
 categories:
   - Tips
 tags:
   - Google+
-
 ---
+
 With over 300 million users and the ability to search social content and double engagement on Twitter, Google+ is a key social platform when it comes to reaching your audience online.
 
 Social Media Examiner shared [four tools][1] to track the analytics behind Google+, identify your key audiences and boost engagement:
@@ -47,8 +47,8 @@ With this free tool, you will be able to better understand what works and what d
 
 _Photo courtesy of Shutterstock._
 
- [1]: http://www.socialmediaexaminer.com/tools-to-measure-google-plus/
- [2]: https://plus.google.com/ripple/details
- [3]: https://www.steadydemand.com/
- [4]: http://www.circlecount.com/
- [5]: https://sumall.com/
+[1]: http://www.socialmediaexaminer.com/tools-to-measure-google-plus/
+[2]: https://plus.google.com/ripple/details
+[3]: https://www.steadydemand.com/
+[4]: http://www.circlecount.com/
+[5]: https://sumall.com/

@@ -3,8 +3,8 @@ title: 3 Campaign Steps to Take Before Contacting Social Media Influencers
 author: Michelle Heathers
 type: post
 date: 2019-04-24T17:15:41+00:00
-url: /blog/tips/3-campaign-steps-to-take-before-contacting-social-media-influencers
-featured_image: /wp-content/uploads/2019/04/091019_3CampaignStepsToTakeBeforeContactingASocialMediaInfluencer_BG.jpg
+slug: /blog/tips/3-campaign-steps-to-take-before-contacting-social-media-influencers
+cover_image: /wp-content/uploads/2019/04/091019_3CampaignStepsToTakeBeforeContactingASocialMediaInfluencer_BG.jpg
 classic-editor-remember:
   - block-editor
 post_layout:
@@ -14,40 +14,29 @@ categories:
 tags:
   - influencer marketing
   - social media influencers
-
 ---
-Love it or hate it, social media marketing using influencers is here to stay. Spam or “fake” influencers aside, this method of marketing can be extremely valuable for brands, helping to extend their reach, build rapport with new audiences, and ultimately increase sales and revenue. As the marketing industry has evolved, influencer marketing has changed, providing a range of tools to help brands identify and vet influencers, as well as track the success of ongoing campaigns.  
 
+Love it or hate it, social media marketing using influencers is here to stay. Spam or “fake” influencers aside, this method of marketing can be extremely valuable for brands, helping to extend their reach, build rapport with new audiences, and ultimately increase sales and revenue. As the marketing industry has evolved, influencer marketing has changed, providing a range of tools to help brands identify and vet influencers, as well as track the success of ongoing campaigns.
 
-If you’re going to utilize influencer marketing, it needs to be skillfully planned on a solid foundation. Before executing any influencer marketing program, marketers need to ensure that they have the following three key factors in place:  
+If you’re going to utilize influencer marketing, it needs to be skillfully planned on a solid foundation. Before executing any influencer marketing program, marketers need to ensure that they have the following three key factors in place:
 
+## **1. Create Influencer Personas**
 
-## **1. Create Influencer Personas**  
+You’re probably familiar with the process of creating buyer personas to best reach your target audience. Using a similar method, creating influencer personas will allow you to choose the individuals who will be the best received by your audience on social media.
 
+Discovering the types of topics your customers seek and the pain points an influencer could solve for them is a great place to start. The more detail that you are able to collect, the more likely your efforts are to pay off.
 
-You’re probably familiar with the process of creating buyer personas to best reach your target audience. Using a similar method, creating influencer personas will allow you to choose the individuals who will be the best received by your audience on social media.   
+## **2. Analyze Digital Footprints**
 
+Which social channels is an influencer strongest on? Does this align with the social channels your brand performs the best on? How active are their followers? Does the influencer’s audience seem to be growing, maintaining, or even decreasing? Assessing all of these factors and data points is critical to the success of an influencer marketing campaign. &nbsp;
 
-Discovering the types of topics your customers seek and the pain points an influencer could solve for them is a great place to start. The more detail that you are able to collect, the more likely your efforts are to pay off.   
+Having knowledge of the channels your influencers are the strongest on will help determine how you will work with them and the types of content assets you will provide.
 
+A great way to start your brand’s presence on an influencers social account is with a blog. The social posts around it will garner a quick spark for your brand, and as an added bonus you can add it to your vault of evergreen content.
 
-## **2. Analyze Digital Footprints**  
+## **3. Pick a Theme**
 
+Always choose a campaign theme when working with an influencer. Why? Themes offer organizational structure and help to provide creative direction. The key is to ensure that your theme isn’t too intrusive. Find a good balance between providing brand assets for the influencer and allowing them to be creative. The influencers know their audience better than you do, so you will want to give them plenty of freedom to appeal to their audience (AKA your potential customers).
 
-Which social channels is an influencer strongest on? Does this align with the social channels your brand performs the best on? How active are their followers? Does the influencer’s audience seem to be growing, maintaining, or even decreasing? Assessing all of these factors and data points is critical to the success of an influencer marketing campaign. &nbsp;  
-
-
-Having knowledge of the channels your influencers are the strongest on will help determine how you will work with them and the types of content assets you will provide.   
-
-
-A great way to start your brand’s presence on an influencers social account is with a blog. The social posts around it will garner a quick spark for your brand, and as an added bonus you can add it to your vault of evergreen content.  
-
-
-## **3. Pick a Theme**  
-
-
-Always choose a campaign theme when working with an influencer. Why? Themes offer organizational structure and help to provide creative direction. The key is to ensure that your theme isn’t too intrusive. Find a good balance between providing brand assets for the influencer and allowing them to be creative. The influencers know their audience better than you do, so you will want to give them plenty of freedom to appeal to their audience (AKA your potential customers).  
-
-
-Hopefully these three tips will help you get started planning your own influencer marketing strategy, and maximize your results in 2019.   
+Hopefully these three tips will help you get started planning your own influencer marketing strategy, and maximize your results in 2019.  
 Need help with influencer marketing? Reach out to our team at <hello@brandglue.com>.

@@ -3,15 +3,15 @@ title: How to Maximize Video Content Across Your Social Networks
 author: Joey Ponce
 type: post
 date: 2018-11-07T17:31:36+00:00
-url: /blog/tips/how-to-maximize-video-content-across-your-social-networks
-featured_image: /wp-content/uploads/2018/11/BG-Blog-How-to-Maximize-Video-Content-Across-Your-Social-Networks-1.png
+slug: /blog/tips/how-to-maximize-video-content-across-your-social-networks
+cover_image: /wp-content/uploads/2018/11/BG-Blog-How-to-Maximize-Video-Content-Across-Your-Social-Networks-1.png
 post_layout:
   - default
 categories:
   - 'Media &amp; Design'
   - Tips
-
 ---
+
 <span style="font-weight: 400;">Surely, you’ve noticed it: The social media trend of 2017—and 2018—is video.</span>
 
 <span style="font-weight: 400;">Video content continues to be increasingly important to social media algorithms. With the average person watching more than an </span>[<span style="font-weight: 400;">hour and a half of video content</span>][1] <span style="font-weight: 400;">each day, how can you ensure your video content is successful?</span>
@@ -50,9 +50,9 @@ categories:
 
 <span style="font-weight: 400;">With these tips in your marketing arsenal, you’re on your way to creating optimized video content for every social platform. What tips and tricks have you employed to give your videos some extra impact? We’d love to hear about them in the comments.</span>
 
- [1]: https://www.wyzowl.com/video-marketing-statistics-2018/
- [2]: http://localhost/brandglue/old-website/blog/social-media/5-tips-maximize-effectiveness-facebook-live-video
- [3]: http://localhost/brandglue/old-website/blog/social-media-tips/5-ways-digital-marketers-tap-power-social-video
- [4]: https://www.forbes.com/sites/johnkoetsier/2017/03/13/facebook-native-video-gets-10x-more-shares-than-youtube/#d910d491c66a
- [5]: http://localhost/brandglue/old-website/blog/social-media-tips/5-design-must-haves-before-creating-your-social-ad
- [6]: https://blog.bufferapp.com/social-media-video-marketing-statistics
+[1]: https://www.wyzowl.com/video-marketing-statistics-2018/
+[2]: http://localhost/brandglue/old-website/blog/social-media/5-tips-maximize-effectiveness-facebook-live-video
+[3]: http://localhost/brandglue/old-website/blog/social-media-tips/5-ways-digital-marketers-tap-power-social-video
+[4]: https://www.forbes.com/sites/johnkoetsier/2017/03/13/facebook-native-video-gets-10x-more-shares-than-youtube/#d910d491c66a
+[5]: http://localhost/brandglue/old-website/blog/social-media-tips/5-design-must-haves-before-creating-your-social-ad
+[6]: https://blog.bufferapp.com/social-media-video-marketing-statistics

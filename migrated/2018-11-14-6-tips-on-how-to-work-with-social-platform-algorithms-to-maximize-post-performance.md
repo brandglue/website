@@ -3,19 +3,19 @@ title: 6 Tips on How to Work with Social Platform Algorithms to Maximize Post Pe
 author: Zach Welch
 type: post
 date: 2018-11-14T20:53:45+00:00
-url: /blog/tips/6-tips-on-how-to-work-with-social-platform-algorithms-to-maximize-post-performance
-featured_image: /wp-content/uploads/2018/11/BG-Blog-6-Tips-on-How-to-Work-with-Social-Platform-Algorithms-to-Maximize-Post-Performance.png
+slug: /blog/tips/6-tips-on-how-to-work-with-social-platform-algorithms-to-maximize-post-performance
+cover_image: /wp-content/uploads/2018/11/BG-Blog-6-Tips-on-How-to-Work-with-Social-Platform-Algorithms-to-Maximize-Post-Performance.png
 post_layout:
   - default
 categories:
   - Tips
-
 ---
+
 <span style="font-weight: 400;">It’s no easy task for businesses and marketers to reach customers organically on social media, especially when the algorithms of social platforms are forever changing. With more and more algorithm refinements happening every single day, you have to either learn to work with the systems, or watch your social metrics and traffic steadily decline.</span>
 
 <span style="font-weight: 400;">So, how can you ensure that you get the best results? Here are six tips on how you can work with social platform algorithms to maximize your performance.</span>
 
-## **Tip #1: Upload video content directly** 
+## **Tip #1: Upload video content directly**
 
 <span style="font-weight: 400;">Video content is an extremely powerful way to organically reach people on social media. It’s also the current type of post that most favorably plays to each social platforms’ algorithm. </span>
 
@@ -55,7 +55,7 @@ categories:
 
 <span style="font-weight: 400;">A word of caution: generic copy and paste responses are easily spotted and can take away from your authenticity. Take the time to tailor your responses. You also don’t want to get the dreaded unfollow or spam report, as the algorithms on each social network do not take kindly to this type of feedback.</span>
 
-## **Tip #6: Use topical events** 
+## **Tip #6: Use topical events**
 
 <span style="font-weight: 400;">If you want your followers to engage with the content you post, it only makes sense that you should post content they’re interested in. </span>
 
@@ -65,7 +65,7 @@ categories:
 
 _<span style="font-weight: 400;">With these 6 tips you can begin planning engagement-friendly content that will allow you to work with every platform’s algorithm. Do you have additional tips to add? Let us know in the comments.</span>_
 
- [1]: http://localhost/brandglue/old-website/blog/social-media-tips/how-to-maximize-video-content-across-your-social-networks
- [2]: https://blog.bufferapp.com/social-media-video-marketing-statistics
- [3]: http://localhost/brandglue/old-website/blog/social-media-tips/5-lessons-marketers-can-learn-from-taylor-swift
- [4]: http://localhost/brandglue/old-website/blog/social-media/with-facebook-groups-now-allowing-fan-pages-to-join-here-are-4-ways-to-use-them-to-further-your-business
+[1]: http://localhost/brandglue/old-website/blog/social-media-tips/how-to-maximize-video-content-across-your-social-networks
+[2]: https://blog.bufferapp.com/social-media-video-marketing-statistics
+[3]: http://localhost/brandglue/old-website/blog/social-media-tips/5-lessons-marketers-can-learn-from-taylor-swift
+[4]: http://localhost/brandglue/old-website/blog/social-media/with-facebook-groups-now-allowing-fan-pages-to-join-here-are-4-ways-to-use-them-to-further-your-business

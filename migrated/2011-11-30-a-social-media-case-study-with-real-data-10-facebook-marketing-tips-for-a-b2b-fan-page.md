@@ -3,16 +3,16 @@ title: 'A Social Media Case Study with REAL Data: 10 Facebook Marketing Tips for
 author: Michelle Heathers
 type: post
 date: 2011-11-30T15:21:10+00:00
-url: /blog/case-studies/a-social-media-case-study-with-real-data-10-facebook-marketing-tips-for-a-b2b-fan-page
-featured_image: /wp-content/uploads/2011/11/bg1.jpg
+slug: /blog/case-studies/a-social-media-case-study-with-real-data-10-facebook-marketing-tips-for-a-b2b-fan-page
+cover_image: /wp-content/uploads/2011/11/bg1.jpg
 post_layout:
   - default
 categories:
   - Case Studies
 tags:
   - Facebook
-
 ---
+
 Social media case studies have gotten more and more buzz (and ensuing negativity) as marketers have sought to prove the value of a Facebook fan page or Twitter account. Afterall, who doesn&#8217;t want to show how their Facebook ad spend or hiring of a social media agency moved the bottom line? Every CMO (rightfully) wants to know.
 
 But before we start pushing numbers out there and drawing correlations, **we have to get down and dirty with the data**. Did the spike in new fans actually produce more sales? Does more likes and comments actually mean your Facebook fans are telling their friends about you? The answer is that we often don&#8217;t truly know.

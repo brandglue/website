@@ -3,16 +3,16 @@ title: 'Jackson Kayak: Navigating the Rapidly Changing Waters of Social Media'
 author: Zach Welch
 type: post
 date: 2012-10-01T12:00:00+00:00
-url: /blog/case-studies/jackson-kayak-navigating-the-rapidly-changing-waters-of-social-media
-featured_image: /wp-content/uploads/2013/09/casestudy-JacksonKayak-pg1.jpg
+slug: /blog/case-studies/jackson-kayak-navigating-the-rapidly-changing-waters-of-social-media
+cover_image: /wp-content/uploads/2013/09/casestudy-JacksonKayak-pg1.jpg
 post_layout:
   - default
 categories:
   - Case Studies
 tags:
   - Facebook
-
 ---
+
 When Eric Jackson of <a href="http://jacksonkayak.com/" target="_blank">Jackson Kayak</a> first came to us, his dilemma was this: he had a great story to tell and an awesome product, but felt their social presence was a ways behind their competition. So with that, Eric and his team handed over the reigns and tasked our team at BrandGlue with building creative campaigns to reach the base they knew was there and to grow their audience. So we put our heads down and got to work.
 
 The results were outstanding. In just three short months, Jackson Kayak separated themselves from the pack and currently has a larger fan base than any other kayak manufacturer. We put together a deck highlighting our journey, the results, and best practices.
@@ -28,4 +28,4 @@ The results were outstanding. In just three short months, Jackson Kayak separate
 
 Need help implementing your social media strategy?** Request a free assessment [here][1].**
 
- [1]: http://localhost/brandglue/old-website/free-assessment
+[1]: http://localhost/brandglue/old-website/free-assessment

@@ -3,18 +3,18 @@ title: 5 Tips to Maximize the Effectiveness of Your Next Facebook Live Video
 author: Michelle Heathers
 type: post
 date: 2018-06-13T20:59:05+00:00
-url: /blog/news/5-tips-maximize-effectiveness-facebook-live-video
-featured_image: /wp-content/uploads/2018/06/5-Tips-to-Maximize-the-Effectiveness-of-Your-Next-Facebook-Live-Video.png
+slug: /blog/news/5-tips-maximize-effectiveness-facebook-live-video
+cover_image: /wp-content/uploads/2018/06/5-Tips-to-Maximize-the-Effectiveness-of-Your-Next-Facebook-Live-Video.png
 post_layout:
   - default
 categories:
   - News
   - Tips
-
 ---
+
 <span style="font-weight: 400;">Have you recorded a Facebook Live video yet? If not, it’s time to join the trend.</span>
 
-<span style="font-weight: 400;">Live streaming is here to stay, and estimates suggest it will be a</span> [<span style="font-weight: 400;">$70+ billion industry by 2021</span>][1]<span style="font-weight: 400;">. Beyond the financial growth, video has become an essential part of marketing strategy, with</span> [<span style="font-weight: 400;">81% of businesses</span>][2] <span style="font-weight: 400;">implementing video in their marketing efforts as of December 2017.</span>
+<span style="font-weight: 400;">Live streaming is here to stay, and estimates suggest it will be a</span> [<span style="font-weight: 400;">\$70+ billion industry by 2021</span>][1]<span style="font-weight: 400;">. Beyond the financial growth, video has become an essential part of marketing strategy, with</span> [<span style="font-weight: 400;">81% of businesses</span>][2] <span style="font-weight: 400;">implementing video in their marketing efforts as of December 2017.</span>
 
 <span style="font-weight: 400;">The reason is obvious: people love watching videos. </span>**In fact,** **72% of people would chose video over text to learn about a product or service.**
 
@@ -67,7 +67,7 @@ categories:
 
 _<span style="font-weight: 400;">What tips do you have for creating a great Facebook Live video? Share your thoughts in the comments!</span>_
 
- [1]: https://www.slideshare.net/PeopleLinkJSC/social-media-trends-for-2018-84336048?qid=131df752-f77d-4d3d-b72c-38d7bc76c592&v=&b=&from_search=2
- [2]: https://blog.hubspot.com/marketing/state-of-video-marketing-new-data
- [3]: http://localhost/brandglue/old-website/blog/social-media/5-ways-digital-marketers-tap-power-social-video
- [4]: https://live.fb.com/tips/
+[1]: https://www.slideshare.net/PeopleLinkJSC/social-media-trends-for-2018-84336048?qid=131df752-f77d-4d3d-b72c-38d7bc76c592&v=&b=&from_search=2
+[2]: https://blog.hubspot.com/marketing/state-of-video-marketing-new-data
+[3]: http://localhost/brandglue/old-website/blog/social-media/5-ways-digital-marketers-tap-power-social-video
+[4]: https://live.fb.com/tips/

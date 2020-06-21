@@ -3,8 +3,8 @@ title: What Does Self-Censorship on Social Media Platforms Have To Do With Socia
 author: Michelle Heathers
 type: post
 date: 2017-03-08T00:09:24+00:00
-url: /blog/tips/what-does-self-censorship-on-social-media-platforms-have-to-do-with-social-media-marketing
-featured_image: /wp-content/uploads/2014/11/blog-11-07-2014-whatdoesselfcensorshiponsocialmediaplatformshavetodowithsocialmediamarketing1-e1415405708722.jpg
+slug: /blog/tips/what-does-self-censorship-on-social-media-platforms-have-to-do-with-social-media-marketing
+cover_image: /wp-content/uploads/2014/11/blog-11-07-2014-whatdoesselfcensorshiponsocialmediaplatformshavetodowithsocialmediamarketing1-e1415405708722.jpg
 post_layout:
   - default
 categories:
@@ -12,8 +12,8 @@ categories:
 tags:
   - Facebook
   - LinkedIn
-
 ---
+
 <p style="text-align: left;">
   Have you ever thought of a clever post for a certain social outlet, typed it out, only to find yourself re-writing and crafting it until you get it just right? If so, it turns out you’re not alone. Most people are familiar with that gut-check you experience right before hitting the “post/tweet” button, and it actually is a good thing. It leads to self-censorship (which we all appreciate the most when it is noticeably missing), and can be the impetus for creative breakthroughs. According to a <a href="http://sauvik.me/system/papers/pdfs/000/000/004/original/self-censorship_on_facebook_cameraready.pdf">study conducted by researchers at Facebook</a>who tracked the activity of 3.9 million users over a 17 day period, 71% of users typed out at least one status they later discarded. <a href="http://localhost/brandglue/old-website/wp-content/uploads/2014/11/blog-11-07-2014-whatdoesselfcensorshiponsocialmediaplatformshavetodowithsocialmediamarketing-2.png"><img class="size-medium wp-image-862 aligncenter" src="http://localhost/brandglue/old-website/wp-content/uploads/2014/11/blog-11-07-2014-whatdoesselfcensorshiponsocialmediaplatformshavetodowithsocialmediamarketing-2-249x300.png" alt="These charts from Facebook's study on self-censorship show the number of censored (in red) and published (in blue) comments and posts during the study, and where on Facebook they were made." width="249" height="300" srcset="http://localhost/brandglue/old-website/wp-content/uploads/2014/11/blog-11-07-2014-whatdoesselfcensorshiponsocialmediaplatformshavetodowithsocialmediamarketing-2-249x300.png 249w, http://localhost/brandglue/old-website/wp-content/uploads/2014/11/blog-11-07-2014-whatdoesselfcensorshiponsocialmediaplatformshavetodowithsocialmediamarketing-2-149x180.png 149w, http://localhost/brandglue/old-website/wp-content/uploads/2014/11/blog-11-07-2014-whatdoesselfcensorshiponsocialmediaplatformshavetodowithsocialmediamarketing-2-524x632.png 524w, http://localhost/brandglue/old-website/wp-content/uploads/2014/11/blog-11-07-2014-whatdoesselfcensorshiponsocialmediaplatformshavetodowithsocialmediamarketing-2.png 684w" sizes="(max-width: 249px) 100vw, 249px" /></a> Source: <a href="http://sauvik.me/system/papers/pdfs/000/000/004/original/self-censorship_on_facebook_cameraready.pdf">Self Censorship on Facebook</a>
 </p>

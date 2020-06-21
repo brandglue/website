@@ -3,15 +3,15 @@ title: 'Your Social Channels Deserve Better: 5 Tips for Creating Riveting Conten
 author: Michelle Heathers
 type: post
 date: 2018-04-02T23:01:54+00:00
-url: /blog/tips/your-social-channels-deserve-better-5-tips-for-creating-riveting-content
-featured_image: /wp-content/uploads/2018/04/Your-Social-Channels-Deserve-Better_-5-Tips-for-Creating-Riveting-Content.png
+slug: /blog/tips/your-social-channels-deserve-better-5-tips-for-creating-riveting-content
+cover_image: /wp-content/uploads/2018/04/Your-Social-Channels-Deserve-Better_-5-Tips-for-Creating-Riveting-Content.png
 post_layout:
   - default
 categories:
   - 'Media &amp; Design'
   - Tips
-
 ---
+
 Does anyone care what you post on your social channels?
 
 Your first response is probably, “Of course they care! That’s why I’m posting.”
@@ -50,7 +50,7 @@ The goal is to get people to take some type of action – such as visiting your 
 
 To paraphrase a line from _Field of Dreams_, “If you call them to action, they will come.”
 
-## **3. Make your posts visually appealing** 
+## **3. Make your posts visually appealing**
 
 Not every social post uses an image. Which is unfortunate since every post could benefit from some sort of visual. Not only do they help catch the eye and stand out, visuals also enhance performance. [Tweets that use images receive 150% more retweets][2]. And on Facebook, a post that contains an image sees [2.3x more engagement][3] than a text-only post.
 
@@ -68,10 +68,10 @@ Another consideration is company size. Large corporations with a variety of prod
 
 The fix is to mix it up with curated content. Blog posts from other sites provide a wealth of content you can take advantage of. Here are just a few topic ideas to get you started:
 
-  * Industry trends and predictions
-  * Coverage of significant events
-  * The latest news and buzz from around your industry
-  * PR, news coverage, or awards for your company or product
+- Industry trends and predictions
+- Coverage of significant events
+- The latest news and buzz from around your industry
+- PR, news coverage, or awards for your company or product
 
 ## **5. Don’t create content in a vacuum**
 
@@ -83,7 +83,7 @@ These 5 tips provide a great foundation as you evaluate, or perhaps begin to bui
 
 Have your own tips to share? Leave them in the comments below!
 
- [1]: http://localhost/brandglue/old-website/blog/social-media-tips/5-design-must-haves-before-creating-your-social-ad
- [2]: https://blog.bufferapp.com/the-power-of-twitters-new-expanded-images-and-how-to-make-the-most-of-it
- [3]: http://buzzsumo.com/blog/how-to-massively-boost-your-blog-traffic-with-these-5-awesome-image-stats/
- [4]: http://localhost/brandglue/old-website/#services-bg
+[1]: http://localhost/brandglue/old-website/blog/social-media-tips/5-design-must-haves-before-creating-your-social-ad
+[2]: https://blog.bufferapp.com/the-power-of-twitters-new-expanded-images-and-how-to-make-the-most-of-it
+[3]: http://buzzsumo.com/blog/how-to-massively-boost-your-blog-traffic-with-these-5-awesome-image-stats/
+[4]: http://localhost/brandglue/old-website/#services-bg

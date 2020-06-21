@@ -3,53 +3,40 @@ title: 3 Ways to Use Interactive Content to Engage Your Audience on Social Media
 author: Michelle Heathers
 type: post
 date: 2019-01-24T19:24:59+00:00
-url: /blog/tips/3-ways-to-use-interactive-content-to-engage-your-audience-on-social-media
-featured_image: /wp-content/uploads/2019/04/091019_3waystouseinteractivecontent_BG.jpg
+slug: /blog/tips/3-ways-to-use-interactive-content-to-engage-your-audience-on-social-media
+cover_image: /wp-content/uploads/2019/04/091019_3waystouseinteractivecontent_BG.jpg
 classic-editor-remember:
   - block-editor
 post_layout:
   - default
 categories:
   - Tips
-
 ---
-It’s no surprise that users are more likely to engage with and consume content when it’s presented in a fun and intriguing way on social media. Not only does interactive content look better aesthetically, it also reduces the amount of information your audience has to process at one time.  
 
+It’s no surprise that users are more likely to engage with and consume content when it’s presented in a fun and intriguing way on social media. Not only does interactive content look better aesthetically, it also reduces the amount of information your audience has to process at one time.
 
-While interactive content has been around for a while, it’s only recently begun to really gain serious traction among marketers. In a world that used to revolve around static copy, interactive elements can at first seem a little intimidating.  
+While interactive content has been around for a while, it’s only recently begun to really gain serious traction among marketers. In a world that used to revolve around static copy, interactive elements can at first seem a little intimidating.
 
+Beat the intimidation factor by trying out these 3 interactive content strategies to engage your audience on social media:
 
-Beat the intimidation factor by trying out these 3 interactive content strategies to engage your audience on social media:  
+### **Create a quiz**
 
+In terms of reach, participation and activity, quizzes come out on top. There is just something that is inherently enjoyable about answering questions and receiving the result at the end.
 
-### **Create a quiz**  
+There are a multitude of ways that you can use quizzes. You can make them as something fun for your audience to participate in, or as a way to educate your followers about your products, or to gain more knowledge about your audience to better market to them in the future. Facebook has a built-in quiz creator, while Instagram has a variety of ways to incorporate quizzes with Instagram Stories. You can also use a 3rd party application to create a quiz and share it out on your social outlets.
 
+### **Polls**
 
-In terms of reach, participation and activity, quizzes come out on top. There is just something that is inherently enjoyable about answering questions and receiving the result at the end.  
+Polls are a great way to jump into interactive content. With nearly all of the social outlets having pre-built polling tools, it’s pretty seamless to try one out.
 
+Not sure what to poll your followers about? People love sharing their opinions, whether it is about something silly or a serious topic. Choose a topic in your industry that is heavily discussed and create a poll about it. Additionally, most people are also interested in seeing the results of the other people who participate.
 
-There are a multitude of ways that you can use quizzes. You can make them as something fun for your audience to participate in, or as a way to educate your followers about your products, or to gain more knowledge about your audience to better market to them in the future. Facebook has a built-in quiz creator, while Instagram has a variety of ways to incorporate quizzes with Instagram Stories. You can also use a 3rd party application to create a quiz and share it out on your social outlets.   
+As an added bonus, it’s common for poll participants to comment in order to expound on their decision or to share their feelings about the results, which increases your engagement even more.
 
+### **Live Q&A**
 
-### **Polls**  
+There’s really no better way to engage in a conversation with your audience than to actually hold a live, real-time conversation with them.
 
-
-Polls are a great way to jump into interactive content. With nearly all of the social outlets having pre-built polling tools, it’s pretty seamless to try one out.   
-
-
-Not sure what to poll your followers about? People love sharing their opinions, whether it is about something silly or a serious topic. Choose a topic in your industry that is heavily discussed and create a poll about it. Additionally, most people are also interested in seeing the results of the other people who participate.  
-
-
-As an added bonus, it’s common for poll participants to comment in order to expound on their decision or to share their feelings about the results, which increases your engagement even more.  
-
-
-### **Live Q&A**  
-
-
-There’s really no better way to engage in a conversation with your audience than to actually hold a live, real-time conversation with them.  
-
-
-Hosting a live-stream Q&A session gives your audience the opportunity to get to know the more human side of your business, which helps to build trust with your customers. It also allows you to share knowledge about products and your industry, establishing the brand as an industry expert. A new product launch is a great time for a live Q&A. You should also consider doing a live Q&A with one of your leadership team members.   
-
+Hosting a live-stream Q&A session gives your audience the opportunity to get to know the more human side of your business, which helps to build trust with your customers. It also allows you to share knowledge about products and your industry, establishing the brand as an industry expert. A new product launch is a great time for a live Q&A. You should also consider doing a live Q&A with one of your leadership team members.
 
 When you add interactive elements to your social media strategy, you provide incentive for your audience to engage with your content longer, which will help them see more of your future posts. Try out one (or all!) of these three interactive content strategies and let us know how your audience responds.

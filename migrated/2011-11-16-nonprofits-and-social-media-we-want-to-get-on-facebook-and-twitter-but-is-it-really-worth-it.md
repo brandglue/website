@@ -3,8 +3,8 @@ title: 'Nonprofits and Social Media: We want to get on Facebook and Twitter, but
 author: Michelle Heathers
 type: post
 date: 2011-11-16T23:54:45+00:00
-url: /blog/tips/nonprofits-and-social-media-we-want-to-get-on-facebook-and-twitter-but-is-it-really-worth-it
-featured_image: /wp-content/uploads/2011/11/blog13.jpg
+slug: /blog/tips/nonprofits-and-social-media-we-want-to-get-on-facebook-and-twitter-but-is-it-really-worth-it
+cover_image: /wp-content/uploads/2011/11/blog13.jpg
 post_layout:
   - default
 categories:
@@ -12,8 +12,8 @@ categories:
 tags:
   - Facebook
   - Twitter
-
 ---
+
 In the bit of spare time I have at BrandGlue, I like to work with nonprofits. Having lived overseas for a year in Zambia doing HIV/AIDS prevention work, I have a passion to keep investing in organizations that are making an impact, such as the <a title="IJM" href="http://www.ijm.org/" target="_blank" rel="nofollow">International Justice Mission</a>.
 
 The first question I always get asked is, &#8220;So, is social media worth it?&#8221; Nonprofits, especially smaller ones, are often strapped for manpower and resources (so let&#8217;s get out and <a title="VolunteerMatch" href="http://www.volunteermatch.org/" target="_blank" rel="nofollow">volunteer</a>!).
@@ -22,10 +22,10 @@ I&#8217;m not gonna lie. I&#8217;ve bluntly told a few nonprofits that they shou
 
 So, in response to their initial question, I ask about the following things:
 
-  * Goals & Objectives
-  * Manpower
-  * Time
-  * Resources (mainly financial)
+- Goals & Objectives
+- Manpower
+- Time
+- Resources (mainly financial)
 
 I&#8217;m really not, at that point, focusing on the how-to of social media. I&#8217;m focusing on the &#8220;is it worth it&#8221;. 10 times out of 10, this relates to donations and fundraising in some shape or form.
 

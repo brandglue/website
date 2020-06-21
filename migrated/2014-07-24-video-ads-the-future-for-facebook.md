@@ -3,16 +3,16 @@ title: Are Video Ads The Future For Facebook?
 author: Zach Welch
 type: post
 date: 2014-07-24T11:00:29+00:00
-url: /blog/news/video-ads-the-future-for-facebook
-featured_image: /wp-content/uploads/2014/07/shutterstock_187166975.jpg
+slug: /blog/news/video-ads-the-future-for-facebook
+cover_image: /wp-content/uploads/2014/07/shutterstock_187166975.jpg
 post_layout:
   - default
 categories:
   - News
 tags:
   - Facebook
-
 ---
+
 Have you noticed an abundance of videos in your Facebook news feed?
 
 Changes to Facebook’s news feed algorithm last month was designed to provide users with better videos on the platform. The tweak includes a new video ranking system which takes into account whether people are actually watching each video — and for how long — before deciding who else will see that video in their feed. This new metric is designed to determine how captivating the content is and is a better indicator than opposed to likes and comments. Users who routinely hit the play button can expect to see more of the same.
@@ -25,4 +25,4 @@ With the new focus on video content, will you begin to put more of a focus on it
 
 _Image courtesy of Shutterstock._
 
- [1]: http://newsroom.fb.com/news/2014/06/news-feed-fyi-showing-better-videos/
+[1]: http://newsroom.fb.com/news/2014/06/news-feed-fyi-showing-better-videos/

@@ -3,8 +3,8 @@ title: 3 Questions to See If 1-Click Buying Is Right For Your Brand
 author: Michelle Heathers
 type: post
 date: 2017-04-20T15:00:25+00:00
-url: /blog/tips/3-questions-to-see-if-1-click-buying-is-right-for-your-brand
-featured_image: /wp-content/uploads/2014/10/blog-10-09-2014-3questionstoseeif1clickbuyingisrightforyourbrand.jpg
+slug: /blog/tips/3-questions-to-see-if-1-click-buying-is-right-for-your-brand
+cover_image: /wp-content/uploads/2014/10/blog-10-09-2014-3questionstoseeif1clickbuyingisrightforyourbrand.jpg
 post_layout:
   - default
 categories:
@@ -13,8 +13,8 @@ categories:
 tags:
   - Facebook
   - Twitter
-
 ---
+
 As a follow up to <a title="4 Important Considerations to Make Before Jumping Into eCommerce on Social Media" href="http://localhost/brandglue/old-website/blog/social-media-tips/4-important-considerations-to-make-before-jumping-into-ecommerce-on-social-media" target="_blank" rel="noopener">Monday’s post</a> on important considerations to make before jumping into eCommerce on social media platforms, we thought we’d put together a list of questions for brands to ask themselves to see if 1-Click buying is right for you:
 
 **1. Is This Right For Your Audience?**

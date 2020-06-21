@@ -3,16 +3,16 @@ title: 'Phoenix Suns Case Study: Actionable tips to help with Facebook engagemen
 author: Zach Welch
 type: post
 date: 2012-01-11T03:41:44+00:00
-url: /blog/case-studies/phoenix-suns-case-study-actionable-tips-to-help-with-facebook-engagement
-featured_image: /wp-content/uploads/2012/01/blog-image-phoenixsuns.jpg
+slug: /blog/case-studies/phoenix-suns-case-study-actionable-tips-to-help-with-facebook-engagement
+cover_image: /wp-content/uploads/2012/01/blog-image-phoenixsuns.jpg
 post_layout:
   - default
 categories:
   - Case Studies
 tags:
   - Facebook
-
 ---
+
 When the Phoenix Suns came to us, it was off-season. And not only was it off-season, but the NBA lockout was fast approaching. Usually we have a few months to rock our client’s fan pages, but this time, we had 30 days. We had to work fast. We set some goals, the main over-arching one being to “Test multiple factors in relation to Facebook visibility”. Here’s what we learned:
 
 **1. Your Fans Don’t Come Back to Your Page**

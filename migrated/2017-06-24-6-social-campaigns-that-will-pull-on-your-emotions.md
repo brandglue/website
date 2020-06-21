@@ -3,15 +3,15 @@ title: 6 Social Campaigns That Will Pull on Your Emotions
 author: Michelle Heathers
 type: post
 date: 2017-06-24T18:54:22+00:00
-url: /blog/tips/6-social-campaigns-that-will-pull-on-your-emotions
-featured_image: /wp-content/uploads/2017/06/6-Social-Campaigns-That-Will-Pull-on-Your-Emotions.png
+slug: /blog/tips/6-social-campaigns-that-will-pull-on-your-emotions
+cover_image: /wp-content/uploads/2017/06/6-Social-Campaigns-That-Will-Pull-on-Your-Emotions.png
 post_layout:
   - default
 categories:
   - 'Media &amp; Design'
   - Tips
-
 ---
+
 What makes an ad have the power to move someone to action? A great ad is able to go past the surface level of selling a &#8220;product&#8221; and hit the audience where they feel it most &#8212; the heart strings.<span style="font-weight: 400;"><br /> </span>
 
 <span style="font-weight: 400;">More and more companies are realizing the </span>[<span style="font-weight: 400;">benefits of having human-centered advertising strategies</span>][1]<span style="font-weight: 400;">. We are seeing a strong presence of campaigns that evoke feeling and emotion, but are also careful not to shove their product in your face. They take the subtle approach of developing warm feelings first towards the brand and then </span>_<span style="font-weight: 400;">you</span>_ <span style="font-weight: 400;">make the connection to the products on your own. </span><span style="font-weight: 400;"><br /> </span><span style="font-weight: 400;"><br /> </span><span style="font-weight: 400;">The benefits of these types of campaigns have been overwhelming. It results in </span>[<span style="font-weight: 400;">higher engagement, shares, and word of mouth</span>][2]<span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br /> </span><span style="font-weight: 400;"><br /> </span><span style="font-weight: 400;">We pulled some of our favorite ad campaigns that evoke emotion to share with you as inspiration for your next campaign. Note how each one makes you feel &#8212; especially towards the brand. </span><span style="font-weight: 400;"><br /> </span><span style="font-weight: 400;"><br /> </span>**1. Coca-Cola &#8211; Small World Machines &#8211; Bringing India & Pakistan Together**
@@ -52,7 +52,7 @@ _<span style="font-weight: 400;">Product Placement: Product is seen as paint swa
 
 <span style="font-weight: 400;">What ad campaigns have you seen that you fell in love with?</span><span style="font-weight: 400;"><br /> </span>
 
- [1]: http://www.wired.com/insights/2013/12/human-centered-design-matters/
- [2]: http://www.dandad.org/en/d-ad-leo-burnett-holler-always-likeagirl-campaign-case-study/
- [3]: http://www.schick.com/
- [4]: http://www.adcouncil.org/
+[1]: http://www.wired.com/insights/2013/12/human-centered-design-matters/
+[2]: http://www.dandad.org/en/d-ad-leo-burnett-holler-always-likeagirl-campaign-case-study/
+[3]: http://www.schick.com/
+[4]: http://www.adcouncil.org/

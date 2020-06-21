@@ -3,8 +3,8 @@ title: 'How to Create a Social Media Report: A 5-Step Guide'
 author: Zach Welch
 type: post
 date: 2019-07-31T13:00:44+00:00
-url: /blog/tips/how-to-create-a-social-media-report-a-5-step-guide
-featured_image: /wp-content/uploads/2019/07/090319_HowToCreateASocialMediaReport_BG.jpg
+slug: /blog/tips/how-to-create-a-social-media-report-a-5-step-guide
+cover_image: /wp-content/uploads/2019/07/090319_HowToCreateASocialMediaReport_BG.jpg
 classic-editor-remember:
   - block-editor
 post_layout:
@@ -17,21 +17,21 @@ tags:
   - social media monitoring
   - social media report
   - social media strategy
-
 ---
-Creating social media reports can seem like a simple, routine task; export the data, enter it into a spreadsheet, throw it in a template and ship it off to the boss or the client. However, data is one of the most valuable parts of social media, and it can’t be a mindless exercise. 
+
+Creating social media reports can seem like a simple, routine task; export the data, enter it into a spreadsheet, throw it in a template and ship it off to the boss or the client. However, data is one of the most valuable parts of social media, and it can’t be a mindless exercise.
 
 Your reports can show you which strategies are working and which are not. Done correctly, your social media reports can guide your tactics and help bring optimal results. Here are the five steps to follow when creating a social media report from scratch.
 
 ### **Define Your Goals**
 
-Before you jump into your social media strategy, it is imperative that you understand what defines your success on social media. Having clear goals helps you set expectations for yourself and other stakeholders. What metrics are most important for your business? Outline your core goals and identify how you will consistently measure them. Tracking these metrics over time will help you determine how each of your campaigns performed and reveal any peaks and valleys in the data. 
+Before you jump into your social media strategy, it is imperative that you understand what defines your success on social media. Having clear goals helps you set expectations for yourself and other stakeholders. What metrics are most important for your business? Outline your core goals and identify how you will consistently measure them. Tracking these metrics over time will help you determine how each of your campaigns performed and reveal any peaks and valleys in the data.
 
 ### **Define Your Recipient**
 
-How granular should you get? It depends on your audience. While you may be interested in figuring out how certain pieces of content performed relative to one another, your boss (or you boss’ boss) may only need to know high-level data. 
+How granular should you get? It depends on your audience. While you may be interested in figuring out how certain pieces of content performed relative to one another, your boss (or you boss’ boss) may only need to know high-level data.
 
-It may be a good idea to build both a detailed report for your key stakeholders and a quick-view for less involved individuals. That way, you always have the details to back up any questions that may arise. 
+It may be a good idea to build both a detailed report for your key stakeholders and a quick-view for less involved individuals. That way, you always have the details to back up any questions that may arise.
 
 ### **Define the Time Frame**
 
@@ -47,20 +47,20 @@ You know why you are making the report, who you are making it for, and how often
 
 Here are some of the most common data points for social media reporting:
 
-  * Volume of content &#8211; How much content are you posting? Is it too much or not enough? When you post less or more often, what happens?
-  * Reach &#8211; How many people are seeing your posts? Do you see trends in reach or impressions during certain timeframes or on certain types of content?
-  * Engagement &#8211; What is the quantity and quality of your post interactions? What type of content triggers more engagement than others?
-  * Audience &#8211; Who is seeing your content? What is their demographic profile? Are you reaching your target audience? 
-  * Clicks &#8211; How many people are clicking on your posts? Is the content inspiring someone to find out more?
+- Volume of content &#8211; How much content are you posting? Is it too much or not enough? When you post less or more often, what happens?
+- Reach &#8211; How many people are seeing your posts? Do you see trends in reach or impressions during certain timeframes or on certain types of content?
+- Engagement &#8211; What is the quantity and quality of your post interactions? What type of content triggers more engagement than others?
+- Audience &#8211; Who is seeing your content? What is their demographic profile? Are you reaching your target audience?
+- Clicks &#8211; How many people are clicking on your posts? Is the content inspiring someone to find out more?
 
 ### **Design the Report**
 
 This can be the most challenging step. Based on the feedback of the recipient(s), how do you organize the data in the most logical and comprehensible way?
 
-Here are a few golden rules to follow. First, just because you can fit a ton of data on a single sheet, doesn’t mean that you should. One page per section is a good starting place. Be sure not to bite off more than you can chew. Building a report may be an exciting task, but when you’re in the nitty gritty of your growing social media strategy, you don’t want it to be something that takes hours upon hours. 
+Here are a few golden rules to follow. First, just because you can fit a ton of data on a single sheet, doesn’t mean that you should. One page per section is a good starting place. Be sure not to bite off more than you can chew. Building a report may be an exciting task, but when you’re in the nitty gritty of your growing social media strategy, you don’t want it to be something that takes hours upon hours.
 
-Add insights that are actionable. Including the top posts, ads, or campaigns is a fantastic way to let the recipient know which activities were the most beneficial. 
+Add insights that are actionable. Including the top posts, ads, or campaigns is a fantastic way to let the recipient know which activities were the most beneficial.
 
 That’s it! With these five steps, you’ll be creating top-notch social media reports in no time!
 
- [1]: http://localhost/brandglue/old-website/blog/news/are-you-tracking-these-3-important-social-media-insights-for-your-business
+[1]: http://localhost/brandglue/old-website/blog/news/are-you-tracking-these-3-important-social-media-insights-for-your-business

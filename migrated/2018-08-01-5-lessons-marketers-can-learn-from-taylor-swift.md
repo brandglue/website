@@ -3,14 +3,14 @@ title: 5 Lessons Marketers Can Learn from Taylor Swift
 author: Michelle Heathers
 type: post
 date: 2018-08-01T18:19:23+00:00
-url: /blog/tips/5-lessons-marketers-can-learn-from-taylor-swift
-featured_image: /wp-content/uploads/2018/08/5-Lessons-Marketers-Can-Learn-from-Taylor-Swift.jpg
+slug: /blog/tips/5-lessons-marketers-can-learn-from-taylor-swift
+cover_image: /wp-content/uploads/2018/08/5-Lessons-Marketers-Can-Learn-from-Taylor-Swift.jpg
 post_layout:
   - default
 categories:
   - Tips
-
 ---
+
 <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 12pt;">
   <span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Most people wouldn’t think to mention Taylor Swift and marketing lessons in the same sentence. After all, what do a pop and country singer icon and marketing have in common?</span>
 </p>

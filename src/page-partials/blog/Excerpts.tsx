@@ -6,7 +6,7 @@ export const Excerpts: React.FC = () => {
     GatsbyTypes.AllBlogPostsQuery
   >(graphql`
     query AllBlogPosts {
-      allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
+      allMdx(sort: { fields: frontmatter___date, order: DESC }) {
         edges {
           node {
             excerpt(pruneLength: 400)

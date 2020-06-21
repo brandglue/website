@@ -3,8 +3,8 @@ title: 10 Pieces of Social Media Data You Should Pay Attention To
 author: Zach Welch
 type: post
 date: 2014-08-18T11:00:43+00:00
-url: /blog/tips/10-pieces-of-social-media-data-you-should-pay-attention-to
-featured_image: /wp-content/uploads/2014/08/blog-08-18-2014-10piecesofsocialmediadatayoushouldpayattentionto.jpg
+slug: /blog/tips/10-pieces-of-social-media-data-you-should-pay-attention-to
+cover_image: /wp-content/uploads/2014/08/blog-08-18-2014-10piecesofsocialmediadatayoushouldpayattentionto.jpg
 post_layout:
   - default
 categories:
@@ -13,13 +13,13 @@ tags:
   - Facebook
   - Pinterest
   - Twitter
-
 ---
+
 The amount of data and research on social media grows and changes as fast as the websites it measures. [Fast Company][1] weeded through the numerous studies and compiled the following social media data that is slightly off the beaten path.
 
 **Don’t worry, this isn’t just a number dump. Learn how you can put this research to use for your brand’s social media strategies.**
 
-**1. Your biggest advocates have the fewest followers.** 
+**1. Your biggest advocates have the fewest followers.**
 
 It’s time to squash any grandiose ideas that the majority of your brand’s mentions will come from celebrities and influencers. In fact, few will. Social monitoring website Mention analyzed over 1 billion social mentions from the past two years, and in [their analysis][2] they found that 91% of mentions come from people with fewer than 500 followers.
 
@@ -35,7 +35,7 @@ The [Pew Research Center][4] and the [Social Media Research Foundation][5] [com
 
 **What you can do with this stat:** Tight crowds and community clusters seem like apt groupings for brands interested in a lot of engagement. If your social media channels are also part of your customer service strategy (which they should be), then support networks can also be a type of communication network for you. Analyze where you fit into these networks, and adjust your strategy as necessary to mix with another group.
 
-**3. Marketers say written trumps visual content.** 
+**3. Marketers say written trumps visual content.**
 
 Social Media Examiner’s [annual survey][10] of nearly 3,000 marketers leads to a ton of insights into how marketers think about social media and sharing. Over half of marketers (58%) claim written content is their most important form of social content. Visual content came in second (19%.)
 
@@ -43,7 +43,7 @@ Social Media Examiner’s [annual survey][10] of nearly 3,000 marketers leads to
 
 **_Question:_** _Do you agree with this stat? We’d love to know your thoughts! What has the data shown you?_
 
-**4. You have less than an hour to respond on Twitter.** 
+**4. You have less than an hour to respond on Twitter.**
 
 Consumers expect a lot from you on Twitter, as [recent research][11] by Lithium Technologies confirms. The real-time nature of Twitter has led to incredible expectations. According to Lithium, 53% of users who tweet at a brand expect a response within the hour. The percentage increases to 72% for those with a complaint.
 
@@ -51,7 +51,7 @@ Consumers expect a lot from you on Twitter, as [recent research][11] by Lithium 
 
 **What you can do with this stat:** Unless you want to constantly monitor your email for Twitter notifications, you might want to invest in software to stay on top of your customer support tweets.
 
-**5. Late night is the best time for retweets.** 
+**5. Late night is the best time for retweets.**
 
 TrackMaven [analyzed over 1.7 million tweets][13] to come up with data behind the best practices for earning a retweet. The best time of day to tweet for a retweet? After-hours, between 10:00 p.m. and 11:00 p.m. ET.
 
@@ -73,7 +73,7 @@ The Social Intelligence Report from Adobe [analyzed over 225 billion Facebook][1
 
 **What you can do with this stat:** This may be a no-brainer: Post more photos on Facebook. But not just any photos will do. Select photos and graphics that help tell your story in an interesting way.
 
-**8. Facebook, Twitter and Pinterest drive the most traffic.** 
+**8. Facebook, Twitter and Pinterest drive the most traffic.**
 
 [Social sharing site][19] Shareaholic revealed an interesting split in the way that [social media sites][20] refer traffic back to a website. Turns out, the data points to social being a source of either quantity or quality.
 
@@ -89,17 +89,17 @@ Earlier this year, [Social Bakers analyzed more than 40,000 pages][22] to see ex
 
 **What you can do with this stat:** Use it as a benchmark to measure your Facebook page’s success. However, as reach and interactions continue to decline, these targets may not continue to be relevant.
 
-**10. There’s a best day for everything on Pinterest.** 
+**10. There’s a best day for everything on Pinterest.**
 
 The Pinterest blog recently revealed [which categories get the most engagement][23] on each day of the week. Here’s how the calendar lays out:
 
-  * Monday: Fitness
-  * Tuesday: Technology
-  * Wednesday: Inspirational quotes
-  * Thursday: Fashion
-  * Friday: Humor
-  * Saturday: Travel
-  * Sunday: Food and crafts
+- Monday: Fitness
+- Tuesday: Technology
+- Wednesday: Inspirational quotes
+- Thursday: Fashion
+- Friday: Humor
+- Saturday: Travel
+- Sunday: Food and crafts
 
 **What you can do with this data:** Create Pinterest boards that fit into each of these categories (only if you can justify how it can fit into your overall brand message) and pin to that board on the days listed above.
 
@@ -107,26 +107,26 @@ There is a lot of data and research on social media available. As the communicat
 
 **Did any of the stats surprise you? Let us know in the comments section.**
 
- [1]: http://www.fastcompany.com/3032553/work-smart/10-significant-things-you-likely-didnt-know-about-social-media-but-should
- [2]: https://mention.com/uploads/whitepaper.pdf
- [3]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-1-screen-shot-2014-06-25-at-60053-am.jpg
- [4]: http://www.fastcompany.com/organization/pew-research-center
- [5]: http://www.fastcompany.com/organization/social-media-research-foundation
- [6]: http://www.pewresearch.org/fact-tank/2014/02/20/the-six-types-of-twitter-conversations/
- [7]: http://www.fastcompany.com/company/twitter
- [8]: http://www.fastcompany.com/explore/distinct-communication-networks
- [9]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-2-ft140220twitterposter-1-1.jpg
- [10]: http://www.socialmediaexaminer.com/social-media-trends/
- [11]: http://www.lithium.com/company/news-room/press-releases/2013/consumers-will-punish-brands-that-fail-to-respond-on-twitter-quickly
- [12]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-4-lithium-twitter-report-response-time.jpg
- [13]: http://trackmaven.com/resources/retweet-report/
- [14]: http://blog.bufferapp.com/social-media-frequency-guide
- [15]: https://files.acrobat.com/a/preview/82076e0e-c4c3-41c9-9f13-42813d579c7a
- [16]: http://www.fastcompany.com/company/facebook
- [17]: http://www.emarketer.com/Article/Photos-Cluttering-Your-Facebook-Feed-Herersquos-Why/1010777/1
- [18]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-7-172116.jpg
- [19]: http://www.fastcompany.com/explore/social-sharing-site
- [20]: http://www.fastcompany.com/explore/social-media-sites
- [21]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-8-social-referrals-that-matter-mar-2014.jpg
- [22]: http://www.socialbakers.com/blog/2181-finding-the-right-interactions-for-your-facebook-page
- [23]: http://blog.pinterest.com/post/85824761394/pin-trends-of-the-week
+[1]: http://www.fastcompany.com/3032553/work-smart/10-significant-things-you-likely-didnt-know-about-social-media-but-should
+[2]: https://mention.com/uploads/whitepaper.pdf
+[3]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-1-screen-shot-2014-06-25-at-60053-am.jpg
+[4]: http://www.fastcompany.com/organization/pew-research-center
+[5]: http://www.fastcompany.com/organization/social-media-research-foundation
+[6]: http://www.pewresearch.org/fact-tank/2014/02/20/the-six-types-of-twitter-conversations/
+[7]: http://www.fastcompany.com/company/twitter
+[8]: http://www.fastcompany.com/explore/distinct-communication-networks
+[9]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-2-ft140220twitterposter-1-1.jpg
+[10]: http://www.socialmediaexaminer.com/social-media-trends/
+[11]: http://www.lithium.com/company/news-room/press-releases/2013/consumers-will-punish-brands-that-fail-to-respond-on-twitter-quickly
+[12]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-4-lithium-twitter-report-response-time.jpg
+[13]: http://trackmaven.com/resources/retweet-report/
+[14]: http://blog.bufferapp.com/social-media-frequency-guide
+[15]: https://files.acrobat.com/a/preview/82076e0e-c4c3-41c9-9f13-42813d579c7a
+[16]: http://www.fastcompany.com/company/facebook
+[17]: http://www.emarketer.com/Article/Photos-Cluttering-Your-Facebook-Feed-Herersquos-Why/1010777/1
+[18]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-7-172116.jpg
+[19]: http://www.fastcompany.com/explore/social-sharing-site
+[20]: http://www.fastcompany.com/explore/social-media-sites
+[21]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-8-social-referrals-that-matter-mar-2014.jpg
+[22]: http://www.socialbakers.com/blog/2181-finding-the-right-interactions-for-your-facebook-page
+[23]: http://blog.pinterest.com/post/85824761394/pin-trends-of-the-week

@@ -5,6 +5,7 @@ import { MDXProvider } from '@mdx-js/react';
 
 import { Box } from '@components/boxes/Box';
 import { Image } from '@components/images/Image';
+import { SwitchLink } from '@components/links/SwitchLink';
 import {
   Em,
   H1,
@@ -38,6 +39,10 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
   return (
     <MDXProvider
       components={{
+        // eslint-disable-next-line react/display-name
+        a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
+          <SwitchLink {...props} />
+        ),
         em: Em,
         h1: H1,
         h2: H2,
@@ -56,12 +61,8 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
         <H2>{frontmatter.title}</H2>
         <PostHeader variant="flex">
           <span>
-            <Author fontSize={[2, null, null, null, 3, 4]}>
-              {frontmatter.author}
-            </Author>
-            <Date fontSize={[2, null, null, null, 3, 4]}>
-              {frontmatter.date}
-            </Date>
+            <Author>{frontmatter.author}</Author>
+            <Date>{frontmatter.date}</Date>
           </span>
           {frontmatter.categories?.map((category) => {
             return <Category key={category}>{category}</Category>;

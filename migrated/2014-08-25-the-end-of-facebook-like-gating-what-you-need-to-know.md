@@ -3,16 +3,16 @@ title: 'The End of Facebook Like-Gating: What You Need to Know'
 author: Michelle Heathers
 type: post
 date: 2014-08-25T11:00:12+00:00
-url: /blog/news/the-end-of-facebook-like-gating-what-you-need-to-know
-featured_image: /wp-content/uploads/2014/07/shutterstock_173594543.jpg
+slug: /blog/news/the-end-of-facebook-like-gating-what-you-need-to-know
+cover_image: /wp-content/uploads/2014/07/shutterstock_173594543.jpg
 post_layout:
   - default
 categories:
   - News
 tags:
   - Facebook
-
 ---
+
 There has always been a good deal of buzz around Facebook’s strict rules when it comes to running contests and promotions. In the latest round of [edits to their TOS][1], Facebook announced a ban on “like-gating,”  which will go into full effect on November 5th, 2014. This update was buried at the bottom of the announcement:
 
 _“You must not incentivize people to use social plugins or to like a Page. This includes offering rewards, or gating apps or app content based on whether or not a person has liked a Page. It remains acceptable to incentivize people to login to your app, check-in at a place or enter a promotion on your app’s Page.”_
@@ -29,12 +29,12 @@ Users want their Newsfeed to be filled with stories from friends and brands they
 
 As a Facebook marketer, what does this change mean for you? Loomer gives the following tips:
 
-  * Embrace that your fans are those who care most about your brand.
-  * If you previously relied on contests and other like-gating methods of gaining followers, then you can expect a drop in those numbers.
-  * Give your followers a reason to want to read your content. Provide the most thorough, helpful or entertaining information in your niche.
-  * Still use third-party apps to build your email lists. Instead of requiring users to like your page to get the incentive, you can collect their email, which is still allowed.
+- Embrace that your fans are those who care most about your brand.
+- If you previously relied on contests and other like-gating methods of gaining followers, then you can expect a drop in those numbers.
+- Give your followers a reason to want to read your content. Provide the most thorough, helpful or entertaining information in your niche.
+- Still use third-party apps to build your email lists. Instead of requiring users to like your page to get the incentive, you can collect their email, which is still allowed.
 
 How does the loss of like-gating impact your approach and Facebook marketing in general? **Let us know in the comments below.**
 
- [1]: https://developers.facebook.com/blog/post/2014/08/07/Graph-API-v2.1/
- [2]: http://www.jonloomer.com/2014/08/11/facebook-like-gating/
+[1]: https://developers.facebook.com/blog/post/2014/08/07/Graph-API-v2.1/
+[2]: http://www.jonloomer.com/2014/08/11/facebook-like-gating/

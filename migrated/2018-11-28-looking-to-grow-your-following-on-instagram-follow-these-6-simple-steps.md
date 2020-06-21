@@ -3,33 +3,33 @@ title: Looking to Grow Your Following on Instagram? Follow These 6 Simple Steps
 author: Michelle Heathers
 type: post
 date: 2018-11-28T18:29:28+00:00
-url: /blog/tips/looking-to-grow-your-following-on-instagram-follow-these-6-simple-steps
-featured_image: /wp-content/uploads/2018/11/Looking-to-Grow-Your-Following-on-Instagram-Follow-These-6-Simple-Steps.png
+slug: /blog/tips/looking-to-grow-your-following-on-instagram-follow-these-6-simple-steps
+cover_image: /wp-content/uploads/2018/11/Looking-to-Grow-Your-Following-on-Instagram-Follow-These-6-Simple-Steps.png
 post_layout:
   - default
 categories:
   - Tips
-
 ---
+
 <span style="font-weight: 400;">Ever since Facebook changed their policy for businesses, Instagram is the new hub for gaining visibility in the virtual world. With 80% of its (more than) one billion users following businesses, Instagram is a key platform for marketers. </span>
 
 <span style="font-weight: 400;">In order to get the most out of your Instagram, you have to form a strong community of followers &#8212; this means earning more views and interactions. In order to make this happen, you need to grow your following. How? </span>
 
 <span style="font-weight: 400;">We’ve provided 6 steps to help you start growing your business’s following on Instagram. </span>
 
-## **Post consistently** 
+## **Post consistently**
 
 <span style="font-weight: 400;">Brands that post 2-6 times per week </span>[<span style="font-weight: 400;">garner double the followers</span>][1] <span style="font-weight: 400;">as brands who only post once per week. This number doubles again if your brand posts once or more per day. Meaning, the more you post, the more followers you will obtain. </span>
 
 <span style="font-weight: 400;">Keep in mind that along with posting consistently, you also need to post at the correct times. Learn when your target audience is most prominent on Instagram and post most frequently during those times. If they fall outside of business hours, try using a scheduling tool to help. </span>
 
-## **Go live** 
+## **Go live**
 
 <span style="font-weight: 400;">When you go live, Instagram will notify your followers. This is a great way to get them more involved with your content. In addition, if your followers like the live video, they are more likely to share (@tag) with their friends or colleagues. </span>
 
 <span style="font-weight: 400;">If the information is specific, you have the ability to choose who will and will not be notified, as well as who can and cannot view the live story. In addition, you can control whether or not viewers can comment while the story is occurring. Remember, once the story is over, the video and all commentary will be deleted.</span>
 
-## **Post videos & stories** 
+## **Post videos & stories**
 
 <span style="font-weight: 400;">In the past, Instagram was associated with still photography, but </span>[<span style="font-weight: 400;">video content</span>][2] <span style="font-weight: 400;">is giving still shots a run for their money. </span>
 
@@ -37,7 +37,7 @@ categories:
 
 <span style="font-weight: 400;">Stories will help develop your reputation, build brand recognition and showcase your brand’s personality. The more your audience feels they understand your brand and enjoys the content you share, the more likely you are to earn more followers.</span>
 
-## **Use quality hashtags** 
+## **Use quality hashtags**
 
 <span style="font-weight: 400;">Hashtags are an excellent tool for achieving organic growth and engagement. </span>
 
@@ -56,7 +56,7 @@ categories:
   <span style="font-weight: 400;">Location tags &#8211; geotags allow you to more efficiently reach an audience in a specific location</span>
 </li>
 
-## **Share user generated content** 
+## **Share user generated content**
 
 <span style="font-weight: 400;">Only sharing content that your team has created can get stale and leave you unable to post at the desired frequency. </span>
 
@@ -74,5 +74,5 @@ categories:
 
 _<span style="font-weight: 400;">Have any tips to add? Let us know via @glue on Twitter.</span>_
 
- [1]: https://blog.tailwindapp.com/how-often-should-i-post-to-instagram-at-least-once-per-day/
- [2]: http://localhost/brandglue/old-website/blog/social-media-tips/how-to-maximize-video-content-across-your-social-networks
+[1]: https://blog.tailwindapp.com/how-often-should-i-post-to-instagram-at-least-once-per-day/
+[2]: http://localhost/brandglue/old-website/blog/social-media-tips/how-to-maximize-video-content-across-your-social-networks

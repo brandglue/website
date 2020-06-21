@@ -3,8 +3,8 @@ title: 5 Content Strategies from Big Brands to Increase Engagement on Social Med
 author: Michelle Heathers
 type: post
 date: 2014-07-17T11:00:14+00:00
-url: /blog/tips/5-content-strategies-from-big-brands-to-increase-engagement-on-social-media
-featured_image: /wp-content/uploads/2014/07/DeathtoStock_Wired9-copy.jpg
+slug: /blog/tips/5-content-strategies-from-big-brands-to-increase-engagement-on-social-media
+cover_image: /wp-content/uploads/2014/07/DeathtoStock_Wired9-copy.jpg
 post_layout:
   - default
 categories:
@@ -12,8 +12,8 @@ categories:
 tags:
   - Facebook
   - Twitter
-
 ---
+
 No matter what your social media budget is, there’s nothing that can be a substitute for good content. If you’re looking to spark a conversation with your fans and see engagement similar to that of bigger brands, a simple tried and trued method is to learn from what they do right and see how those strategies fit into your own social media content.
 
 [Social Media Examiner][1] shared the following five tips to keep your audience coming back for more.
@@ -44,6 +44,6 @@ Does your social media and creative strategy needs an upgrade, but you’re not 
 
 _Photo Courtesy of Death to Stock Photo_
 
- [1]: http://www.socialmediaexaminer.com/social-media-audiences-engaged/
- [2]: http://www.adweek.com/news/technology/frito-lay-likes-data-doritos-crash-super-bowl-147127
- [3]: http://localhost/brandglue/old-website/free-assessment
+[1]: http://www.socialmediaexaminer.com/social-media-audiences-engaged/
+[2]: http://www.adweek.com/news/technology/frito-lay-likes-data-doritos-crash-super-bowl-147127
+[3]: http://localhost/brandglue/old-website/free-assessment

@@ -3,8 +3,8 @@ title: 3 Tips to Stay Up-To-Date on Social Media Changes
 author: Michelle Heathers
 type: post
 date: 2019-07-17T16:45:42+00:00
-url: /blog/tips/3-tips-to-stay-up-to-date-on-social-media-changes
-featured_image: /wp-content/uploads/2019/07/090319_3TipstoStayUpToDateonSocialMediaChanges_BG.jpg
+slug: /blog/tips/3-tips-to-stay-up-to-date-on-social-media-changes
+cover_image: /wp-content/uploads/2019/07/090319_3TipstoStayUpToDateonSocialMediaChanges_BG.jpg
 classic-editor-remember:
   - block-editor
 post_layout:
@@ -15,8 +15,8 @@ tags:
   - social media
   - social media monitoring
   - social media strategy
-
 ---
+
 Social media is constantly changing. It’s not uncommon to feel overwhelmed by the sheer thought of trying to keep up with the never-ending updates, announcements and shifts as they occur. While there’s no arguing that it can be daunting, it doesn’t have to be a burden. Putting the right plan in place can keep you up-to-date with minimal hassle.&nbsp;
 
 We’ve found three great ways to help navigate the ever-changing waters of social media and stay in the know.
@@ -49,9 +49,9 @@ Plus, you never know if the ‘latest and greatest’ will last. There’s been 
 
 Dealing with social media changes doesn’t have to lead to stress or rash decisions. Keep these three tips in mind and you’ll be prepared for whatever social media throws your way.
 
- [1]: https://www.facebook.com/business/news
- [2]: https://www.jonloomer.com/
- [3]: https://techcrunch.com/
- [4]: https://www.socialmediatoday.com/
- [5]: http://localhost/brandglue/old-website/blog/tips/4-of-the-biggest-social-media-monitoring-mistakes
- [6]: http://localhost/brandglue/old-website/blog/tips/5-ways-digital-marketers-tap-power-social-video
+[1]: https://www.facebook.com/business/news
+[2]: https://www.jonloomer.com/
+[3]: https://techcrunch.com/
+[4]: https://www.socialmediatoday.com/
+[5]: http://localhost/brandglue/old-website/blog/tips/4-of-the-biggest-social-media-monitoring-mistakes
+[6]: http://localhost/brandglue/old-website/blog/tips/5-ways-digital-marketers-tap-power-social-video

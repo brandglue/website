@@ -3,8 +3,8 @@ title: 4 Ways to Repurpose Webinar Content for Your Social Channels
 author: Michelle Heathers
 type: post
 date: 2018-10-24T17:02:40+00:00
-url: /blog/tips/4-ways-to-repurpose-webinar-content-for-your-social-channels
-featured_image: /wp-content/uploads/2018/10/4-Ways-to-Repurpose-Webinar-Content-for-Your-Social-Channels.png
+slug: /blog/tips/4-ways-to-repurpose-webinar-content-for-your-social-channels
+cover_image: /wp-content/uploads/2018/10/4-Ways-to-Repurpose-Webinar-Content-for-Your-Social-Channels.png
 post_layout:
   - default
 categories:
@@ -12,8 +12,8 @@ categories:
 tags:
   - social media
   - webinars
-
 ---
+
 <span style="font-weight: 400;">Does your company do webinars? If so, you know full well the time, energy and money that is spent securing panelists, creating assets, promoting the event, and then—finally—presenting the webinar.</span>
 
 <span style="font-weight: 400;">But what happens afterward?</span>
@@ -48,10 +48,10 @@ tags:
 
 <span style="font-weight: 400;">Once your webinar is complete, create a 30 second to 2 minute synopsis, and upload that directly to Facebook (add on LinkedIn and Twitter for optimal exposure!). From there, you can boost the video for more views to your desired target, as well as retarget the individuals who watch a significant portion of the webinar. This tactic will help you expand your reach and serve up the content to those who were interested, including those who weren’t able to attend the webinar. </span>
 
-**And there you have it, 4 ways to repurpose your webinar content to create numerous assets that can be used again and again on social, and bring longevity to all of your hard work.** 
+**And there you have it, 4 ways to repurpose your webinar content to create numerous assets that can be used again and again on social, and bring longevity to all of your hard work.**
 
 _<span style="font-weight: 400;">Do you have any additional tried and true tactics? We’d love to hear them!</span>_
 
- [1]: http://localhost/brandglue/old-website/blog/social-media/8-essential-elements-winning-blog-post
- [2]: http://localhost/brandglue/old-website/blog/social-media-tips/simple-tools-to-create-eye-catching-visual-content
- [3]: http://localhost/brandglue/old-website/blog/social-media/5-tips-maximize-effectiveness-facebook-live-video
+[1]: http://localhost/brandglue/old-website/blog/social-media/8-essential-elements-winning-blog-post
+[2]: http://localhost/brandglue/old-website/blog/social-media-tips/simple-tools-to-create-eye-catching-visual-content
+[3]: http://localhost/brandglue/old-website/blog/social-media/5-tips-maximize-effectiveness-facebook-live-video

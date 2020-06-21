@@ -6,13 +6,13 @@ date: 2017-02-06T19:37:51+00:00
 excerpt: 'BrandGlue is seeking to hire a self-motivated and deadline-driven graphic designer who will both lead and shape the creative process for all client projects. If interested, please email jobs@brandglue.com with a cover letter and resume. '
 draft: true
 private: true
-url: /blog/careers/we-are-hiring-graphic-design-lead
+slug: /blog/careers/we-are-hiring-graphic-design-lead
 post_layout:
   - default
 categories:
   - Careers
-
 ---
+
 **Job Title:** <span style="font-weight: 400;">Graphic Design Lead</span>
 
 **About BrandGlue**
@@ -27,7 +27,7 @@ categories:
 
 <span style="font-weight: 400;">BrandGlue is seeking to hire a self-motivated and deadline-driven graphic designer who will both lead and shape the creative process for all client projects. As a small and nimble team, this position plays an integral role in the success of the company and the person who fills it must be highly motivated and able to work in a fast-paced agency environment. Missing deadlines is not an option as our clients rely on us to move quickly and be a reliable source of quality work. This designer should possess his/her own creative style and at minimum maintain up-to-date skills in design software, including Adobe Creative Suite.</span>
 
-**Responsibilities** 
+**Responsibilities**
 
 <span style="font-weight: 400;">The responsibilities of this role includes managing all creative projects, which primarily consist of social media graphics, infographics, application design, ebook/white paper layout design and animated videos for clients across a variety of B2B and B2C industries. For a list of some of the clients that we have worked with, please visit our website. This role will also be responsible for developing internal marketing pieces for BrandGlue’s website, email marketing, social media channels and other needs that may arise. </span>
 

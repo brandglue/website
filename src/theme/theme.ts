@@ -110,3 +110,9 @@ export const theme: ITheme = {
   space: systemSpacings, // don't use directly, only indirectly via styled-system
   spacings,
 };
+
+// derived from styled-system scales for use in props
+export const rhythm = {
+  standardFontSizes: [1, null, null, null, 2, 3],
+  standardLineHeights: [1, null, null, null, 2, 3],
+};

@@ -7,6 +7,9 @@ import fluid from 'fluid-system';
 
 import { customText, StyledSystemProps } from '@src/theme/systemProps';
 import { styled } from '@theme/styled';
+import { rhythm } from '@theme/theme';
+
+const { standardFontSizes, standardLineHeights } = rhythm;
 
 const WrappedLink: FC<GatsbyLinkProps<unknown>> = (props) => {
   const isActive = ({ isCurrent, isPartiallyCurrent }: LinkGetProps) => {
@@ -59,7 +62,7 @@ export const NavLink = styled(WrappedLink)<StyledSystemProps>`
 `;
 
 NavLink.defaultProps = {
-  fontSize: [1, null, null, null, 2, 3],
-  lineHeight: [1, null, null, null, 2, 3],
+  fontSize: standardFontSizes,
+  lineHeight: standardLineHeights,
   variant: 'textLink',
 };

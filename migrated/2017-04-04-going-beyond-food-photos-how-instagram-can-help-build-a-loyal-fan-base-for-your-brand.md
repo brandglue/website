@@ -3,8 +3,8 @@ title: 'Going Beyond Food Photos: How Instagram Can Help Build a Loyal Fan Base 
 author: Michelle Heathers
 type: post
 date: 2017-04-04T11:00:38+00:00
-url: /blog/tips/going-beyond-food-photos-how-instagram-can-help-build-a-loyal-fan-base-for-your-brand
-featured_image: /wp-content/uploads/2014/08/IMG_9501-copy.jpg
+slug: /blog/tips/going-beyond-food-photos-how-instagram-can-help-build-a-loyal-fan-base-for-your-brand
+cover_image: /wp-content/uploads/2014/08/IMG_9501-copy.jpg
 post_layout:
   - default
 categories:
@@ -12,37 +12,37 @@ categories:
   - Tips
 tags:
   - Instagram
-
 ---
+
 Instagram is a great way to give your customers and followers a more personal, laid-back and behind the scenes look at your brand. It can be used for more than sharing selfies, puppies and pictures of your meal taken from “artsy” angles. ONA, a camera bag retailer, has taken advantage of the photo sharing site as part of their overall social media strategy.
 
 [They shared these tips][1] for other brands to make Instagram worthwhile:
 
-**1. Build relationships with influencers.** 
+**1. Build relationships with influencers.**
 
 Many bloggers and influencers have ditched the traditional website blog in exchange for solely posting to Instagram. Many of these bloggers are paid to style and share a photo featuring products.
 
-**2. Share fans’ photos.** 
+**2. Share fans’ photos.**
 
 Your customers and followers love your products and are acting as your brand advocates without persuasion. Share the love and begin to build relationships with your followers by sharing their photos on your feed. Just don’t forget to always give credit back to them.
 
-**3. Respond, respond, respond.** 
+**3. Respond, respond, respond.**
 
 No matter if they have 100 or 100,000 followers, always try to respond every time you are mentioned or your brand hashtag is used. Not only did they purchase your product, but they are actively sharing it with their community.
 
-**4. Turn the camera around.** 
+**4. Turn the camera around.**
 
 Instagram is an amazing opportunity to give your brand personality and share things that make your company culture unique. Share your employees stories, show off your workspace and give behind the scenes look on upcoming launches.
 
-**5. Give them a reason to follow.** 
+**5. Give them a reason to follow.**
 
 Beyond just sharing gorgeous photos, Instagram is an ideal platform for sharing sneak peeks of new products or exclusive discount codes.
 
-**6. Challenge followers to get involved.** 
+**6. Challenge followers to get involved.**
 
 Instagram contests are a great way to engage with your followers. Take it one step farther and challenge them to come up with creative photos instead of simply reposting advertising imagery. The quality submissions will also give you an opportunity to share some of the runner-up images as well.
 
-**7. Be strategic with hashtags.** 
+**7. Be strategic with hashtags.**
 
 This goes for all social media platforms as well. Choose a few hashtags that represent the types of photos that you or your followers are most likely to share, and be consistent in how you caption your photos with them.
 
@@ -50,4 +50,4 @@ How does your brand use Instagram? **Are there any tips or strategies that have 
 
 _Image courtesy of Death to Stock Photos_
 
- [1]: http://www.wework.com/magazine/knowledge/7-ways-make-instagram-worth/
+[1]: http://www.wework.com/magazine/knowledge/7-ways-make-instagram-worth/

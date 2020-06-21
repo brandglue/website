@@ -3,14 +3,14 @@ title: Unlock Your Brand’s Message On Social Media by Using the Power of Story
 author: Michelle Heathers
 type: post
 date: 2018-05-23T16:56:03+00:00
-url: /blog/tips/unlock-your-brands-message-on-social-media-by-using-the-power-of-story
-featured_image: /wp-content/uploads/2018/05/BG-blog-Unlock-Your-Brand’s-Message-On-Social-Media-by-Using-the-Power-of-Story.png
+slug: /blog/tips/unlock-your-brands-message-on-social-media-by-using-the-power-of-story
+cover_image: /wp-content/uploads/2018/05/BG-blog-Unlock-Your-Brand’s-Message-On-Social-Media-by-Using-the-Power-of-Story.png
 post_layout:
   - default
 categories:
   - Tips
-
 ---
+
 <span style="font-weight: 400;">Does your brand tell a story via social media? If not, it should.</span>
 
 <span style="font-weight: 400;">Stories are a universally understood means of communication and have been around in various forms for millennia. And they’re powerful because they dig down into the emotional part of our psyche. When it comes to convincing people to listen to you or buy your product, emotions are the key that will unlock your audience’s actions.</span>
@@ -69,11 +69,11 @@ _<span style="font-weight: 400;">What are ways you’ve found helpful to tell yo
 
 &nbsp;
 
-  1.  <span style="font-weight: 400;">Miller, Donald. </span>_<span style="font-weight: 400;">Building a StoryBrand: Clarifying Your Message So Customers Will Listen</span>_<span style="font-weight: 400;">. HarperCollins Leadership, 2017, pp. 11-12.</span>
-  2.  <span style="font-weight: 400;">Miller, Donald. </span>_<span style="font-weight: 400;">Building a StoryBrand: Clarifying Your Message So Customers Will Listen</span>_<span style="font-weight: 400;">. HarperCollins Leadership, 2017, p. 11.</span>
-  3.  <span style="font-weight: 400;">Miller, Donald. </span>_<span style="font-weight: 400;">Building a StoryBrand: Clarifying Your Message So Customers Will Listen</span>_<span style="font-weight: 400;">. HarperCollins Leadership, 2017, pp. 8-9.</span>
+1.  <span style="font-weight: 400;">Miller, Donald. </span>_<span style="font-weight: 400;">Building a StoryBrand: Clarifying Your Message So Customers Will Listen</span>_<span style="font-weight: 400;">. HarperCollins Leadership, 2017, pp. 11-12.</span>
+2.  <span style="font-weight: 400;">Miller, Donald. </span>_<span style="font-weight: 400;">Building a StoryBrand: Clarifying Your Message So Customers Will Listen</span>_<span style="font-weight: 400;">. HarperCollins Leadership, 2017, p. 11.</span>
+3.  <span style="font-weight: 400;">Miller, Donald. </span>_<span style="font-weight: 400;">Building a StoryBrand: Clarifying Your Message So Customers Will Listen</span>_<span style="font-weight: 400;">. HarperCollins Leadership, 2017, pp. 8-9.</span>
 
- [1]: https://www.amazon.com/Building-StoryBrand-Clarify-Message-Customers/dp/0718033329/ref=sr_1_2?ie=UTF8&qid=1526339031&sr=8-2&keywords=building+a+storybrand
- [2]: https://www.socialmediatoday.com/news/survey-finds-consumers-crave-authenticity-and-user-generated-content-deli/511360/
- [3]: http://localhost/brandglue/old-website/blog/social-media/millennials-and-social-media-marketing-3-tips-for-b2bs-to-capture-future-buyers-today
- [4]: https://en.wikipedia.org/wiki/Curse_of_knowledge
+[1]: https://www.amazon.com/Building-StoryBrand-Clarify-Message-Customers/dp/0718033329/ref=sr_1_2?ie=UTF8&qid=1526339031&sr=8-2&keywords=building+a+storybrand
+[2]: https://www.socialmediatoday.com/news/survey-finds-consumers-crave-authenticity-and-user-generated-content-deli/511360/
+[3]: http://localhost/brandglue/old-website/blog/social-media/millennials-and-social-media-marketing-3-tips-for-b2bs-to-capture-future-buyers-today
+[4]: https://en.wikipedia.org/wiki/Curse_of_knowledge
