@@ -75,4 +75,4 @@ categories:
 _<span style="font-weight: 400;">Have any tips to add? Let us know via @glue on Twitter.</span>_
 
 [1]: https://blog.tailwindapp.com/how-often-should-i-post-to-instagram-at-least-once-per-day/
-[2]: http://localhost/brandglue/old-website/blog/social-media-tips/how-to-maximize-video-content-across-your-social-networks
+[2]: /blog/social-media-tips/how-to-maximize-video-content-across-your-social-networks

@@ -52,6 +52,6 @@ tags:
 
 _<span style="font-weight: 400;">Do you have any additional tried and true tactics? We’d love to hear them!</span>_
 
-[1]: http://localhost/brandglue/old-website/blog/social-media/8-essential-elements-winning-blog-post
-[2]: http://localhost/brandglue/old-website/blog/social-media-tips/simple-tools-to-create-eye-catching-visual-content
-[3]: http://localhost/brandglue/old-website/blog/social-media/5-tips-maximize-effectiveness-facebook-live-video
+[1]: /blog/social-media/8-essential-elements-winning-blog-post
+[2]: /blog/social-media-tips/simple-tools-to-create-eye-catching-visual-content
+[3]: /blog/social-media/5-tips-maximize-effectiveness-facebook-live-video

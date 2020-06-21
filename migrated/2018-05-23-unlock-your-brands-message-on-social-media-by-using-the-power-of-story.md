@@ -75,5 +75,5 @@ _<span style="font-weight: 400;">What are ways you’ve found helpful to tell yo
 
 [1]: https://www.amazon.com/Building-StoryBrand-Clarify-Message-Customers/dp/0718033329/ref=sr_1_2?ie=UTF8&qid=1526339031&sr=8-2&keywords=building+a+storybrand
 [2]: https://www.socialmediatoday.com/news/survey-finds-consumers-crave-authenticity-and-user-generated-content-deli/511360/
-[3]: http://localhost/brandglue/old-website/blog/social-media/millennials-and-social-media-marketing-3-tips-for-b2bs-to-capture-future-buyers-today
+[3]: /blog/social-media/millennials-and-social-media-marketing-3-tips-for-b2bs-to-capture-future-buyers-today
 [4]: https://en.wikipedia.org/wiki/Curse_of_knowledge

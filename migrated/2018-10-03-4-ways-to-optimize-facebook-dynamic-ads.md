@@ -87,6 +87,6 @@ categories:
 
 _<span style="font-weight: 400;">What are some of your favorite Facebook dynamic ad creation tricks? Let me know in the comments below!</span>_
 
-[1]: http://localhost/brandglue/old-website/blog/social-media-tips/5-design-must-haves-before-creating-your-social-ad
+[1]: /blog/social-media-tips/5-design-must-haves-before-creating-your-social-ad
 [2]: https://www.jonloomer.com/2018/05/17/optimize-facebook-dynamic-product-ads/
-[3]: http://localhost/brandglue/old-website/blog/social-media-tips/5-content-strategies-from-big-brands-to-increase-engagement-on-social-media
+[3]: /blog/social-media-tips/5-content-strategies-from-big-brands-to-increase-engagement-on-social-media

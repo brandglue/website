@@ -15,7 +15,7 @@ tags:
   - Twitter
 ---
 
-As a follow up to <a title="4 Important Considerations to Make Before Jumping Into eCommerce on Social Media" href="http://localhost/brandglue/old-website/blog/social-media-tips/4-important-considerations-to-make-before-jumping-into-ecommerce-on-social-media" target="_blank" rel="noopener">Monday’s post</a> on important considerations to make before jumping into eCommerce on social media platforms, we thought we’d put together a list of questions for brands to ask themselves to see if 1-Click buying is right for you:
+As a follow up to <a title="4 Important Considerations to Make Before Jumping Into eCommerce on Social Media" href="/blog/social-media-tips/4-important-considerations-to-make-before-jumping-into-ecommerce-on-social-media" target="_blank" rel="noopener">Monday’s post</a> on important considerations to make before jumping into eCommerce on social media platforms, we thought we’d put together a list of questions for brands to ask themselves to see if 1-Click buying is right for you:
 
 **1. Is This Right For Your Audience?**
 

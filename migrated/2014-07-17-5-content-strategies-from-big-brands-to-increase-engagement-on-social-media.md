@@ -46,4 +46,4 @@ _Photo Courtesy of Death to Stock Photo_
 
 [1]: http://www.socialmediaexaminer.com/social-media-audiences-engaged/
 [2]: http://www.adweek.com/news/technology/frito-lay-likes-data-doritos-crash-super-bowl-147127
-[3]: http://localhost/brandglue/old-website/free-assessment
+[3]: /free-assessment

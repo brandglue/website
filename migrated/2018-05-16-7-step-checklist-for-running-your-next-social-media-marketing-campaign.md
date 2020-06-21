@@ -79,13 +79,13 @@ categories:
 <span style="font-weight: 400;">When looking at the content you could create, consider the following:</span>
 
 <li style="font-weight: 400;">
-  <b>Blog posts.</b><span style="font-weight: 400;"> If you have a blog, </span><a href="http://localhost/brandglue/old-website/blog/social-media/8-essential-elements-winning-blog-post"><span style="font-weight: 400;">write a few posts</span></a><span style="font-weight: 400;"> that integrate with the campaign. These can also turn into additional social posts.</span>
+  <b>Blog posts.</b><span style="font-weight: 400;"> If you have a blog, </span><a href="/blog/social-media/8-essential-elements-winning-blog-post"><span style="font-weight: 400;">write a few posts</span></a><span style="font-weight: 400;"> that integrate with the campaign. These can also turn into additional social posts.</span>
 </li>
 <li style="font-weight: 400;">
   <b>Social posts.</b><span style="font-weight: 400;"> You’ll definitely want to post to each of your social outlets multiple times.</span>
 </li>
 <li style="font-weight: 400;">
-  <b>Video.</b><span style="font-weight: 400;"> Depending on the type of campaign, </span><a href="http://localhost/brandglue/old-website/blog/social-media/5-ways-digital-marketers-tap-power-social-video"><span style="font-weight: 400;">creating a video</span></a><span style="font-weight: 400;"> to share may work well.</span>
+  <b>Video.</b><span style="font-weight: 400;"> Depending on the type of campaign, </span><a href="/blog/social-media/5-ways-digital-marketers-tap-power-social-video"><span style="font-weight: 400;">creating a video</span></a><span style="font-weight: 400;"> to share may work well.</span>
 </li>
 <li style="font-weight: 400;">
   <b>FB Live Video.</b><span style="font-weight: 400;"> This would be another great piece to incorporate, especially if your campaign surrounds a live event such as a conference or workshop.</span>

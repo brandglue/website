@@ -44,6 +44,6 @@ categories:
 
 <span style="font-weight: 400;">Now that you have 4 tried and true tactics, get started with a Facebook Group for your brand. And make sure and let us know how it goes. If you know of any companies doing a fantastic job with Facebook Groups, let us know in the comments.</span>
 
-[1]: http://localhost/brandglue/old-website/blog/social-media/7-step-checklist-for-running-your-next-social-media-marketing-campaign
-[2]: http://localhost/brandglue/old-website/blog/social-media-tips/why-you-should-stop-thinking-of-social-media-as-marketing
-[3]: http://localhost/brandglue/old-website/blog/social-media/5-lessons-marketers-can-learn-from-taylor-swift
+[1]: /blog/social-media/7-step-checklist-for-running-your-next-social-media-marketing-campaign
+[2]: /blog/social-media-tips/why-you-should-stop-thinking-of-social-media-as-marketing
+[3]: /blog/social-media/5-lessons-marketers-can-learn-from-taylor-swift

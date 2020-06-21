@@ -39,4 +39,4 @@ Twitter researched the organic tweets and reach of those tweets of 200 brands, s
 **Does your Twitter strategy need an upgrade, but you’re not quite sure where to start?** [Sign up for our free social media assessment][2] to discuss your social media goals and challenges. You’ll get actionable tips and recommendations on next steps.
 
 [1]: https://blog.twitter.com/2014/introducing-organic-tweet-analytics
-[2]: http://localhost/brandglue/old-website/free-assessment
+[2]: /free-assessment

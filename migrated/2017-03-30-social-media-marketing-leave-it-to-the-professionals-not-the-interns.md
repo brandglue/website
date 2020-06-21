@@ -40,4 +40,4 @@ While a little on the dramatic side, the above tweet sums up the potential dange
 
 **It’s crucial to leave social media marketing to the professionals, whether in-house or hiring outside experts.** Looking for someone to help develop a content and creative strategy? [Sign up for our free social media assessment][1] and let’s discuss your goals and the next steps to achieve them.
 
-[1]: http://localhost/brandglue/old-website/free-assessment
+[1]: /free-assessment

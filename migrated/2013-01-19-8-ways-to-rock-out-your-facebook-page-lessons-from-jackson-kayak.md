@@ -60,5 +60,5 @@ Lots of brands run sweepstakes on Facebook. A major benefit is that they can be 
 
 Want more tips for your Facebook fan page? Get your [free social media assessment][2] from our team.
 
-[1]: http://localhost/brandglue/old-website/case-studies/jackson-kayak-navigating-the-rapidly-changing-waters-of-social-media
-[2]: http://localhost/brandglue/old-website/free-assessment
+[1]: /case-studies/jackson-kayak-navigating-the-rapidly-changing-waters-of-social-media
+[2]: /free-assessment

@@ -83,7 +83,7 @@ These 5 tips provide a great foundation as you evaluate, or perhaps begin to bui
 
 Have your own tips to share? Leave them in the comments below!
 
-[1]: http://localhost/brandglue/old-website/blog/social-media-tips/5-design-must-haves-before-creating-your-social-ad
+[1]: /blog/social-media-tips/5-design-must-haves-before-creating-your-social-ad
 [2]: https://blog.bufferapp.com/the-power-of-twitters-new-expanded-images-and-how-to-make-the-most-of-it
 [3]: http://buzzsumo.com/blog/how-to-massively-boost-your-blog-traffic-with-these-5-awesome-image-stats/
-[4]: http://localhost/brandglue/old-website/#services-bg
+[4]: /#services-bg

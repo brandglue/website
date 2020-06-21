@@ -45,7 +45,7 @@ Check out this infographic by <a title="Craiglist" href="http://mashable.com/fol
   </p>
   
   <p>
-    Once it&#8217;s been established that 1) social media will add value and 2) the nonprofit can do it well, then, and only then, do I <a title="About NFO" href="http://localhost/brandglue/old-website/about-nfo" target="_blank">move forward into training</a>.
+    Once it&#8217;s been established that 1) social media will add value and 2) the nonprofit can do it well, then, and only then, do I <a title="About NFO" href="/about-nfo" target="_blank">move forward into training</a>.
   </p>
   
   <p>

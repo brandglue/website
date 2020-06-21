@@ -31,7 +31,7 @@ After three hashtags, it’s time to call it quits. Not only do they make your p
 
 Excessive hashtags are problematic on personal accounts, but they are downright fatal on brand accounts. A recent Socialbakers study reported by [Statista][2] found a direct correlation between user engagement and hashtag use per Facebook post:
 
-[<img class="aligncenter wp-image-752 size-full" src="http://localhost/brandglue/old-website/wp-content/uploads/2014/07/statista-300x214.jpg" alt="blog-7-21-hashtags-graph" width="300" height="214" srcset="http://localhost/brandglue/old-website/wp-content/uploads/2014/07/statista-300x214.jpg 300w, http://localhost/brandglue/old-website/wp-content/uploads/2014/07/statista-300x214-180x128.jpg 180w" sizes="(max-width: 300px) 100vw, 300px" />][3]
+[<img class="aligncenter wp-image-752 size-full" src="/wp-content/uploads/2014/07/statista-300x214.jpg" alt="blog-7-21-hashtags-graph" width="300" height="214" srcset="/wp-content/uploads/2014/07/statista-300x214.jpg 300w, /wp-content/uploads/2014/07/statista-300x214-180x128.jpg 180w" sizes="(max-width: 300px) 100vw, 300px" />][3]
 
 **Do: Use a handful of targeted, keyword-driven hashtags**
 
@@ -49,4 +49,4 @@ _Photo credit: Wikimedia._
 
 [1]: http://www.toprankblog.com/2014/04/hashtag-marketing/
 [2]: http://www.statista.com/chart/2032/hashtags-affect-interaction/
-[3]: http://localhost/brandglue/old-website/wp-content/uploads/2014/07/statista-300x214.jpg
+[3]: /wp-content/uploads/2014/07/statista-300x214.jpg

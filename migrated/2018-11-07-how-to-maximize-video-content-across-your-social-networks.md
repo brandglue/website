@@ -51,8 +51,8 @@ categories:
 <span style="font-weight: 400;">With these tips in your marketing arsenal, you’re on your way to creating optimized video content for every social platform. What tips and tricks have you employed to give your videos some extra impact? We’d love to hear about them in the comments.</span>
 
 [1]: https://www.wyzowl.com/video-marketing-statistics-2018/
-[2]: http://localhost/brandglue/old-website/blog/social-media/5-tips-maximize-effectiveness-facebook-live-video
-[3]: http://localhost/brandglue/old-website/blog/social-media-tips/5-ways-digital-marketers-tap-power-social-video
+[2]: /blog/social-media/5-tips-maximize-effectiveness-facebook-live-video
+[3]: /blog/social-media-tips/5-ways-digital-marketers-tap-power-social-video
 [4]: https://www.forbes.com/sites/johnkoetsier/2017/03/13/facebook-native-video-gets-10x-more-shares-than-youtube/#d910d491c66a
-[5]: http://localhost/brandglue/old-website/blog/social-media-tips/5-design-must-haves-before-creating-your-social-ad
+[5]: /blog/social-media-tips/5-design-must-haves-before-creating-your-social-ad
 [6]: https://blog.bufferapp.com/social-media-video-marketing-statistics

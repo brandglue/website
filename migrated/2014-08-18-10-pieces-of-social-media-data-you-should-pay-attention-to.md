@@ -23,7 +23,7 @@ The amount of data and research on social media grows and changes as fast as the
 
 It’s time to squash any grandiose ideas that the majority of your brand’s mentions will come from celebrities and influencers. In fact, few will. Social monitoring website Mention analyzed over 1 billion social mentions from the past two years, and in [their analysis][2] they found that 91% of mentions come from people with fewer than 500 followers.
 
-[<img class="aligncenter size-full wp-image-790" src="http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-1-screen-shot-2014-06-25-at-60053-am.jpg" alt="8_18_blog_social_media_stats" width="640" height="494" srcset="http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-1-screen-shot-2014-06-25-at-60053-am.jpg 640w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-1-screen-shot-2014-06-25-at-60053-am-300x231.jpg 300w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-1-screen-shot-2014-06-25-at-60053-am-180x138.jpg 180w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-1-screen-shot-2014-06-25-at-60053-am-632x487.jpg 632w" sizes="(max-width: 640px) 100vw, 640px" />][3]
+[<img class="aligncenter size-full wp-image-790" src="/wp-content/uploads/2014/08/3032553-inline-i-1-screen-shot-2014-06-25-at-60053-am.jpg" alt="8_18_blog_social_media_stats" width="640" height="494" srcset="/wp-content/uploads/2014/08/3032553-inline-i-1-screen-shot-2014-06-25-at-60053-am.jpg 640w, /wp-content/uploads/2014/08/3032553-inline-i-1-screen-shot-2014-06-25-at-60053-am-300x231.jpg 300w, /wp-content/uploads/2014/08/3032553-inline-i-1-screen-shot-2014-06-25-at-60053-am-180x138.jpg 180w, /wp-content/uploads/2014/08/3032553-inline-i-1-screen-shot-2014-06-25-at-60053-am-632x487.jpg 632w" sizes="(max-width: 640px) 100vw, 640px" />][3]
 
 **What you can do with this stat:** It may not be a smart idea to prioritize social media power users, however it’s also important to respond to those with fewer followers since they are your biggest brand advocates.
 
@@ -31,7 +31,7 @@ It’s time to squash any grandiose ideas that the majority of your brand’s me
 
 The [Pew Research Center][4] and the [Social Media Research Foundation][5] [combined on a report][6] that analyzed thousands of [Twitter][7] conversations to come up with six [distinct communication networks][8]. Which of these six do you most closely identify with?
 
-[<img class="aligncenter size-full wp-image-791" src="http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-2-ft140220twitterposter-1-1.jpg" alt="8_18_blog_social_media_stats1" width="640" height="882" srcset="http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-2-ft140220twitterposter-1-1.jpg 640w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-2-ft140220twitterposter-1-1-217x300.jpg 217w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-2-ft140220twitterposter-1-1-130x180.jpg 130w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-2-ft140220twitterposter-1-1-458x632.jpg 458w" sizes="(max-width: 640px) 100vw, 640px" />][9]
+[<img class="aligncenter size-full wp-image-791" src="/wp-content/uploads/2014/08/3032553-inline-i-2-ft140220twitterposter-1-1.jpg" alt="8_18_blog_social_media_stats1" width="640" height="882" srcset="/wp-content/uploads/2014/08/3032553-inline-i-2-ft140220twitterposter-1-1.jpg 640w, /wp-content/uploads/2014/08/3032553-inline-i-2-ft140220twitterposter-1-1-217x300.jpg 217w, /wp-content/uploads/2014/08/3032553-inline-i-2-ft140220twitterposter-1-1-130x180.jpg 130w, /wp-content/uploads/2014/08/3032553-inline-i-2-ft140220twitterposter-1-1-458x632.jpg 458w" sizes="(max-width: 640px) 100vw, 640px" />][9]
 
 **What you can do with this stat:** Tight crowds and community clusters seem like apt groupings for brands interested in a lot of engagement. If your social media channels are also part of your customer service strategy (which they should be), then support networks can also be a type of communication network for you. Analyze where you fit into these networks, and adjust your strategy as necessary to mix with another group.
 
@@ -47,7 +47,7 @@ Social Media Examiner’s [annual survey][10] of nearly 3,000 marketers leads to
 
 Consumers expect a lot from you on Twitter, as [recent research][11] by Lithium Technologies confirms. The real-time nature of Twitter has led to incredible expectations. According to Lithium, 53% of users who tweet at a brand expect a response within the hour. The percentage increases to 72% for those with a complaint.
 
-[<img class="aligncenter size-full wp-image-792" src="http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-4-lithium-twitter-report-response-time.jpg" alt="8_18_blog_social_media_stats2" width="640" height="518" srcset="http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-4-lithium-twitter-report-response-time.jpg 640w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-4-lithium-twitter-report-response-time-300x242.jpg 300w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-4-lithium-twitter-report-response-time-180x145.jpg 180w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-4-lithium-twitter-report-response-time-632x511.jpg 632w" sizes="(max-width: 640px) 100vw, 640px" />][12]
+[<img class="aligncenter size-full wp-image-792" src="/wp-content/uploads/2014/08/3032553-inline-i-4-lithium-twitter-report-response-time.jpg" alt="8_18_blog_social_media_stats2" width="640" height="518" srcset="/wp-content/uploads/2014/08/3032553-inline-i-4-lithium-twitter-report-response-time.jpg 640w, /wp-content/uploads/2014/08/3032553-inline-i-4-lithium-twitter-report-response-time-300x242.jpg 300w, /wp-content/uploads/2014/08/3032553-inline-i-4-lithium-twitter-report-response-time-180x145.jpg 180w, /wp-content/uploads/2014/08/3032553-inline-i-4-lithium-twitter-report-response-time-632x511.jpg 632w" sizes="(max-width: 640px) 100vw, 640px" />][12]
 
 **What you can do with this stat:** Unless you want to constantly monitor your email for Twitter notifications, you might want to invest in software to stay on top of your customer support tweets.
 
@@ -69,7 +69,7 @@ The Social Intelligence Report from Adobe [analyzed over 225 billion Facebook][1
 
 [According to Social Bakers][17], 87% of a Facebook page’s interactions happen on photo posts. No other content type receives more than 4% of interactions.
 
-[<img class="aligncenter size-full wp-image-793" src="http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-7-172116.jpg" alt="8_18_blog_social_media_stats3" width="640" height="261" srcset="http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-7-172116.jpg 640w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-7-172116-300x122.jpg 300w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-7-172116-180x73.jpg 180w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-7-172116-632x257.jpg 632w" sizes="(max-width: 640px) 100vw, 640px" />][18]
+[<img class="aligncenter size-full wp-image-793" src="/wp-content/uploads/2014/08/3032553-inline-i-7-172116.jpg" alt="8_18_blog_social_media_stats3" width="640" height="261" srcset="/wp-content/uploads/2014/08/3032553-inline-i-7-172116.jpg 640w, /wp-content/uploads/2014/08/3032553-inline-i-7-172116-300x122.jpg 300w, /wp-content/uploads/2014/08/3032553-inline-i-7-172116-180x73.jpg 180w, /wp-content/uploads/2014/08/3032553-inline-i-7-172116-632x257.jpg 632w" sizes="(max-width: 640px) 100vw, 640px" />][18]
 
 **What you can do with this stat:** This may be a no-brainer: Post more photos on Facebook. But not just any photos will do. Select photos and graphics that help tell your story in an interesting way.
 
@@ -79,7 +79,7 @@ The Social Intelligence Report from Adobe [analyzed over 225 billion Facebook][1
 
 Facebook, Twitter and Pinterest may have driven the most traffic, but YouTube, Google+ and LinkedIn ranked highest in terms of time spent on page and bounce rate.
 
-[<img class="aligncenter size-full wp-image-794" src="http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-8-social-referrals-that-matter-mar-2014.jpg" alt="8_18_blog_social_media_stats4" width="640" height="650" srcset="http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-8-social-referrals-that-matter-mar-2014.jpg 640w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-8-social-referrals-that-matter-mar-2014-295x300.jpg 295w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-8-social-referrals-that-matter-mar-2014-177x180.jpg 177w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-8-social-referrals-that-matter-mar-2014-622x632.jpg 622w" sizes="(max-width: 640px) 100vw, 640px" />][21]
+[<img class="aligncenter size-full wp-image-794" src="/wp-content/uploads/2014/08/3032553-inline-i-8-social-referrals-that-matter-mar-2014.jpg" alt="8_18_blog_social_media_stats4" width="640" height="650" srcset="/wp-content/uploads/2014/08/3032553-inline-i-8-social-referrals-that-matter-mar-2014.jpg 640w, /wp-content/uploads/2014/08/3032553-inline-i-8-social-referrals-that-matter-mar-2014-295x300.jpg 295w, /wp-content/uploads/2014/08/3032553-inline-i-8-social-referrals-that-matter-mar-2014-177x180.jpg 177w, /wp-content/uploads/2014/08/3032553-inline-i-8-social-referrals-that-matter-mar-2014-622x632.jpg 622w" sizes="(max-width: 640px) 100vw, 640px" />][21]
 
 **What you can do with this stat:** It’s important to have a diverse social media strategy and to be present and active on multiple networks.
 
@@ -109,24 +109,24 @@ There is a lot of data and research on social media available. As the communicat
 
 [1]: http://www.fastcompany.com/3032553/work-smart/10-significant-things-you-likely-didnt-know-about-social-media-but-should
 [2]: https://mention.com/uploads/whitepaper.pdf
-[3]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-1-screen-shot-2014-06-25-at-60053-am.jpg
+[3]: /wp-content/uploads/2014/08/3032553-inline-i-1-screen-shot-2014-06-25-at-60053-am.jpg
 [4]: http://www.fastcompany.com/organization/pew-research-center
 [5]: http://www.fastcompany.com/organization/social-media-research-foundation
 [6]: http://www.pewresearch.org/fact-tank/2014/02/20/the-six-types-of-twitter-conversations/
 [7]: http://www.fastcompany.com/company/twitter
 [8]: http://www.fastcompany.com/explore/distinct-communication-networks
-[9]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-2-ft140220twitterposter-1-1.jpg
+[9]: /wp-content/uploads/2014/08/3032553-inline-i-2-ft140220twitterposter-1-1.jpg
 [10]: http://www.socialmediaexaminer.com/social-media-trends/
 [11]: http://www.lithium.com/company/news-room/press-releases/2013/consumers-will-punish-brands-that-fail-to-respond-on-twitter-quickly
-[12]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-4-lithium-twitter-report-response-time.jpg
+[12]: /wp-content/uploads/2014/08/3032553-inline-i-4-lithium-twitter-report-response-time.jpg
 [13]: http://trackmaven.com/resources/retweet-report/
 [14]: http://blog.bufferapp.com/social-media-frequency-guide
 [15]: https://files.acrobat.com/a/preview/82076e0e-c4c3-41c9-9f13-42813d579c7a
 [16]: http://www.fastcompany.com/company/facebook
 [17]: http://www.emarketer.com/Article/Photos-Cluttering-Your-Facebook-Feed-Herersquos-Why/1010777/1
-[18]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-7-172116.jpg
+[18]: /wp-content/uploads/2014/08/3032553-inline-i-7-172116.jpg
 [19]: http://www.fastcompany.com/explore/social-sharing-site
 [20]: http://www.fastcompany.com/explore/social-media-sites
-[21]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/3032553-inline-i-8-social-referrals-that-matter-mar-2014.jpg
+[21]: /wp-content/uploads/2014/08/3032553-inline-i-8-social-referrals-that-matter-mar-2014.jpg
 [22]: http://www.socialbakers.com/blog/2181-finding-the-right-interactions-for-your-facebook-page
 [23]: http://blog.pinterest.com/post/85824761394/pin-trends-of-the-week

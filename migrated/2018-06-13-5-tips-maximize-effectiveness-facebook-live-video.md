@@ -69,5 +69,5 @@ _<span style="font-weight: 400;">What tips do you have for creating a great Face
 
 [1]: https://www.slideshare.net/PeopleLinkJSC/social-media-trends-for-2018-84336048?qid=131df752-f77d-4d3d-b72c-38d7bc76c592&v=&b=&from_search=2
 [2]: https://blog.hubspot.com/marketing/state-of-video-marketing-new-data
-[3]: http://localhost/brandglue/old-website/blog/social-media/5-ways-digital-marketers-tap-power-social-video
+[3]: /blog/social-media/5-ways-digital-marketers-tap-power-social-video
 [4]: https://live.fb.com/tips/

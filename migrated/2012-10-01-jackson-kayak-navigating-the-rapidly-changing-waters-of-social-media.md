@@ -28,4 +28,4 @@ The results were outstanding. In just three short months, Jackson Kayak separate
 
 Need help implementing your social media strategy?** Request a free assessment [here][1].**
 
-[1]: http://localhost/brandglue/old-website/free-assessment
+[1]: /free-assessment

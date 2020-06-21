@@ -13,7 +13,7 @@ categories:
 
 [
 
-<img class="aligncenter" title="wildfire + google" src="http://localhost/brandglue/old-website/wp-content/uploads/2012/07/wildfire-+-google.png" alt="" width="180" height="211" />][1]
+<img class="aligncenter" title="wildfire + google" src="/wp-content/uploads/2012/07/wildfire-+-google.png" alt="" width="180" height="211" />][1]
 
 With [Buddy Media][2], [Vitrue][3] and [Involver][4] already acquired, it was only a matter of time before Wildfire was snatched up. Buddy Media went for $800 million and Vitrue for $300 million. Wildfire went for \$250 million. It currently has about 350 employees and is located in Redwood City, CA.
 
@@ -27,11 +27,11 @@ Google wrote the following regarding the acquisition:
 
 Congrats from BrandGlue to the entire team at Wildfire. We’re excited to see more great social products and continued great customer service!
 
-[<img class="aligncenter" title="wildfire+google" src="http://localhost/brandglue/old-website/wp-content/uploads/2012/07/wildfire+google.jpg" alt="" width="493" height="327" />][6]
+[<img class="aligncenter" title="wildfire+google" src="/wp-content/uploads/2012/07/wildfire+google.jpg" alt="" width="493" height="327" />][6]
 
-[1]: http://localhost/brandglue/old-website/wp-content/uploads/2012/07/wildfire-+-google.png
+[1]: /wp-content/uploads/2012/07/wildfire-+-google.png
 [2]: http://mashable.com/2012/06/04/salesforce-acquires-buddy-media/
 [3]: http://techcrunch.com/2012/05/23/more/
 [4]: http://thenextweb.com/insider/2012/07/10/oracle-to-acquire-social-media-development-firm-involver-in-a-bid-to-build-a-cloud-based-social-platform/
 [5]: http://www.insidefacebook.com/2012/07/31/google-acquires-wildfire-maker-of-social-marketing-software/
-[6]: http://localhost/brandglue/old-website/wp-content/uploads/2012/07/wildfire+google.jpg
+[6]: /wp-content/uploads/2012/07/wildfire+google.jpg

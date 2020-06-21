@@ -29,7 +29,7 @@ Trial and error is the best method to find the sweet spot of how much content to
 
 **2. Your audience growth across all channels**
 
-[<img class="aligncenter size-full wp-image-810" src="http://localhost/brandglue/old-website/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.18.25-AM.png" alt="9_1_blog_analytics" width="606" height="255" srcset="http://localhost/brandglue/old-website/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.18.25-AM.png 606w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.18.25-AM-300x126.png 300w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.18.25-AM-180x75.png 180w" sizes="(max-width: 606px) 100vw, 606px" />][2]
+[<img class="aligncenter size-full wp-image-810" src="/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.18.25-AM.png" alt="9_1_blog_analytics" width="606" height="255" srcset="/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.18.25-AM.png 606w, /wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.18.25-AM-300x126.png 300w, /wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.18.25-AM-180x75.png 180w" sizes="(max-width: 606px) 100vw, 606px" />][2]
 
 By looking at audience growth across all your active channels at once, you get a broad and oft-overlooked perspective on how your networks stack up against one another.
 
@@ -37,7 +37,7 @@ You may be surprised by trends or patterns you notice when comparing your growth
 
 **3. Relative competitive volume across all channels**
 
-[<img class="aligncenter size-full wp-image-811" src="http://localhost/brandglue/old-website/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.29.05-AM.png" alt="9_1_blog_analytics_2" width="446" height="263" srcset="http://localhost/brandglue/old-website/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.29.05-AM.png 446w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.29.05-AM-300x176.png 300w, http://localhost/brandglue/old-website/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.29.05-AM-180x106.png 180w" sizes="(max-width: 446px) 100vw, 446px" />][3]
+[<img class="aligncenter size-full wp-image-811" src="/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.29.05-AM.png" alt="9_1_blog_analytics_2" width="446" height="263" srcset="/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.29.05-AM.png 446w, /wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.29.05-AM-300x176.png 300w, /wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.29.05-AM-180x106.png 180w" sizes="(max-width: 446px) 100vw, 446px" />][3]
 
 It never hurts to keep track with how well your competition is doing in comparison to your own social efforts. An easy way to get an overview of the competition is by measuring key term volumes across multiple channels. Again, it’s important to take a step back and focus on analysis and metrics that give a big picture look at your social efforts and not bits and pieces.
 
@@ -48,5 +48,5 @@ Tumblr is best known for viral content because the main action users take is reb
 **Are there any analyses that you pay special attention to? How do you translate metrics into value for business-minded executives? Let us know in the comments.**
 
 [1]: http://simplymeasured.com/blog/2014/06/27/4-overlooked-types-of-social-media-analysis/
-[2]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.18.25-AM.png
-[3]: http://localhost/brandglue/old-website/wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.29.05-AM.png
+[2]: /wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.18.25-AM.png
+[3]: /wp-content/uploads/2014/08/Screen-Shot-2014-06-26-at-11.29.05-AM.png

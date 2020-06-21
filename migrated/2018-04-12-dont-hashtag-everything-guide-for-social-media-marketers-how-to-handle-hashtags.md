@@ -78,5 +78,5 @@ categories:
 
 _<span style="font-weight: 400;">What’s your take on hashtags? We’d love to hear your thoughts in the comments!</span>_
 
-[1]: http://localhost/brandglue/old-website/blog/social-media/your-social-channels-deserve-better-5-tips-for-creating-riveting-content
-[2]: http://localhost/brandglue/old-website/#services-bg
+[1]: /blog/social-media/your-social-channels-deserve-better-5-tips-for-creating-riveting-content
+[2]: /#services-bg

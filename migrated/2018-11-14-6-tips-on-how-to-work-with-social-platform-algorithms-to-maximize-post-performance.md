@@ -65,7 +65,7 @@ categories:
 
 _<span style="font-weight: 400;">With these 6 tips you can begin planning engagement-friendly content that will allow you to work with every platform’s algorithm. Do you have additional tips to add? Let us know in the comments.</span>_
 
-[1]: http://localhost/brandglue/old-website/blog/social-media-tips/how-to-maximize-video-content-across-your-social-networks
+[1]: /blog/social-media-tips/how-to-maximize-video-content-across-your-social-networks
 [2]: https://blog.bufferapp.com/social-media-video-marketing-statistics
-[3]: http://localhost/brandglue/old-website/blog/social-media-tips/5-lessons-marketers-can-learn-from-taylor-swift
-[4]: http://localhost/brandglue/old-website/blog/social-media/with-facebook-groups-now-allowing-fan-pages-to-join-here-are-4-ways-to-use-them-to-further-your-business
+[3]: /blog/social-media-tips/5-lessons-marketers-can-learn-from-taylor-swift
+[4]: /blog/social-media/with-facebook-groups-now-allowing-fan-pages-to-join-here-are-4-ways-to-use-them-to-further-your-business

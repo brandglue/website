@@ -26,7 +26,7 @@ categories:
 
 <span style="font-weight: 400;">As you can see from the ad below, they are hitting the nail on the head with their ad. It communicates, “Hey, we get you. We know you can’t spend a fortune on this part of your life. We’ve got your back.” We especially like the tagline, “No commitments. No fees. No BS.” People (especially Millennials) resonate with being genuine and authentic. They can see right through you when your messaging is too “salesy.”</span>
 
-[<img class="alignnone size-full wp-image-947" src="http://localhost/brandglue/old-website/wp-content/uploads/2016/05/Dollar-Shave-Clube-Screenshot-760x399.png" alt="Dollar-Shave-Clube-Screenshot-760x399" width="760" height="399" srcset="http://localhost/brandglue/old-website/wp-content/uploads/2016/05/Dollar-Shave-Clube-Screenshot-760x399.png 760w, http://localhost/brandglue/old-website/wp-content/uploads/2016/05/Dollar-Shave-Clube-Screenshot-760x399-300x158.png 300w, http://localhost/brandglue/old-website/wp-content/uploads/2016/05/Dollar-Shave-Clube-Screenshot-760x399-180x95.png 180w, http://localhost/brandglue/old-website/wp-content/uploads/2016/05/Dollar-Shave-Clube-Screenshot-760x399-632x332.png 632w" sizes="(max-width: 760px) 100vw, 760px" />][1]
+[<img class="alignnone size-full wp-image-947" src="/wp-content/uploads/2016/05/Dollar-Shave-Clube-Screenshot-760x399.png" alt="Dollar-Shave-Clube-Screenshot-760x399" width="760" height="399" srcset="/wp-content/uploads/2016/05/Dollar-Shave-Clube-Screenshot-760x399.png 760w, /wp-content/uploads/2016/05/Dollar-Shave-Clube-Screenshot-760x399-300x158.png 300w, /wp-content/uploads/2016/05/Dollar-Shave-Clube-Screenshot-760x399-180x95.png 180w, /wp-content/uploads/2016/05/Dollar-Shave-Clube-Screenshot-760x399-632x332.png 632w" sizes="(max-width: 760px) 100vw, 760px" />][1]
 
 <ol start="2">
   <li>
@@ -40,7 +40,7 @@ categories:
 
 _<span style="font-weight: 400;">Skillshare does a good job of creating enticing visuals accompanied by strong call to actions that speak to a very specific audience.</span>_
 
-[<img class="alignnone size-full wp-image-950" src="http://localhost/brandglue/old-website/wp-content/uploads/2016/05/skillsharefbad.png" alt="skillsharefbad" width="650" height="504" srcset="http://localhost/brandglue/old-website/wp-content/uploads/2016/05/skillsharefbad.png 650w, http://localhost/brandglue/old-website/wp-content/uploads/2016/05/skillsharefbad-300x233.png 300w, http://localhost/brandglue/old-website/wp-content/uploads/2016/05/skillsharefbad-180x140.png 180w, http://localhost/brandglue/old-website/wp-content/uploads/2016/05/skillsharefbad-632x490.png 632w" sizes="(max-width: 650px) 100vw, 650px" />][3]
+[<img class="alignnone size-full wp-image-950" src="/wp-content/uploads/2016/05/skillsharefbad.png" alt="skillsharefbad" width="650" height="504" srcset="/wp-content/uploads/2016/05/skillsharefbad.png 650w, /wp-content/uploads/2016/05/skillsharefbad-300x233.png 300w, /wp-content/uploads/2016/05/skillsharefbad-180x140.png 180w, /wp-content/uploads/2016/05/skillsharefbad-632x490.png 632w" sizes="(max-width: 650px) 100vw, 650px" />][3]
 
 <ol start="3">
   <li>
@@ -52,7 +52,7 @@ _<span style="font-weight: 400;">Skillshare does a good job of creating enticing
 
 _<span style="font-weight: 400;">Here is an example of a bad infographic. This is information overload. Does anybody know what’s going on here?</span>_
 
-[<img class="alignnone size-full wp-image-949" src="http://localhost/brandglue/old-website/wp-content/uploads/2016/05/obamacare_chart_lg.jpg" alt="obamacare_chart_lg" width="1600" height="1245" srcset="http://localhost/brandglue/old-website/wp-content/uploads/2016/05/obamacare_chart_lg.jpg 1600w, http://localhost/brandglue/old-website/wp-content/uploads/2016/05/obamacare_chart_lg-300x233.jpg 300w, http://localhost/brandglue/old-website/wp-content/uploads/2016/05/obamacare_chart_lg-768x598.jpg 768w, http://localhost/brandglue/old-website/wp-content/uploads/2016/05/obamacare_chart_lg-1024x797.jpg 1024w, http://localhost/brandglue/old-website/wp-content/uploads/2016/05/obamacare_chart_lg-180x140.jpg 180w, http://localhost/brandglue/old-website/wp-content/uploads/2016/05/obamacare_chart_lg-632x492.jpg 632w" sizes="(max-width: 1600px) 100vw, 1600px" />][4]
+[<img class="alignnone size-full wp-image-949" src="/wp-content/uploads/2016/05/obamacare_chart_lg.jpg" alt="obamacare_chart_lg" width="1600" height="1245" srcset="/wp-content/uploads/2016/05/obamacare_chart_lg.jpg 1600w, /wp-content/uploads/2016/05/obamacare_chart_lg-300x233.jpg 300w, /wp-content/uploads/2016/05/obamacare_chart_lg-768x598.jpg 768w, /wp-content/uploads/2016/05/obamacare_chart_lg-1024x797.jpg 1024w, /wp-content/uploads/2016/05/obamacare_chart_lg-180x140.jpg 180w, /wp-content/uploads/2016/05/obamacare_chart_lg-632x492.jpg 632w" sizes="(max-width: 1600px) 100vw, 1600px" />][4]
 
 <ol start="4">
   <li>
@@ -74,18 +74,18 @@ _<span style="font-weight: 400;">Here is an example of a bad infographic. This i
 
 _<span style="font-weight: 400;">Here is an example of a traditional graph that communicates the same information as the one with the photo. This is an example where it would make sense to go a little outside the box.</span>_
 
-[<img class="alignnone size-full wp-image-948" src="http://localhost/brandglue/old-website/wp-content/uploads/2016/05/graphsample.jpg" alt="graphsample" width="600" height="400" srcset="http://localhost/brandglue/old-website/wp-content/uploads/2016/05/graphsample.jpg 600w, http://localhost/brandglue/old-website/wp-content/uploads/2016/05/graphsample-300x200.jpg 300w, http://localhost/brandglue/old-website/wp-content/uploads/2016/05/graphsample-180x120.jpg 180w" sizes="(max-width: 600px) 100vw, 600px" />][6]
+[<img class="alignnone size-full wp-image-948" src="/wp-content/uploads/2016/05/graphsample.jpg" alt="graphsample" width="600" height="400" srcset="/wp-content/uploads/2016/05/graphsample.jpg 600w, /wp-content/uploads/2016/05/graphsample-300x200.jpg 300w, /wp-content/uploads/2016/05/graphsample-180x120.jpg 180w" sizes="(max-width: 600px) 100vw, 600px" />][6]
 
-[<img class="alignnone size-full wp-image-946" src="http://localhost/brandglue/old-website/wp-content/uploads/2016/05/be03106f2478497481a43180334157a3.jpg" alt="be03106f2478497481a43180334157a3" width="564" height="739" srcset="http://localhost/brandglue/old-website/wp-content/uploads/2016/05/be03106f2478497481a43180334157a3.jpg 564w, http://localhost/brandglue/old-website/wp-content/uploads/2016/05/be03106f2478497481a43180334157a3-229x300.jpg 229w, http://localhost/brandglue/old-website/wp-content/uploads/2016/05/be03106f2478497481a43180334157a3-137x180.jpg 137w, http://localhost/brandglue/old-website/wp-content/uploads/2016/05/be03106f2478497481a43180334157a3-482x632.jpg 482w" sizes="(max-width: 564px) 100vw, 564px" />][7]
+[<img class="alignnone size-full wp-image-946" src="/wp-content/uploads/2016/05/be03106f2478497481a43180334157a3.jpg" alt="be03106f2478497481a43180334157a3" width="564" height="739" srcset="/wp-content/uploads/2016/05/be03106f2478497481a43180334157a3.jpg 564w, /wp-content/uploads/2016/05/be03106f2478497481a43180334157a3-229x300.jpg 229w, /wp-content/uploads/2016/05/be03106f2478497481a43180334157a3-137x180.jpg 137w, /wp-content/uploads/2016/05/be03106f2478497481a43180334157a3-482x632.jpg 482w" sizes="(max-width: 564px) 100vw, 564px" />][7]
 
 <span style="font-weight: 400;">Feel free to send me some creative for a free review or send me an email to chat about your social and design needs! </span>
 
 joey Ponce | joey@brandglue.com
 
-[1]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/Dollar-Shave-Clube-Screenshot-760x399.png
+[1]: /wp-content/uploads/2016/05/Dollar-Shave-Clube-Screenshot-760x399.png
 [2]: https://www.bannersnack.com/blog/social-media-ad-infographic-2015/
-[3]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/skillsharefbad.png
-[4]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/obamacare_chart_lg.jpg
+[3]: /wp-content/uploads/2016/05/skillsharefbad.png
+[4]: /wp-content/uploads/2016/05/obamacare_chart_lg.jpg
 [5]: https://vwo.com/ab-testing/
-[6]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/graphsample.jpg
-[7]: http://localhost/brandglue/old-website/wp-content/uploads/2016/05/be03106f2478497481a43180334157a3.jpg
+[6]: /wp-content/uploads/2016/05/graphsample.jpg
+[7]: /wp-content/uploads/2016/05/be03106f2478497481a43180334157a3.jpg

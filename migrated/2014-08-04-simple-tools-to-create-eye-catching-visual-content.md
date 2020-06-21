@@ -47,7 +47,7 @@ Ditch the boring, cookie-cutter content and take control of your visual presence
 
 _Photo courtesy of Death to Stock Photo._
 
-[1]: http://localhost/brandglue/old-website/free-assessment
+[1]: /free-assessment
 [2]: http://www.socialmediaexaminer.com/tools-to-create-visual-content/
 [3]: http://www.easel.ly/
 [4]: http://slidely.com/

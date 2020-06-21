@@ -122,4 +122,4 @@ _<span style="font-weight: 400;">What practices have you found most useful in yo
 [1]: https://www.shoutmeloud.com/seo-benefits-and-tips-for-outbound-links.html
 [2]: https://www.zenithmedia.com/smartphone-penetration-reach-66-2018/
 [3]: https://www.netmarketshare.com/search-engine-market-share.aspx?options=%7B%22filter%22%3A%7B%22%24and%22%3A%5B%7B%22deviceType%22%3A%7B%22%24in%22%3A%5B%22Mobile%22%5D%7D%7D%5D%7D%2C%22dateLabel%22%3A%22Trend%22%2C%22attributes%22%3A%22share%22%2C%22group%22%3A%22searchEngine%22%2C%22sort%22%3A%7B%22share%22%3A-1%7D%2C%22id%22%3A%22searchEnginesDesktop%22%2C%22dateInterval%22%3A%22Monthly%22%2C%22dateStart%22%3A%222017-04%22%2C%22dateEnd%22%3A%222018-03%22%2C%22plotKeys%22%3A%5B%7B%22searchEngine%22%3A%22Google%22%7D%2C%7B%22searchEngine%22%3A%22Baidu%22%7D%2C%7B%22searchEngine%22%3A%22Bing%22%7D%2C%7B%22searchEngine%22%3A%22Yahoo!%22%7D%2C%7B%22searchEngine%22%3A%22Yandex%22%7D%5D%2C%22tableOrder%22%3A%5B%5B2%2C%22desc%22%5D%5D%2C%22segments%22%3A%22-1000%22%7D
-[4]: http://localhost/brandglue/old-website/#services-bg
+[4]: /#services-bg

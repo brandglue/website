@@ -100,5 +100,5 @@ _<span style="font-weight: 400;">What video tactics have you found to be success
 [2]: http://www.businessinsider.com/delete-facebook-statistics-nearly-10-percent-americans-deleted-facebook-account-study-2018-4
 [3]: https://blog.hubspot.com/marketing/how-long-should-videos-be-on-instagram-twitter-facebook-youtube
 [4]: https://www.business2community.com/facebook/state-facebook-video-year-2017-video-length-time-watched-01834666
-[5]: http://localhost/brandglue/old-website/blog/social-media-tips/5-creative-video-ideas-for-social-media
-[6]: http://localhost/brandglue/old-website/#services-bg
+[5]: /blog/social-media-tips/5-creative-video-ideas-for-social-media
+[6]: /#services-bg
