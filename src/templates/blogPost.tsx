@@ -64,9 +64,11 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
             <Author>{frontmatter.author}</Author>
             <Date>{frontmatter.date}</Date>
           </span>
-          {frontmatter.categories?.map((category) => {
-            return <Category key={category}>{category}</Category>;
-          })}
+          <Categories>
+            {frontmatter.categories?.map((category) => {
+              return <Category key={category}>{category}</Category>;
+            })}
+          </Categories>
         </PostHeader>
         <Image
           alt={frontmatter.cover_image?.name}
@@ -100,9 +102,14 @@ const Author = styled(Span)`
 
 const Date = styled(Span)`
   ${({ theme }) => css`
+    margin-right: auto;
     text-transform: uppercase;
     color: ${theme.colors.gray02};
   `}
+`;
+
+const Categories = styled(Span)`
+  margin-left: auto;
 `;
 
 const Category = styled(Span)`
@@ -110,6 +117,11 @@ const Category = styled(Span)`
     background: ${theme.colors.blue};
     color: ${theme.colors.white};
     padding: ${theme.spacings.pixelSpace01} ${theme.spacings.pixelSpace02};
+    margin-right: ${theme.spacings.pixelSpace02};
+
+    &:last-child {
+      margin-right: 0;
+    }
   `}
 `;
 
