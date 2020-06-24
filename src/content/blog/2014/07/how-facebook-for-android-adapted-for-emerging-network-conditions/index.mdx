@@ -1,0 +1,35 @@
+---
+title: How Facebook for Android Adapted for Emerging Network Conditions
+author: Zach Welch
+date: 2014-07-10
+slug: /blog/news/how-facebook-for-android-adapted-for-emerging-network-conditions
+cover_image: ./cover.jpg
+categories:
+  - News
+---
+
+In order to test the Facebook for Android app in emerging network conditions, a team of product managers and engineers traveled to Africa to see first hand how their app held up. Seventy-five percent of Facebook users live outside of the U.S., so it’s important that all of Facebook’s products work efficiently around the world.
+
+The result? The PM’s and engineers used up their monthly data allowance in 40 minutes.
+
+Clearly adjustments needed to be made to adapt to the emerging network conditions. The team worked to make the app less reliant on data and more logical for users who do not have major data plans. The company also made the app smaller because the phones most commonly used in the area had extremely limited disk space. Users often did not have enough space on their phones to download the newer versions.
+
+Facebook Engineer Alex Sourov [blogged about the trip][1], and talked about how Facebook for Android needed to use up less data:
+
+We realized that data is extremely expensive in emerging markets, and purchasing more data is often a laborious process. Thus, there needed to be a concerted effort to reduce data consumption within the Facebook app. Interacting with photos is an important part of the Facebook experience, but it takes a sizable amount of data to download them. If we could optimize the download size, we could improve data savings and perceived app performance.
+
+First, we investigated the use of alternative compression formats for image transmission. We built tools to evaluate the impact of several different compression formats on data sizes and eventually settled on WebP. It offered both great compression performance and efficient support from Android. The use of WebP for transmitting Facebook images resulted in data savings of 25 to 35 percent compared with JPG, and 80 percent compared with PNG. This all happened without perceived impact on quality.
+
+Some other key tidbits that came from the Africa test:
+
+- The tests of Android after the trip resulted in a 50 percent reduction of data use.
+- Start time has been roughly cut in half.
+- After embracing OkHttp, a networking stack open-sourced by Square, reports of slow or failed image loads dropped by almost 90 percent.
+- Facebook for Android app size has been slashed by 65 percent.
+
+After the trip, the team now tests all major features in emerging networking conditions and make adjustments as necessary. They are also working to implement similar tweaks to the other apps in the Facebook family, including Messenger and Instagram.
+
+_Image courtesy of [Shutterstock][2]._
+
+[1]: https://code.facebook.com/posts/485459238254631/improving-facebook-on-android
+[2]: http://www.shutterstock.com/

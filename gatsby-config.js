@@ -9,6 +9,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
+    'gatsby-remark-embed-video', // must come before remark-images
     'gatsby-remark-images',
     'gatsby-plugin-sharp',
     'gatsby-plugin-styled-components',
@@ -22,8 +23,28 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1250,
+              linkImagesToOriginal: false,
+              wrapperStyle: 'margin: 0;',
             },
           },
+          {
+            resolve: 'gatsby-remark-embed-video',
+            options: {
+              width: 800,
+              related: false,
+              noIframeBorder: true,
+              urlOverrides: [
+                {
+                  id: 'youtube',
+                  embedURL: (videoId) =>
+                    `https://www.youtube-nocookie.com/embed/${videoId}`,
+                },
+              ],
+              containerClass: 'embed-video-container',
+            },
+          },
+          'gatsby-remark-instagram-embed',
+          'gatsby-remark-responsive-iframe',
         ],
       },
     },

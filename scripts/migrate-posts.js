@@ -10,10 +10,11 @@ const extract = require('remark-extract-frontmatter');
 const yaml = require('yaml').parse;
 const vfile = require('to-vfile');
 
-const migratedPath = path.join(__dirname, '../migrated');
+const migratedMarkdownPath = path.join(__dirname, '../migrated');
+const migratedImagesPath = path.join(__dirname, '../migrated-images');
 const destinationPath = path.join(__dirname, '../src/content/blog');
 
-fs.readdir(migratedPath, (err, files) => {
+fs.readdir(migratedMarkdownPath, (err, files) => {
   if (err) {
     return console.log('Unable to scan directory: ' + err);
   }
@@ -23,7 +24,7 @@ fs.readdir(migratedPath, (err, files) => {
 
     const folderName = folderSegments.join('-').split('.')[0];
 
-    const currentFilePath = path.join(migratedPath, `/${file}`);
+    const currentFilePath = path.join(migratedMarkdownPath, `/${file}`);
     const targetPath = `${destinationPath}/${year}/${month}/${folderName}`;
 
     if (!fs.existsSync(targetPath)) {
@@ -49,7 +50,7 @@ fs.readdir(migratedPath, (err, files) => {
 
         if (coverImageFileName) {
           fs.copyFile(
-            path.join(__dirname, `../migrated-images/${coverImageFileName}`),
+            `${migratedImagesPath}/${coverImageFileName}`,
             `${targetPath}/cover.jpg`,
             (err) => {
               if (err) throw err;
