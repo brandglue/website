@@ -20,7 +20,26 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return;
   }
 
-  result.data.allMdx.edges.forEach(({ node }) => {
+  const posts = result.data.allMdx.edges;
+
+  // create blogList page with pagination
+  const postsPerPage = 6;
+  const numPages = Math.ceil(posts.length / postsPerPage);
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? '/blog' : `/blog/${i + 1}`,
+      component: require.resolve('./src/templates/blogList.tsx'),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    });
+  });
+
+  // create individual blog posts
+  posts.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.slug,
       component: require.resolve('./src/templates/blogPost.tsx'),

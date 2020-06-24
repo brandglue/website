@@ -127,7 +127,7 @@ const Category = styled(Span)`
 
 export default BlogPost; // default export needed for gatsby-node
 
-export const pageQuery = graphql`
+export const blogPostQuery = graphql`
   query BlogPost($slug: String!) {
     mdx(frontmatter: { slug: { eq: $slug } }) {
       body

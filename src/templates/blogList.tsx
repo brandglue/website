@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { graphql } from 'gatsby';
 
 import { Box } from '@components/boxes/Box';
 import { Image } from '@components/images/Image';
@@ -7,7 +8,11 @@ import { P, H2, H3 } from '@components/text/Text';
 import { useBlogHeroImage } from '@hooks/queries/useBlogHeroImage';
 import { Excerpts } from '@page-partials/blog/Excerpts';
 
-export const Blog: FC = () => {
+interface IProps {
+  data: GatsbyTypes.AllBlogPostsQuery;
+}
+
+export const Blog: FC<IProps> = ({ data }) => {
   const blogHeroImage = useBlogHeroImage();
 
   return (
@@ -20,9 +25,31 @@ export const Blog: FC = () => {
         </Box>
       </Box>
       <H3>Latest Posts</H3>
-      <Excerpts />
+      <Excerpts blogPosts={data} />
     </>
   );
 };
 
 export default Blog;
+
+export const allBlogPostsQuery = graphql`
+  query AllBlogPosts($skip: Int!, $limit: Int!) {
+    allMdx(
+      sort: { fields: frontmatter___date, order: DESC }
+      limit: $limit
+      skip: $skip
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 400)
+          frontmatter {
+            slug
+            title
+            date(formatString: "MMMM DD, YYYY")
+            featured
+          }
+        }
+      }
+    }
+  }
+`;

@@ -1,28 +1,12 @@
 import React from 'react';
-import { Link, graphql, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 
-export const Excerpts: React.FC = () => {
-  const allBlogPostsQuery = useStaticQuery<
-    GatsbyTypes.AllBlogPostsQuery
-  >(graphql`
-    query AllBlogPosts {
-      allMdx(sort: { fields: frontmatter___date, order: DESC }) {
-        edges {
-          node {
-            excerpt(pruneLength: 400)
-            frontmatter {
-              slug
-              title
-              date(formatString: "MMMM DD, YYYY")
-              featured
-            }
-          }
-        }
-      }
-    }
-  `);
+interface IProps {
+  blogPosts: GatsbyTypes.AllBlogPostsQuery;
+}
 
-  const posts = allBlogPostsQuery?.allMdx?.edges;
+export const Excerpts: React.FC<IProps> = ({ blogPosts }) => {
+  const posts = blogPosts.allMdx?.edges;
 
   return (
     <>
