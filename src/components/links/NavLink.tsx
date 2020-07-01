@@ -74,7 +74,7 @@ export const NavLink = styled(WrappedLink)<StyledSystemProps>`
 `;
 
 NavLink.defaultProps = {
-  fontSize: standardFontSizes,
-  lineHeight: standardLineHeights,
+  // fontSize: standardFontSizes,
+  // lineHeight: standardLineHeights,
   variant: 'textLink',
 };

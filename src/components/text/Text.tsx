@@ -20,10 +20,10 @@ export const H1 = styled.h1<StyledSystemTextProps>`
   ${customText}
 `;
 
-H1.defaultProps = {
-  fontSize: [4, null, 5, 6, 7, 8],
-  lineHeight: [4, null, 4, 5, 6, 7],
-};
+// H1.defaultProps = {
+//   fontSize: [4, null, 5, 6, 7, 8],
+//   lineHeight: [4, null, 4, 5, 6, 7],
+// };
 
 export const H2 = styled.h2<StyledSystemTextProps>`
   ${({ theme }) =>
@@ -43,11 +43,11 @@ export const H2 = styled.h2<StyledSystemTextProps>`
   ${customText}
 `;
 
-H2.defaultProps = {
-  fontSize: [3, null, 4, 5, 6, 7],
-  lineHeight: [3, null, 3, 4, 5, 6],
-  variant: 'sectionTitle',
-};
+// H2.defaultProps = {
+//   fontSize: [3, null, 4, 5, 6, 7],
+//   lineHeight: [3, null, 3, 4, 5, 6],
+//   variant: 'sectionTitle',
+// };
 
 export const H3 = styled.h3<StyledSystemTextProps>`
   ${color}
@@ -56,10 +56,10 @@ export const H3 = styled.h3<StyledSystemTextProps>`
   ${customText}
 `;
 
-H3.defaultProps = {
-  fontSize: [2, null, 3, 4, 5, 6],
-  lineHeight: [2, null, 3, 4, 5, 6],
-};
+// H3.defaultProps = {
+//   fontSize: [2, null, 3, 4, 5, 6],
+//   lineHeight: [2, null, 3, 4, 5, 6],
+// };
 
 export const H4 = styled.h4<StyledSystemTextProps>`
   ${color}
@@ -68,10 +68,10 @@ export const H4 = styled.h4<StyledSystemTextProps>`
   ${customText}
 `;
 
-H4.defaultProps = {
-  fontSize: [1, null, null, 2, 3, 4],
-  lineHeight: [1, null, null, 2, 3, 4],
-};
+// H4.defaultProps = {
+//   fontSize: [1, null, null, 2, 3, 4],
+//   lineHeight: [1, null, null, 2, 3, 4],
+// };
 
 export const H5 = styled.h5<StyledSystemTextProps>`
   text-transform: uppercase;
@@ -81,10 +81,10 @@ export const H5 = styled.h5<StyledSystemTextProps>`
   ${customText}
 `;
 
-H5.defaultProps = {
-  fontSize: [1, null, null, null, 3, 4],
-  lineHeight: [1, null, null, null, 3, 4],
-};
+// H5.defaultProps = {
+//   fontSize: [1, null, null, null, 3, 4],
+//   lineHeight: [1, null, null, null, 3, 4],
+// };
 
 export const P = styled.p<StyledSystemTextProps>`
   ${({ theme }) => css`
@@ -96,10 +96,10 @@ export const P = styled.p<StyledSystemTextProps>`
   ${fluid(typography)}
 `;
 
-P.defaultProps = {
-  fontSize: standardFontSizes,
-  lineHeight: standardLineHeights,
-};
+// P.defaultProps = {
+//   fontSize: standardFontSizes,
+//   lineHeight: standardLineHeights,
+// };
 
 export const Span = styled.span<StyledSystemTextProps>`
   ${color}
@@ -107,10 +107,10 @@ export const Span = styled.span<StyledSystemTextProps>`
   ${fluid(typography)}
 `;
 
-Span.defaultProps = {
-  fontSize: standardFontSizes,
-  lineHeight: standardLineHeights,
-};
+// Span.defaultProps = {
+//   fontSize: standardFontSizes,
+//   lineHeight: standardLineHeights,
+// };
 
 export const Ul = styled.ul<StyledSystemTextProps>`
   ${({ theme }) => css`
@@ -123,10 +123,10 @@ export const Ul = styled.ul<StyledSystemTextProps>`
   ${fluid(typography)}
 `;
 
-Ul.defaultProps = {
-  fontSize: standardFontSizes,
-  lineHeight: standardLineHeights,
-};
+// Ul.defaultProps = {
+//   fontSize: standardFontSizes,
+//   lineHeight: standardLineHeights,
+// };
 
 export const Ol = styled.ol<StyledSystemTextProps>`
   ${({ theme }) => css`
@@ -139,10 +139,10 @@ export const Ol = styled.ol<StyledSystemTextProps>`
   ${fluid(typography)}
 `;
 
-Ol.defaultProps = {
-  fontSize: standardFontSizes,
-  lineHeight: standardLineHeights,
-};
+// Ol.defaultProps = {
+//   fontSize: standardFontSizes,
+//   lineHeight: standardLineHeights,
+// };
 
 export const Li = styled.li<StyledSystemTextProps>`
   margin-bottom: ${({ theme }) => theme.spacings.pixelSpace05};
@@ -152,10 +152,10 @@ export const Li = styled.li<StyledSystemTextProps>`
   ${fluid(typography)}
 `;
 
-Li.defaultProps = {
-  fontSize: standardFontSizes,
-  lineHeight: standardLineHeights,
-};
+// Li.defaultProps = {
+//   fontSize: standardFontSizes,
+//   lineHeight: standardLineHeights,
+// };
 
 export const Em = styled.em<StyledSystemTextProps>`
   font-style: italic;
@@ -165,10 +165,10 @@ export const Em = styled.em<StyledSystemTextProps>`
   ${fluid(typography)}
 `;
 
-Em.defaultProps = {
-  fontSize: standardFontSizes,
-  lineHeight: standardLineHeights,
-};
+// Em.defaultProps = {
+//   fontSize: standardFontSizes,
+//   lineHeight: standardLineHeights,
+// };
 
 export const Strong = styled.strong<StyledSystemTextProps>`
   font-weight: 700;
@@ -178,10 +178,10 @@ export const Strong = styled.strong<StyledSystemTextProps>`
   ${fluid(typography)}
 `;
 
-Strong.defaultProps = {
-  fontSize: standardFontSizes,
-  lineHeight: standardLineHeights,
-};
+// Strong.defaultProps = {
+//   fontSize: standardFontSizes,
+//   lineHeight: standardLineHeights,
+// };
 
 export const A = styled.a<StyledSystemTextProps>`
   ${color}
@@ -189,7 +189,7 @@ export const A = styled.a<StyledSystemTextProps>`
   ${fluid(typography)}
 `;
 
-A.defaultProps = {
-  fontSize: standardFontSizes,
-  lineHeight: standardLineHeights,
-};
+// A.defaultProps = {
+//   fontSize: standardFontSizes,
+//   lineHeight: standardLineHeights,
+// };

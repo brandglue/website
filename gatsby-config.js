@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: 'https://brandglue.netlify.app',
   },
   plugins: [
+    'gatsby-plugin-typescript',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
     'gatsby-remark-embed-video', // must come before remark-images
@@ -46,6 +47,12 @@ module.exports = {
           'gatsby-remark-instagram-embed',
           'gatsby-remark-responsive-iframe',
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/theme/typography',
       },
     },
     {

@@ -14,6 +14,6 @@ export const Anchor = styled.a<StyledSystemTextProps>`
 `;
 
 Anchor.defaultProps = {
-  fontSize: standardFontSizes,
-  lineHeight: standardLineHeights,
+  // fontSize: standardFontSizes,
+  // lineHeight: standardLineHeights,
 };

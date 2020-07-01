@@ -8,7 +8,8 @@ import { Services } from '@page-partials/home/Services';
 import { Contact } from '@page-partials/common/Contact';
 
 export const Home: FC = () => (
-  <div style={{ fontSize: 0 }}>
+  // <div style={{ fontSize: 0 }}>
+  <div>
     <Hero />
     <Team />
     <Clients />
