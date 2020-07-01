@@ -8,6 +8,12 @@ import { rhythm } from '@theme/theme';
 const { standardFontSizes, standardLineHeights } = rhythm;
 
 export const H1 = styled.h1<StyledSystemTextProps>`
+  ${({ theme }) => css`
+    color: ${theme.colors.darkBlue};
+    text-transform: 'uppercase';
+    white-space: 'pre-wrap';
+  `}
+
   ${color}
   ${space}
   ${fluid(typography)}

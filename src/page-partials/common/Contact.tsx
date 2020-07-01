@@ -54,7 +54,7 @@ export const Contact: FC = () => {
   };
 
   return (
-    <Box py={7} variant="column">
+    <Box py={7} variant="section">
       <H2>Ready to get to work? We are.</H2>
       <P pb={5}>
         Overwhelmed with the possilibities and options of social media? Not sure

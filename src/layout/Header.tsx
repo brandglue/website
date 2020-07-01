@@ -44,16 +44,16 @@ export const Header: FC = () => {
 
   const smallDeviceMenu = (
     <header>
-      <Logo to={`/`} variant="button">
+      <LogoLink to={`/`} variant="invisible">
         <BrandGlueLogo />
-      </Logo>
+      </LogoLink>
       <SmallDeviceMenu>
         {smallMenuItems.map((item) => {
           return (
             <SmallDeviceLink
               key={item.label}
               to={`/${item.to}`}
-              variant="button"
+              variant="invisible"
             >
               {item.label}
             </SmallDeviceLink>
@@ -65,16 +65,16 @@ export const Header: FC = () => {
 
   const largeDeviceMenu = (
     <LargeDeviceWrapper>
-      <Logo to={`/`}>
+      <LogoLink to={`/`}>
         <BrandGlueLogo />
-      </Logo>
+      </LogoLink>
       <LargeDeviceMenu>
         {largeMenuItems.map((item) => {
           return (
             <LargeDeviceLink
               key={item.label}
               to={`/${item.to}`}
-              variant="button"
+              variant="invisible"
             >
               {item.label}
             </LargeDeviceLink>
@@ -87,7 +87,7 @@ export const Header: FC = () => {
   return appState.isLargeDevice ? largeDeviceMenu : smallDeviceMenu;
 };
 
-const Logo = styled(NavLink)`
+const LogoLink = styled(NavLink)`
   display: block;
   width: 50%;
   max-width: 220px;
@@ -111,7 +111,7 @@ const SmallDeviceLink = styled(NavLink)`
     color: ${theme.colors.black};
     text-transform: uppercase;
     padding: ${theme.space[3]}px;
-    border-right: 1px solid ${theme.colors.gray00};
+    border-right: 1px solid ${theme.colors.gray02};
 
     &:last-child {
       border: none;

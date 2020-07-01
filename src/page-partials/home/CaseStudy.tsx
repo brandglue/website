@@ -28,7 +28,7 @@ export const CaseStudy: FC = () => {
 
   return (
     <Box bg="DarkBlue" py={5}>
-      <Container variant="column">
+      <Container variant="section">
         <Logo variant="flexItem">
           <Image
             alt="intuit-accountants"

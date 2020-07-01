@@ -94,7 +94,7 @@ const gridItems: IGridItems[] = [
 export const Services: FC = () => {
   return (
     <Box borderBottom="50px solid" borderColor="Blue">
-      <Box py={7} variant="column">
+      <Box py={7} variant="section">
         <H2>What we do for you</H2>
         <P mb={6}>
           <strong>The world of Social Media is getting bigger daily.</strong>{' '}
@@ -147,13 +147,13 @@ const GridItem = styled.div`
     ${minMediaQuery.Medium(css`
       min-height: 200px;
       border: 1px solid transparent;
-      border-top: 1px solid ${theme.colors.gray00};
-      border-left: 1px solid ${theme.colors.gray00};
+      border-top: 1px solid ${theme.colors.gray02};
+      border-left: 1px solid ${theme.colors.gray02};
       &:nth-child(-n + 2) {
-        border-top: 1px solid ${theme.colors.gray00};
+        border-top: 1px solid ${theme.colors.gray02};
       }
       &:nth-child(odd) {
-        border-left: 1px solid ${theme.colors.gray00};
+        border-left: 1px solid ${theme.colors.gray02};
       }
       &:nth-child(-n + 3) {
         border-top: 1px solid transparent;
@@ -173,7 +173,7 @@ const GridItem = styled.div`
         background-color: ${theme.colors.white};
         border: 1px solid ${theme.colors.blue};
         box-shadow: 0 0 1px 1px rgba(${hexToRgb(theme.colors.blue)}, 0.3),
-          0 0 15px 0 rgba(${hexToRgb(theme.colors.gray01)}, 0.2);
+          0 0 15px 0 rgba(${hexToRgb(theme.colors.gray03)}, 0.2);
         border-radius: 3px;
         transform: scale(1.025);
         transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out,

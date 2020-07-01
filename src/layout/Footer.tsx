@@ -14,7 +14,7 @@ import { minMediaQuery } from '@theme/utils';
 export const Footer: FC = () => (
   <>
     <Wrapper>
-      <Container variant="centered">
+      <Container flexDirection="column" variant="centered">
         <Contact>
           <Title>Contact Us</Title>
           <Info href="tel:+1-360-207-4583">+1 (360) 207-4583</Info>
@@ -48,7 +48,7 @@ export const Footer: FC = () => (
 
 const Wrapper = styled.div`
   ${({ theme }) => css`
-    background: ${theme.colors.gray04};
+    background: ${theme.colors.gray06};
     padding: ${theme.spacings.viewportSpace02} ${theme.spacings.viewportSpace02}
       ${theme.spacings.pixelSpace03};
   `};
@@ -57,7 +57,7 @@ const Wrapper = styled.div`
 const Container = styled(Box)`
   ${({ theme }) => css`
     text-align: center;
-    color: ${theme.colors.gray01};
+    color: ${theme.colors.gray03};
     margin-bottom: ${theme.spacings.pixelSpace08};
 
     ${minMediaQuery.Medium(css`
@@ -84,7 +84,7 @@ const Title = styled(H4)`
 const Info = styled.a`
   ${({ theme }) => css`
     text-decoration: none;
-    color: ${theme.colors.gray01};
+    color: ${theme.colors.gray03};
 
     &:last-of-type {
       margin-bottom: ${theme.spacings.pixelSpace03};
@@ -118,7 +118,7 @@ const StyledBrandGlueLogoIconOnly = styled(BrandGlueLogoIconOnly)`
 const Copyright = styled.div`
   ${({ theme }) => css`
     background: ${theme.colors.black};
-    color: ${theme.colors.gray01};
+    color: ${theme.colors.gray03};
     text-align: center;
     padding: ${theme.space[5]}px;
   `}

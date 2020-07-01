@@ -42,8 +42,7 @@ export const NavLink = styled(WrappedLink)<StyledSystemProps>`
   ${({ theme }) =>
     variant({
       variants: {
-        button: {
-          display: 'inline-block',
+        invisible: {
           color: 'currentColor',
           textDecoration: 'none',
         },
@@ -51,6 +50,19 @@ export const NavLink = styled(WrappedLink)<StyledSystemProps>`
           display: 'inline',
           color: `${theme.colors.blue}`,
           textDecoration: 'underline',
+        },
+        title: {
+          display: 'inline',
+          color: 'currentColor',
+          textDecoration: 'none',
+        },
+        button: {
+          display: 'inline-block',
+          background: `${theme.colors.blue}`,
+          color: `${theme.colors.white}`,
+          textDecoration: 'none',
+          textTransform: 'uppercase',
+          padding: `${theme.spacings.emSpace01}`,
         },
       },
     })}

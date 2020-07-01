@@ -57,7 +57,7 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
       }}
     >
       <Image alt={'blog-hero'} fluid={blogHeroImage?.fluid} />
-      <Box py={7} variant="column">
+      <Box py={7} variant="section">
         <H2>{frontmatter.title}</H2>
         <PostHeader variant="flex">
           <span>
@@ -94,7 +94,7 @@ const Author = styled(Span)`
   ${({ theme }) => css`
     color: ${theme.colors.gold};
     text-transform: uppercase;
-    border-right: 1px solid ${theme.colors.gray02};
+    border-right: 1px solid ${theme.colors.gray04};
     padding-right: ${theme.spacings.pixelSpace03};
     margin-right: ${theme.spacings.pixelSpace03};
   `}
@@ -104,7 +104,7 @@ const Date = styled(Span)`
   ${({ theme }) => css`
     margin-right: auto;
     text-transform: uppercase;
-    color: ${theme.colors.gray02};
+    color: ${theme.colors.gray04};
   `}
 `;
 
@@ -137,7 +137,7 @@ export const blogPostQuery = graphql`
         cover_image {
           name
           childImageSharp {
-            fluid(maxWidth: 1250) {
+            fluid(maxWidth: 1100) {
               ...GatsbyImageSharpFluid_withWebp
               ...GatsbyImageSharpFluidLimitPresentationSize
             }

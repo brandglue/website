@@ -67,7 +67,7 @@ export const Team: FC = () => {
 
   return (
     <Container>
-      <Box variant="column">
+      <Box variant="section">
         <Box alignItems="flex-start" m="auto" py={7} variant="flex">
           <Box flex="0 0 60%" mr={7} variant="flexItem">
             <H2>Meet the Team</H2>
@@ -134,7 +134,7 @@ const Container = styled(Box)`
     background: linear-gradient(
       180deg,
       rgba(${hexToRgb(theme.colors.white)}, 1) 0%,
-      rgba(${hexToRgb(theme.colors.gray00)}, 1) 100%
+      rgba(${hexToRgb(theme.colors.gray02)}, 1) 100%
     );
   `}
 `;

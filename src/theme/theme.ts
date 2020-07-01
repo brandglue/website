@@ -17,11 +17,13 @@ const colors = {
   red: Hex('#c30909'),
   black: Hex('#000'),
   white: Hex('#fff'),
-  gray00: Hex('#d5d6d6'),
-  gray01: Hex('#b1b3b5'),
-  gray02: Hex('#828487'),
-  gray03: Hex('#666'),
-  gray04: Hex('#333'),
+  gray00: Hex('#f5f5f5'),
+  gray01: Hex('#e2e2e2'),
+  gray02: Hex('#d5d6d6'),
+  gray03: Hex('#b1b3b5'),
+  gray04: Hex('#828487'),
+  gray05: Hex('#666'),
+  gray06: Hex('#333'),
 };
 
 const fontFamilies = {
@@ -68,7 +70,7 @@ const emSpacings = {
 
 const specialSpacings = {
   hzColPadding: '17px',
-  maxColWidth: '1250px',
+  maxColWidth: '1100px',
   maxPageWidth: '2560px',
 };
 

@@ -71,7 +71,7 @@ export const Clients: FC = () => {
   `);
 
   return (
-    <Box py={6} variant="column">
+    <Box py={6} variant="section">
       <Box
         alignItems="center"
         gridGap={6}

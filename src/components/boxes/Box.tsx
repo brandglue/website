@@ -18,17 +18,16 @@ export const Box = styled.div<StyledSystemProps>`
   ${({ theme }) =>
     variant({
       variants: {
-        centered: {
-          display: 'flex',
-          flexFlow: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        },
-        column: {
+        section: {
           maxWidth: `${theme.spacings.maxColWidth}`,
           paddingLeft: `${theme.spacings.hzColPadding}`,
           paddingRight: `${theme.spacings.hzColPadding}`,
           margin: 'auto',
+        },
+        centered: {
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
         },
         flex: {
           display: 'flex',

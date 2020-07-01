@@ -23,7 +23,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const posts = result.data.allMdx.edges;
 
   // create blogList page with pagination
-  const postsPerPage = 6;
+  const postsPerPage = 9;
   const numPages = Math.ceil(posts.length / postsPerPage);
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({

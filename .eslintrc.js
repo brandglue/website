@@ -44,18 +44,6 @@ const path = require('path');
           reservedFirst: true,
         },
       ],
-      'react/sort-comp': [
-        2,
-        {
-          order: [
-            'static-methods',
-            'instance-variables',
-            'lifecycle',
-            'everything-else',
-            'render',
-          ],
-        },
-      ],
       'react/prop-types': 'off',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',

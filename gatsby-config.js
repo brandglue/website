@@ -22,7 +22,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 1250,
+              maxWidth: 1100,
               linkImagesToOriginal: false,
               wrapperStyle: 'margin: 0;',
             },
@@ -45,6 +45,33 @@ module.exports = {
           },
           'gatsby-remark-instagram-embed',
           'gatsby-remark-responsive-iframe',
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-flexsearch',
+      options: {
+        languages: ['en'],
+        type: 'Mdx',
+        fields: [
+          {
+            name: 'title',
+            indexed: true,
+            resolver: 'frontmatter.title',
+            attributes: {
+              encode: 'balance',
+              tokenize: 'strict',
+              threshold: 6,
+              depth: 3,
+            },
+            store: true,
+          },
+          {
+            name: 'url',
+            indexed: false,
+            resolver: 'frontmatter.slug',
+            store: true,
+          },
         ],
       },
     },
