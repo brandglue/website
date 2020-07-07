@@ -91,7 +91,7 @@ const LogoLink = styled(NavLink)`
   display: block;
   width: 50%;
   max-width: 220px;
-  margin: ${({ theme }) => theme.space[3]}px auto;
+  margin: ${({ theme }) => theme.spacings.pixelSpace03} auto;
 
   ${minMediaQuery.Medium(css`
     flex: 0 0 220px;
@@ -110,7 +110,7 @@ const SmallDeviceLink = styled(NavLink)`
     flex: 1 1 auto;
     color: ${theme.colors.black};
     text-transform: uppercase;
-    padding: ${theme.space[3]}px;
+    padding: ${theme.spacings.pixelSpace03};
     border-right: 1px solid ${theme.colors.gray02};
 
     &:last-child {
@@ -128,8 +128,8 @@ const LargeDeviceWrapper = styled.header`
   ${({ theme }) => css`
     display: flex;
     justify-content: space-between;
-    padding: 0 ${theme.space[3]}px;
-    margin: ${theme.space[4]}px 0;
+    padding: 0 ${theme.spacings.pixelSpace03};
+    margin: ${theme.spacings.pixelSpace04} 0;
     max-width: ${theme.spacings.maxPageWidth}px;
   `}
 `;
@@ -144,15 +144,10 @@ const LargeDeviceMenu = styled.nav`
 const LargeDeviceLink = styled(NavLink)`
   ${({ theme }) => css`
     color: ${theme.colors.black};
-    text-transform: uppercase;
-    border-bottom: 2px solid transparent;
-    padding: ${theme.space[3]}px;
-    margin-right: ${theme.space[4]}px;
+    padding: ${theme.spacings.emSpace02};
+    margin-right: ${theme.spacings.emSpace03};
 
-    &:hover {
-      border-bottom: 2px solid ${theme.colors.gold};
-    }
-
+    &:hover,
     &.isActive {
       background: ${theme.colors.gold};
       color: ${theme.colors.white};

@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { border, color, layout, space, typography } from 'styled-system';
-import fluid from 'fluid-system';
 
 import { StyledSystemProps } from '@src/theme/systemProps';
 import { css, styled } from '@theme/styled';
@@ -48,7 +47,7 @@ const StyledInput = styled.input`
   ${color}
   ${layout}
   ${space}
-  ${fluid(typography)}
+  ${typography}
 `;
 
 export const TextArea: FC<
@@ -79,5 +78,5 @@ const StyledTextArea = styled.textarea`
   ${color}
   ${layout}
   ${space}
-  ${fluid(typography)}
+  ${typography}
 `;

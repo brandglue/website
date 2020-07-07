@@ -30,4 +30,6 @@ interface IFlexSearchNode {
 /*
   Declare modules below for 3rd-party packages that have no current type definition
 */
-declare module 'fluid-system';
+declare module 'compass-vertical-rhythm';
+declare module 'gray-percentage';
+declare module 'react-typography';

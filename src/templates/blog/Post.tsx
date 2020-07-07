@@ -6,20 +6,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { Box } from '@components/boxes/Box';
 import { Image } from '@components/images/Image';
 import { SwitchLink } from '@components/links/SwitchLink';
-import {
-  Em,
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  Li,
-  Ol,
-  P,
-  Span,
-  Strong,
-  Ul,
-} from '@components/text/Text';
+import { H2, Span } from '@components/text/Text';
 import { useBlogHeroImage } from '@hooks/queries/useBlogHeroImage';
 import { styled, css } from '@theme/styled';
 
@@ -43,17 +30,6 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
         a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
           <SwitchLink {...props} />
         ),
-        em: Em,
-        h1: H1,
-        h2: H2,
-        h3: H3,
-        h4: H4,
-        h5: H5,
-        li: Li,
-        ol: Ol,
-        p: P,
-        strong: Strong,
-        ul: Ul,
       }}
     >
       <Image alt={'blog-hero'} fluid={blogHeroImage?.fluid} />

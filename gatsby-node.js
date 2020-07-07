@@ -1,15 +1,23 @@
+const { kebabCase } = require('lodash');
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
   const result = await graphql(`
     {
-      allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
+      postsMdx: allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
         edges {
           node {
             frontmatter {
               slug
             }
           }
+        }
+      }
+      postsCategories: allMdx {
+        group(field: frontmatter___categories) {
+          value: fieldValue
+          totalCount
         }
       }
     }
@@ -20,31 +28,26 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return;
   }
 
-  const posts = result.data.allMdx.edges;
-
-  // create blogList page with pagination
-  const postsPerPage = 9;
-  const numPages = Math.ceil(posts.length / postsPerPage);
-  Array.from({ length: numPages }).forEach((_, i) => {
+  // create individual blog posts
+  const posts = result.data.postsMdx.edges;
+  posts.forEach(({ node }) => {
     createPage({
-      path: i === 0 ? '/blog' : `/blog/${i + 1}`,
-      component: require.resolve('./src/templates/blogList.tsx'),
+      path: node.frontmatter.slug,
+      component: require.resolve('./src/templates/blog/Post.tsx'),
       context: {
-        limit: postsPerPage,
-        skip: i * postsPerPage,
-        numPages,
-        currentPage: i + 1,
+        slug: node.frontmatter.slug,
       },
     });
   });
 
-  // create individual blog posts
-  posts.forEach(({ node }) => {
+  // create blog category pages
+  const categories = result.data.postsCategories.group;
+  categories.forEach((category) => {
     createPage({
-      path: node.frontmatter.slug,
-      component: require.resolve('./src/templates/blogPost.tsx'),
+      path: `/blog/category/${kebabCase(category.value)}`,
+      component: require.resolve('./src/templates/blog/Category.tsx'),
       context: {
-        slug: node.frontmatter.slug,
+        category: category.value,
       },
     });
   });

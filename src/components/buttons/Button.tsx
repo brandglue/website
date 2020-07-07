@@ -10,7 +10,6 @@ import {
   typography,
   variant,
 } from 'styled-system';
-import fluid from 'fluid-system';
 
 import { customText, StyledSystemProps } from '@src/theme/systemProps';
 import { styled } from '@theme/styled';
@@ -71,7 +70,7 @@ ${({ theme }) =>
         'color': `${theme.colors.white}`,
         'border': '1px solid transparent',
         'borderRadius': '4px',
-        'padding': `${theme.spacings.emSpace02}`,
+        'padding': '0.4em',
 
         '&:hover': {
           background: `${theme.colors.darkBlue}`,
@@ -101,7 +100,7 @@ ${({ theme }) =>
         'border': '1px solid currentColor',
         'borderRadius': '4px',
         'textDecoration': 'none',
-        'padding': `${theme.spacings.emSpace02}`,
+        'padding': '0.4em',
 
         '&:hover': {
           border: '1px solid currentColor',
@@ -135,6 +134,6 @@ ${({ theme }) =>
   ${layout}
   ${position}
   ${space}
-  ${fluid(typography)}
+  ${typography}
   ${customText}
 `;

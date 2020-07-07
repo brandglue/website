@@ -9,7 +9,6 @@ import {
   typography,
   variant,
 } from 'styled-system';
-import fluid from 'fluid-system';
 
 import { customText, StyledSystemProps } from '@src/theme/systemProps';
 import { styled } from '@theme/styled';
@@ -51,6 +50,6 @@ export const Box = styled.div<StyledSystemProps>`
   ${layout}
   ${position}
   ${space}
-  ${fluid(typography)}
+  ${typography}
   ${customText}
 `;

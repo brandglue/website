@@ -3,13 +3,9 @@ import { LinkGetProps } from '@reach/router';
 import { Link, GatsbyLinkProps } from 'gatsby';
 import cx from 'classnames';
 import { color, space, typography, variant } from 'styled-system';
-import fluid from 'fluid-system';
 
 import { customText, StyledSystemProps } from '@src/theme/systemProps';
 import { styled } from '@theme/styled';
-import { rhythm } from '@theme/theme';
-
-const { standardFontSizes, standardLineHeights } = rhythm;
 
 const WrappedLink: FC<GatsbyLinkProps<unknown>> = (props) => {
   const isActive = ({ isCurrent, isPartiallyCurrent }: LinkGetProps) => {
@@ -52,7 +48,7 @@ export const NavLink = styled(WrappedLink)<StyledSystemProps>`
           textDecoration: 'underline',
         },
         title: {
-          display: 'inline',
+          display: 'inline-block',
           color: 'currentColor',
           textDecoration: 'none',
         },
@@ -62,19 +58,17 @@ export const NavLink = styled(WrappedLink)<StyledSystemProps>`
           color: `${theme.colors.white}`,
           textDecoration: 'none',
           textTransform: 'uppercase',
-          padding: `${theme.spacings.emSpace01}`,
+          padding: '0.4em',
         },
       },
     })}
 
   ${color}
   ${space}
-  ${fluid(typography)}
+  ${typography}
   ${customText}
 `;
 
 NavLink.defaultProps = {
-  // fontSize: standardFontSizes,
-  // lineHeight: standardLineHeights,
   variant: 'textLink',
 };

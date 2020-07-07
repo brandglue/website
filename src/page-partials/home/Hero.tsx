@@ -32,10 +32,10 @@ export const Hero: FC = () => {
       />
       <Tagline justifyContent="center" variant="section">
         <Box flexGrow={0} variant="flexItem">
-          <H1 lineHeight={['41px', '51px', '64px']} m="auto">
-            We are a social media agency
-          </H1>
-          <H3>Reaching your audience in the places they hang out most</H3>
+          <H1 color="white">We are a social media agency</H1>
+          <H3 color="white" textTransform="none">
+            Reaching your audience in the places they hang out most
+          </H3>
           <P fontSize="108px" mt={7}>
             &darr;
           </P>

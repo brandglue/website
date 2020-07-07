@@ -26,10 +26,6 @@ const colors = {
   gray06: Hex('#333'),
 };
 
-const fontFamilies = {
-  primary: 'Lato, Arial, sans-serif',
-};
-
 const pixelSpacings = {
   pixelSpace00: '0px',
   pixelSpace01: '4px',
@@ -90,15 +86,10 @@ const breakpoints = [
   `${Breakpoints.SuperNova}px`,
 ];
 const systemSpacings = [0, 4, 7, 11, 17, 27, 44, 70, 113];
-const fontSizes = [13, 16, 20, 26, 33, 42, 53, 68, 86];
-const lineHeights = [22, 27, 33, 41, 51, 64, 84, 106, 133];
 
 export interface ITheme {
   breakpoints: string[];
   colors: { [key in keyof typeof colors]: IHex };
-  fontFamilies: { [key in keyof typeof fontFamilies]: string };
-  fontSizes: number[];
-  lineHeights: number[];
   space: number[];
   spacings: { [key in keyof typeof spacings]: string };
 }
@@ -106,15 +97,6 @@ export interface ITheme {
 export const theme: ITheme = {
   breakpoints, // don't use directly, only indirectly via styled-system
   colors,
-  fontFamilies,
-  fontSizes, // don't use directly, only indirectly via styled-system
-  lineHeights, // don't use directly, only indirectly via styled-system
   space: systemSpacings, // don't use directly, only indirectly via styled-system
   spacings,
-};
-
-// derived from styled-system scales for use in props
-export const rhythm = {
-  standardFontSizes: [1, null, null, null, 2, 3],
-  standardLineHeights: [1, null, null, null, 2, 3],
 };

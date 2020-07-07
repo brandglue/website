@@ -1,29 +1,122 @@
-import reset from 'styled-reset';
+import Typography from 'typography';
+import gray from 'gray-percentage';
+import verticalRhythm from 'compass-vertical-rhythm';
 
 import { createGlobalStyle, css } from '@theme/styled';
 
-export const GlobalStyles = createGlobalStyle``;
+import { theme } from './theme';
 
-// export const GlobalStyles = createGlobalStyle`
-//   ${reset}
+export const typography = new Typography({
+  includeNormalize: true,
 
-//   body {
-//     ${({ theme }) => css`
-//       background: ${theme.colors.white};
-//       color: ${theme.colors.black};
-//       /* font-family: ${theme.fontFamilies.primary};
-//       line-height: 1.5; */
-//       margin: 0;
-//     `};
-//   }
+  baseFontSize: '19px',
+  baseLineHeight: 1.58,
+  scaleRatio: 3,
 
-//   /* basic resets for common tags */
-//   p, h1, h2, h3, h4, h5 {
-//     margin: 0;
-//     margin-bottom: ${({ theme }) => theme.spacings.pixelSpace01};
-//   }
+  googleFonts: [
+    {
+      name: 'Lato',
+      styles: ['400', '400i', '700'],
+    },
+  ],
+  headerFontFamily: ['Lato', 'sans-serif'],
+  bodyFontFamily: ['Lato', 'sans-serif'],
+});
 
-//   *, *:before, *:after {
-//     box-sizing: border-box;
-//   }
-// `;
+export const { scale, rhythm, options } = typography;
+
+export const GlobalStyles = createGlobalStyle`
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: ${theme.colors.white};
+    color: ${theme.colors.black};
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    margin-bottom: ${rhythm(0.5)};
+  }
+
+  h1, h2, h3 {
+    color: ${theme.colors.darkBlue};
+    text-transform: uppercase;
+    white-space: pre-wrap;
+  }
+
+  h5 {
+    text-transform: uppercase;
+  }
+
+  p {
+    font-weight: 400;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  li > ol, li > ul {
+    margin-left: 20px;
+    margin-bottom: 0;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+`;
+
+/*
+ * TypographyJS handles fonts and all text-related spacing concerns (margins, padding, etc).
+ * It is rendered using gatsby plugin so it must be default exported.
+ */
+// export const typography = new Typography({
+//   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => {
+//     const vr = verticalRhythm({
+//       baseFontSize: '17px',
+//       baseLineHeight: '28px',
+//     });
+
+//       'blockquote': {
+//         ...scale(1 / 5),
+//         borderLeft: `${rhythm(6 / 16)} solid ${theme.colors.gray03}`,
+//         paddingLeft: rhythm(10 / 16),
+//         marginLeft: 0,
+//         marginRight: 0,
+//       },
+//       'blockquote > :last-child': {
+//         marginBottom: 0,
+//       },
+//       'blockquote cite': {
+//         ...adjustFontSizeTo(options.baseFontSize),
+//         color: options.bodyColor,
+//         fontStyle: 'normal',
+//         fontWeight: options.bodyWeight,
+//       },
+//       'blockquote cite:before': {
+//         content: '"— "',
+//       },
+//       // [MOBILE_MEDIA_QUERY]: {
+//       //   html: {
+//       //     ...vr.establishBaseline(),
+//       //   },
+//       //   blockquote: {
+//       //     borderLeft: `${rhythm(3 / 16)} solid ${theme.colors.gray03}`,
+//       //     paddingLeft: rhythm(9 / 16),
+//       //     marginLeft: rhythm(-3 / 4),
+//       //     marginRight: 0,
+//       //   },
+//       // },
+//     };
+//   },
+// });
