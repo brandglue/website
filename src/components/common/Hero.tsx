@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 
 import { Image } from '@components/core';
-import { BlogHeroImageQuery } from '@generated/graphql';
+import { PageHeroImageQuery } from '@generated/graphql';
 
-export const Hero = () => {
-  const { file } = useStaticQuery<NonNullable<BlogHeroImageQuery>>(graphql`
-    query BlogHeroImage {
+export const Hero: FC = () => {
+  const { file } = useStaticQuery<PageHeroImageQuery>(graphql`
+    query PageHeroImage {
       file(
         sourceInstanceName: { eq: "images" }
         relativePath: { eq: "blog-hero.jpg" }
@@ -22,6 +22,6 @@ export const Hero = () => {
   `);
 
   return file?.childImageSharp?.fluid ? (
-    <Image alt="blog-hero" fluid={file.childImageSharp.fluid as FluidObject} />
+    <Image alt="page-hero" fluid={file.childImageSharp.fluid as FluidObject} />
   ) : null;
 };

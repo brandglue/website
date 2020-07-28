@@ -147,7 +147,7 @@ const LargeDeviceMenu = styled.nav`
 const LargeDeviceLink = styled(NavLink)`
   ${({ theme }) => css`
     color: ${theme.colors.black};
-    padding: ${theme.spacings.emSpace02};
+    padding: 0.4em 0.6em;
     margin-right: ${theme.spacings.emSpace03};
 
     &:hover,

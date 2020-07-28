@@ -4,7 +4,8 @@ import { chunk } from 'lodash-es';
 
 import { AllBlogPostsQuery } from '@generated/graphql';
 import { Box, P, H1 } from '@components/core';
-import { ActionBar, Hero, LoadMore, Previews } from '@components/blog';
+import { ActionBar, LoadMore, Previews } from '@components/blog';
+import { Hero } from '@components/common';
 
 interface IProps {
   data: AllBlogPostsQuery;
@@ -40,7 +41,7 @@ export const Blog: FC<IProps> = ({ data }) => {
     <>
       <Hero />
       <Box>
-        <Box py={6} variant="section">
+        <Box variant="section">
           <H1>There&apos;s a lot going on out there in the social sphere.</H1>
           <P>Here&apos;s what we&apos;ve got to say about it.</P>
           <ActionBar />

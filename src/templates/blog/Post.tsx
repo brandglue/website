@@ -6,7 +6,8 @@ import { MDXProvider } from '@mdx-js/react';
 
 import { BlogPostQuery } from '@generated/graphql';
 import { Box, Image, SwitchLink, H2, Span } from '@components/core';
-import { ActionBar, Hero } from '@components/blog';
+import { ActionBar } from '@components/blog';
+import { Hero } from '@components/common';
 import { styled, css } from '@theme/styled';
 
 interface IProps {
@@ -31,7 +32,6 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
     >
       <Hero />
       <Box py={7} variant="section">
-        <ActionBar />
         <H2>{frontmatter.title}</H2>
         <PostHeader variant="flex">
           <span>
@@ -54,6 +54,7 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
           />
         )}
         <MDXRenderer>{body}</MDXRenderer>
+        <ActionBar />
       </Box>
     </MDXProvider>
   );

@@ -1,5 +1,6 @@
 import { Box } from './boxes/Box';
 import { Button } from './buttons/Button';
+import { Divider } from './divider/Divider';
 import { Input, TextArea } from './forms/Input';
 import { Image } from './images/Image';
 import { Svg } from './images/Svg';
@@ -25,6 +26,7 @@ import {
 export {
   Box,
   Button,
+  Divider,
   Input,
   Image,
   Svg,

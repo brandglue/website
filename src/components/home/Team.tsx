@@ -139,7 +139,6 @@ const Container = styled(Box)`
     display: flex;
     align-items: flex-start;
     margin: auto;
-    padding: ${theme.space[7]}px 0;
     background: linear-gradient(
       180deg,
       rgba(${hexToRgb(theme.colors.white)}, 1) 0%,

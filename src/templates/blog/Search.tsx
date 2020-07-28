@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
 
 import { Box, H3, NavLink } from '@components/core';
-import { Hero, SearchForm } from '@components/blog';
+import { SearchForm } from '@components/blog';
+import { Hero } from '@components/common';
 import { RouteParts } from '@constants/routes';
 import { getSearchResults } from '@utils/getSearchResults';
 

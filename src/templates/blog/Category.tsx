@@ -3,7 +3,8 @@ import { graphql } from 'gatsby';
 import { chunk } from 'lodash-es';
 
 import { Box, H3 } from '@components/core';
-import { ActionBar, Hero, LoadMore, Previews } from '@components/blog';
+import { ActionBar, LoadMore, Previews } from '@components/blog';
+import { Hero } from '@components/common';
 import { BlogPostsByCategoryQuery } from '@generated/graphql';
 
 interface IProps {

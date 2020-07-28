@@ -3,6 +3,7 @@ import { Facebook, Linkedin, Twitter } from '@styled-icons/boxicons-logos';
 
 import { BrandGlueLogoIconOnly } from '@images/svg';
 import { Box, H4 } from '@components/core';
+import { scale } from '@theme/globalStyles';
 import { css, styled } from '@theme/styled';
 import { minMediaQuery } from '@theme/utils';
 
@@ -35,7 +36,7 @@ export const Footer: FC = () => (
         <StyledBrandGlueLogoIconOnly />
       </Container>
     </Wrapper>
-    <Copyright>
+    <Copyright style={{ ...scale(-0.25) }}>
       &copy; {new Date().getFullYear()} BrandGlue. All Rights Reserved.
     </Copyright>
   </>

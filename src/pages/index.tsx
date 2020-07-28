@@ -1,11 +1,8 @@
 import React, { FC } from 'react';
 
-import { Hero } from '@components/home/Hero';
-import { Team } from '@components/home/Team';
-import { Clients } from '@components/home/Clients';
-import { CaseStudy } from '@components/home/CaseStudy';
-import { Services } from '@components/home/Services';
-import { Contact } from '@components/common/Contact';
+import { Contact } from '@components/common';
+import { Divider } from '@components/core';
+import { CaseStudy, Clients, Hero, Services, Team } from '@components/home';
 
 export const Home: FC = () => (
   <div>
@@ -14,6 +11,7 @@ export const Home: FC = () => (
     <Clients />
     <CaseStudy />
     <Services />
+    <Divider />
     <Contact />
   </div>
 );
