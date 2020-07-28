@@ -1,4 +1,4 @@
-export function getSearchResults(query: string) {
+export function getSearchResults(query: string): IFlexSearchNode[] {
   const index = window?.__FLEXSEARCH__?.en?.index;
   const store = window?.__FLEXSEARCH__?.en?.store;
 

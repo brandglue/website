@@ -2,25 +2,21 @@ import React, { FC, useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import { chunk } from 'lodash-es';
 
-import { Box } from '@components/boxes/Box';
-import { Button } from '@components/buttons/Button';
-import { Image } from '@components/images/Image';
-import { P, H1 } from '@components/text/Text';
-import { Search } from '@components/search/Search';
-import { useBlogHeroImage } from '@hooks/queries/useBlogHeroImage';
-import { Previews } from '@page-partials/blog/Previews';
-import { styled, css } from '@theme/styled';
-import { rhythm } from '@theme/globalStyles';
+import { Box, H3 } from '@components/core';
+import { ActionBar, Hero, LoadMore, Previews } from '@components/blog';
+import { BlogPostsByCategoryQuery } from '@generated/graphql';
 
 interface IProps {
-  data: GatsbyTypes.BlogPostsByCategoryQuery;
+  pathContext: {
+    category: string;
+  };
+  data: BlogPostsByCategoryQuery;
 }
 
-export const Category: FC<IProps> = ({ data }) => {
+export const Category: FC<IProps> = ({ pathContext: { category }, data }) => {
   const [page, setPage] = useState(1);
   const [allLoaded, setAllLoaded] = useState(false);
 
-  const blogHeroImage = useBlogHeroImage();
   const postsPerChunk = 5;
   const { edges } = data.allMdx;
 
@@ -51,63 +47,18 @@ export const Category: FC<IProps> = ({ data }) => {
 
   return (
     <>
-      <Image alt="blog-hero" fluid={blogHeroImage?.fluid} />
+      <Hero />
       <Box>
         <Box py={6} variant="section">
-          <H1>There&apos;s a lot going on out there in the social sphere.</H1>
-          <P>Here&apos;s what we&apos;ve got to say about it.</P>
-          {/* <ActionBar>
-            <Search />
-            {renderCategories()}
-          </ActionBar> */}
+          <ActionBar />
+          <H3>Category: {category}</H3>
           {renderChunks()}
-          {!allLoaded ? (
-            <LoadMore variant="centered">
-              <LoadMoreButton
-                disabled={allLoaded}
-                onClick={handleLoadMore}
-                variant="outline"
-              >
-                See More +
-              </LoadMoreButton>
-            </LoadMore>
-          ) : (
-            <Box variant="centered">All Posts Loaded</Box>
-          )}
+          <LoadMore allLoaded={allLoaded} handleLoadMore={handleLoadMore} />
         </Box>
       </Box>
     </>
   );
 };
-
-const ActionBar = styled(Box)`
-  margin-bottom: ${rhythm(1)};
-`;
-
-const LoadMore = styled(Box)`
-  ${({ theme }) => css`
-    border-bottom: 1px solid ${theme.colors.darkBlue};
-    margin-bottom: ${rhythm(1)};
-  `}
-`;
-
-const LoadMoreButton = styled(Button)`
-  ${({ theme }) => css`
-    transform: translateY(50%);
-    padding: 0.2em 1.2em;
-    background: ${theme.colors.gray00};
-    color: ${theme.colors.darkBlue};
-    border-radius: 0;
-    font-weight: 700;
-    text-transform: uppercase;
-
-    &:hover,
-    &:active,
-    &:focus {
-      background: ${theme.colors.gray01};
-    }
-  `}
-`;
 
 export default Category;
 

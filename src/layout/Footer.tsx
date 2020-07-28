@@ -1,13 +1,8 @@
 import React, { FC } from 'react';
+import { Facebook, Linkedin, Twitter } from '@styled-icons/boxicons-logos';
 
-import { Box } from '@components/boxes/Box';
-import { H4 } from '@components/text/Text';
-import {
-  BrandGlueLogoIconOnly,
-  Facebook as FacebookIcon,
-  LinkedIn as LinkedInIcon,
-  Twitter as TwitterIcon,
-} from '@icons/index';
+import { BrandGlueLogoIconOnly } from '@images/svg';
+import { Box, H4 } from '@components/core';
 import { css, styled } from '@theme/styled';
 import { minMediaQuery } from '@theme/utils';
 
@@ -108,6 +103,18 @@ const SocialIcon = styled.div`
   &:last-child {
     margin-right: 0;
   }
+`;
+
+const FacebookIcon = styled(Facebook)`
+  color: ${({ theme }) => theme.colors.white};
+`;
+
+const TwitterIcon = styled(Twitter)`
+  color: ${({ theme }) => theme.colors.white};
+`;
+
+const LinkedInIcon = styled(Linkedin)`
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 const StyledBrandGlueLogoIconOnly = styled(BrandGlueLogoIconOnly)`

@@ -27,6 +27,12 @@ const path = require('path');
     },
     rules: {
       'import/no-named-as-default': 'off',
+      'import/no-unresolved': [
+        'error',
+        {
+          ignore: ['@generated', '__generated__'],
+        },
+      ],
       'import/order': [
         'error',
         {
@@ -47,17 +53,6 @@ const path = require('path');
       'react/prop-types': 'off',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
-      'graphql/template-strings': [
-        'error',
-        {
-          env: 'relay',
-          tagName: 'graphql',
-          schemaJsonFilepath: path.resolve(
-            __dirname,
-            '__generated__/gatsby-introspection.json',
-          ),
-        },
-      ],
     },
     overrides: [
       {

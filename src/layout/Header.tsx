@@ -1,41 +1,44 @@
 import React, { FC, useContext } from 'react';
 
-import { NavLink } from '@components/links/NavLink';
-import { Routes, RouteLabels } from '@constants/routes';
-import { BrandGlueLogo } from '@icons/index';
+import { NavLink } from '@components/core';
+import {
+  TopLevelPages as Pages,
+  TopLevelPageLabels as PageLabels,
+} from '@constants/routes';
+import { BrandGlueLogo } from '@images/svg/BrandGlueLogo';
 import { AppState } from '@src/AppState';
 import { css, styled } from '@theme/styled';
 import { minMediaQuery } from '@theme/utils';
 
 interface IMenuItem {
   label: string;
-  to: Routes;
+  to: Pages;
 }
 
 const smallMenuItems: IMenuItem[] = [
   {
-    label: RouteLabels.About,
-    to: Routes.About,
+    label: PageLabels.About,
+    to: Pages.About,
   },
   {
-    label: RouteLabels.Services,
-    to: Routes.Services,
+    label: PageLabels.Services,
+    to: Pages.Services,
   },
   {
-    label: RouteLabels.CaseStudies,
-    to: Routes.CaseStudies,
+    label: PageLabels.CaseStudies,
+    to: Pages.CaseStudies,
   },
   {
-    label: RouteLabels.Blog,
-    to: Routes.Blog,
+    label: PageLabels.Blog,
+    to: Pages.Blog,
   },
 ];
 
 const largeMenuItems: IMenuItem[] = [
   ...smallMenuItems,
   {
-    label: RouteLabels.Contact,
-    to: Routes.Contact,
+    label: PageLabels.Contact,
+    to: Pages.Contact,
   },
 ];
 
@@ -65,7 +68,7 @@ export const Header: FC = () => {
 
   const largeDeviceMenu = (
     <LargeDeviceWrapper>
-      <LogoLink to={`/`}>
+      <LogoLink to={`/`} variant="invisible">
         <BrandGlueLogo />
       </LogoLink>
       <LargeDeviceMenu>

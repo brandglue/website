@@ -9,7 +9,7 @@ import { theme } from './theme';
 export const typography = new Typography({
   includeNormalize: true,
 
-  baseFontSize: '19px',
+  baseFontSize: '18px',
   baseLineHeight: 1.58,
   scaleRatio: 3,
 

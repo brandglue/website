@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
 
-export const Contact: FC = () => <div />;
+import { Contact as ContactUs } from '@components/common/Contact';
+
+export const Contact: FC = () => <ContactUs />;
 
 export default Contact;

@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 
-import { Hero } from '@page-partials/home/Hero';
-import { Team } from '@page-partials/home/Team';
-import { Clients } from '@page-partials/home/Clients';
-import { CaseStudy } from '@page-partials/home/CaseStudy';
-import { Services } from '@page-partials/home/Services';
-import { Contact } from '@page-partials/common/Contact';
+import { Hero } from '@components/home/Hero';
+import { Team } from '@components/home/Team';
+import { Clients } from '@components/home/Clients';
+import { CaseStudy } from '@components/home/CaseStudy';
+import { Services } from '@components/home/Services';
+import { Contact } from '@components/common/Contact';
 
 export const Home: FC = () => (
   <div>

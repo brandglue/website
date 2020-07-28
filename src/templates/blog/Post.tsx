@@ -1,22 +1,19 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { FluidObject } from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
-import { Box } from '@components/boxes/Box';
-import { Image } from '@components/images/Image';
-import { SwitchLink } from '@components/links/SwitchLink';
-import { H2, Span } from '@components/text/Text';
-import { useBlogHeroImage } from '@hooks/queries/useBlogHeroImage';
+import { BlogPostQuery } from '@generated/graphql';
+import { Box, Image, SwitchLink, H2, Span } from '@components/core';
+import { ActionBar, Hero } from '@components/blog';
 import { styled, css } from '@theme/styled';
 
 interface IProps {
-  data: GatsbyTypes.BlogPostQuery;
+  data: BlogPostQuery;
 }
 
 export const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
-  const blogHeroImage = useBlogHeroImage();
-
   if (!mdx?.frontmatter || !mdx.body) {
     return null;
   }
@@ -32,8 +29,9 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
         ),
       }}
     >
-      <Image alt={'blog-hero'} fluid={blogHeroImage?.fluid} />
+      <Hero />
       <Box py={7} variant="section">
+        <ActionBar />
         <H2>{frontmatter.title}</H2>
         <PostHeader variant="flex">
           <span>
@@ -42,15 +40,19 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
           </span>
           <Categories>
             {frontmatter.categories?.map((category) => {
-              return <Category key={category}>{category}</Category>;
+              return category && <Category key={category}>{category}</Category>;
             })}
           </Categories>
         </PostHeader>
-        <Image
-          alt={frontmatter.cover_image?.name}
-          fluid={frontmatter.cover_image?.childImageSharp?.fluid}
-          my={4}
-        />
+        {frontmatter.cover_image?.childImageSharp?.fluid && (
+          <Image
+            alt={frontmatter.cover_image?.name}
+            fluid={
+              frontmatter.cover_image?.childImageSharp?.fluid as FluidObject
+            }
+            my={4}
+          />
+        )}
         <MDXRenderer>{body}</MDXRenderer>
       </Box>
     </MDXProvider>

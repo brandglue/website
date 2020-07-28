@@ -51,4 +51,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       },
     });
   });
+
+  // create blog search page
+  createPage({
+    path: '/blog/search',
+    component: require.resolve('./src/templates/blog/Search.tsx'),
+  });
 };

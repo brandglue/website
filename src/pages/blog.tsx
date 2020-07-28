@@ -2,25 +2,18 @@ import React, { FC, useState } from 'react';
 import { graphql } from 'gatsby';
 import { chunk } from 'lodash-es';
 
-import { Box } from '@components/boxes/Box';
-import { Button } from '@components/buttons/Button';
-import { Image } from '@components/images/Image';
-import { P, H1 } from '@components/text/Text';
-import { Search } from '@components/search/Search';
-import { useBlogHeroImage } from '@hooks/queries/useBlogHeroImage';
-import { Previews } from '@page-partials/blog/Previews';
-import { styled, css } from '@theme/styled';
-import { rhythm } from '@theme/globalStyles';
+import { AllBlogPostsQuery } from '@generated/graphql';
+import { Box, P, H1 } from '@components/core';
+import { ActionBar, Hero, LoadMore, Previews } from '@components/blog';
 
 interface IProps {
-  data: GatsbyTypes.AllBlogPostsQuery;
+  data: AllBlogPostsQuery;
 }
 
 export const Blog: FC<IProps> = ({ data }) => {
   const [page, setPage] = useState(1);
   const [allLoaded, setAllLoaded] = useState(false);
 
-  const blogHeroImage = useBlogHeroImage();
   const postsPerChunk = 5;
   const { edges } = data.allMdx;
 
@@ -31,25 +24,6 @@ export const Blog: FC<IProps> = ({ data }) => {
     if (pageCount * postsPerChunk >= edges.length) {
       setAllLoaded(true);
     }
-  };
-
-  // todo: memoize
-  const renderCategories = () => {
-    const uniqueCategories = new Set<string>();
-
-    edges.forEach((edge) => {
-      const categories = edge?.node?.frontmatter?.categories;
-
-      categories?.forEach((category) => {
-        if (category && !uniqueCategories.has(category)) {
-          uniqueCategories.add(category);
-        }
-      });
-    });
-
-    return uniqueCategories.forEach((category) => {
-      return <Category>{category}</Category>;
-    });
   };
 
   // todo: memoize
@@ -64,65 +38,19 @@ export const Blog: FC<IProps> = ({ data }) => {
 
   return (
     <>
-      <Image alt="blog-hero" fluid={blogHeroImage?.fluid} />
+      <Hero />
       <Box>
         <Box py={6} variant="section">
           <H1>There&apos;s a lot going on out there in the social sphere.</H1>
           <P>Here&apos;s what we&apos;ve got to say about it.</P>
-          <ActionBar>
-            <Search />
-            {renderCategories()}
-          </ActionBar>
+          <ActionBar />
           {renderChunks()}
-          {!allLoaded ? (
-            <LoadMore variant="centered">
-              <LoadMoreButton
-                disabled={allLoaded}
-                onClick={handleLoadMore}
-                variant="outline"
-              >
-                See More +
-              </LoadMoreButton>
-            </LoadMore>
-          ) : (
-            <span>All Posts Loaded</span>
-          )}
+          <LoadMore allLoaded={allLoaded} handleLoadMore={handleLoadMore} />
         </Box>
       </Box>
     </>
   );
 };
-
-const ActionBar = styled(Box)`
-  margin-bottom: ${rhythm(1)};
-`;
-
-const Category = styled(Button)``;
-
-const LoadMore = styled(Box)`
-  ${({ theme }) => css`
-    border-bottom: 1px solid ${theme.colors.darkBlue};
-    margin-bottom: ${rhythm(1)};
-  `}
-`;
-
-const LoadMoreButton = styled(Button)`
-  ${({ theme }) => css`
-    transform: translateY(50%);
-    padding: 0.2em 1.2em;
-    background: ${theme.colors.gray00};
-    color: ${theme.colors.darkBlue};
-    border-radius: 0;
-    font-weight: 700;
-    text-transform: uppercase;
-
-    &:hover,
-    &:active,
-    &:focus {
-      background: ${theme.colors.gray01};
-    }
-  `}
-`;
 
 export default Blog;
 

@@ -27,17 +27,16 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
+      "@generated/*": ["__generated__/*"],
       "@hooks/*": ["src/hooks/*"],
-      "@icons/*": ["src/icons/*"],
       "@images/*": ["src/images/*"],
       "@layout/*": ["src/layout/*"],
       "@models/*": ["src/models/*"],
       "@pages/*": ["src/pages/*"],
-      "@page-partials/*": ["src/page-partials/*"],
       "@src/*": ["src/*"],
       "@theme/*": ["src/theme/*"],
       "@utils/*": ["src/utils/*"]
     }
   },
-  "include": ["src/**/*", "src/global.d.ts", "__generated__/gatsby-types.d.ts"]
+  "include": ["src/**/*", "src/global.d.ts", "__generated__/**/*"]
 }

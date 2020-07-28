@@ -1,4 +1,4 @@
-export enum Routes {
+export enum TopLevelPages {
   P404 = '404',
   About = 'about',
   Blog = 'blog',
@@ -8,7 +8,7 @@ export enum Routes {
   Services = 'services',
 }
 
-export const RouteLabels = {
+export const TopLevelPageLabels = {
   P404: '404',
   About: 'About',
   Blog: 'Blog',
@@ -17,3 +17,9 @@ export const RouteLabels = {
   Homepage: 'Homepage',
   Services: 'Services',
 };
+
+export enum RouteParts {
+  Category = 'category',
+  Search = 'search',
+  QueryString = 'q',
+}
