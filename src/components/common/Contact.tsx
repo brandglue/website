@@ -6,6 +6,7 @@ import {
   Input,
   TextArea,
   NavLink,
+  H1,
   H2,
   H3,
   P,
@@ -15,7 +16,11 @@ import { css, styled } from '@theme/styled';
 import { hexToRgb, minMediaQuery } from '@theme/utils';
 import { encodeFormData } from '@utils/encodeFormData';
 
-export const Contact: FC = () => {
+interface IProps {
+  isPage?: boolean;
+}
+
+export const Contact: FC<IProps> = ({ isPage = false }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [company, setCompany] = useState('');
@@ -60,7 +65,11 @@ export const Contact: FC = () => {
 
   return (
     <Box variant="section">
-      <H2>Ready to get to work? We are.</H2>
+      {isPage ? (
+        <H1>Ready to get to work? We are.</H1>
+      ) : (
+        <H2>Ready to get to work? We are.</H2>
+      )}
       <P pb={5}>
         Overwhelmed with the possilibities and options of social media? Not sure
         where to focus your attention? We are here to help you figure that out{' '}

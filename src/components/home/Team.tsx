@@ -1,68 +1,14 @@
 import React, { FC } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 
-import { TeamImagesQuery } from '@generated/graphql';
 import { Box, Image, H2, P, NavLink } from '@components/core';
 import { TopLevelPages as Pages } from '@constants/routes';
+import { useTeamImages } from '@hooks/useTeamImages';
 import { css, styled } from '@theme/styled';
 import { hexToRgb } from '@theme/utils';
 
 export const Team: FC = () => {
-  const images = useStaticQuery<TeamImagesQuery>(graphql`
-    query TeamImages {
-      joey: file(
-        sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "team-joey-ponce.jpg" }
-      ) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      hannah: file(
-        sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "team-hannah-lushin.jpg" }
-      ) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      michelle: file(
-        sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "team-michelle-heathers.jpg" }
-      ) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      sharon: file(
-        sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "team-sharon-bell.jpg" }
-      ) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      zach: file(
-        sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "team-zach-welch.jpg" }
-      ) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
+  const teamImages = useTeamImages();
 
   return (
     <Container>
@@ -91,36 +37,44 @@ export const Team: FC = () => {
               mb={5}
               variant="grid"
             >
-              {images?.michelle?.childImageSharp?.fluid && (
+              {teamImages?.michelle?.childImageSharp?.fluid && (
                 <Image
                   alt="michelle-heathers"
                   fluid={
-                    images?.michelle?.childImageSharp?.fluid as FluidObject
+                    teamImages?.michelle?.childImageSharp?.fluid as FluidObject
                   }
                 />
               )}
-              {images?.zach?.childImageSharp?.fluid && (
+              {teamImages?.zach?.childImageSharp?.fluid && (
                 <Image
                   alt="zach-welch"
-                  fluid={images?.zach?.childImageSharp?.fluid as FluidObject}
+                  fluid={
+                    teamImages?.zach?.childImageSharp?.fluid as FluidObject
+                  }
                 />
               )}
-              {images?.joey?.childImageSharp?.fluid && (
+              {teamImages?.joey?.childImageSharp?.fluid && (
                 <Image
                   alt="joey-ponce"
-                  fluid={images?.joey?.childImageSharp?.fluid as FluidObject}
+                  fluid={
+                    teamImages?.joey?.childImageSharp?.fluid as FluidObject
+                  }
                 />
               )}
-              {images?.hannah?.childImageSharp?.fluid && (
+              {teamImages?.hannah?.childImageSharp?.fluid && (
                 <Image
                   alt="hannah-lushin"
-                  fluid={images?.hannah?.childImageSharp?.fluid as FluidObject}
+                  fluid={
+                    teamImages?.hannah?.childImageSharp?.fluid as FluidObject
+                  }
                 />
               )}
-              {images?.sharon?.childImageSharp?.fluid && (
+              {teamImages?.sharon?.childImageSharp?.fluid && (
                 <Image
                   alt="sharon bell"
-                  fluid={images?.sharon?.childImageSharp?.fluid as FluidObject}
+                  fluid={
+                    teamImages?.sharon?.childImageSharp?.fluid as FluidObject
+                  }
                 />
               )}
             </Box>

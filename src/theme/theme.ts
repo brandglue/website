@@ -12,6 +12,7 @@ export enum Breakpoints {
 const colors = {
   blue: Hex('#005ADD'),
   darkBlue: Hex('#003575'),
+  lightBlue: Hex('#dbe9ff'),
   gold: Hex('#FFB000'),
   green: Hex('#20af32'),
   red: Hex('#c30909'),
@@ -28,14 +29,16 @@ const colors = {
 
 const pixelSpacings = {
   pixelSpace00: '0px',
-  pixelSpace01: '4px',
-  pixelSpace02: '7px',
-  pixelSpace03: '11px',
-  pixelSpace04: '17px',
-  pixelSpace05: '27px',
-  pixelSpace06: '44px',
-  pixelSpace07: '70px',
-  pixelSpace08: '113px',
+  pixelSpace01: '5px',
+  pixelSpace02: '10px',
+  pixelSpace03: '15px',
+  pixelSpace04: '20px',
+  pixelSpace05: '25px',
+  pixelSpace06: '30px',
+  pixelSpace07: '35px',
+  pixelSpace08: '40px',
+  pixelSpace09: '45px',
+  pixelSpace10: '50px',
 };
 
 const viewportSpacings = {

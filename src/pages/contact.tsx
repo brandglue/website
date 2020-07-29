@@ -5,7 +5,7 @@ import { Contact as ContactForm, Hero } from '@components/common';
 export const Contact: FC = () => (
   <>
     <Hero />
-    <ContactForm />
+    <ContactForm isPage />
   </>
 );
 

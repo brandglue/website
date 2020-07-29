@@ -1,3 +1,4 @@
+import { AboutBrandGlueDesktop } from './AboutBrandGlueDesktop';
 import { BrandGlueLogo } from './BrandGlueLogo';
 import { BrandGlueLogoIconOnly } from './BrandGlueLogoIconOnly';
 import { CommunityManagement } from './CommunityManagement';
@@ -11,6 +12,7 @@ import { SocialStrategy } from './SocialStrategy';
 import { TargetAudiencePersonas } from './TargetAudiencePersonas';
 
 export {
+  AboutBrandGlueDesktop,
   BrandGlueLogo,
   BrandGlueLogoIconOnly,
   CommunityManagement,
