@@ -2,11 +2,15 @@ import React, { FC } from 'react';
 
 import { Box, H3, NavLink } from '@components/core';
 import { SearchForm } from '@components/blog';
-import { Hero } from '@components/common';
+import { Breadcrumbs, Hero } from '@components/common';
 import { RouteParts } from '@constants/routes';
 import { getSearchResults } from '@utils/getSearchResults';
 
-export const Search: FC = () => {
+interface IProps {
+  pageContext: any;
+}
+
+export const Search: FC<IProps> = ({ pageContext }) => {
   let query = '';
 
   if (typeof window !== 'undefined') {
@@ -42,7 +46,8 @@ export const Search: FC = () => {
     <>
       <Hero />
       <Box>
-        <Box py={6} variant="section">
+        <Box variant="section">
+          <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
           <SearchForm initialQuery={query} />
           {query && <H3>{`Search results: ${query}`}</H3>}
           <div>

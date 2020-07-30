@@ -3,12 +3,16 @@ import { FluidObject } from 'gatsby-image';
 
 import { Box, Image, H2, P, NavLink } from '@components/core';
 import { TopLevelPages as Pages } from '@constants/routes';
-import { useTeamImages } from '@hooks/useTeamImages';
+import { AllTeamImagesQuery } from '@generated/graphql';
 import { css, styled } from '@theme/styled';
 import { hexToRgb } from '@theme/utils';
 
-export const Team: FC = () => {
-  const teamImages = useTeamImages();
+interface IProps {
+  data: AllTeamImagesQuery;
+}
+
+export const Team: FC<IProps> = ({ data }) => {
+  const { edges: team } = data.allMdx;
 
   return (
     <Container>
@@ -37,46 +41,21 @@ export const Team: FC = () => {
               mb={5}
               variant="grid"
             >
-              {teamImages?.michelle?.childImageSharp?.fluid && (
-                <Image
-                  alt="michelle-heathers"
-                  fluid={
-                    teamImages?.michelle?.childImageSharp?.fluid as FluidObject
-                  }
-                />
-              )}
-              {teamImages?.zach?.childImageSharp?.fluid && (
-                <Image
-                  alt="zach-welch"
-                  fluid={
-                    teamImages?.zach?.childImageSharp?.fluid as FluidObject
-                  }
-                />
-              )}
-              {teamImages?.joey?.childImageSharp?.fluid && (
-                <Image
-                  alt="joey-ponce"
-                  fluid={
-                    teamImages?.joey?.childImageSharp?.fluid as FluidObject
-                  }
-                />
-              )}
-              {teamImages?.hannah?.childImageSharp?.fluid && (
-                <Image
-                  alt="hannah-lushin"
-                  fluid={
-                    teamImages?.hannah?.childImageSharp?.fluid as FluidObject
-                  }
-                />
-              )}
-              {teamImages?.sharon?.childImageSharp?.fluid && (
-                <Image
-                  alt="sharon bell"
-                  fluid={
-                    teamImages?.sharon?.childImageSharp?.fluid as FluidObject
-                  }
-                />
-              )}
+              {team.map(({ node: member }) => {
+                const { frontmatter } = member;
+
+                return (
+                  frontmatter?.name && (
+                    <Image
+                      key={frontmatter.name}
+                      alt={frontmatter.name}
+                      fluid={
+                        frontmatter.image?.childImageSharp?.fluid as FluidObject
+                      }
+                    />
+                  )
+                );
+              })}
             </Box>
             <Box justifyContent="flex-end" variant="flex">
               <NavLink to={`/${Pages.About}`}>Learn More About Us &gt;</NavLink>

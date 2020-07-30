@@ -4,17 +4,18 @@ import { FluidObject } from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
-import { BlogPostQuery } from '@generated/graphql';
-import { Box, Image, SwitchLink, H2, Span } from '@components/core';
 import { ActionBar } from '@components/blog';
-import { Hero } from '@components/common';
+import { Breadcrumbs, Hero } from '@components/common';
+import { Box, Image, SwitchLink, H2, Span } from '@components/core';
+import { BlogPostQuery } from '@generated/graphql';
 import { styled, css } from '@theme/styled';
 
 interface IProps {
   data: BlogPostQuery;
+  pageContext: any;
 }
 
-export const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
+export const BlogPost: React.FC<IProps> = ({ data: { mdx }, pageContext }) => {
   if (!mdx?.frontmatter || !mdx.body) {
     return null;
   }
@@ -32,6 +33,7 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
     >
       <Hero />
       <Box variant="section">
+        <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <H2>{frontmatter.title}</H2>
         <PostHeader variant="flex">
           <span>

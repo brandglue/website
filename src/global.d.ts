@@ -27,9 +27,20 @@ interface IFlexSearchNode {
   url: string;
 }
 
+interface IBreadcrumbs {
+  crumbs: ICrumbs[];
+  location: string;
+}
+
+interface ICrumbs {
+  crumbLabel: string;
+  pathname: string;
+}
+
 /*
   Declare modules below for 3rd-party packages that have no current type definition
 */
 declare module 'compass-vertical-rhythm';
 declare module 'gray-percentage';
 declare module 'react-typography';
+declare module 'gatsby-plugin-breadcrumb';

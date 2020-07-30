@@ -74,6 +74,18 @@ export const GlobalStyles = createGlobalStyle`
   strong {
     font-weight: 700;
   }
+
+  /* Styling breadcrumbs here because the Breadcrumb plugin component doesn't give direct access to the parent wrappers */
+  .breadcrumb {
+    .breadcrumb__list {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .breadcrumb__list__item {
+      display: inline;
+    }
+  }
 `;
 
 /*

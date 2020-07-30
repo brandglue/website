@@ -2,9 +2,9 @@ import React, { FC, useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import { chunk } from 'lodash-es';
 
-import { Box, H3 } from '@components/core';
 import { ActionBar, LoadMore, Previews } from '@components/blog';
-import { Hero } from '@components/common';
+import { Breadcrumbs, Hero } from '@components/common';
+import { Box, H3 } from '@components/core';
 import { BlogPostsByCategoryQuery } from '@generated/graphql';
 
 interface IProps {
@@ -12,9 +12,14 @@ interface IProps {
     category: string;
   };
   data: BlogPostsByCategoryQuery;
+  pageContext: any;
 }
 
-export const Category: FC<IProps> = ({ pathContext: { category }, data }) => {
+export const Category: FC<IProps> = ({
+  data,
+  pathContext: { category },
+  pageContext,
+}) => {
   const [page, setPage] = useState(1);
   const [allLoaded, setAllLoaded] = useState(false);
 
@@ -50,7 +55,8 @@ export const Category: FC<IProps> = ({ pathContext: { category }, data }) => {
     <>
       <Hero />
       <Box>
-        <Box py={6} variant="section">
+        <Box variant="section">
+          <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
           <ActionBar />
           <H3>Category: {category}</H3>
           {renderChunks()}

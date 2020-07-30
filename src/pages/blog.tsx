@@ -2,16 +2,17 @@ import React, { FC, useState } from 'react';
 import { graphql } from 'gatsby';
 import { chunk } from 'lodash-es';
 
-import { AllBlogPostsQuery } from '@generated/graphql';
+import { Breadcrumbs, Hero } from '@components/common';
 import { Box, P, H1 } from '@components/core';
 import { ActionBar, LoadMore, Previews } from '@components/blog';
-import { Hero } from '@components/common';
+import { AllBlogPostsQuery } from '@generated/graphql';
 
 interface IProps {
   data: AllBlogPostsQuery;
+  pageContext: any;
 }
 
-export const Blog: FC<IProps> = ({ data }) => {
+export const Blog: FC<IProps> = ({ data, pageContext }) => {
   const [page, setPage] = useState(1);
   const [allLoaded, setAllLoaded] = useState(false);
 
@@ -42,6 +43,7 @@ export const Blog: FC<IProps> = ({ data }) => {
       <Hero />
       <Box>
         <Box variant="section">
+          <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
           <H1>There&apos;s a lot going on out there in the social sphere.</H1>
           <P>Here&apos;s what we&apos;ve got to say about it.</P>
           <ActionBar />

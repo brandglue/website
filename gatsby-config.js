@@ -99,6 +99,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-breadcrumb',
+      options: {
+        useAutoGen: true,
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
@@ -106,17 +112,24 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         name: 'blog-posts',
         path: `${__dirname}/src/content/blog`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         name: 'case-studies',
         path: `${__dirname}/src/content/case-studies`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'team',
+        path: `${__dirname}/src/content/team`,
       },
     },
     {

@@ -1,89 +1,35 @@
 import React, { FC } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
-import { kebabCase } from 'lodash-es';
 
-import { Hero } from '@components/common';
+import { Breadcrumbs, Hero } from '@components/common';
 import { Box, Divider, H1, H2, Image, P } from '@components/core';
-import { HiringImageQuery } from '@generated/graphql';
-import { useTeamImages } from '@hooks/useTeamImages';
+import { AllTeamQuery } from '@generated/graphql';
 import { AboutBrandGlueDesktop, HiringQuestionMark } from '@images/svg';
 import { rhythm, scale } from '@theme/globalStyles';
 import { styled, css } from '@theme/styled';
 
+interface IProps {
+  data: AllTeamQuery;
+  pageContext: any;
+}
+
 interface ITeamGridItems {
-  image: FluidObject;
+  image: Element;
   name: string;
   title: string;
   loves: string;
   goals: string;
 }
 
-export const About: FC = () => {
-  const teamImages = useTeamImages();
-  const hiringImage = useStaticQuery<HiringImageQuery>(graphql`
-    query HiringImage {
-      file(
-        sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "hiring-you.jpg" }
-      ) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
-
-  const teamGridItems: ITeamGridItems[] = [
-    {
-      image: teamImages?.michelle?.childImageSharp?.fluid as FluidObject,
-      name: 'Michelle Heathers',
-      title: 'VP of Community Management',
-      loves: 'Jesus, family, and amazing food.',
-      goals:
-        'Visit each continent, see a great white shark, and learn how to ski.',
-    },
-    {
-      image: teamImages?.zach?.childImageSharp?.fluid as FluidObject,
-      name: 'Zach Welch',
-      title: 'VP of Client Services',
-      loves: 'My wife, my cat Cletus, and high-end whiskey.',
-      goals:
-        'Taste Pappy Van Winkle 23, get certiﬁed to dive, golf Pebble Beach.',
-    },
-    {
-      image: teamImages?.joey?.childImageSharp?.fluid as FluidObject,
-      name: 'Joey Ponce',
-      title: 'Creative Director',
-      loves: 'My partner, Brian, my three chickens, and learning new hobbies.',
-      goals:
-        'Open a landscaping company, animate a cartoon, and build a cabin in the woods with my own farm.',
-    },
-    {
-      image: teamImages?.hannah?.childImageSharp?.fluid as FluidObject,
-      name: 'Hannah Lushin',
-      title: 'Account Director',
-      loves: 'Her family, a nice glass of wine & a good book.',
-      goals:
-        'Run a marathon, write a novel, be more intentional with her time.',
-    },
-    {
-      image: hiringImage?.file?.childImageSharp?.fluid as FluidObject,
-      name: 'You?',
-      title: 'I mean... We are always looking for talent.',
-      loves:
-        'Staying up-to-date with technology, social media, and impressing people with their killer talents.',
-      goals:
-        'A fun challenge, to constantly learn, and be surrounded by an energetic team.',
-    },
-  ];
+export const About: FC<IProps> = ({ data, pageContext }) => {
+  const { edges: team } = data.allMdx;
 
   return (
     <>
       <Hero />
       <Box variant="section">
+        <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <H1>We&apos;ve come a long way.</H1>
         <P>
           And it feels like just yesterday that we got started. Here&apos;s a
@@ -95,21 +41,49 @@ export const About: FC = () => {
       <Box variant="section">
         <H2>So, who makes the team?</H2>
         <Grid>
-          {teamGridItems.map((item) => {
+          {team.map(({ node: member }) => {
+            const { frontmatter } = member;
+
             return (
-              <div key={item.name}>
-                <Image alt={kebabCase(item.title)} fluid={item.image} />
-                <Name style={{ ...scale(0.25) }}>{item.name}</Name>
-                <Title style={{ ...scale(-0.25) }}>{item.title}</Title>
-                <Bio>
-                  <LovesLabel>Loves</LovesLabel>
-                  <Box>{item.loves}</Box>
-                  <GoalsLabel>Goals</GoalsLabel>
-                  <Box>{item.goals}</Box>
-                </Bio>
-              </div>
+              frontmatter?.name && (
+                <GridItem key={frontmatter.name}>
+                  <Image
+                    alt={frontmatter.name}
+                    fluid={
+                      frontmatter.image?.childImageSharp?.fluid as FluidObject
+                    }
+                  />
+                  <Name style={{ ...scale(0.25) }}>{frontmatter.name}</Name>
+                  <Title style={{ ...scale(-0.25) }}>{frontmatter.title}</Title>
+                  <Bio>
+                    <LovesLabel>Loves</LovesLabel>
+                    <Box>{frontmatter.loves}</Box>
+                    <GoalsLabel>Goals</GoalsLabel>
+                    <Box>{frontmatter.goals}</Box>
+                  </Bio>
+                </GridItem>
+              )
             );
           })}
+          <GridItem key="hiring">
+            <HiringQuestionMark />
+            <Name style={{ ...scale(0.25) }}>You?</Name>
+            <Title style={{ ...scale(-0.25) }}>
+              I mean... We are always looking for talent.
+            </Title>
+            <Bio>
+              <LovesLabel>Loves</LovesLabel>
+              <Box>
+                Staying up-to-date with technology, social media, and impressing
+                people with their killer talents.
+              </Box>
+              <GoalsLabel>Goals</GoalsLabel>
+              <Box>
+                A fun challenge, to constantly learn, and be surrounded by an
+                energetic team.
+              </Box>
+            </Bio>
+          </GridItem>
         </Grid>
       </Box>
       <Divider />
@@ -137,6 +111,8 @@ const Grid = styled(Box)`
   grid-gap: ${({ theme }) => theme.spacings.pixelSpace10};
   margin-bottom: ${rhythm(1)};
 `;
+
+const GridItem = styled(Box)``;
 
 const Bio = styled(Box)`
   ${({ theme }) => css`
@@ -166,3 +142,32 @@ const GoalsLabel = styled(Box)`
 `;
 
 export default About;
+
+export const teamQuery = graphql`
+  query AllTeam {
+    allMdx(
+      filter: { frontmatter: { type: { eq: "team" } } }
+      sort: { order: ASC, fields: frontmatter___order }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            goals
+            loves
+            name
+            title
+            image {
+              name
+              childImageSharp {
+                fluid(maxWidth: 1100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                  ...GatsbyImageSharpFluidLimitPresentationSize
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
