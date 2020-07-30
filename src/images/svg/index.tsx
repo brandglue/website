@@ -6,6 +6,7 @@ import { ContentStrategy } from './ContentStrategy';
 import { CustomerService } from './CustomerService';
 import { DataAnalysis } from './DataAnalysis';
 import { GraphicDesign } from './GraphicDesign';
+import { HiringQuestionMark } from './HiringQuestionMark';
 import { NewsfeedOptimization } from './NewsfeedOptimization';
 import { PaidAdvertising } from './PaidAdvertising';
 import { SocialStrategy } from './SocialStrategy';
@@ -20,6 +21,7 @@ export {
   CustomerService,
   DataAnalysis,
   GraphicDesign,
+  HiringQuestionMark,
   NewsfeedOptimization,
   PaidAdvertising,
   SocialStrategy,

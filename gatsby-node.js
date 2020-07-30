@@ -5,7 +5,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     {
-      postsMdx: allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
+      blogPostsMdx: allMdx(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: { frontmatter: { type: { eq: "blog-post" } } }
+      ) {
         edges {
           node {
             frontmatter {
@@ -14,10 +17,21 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
-      postsCategories: allMdx {
+      blogPostCategories: allMdx {
         group(field: frontmatter___categories) {
           value: fieldValue
           totalCount
+        }
+      }
+      caseStudiesMdx: allMdx(
+        filter: { frontmatter: { type: { eq: "case-study" } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              slug
+            }
+          }
         }
       }
     }
@@ -29,8 +43,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   // create individual blog posts
-  const posts = result.data.postsMdx.edges;
-  posts.forEach(({ node }) => {
+  const blogPosts = result.data.blogPostsMdx.edges;
+  blogPosts.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.slug,
       component: require.resolve('./src/templates/blog/Post.tsx'),
@@ -41,8 +55,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   });
 
   // create blog category pages
-  const categories = result.data.postsCategories.group;
-  categories.forEach((category) => {
+  const blogCategories = result.data.blogPostCategories.group;
+  blogCategories.forEach((category) => {
     createPage({
       path: `/blog/category/${kebabCase(category.value)}`,
       component: require.resolve('./src/templates/blog/Category.tsx'),
@@ -56,5 +70,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   createPage({
     path: '/blog/search',
     component: require.resolve('./src/templates/blog/Search.tsx'),
+  });
+
+  // create individual case studies
+  const caseStudies = result.data.caseStudiesMdx.edges;
+  caseStudies.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.slug,
+      component: require.resolve('./src/templates/case-studies/CaseStudy.tsx'),
+      context: {
+        slug: node.frontmatter.slug,
+      },
+    });
   });
 };

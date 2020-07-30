@@ -4,10 +4,10 @@ import { FluidObject } from 'gatsby-image';
 import { kebabCase } from 'lodash-es';
 
 import { Hero } from '@components/common';
-import { Box, Divider, H1, H2, H4, Image, P } from '@components/core';
+import { Box, Divider, H1, H2, Image, P } from '@components/core';
 import { HiringImageQuery } from '@generated/graphql';
 import { useTeamImages } from '@hooks/useTeamImages';
-import { AboutBrandGlueDesktop } from '@images/svg';
+import { AboutBrandGlueDesktop, HiringQuestionMark } from '@images/svg';
 import { rhythm, scale } from '@theme/globalStyles';
 import { styled, css } from '@theme/styled';
 
@@ -103,9 +103,9 @@ export const About: FC = () => {
                 <Title style={{ ...scale(-0.25) }}>{item.title}</Title>
                 <Bio>
                   <LovesLabel>Loves</LovesLabel>
-                  <Loves>{item.loves}</Loves>
+                  <Box>{item.loves}</Box>
                   <GoalsLabel>Goals</GoalsLabel>
-                  <Goals>{item.goals}</Goals>
+                  <Box>{item.goals}</Box>
                 </Bio>
               </div>
             );
@@ -130,7 +130,7 @@ export const About: FC = () => {
   );
 };
 
-const Grid = styled.div`
+const Grid = styled(Box)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 1fr;
@@ -138,35 +138,31 @@ const Grid = styled.div`
   margin-bottom: ${rhythm(1)};
 `;
 
-const Bio = styled.div`
+const Bio = styled(Box)`
   ${({ theme }) => css`
     background: ${theme.colors.lightBlue};
     padding: 1em;
   `}
 `;
 
-const Name = styled.div`
+const Name = styled(Box)`
   margin-top: 0.5em;
 `;
 
-const Title = styled.div`
+const Title = styled(Box)`
   color: ${({ theme }) => theme.colors.blue};
   margin-bottom: 1em;
 `;
 
-const LovesLabel = styled.div`
+const LovesLabel = styled(Box)`
   color: ${({ theme }) => theme.colors.blue};
   text-transform: uppercase;
 `;
 
-const Loves = styled.div``;
-
-const GoalsLabel = styled.div`
+const GoalsLabel = styled(Box)`
   color: ${({ theme }) => theme.colors.blue};
   text-transform: uppercase;
   margin-top: 1em;
 `;
-
-const Goals = styled.div``;
 
 export default About;

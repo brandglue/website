@@ -113,6 +113,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'case-studies',
+        path: `${__dirname}/src/content/case-studies`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-graphql-codegen',
       options: {
         fileName: `./__generated__/graphql.ts`,

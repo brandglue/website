@@ -31,7 +31,7 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx } }) => {
       }}
     >
       <Hero />
-      <Box py={7} variant="section">
+      <Box variant="section">
         <H2>{frontmatter.title}</H2>
         <PostHeader variant="flex">
           <span>

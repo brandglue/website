@@ -57,7 +57,10 @@ export default Blog;
 
 export const allBlogPostsQuery = graphql`
   query AllBlogPosts {
-    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+    allMdx(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { frontmatter: { type: { eq: "blog-post" } } }
+    ) {
       edges {
         node {
           excerpt(pruneLength: 300)
