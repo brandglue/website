@@ -11,8 +11,7 @@ import {
   variant,
 } from 'styled-system';
 
-import { customText, StyledSystemProps } from '@src/theme/systemProps';
-import { styled } from '@theme/styled';
+import { customText, styled, StyledSystemProps } from '@styles/index';
 
 interface IOwnProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   // allow Button styling to be used for links via styled-component's "as" prop

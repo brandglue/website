@@ -1,7 +1,5 @@
-import { CaseStudy } from './CaseStudy';
-import { Clients } from './Clients';
-import { Hero } from './Hero';
-import { Services } from './Services';
-import { Team } from './Team';
-
-export { CaseStudy, Clients, Hero, Services, Team };
+export { CaseStudy } from './CaseStudy';
+export { Clients } from './Clients';
+export { Hero } from './Hero';
+export { Services } from './Services';
+export { Team } from './Team';

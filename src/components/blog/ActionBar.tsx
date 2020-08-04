@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
 
 import { Box } from '@components/core';
-import { rhythm } from '@theme/globalStyles';
-import { styled } from '@theme/styled';
+import { rhythm, styled } from '@styles/index';
 
 import { Categories } from './Categories';
 import { SearchForm } from './SearchForm';

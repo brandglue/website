@@ -1,8 +1,7 @@
 import * as sc from 'styled-components';
 
 import { IHex } from '@models/Hex';
-import { css } from '@theme/styled';
-import { Breakpoints, ITheme } from '@theme/theme';
+import { css, Breakpoints, ITheme } from '@styles/index';
 
 /*
   Creates object with min-width media query functions for each breakpoint

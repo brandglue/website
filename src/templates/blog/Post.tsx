@@ -1,14 +1,14 @@
-import React from 'react';
+import { MDXProvider } from '@mdx-js/react';
 import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { MDXProvider } from '@mdx-js/react';
+import React from 'react';
 
 import { ActionBar } from '@components/blog';
 import { Breadcrumbs, Hero } from '@components/common';
 import { Box, Image, SwitchLink, H2, Span } from '@components/core';
 import { BlogPostQuery } from '@generated/graphql';
-import { styled, css } from '@theme/styled';
+import { styled, css } from '@styles/index';
 
 interface IProps {
   data: BlogPostQuery;

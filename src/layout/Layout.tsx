@@ -4,7 +4,7 @@ import { Footer } from '@layout/Footer';
 import { Header } from '@layout/Header';
 import { IAppState } from '@models/AppState';
 import { AppState } from '@src/AppState';
-import { Breakpoints } from '@theme/theme';
+import { Breakpoints } from '@styles/index';
 
 export const Layout: FC = ({ children }) => {
   const [windowWidth, setWindowWidth] = useState(0);

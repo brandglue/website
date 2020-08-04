@@ -1,16 +1,14 @@
-import React from 'react';
+import { MDXProvider } from '@mdx-js/react';
+import { FilePdf } from '@styled-icons/boxicons-solid';
 import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { MDXProvider } from '@mdx-js/react';
-import { FilePdf } from '@styled-icons/boxicons-solid';
+import React from 'react';
 
 import { Breadcrumbs, Hero } from '@components/common';
 import { Anchor, Box, Image, SwitchLink, H1 } from '@components/core';
 import { CaseStudyQuery } from '@generated/graphql';
-import { rhythm } from '@theme/globalStyles';
-import { styled, css } from '@theme/styled';
-import { hexToRgb } from '@theme/utils';
+import { css, hexToRgb, rhythm, styled } from '@styles/index';
 
 interface IProps {
   data: CaseStudyQuery;

@@ -12,8 +12,7 @@ import {
   P,
 } from '@components/core';
 import { TopLevelPages as Pages } from '@constants/routes';
-import { css, styled } from '@theme/styled';
-import { hexToRgb, minMediaQuery } from '@theme/utils';
+import { css, hexToRgb, minMediaQuery, styled } from '@styles/index';
 import { encodeFormData } from '@utils/encodeFormData';
 
 interface IProps {

@@ -10,9 +10,7 @@ import {
   variant,
 } from 'styled-system';
 
-import { customText, StyledSystemProps } from '@src/theme/systemProps';
-import { rhythm } from '@theme/globalStyles';
-import { styled } from '@theme/styled';
+import { customText, rhythm, styled, StyledSystemProps } from '@styles/index';
 
 export const Box = styled.div<StyledSystemProps>`
   ${({ theme }) =>
@@ -20,7 +18,7 @@ export const Box = styled.div<StyledSystemProps>`
       variants: {
         section: {
           maxWidth: `${theme.spacings.maxColWidth}`,
-          padding: `${rhythm(2)} ${theme.spacings.hzColPadding}`,
+          padding: `${rhythm(1)} ${theme.spacings.hzColPadding}`,
           margin: 'auto',
         },
         centered: {

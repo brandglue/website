@@ -1,7 +1,6 @@
 import { color, space, typography, variant } from 'styled-system';
 
-import { customText, StyledSystemTextProps } from '@src/theme/systemProps';
-import { styled } from '@theme/styled';
+import { customText, styled, StyledSystemTextProps } from '@styles/index';
 
 export const Divider = styled.hr<StyledSystemTextProps>`
   ${({ theme }) =>

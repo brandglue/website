@@ -1,13 +1,12 @@
-import React, { FC } from 'react';
 import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import { kebabCase } from 'lodash-es';
+import React, { FC } from 'react';
 
 import { Breadcrumbs, Contact, Hero } from '@components/common';
 import { Box, Divider, H1, Image, NavLink, P } from '@components/core';
 import { AllCaseStudiesQuery } from '@generated/graphql';
-import { rhythm } from '@theme/globalStyles';
-import { styled } from '@theme/styled';
+import { rhythm, styled } from '@styles/index';
 
 interface IProps {
   data: AllCaseStudiesQuery;

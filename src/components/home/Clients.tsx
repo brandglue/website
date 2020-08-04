@@ -1,9 +1,9 @@
-import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
+import React, { FC } from 'react';
 
-import { ClientLogosQuery } from '@generated/graphql';
 import { Box, Image } from '@components/core';
+import { ClientLogosQuery } from '@generated/graphql';
 
 export const Clients: FC = () => {
   const images = useStaticQuery<ClientLogosQuery>(graphql`

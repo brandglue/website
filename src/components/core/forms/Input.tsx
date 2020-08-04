@@ -1,9 +1,7 @@
 import React, { FC } from 'react';
 import { border, color, layout, space, typography } from 'styled-system';
 
-import { StyledSystemProps } from '@src/theme/systemProps';
-import { rhythm } from '@theme/globalStyles';
-import { css, styled } from '@theme/styled';
+import { css, rhythm, styled, StyledSystemProps } from '@styles/index';
 
 interface IOwnProps extends React.InputHTMLAttributes<HTMLInputElement> {
   // restrict type further than the 'string' type provided by React typings

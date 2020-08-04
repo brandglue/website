@@ -1,13 +1,12 @@
-import React, { FC } from 'react';
 import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
+import React, { FC } from 'react';
 
 import { Breadcrumbs, Hero } from '@components/common';
 import { Box, Divider, H1, H2, Image, P } from '@components/core';
 import { AllTeamQuery } from '@generated/graphql';
 import { AboutBrandGlueDesktop, HiringQuestionMark } from '@images/svg';
-import { rhythm, scale } from '@theme/globalStyles';
-import { styled, css } from '@theme/styled';
+import { rhythm, scale, styled, css } from '@styles/index';
 
 interface IProps {
   data: AllTeamQuery;

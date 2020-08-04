@@ -1,6 +1,6 @@
-import React, { FC, useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import { chunk } from 'lodash-es';
+import React, { FC, useEffect, useState } from 'react';
 
 import { ActionBar, LoadMore, Previews } from '@components/blog';
 import { Breadcrumbs, Hero } from '@components/common';

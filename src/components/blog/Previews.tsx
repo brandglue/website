@@ -1,11 +1,10 @@
-import React from 'react';
 import { CaretRight } from '@styled-icons/boxicons-regular';
 import { FluidObject } from 'gatsby-image';
+import React from 'react';
 
-import { MdxFrontmatter } from '@generated/graphql';
 import { Box, Image, NavLink, P, H3, Span } from '@components/core';
-import { styled, css } from '@theme/styled';
-import { rhythm } from '@theme/globalStyles';
+import { MdxFrontmatter } from '@generated/graphql';
+import { styled, css, rhythm } from '@styles/index';
 
 interface IPost {
   node: {

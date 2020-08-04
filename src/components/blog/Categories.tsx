@@ -1,12 +1,11 @@
-import React, { FC } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { kebabCase } from 'lodash';
+import React, { FC } from 'react';
 
-import { BlogCategoriesQuery } from '@generated/graphql';
 import { Box, NavLink } from '@components/core';
 import { RouteParts, TopLevelPages } from '@constants/routes';
-import { rhythm, scale } from '@theme/globalStyles';
-import { styled } from '@theme/styled';
+import { BlogCategoriesQuery } from '@generated/graphql';
+import { rhythm, scale, styled } from '@styles/index';
 
 export const Categories: FC = () => {
   const data = useStaticQuery<BlogCategoriesQuery>(graphql`

@@ -1,11 +1,10 @@
-import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
+import React, { FC } from 'react';
 
-import { HomepageHeroImageQuery } from '@generated/graphql';
 import { Box, Image, H1, H3, P } from '@components/core';
-import { css, styled } from '@theme/styled';
-import { minMediaQuery } from '@theme/utils';
+import { HomepageHeroImageQuery } from '@generated/graphql';
+import { css, minMediaQuery, styled } from '@styles/index';
 
 export const Hero: FC = () => {
   const hero = useStaticQuery<HomepageHeroImageQuery>(graphql`

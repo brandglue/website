@@ -1,11 +1,9 @@
-import React, { FC } from 'react';
 import { Facebook, Linkedin, Twitter } from '@styled-icons/boxicons-logos';
+import React, { FC } from 'react';
 
-import { BrandGlueLogoIconOnly } from '@images/svg';
 import { Box, H4 } from '@components/core';
-import { scale } from '@theme/globalStyles';
-import { css, styled } from '@theme/styled';
-import { minMediaQuery } from '@theme/utils';
+import { BrandGlueLogoIconOnly } from '@images/svg';
+import { css, minMediaQuery, scale, styled } from '@styles/index';
 
 export const Footer: FC = () => (
   <>

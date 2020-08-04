@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb';
 import { camelCase, startCase } from 'lodash-es';
+import React, { FC } from 'react';
 
 interface IProps {
   breadcrumb: IBreadcrumbs;

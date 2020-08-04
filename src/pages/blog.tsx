@@ -1,10 +1,10 @@
-import React, { FC, useState } from 'react';
 import { graphql } from 'gatsby';
 import { chunk } from 'lodash-es';
+import React, { FC, useState } from 'react';
 
+import { ActionBar, LoadMore, Previews } from '@components/blog';
 import { Breadcrumbs, Hero } from '@components/common';
 import { Box, P, H1 } from '@components/core';
-import { ActionBar, LoadMore, Previews } from '@components/blog';
 import { AllBlogPostsQuery } from '@generated/graphql';
 
 interface IProps {

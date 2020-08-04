@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import { BrandGlueLogoIconOnly } from '@images/svg/BrandGlueLogoIconOnly';
-import { keyframes, styled } from '@theme/styled';
+import { keyframes, styled } from '@styles/index';
 
 export const Spinner: FC<React.HTMLAttributes<SVGAElement>> = (props) => (
   <AnimatedLogo className={props.className} />

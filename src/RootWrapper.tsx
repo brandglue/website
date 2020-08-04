@@ -2,9 +2,9 @@ import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet';
 
 import Layout from '@layout/Layout';
-import { GlobalStyles } from '@theme/globalStyles';
-import { ThemeProvider } from '@theme/styled';
-import { theme } from '@theme/theme';
+import { GlobalStyles } from '@src/styles/globalStyles';
+import { ThemeProvider } from '@src/styles/styled';
+import { theme } from '@src/styles/theme';
 
 // /* ref: https://github.com/DefinitelyTyped/DefinitelyTyped/issues/31245 */
 /// <reference types="styled-components/cssprop" />

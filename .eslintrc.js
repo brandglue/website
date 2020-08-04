@@ -36,12 +36,23 @@ const path = require('path');
       'import/order': [
         'error',
         {
-          'newlines-between': 'ignore', // temp hack while trying to get aliases to get recognized as separate from external imports
           'groups': [
             ['builtin', 'external'],
             'internal',
             ['sibling', 'parent', 'index'],
           ],
+          // 'groups': ['builtin', 'external', 'internal', 'sibling', 'index'],
+          'pathGroups': [
+            {
+              pattern: '@*/**',
+              group: 'internal',
+            },
+          ],
+          'alphabetize': {
+            order: 'asc',
+            caseInsensitive: true,
+          },
+          'newlines-between': 'always',
         },
       ],
       'react/jsx-sort-props': [

@@ -1,14 +1,13 @@
 import React, { FC, useContext } from 'react';
 
-import { NavLink } from '@components/core';
+import { Box, NavLink } from '@components/core';
 import {
   TopLevelPages as Pages,
   TopLevelPageLabels as PageLabels,
 } from '@constants/routes';
 import { BrandGlueLogo } from '@images/svg/BrandGlueLogo';
 import { AppState } from '@src/AppState';
-import { css, styled } from '@theme/styled';
-import { minMediaQuery } from '@theme/utils';
+import { css, minMediaQuery, styled } from '@styles/index';
 
 interface IMenuItem {
   label: string;
@@ -67,24 +66,26 @@ export const Header: FC = () => {
   );
 
   const largeDeviceMenu = (
-    <LargeDeviceWrapper>
-      <LogoLink to={`/`} variant="invisible">
-        <BrandGlueLogo />
-      </LogoLink>
-      <LargeDeviceMenu>
-        {largeMenuItems.map((item) => {
-          return (
-            <LargeDeviceLink
-              key={item.label}
-              to={`/${item.to}`}
-              variant="invisible"
-            >
-              {item.label}
-            </LargeDeviceLink>
-          );
-        })}
-      </LargeDeviceMenu>
-    </LargeDeviceWrapper>
+    <header>
+      <LargeDeviceWrapper variant="section">
+        <LogoLink to={`/`} variant="invisible">
+          <BrandGlueLogo />
+        </LogoLink>
+        <LargeDeviceMenu>
+          {largeMenuItems.map((item) => {
+            return (
+              <LargeDeviceLink
+                key={item.label}
+                to={`/${item.to}`}
+                variant="invisible"
+              >
+                {item.label}
+              </LargeDeviceLink>
+            );
+          })}
+        </LargeDeviceMenu>
+      </LargeDeviceWrapper>
+    </header>
   );
 
   return appState.isLargeDevice ? largeDeviceMenu : smallDeviceMenu;
@@ -94,7 +95,7 @@ const LogoLink = styled(NavLink)`
   display: block;
   width: 50%;
   max-width: 220px;
-  margin: ${({ theme }) => theme.spacings.pixelSpace03} auto;
+  padding-top: 10px;
 
   ${minMediaQuery.Medium(css`
     flex: 0 0 220px;
@@ -127,14 +128,11 @@ const SmallDeviceLink = styled(NavLink)`
   `}
 `;
 
-const LargeDeviceWrapper = styled.header`
-  ${({ theme }) => css`
-    display: flex;
-    justify-content: space-between;
-    padding: 0 ${theme.spacings.pixelSpace03};
-    margin: ${theme.spacings.pixelSpace04} 0;
-    max-width: ${theme.spacings.maxPageWidth}px;
-  `}
+const LargeDeviceWrapper = styled(Box)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 `;
 
 const LargeDeviceMenu = styled.nav`
@@ -148,7 +146,7 @@ const LargeDeviceLink = styled(NavLink)`
   ${({ theme }) => css`
     color: ${theme.colors.black};
     padding: 0.4em 0.6em;
-    margin-right: ${theme.spacings.emSpace03};
+    margin-right: 1em;
 
     &:hover,
     &.isActive {

@@ -1,12 +1,11 @@
-import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
+import React, { FC } from 'react';
 
-import { FeaturedCaseStudyQuery } from '@generated/graphql';
 import { Box, Image, P, H5, NavLink } from '@components/core';
 import { TopLevelPages as Pages } from '@constants/routes';
-import { css, styled } from '@theme/styled';
-import { minMediaQuery } from '@theme/utils';
+import { FeaturedCaseStudyQuery } from '@generated/graphql';
+import { css, minMediaQuery, styled } from '@styles/index';
 
 export const CaseStudy: FC = () => {
   const intuitLogo = useStaticQuery<FeaturedCaseStudyQuery>(graphql`

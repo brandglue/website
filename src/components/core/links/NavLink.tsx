@@ -1,11 +1,10 @@
-import React, { FC } from 'react';
 import { LinkGetProps } from '@reach/router';
-import { Link, GatsbyLinkProps } from 'gatsby';
 import cx from 'classnames';
+import { Link, GatsbyLinkProps } from 'gatsby';
+import React, { FC } from 'react';
 import { color, space, typography, variant } from 'styled-system';
 
-import { customText, StyledSystemProps } from '@src/theme/systemProps';
-import { styled } from '@theme/styled';
+import { customText, StyledSystemProps, styled } from '@styles/index';
 
 const WrappedLink: FC<GatsbyLinkProps<unknown>> = (props) => {
   const isActive = ({ isCurrent, isPartiallyCurrent }: LinkGetProps) => {

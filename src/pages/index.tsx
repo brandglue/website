@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
 import { graphql } from 'gatsby';
+import React, { FC } from 'react';
 
 import { Contact } from '@components/common';
 import { Divider } from '@components/core';

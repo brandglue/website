@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
 
+import { NavLink, P } from '@components/core';
+import { TopLevelPages as Pages } from '@constants/routes';
 import {
   CommunityManagement,
   ContentStrategy,
@@ -11,10 +13,7 @@ import {
   SocialStrategy,
   TargetAudiencePersonas,
 } from '@images/svg';
-import { NavLink, P } from '@components/core';
-import { TopLevelPages as Pages } from '@constants/routes';
-import { css, styled } from '@theme/styled';
-import { hexToRgb, minMediaQuery } from '@theme/utils';
+import { css, hexToRgb, minMediaQuery, styled } from '@styles/index';
 
 interface IGridItems {
   icon: React.ReactElement;

@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
+import React, { FC } from 'react';
 
 import { Image } from '@components/core';
 import { PageHeroImageQuery } from '@generated/graphql';

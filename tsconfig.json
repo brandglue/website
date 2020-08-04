@@ -34,7 +34,7 @@
       "@models/*": ["src/models/*"],
       "@pages/*": ["src/pages/*"],
       "@src/*": ["src/*"],
-      "@theme/*": ["src/theme/*"],
+      "@styles/*": ["src/styles/*"],
       "@utils/*": ["src/utils/*"]
     }
   },

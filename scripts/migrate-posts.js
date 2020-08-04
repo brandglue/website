@@ -3,12 +3,12 @@
 const fs = require('fs');
 const path = require('path');
 const remark = require('remark');
+const extract = require('remark-extract-frontmatter');
+const frontmatter = require('remark-frontmatter');
 const parser = require('remark-parse');
 const compiler = require('remark-stringify');
-const frontmatter = require('remark-frontmatter');
-const extract = require('remark-extract-frontmatter');
-const yaml = require('yaml').parse;
 const vfile = require('to-vfile');
+const yaml = require('yaml').parse;
 
 const migratedMarkdownPath = path.join(__dirname, '../migrated');
 const migratedImagesPath = path.join(__dirname, '../migrated-images');

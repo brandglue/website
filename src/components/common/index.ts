@@ -1,6 +1,4 @@
-import { Breadcrumbs } from './Breadcrumbs';
-import { Contact } from './Contact';
-import { Hero } from './Hero';
-import { ServicesGrid } from './ServicesGrid';
-
-export { Breadcrumbs, Contact, Hero, ServicesGrid };
+export { Breadcrumbs } from './Breadcrumbs';
+export { Contact } from './Contact';
+export { Hero } from './Hero';
+export { ServicesGrid } from './ServicesGrid';

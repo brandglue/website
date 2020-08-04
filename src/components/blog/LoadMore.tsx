@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
 
 import { Box, Button } from '@components/core';
-import { styled, css } from '@theme/styled';
-import { rhythm } from '@theme/globalStyles';
+import { styled, css, rhythm } from '@styles/index';
 
 interface IProps {
   allLoaded: boolean;

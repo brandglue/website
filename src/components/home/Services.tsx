@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
-import { Box, H2, P } from '@components/core';
 import { ServicesGrid } from '@components/common';
+import { Box, H2, P } from '@components/core';
 
 export const Services: FC = () => {
   return (
