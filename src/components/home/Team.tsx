@@ -31,6 +31,7 @@ export const Team: FC<IProps> = ({ data }) => {
                 work on your social outlets. Get to know each of us, learn a bit
                 more about the family, and if you want to, reach out!
               </P>
+              <NavLink to={`/${Pages.About}`}>Learn More About Us &gt;</NavLink>
             </Box>
           </Box>
           <Box variant="flexItem">
@@ -55,9 +56,6 @@ export const Team: FC<IProps> = ({ data }) => {
                   )
                 );
               })}
-            </Box>
-            <Box justifyContent="flex-end" variant="flex">
-              <NavLink to={`/${Pages.About}`}>Learn More About Us &gt;</NavLink>
             </Box>
           </Box>
         </Box>
