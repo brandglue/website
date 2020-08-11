@@ -7,7 +7,7 @@ import {
 } from '@constants/routes';
 import { BrandGlueLogo } from '@images/svg/BrandGlueLogo';
 import { AppState } from '@src/AppState';
-import { css, minMediaQuery, styled } from '@styles/index';
+import { css, minMediaQuery, rhythm, styled } from '@styles/index';
 
 interface IMenuItem {
   label: string;
@@ -67,7 +67,7 @@ export const Header: FC = () => {
 
   const largeDeviceMenu = (
     <header>
-      <LargeDeviceWrapper variant="section">
+      <LargeDeviceWrapper variant="thinSection">
         <LogoLink to={`/`} variant="invisible">
           <BrandGlueLogo />
         </LogoLink>
@@ -114,7 +114,7 @@ const SmallDeviceLink = styled(NavLink)`
     flex: 1 1 auto;
     color: ${theme.colors.black};
     text-transform: uppercase;
-    padding: ${theme.spacings.pixelSpace03};
+    padding: 15px;
     border-right: 1px solid ${theme.colors.gray02};
 
     &:last-child {

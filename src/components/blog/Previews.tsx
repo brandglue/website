@@ -128,7 +128,7 @@ const ReadMoreCaret = styled(CaretRight)`
   ${({ theme }) => css`
     color: ${theme.colors.white};
     width: 20px;
-    margin-left: ${theme.spacings.pixelSpace02};
+    margin-left: 10px;
   `};
 `;
 

@@ -27,57 +27,9 @@ const colors = {
   gray06: Hex('#333'),
 };
 
-const pixelSpacings = {
-  pixelSpace00: '0px',
-  pixelSpace01: '5px',
-  pixelSpace02: '10px',
-  pixelSpace03: '15px',
-  pixelSpace04: '20px',
-  pixelSpace05: '25px',
-  pixelSpace06: '30px',
-  pixelSpace07: '35px',
-  pixelSpace08: '40px',
-  pixelSpace09: '45px',
-  pixelSpace10: '50px',
-};
-
-const viewportSpacings = {
-  viewportSpace00: '2vw',
-  viewportSpace01: '4vw',
-  viewportSpace02: '6vw',
-  viewportSpace03: '8vw',
-  viewportSpace04: '10vw',
-  viewportSpace05: '12vw',
-  viewportSpace06: '14vw',
-  viewportSpace07: '16vw',
-  viewportSpace08: '18vw',
-  viewportSpace09: '20vw',
-};
-
-const emSpacings = {
-  emSpace00: '0.2em',
-  emSpace01: '0.4em',
-  emSpace02: '0.6em',
-  emSpace03: '0.8em',
-  emSpace04: '1em',
-  emSpace05: '1.2em',
-  emSpace06: '1.4em',
-  emSpace07: '1.6em',
-  emSpace08: '1.8em',
-  emSpace09: '2em',
-};
-
-const specialSpacings = {
-  hzColPadding: '17px',
+const spacings = {
   maxColWidth: '1100px',
   maxPageWidth: '2560px',
-};
-
-const spacings = {
-  ...emSpacings,
-  ...pixelSpacings,
-  ...specialSpacings,
-  ...viewportSpacings,
 };
 
 /*** styled-system support ***/
@@ -88,6 +40,7 @@ const breakpoints = [
   `${Breakpoints.Giant}px`,
   `${Breakpoints.SuperNova}px`,
 ];
+
 const systemSpacings = [0, 4, 7, 11, 17, 27, 44, 70, 113];
 
 export interface ITheme {

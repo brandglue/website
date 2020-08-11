@@ -66,8 +66,8 @@ const PostHeader = styled(Box)`
   ${({ theme }) => css`
     justify-content: space-between;
     border-top: 4px solid ${theme.colors.blue};
-    padding-top: ${theme.spacings.pixelSpace03};
-    margin-top: ${theme.spacings.pixelSpace03};
+    padding-top: 15px;
+    margin-top: 15px;
   `}
 `;
 
@@ -76,8 +76,8 @@ const Author = styled(Span)`
     color: ${theme.colors.gold};
     text-transform: uppercase;
     border-right: 1px solid ${theme.colors.gray04};
-    padding-right: ${theme.spacings.pixelSpace03};
-    margin-right: ${theme.spacings.pixelSpace03};
+    padding-right: 15px;
+    margin-right: 15px;
   `}
 `;
 
@@ -97,8 +97,8 @@ const Category = styled(Span)`
   ${({ theme }) => css`
     background: ${theme.colors.blue};
     color: ${theme.colors.white};
-    padding: ${theme.spacings.pixelSpace01} ${theme.spacings.pixelSpace02};
-    margin-right: ${theme.spacings.pixelSpace02};
+    padding: 5px 10px;
+    margin-right: 10px;
 
     &:last-child {
       margin-right: 0;

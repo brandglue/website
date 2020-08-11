@@ -1,10 +1,12 @@
 import React, { FC, useLayoutEffect, useState } from 'react';
 
-import { Footer } from '@layout/Footer';
-import { Header } from '@layout/Header';
+import { Footer, Header } from '@components/common';
 import { IAppState } from '@models/AppState';
 import { AppState } from '@src/AppState';
+import { GlobalStyles } from '@styles/globalStyles';
 import { Breakpoints } from '@styles/index';
+import { ThemeProvider } from '@styles/styled';
+import { theme } from '@styles/theme';
 
 export const Layout: FC = ({ children }) => {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -30,9 +32,12 @@ export const Layout: FC = ({ children }) => {
   return (
     <>
       <AppState.Provider value={state}>
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </AppState.Provider>
     </>
   );

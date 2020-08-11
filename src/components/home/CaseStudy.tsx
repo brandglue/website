@@ -24,7 +24,7 @@ export const CaseStudy: FC = () => {
   `);
 
   return (
-    <Box bg="darkBlue" py={5}>
+    <Box bg="darkBlue">
       <Container variant="section">
         <Logo variant="flexItem">
           {intuitLogo?.file?.childImageSharp?.fluid && (
@@ -50,32 +50,25 @@ export const CaseStudy: FC = () => {
 };
 
 const Container = styled(Box)`
-  ${({ theme }) => css`
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-start;
-    margin-bottom: ${theme.space[5]}px;
-    padding: ${theme.space[5]}px;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
 
-    ${minMediaQuery.Medium(css`
-      flex-flow: row;
-      margin-bottom: 0;
-    `)};
-  `}
+  ${minMediaQuery.Medium(css`
+    flex-flow: row;
+  `)};
 `;
 
 const Logo = styled(Box)`
   ${({ theme }) => css`
     flex: 0 0 200px;
     border-bottom: 1px solid ${theme.colors.white};
-    padding-bottom: ${theme.space[5]}px;
-    margin-bottom: ${theme.space[5]}px;
 
     ${minMediaQuery.Medium(css`
       border-bottom: none;
       border-right: 1px solid ${theme.colors.white};
-      padding: 0 ${theme.space[5]}px 0 0;
-      margin: 0 ${theme.space[5]}px 0 0;
+      padding: 0 20px 0 0;
+      margin: 0 20px 0 0;
     `)}
   `}
 `;

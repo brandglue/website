@@ -13,7 +13,7 @@ import {
   SocialStrategy,
   TargetAudiencePersonas,
 } from '@images/svg';
-import { css, hexToRgb, minMediaQuery, styled } from '@styles/index';
+import { css, hexToRgb, minMediaQuery, rhythm, styled } from '@styles/index';
 
 interface IGridItems {
   icon: React.ReactElement;
@@ -114,11 +114,10 @@ const Grid = styled.div`
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: ${({ theme }) => theme.spacings.pixelSpace07};
+  margin-bottom: ${rhythm(1)};
 
   ${minMediaQuery.Medium(css`
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: ${({ theme }) => theme.spacings.pixelSpace08};
   `)}
 `;
 

@@ -30,7 +30,6 @@
       "@generated/*": ["__generated__/*"],
       "@hooks/*": ["src/hooks/*"],
       "@images/*": ["src/images/*"],
-      "@layout/*": ["src/layout/*"],
       "@models/*": ["src/models/*"],
       "@pages/*": ["src/pages/*"],
       "@src/*": ["src/*"],

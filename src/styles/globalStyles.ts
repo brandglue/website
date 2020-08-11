@@ -34,13 +34,17 @@ export const GlobalStyles = createGlobalStyle`
 
   h1, h2, h3, h4, h5 {
     font-weight: 700;
-    margin-bottom: ${rhythm(0.5)};
   }
 
   h1, h2, h3 {
     color: ${theme.colors.darkBlue};
     text-transform: uppercase;
     white-space: pre-wrap;
+    margin-bottom: ${rhythm(1)};
+  }
+
+  h4, h5 {
+    margin-bottom: ${rhythm(0.5)};
   }
 
   h5 {

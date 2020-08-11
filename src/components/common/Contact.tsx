@@ -12,7 +12,7 @@ import {
   P,
 } from '@components/core';
 import { TopLevelPages as Pages } from '@constants/routes';
-import { css, hexToRgb, minMediaQuery, styled } from '@styles/index';
+import { css, hexToRgb, minMediaQuery, rhythm, styled } from '@styles/index';
 import { encodeFormData } from '@utils/encodeFormData';
 
 interface IProps {
@@ -166,7 +166,7 @@ const Group = styled.div`
 
   ${minMediaQuery.Medium(css`
     &:first-child {
-      margin-right: ${({ theme }) => theme.spacings.pixelSpace05};
+      margin-right: 25px;
     }
 
     input:last-child {
@@ -180,7 +180,7 @@ const Success = styled.div`
     background: rgba(${hexToRgb(theme.colors.green)}, 0.5);
     border: 1px solid ${theme.colors.green};
     border-radius: 4px;
-    padding: ${theme.spacings.emSpace02};
+    padding: 0.6em;
   `}
 `;
 
@@ -189,7 +189,7 @@ const Error = styled.div`
     background: rgba(${hexToRgb(theme.colors.red)}, 0.5);
     color: ${theme.colors.red};
     border: 1px solid ${theme.colors.red};
-    padding: ${theme.spacings.emSpace02};
-    margin-top: ${theme.spacings.pixelSpace03};
+    padding: 0.6em;
+    margin-top: ${rhythm(0.5)};
   `}
 `;

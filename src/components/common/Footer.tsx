@@ -3,12 +3,12 @@ import React, { FC } from 'react';
 
 import { Box, H4 } from '@components/core';
 import { BrandGlueLogoIconOnly } from '@images/svg';
-import { css, minMediaQuery, scale, styled } from '@styles/index';
+import { css, minMediaQuery, scale, rhythm, styled } from '@styles/index';
 
 export const Footer: FC = () => (
   <>
     <Wrapper>
-      <Container flexDirection="column" variant="centered">
+      <Container variant="section">
         <Contact>
           <Title>Contact Us</Title>
           <Info href="tel:+1-360-207-4583">+1 (360) 207-4583</Info>
@@ -40,19 +40,20 @@ export const Footer: FC = () => (
   </>
 );
 
-const Wrapper = styled.div`
+const Wrapper = styled(Box)`
   ${({ theme }) => css`
     background: ${theme.colors.gray06};
-    padding: ${theme.spacings.viewportSpace02} ${theme.spacings.viewportSpace02}
-      ${theme.spacings.pixelSpace03};
   `};
 `;
 
 const Container = styled(Box)`
   ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: ${theme.colors.gray03};
-    margin-bottom: ${theme.spacings.pixelSpace08};
 
     ${minMediaQuery.Medium(css`
       flex-flow: row;
@@ -71,7 +72,6 @@ const Title = styled(H4)`
   ${({ theme }) => css`
     color: ${theme.colors.gold};
     text-transform: uppercase;
-    margin-bottom: ${theme.spacings.pixelSpace03};
   `}
 `;
 
@@ -81,7 +81,7 @@ const Info = styled.a`
     color: ${theme.colors.gray03};
 
     &:last-of-type {
-      margin-bottom: ${theme.spacings.pixelSpace03};
+      margin-bottom: 15px;
     }
   `}
 `;
@@ -97,7 +97,7 @@ const Social = styled.div`
 
 const SocialIcon = styled.div`
   width: 30px;
-  margin-right: ${({ theme }) => theme.spacings.pixelSpace02};
+  margin-right: 10px;
 
   &:last-child {
     margin-right: 0;
@@ -118,7 +118,7 @@ const LinkedInIcon = styled(Linkedin)`
 
 const StyledBrandGlueLogoIconOnly = styled(BrandGlueLogoIconOnly)`
   width: 80px;
-  margin-top: ${({ theme }) => theme.spacings.pixelSpace03};
+  margin-top: 15px;
 `;
 
 const Copyright = styled.div`
@@ -126,6 +126,6 @@ const Copyright = styled.div`
     background: ${theme.colors.black};
     color: ${theme.colors.gray03};
     text-align: center;
-    padding: ${theme.space[5]}px;
+    padding: 15px;
   `}
 `;

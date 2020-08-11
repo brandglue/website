@@ -15,7 +15,6 @@ module.exports = {
         '@generated': path.join(__dirname, '__generated__'),
         '@hooks': path.join(__dirname, 'src/hooks'),
         '@images': path.join(__dirname, 'src/images'),
-        '@layout': path.join(__dirname, 'src/layout'),
         '@models': path.join(__dirname, 'src/models'),
         '@pages': path.join(__dirname, 'src/pages'),
         '@src': path.join(__dirname, 'src'),

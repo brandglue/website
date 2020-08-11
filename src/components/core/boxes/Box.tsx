@@ -18,7 +18,12 @@ export const Box = styled.div<StyledSystemProps>`
       variants: {
         section: {
           maxWidth: `${theme.spacings.maxColWidth}`,
-          padding: `${rhythm(1)} ${theme.spacings.hzColPadding}`,
+          padding: `${rhythm(2)} ${rhythm(1)}`,
+          margin: 'auto',
+        },
+        thinSection: {
+          maxWidth: `${theme.spacings.maxColWidth}`,
+          padding: `${rhythm(1)}`,
           margin: 'auto',
         },
         centered: {

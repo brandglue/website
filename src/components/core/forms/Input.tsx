@@ -64,8 +64,8 @@ const StyledTextArea = styled.textarea`
   ${({ theme }) => css`
     height: 100%;
     min-height: 200px;
-    margin-bottom: ${theme.spacings.pixelSpace01};
-    padding: ${theme.spacings.emSpace04};
+    margin-bottom: ${rhythm(0.25)};
+    padding: 1em;
     color: ${theme.colors.black};
     border: 1px solid ${theme.colors.gray02};
 

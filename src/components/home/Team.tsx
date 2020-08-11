@@ -16,7 +16,7 @@ export const Team: FC<IProps> = ({ data }) => {
   return (
     <Container>
       <Box variant="section">
-        <Box alignItems="flex-start" m="auto" py={7} variant="flex">
+        <Box alignItems="flex-start" m="auto" variant="flex">
           <Box flex="0 0 60%" mr={7} variant="flexItem">
             <H2>Meet the Team</H2>
             <Box mb={7}>
