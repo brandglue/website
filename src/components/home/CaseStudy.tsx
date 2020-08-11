@@ -36,10 +36,9 @@ export const CaseStudy: FC = () => {
         </Logo>
         <Box flex="0 0 500px" variant="flexItem">
           <CaseStudyTitle>Growing Twitter the Right Way:</CaseStudyTitle>
-          <P color="white">
+          <P color="white" mb="0">
             {`See How We Helped Intuit Accountants \n Get The Right Audience at the Right Price`}
-            {/* TODO: Update this link to the proper case study link */}
-            <CaseStudyLink to={`/${Pages.CaseStudies}`}>
+            <CaseStudyLink to={`/${Pages.CaseStudies}/intuit-accountants`}>
               See Case Study &gt;
             </CaseStudyLink>
           </P>
@@ -53,6 +52,7 @@ const Container = styled(Box)`
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
+  align-items: center;
 
   ${minMediaQuery.Medium(css`
     flex-flow: row;
@@ -67,8 +67,8 @@ const Logo = styled(Box)`
     ${minMediaQuery.Medium(css`
       border-bottom: none;
       border-right: 1px solid ${theme.colors.white};
-      padding: 0 20px 0 0;
-      margin: 0 20px 0 0;
+      padding: 20px 20px 20px 0;
+      margin: 20px 20px 20px 0;
     `)}
   `}
 `;
