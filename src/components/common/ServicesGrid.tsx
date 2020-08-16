@@ -3,6 +3,7 @@ import React, { FC } from 'react';
 import { NavLink, P } from '@components/core';
 import { TopLevelPages as Pages } from '@constants/routes';
 import {
+  AudiencePersonas,
   CommunityManagement,
   ContentStrategy,
   CustomerService,
@@ -11,8 +12,7 @@ import {
   NewsfeedOptimization,
   PaidAdvertising,
   SocialStrategy,
-  TargetAudiencePersonas,
-} from '@images/svg';
+} from '@media/svg';
 import { css, hexToRgb, minMediaQuery, rhythm, styled } from '@styles/index';
 
 interface IGridItems {
@@ -31,8 +31,8 @@ const gridItems: IGridItems[] = [
     to: Pages.Services,
   },
   {
-    icon: <TargetAudiencePersonas />,
-    label: 'Target Audience Personas',
+    icon: <AudiencePersonas />,
+    label: 'Audience Personas',
     description:
       'Insert a sentence of text here describing this service and why it matters',
     to: Pages.Services,

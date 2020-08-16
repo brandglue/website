@@ -5,7 +5,7 @@ import React, { FC } from 'react';
 import { Box, NavLink } from '@components/core';
 import { RouteParts, TopLevelPages } from '@constants/routes';
 import { BlogCategoriesQuery } from '@generated/graphql';
-import { rhythm, scale, styled } from '@styles/index';
+import { scale, styled } from '@styles/index';
 
 export const Categories: FC = () => {
   const data = useStaticQuery<BlogCategoriesQuery>(graphql`
@@ -20,8 +20,8 @@ export const Categories: FC = () => {
   `);
 
   return (
-    <Box>
-      {data.allMdx.group.map(({ value }) => {
+    <CategoryGroup>
+      {data.allMdx.group.map(({ totalCount, value }) => {
         return value ? (
           <Category
             key={value}
@@ -29,20 +29,32 @@ export const Categories: FC = () => {
             to={`/${TopLevelPages.Blog}/${RouteParts.Category}/${kebabCase(
               value,
             )}`}
-            variant="button"
+            variant="badge"
           >
-            {value}
+            {value} <Count>{totalCount}</Count>
           </Category>
         ) : null;
       })}
-    </Box>
+    </CategoryGroup>
   );
 };
 
-const Category = styled(NavLink)`
-  margin-left: ${rhythm(0.25)};
+const CategoryGroup = styled(Box)`
+  text-align: right;
+`;
 
-  &:first-child {
-    margin: 0;
+const Category = styled(NavLink)`
+  margin: 0 0 1em 1em;
+  font-weight: 700;
+`;
+const Count = styled.span`
+  background: ${({ theme }) => theme.colors.gray00};
+  padding: 0.2em;
+  margin: 0 0.2em;
+  border-radius: 5px;
+  font-weight: 400;
+
+  ${/* sc-selector */ Category}:hover & {
+    color: ${({ theme }) => theme.colors.black};
   }
 `;

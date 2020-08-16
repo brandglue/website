@@ -2,17 +2,17 @@ import { graphql } from 'gatsby';
 import React, { FC } from 'react';
 
 import { Contact } from '@components/common';
-import { Divider } from '@components/core';
+import { Box, Divider } from '@components/core';
 import { CaseStudy, Clients, Hero, Services, Team } from '@components/home';
-import { AllTeamImagesQuery } from '@generated/graphql';
+import { HomePageQuery } from '@generated/graphql';
 
 interface IProps {
-  data: AllTeamImagesQuery;
+  data: HomePageQuery;
 }
 
 export const Home: FC<IProps> = ({ data }) => {
   return (
-    <div>
+    <Box bg="white">
       <Hero />
       <Team data={data} />
       <Clients />
@@ -20,15 +20,15 @@ export const Home: FC<IProps> = ({ data }) => {
       <Services />
       <Divider />
       <Contact />
-    </div>
+    </Box>
   );
 };
 
 export default Home;
 
-export const teamQuery = graphql`
-  query AllTeamImages {
-    allMdx(
+export const homePageQuery = graphql`
+  query HomePage {
+    allTeamImages: allMdx(
       filter: { frontmatter: { type: { eq: "team" } } }
       sort: { order: ASC, fields: frontmatter___order }
     ) {

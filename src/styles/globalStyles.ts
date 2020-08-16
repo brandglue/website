@@ -6,8 +6,8 @@ import { theme } from './theme';
 export const typography = new Typography({
   includeNormalize: true,
 
-  baseFontSize: '18px',
-  baseLineHeight: 1.58,
+  baseFontSize: '19px',
+  baseLineHeight: 1.78,
   scaleRatio: 3,
 
   googleFonts: [
@@ -79,6 +79,7 @@ export const GlobalStyles = createGlobalStyle`
   /* Styling breadcrumbs here because the Breadcrumb plugin component doesn't give direct access to the parent wrappers */
   .breadcrumb {
     .breadcrumb__list {
+      font-size: ${scale(-0.25).fontSize};
       list-style: none;
       margin-left: 0;
     }

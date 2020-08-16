@@ -2,8 +2,8 @@ import { graphql } from 'gatsby';
 import { chunk } from 'lodash-es';
 import React, { FC, useEffect, useState } from 'react';
 
-import { ActionBar, LoadMore, Previews } from '@components/blog';
-import { Breadcrumbs, Hero } from '@components/common';
+import { ActionBar, Hero, LoadMore, Previews } from '@components/blog';
+import { Breadcrumbs } from '@components/common';
 import { Box, H3 } from '@components/core';
 import { BlogPostsByCategoryQuery } from '@generated/graphql';
 

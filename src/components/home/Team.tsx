@@ -3,15 +3,15 @@ import React, { FC } from 'react';
 
 import { Box, Image, H2, P, NavLink } from '@components/core';
 import { TopLevelPages as Pages } from '@constants/routes';
-import { AllTeamImagesQuery } from '@generated/graphql';
+import { HomePageQuery } from '@generated/graphql';
 import { css, hexToRgb, styled } from '@styles/index';
 
 interface IProps {
-  data: AllTeamImagesQuery;
+  data: HomePageQuery;
 }
 
 export const Team: FC<IProps> = ({ data }) => {
-  const { edges: team } = data.allMdx;
+  const { edges } = data.allTeamImages;
 
   return (
     <Container>
@@ -41,8 +41,8 @@ export const Team: FC<IProps> = ({ data }) => {
               mb={5}
               variant="grid"
             >
-              {team.map(({ node: member }) => {
-                const { frontmatter } = member;
+              {edges.map(({ node: teamMember }) => {
+                const { frontmatter } = teamMember;
 
                 return (
                   frontmatter?.name && (
@@ -68,7 +68,7 @@ const Container = styled(Box)`
   ${({ theme }) => css`
     display: flex;
     align-items: flex-start;
-    margin: auto;
+    margin: 500px auto auto;
     background: linear-gradient(
       180deg,
       rgba(${hexToRgb(theme.colors.white)}, 1) 0%,

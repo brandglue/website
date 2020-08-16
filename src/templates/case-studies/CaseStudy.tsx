@@ -5,7 +5,7 @@ import { FluidObject } from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 
-import { Breadcrumbs, Hero } from '@components/common';
+import { Breadcrumbs } from '@components/common';
 import { Anchor, Box, Image, SwitchLink, H1 } from '@components/core';
 import { CaseStudyQuery } from '@generated/graphql';
 import { css, hexToRgb, rhythm, styled } from '@styles/index';
@@ -15,12 +15,15 @@ interface IProps {
   pageContext: any;
 }
 
-export const CaseStudy: React.FC<IProps> = ({ data: { mdx }, pageContext }) => {
-  if (!mdx?.frontmatter || !mdx.body) {
+export const CaseStudy: React.FC<IProps> = ({
+  data: { caseStudy, hero },
+  pageContext,
+}) => {
+  if (!caseStudy?.frontmatter || !caseStudy.body) {
     return null;
   }
 
-  const { body, frontmatter } = mdx;
+  const { body, frontmatter } = caseStudy;
 
   const download = frontmatter.attachments?.find((attachment) =>
     attachment?.publicURL?.search(/.pdf$/),
@@ -35,7 +38,10 @@ export const CaseStudy: React.FC<IProps> = ({ data: { mdx }, pageContext }) => {
         ),
       }}
     >
-      <Hero />
+      <Image
+        alt="page-hero"
+        fluid={hero?.childImageSharp?.fluid as FluidObject}
+      />
       <Box variant="section">
         <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <Header>
@@ -107,7 +113,17 @@ export default CaseStudy; // default export needed for gatsby-node
 
 export const caseStudyQuery = graphql`
   query CaseStudy($slug: String!) {
-    mdx(frontmatter: { slug: { eq: $slug } }) {
+    hero: file(
+      sourceInstanceName: { eq: "media" }
+      relativePath: { eq: "images/hero-case-studies.jpg" }
+    ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    caseStudy: mdx(frontmatter: { slug: { eq: $slug } }) {
       body
       frontmatter {
         attachments {

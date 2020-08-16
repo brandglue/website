@@ -11,8 +11,8 @@ export const CaseStudy: FC = () => {
   const intuitLogo = useStaticQuery<FeaturedCaseStudyQuery>(graphql`
     query FeaturedCaseStudy {
       file(
-        sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "logo-intuit-no-bg.png" }
+        sourceInstanceName: { eq: "media" }
+        relativePath: { eq: "images/logo-intuit-no-bg.png" }
       ) {
         childImageSharp {
           fluid {

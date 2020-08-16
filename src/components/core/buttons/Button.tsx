@@ -65,7 +65,7 @@ ${({ theme }) =>
     variants: {
       primary: {
         'maxWidth': '300px',
-        'background': `${theme.colors.darkBlue}`,
+        'background': `${theme.colors.blue}`,
         'color': `${theme.colors.white}`,
         'borderRadius': '4px',
         'padding': '0.4em',

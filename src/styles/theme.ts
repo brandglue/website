@@ -28,7 +28,8 @@ const colors = {
 };
 
 const spacings = {
-  maxColWidth: '1100px',
+  maxTextColWidth: '900px',
+  maxContentColWidth: '1100px',
   maxPageWidth: '2560px',
 };
 

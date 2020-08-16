@@ -29,7 +29,7 @@
       "@constants/*": ["src/constants/*"],
       "@generated/*": ["__generated__/*"],
       "@hooks/*": ["src/hooks/*"],
-      "@images/*": ["src/images/*"],
+      "@media/*": ["src/media/*"],
       "@models/*": ["src/models/*"],
       "@pages/*": ["src/pages/*"],
       "@src/*": ["src/*"],

@@ -1,10 +1,9 @@
-import { CaretRight } from '@styled-icons/boxicons-regular';
 import { FluidObject } from 'gatsby-image';
 import React from 'react';
 
 import { Box, Image, NavLink, P, H3, Span } from '@components/core';
 import { MdxFrontmatter } from '@generated/graphql';
-import { styled, css, rhythm } from '@styles/index';
+import { styled, rhythm } from '@styles/index';
 
 interface IPost {
   node: {
@@ -53,9 +52,7 @@ export const Previews: React.FC<IProps> = ({ blogPosts }) => {
           <P>{excerpt}</P>
           {frontmatter?.slug && (
             <NavLink to={frontmatter.slug} variant="button">
-              <Box variant="centered">
-                Read More <ReadMoreCaret />
-              </Box>
+              <Box variant="centered">Read More</Box>
             </NavLink>
           )}
         </Box>
@@ -83,7 +80,7 @@ export const Previews: React.FC<IProps> = ({ blogPosts }) => {
   );
 };
 
-const gridGap = rhythm(1);
+const gridGap = '60px';
 
 const PostGrid = styled(Box)`
   display: grid;
@@ -124,14 +121,6 @@ const Date = styled(Span)`
   color: ${({ theme }) => theme.colors.gray04};
 `;
 
-const ReadMoreCaret = styled(CaretRight)`
-  ${({ theme }) => css`
-    color: ${theme.colors.white};
-    width: 20px;
-    margin-left: 10px;
-  `};
-`;
-
 const FeaturedPost = styled(Box)`
   display: flex;
   background: ${({ theme }) => theme.colors.gray00};
@@ -140,11 +129,11 @@ const FeaturedPost = styled(Box)`
   margin-bottom: ${gridGap};
 
   ${PostImage} {
-    flex-basis: 60%;
+    flex-basis: 50%;
   }
 
   ${PostContent} {
-    flex-basis: 40%;
+    flex-basis: 50%;
     padding: 0 ${rhythm(1)};
   }
 `;

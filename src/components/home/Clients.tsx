@@ -9,8 +9,8 @@ export const Clients: FC = () => {
   const images = useStaticQuery<ClientLogosQuery>(graphql`
     query ClientLogos {
       quickbooks: file(
-        sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "logo-quickbooks.jpg" }
+        sourceInstanceName: { eq: "media" }
+        relativePath: { eq: "images/logo-quickbooks.jpg" }
       ) {
         childImageSharp {
           fluid {
@@ -19,8 +19,8 @@ export const Clients: FC = () => {
         }
       }
       kayak: file(
-        sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "logo-kayak.jpg" }
+        sourceInstanceName: { eq: "media" }
+        relativePath: { eq: "images/logo-kayak.jpg" }
       ) {
         childImageSharp {
           fluid {
@@ -29,8 +29,8 @@ export const Clients: FC = () => {
         }
       }
       microsoft: file(
-        sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "logo-microsoft.jpg" }
+        sourceInstanceName: { eq: "media" }
+        relativePath: { eq: "images/logo-microsoft.jpg" }
       ) {
         childImageSharp {
           fluid {
@@ -39,8 +39,8 @@ export const Clients: FC = () => {
         }
       }
       mint: file(
-        sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "logo-mint.jpg" }
+        sourceInstanceName: { eq: "media" }
+        relativePath: { eq: "images/logo-mint.jpg" }
       ) {
         childImageSharp {
           fluid {
@@ -49,8 +49,8 @@ export const Clients: FC = () => {
         }
       }
       dsg: file(
-        sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "logo-dicks-sporting-goods.jpg" }
+        sourceInstanceName: { eq: "media" }
+        relativePath: { eq: "images/logo-dicks-sporting-goods.jpg" }
       ) {
         childImageSharp {
           fluid {
@@ -59,8 +59,8 @@ export const Clients: FC = () => {
         }
       }
       youtube: file(
-        sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "logo-youtube.jpg" }
+        sourceInstanceName: { eq: "media" }
+        relativePath: { eq: "images/logo-youtube.jpg" }
       ) {
         childImageSharp {
           fluid {

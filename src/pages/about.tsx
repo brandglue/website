@@ -2,31 +2,24 @@ import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
-import { Breadcrumbs, Hero } from '@components/common';
+import { Breadcrumbs } from '@components/common';
 import { Box, Divider, H1, H2, Image, P } from '@components/core';
-import { AllTeamQuery } from '@generated/graphql';
-import { AboutBrandGlueDesktop, HiringQuestionMark } from '@images/svg';
+import { AboutPageQuery } from '@generated/graphql';
+import { AboutBrandGlueDesktop, HiringQuestionMark } from '@media/svg';
 import { rhythm, scale, styled, css } from '@styles/index';
 
 interface IProps {
-  data: AllTeamQuery;
+  data: AboutPageQuery;
   pageContext: any;
 }
 
-interface ITeamGridItems {
-  image: Element;
-  name: string;
-  title: string;
-  loves: string;
-  goals: string;
-}
-
 export const About: FC<IProps> = ({ data, pageContext }) => {
-  const { edges: team } = data.allMdx;
+  const { edges } = data.team;
+  const hero = data.hero?.childImageSharp?.fluid;
 
   return (
     <>
-      <Hero />
+      <Image alt="page-hero" fluid={hero as FluidObject} />
       <Box variant="section">
         <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <H1>We&apos;ve come a long way.</H1>
@@ -40,8 +33,8 @@ export const About: FC<IProps> = ({ data, pageContext }) => {
       <Box variant="section">
         <H2>So, who makes the team?</H2>
         <Grid>
-          {team.map(({ node: member }) => {
-            const { frontmatter } = member;
+          {edges.map(({ node: teamMember }) => {
+            const { frontmatter } = teamMember;
 
             return (
               frontmatter?.name && (
@@ -52,8 +45,8 @@ export const About: FC<IProps> = ({ data, pageContext }) => {
                       frontmatter.image?.childImageSharp?.fluid as FluidObject
                     }
                   />
-                  <Name style={{ ...scale(0.25) }}>{frontmatter.name}</Name>
-                  <Title style={{ ...scale(-0.25) }}>{frontmatter.title}</Title>
+                  <Name>{frontmatter.name}</Name>
+                  <Title>{frontmatter.title}</Title>
                   <Bio>
                     <LovesLabel>Loves</LovesLabel>
                     <Box>{frontmatter.loves}</Box>
@@ -66,10 +59,8 @@ export const About: FC<IProps> = ({ data, pageContext }) => {
           })}
           <GridItem key="hiring">
             <HiringQuestionMark />
-            <Name style={{ ...scale(0.25) }}>You?</Name>
-            <Title style={{ ...scale(-0.25) }}>
-              I mean... We are always looking for talent.
-            </Title>
+            <Name>You?</Name>
+            <Title>I mean... We are always looking for talent.</Title>
             <Bio>
               <LovesLabel>Loves</LovesLabel>
               <Box>
@@ -122,11 +113,15 @@ const Bio = styled(Box)`
 
 const Name = styled(Box)`
   margin-top: 0.5em;
+  font-size: ${scale(0.25).fontSize};
+  line-height: ${scale(0.25).lineHeight};
 `;
 
 const Title = styled(Box)`
   color: ${({ theme }) => theme.colors.blue};
   margin-bottom: 1em;
+  font-size: ${scale(-0.25).fontSize};
+  line-height: ${scale(-0.25).lineHeight};
 `;
 
 const LovesLabel = styled(Box)`
@@ -142,9 +137,19 @@ const GoalsLabel = styled(Box)`
 
 export default About;
 
-export const teamQuery = graphql`
-  query AllTeam {
-    allMdx(
+export const aboutPage = graphql`
+  query AboutPage {
+    hero: file(
+      sourceInstanceName: { eq: "media" }
+      relativePath: { eq: "images/hero-about.jpg" }
+    ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    team: allMdx(
       filter: { frontmatter: { type: { eq: "team" } } }
       sort: { order: ASC, fields: frontmatter___order }
     ) {

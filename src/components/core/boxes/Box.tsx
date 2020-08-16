@@ -17,12 +17,12 @@ export const Box = styled.div<StyledSystemProps>`
     variant({
       variants: {
         section: {
-          maxWidth: `${theme.spacings.maxColWidth}`,
+          maxWidth: `${theme.spacings.maxContentColWidth}`,
           padding: `${rhythm(2)} ${rhythm(1)}`,
           margin: 'auto',
         },
-        thinSection: {
-          maxWidth: `${theme.spacings.maxColWidth}`,
+        text: {
+          maxWidth: `${theme.spacings.maxTextColWidth}`,
           padding: `${rhythm(1)}`,
           margin: 'auto',
         },

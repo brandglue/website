@@ -18,6 +18,11 @@ export const ActionBar: FC = () => {
 const ActionBarWrapper = styled(Box)`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: ${rhythm(1)};
+
+  > :first-child {
+    margin-right: 30%;
+    flex: 0 0 auto;
+  }
 `;

@@ -27,6 +27,7 @@ export const SearchForm: FC<IProps> = ({ initialQuery = '' }) => {
     <div>
       <Form onSubmit={handleSubmit} role="search">
         <Input
+          mb={0}
           onChange={handleChange}
           placeholder={'Search Blog'}
           type="search"

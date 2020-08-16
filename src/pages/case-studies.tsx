@@ -3,22 +3,23 @@ import { FluidObject } from 'gatsby-image';
 import { kebabCase } from 'lodash-es';
 import React, { FC } from 'react';
 
-import { Breadcrumbs, Contact, Hero } from '@components/common';
+import { Breadcrumbs, Contact } from '@components/common';
 import { Box, Divider, H1, Image, NavLink, P } from '@components/core';
-import { AllCaseStudiesQuery } from '@generated/graphql';
+import { CaseStudiesPageQuery } from '@generated/graphql';
 import { rhythm, styled } from '@styles/index';
 
 interface IProps {
-  data: AllCaseStudiesQuery;
+  data: CaseStudiesPageQuery;
   pageContext: any;
 }
 
 export const CaseStudies: FC<IProps> = ({ data, pageContext }) => {
-  const { edges } = data.allMdx;
+  const { edges } = data.caseStudies;
+  const hero = data.hero?.childImageSharp?.fluid;
 
   return (
     <>
-      <Hero />
+      <Image alt="page-hero" fluid={hero as FluidObject} />
       <Box variant="section">
         <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <H1>See how we&apos;ve helped our clients.</H1>
@@ -44,7 +45,11 @@ export const CaseStudies: FC<IProps> = ({ data, pageContext }) => {
                     />
                   </GridImage>
                   <GridContent variant="flexItem">
-                    <Title>{frontmatter.title}</Title>
+                    <Title>
+                      <NavLink to={frontmatter.slug} variant="invisible">
+                        {frontmatter.title}
+                      </NavLink>
+                    </Title>
                     <Description>{frontmatter.description}</Description>
                     <Link to={frontmatter.slug}>Check out the Case Study</Link>
                   </GridContent>
@@ -90,9 +95,19 @@ const Link = styled(NavLink)``;
 
 export default CaseStudies;
 
-export const allCaseStudiesQuery = graphql`
-  query AllCaseStudies {
-    allMdx(
+export const caseStudiesPage = graphql`
+  query CaseStudiesPage {
+    hero: file(
+      sourceInstanceName: { eq: "media" }
+      relativePath: { eq: "images/hero-case-studies.jpg" }
+    ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    caseStudies: allMdx(
       sort: { fields: frontmatter___client, order: ASC }
       filter: { frontmatter: { type: { eq: "case-study" } } }
     ) {

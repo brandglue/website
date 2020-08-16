@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
-import { SearchForm } from '@components/blog';
-import { Breadcrumbs, Hero } from '@components/common';
+import { Hero, SearchForm } from '@components/blog';
+import { Breadcrumbs } from '@components/common';
 import { Box, H3, NavLink } from '@components/core';
 import { RouteParts } from '@constants/routes';
 import { getSearchResults } from '@utils/getSearchResults';

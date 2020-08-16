@@ -1,70 +1,92 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import { FluidObject } from 'gatsby-image';
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 
-import { Box, Image, H1, H3, P } from '@components/core';
-import { HomepageHeroImageQuery } from '@generated/graphql';
-import { css, minMediaQuery, styled } from '@styles/index';
+import { Box, H1 } from '@components/core';
+import { useScroll } from '@hooks/useScroll';
+import heroVideo from '@media/videos/hero-homepage.mp4';
+import { css, minMediaQuery, scale, styled } from '@styles/index';
 
 export const Hero: FC = () => {
-  const hero = useStaticQuery<HomepageHeroImageQuery>(graphql`
-    query HomepageHeroImage {
-      file(
-        sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "homepage-hero.jpg" }
-      ) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
+  const { scrollY } = useScroll();
+  const [taglineOpacity, setTaglineOpacity] = useState(1);
+  const [taglineScale, setTaglineScale] = useState(1);
+
+  useEffect(() => {
+    const bodyOffsetHeight =
+      typeof window !== 'undefined' && window?.document
+        ? document.body.offsetHeight
+        : 0;
+    setTaglineOpacity((bodyOffsetHeight - scrollY) / bodyOffsetHeight);
+    setTaglineScale((bodyOffsetHeight - scrollY) / bodyOffsetHeight);
+  }, [scrollY]);
 
   return (
     <Container>
-      {hero?.file?.childImageSharp?.fluid && (
-        <HeroImage
-          alt="homepage-hero"
-          fluid={hero?.file?.childImageSharp?.fluid as FluidObject}
-        />
-      )}
-      <Tagline justifyContent="center" variant="section">
+      <HeroVideo autoPlay loop muted>
+        <source src={heroVideo} type="video/mp4" />
+      </HeroVideo>
+      <Header>
         <Box flexGrow={0} variant="flexItem">
-          <H1 color="white">We are a social media agency</H1>
-          <H3 color="white" textTransform="none">
-            Reaching your audience in the places they hang out most
-          </H3>
-          <P fontSize="108px" mt={7}>
-            &darr;
-          </P>
+          <Tagline opacity={taglineOpacity} scale={taglineScale}>
+            We are a social media agency
+            <span>Reaching your audience in the places they hang out most</span>
+          </Tagline>
         </Box>
-      </Tagline>
+      </Header>
     </Container>
   );
 };
 
-const HeroImage = styled(Image)`
-  filter: brightness(0.8);
-`;
-
 const Container = styled(Box)`
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -999;
   font-size: 0;
 `;
 
-const Tagline = styled(Box)`
+const HeroVideo = styled.video`
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(0.8);
+`;
+
+const Header = styled(Box)`
   display: flex;
+  max-width: ${({ theme }) => theme.spacings.maxContentColWidth};
+  margin: auto;
   color: ${({ theme }) => theme.colors.white};
 
   ${minMediaQuery.Medium(css`
     position: absolute;
-    top: 0;
+    top: 200px;
     left: 0;
     right: 0;
     bottom: 0;
     flex-flow: column;
     text-align: center;
   `)};
+`;
+
+interface ITaglineProps {
+  opacity: number;
+  scale: number;
+}
+
+const Tagline = styled(H1)<ITaglineProps>`
+  ${({ opacity, scale: taglineScale, theme }) => css`
+    color: ${theme.colors.white};
+    opacity: 1;
+    opacity: ${opacity};
+    transform: scale(${taglineScale});
+
+    span {
+      display: inline-block;
+      font-size: ${scale(0.25).fontSize};
+      text-transform: none;
+    }
+  `}
 `;

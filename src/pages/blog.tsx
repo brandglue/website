@@ -2,13 +2,13 @@ import { graphql } from 'gatsby';
 import { chunk } from 'lodash-es';
 import React, { FC, useState } from 'react';
 
-import { ActionBar, LoadMore, Previews } from '@components/blog';
-import { Breadcrumbs, Hero } from '@components/common';
+import { ActionBar, Hero, LoadMore, Previews } from '@components/blog';
+import { Breadcrumbs } from '@components/common';
 import { Box, P, H1 } from '@components/core';
-import { AllBlogPostsQuery } from '@generated/graphql';
+import { BlogPageQuery } from '@generated/graphql';
 
 interface IProps {
-  data: AllBlogPostsQuery;
+  data: BlogPageQuery;
   pageContext: any;
 }
 
@@ -17,7 +17,7 @@ export const Blog: FC<IProps> = ({ data, pageContext }) => {
   const [allLoaded, setAllLoaded] = useState(false);
 
   const postsPerChunk = 5;
-  const { edges } = data.allMdx;
+  const { edges } = data.blogPosts;
 
   const handleLoadMore = () => {
     const pageCount = page + 1;
@@ -57,9 +57,9 @@ export const Blog: FC<IProps> = ({ data, pageContext }) => {
 
 export default Blog;
 
-export const allBlogPostsQuery = graphql`
-  query AllBlogPosts {
-    allMdx(
+export const blogPage = graphql`
+  query BlogPage {
+    blogPosts: allMdx(
       sort: { fields: frontmatter___date, order: DESC }
       filter: { frontmatter: { type: { eq: "blog-post" } } }
     ) {

@@ -5,7 +5,7 @@ import {
   TopLevelPages as Pages,
   TopLevelPageLabels as PageLabels,
 } from '@constants/routes';
-import { BrandGlueLogo } from '@images/svg/BrandGlueLogo';
+import { BrandGlueLogo } from '@media/svg/BrandGlueLogo';
 import { AppState } from '@src/AppState';
 import { css, minMediaQuery, rhythm, styled } from '@styles/index';
 
@@ -45,7 +45,7 @@ export const Header: FC = () => {
   const appState = useContext(AppState);
 
   const smallDeviceMenu = (
-    <header>
+    <Container>
       <LogoLink to={`/`} variant="invisible">
         <BrandGlueLogo />
       </LogoLink>
@@ -62,11 +62,11 @@ export const Header: FC = () => {
           );
         })}
       </SmallDeviceMenu>
-    </header>
+    </Container>
   );
 
   const largeDeviceMenu = (
-    <header>
+    <Container>
       <LargeDeviceWrapper variant="thinSection">
         <LogoLink to={`/`} variant="invisible">
           <BrandGlueLogo />
@@ -85,11 +85,24 @@ export const Header: FC = () => {
           })}
         </LargeDeviceMenu>
       </LargeDeviceWrapper>
-    </header>
+    </Container>
   );
 
   return appState.isLargeDevice ? largeDeviceMenu : smallDeviceMenu;
 };
+
+const Container = styled.header`
+  background: ${({ theme }) => theme.colors.white};
+
+  ${minMediaQuery.Medium(css`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.gray01};
+    z-index: 999;
+  `)}
+`;
 
 const LogoLink = styled(NavLink)`
   display: block;
@@ -133,6 +146,8 @@ const LargeDeviceWrapper = styled(Box)`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  max-width: ${({ theme }) => theme.spacings.maxContentColWidth};
+  padding: ${rhythm(1)};
 `;
 
 const LargeDeviceMenu = styled.nav`

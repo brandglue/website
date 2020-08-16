@@ -4,8 +4,8 @@ import { FluidObject } from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 
-import { ActionBar } from '@components/blog';
-import { Breadcrumbs, Hero } from '@components/common';
+import { Hero } from '@components/blog';
+import { Breadcrumbs } from '@components/common';
 import { Box, Image, SwitchLink, H2, Span } from '@components/core';
 import { BlogPostQuery } from '@generated/graphql';
 import { styled, css } from '@styles/index';
@@ -14,6 +14,16 @@ interface IProps {
   data: BlogPostQuery;
   pageContext: any;
 }
+
+/* {frontmatter.cover_image?.childImageSharp?.fluid && (
+          <Image
+            alt={frontmatter.cover_image?.name}
+            fluid={
+              frontmatter.cover_image?.childImageSharp?.fluid as FluidObject
+            }
+            my={4}
+          />
+        )} */
 
 export const BlogPost: React.FC<IProps> = ({ data: { mdx }, pageContext }) => {
   if (!mdx?.frontmatter || !mdx.body) {
@@ -32,7 +42,7 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx }, pageContext }) => {
       }}
     >
       <Hero />
-      <Box variant="section">
+      <Box variant="text">
         <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <H2>{frontmatter.title}</H2>
         <PostHeader variant="flex">
@@ -46,17 +56,7 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx }, pageContext }) => {
             })}
           </Categories>
         </PostHeader>
-        {frontmatter.cover_image?.childImageSharp?.fluid && (
-          <Image
-            alt={frontmatter.cover_image?.name}
-            fluid={
-              frontmatter.cover_image?.childImageSharp?.fluid as FluidObject
-            }
-            my={4}
-          />
-        )}
         <MDXRenderer>{body}</MDXRenderer>
-        <ActionBar />
       </Box>
     </MDXProvider>
   );

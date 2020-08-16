@@ -14,7 +14,7 @@ module.exports = {
         '@constants': path.join(__dirname, 'src/constants'),
         '@generated': path.join(__dirname, '__generated__'),
         '@hooks': path.join(__dirname, 'src/hooks'),
-        '@images': path.join(__dirname, 'src/images'),
+        '@media': path.join(__dirname, 'src/media'),
         '@models': path.join(__dirname, 'src/models'),
         '@pages': path.join(__dirname, 'src/pages'),
         '@src': path.join(__dirname, 'src'),
@@ -106,8 +106,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'images',
-        path: `${__dirname}/src/images`,
+        name: 'media',
+        path: `${__dirname}/src/media`,
       },
     },
     {
@@ -137,5 +137,13 @@ module.exports = {
         fileName: `./__generated__/graphql.ts`,
       },
     },
+    // {
+    //   resolve: 'gatsby-redirect-from',
+    //   options: {
+    //     query: 'allMdx',
+    //   },
+    // },
+    // 'gatsby-plugin-netlify',
+    // 'gatsby-plugin-meta-redirect', // must be last
   ],
 };
