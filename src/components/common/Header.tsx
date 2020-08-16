@@ -95,10 +95,8 @@ const Container = styled.header`
   background: ${({ theme }) => theme.colors.white};
 
   ${minMediaQuery.Medium(css`
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
     border-bottom: 1px solid ${({ theme }) => theme.colors.gray01};
     z-index: 999;
   `)}

@@ -1,24 +1,10 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 
 import { Box, H1 } from '@components/core';
-import { useScroll } from '@hooks/useScroll';
 import heroVideo from '@media/videos/hero-homepage.mp4';
 import { css, minMediaQuery, scale, styled } from '@styles/index';
 
 export const Hero: FC = () => {
-  const { scrollY } = useScroll();
-  const [taglineOpacity, setTaglineOpacity] = useState(1);
-  const [taglineScale, setTaglineScale] = useState(1);
-
-  useEffect(() => {
-    const bodyOffsetHeight =
-      typeof window !== 'undefined' && window?.document
-        ? document.body.offsetHeight
-        : 0;
-    setTaglineOpacity((bodyOffsetHeight - scrollY) / bodyOffsetHeight);
-    setTaglineScale((bodyOffsetHeight - scrollY) / bodyOffsetHeight);
-  }, [scrollY]);
-
   return (
     <Container>
       <HeroVideo autoPlay loop muted>
@@ -26,7 +12,7 @@ export const Hero: FC = () => {
       </HeroVideo>
       <Header>
         <Box flexGrow={0} variant="flexItem">
-          <Tagline opacity={taglineOpacity} scale={taglineScale}>
+          <Tagline>
             We are a social media agency
             <span>Reaching your audience in the places they hang out most</span>
           </Tagline>
@@ -37,20 +23,14 @@ export const Hero: FC = () => {
 };
 
 const Container = styled(Box)`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -999;
+  position: relative;
   font-size: 0;
 `;
 
 const HeroVideo = styled.video`
+  max-height: 400px;
+  width: 100%;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
   filter: brightness(0.8);
 `;
 
@@ -62,26 +42,19 @@ const Header = styled(Box)`
 
   ${minMediaQuery.Medium(css`
     position: absolute;
-    top: 200px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     flex-flow: column;
+    justify-content: center;
     text-align: center;
   `)};
 `;
 
-interface ITaglineProps {
-  opacity: number;
-  scale: number;
-}
-
-const Tagline = styled(H1)<ITaglineProps>`
-  ${({ opacity, scale: taglineScale, theme }) => css`
+const Tagline = styled(H1)`
+  ${({ theme }) => css`
     color: ${theme.colors.white};
-    opacity: 1;
-    opacity: ${opacity};
-    transform: scale(${taglineScale});
 
     span {
       display: inline-block;

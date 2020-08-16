@@ -68,7 +68,7 @@ const Container = styled(Box)`
   ${({ theme }) => css`
     display: flex;
     align-items: flex-start;
-    margin: 500px auto auto;
+    margin: auto;
     background: linear-gradient(
       180deg,
       rgba(${hexToRgb(theme.colors.white)}, 1) 0%,
