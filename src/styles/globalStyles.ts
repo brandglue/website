@@ -29,11 +29,12 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     background: ${theme.colors.white};
-    color: ${theme.colors.black};
+    color: ${theme.colors.gray06};
   }
 
   h1, h2, h3, h4, h5 {
     font-weight: 700;
+    line-height: 1.3;
   }
 
   h1, h2, h3 {

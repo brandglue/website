@@ -4,6 +4,7 @@ import { SearchForm } from '@components/blog';
 import { Breadcrumbs } from '@components/common';
 import { Box, Divider, H3, NavLink } from '@components/core';
 import { RouteParts } from '@constants/routes';
+import { rhythm, styled } from '@styles/index';
 import { getSearchResults } from '@utils/getSearchResults';
 
 interface IProps {
@@ -48,13 +49,19 @@ export const Search: FC<IProps> = ({ pageContext }) => {
       <Box variant="section">
         <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <SearchForm initialQuery={query} />
-        {query && <H3>{`Search results: ${query}`}</H3>}
-        <div>
-          {results.length > 0 ? <ResultList /> : 'Enter a search query.'}
-        </div>
+        <Results>
+          {query && <H3>{`Search results: ${query}`}</H3>}
+          <div>
+            {results.length > 0 ? <ResultList /> : 'Enter a search query.'}
+          </div>
+        </Results>
       </Box>
     </Box>
   );
 };
+
+const Results = styled(Box)`
+  margin-top: ${rhythm(1)};
+`;
 
 export default Search;

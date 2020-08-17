@@ -1,28 +1,18 @@
-import { BlogPostQuery } from '@generated/graphql';
 import { MDXProvider } from '@mdx-js/react';
 import { graphql } from 'gatsby';
-import { FluidObject } from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 
+import { Category } from '@components/blog';
 import { Breadcrumbs } from '@components/common';
-import { Box, Divider, Image, SwitchLink, H2, Span } from '@components/core';
-import { styled, css } from '@styles/index';
+import { Box, Divider, SwitchLink, H2, Span } from '@components/core';
+import { BlogPostQuery } from '@generated/graphql';
+import { css, rhythm, scale, styled } from '@styles/index';
 
 interface IProps {
   data: BlogPostQuery;
   pageContext: any;
 }
-
-/* {frontmatter.cover_image?.childImageSharp?.fluid && (
-          <Image
-            alt={frontmatter.cover_image?.name}
-            fluid={
-              frontmatter.cover_image?.childImageSharp?.fluid as FluidObject
-            }
-            my={4}
-          />
-        )} */
 
 export const BlogPost: React.FC<IProps> = ({ data: { mdx }, pageContext }) => {
   if (!mdx?.frontmatter || !mdx.body) {
@@ -45,13 +35,14 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx }, pageContext }) => {
         <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <H2>{frontmatter.title}</H2>
         <PostHeader variant="flex">
-          <span>
-            <Author>{frontmatter.author}</Author>
-            <Date>{frontmatter.date}</Date>
-          </span>
+          <Meta>
+            {frontmatter.author}
+            <Sep></Sep>
+            {frontmatter.date}
+          </Meta>
           <Categories>
             {frontmatter.categories?.map((category) => {
-              return category && <Category key={category}>{category}</Category>;
+              return category && <Category key={category} value={category} />;
             })}
           </Categories>
         </PostHeader>
@@ -64,45 +55,38 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx }, pageContext }) => {
 const PostHeader = styled(Box)`
   ${({ theme }) => css`
     justify-content: space-between;
-    border-top: 4px solid ${theme.colors.blue};
-    padding-top: 15px;
-    margin-top: 15px;
-  `}
-`;
-
-const Author = styled(Span)`
-  ${({ theme }) => css`
-    color: ${theme.colors.gold};
-    text-transform: uppercase;
-    border-right: 1px solid ${theme.colors.gray04};
-    padding-right: 15px;
-    margin-right: 15px;
-  `}
-`;
-
-const Date = styled(Span)`
-  ${({ theme }) => css`
-    margin-right: auto;
-    text-transform: uppercase;
+    align-items: flex-start;
     color: ${theme.colors.gray04};
+    border-bottom: 4px solid ${theme.colors.blue};
+    font-size: ${scale(-0.1).fontSize};
+    line-height: ${scale(-0.1).lineHeight};
+    margin-bottom: ${rhythm(1)};
   `}
+`;
+
+const Meta = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Sep = styled.span`
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  margin: 0 10px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: ${({ theme }) => theme.colors.gray02};
+  }
 `;
 
 const Categories = styled(Span)`
   margin-left: auto;
-`;
-
-const Category = styled(Span)`
-  ${({ theme }) => css`
-    background: ${theme.colors.blue};
-    color: ${theme.colors.white};
-    padding: 5px 10px;
-    margin-right: 10px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  `}
 `;
 
 export default BlogPost; // default export needed for gatsby-node

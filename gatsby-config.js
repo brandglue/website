@@ -131,12 +131,12 @@ module.exports = {
         path: `${__dirname}/src/content/team`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-graphql-codegen',
-      options: {
-        fileName: `./__generated__/graphql.ts`,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-graphql-codegen',
+    //   options: {
+    //     fileName: `./__generated__/graphql.ts`,
+    //   },
+    // },
     // {
     //   resolve: 'gatsby-redirect-from',
     //   options: {

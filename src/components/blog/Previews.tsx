@@ -1,8 +1,8 @@
-import { MdxFrontmatter } from '@generated/graphql';
 import { FluidObject } from 'gatsby-image';
 import React from 'react';
 
 import { Box, Image, NavLink, P, H3, Span } from '@components/core';
+import { MdxFrontmatter } from '@generated/graphql';
 import { styled, rhythm } from '@styles/index';
 
 interface IPost {
@@ -40,15 +40,6 @@ export const Previews: React.FC<IProps> = ({ blogPosts }) => {
               <H3>{frontmatter.title}</H3>
             </NavLink>
           )}
-          <Box
-            css={`
-              padding-bottom: ${rhythm(0.5)};
-            `}
-          >
-            <Author>{frontmatter.author}</Author>
-            <span>&bull;</span>
-            <Date>{frontmatter.date}</Date>
-          </Box>
           <P>{excerpt}</P>
           {frontmatter?.slug && (
             <NavLink to={frontmatter.slug} variant="button">
