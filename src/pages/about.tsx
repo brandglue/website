@@ -2,7 +2,6 @@ import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
-import { Breadcrumbs } from '@components/common';
 import { Box, Divider, H1, H2, Image, P } from '@components/core';
 import { AboutPageQuery } from '@generated/graphql';
 import { AboutBrandGlueDesktop, HiringQuestionMark } from '@media/svg';
@@ -10,18 +9,14 @@ import { rhythm, scale, styled, css } from '@styles/index';
 
 interface IProps {
   data: AboutPageQuery;
-  pageContext: any;
 }
 
-export const About: FC<IProps> = ({ data, pageContext }) => {
+export const About: FC<IProps> = ({ data }) => {
   const { edges } = data.team;
-  const hero = data.hero?.childImageSharp?.fluid;
 
   return (
     <>
-      <Image alt="page-hero" fluid={hero as FluidObject} />
       <Box variant="section">
-        <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <H1>We&apos;ve come a long way.</H1>
         <P>
           And it feels like just yesterday that we got started. Here&apos;s a
@@ -139,16 +134,6 @@ export default About;
 
 export const aboutPage = graphql`
   query AboutPage {
-    hero: file(
-      sourceInstanceName: { eq: "media" }
-      relativePath: { eq: "images/hero-about.jpg" }
-    ) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     team: allMdx(
       filter: { frontmatter: { type: { eq: "team" } } }
       sort: { order: ASC, fields: frontmatter___order }

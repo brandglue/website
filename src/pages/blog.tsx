@@ -2,17 +2,15 @@ import { graphql } from 'gatsby';
 import { chunk } from 'lodash-es';
 import React, { FC, useState } from 'react';
 
-import { ActionBar, Hero, LoadMore, Previews } from '@components/blog';
-import { Breadcrumbs } from '@components/common';
+import { ActionBar, LoadMore, Previews } from '@components/blog';
 import { Box, P, H1 } from '@components/core';
 import { BlogPageQuery } from '@generated/graphql';
 
 interface IProps {
   data: BlogPageQuery;
-  pageContext: any;
 }
 
-export const Blog: FC<IProps> = ({ data, pageContext }) => {
+export const Blog: FC<IProps> = ({ data }) => {
   const [page, setPage] = useState(1);
   const [allLoaded, setAllLoaded] = useState(false);
 
@@ -39,19 +37,15 @@ export const Blog: FC<IProps> = ({ data, pageContext }) => {
   };
 
   return (
-    <>
-      <Hero />
-      <Box>
-        <Box variant="section">
-          <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
-          <H1>There&apos;s a lot going on out there in the social sphere.</H1>
-          <P>Here&apos;s what we&apos;ve got to say about it.</P>
-          <ActionBar />
-          {renderChunks()}
-          <LoadMore allLoaded={allLoaded} handleLoadMore={handleLoadMore} />
-        </Box>
+    <Box>
+      <Box variant="section">
+        <H1>There&apos;s a lot going on out there in the social sphere.</H1>
+        <P>Here&apos;s what we&apos;ve got to say about it.</P>
+        <ActionBar />
+        {renderChunks()}
+        <LoadMore allLoaded={allLoaded} handleLoadMore={handleLoadMore} />
       </Box>
-    </>
+    </Box>
   );
 };
 

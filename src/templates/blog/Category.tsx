@@ -2,7 +2,7 @@ import { graphql } from 'gatsby';
 import { chunk } from 'lodash-es';
 import React, { FC, useEffect, useState } from 'react';
 
-import { ActionBar, Hero, LoadMore, Previews } from '@components/blog';
+import { ActionBar, LoadMore, Previews } from '@components/blog';
 import { Breadcrumbs } from '@components/common';
 import { Box, H3 } from '@components/core';
 import { BlogPostsByCategoryQuery } from '@generated/graphql';
@@ -52,18 +52,15 @@ export const Category: FC<IProps> = ({
   };
 
   return (
-    <>
-      <Hero />
-      <Box>
-        <Box variant="section">
-          <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
-          <ActionBar />
-          <H3>Category: {category}</H3>
-          {renderChunks()}
-          <LoadMore allLoaded={allLoaded} handleLoadMore={handleLoadMore} />
-        </Box>
+    <Box>
+      <Box variant="section">
+        <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
+        <ActionBar />
+        <H3>Category: {category}</H3>
+        {renderChunks()}
+        <LoadMore allLoaded={allLoaded} handleLoadMore={handleLoadMore} />
       </Box>
-    </>
+    </Box>
   );
 };
 

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { Hero, SearchForm } from '@components/blog';
+import { SearchForm } from '@components/blog';
 import { Breadcrumbs } from '@components/common';
 import { Box, H3, NavLink } from '@components/core';
 import { RouteParts } from '@constants/routes';
@@ -43,19 +43,16 @@ export const Search: FC<IProps> = ({ pageContext }) => {
   };
 
   return (
-    <>
-      <Hero />
-      <Box>
-        <Box variant="section">
-          <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
-          <SearchForm initialQuery={query} />
-          {query && <H3>{`Search results: ${query}`}</H3>}
-          <div>
-            {results.length > 0 ? <ResultList /> : 'Enter a search query.'}
-          </div>
-        </Box>
+    <Box>
+      <Box variant="section">
+        <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
+        <SearchForm initialQuery={query} />
+        {query && <H3>{`Search results: ${query}`}</H3>}
+        <div>
+          {results.length > 0 ? <ResultList /> : 'Enter a search query.'}
+        </div>
       </Box>
-    </>
+    </Box>
   );
 };
 

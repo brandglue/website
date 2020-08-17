@@ -4,7 +4,6 @@ import { FluidObject } from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 
-import { Hero } from '@components/blog';
 import { Breadcrumbs } from '@components/common';
 import { Box, Image, SwitchLink, H2, Span } from '@components/core';
 import { BlogPostQuery } from '@generated/graphql';
@@ -41,7 +40,6 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx }, pageContext }) => {
         ),
       }}
     >
-      <Hero />
       <Box variant="text">
         <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <H2>{frontmatter.title}</H2>

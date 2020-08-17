@@ -16,7 +16,7 @@ interface IProps {
 }
 
 export const CaseStudy: React.FC<IProps> = ({
-  data: { caseStudy, hero },
+  data: { caseStudy },
   pageContext,
 }) => {
   if (!caseStudy?.frontmatter || !caseStudy.body) {
@@ -38,10 +38,6 @@ export const CaseStudy: React.FC<IProps> = ({
         ),
       }}
     >
-      <Image
-        alt="page-hero"
-        fluid={hero?.childImageSharp?.fluid as FluidObject}
-      />
       <Box variant="section">
         <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <Header>
@@ -113,16 +109,6 @@ export default CaseStudy; // default export needed for gatsby-node
 
 export const caseStudyQuery = graphql`
   query CaseStudy($slug: String!) {
-    hero: file(
-      sourceInstanceName: { eq: "media" }
-      relativePath: { eq: "images/hero-case-studies.jpg" }
-    ) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     caseStudy: mdx(frontmatter: { slug: { eq: $slug } }) {
       body
       frontmatter {

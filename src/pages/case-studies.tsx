@@ -3,25 +3,21 @@ import { FluidObject } from 'gatsby-image';
 import { kebabCase } from 'lodash-es';
 import React, { FC } from 'react';
 
-import { Breadcrumbs, Contact } from '@components/common';
+import { Contact } from '@components/common';
 import { Box, Divider, H1, Image, NavLink, P } from '@components/core';
 import { CaseStudiesPageQuery } from '@generated/graphql';
 import { rhythm, styled } from '@styles/index';
 
 interface IProps {
   data: CaseStudiesPageQuery;
-  pageContext: any;
 }
 
-export const CaseStudies: FC<IProps> = ({ data, pageContext }) => {
+export const CaseStudies: FC<IProps> = ({ data }) => {
   const { edges } = data.caseStudies;
-  const hero = data.hero?.childImageSharp?.fluid;
 
   return (
     <>
-      <Image alt="page-hero" fluid={hero as FluidObject} />
       <Box variant="section">
-        <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <H1>See how we&apos;ve helped our clients.</H1>
         <P>
           From developing social strategies to event social management, we’ve
@@ -97,16 +93,6 @@ export default CaseStudies;
 
 export const caseStudiesPage = graphql`
   query CaseStudiesPage {
-    hero: file(
-      sourceInstanceName: { eq: "media" }
-      relativePath: { eq: "images/hero-case-studies.jpg" }
-    ) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     caseStudies: allMdx(
       sort: { fields: frontmatter___client, order: ASC }
       filter: { frontmatter: { type: { eq: "case-study" } } }
