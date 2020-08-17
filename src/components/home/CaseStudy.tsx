@@ -1,10 +1,10 @@
+import { FeaturedCaseStudyQuery } from '@generated/graphql';
 import { graphql, useStaticQuery } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
 import { Box, Image, P, H5, NavLink } from '@components/core';
 import { TopLevelPages as Pages } from '@constants/routes';
-import { FeaturedCaseStudyQuery } from '@generated/graphql';
 import { css, minMediaQuery, styled } from '@styles/index';
 
 export const CaseStudy: FC = () => {
@@ -15,8 +15,9 @@ export const CaseStudy: FC = () => {
         relativePath: { eq: "images/logo-intuit-no-bg.png" }
       ) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 1100) {
+            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }

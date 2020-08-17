@@ -1,3 +1,4 @@
+import { BlogPostQuery } from '@generated/graphql';
 import { MDXProvider } from '@mdx-js/react';
 import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
@@ -5,8 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 
 import { Breadcrumbs } from '@components/common';
-import { Box, Image, SwitchLink, H2, Span } from '@components/core';
-import { BlogPostQuery } from '@generated/graphql';
+import { Box, Divider, Image, SwitchLink, H2, Span } from '@components/core';
 import { styled, css } from '@styles/index';
 
 interface IProps {
@@ -40,6 +40,7 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx }, pageContext }) => {
         ),
       }}
     >
+      <Divider />
       <Box variant="text">
         <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <H2>{frontmatter.title}</H2>

@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { SearchForm } from '@components/blog';
 import { Breadcrumbs } from '@components/common';
-import { Box, H3, NavLink } from '@components/core';
+import { Box, Divider, H3, NavLink } from '@components/core';
 import { RouteParts } from '@constants/routes';
 import { getSearchResults } from '@utils/getSearchResults';
 
@@ -44,6 +44,7 @@ export const Search: FC<IProps> = ({ pageContext }) => {
 
   return (
     <Box>
+      <Divider />
       <Box variant="section">
         <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <SearchForm initialQuery={query} />

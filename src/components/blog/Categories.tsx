@@ -1,10 +1,10 @@
+import { BlogCategoriesQuery } from '@generated/graphql';
 import { useStaticQuery, graphql } from 'gatsby';
 import { kebabCase } from 'lodash';
 import React, { FC } from 'react';
 
 import { Box, NavLink } from '@components/core';
 import { RouteParts, TopLevelPages } from '@constants/routes';
-import { BlogCategoriesQuery } from '@generated/graphql';
 import { scale, styled } from '@styles/index';
 
 export const Categories: FC = () => {

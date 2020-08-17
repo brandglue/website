@@ -27,63 +27,55 @@ const gridItems: IGridItems[] = [
     icon: <SocialStrategy />,
     label: 'Social Strategy',
     description:
-      'Insert a sentence of text here describing this service and why it matters',
+      'Understand where (and how) to focus your efforts for the most ROI.',
     to: Pages.Services,
   },
   {
     icon: <AudiencePersonas />,
     label: 'Audience Personas',
-    description:
-      'Insert a sentence of text here describing this service and why it matters',
+    description: 'Know who you’re targeting to meet your goals.',
     to: Pages.Services,
   },
   {
     icon: <PaidAdvertising />,
     label: 'Paid Advertising',
-    description:
-      'Insert a sentence of text here describing this service and why it matters',
+    description: 'Put the right ads in front of the right people.',
     to: Pages.Services,
   },
   {
     icon: <ContentStrategy />,
     label: 'Content Strategy',
-    description:
-      'Insert a sentence of text here describing this service and why it matters',
+    description: 'Create more buzz with key thought leadership pieces.',
     to: Pages.Services,
   },
   {
     icon: <GraphicDesign />,
     label: 'Graphic Design',
-    description:
-      'Insert a sentence of text here describing this service and why it matters',
+    description: 'Kick your ho-hum brand assets to the curb.',
     to: Pages.Services,
   },
   {
     icon: <CommunityManagement />,
     label: 'Community Management',
-    description:
-      'Insert a sentence of text here describing this service and why it matters',
+    description: 'Never skip a beat with social trends and best practices.',
     to: Pages.Services,
   },
   {
     icon: <NewsfeedOptimization />,
     label: 'Newsfeed Optimization',
-    description:
-      'Insert a sentence of text here describing this service and why it matters',
+    description: 'Show your brand to the right people.',
     to: Pages.Services,
   },
   {
     icon: <CustomerService />,
     label: 'Customer Service',
-    description:
-      'Insert a sentence of text here describing this service and why it matters',
+    description: 'Give your customers the experience they deserve.',
     to: Pages.Services,
   },
   {
     icon: <DataAnalysis />,
     label: 'Data Analysis',
-    description:
-      'Insert a sentence of text here describing this service and why it matters',
+    description: 'Make strategic decisions that are backed by data.',
     to: Pages.Services,
   },
 ];

@@ -1,9 +1,9 @@
+import { HomePageQuery } from '@generated/graphql';
 import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
 import { Box, Image, H2, P, NavLink } from '@components/core';
 import { TopLevelPages as Pages } from '@constants/routes';
-import { HomePageQuery } from '@generated/graphql';
 import { css, hexToRgb, styled } from '@styles/index';
 
 interface IProps {

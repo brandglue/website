@@ -1,9 +1,9 @@
+import { AboutPageQuery } from '@generated/graphql';
 import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
 import { Box, Divider, H1, H2, Image, P } from '@components/core';
-import { AboutPageQuery } from '@generated/graphql';
 import { AboutBrandGlueDesktop, HiringQuestionMark } from '@media/svg';
 import { rhythm, scale, styled, css } from '@styles/index';
 
@@ -16,6 +16,7 @@ export const About: FC<IProps> = ({ data }) => {
 
   return (
     <>
+      <Divider />
       <Box variant="section">
         <H1>We&apos;ve come a long way.</H1>
         <P>
@@ -24,53 +25,54 @@ export const About: FC<IProps> = ({ data }) => {
         </P>
         <AboutBrandGlueDesktop />
       </Box>
-      <Divider />
-      <Box variant="section">
-        <H2>So, who makes the team?</H2>
-        <Grid>
-          {edges.map(({ node: teamMember }) => {
-            const { frontmatter } = teamMember;
+      <Team>
+        <Box variant="section">
+          <H2>So, who makes the team?</H2>
+          <Grid>
+            {edges.map(({ node: teamMember }) => {
+              const { frontmatter } = teamMember;
 
-            return (
-              frontmatter?.name && (
-                <GridItem key={frontmatter.name}>
-                  <Image
-                    alt={frontmatter.name}
-                    fluid={
-                      frontmatter.image?.childImageSharp?.fluid as FluidObject
-                    }
-                  />
-                  <Name>{frontmatter.name}</Name>
-                  <Title>{frontmatter.title}</Title>
-                  <Bio>
-                    <LovesLabel>Loves</LovesLabel>
-                    <Box>{frontmatter.loves}</Box>
-                    <GoalsLabel>Goals</GoalsLabel>
-                    <Box>{frontmatter.goals}</Box>
-                  </Bio>
-                </GridItem>
-              )
-            );
-          })}
-          <GridItem key="hiring">
-            <HiringQuestionMark />
-            <Name>You?</Name>
-            <Title>I mean... We are always looking for talent.</Title>
-            <Bio>
-              <LovesLabel>Loves</LovesLabel>
-              <Box>
-                Staying up-to-date with technology, social media, and impressing
-                people with their killer talents.
-              </Box>
-              <GoalsLabel>Goals</GoalsLabel>
-              <Box>
-                A fun challenge, to constantly learn, and be surrounded by an
-                energetic team.
-              </Box>
-            </Bio>
-          </GridItem>
-        </Grid>
-      </Box>
+              return (
+                frontmatter?.name && (
+                  <GridItem key={frontmatter.name}>
+                    <Image
+                      alt={frontmatter.name}
+                      fluid={
+                        frontmatter.image?.childImageSharp?.fluid as FluidObject
+                      }
+                    />
+                    <Name>{frontmatter.name}</Name>
+                    <Title>{frontmatter.title}</Title>
+                    <Bio>
+                      <LovesLabel>Loves</LovesLabel>
+                      <Box>{frontmatter.loves}</Box>
+                      <GoalsLabel>Goals</GoalsLabel>
+                      <Box>{frontmatter.goals}</Box>
+                    </Bio>
+                  </GridItem>
+                )
+              );
+            })}
+            <GridItem key="hiring">
+              <HiringQuestionMark />
+              <Name>You?</Name>
+              <Title>A talented teammate</Title>
+              <Bio>
+                <LovesLabel>Loves</LovesLabel>
+                <Box>
+                  Staying up-to-date with technology, social media, and
+                  impressing people with their killer talents.
+                </Box>
+                <GoalsLabel>Goals</GoalsLabel>
+                <Box>
+                  A fun challenge, to constantly learn, and be surrounded by an
+                  energetic team.
+                </Box>
+              </Bio>
+            </GridItem>
+          </Grid>
+        </Box>
+      </Team>
       <Divider />
       <Box variant="section">
         <H2>Join the team. It&apos;s a good one.</H2>
@@ -89,11 +91,15 @@ export const About: FC<IProps> = ({ data }) => {
   );
 };
 
+const Team = styled(Box)`
+  background: ${({ theme }) => theme.colors.gray00};
+`;
+
 const Grid = styled(Box)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-auto-rows: 1fr;
-  grid-gap: 50px;
+  grid-gap: 60px;
   margin-bottom: ${rhythm(1)};
 `;
 
@@ -113,7 +119,6 @@ const Name = styled(Box)`
 `;
 
 const Title = styled(Box)`
-  color: ${({ theme }) => theme.colors.blue};
   margin-bottom: 1em;
   font-size: ${scale(-0.25).fontSize};
   line-height: ${scale(-0.25).lineHeight};

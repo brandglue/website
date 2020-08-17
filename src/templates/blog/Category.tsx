@@ -1,11 +1,11 @@
+import { BlogPostsByCategoryQuery } from '@generated/graphql';
 import { graphql } from 'gatsby';
 import { chunk } from 'lodash-es';
 import React, { FC, useEffect, useState } from 'react';
 
 import { ActionBar, LoadMore, Previews } from '@components/blog';
 import { Breadcrumbs } from '@components/common';
-import { Box, H3 } from '@components/core';
-import { BlogPostsByCategoryQuery } from '@generated/graphql';
+import { Box, Divider, H3 } from '@components/core';
 
 interface IProps {
   pathContext: {
@@ -53,6 +53,7 @@ export const Category: FC<IProps> = ({
 
   return (
     <Box>
+      <Divider />
       <Box variant="section">
         <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <ActionBar />

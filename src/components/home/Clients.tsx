@@ -1,9 +1,9 @@
+import { ClientLogosQuery } from '@generated/graphql';
 import { graphql, useStaticQuery } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
 import { Box, Image } from '@components/core';
-import { ClientLogosQuery } from '@generated/graphql';
 
 export const Clients: FC = () => {
   const images = useStaticQuery<ClientLogosQuery>(graphql`
@@ -13,8 +13,9 @@ export const Clients: FC = () => {
         relativePath: { eq: "images/logo-quickbooks.jpg" }
       ) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 1100) {
+            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
@@ -23,8 +24,9 @@ export const Clients: FC = () => {
         relativePath: { eq: "images/logo-kayak.jpg" }
       ) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 1100) {
+            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
@@ -33,8 +35,9 @@ export const Clients: FC = () => {
         relativePath: { eq: "images/logo-microsoft.jpg" }
       ) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 1100) {
+            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
@@ -43,8 +46,9 @@ export const Clients: FC = () => {
         relativePath: { eq: "images/logo-mint.jpg" }
       ) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 1100) {
+            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
@@ -53,8 +57,9 @@ export const Clients: FC = () => {
         relativePath: { eq: "images/logo-dicks-sporting-goods.jpg" }
       ) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 1100) {
+            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
@@ -63,8 +68,9 @@ export const Clients: FC = () => {
         relativePath: { eq: "images/logo-youtube.jpg" }
       ) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 1100) {
+            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }

@@ -1,10 +1,10 @@
+import { BlogPageQuery } from '@generated/graphql';
 import { graphql } from 'gatsby';
 import { chunk } from 'lodash-es';
 import React, { FC, useState } from 'react';
 
 import { ActionBar, LoadMore, Previews } from '@components/blog';
-import { Box, P, H1 } from '@components/core';
-import { BlogPageQuery } from '@generated/graphql';
+import { Box, Divider, P, H1 } from '@components/core';
 
 interface IProps {
   data: BlogPageQuery;
@@ -38,6 +38,7 @@ export const Blog: FC<IProps> = ({ data }) => {
 
   return (
     <Box>
+      <Divider />
       <Box variant="section">
         <H1>There&apos;s a lot going on out there in the social sphere.</H1>
         <P>Here&apos;s what we&apos;ve got to say about it.</P>

@@ -6,6 +6,7 @@ import { Box, Divider, H1, P } from '@components/core';
 export const Services: FC = () => {
   return (
     <>
+      <Divider />
       <Box variant="section">
         <H1>There&apos;s a lot of ways we can help your brand get noticed.</H1>
         <P>
