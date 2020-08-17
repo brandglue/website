@@ -54,17 +54,26 @@ export const NavLink = styled(WrappedLink)<StyledSystemProps>`
           textDecoration: 'none',
         },
         title: {
-          display: 'inline-block',
-          color: 'currentColor',
-          textDecoration: 'none',
+          'display': 'inline-block',
+          'color': 'currentColor',
+          'textDecoration': 'none',
+
+          '&:hover': {
+            color: `${theme.colors.blue}`,
+          },
         },
         button: {
-          display: 'inline-block',
-          background: `${theme.colors.blue}`,
-          color: `${theme.colors.white}`,
-          textDecoration: 'none',
-          textTransform: 'uppercase',
-          padding: '0.6em',
+          'display': 'inline-block',
+          'background': `${theme.colors.darkBlue}`,
+          'color': `${theme.colors.white}`,
+          'textDecoration': 'none',
+          'textTransform': 'uppercase',
+          'padding': '0.6em',
+          'borderRadius': '5px',
+
+          '&:hover': {
+            background: `${theme.colors.blue}`,
+          },
         },
         badge: {
           'display': 'inline-block',

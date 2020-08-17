@@ -65,24 +65,22 @@ ${({ theme }) =>
     variants: {
       primary: {
         'maxWidth': '300px',
-        'background': `${theme.colors.blue}`,
+        'background': `${theme.colors.darkBlue}`,
         'color': `${theme.colors.white}`,
         'borderRadius': '4px',
         'padding': '0.4em',
 
         '&:hover': {
-          background: `${theme.colors.darkBlue}`,
+          background: `${theme.colors.blue}`,
           opacity: 0.9,
         },
 
         '&:active': {
-          background: `${theme.colors.darkBlue}`,
-          border: `1px solid ${theme.colors.blue}`,
+          background: `${theme.colors.blue}`,
         },
 
         '&:focus': {
-          background: `${theme.colors.darkBlue}`,
-          border: `1px solid ${theme.colors.blue}`,
+          background: `${theme.colors.blue}`,
         },
 
         '&[disabled]': {

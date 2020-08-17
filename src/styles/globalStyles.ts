@@ -37,14 +37,14 @@ export const GlobalStyles = createGlobalStyle`
     line-height: 1.3;
   }
 
-  h1, h2, h3 {
+  h1, h2 {
     color: ${theme.colors.darkBlue};
     text-transform: uppercase;
     white-space: pre-wrap;
     margin-bottom: ${rhythm(1)};
   }
 
-  h4, h5 {
+  h3, h4, h5 {
     margin-bottom: ${rhythm(0.5)};
   }
 
