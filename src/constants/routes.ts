@@ -19,6 +19,7 @@ export const TopLevelPageLabels = {
 };
 
 export enum RouteParts {
+  CaseStudy = 'case-study',
   Category = 'category',
   Search = 'search',
   QueryString = 'q',

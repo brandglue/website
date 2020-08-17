@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { Box, H1 } from '@components/core';
 import heroVideo from '@media/videos/hero-homepage.mp4';
-import { css, minMediaQuery, scale, styled } from '@styles/index';
+import { css, hexToRgb, minMediaQuery, scale, styled } from '@styles/index';
 
 export const Hero: FC = () => {
   return (
@@ -35,21 +35,23 @@ const HeroVideo = styled.video`
 `;
 
 const Header = styled(Box)`
-  display: flex;
-  max-width: ${({ theme }) => theme.spacings.maxContentColWidth};
-  margin: auto;
-  color: ${({ theme }) => theme.colors.white};
+  ${({ theme }) => css`
+    display: flex;
+    max-width: ${theme.spacings.maxContentColWidth};
+    margin: auto;
+    color: ${theme.colors.white};
 
-  ${minMediaQuery.Medium(css`
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    flex-flow: column;
-    justify-content: center;
-    text-align: center;
-  `)};
+    ${minMediaQuery.Medium(css`
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      flex-flow: column;
+      justify-content: center;
+      text-align: center;
+    `)};
+  `};
 `;
 
 const Tagline = styled(H1)`
@@ -58,7 +60,7 @@ const Tagline = styled(H1)`
 
     span {
       display: inline-block;
-      font-size: ${scale(0.25).fontSize};
+      font-size: ${scale(0.4).fontSize};
       text-transform: none;
     }
   `}

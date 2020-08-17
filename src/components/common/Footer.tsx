@@ -1,7 +1,12 @@
 import { Facebook, Linkedin, Twitter } from '@styled-icons/boxicons-logos';
 import React, { FC } from 'react';
 
-import { Box, H4 } from '@components/core';
+import { Box, H4, NavLink } from '@components/core';
+import {
+  RouteParts,
+  TopLevelPages,
+  TopLevelPageLabels,
+} from '@constants/routes';
 import { BrandGlueLogoIconOnly } from '@media/svg';
 import { css, minMediaQuery, scale, styled } from '@styles/index';
 
@@ -31,6 +36,68 @@ export const Footer: FC = () => (
             </SocialIcon>
           </Social>
         </Contact>
+        <Links>
+          <li>
+            <NavLink to={`/${TopLevelPages.About}`} variant="textLinkCurrent">
+              {TopLevelPageLabels.About}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={`/${TopLevelPages.Services}`}
+              variant="textLinkCurrent"
+            >
+              {TopLevelPageLabels.Services}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={`/${TopLevelPages.CaseStudies}`}
+              variant="textLinkCurrent"
+            >
+              {TopLevelPageLabels.CaseStudies}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to={`/${TopLevelPages.Blog}`} variant="textLinkCurrent">
+              {TopLevelPageLabels.Blog}
+            </NavLink>
+          </li>
+        </Links>
+        <Links>
+          <li>
+            <NavLink
+              to={`/${TopLevelPages.CaseStudies}/${RouteParts.CaseStudy}/eloqua`}
+              variant="textLinkCurrent"
+            >
+              Eloqua Case Study
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={`/${TopLevelPages.CaseStudies}/${RouteParts.CaseStudy}/intuit-accountants`}
+              variant="textLinkCurrent"
+            >
+              Intuit Case Study
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={`/${TopLevelPages.CaseStudies}/${RouteParts.CaseStudy}/whitehat-security`}
+              variant="textLinkCurrent"
+            >
+              WhiteHat Case Study
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={`/${TopLevelPages.CaseStudies}/${RouteParts.CaseStudy}/pgi`}
+              variant="textLinkCurrent"
+            >
+              PGi Case Study
+            </NavLink>
+          </li>
+        </Links>
         <StyledBrandGlueLogoIconOnly />
       </Container>
     </Wrapper>
@@ -114,6 +181,15 @@ const TwitterIcon = styled(Twitter)`
 
 const LinkedInIcon = styled(Linkedin)`
   color: ${({ theme }) => theme.colors.white};
+`;
+
+const Links = styled.ul`
+  list-style-type: none;
+  color: ${({ theme }) => theme.colors.gray00};
+
+  li {
+    margin: 0;
+  }
 `;
 
 const StyledBrandGlueLogoIconOnly = styled(BrandGlueLogoIconOnly)`

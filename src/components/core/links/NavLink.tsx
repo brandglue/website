@@ -53,6 +53,13 @@ export const NavLink = styled(WrappedLink)<StyledSystemProps>`
           borderBottom: `1px solid currentColor`,
           textDecoration: 'none',
         },
+        textLinkCurrent: {
+          display: 'inline',
+          color: `currentColor`,
+          paddingBottom: '1px',
+          borderBottom: `1px solid currentColor`,
+          textDecoration: 'none',
+        },
         title: {
           'display': 'inline-block',
           'color': 'currentColor',
