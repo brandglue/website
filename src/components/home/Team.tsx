@@ -1,9 +1,10 @@
-import { HomePageQuery } from '@generated/graphql';
+import { CaretRight } from '@styled-icons/boxicons-regular';
 import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
 import { Box, Image, H2, P, NavLink } from '@components/core';
 import { TopLevelPages as Pages } from '@constants/routes';
+import { HomePageQuery } from '@generated/graphql';
 import { css, hexToRgb, styled } from '@styles/index';
 
 interface IProps {
@@ -31,7 +32,9 @@ export const Team: FC<IProps> = ({ data }) => {
                 work on your social outlets. Get to know each of us, learn a bit
                 more about the family, and if you want to, reach out!
               </P>
-              <NavLink to={`/${Pages.About}`}>Learn More About Us &gt;</NavLink>
+              <NavLink to={`/${Pages.About}`}>
+                Learn More About Us <Arrow></Arrow>
+              </NavLink>
             </Box>
           </Box>
           <Box variant="flexItem">
@@ -75,4 +78,8 @@ const Container = styled(Box)`
       rgba(${hexToRgb(theme.colors.gray02)}, 1) 100%
     );
   `}
+`;
+
+const Arrow = styled(CaretRight)`
+  width: 20px;
 `;

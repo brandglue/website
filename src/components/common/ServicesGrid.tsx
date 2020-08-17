@@ -1,6 +1,7 @@
+import { CaretRight } from '@styled-icons/boxicons-regular';
 import React, { FC } from 'react';
 
-import { NavLink, P } from '@components/core';
+import { Box, NavLink, P } from '@components/core';
 import { TopLevelPages as Pages } from '@constants/routes';
 import {
   AudiencePersonas,
@@ -90,9 +91,11 @@ export const ServicesGrid: FC = () => {
             <GridText>
               <GridLabel>{item.label}</GridLabel>
               <P>{item.description}</P>
-              <NavLink to={`/${item.to}`}>
-                {'Learn more' + String.fromCharCode(62)}
-              </NavLink>
+              <Box flexGrow={0}>
+                <NavLink to={`/${item.to}`}>
+                  Learn more <Arrow />
+                </NavLink>
+              </Box>
             </GridText>
           </GridItem>
         );
@@ -183,4 +186,8 @@ const GridLabel = styled(P)`
     width: 48px;
     margin-top: ${({ theme }) => theme.space[2]}px;
   }
+`;
+
+const Arrow = styled(CaretRight)`
+  width: 20px;
 `;

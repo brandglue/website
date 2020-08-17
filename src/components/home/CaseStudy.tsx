@@ -1,10 +1,11 @@
-import { FeaturedCaseStudyQuery } from '@generated/graphql';
+import { CaretRight } from '@styled-icons/boxicons-regular';
 import { graphql, useStaticQuery } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
 import { Box, Image, P, H5, NavLink } from '@components/core';
 import { TopLevelPages as Pages } from '@constants/routes';
+import { FeaturedCaseStudyQuery } from '@generated/graphql';
 import { css, minMediaQuery, styled } from '@styles/index';
 
 export const CaseStudy: FC = () => {
@@ -36,11 +37,11 @@ export const CaseStudy: FC = () => {
           )}
         </Logo>
         <Box flex="0 0 500px" variant="flexItem">
-          <CaseStudyTitle>Growing Twitter the Right Way:</CaseStudyTitle>
+          <CaseStudyTitle>Growing Twitter the Right Way</CaseStudyTitle>
           <P color="white" mb="0">
             {`See How We Helped Intuit Accountants \n Get The Right Audience at the Right Price`}
             <CaseStudyLink to={`/${Pages.CaseStudies}/intuit-accountants`}>
-              See Case Study &gt;
+              See Case Study <Arrow />
             </CaseStudyLink>
           </P>
         </Box>
@@ -77,7 +78,6 @@ const Logo = styled(Box)`
 const CaseStudyTitle = styled(H5)`
   ${({ theme }) => css`
     color: ${theme.colors.gold};
-    margin: auto;
     text-transform: uppercase;
   `};
 `;
@@ -87,6 +87,10 @@ const CaseStudyLink = styled(NavLink)`
     color: ${theme.colors.gold};
     margin-left: 0.4em;
   `};
+`;
+
+const Arrow = styled(CaretRight)`
+  width: 20px;
 `;
 
 export default CaseStudy;
