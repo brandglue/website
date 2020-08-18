@@ -90,6 +90,7 @@ const Header = styled(Box)`
 
 const Logo = styled(Box)`
   max-width: 200px;
+  margin-bottom: ${rhythm(0.5)};
 `;
 
 const HeaderContent = styled(Box)`
