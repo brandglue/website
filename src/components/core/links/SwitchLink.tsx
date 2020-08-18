@@ -29,7 +29,7 @@ export const SwitchLink: FC<React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({
   }
 
   return (
-    <a
+    <Anchor
       href={href}
       rel="noopener noreferrer nofollow"
       target="_blank"

@@ -77,6 +77,15 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 700;
   }
 
+  a {
+    display: inline;
+    color: ${theme.colors.blue};
+    padding-bottom: 1px;
+    border-bottom: 1px solid currentColor;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
   /* Styling breadcrumbs here because the Breadcrumb plugin component doesn't give direct access to the parent wrappers */
   .breadcrumb {
     .breadcrumb__list {

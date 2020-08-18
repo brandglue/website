@@ -1,7 +1,7 @@
 import { Facebook, Linkedin, Twitter } from '@styled-icons/boxicons-logos';
 import React, { FC } from 'react';
 
-import { Box, H4, NavLink } from '@components/core';
+import { Anchor, Box, H4, NavLink } from '@components/core';
 import {
   RouteParts,
   TopLevelPages,
@@ -16,86 +16,99 @@ export const Footer: FC = () => (
       <Container variant="section">
         <Contact>
           <Title>Contact Us</Title>
-          <Info href="tel:+1-360-207-4583">+1 (360) 207-4583</Info>
-          <Info href="mailto:hello@brandglue.com">hello@brandglue.com</Info>
+          <Info href="tel:+1-360-207-4583" variant="invisible">
+            +1 (360) 207-4583
+          </Info>
+          <Info href="mailto:hello@brandglue.com" variant="invisible">
+            hello@brandglue.com
+          </Info>
           <Social>
             <SocialIcon>
-              <a href="https://www.facebook.com/BrandGlue">
+              <Anchor
+                href="https://www.facebook.com/BrandGlue"
+                variant="invisible"
+              >
                 <FacebookIcon />
-              </a>
+              </Anchor>
             </SocialIcon>
             <SocialIcon>
-              <a href="https://twitter.com/glue">
+              <Anchor href="https://twitter.com/glue" variant="invisible">
                 <TwitterIcon />
-              </a>
+              </Anchor>
             </SocialIcon>
             <SocialIcon>
-              <a href="https://www.linkedin.com/company/brandglue-com">
+              <Anchor
+                href="https://www.linkedin.com/company/brandglue-com"
+                variant="invisible"
+              >
                 <LinkedInIcon />
-              </a>
+              </Anchor>
             </SocialIcon>
           </Social>
         </Contact>
         <Links>
           <li>
-            <NavLink to={`/${TopLevelPages.About}`} variant="textLinkCurrent">
+            <FooterLink
+              to={`/${TopLevelPages.About}`}
+              variant="textLinkCurrent"
+            >
               {TopLevelPageLabels.About}
-            </NavLink>
+            </FooterLink>
           </li>
           <li>
-            <NavLink
+            <FooterLink
               to={`/${TopLevelPages.Services}`}
               variant="textLinkCurrent"
             >
               {TopLevelPageLabels.Services}
-            </NavLink>
+            </FooterLink>
           </li>
           <li>
-            <NavLink
+            <FooterLink
               to={`/${TopLevelPages.CaseStudies}`}
               variant="textLinkCurrent"
             >
               {TopLevelPageLabels.CaseStudies}
-            </NavLink>
+            </FooterLink>
           </li>
           <li>
-            <NavLink to={`/${TopLevelPages.Blog}`} variant="textLinkCurrent">
+            <FooterLink to={`/${TopLevelPages.Blog}`} variant="textLinkCurrent">
               {TopLevelPageLabels.Blog}
-            </NavLink>
+            </FooterLink>
           </li>
         </Links>
         <Links>
           <li>
-            <NavLink
+            <FooterLink
               to={`/${TopLevelPages.CaseStudies}/${RouteParts.CaseStudy}/eloqua`}
               variant="textLinkCurrent"
             >
               Eloqua Case Study
-            </NavLink>
+            </FooterLink>
           </li>
           <li>
-            <NavLink
+            <FooterLink
               to={`/${TopLevelPages.CaseStudies}/${RouteParts.CaseStudy}/intuit-accountants`}
               variant="textLinkCurrent"
             >
               Intuit Case Study
-            </NavLink>
+            </FooterLink>
           </li>
           <li>
-            <NavLink
+            <FooterLink
               to={`/${TopLevelPages.CaseStudies}/${RouteParts.CaseStudy}/whitehat-security`}
               variant="textLinkCurrent"
             >
               WhiteHat Case Study
-            </NavLink>
+            </FooterLink>
           </li>
           <li>
-            <NavLink
+            <FooterLink
               to={`/${TopLevelPages.CaseStudies}/${RouteParts.CaseStudy}/pgi`}
               variant="textLinkCurrent"
             >
               PGi Case Study
-            </NavLink>
+            </FooterLink>
           </li>
         </Links>
         <StyledBrandGlueLogoIconOnly />
@@ -142,7 +155,7 @@ const Title = styled(H4)`
   `}
 `;
 
-const Info = styled.a`
+const Info = styled(Anchor)`
   ${({ theme }) => css`
     text-decoration: none;
     color: ${theme.colors.gray03};
@@ -189,6 +202,15 @@ const Links = styled.ul`
 
   li {
     margin: 0;
+  }
+`;
+
+const FooterLink = styled(NavLink)`
+  color: currentColor;
+  border-bottom: 1px solid currentColor;
+
+  &:hover {
+    opacity: 0.8;
   }
 `;
 

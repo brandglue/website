@@ -45,29 +45,13 @@ export const NavLink = styled(WrappedLink)<StyledSystemProps>`
         invisible: {
           color: 'currentColor',
           textDecoration: 'none',
-        },
-        textLink: {
-          display: 'inline',
-          color: `${theme.colors.blue}`,
-          paddingBottom: '1px',
-          borderBottom: `1px solid currentColor`,
-          textDecoration: 'none',
-        },
-        textLinkCurrent: {
-          'display': 'inline',
-          'color': `currentColor`,
-          'paddingBottom': '1px',
-          'borderBottom': `1px solid currentColor`,
-          'textDecoration': 'none',
-
-          '&:hover': {
-            opacity: 0.8,
-          },
+          border: 'none',
         },
         title: {
           'display': 'inline-block',
           'color': 'currentColor',
           'textDecoration': 'none',
+          'border': 'none',
 
           '&:hover': {
             color: `${theme.colors.blue}`,
@@ -78,6 +62,7 @@ export const NavLink = styled(WrappedLink)<StyledSystemProps>`
           'background': `${theme.colors.darkBlue}`,
           'color': `${theme.colors.white}`,
           'textDecoration': 'none',
+          'border': 'none',
           'textTransform': 'uppercase',
           'padding': '0.6em',
           'borderRadius': '5px',
@@ -91,6 +76,7 @@ export const NavLink = styled(WrappedLink)<StyledSystemProps>`
           'background': `${theme.colors.lightBlue}`,
           'color': `${theme.colors.gray06}`,
           'textDecoration': 'none',
+          'border': 'none',
           'padding': '0.6em',
           'borderRadius': '5px',
 
@@ -108,7 +94,3 @@ export const NavLink = styled(WrappedLink)<StyledSystemProps>`
   ${typography}
   ${customText}
 `;
-
-NavLink.defaultProps = {
-  variant: 'textLink',
-};
