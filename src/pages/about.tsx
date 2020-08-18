@@ -52,28 +52,6 @@ export const About: FC<IProps> = ({ data }) => {
                 )
               );
             })}
-            <GridItem key="hiring">
-              {data.hiring?.childImageSharp?.fluid && (
-                <Image
-                  alt="hiring"
-                  fluid={data.hiring?.childImageSharp?.fluid as FluidObject}
-                />
-              )}
-              <Name>You?</Name>
-              <Title>A talented teammate</Title>
-              <Bio>
-                <LovesLabel>Loves</LovesLabel>
-                <Box>
-                  Staying up-to-date with technology, social media, and
-                  impressing people with their killer talents.
-                </Box>
-                <GoalsLabel>Goals</GoalsLabel>
-                <Box>
-                  A fun challenge, to constantly learn, and be surrounded by an
-                  energetic team.
-                </Box>
-              </Bio>
-            </GridItem>
           </Grid>
         </Box>
       </Team>

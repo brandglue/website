@@ -28,7 +28,7 @@ export default Home;
 export const homePageQuery = graphql`
   query HomePage {
     allTeamImages: allMdx(
-      filter: { frontmatter: { type: { eq: "team" } } }
+      filter: { frontmatter: { type: { eq: "team" }, name: { ne: "You?" } } }
       sort: { order: ASC, fields: frontmatter___order }
     ) {
       edges {
