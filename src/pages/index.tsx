@@ -1,10 +1,10 @@
-import { HomePageQuery } from '@generated/graphql';
 import { graphql } from 'gatsby';
 import React, { FC } from 'react';
 
 import { Contact } from '@components/common';
 import { Box, Divider } from '@components/core';
 import { CaseStudy, Clients, Hero, Services, Team } from '@components/home';
+import { HomePageQuery } from '@generated/graphql';
 
 interface IProps {
   data: HomePageQuery;
@@ -17,7 +17,7 @@ export const Home: FC<IProps> = ({ data }) => {
       <Team data={data} />
       <Clients />
       <CaseStudy />
-      <Services />
+      <Services data={data} />
       <Divider />
       <Contact />
     </Box>
@@ -45,6 +45,20 @@ export const homePageQuery = graphql`
                 }
               }
             }
+          }
+        }
+      }
+    }
+    allServices: allMdx(
+      filter: { frontmatter: { type: { eq: "service" } } }
+      sort: { order: ASC, fields: frontmatter___title }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            shortDescription
+            icon
           }
         }
       }

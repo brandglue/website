@@ -1,4 +1,3 @@
-import { CaseStudiesPageQuery } from '@generated/graphql';
 import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import { kebabCase } from 'lodash-es';
@@ -6,6 +5,7 @@ import React, { FC } from 'react';
 
 import { Contact } from '@components/common';
 import { Box, Divider, H1, Image, NavLink, P } from '@components/core';
+import { CaseStudiesPageQuery } from '@generated/graphql';
 import { rhythm, styled } from '@styles/index';
 
 interface IProps {
@@ -42,13 +42,15 @@ export const CaseStudies: FC<IProps> = ({ data }) => {
                     />
                   </GridImage>
                   <GridContent variant="flexItem">
-                    <Title>
+                    <h3>
                       <NavLink to={frontmatter.slug} variant="invisible">
                         {frontmatter.title}
                       </NavLink>
-                    </Title>
-                    <Description>{frontmatter.description}</Description>
-                    <Link to={frontmatter.slug}>Check out the Case Study</Link>
+                    </h3>
+                    <div>{frontmatter.description}</div>
+                    <NavLink to={frontmatter.slug}>
+                      Check out the Case Study
+                    </NavLink>
                   </GridContent>
                 </GridItem>
               )
@@ -65,7 +67,6 @@ export const CaseStudies: FC<IProps> = ({ data }) => {
 const Grid = styled(Box)`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 1fr;
   grid-gap: 100px;
   margin-bottom: ${rhythm(1)};
 `;
@@ -83,12 +84,6 @@ const GridImage = styled(Box)`
 const GridContent = styled(Box)`
   flex-basis: 70%;
 `;
-
-const Title = styled.h3``;
-
-const Description = styled.div``;
-
-const Link = styled(NavLink)``;
 
 export default CaseStudies;
 

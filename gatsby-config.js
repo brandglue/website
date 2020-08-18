@@ -30,6 +30,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-styled-components',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-mdx-frontmatter',
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
@@ -129,6 +130,13 @@ module.exports = {
       options: {
         name: 'team',
         path: `${__dirname}/src/content/team`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'services',
+        path: `${__dirname}/src/content/services`,
       },
     },
     // {

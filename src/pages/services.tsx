@@ -1,7 +1,12 @@
+import { MDXProvider } from '@mdx-js/react';
+import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { LoDashExplicitNumberArrayWrapper } from 'lodash';
 import React, { FC } from 'react';
 
 import { Contact } from '@components/common';
-import { Box, Divider, H1, H2, H3, P } from '@components/core';
+import { Box, Divider, H1, P } from '@components/core';
+import { ServicesPageQuery } from '@generated/graphql';
 import {
   AudiencePersonas,
   CommunityManagement,
@@ -13,11 +18,29 @@ import {
   PaidAdvertising,
   SocialStrategy,
 } from '@media/svg';
-import { styled } from '@styles/index';
+import { scale, styled } from '@styles/index';
 
-export const Services: FC = () => {
+interface IProps {
+  data: ServicesPageQuery;
+}
+
+export const Services: FC<IProps> = ({ data }) => {
+  const { edges } = data.allServices;
+
   return (
-    <>
+    <MDXProvider
+      components={{
+        AudiencePersonas,
+        CommunityManagement,
+        ContentStrategy,
+        CustomerService,
+        DataAnalysis,
+        GraphicDesign,
+        NewsfeedOptimization,
+        PaidAdvertising,
+        SocialStrategy,
+      }}
+    >
       <Divider />
       <Box pb={0} variant="section">
         <H1>There&apos;s a lot of ways we can help your brand get noticed.</H1>
@@ -26,62 +49,56 @@ export const Services: FC = () => {
           experts to handle it. Here&apos;s how we can help.
         </P>
       </Box>
-      <Box bg="gray00">
-        <Service variant="section">
-          <ServiceText>
-            <H2>Social Strategy</H2>
-            <H3>
-              To have informed decision-making, you need the right approach,
-              technology and execution.
-            </H3>
-            <p>
-              We will conduct a social media analysis of each of your channels
-              and provide a recommendation of where you should focus your
-              efforts. With social media, more is not necessarily better and we
-              will use the resources that you have to get the biggest bang for
-              your buck. This will include taking a deep dive into your social
-              media data on each channel and assessing what best practices are
-              being used or need to be improved upon.
-            </p>
-          </ServiceText>
-          <ServiceImage>
-            <SocialStrategy />
-          </ServiceImage>
-        </Service>
-      </Box>
-      <Box>
-        <Service variant="section">
-          <ServiceImage>
-            <AudiencePersonas />
-          </ServiceImage>
-          <ServiceText>
-            <H2>Audience Personas</H2>
-            <H3>Know who you’re targeting to meet your goals.</H3>
-            <p>
-              We will help you identify exactly who you are talking to on each
-              channel as well as who you want to be engaging with in the future
-              and help you meet those goals. Whether you have a full-blown
-              marketing strategy or are just getting started, we’ll work with
-              your team to build out a social strategy that aligns with your
-              larger marketing goals.
-            </p>
-          </ServiceText>
-        </Service>
-      </Box>
+      {edges.map(({ node: service }, index) => {
+        const { frontmatter } = service;
+        const isEven = index % 2 === 0;
+        return (
+          <ServiceWrapper key={frontmatter.title}>
+            <Service isEven={isEven} variant="section">
+              <ServiceText isEven={isEven}>
+                <ServiceTitle>{frontmatter.title}</ServiceTitle>
+                <h3>{frontmatter.shortDescription}</h3>
+                <p>{frontmatter.longDescription}</p>
+              </ServiceText>
+              <ServiceImage>
+                <MDXRenderer>{frontmatter.icon}</MDXRenderer>
+              </ServiceImage>
+            </Service>
+          </ServiceWrapper>
+        );
+      })}
       <Divider />
       <Contact />
-    </>
+    </MDXProvider>
   );
 };
 
-const Service = styled(Box)`
-  display: flex;
-  align-items: center;
+const ServiceWrapper = styled(Box)`
+  &:nth-child(odd) {
+    background: ${({ theme }) => theme.colors.gray00};
+  }
 `;
 
-const ServiceText = styled(Box)`
+interface IServiceProps {
+  isEven: boolean;
+}
+
+const Service = styled(Box)<IServiceProps>`
+  display: flex;
+  align-items: center;
+  flex-direction: ${({ isEven }) => (isEven ? 'row' : 'row-reverse')};
+`;
+
+const ServiceText = styled(Box)<IServiceProps>`
   flex-basis: 70%;
-  margin-right: 10%;
+  margin-right: ${({ isEven }) => isEven && '10%'};
+  margin-left: ${({ isEven }) => !isEven && '10%'};
+`;
+
+const ServiceTitle = styled.h2`
+  font-size: ${scale(0.1).fontSize};
+  color: ${({ theme }) => theme.colors.gray04};
+  letter-spacing: 1px;
 `;
 
 const ServiceImage = styled(Box)`
@@ -89,3 +106,23 @@ const ServiceImage = styled(Box)`
 `;
 
 export default Services;
+
+export const servicesPage = graphql`
+  query ServicesPage {
+    allServices: allMdx(
+      filter: { frontmatter: { type: { eq: "service" } } }
+      sort: { order: ASC, fields: frontmatter___title }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            shortDescription
+            longDescription
+            icon
+          }
+        }
+      }
+    }
+  }
+`;

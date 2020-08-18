@@ -92,3 +92,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     isPermanent: true,
   });
 };
+
+exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
+  createTypes(`
+    type Mdx implements Node {
+      frontmatter: MdxFrontmatter
+    }
+
+    type MdxFrontmatter {
+      icon: String @mdx
+    }
+  `);
+};

@@ -1,4 +1,3 @@
-import { CaseStudyQuery } from '@generated/graphql';
 import { MDXProvider } from '@mdx-js/react';
 import { FilePdf } from '@styled-icons/boxicons-solid';
 import { graphql } from 'gatsby';
@@ -8,6 +7,7 @@ import React from 'react';
 
 import { Breadcrumbs } from '@components/common';
 import { Anchor, Box, Image, SwitchLink, H1 } from '@components/core';
+import { CaseStudyQuery } from '@generated/graphql';
 import { css, hexToRgb, rhythm, styled } from '@styles/index';
 
 interface IProps {

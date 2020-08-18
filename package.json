@@ -55,6 +55,7 @@
     "gatsby-plugin-flexsearch": "1.0.3",
     "gatsby-plugin-graphql-codegen": "2.7.1",
     "gatsby-plugin-mdx": "1.2.15",
+    "gatsby-plugin-mdx-frontmatter": "0.0.2",
     "gatsby-plugin-meta-redirect": "1.1.1",
     "gatsby-plugin-netlify": "2.3.13",
     "gatsby-plugin-netlify-cms": "4.3.5",
