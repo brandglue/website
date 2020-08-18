@@ -1,4 +1,3 @@
-import { CaretRight } from '@styled-icons/boxicons-regular';
 import { graphql, useStaticQuery } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
@@ -12,7 +11,7 @@ export const CaseStudy: FC = () => {
     query FeaturedCaseStudy {
       file(
         sourceInstanceName: { eq: "media" }
-        relativePath: { eq: "images/logo-intuit-no-bg.png" }
+        relativePath: { eq: "images/logo-intuit.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1100) {
@@ -39,8 +38,11 @@ export const CaseStudy: FC = () => {
           <CaseStudyTitle>Growing Twitter the Right Way</CaseStudyTitle>
           <P color="white" mb="0">
             {`See How We Helped Intuit Accountants \n Get The Right Audience at the Right Price`}
-            <CaseStudyLink to={`/${Pages.CaseStudies}/intuit-accountants`}>
-              See Case Study <Arrow />
+            <CaseStudyLink
+              hasArrow
+              to={`/${Pages.CaseStudies}/intuit-accountants`}
+            >
+              See Case Study
             </CaseStudyLink>
           </P>
         </Box>
@@ -87,10 +89,6 @@ const CaseStudyLink = styled(NavLink)`
     color: ${theme.colors.gold};
     margin-left: 0.4em;
   `};
-`;
-
-const Arrow = styled(CaretRight)`
-  width: 20px;
 `;
 
 export default CaseStudy;

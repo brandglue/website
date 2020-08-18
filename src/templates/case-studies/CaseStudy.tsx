@@ -6,7 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 
 import { Breadcrumbs } from '@components/common';
-import { Anchor, Box, Image, SwitchLink, H1 } from '@components/core';
+import { Anchor, Box, Divider, Image, SwitchLink, H1 } from '@components/core';
 import { css, hexToRgb, rhythm, styled } from '@styles/index';
 
 interface IProps {
@@ -37,40 +37,55 @@ export const CaseStudy: React.FC<IProps> = ({
         ),
       }}
     >
-      <Box variant="section">
+      <Divider />
+      <Box pb={0} variant="section">
         <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
-        <Header>
-          <Logo variant="flexItem">
-            {frontmatter.logo?.childImageSharp?.fluid && (
-              <Image
-                alt={frontmatter.logo?.name}
-                fluid={frontmatter.logo?.childImageSharp?.fluid as FluidObject}
-              />
-            )}
-          </Logo>
-          <HeaderContent variant="flexItem">
-            <H1>{frontmatter.title}</H1>
-            {download?.publicURL && (
-              <Download
-                download={frontmatter.filename}
-                href={download.publicURL}
-              >
-                Download the case study
-                <StyledFilePdf />
-              </Download>
-            )}
-          </HeaderContent>
-        </Header>
+      </Box>
+      <Box bg="gray00">
+        <HeaderWrapper>
+          <Header>
+            <Logo variant="flexItem">
+              {frontmatter.logo?.childImageSharp?.fluid && (
+                <Image
+                  alt={frontmatter.logo?.name}
+                  fluid={
+                    frontmatter.logo?.childImageSharp?.fluid as FluidObject
+                  }
+                />
+              )}
+            </Logo>
+            <HeaderContent variant="flexItem">
+              <H1>{frontmatter.title}</H1>
+              {download?.publicURL && (
+                <Download
+                  download={frontmatter.filename}
+                  hasArrow={false}
+                  href={download.publicURL}
+                >
+                  Download the case study
+                  <StyledFilePdf />
+                </Download>
+              )}
+            </HeaderContent>
+          </Header>
+        </HeaderWrapper>
+      </Box>
+      <Box variant="section">
         <MDXRenderer>{body}</MDXRenderer>
       </Box>
     </MDXProvider>
   );
 };
 
+const HeaderWrapper = styled(Box)`
+  max-width: ${({ theme }) => theme.spacings.maxContentColWidth};
+  padding: ${rhythm(1)};
+  margin: 0 auto;
+`;
+
 const Header = styled(Box)`
   display: flex;
   flex-flow: column;
-  margin-bottom: ${rhythm(1)};
 `;
 
 const Logo = styled(Box)`
@@ -87,7 +102,6 @@ const Download = styled(Anchor)`
     background: ${theme.colors.blue};
     color: ${theme.colors.white};
     padding: 0.6em;
-    margin-top: ${rhythm(0.5)};
     text-decoration: none;
 
     &:focus,

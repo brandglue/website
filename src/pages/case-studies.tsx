@@ -5,7 +5,7 @@ import React, { FC } from 'react';
 
 import { Contact } from '@components/common';
 import { Box, Divider, H1, Image, NavLink, P } from '@components/core';
-import { rhythm, styled } from '@styles/index';
+import { rhythm, scale, styled } from '@styles/index';
 
 interface IProps {
   data: GatsbyTypes.CaseStudiesPageQuery;
@@ -17,71 +17,75 @@ export const CaseStudies: FC<IProps> = ({ data }) => {
   return (
     <>
       <Divider />
-      <Box variant="section">
+      <Box pb={0} variant="section">
         <H1>See how we&apos;ve helped our clients.</H1>
         <P>
           From developing social strategies to event social management, we’ve
           done a lot. But don’t take our word for it, check out the case studies
           below.
         </P>
-        <Grid>
-          {edges.map(({ node: caseStudy }) => {
-            const { frontmatter } = caseStudy;
-
-            return (
-              frontmatter?.client &&
-              frontmatter?.slug && (
-                <GridItem key={frontmatter.client}>
-                  <GridImage variant="flexItem">
-                    <Image
-                      alt={kebabCase(frontmatter.client)}
-                      fluid={
-                        frontmatter.logo?.childImageSharp?.fluid as FluidObject
-                      }
-                    />
-                  </GridImage>
-                  <GridContent variant="flexItem">
-                    <h3>
-                      <NavLink to={frontmatter.slug} variant="invisible">
-                        {frontmatter.title}
-                      </NavLink>
-                    </h3>
-                    <div>{frontmatter.description}</div>
-                    <NavLink to={frontmatter.slug}>
-                      Check out the Case Study
-                    </NavLink>
-                  </GridContent>
-                </GridItem>
-              )
-            );
-          })}
-        </Grid>
       </Box>
+      {edges.map(({ node: caseStudy }, index) => {
+        const { frontmatter } = caseStudy;
+        const isEven = index % 2 === 0;
+        return (
+          <CaseStudyWrapper key={frontmatter?.client}>
+            <CaseStudy isEven={isEven} variant="section">
+              <CaseStudyText isEven={isEven}>
+                <CaseStudyTitle>{frontmatter?.client}</CaseStudyTitle>
+                <h3>{frontmatter?.title}</h3>
+                <p>{frontmatter?.description}</p>
+                <NavLink hasArrow to={frontmatter.slug}>
+                  Check out the Case Study
+                </NavLink>
+              </CaseStudyText>
+              <CaseStudyImage>
+                <Image
+                  alt={kebabCase(frontmatter?.client)}
+                  fluid={
+                    frontmatter?.logo?.childImageSharp?.fluid as FluidObject
+                  }
+                />
+              </CaseStudyImage>
+            </CaseStudy>
+          </CaseStudyWrapper>
+        );
+      })}
       <Divider />
       <Contact />
     </>
   );
 };
 
-const Grid = styled(Box)`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 100px;
-  margin-bottom: ${rhythm(1)};
+const CaseStudyWrapper = styled(Box)`
+  &:nth-child(odd) {
+    background: ${({ theme }) => theme.colors.gray00};
+  }
 `;
 
-const GridItem = styled(Box)`
+interface ICaseStudyProps {
+  isEven: boolean;
+}
+
+const CaseStudy = styled(Box)<ICaseStudyProps>`
   display: flex;
+  align-items: center;
+  flex-direction: ${({ isEven }) => (isEven ? 'row' : 'row-reverse')};
 `;
 
-const GridImage = styled(Box)`
-  flex-basis: 30%;
-  flex-grow: 0;
-  margin-right: 2em;
-`;
-
-const GridContent = styled(Box)`
+const CaseStudyText = styled(Box)<ICaseStudyProps>`
   flex-basis: 70%;
+  margin-right: ${({ isEven }) => isEven && '10%'};
+  margin-left: ${({ isEven }) => !isEven && '10%'};
+`;
+
+const CaseStudyTitle = styled.h2`
+  font-size: ${scale(0.1).fontSize};
+  color: ${({ theme }) => theme.colors.gray04};
+`;
+
+const CaseStudyImage = styled(Box)`
+  flex-basis: 20%;
 `;
 
 export default CaseStudies;

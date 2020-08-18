@@ -11,7 +11,7 @@ interface IProps {
 
 export const Home: FC<IProps> = ({ data }) => {
   return (
-    <Box bg="white">
+    <Box>
       <Hero />
       <Team data={data} />
       <Clients />

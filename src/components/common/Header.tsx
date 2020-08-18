@@ -67,7 +67,7 @@ export const Header: FC = () => {
 
   const largeDeviceMenu = (
     <Container>
-      <LargeDeviceWrapper variant="thinSection">
+      <LargeDeviceWrapper>
         <LogoLink to={`/`} variant="invisible">
           <BrandGlueLogo />
         </LogoLink>

@@ -3,13 +3,14 @@ import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
 import { Box, Image } from '@components/core';
+import { css, minMediaQuery, styled } from '@styles/index';
 
 export const Clients: FC = () => {
   const images = useStaticQuery<GatsbyTypes.ClientLogosQuery>(graphql`
     query ClientLogos {
       quickbooks: file(
         sourceInstanceName: { eq: "media" }
-        relativePath: { eq: "images/logo-quickbooks.jpg" }
+        relativePath: { eq: "images/logo-quickbooks.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1100) {
@@ -20,7 +21,7 @@ export const Clients: FC = () => {
       }
       kayak: file(
         sourceInstanceName: { eq: "media" }
-        relativePath: { eq: "images/logo-kayak.jpg" }
+        relativePath: { eq: "images/logo-kayak.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1100) {
@@ -31,18 +32,7 @@ export const Clients: FC = () => {
       }
       microsoft: file(
         sourceInstanceName: { eq: "media" }
-        relativePath: { eq: "images/logo-microsoft.jpg" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 1100) {
-            ...GatsbyImageSharpFluid_withWebp
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
-      }
-      mint: file(
-        sourceInstanceName: { eq: "media" }
-        relativePath: { eq: "images/logo-mint.jpg" }
+        relativePath: { eq: "images/logo-microsoft.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1100) {
@@ -64,7 +54,7 @@ export const Clients: FC = () => {
       }
       youtube: file(
         sourceInstanceName: { eq: "media" }
-        relativePath: { eq: "images/logo-youtube.jpg" }
+        relativePath: { eq: "images/logo-youtube.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1100) {
@@ -78,12 +68,7 @@ export const Clients: FC = () => {
 
   return (
     <Box variant="section">
-      <Box
-        alignItems="center"
-        gridGap={6}
-        gridTemplateColumns={['repeat(2, minmax(0, 1fr))', 'repeat(6, 1fr)']}
-        variant="grid"
-      >
+      <ClientGrid>
         {images?.microsoft?.childImageSharp?.fluid && (
           <Image
             alt="microsoft"
@@ -94,12 +79,6 @@ export const Clients: FC = () => {
           <Image
             alt="quickbooks"
             fluid={images?.quickbooks?.childImageSharp?.fluid as FluidObject}
-          />
-        )}
-        {images?.mint?.childImageSharp?.fluid && (
-          <Image
-            alt="mint"
-            fluid={images?.mint?.childImageSharp?.fluid as FluidObject}
           />
         )}
         {images?.kayak?.childImageSharp?.fluid && (
@@ -120,7 +99,18 @@ export const Clients: FC = () => {
             fluid={images?.youtube?.childImageSharp?.fluid as FluidObject}
           />
         )}
-      </Box>
+      </ClientGrid>
     </Box>
   );
 };
+
+const ClientGrid = styled(Box)`
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 50px;
+
+  ${minMediaQuery.Medium(css`
+    grid-template-columns: repeat(5, 1fr);
+  `)}
+`;

@@ -16,15 +16,20 @@ export const Footer: FC = () => (
       <Container variant="section">
         <Contact>
           <Title>Contact Us</Title>
-          <Info href="tel:+1-360-207-4583" variant="invisible">
+          <Info hasArrow={false} href="tel:+1-360-207-4583" variant="invisible">
             +1 (360) 207-4583
           </Info>
-          <Info href="mailto:hello@brandglue.com" variant="invisible">
+          <Info
+            hasArrow={false}
+            href="mailto:hello@brandglue.com"
+            variant="invisible"
+          >
             hello@brandglue.com
           </Info>
           <Social>
             <SocialIcon>
               <Anchor
+                hasArrow={false}
                 href="https://www.facebook.com/BrandGlue"
                 variant="invisible"
               >
@@ -32,12 +37,17 @@ export const Footer: FC = () => (
               </Anchor>
             </SocialIcon>
             <SocialIcon>
-              <Anchor href="https://twitter.com/glue" variant="invisible">
+              <Anchor
+                hasArrow={false}
+                href="https://twitter.com/glue"
+                variant="invisible"
+              >
                 <TwitterIcon />
               </Anchor>
             </SocialIcon>
             <SocialIcon>
               <Anchor
+                hasArrow={false}
                 href="https://www.linkedin.com/company/brandglue-com"
                 variant="invisible"
               >

@@ -1,5 +1,4 @@
 import { MDXProvider } from '@mdx-js/react';
-import { CaretRight } from '@styled-icons/boxicons-regular';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React, { FC } from 'react';
 
@@ -64,8 +63,8 @@ export const Services: FC<IProps> = ({ data }) => {
                   <GridLabel>{frontmatter?.title}</GridLabel>
                   <P>{frontmatter?.shortDescription}</P>
                   <Box flexGrow={0}>
-                    <NavLink to={`/${Pages.Services}`}>
-                      Learn more <Arrow />
+                    <NavLink hasArrow to={`/${Pages.Services}`}>
+                      Learn more
                     </NavLink>
                   </Box>
                 </GridText>
@@ -152,7 +151,7 @@ const GridText = styled.div`
   flex-flow: column;
 `;
 
-const GridLabel = styled(P)`
+const GridLabel = styled.h5`
   &:after {
     content: '';
     display: block;
@@ -161,8 +160,4 @@ const GridLabel = styled(P)`
     width: 48px;
     margin-top: ${({ theme }) => theme.space[2]}px;
   }
-`;
-
-const Arrow = styled(CaretRight)`
-  width: 20px;
 `;

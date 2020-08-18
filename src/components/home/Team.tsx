@@ -1,4 +1,3 @@
-import { CaretRight } from '@styled-icons/boxicons-regular';
 import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
@@ -31,8 +30,8 @@ export const Team: FC<IProps> = ({ data }) => {
                 work on your social outlets. Get to know each of us, learn a bit
                 more about the family, and if you want to, reach out!
               </P>
-              <NavLink to={`/${Pages.About}`}>
-                Learn More About Us <Arrow></Arrow>
+              <NavLink hasArrow to={`/${Pages.About}`}>
+                Learn More About Us
               </NavLink>
             </Box>
           </Box>
@@ -51,6 +50,7 @@ export const Team: FC<IProps> = ({ data }) => {
                     <Image
                       key={frontmatter.name}
                       alt={frontmatter.name}
+                      css={{ borderRadius: '5px' }}
                       fluid={
                         frontmatter.image?.childImageSharp?.fluid as FluidObject
                       }
@@ -77,8 +77,4 @@ const Container = styled(Box)`
       rgba(${hexToRgb(theme.colors.gray02)}, 1) 100%
     );
   `}
-`;
-
-const Arrow = styled(CaretRight)`
-  width: 20px;
 `;

@@ -1,4 +1,5 @@
 import { LinkGetProps } from '@reach/router';
+import { ArrowRight } from '@styled-icons/bootstrap';
 import cx from 'classnames';
 import { Link, GatsbyLinkProps } from 'gatsby';
 import React, { FC } from 'react';
@@ -6,7 +7,11 @@ import { color, space, typography, variant } from 'styled-system';
 
 import { customText, StyledSystemProps, styled } from '@styles/index';
 
-const WrappedLink: FC<GatsbyLinkProps<unknown>> = (props) => {
+interface IProps {
+  hasArrow?: boolean;
+}
+
+const WrappedLink: FC<GatsbyLinkProps<unknown> & IProps> = (props) => {
   const isActive = ({ isCurrent, isPartiallyCurrent }: LinkGetProps) => {
     /*
       IMPORTANT:
@@ -29,7 +34,7 @@ const WrappedLink: FC<GatsbyLinkProps<unknown>> = (props) => {
       style={props.style}
       to={props.to}
     >
-      {props.children}
+      {props.children} {props.hasArrow && <Arrow />}
     </Link>
   );
 };
@@ -37,6 +42,10 @@ const WrappedLink: FC<GatsbyLinkProps<unknown>> = (props) => {
 WrappedLink.defaultProps = {
   className: '',
 };
+
+const Arrow = styled(ArrowRight)`
+  width: 20px;
+`;
 
 export const NavLink = styled(WrappedLink)<StyledSystemProps>`
   ${({ theme }) =>

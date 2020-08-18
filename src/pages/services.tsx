@@ -98,7 +98,6 @@ const ServiceText = styled(Box)<IServiceProps>`
 const ServiceTitle = styled.h2`
   font-size: ${scale(0.1).fontSize};
   color: ${({ theme }) => theme.colors.gray04};
-  letter-spacing: 1px;
 `;
 
 const ServiceImage = styled(Box)`
