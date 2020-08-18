@@ -52,32 +52,42 @@ export const Previews: React.FC<IProps> = ({ blogPosts }) => {
 
   return (
     <>
-      <FeaturedPost>
-        {featured?.node?.frontmatter &&
-          renderPost(featured.node.frontmatter, featured.node.excerpt)}
-      </FeaturedPost>
-      <PostGrid>
-        {posts.map(({ node: post }, index: number) => {
-          const { excerpt, frontmatter } = post;
-          return (
-            frontmatter && (
-              <Post key={index}>{renderPost(frontmatter, excerpt)}</Post>
-            )
-          );
-        })}
-      </PostGrid>
+      <Box bg="gray00">
+        <FeaturedWrapper>
+          <FeaturedPost>
+            {featured?.node?.frontmatter &&
+              renderPost(featured.node.frontmatter, featured.node.excerpt)}
+          </FeaturedPost>
+        </FeaturedWrapper>
+      </Box>
+      <Box pb={0} variant="section">
+        <PostGrid>
+          {posts.map(({ node: post }, index: number) => {
+            const { excerpt, frontmatter } = post;
+            return (
+              frontmatter && (
+                <Post key={index}>{renderPost(frontmatter, excerpt)}</Post>
+              )
+            );
+          })}
+        </PostGrid>
+      </Box>
     </>
   );
 };
 
-const gridGap = '60px';
+const FeaturedWrapper = styled(Box)`
+  max-width: ${({ theme }) => theme.spacings.maxContentColWidth};
+  padding: ${rhythm(1)};
+  margin: 0 auto;
+`;
 
 const PostGrid = styled(Box)`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 1fr;
   align-items: flex-start;
-  grid-gap: ${gridGap};
+  grid-gap: 60px;
   margin-bottom: ${rhythm(2)};
 `;
 
@@ -115,8 +125,6 @@ const FeaturedPost = styled(Box)`
   display: flex;
   background: ${({ theme }) => theme.colors.gray00};
   padding: ${rhythm(0.75)};
-  border-top: 3px solid ${({ theme }) => theme.colors.blue};
-  margin-bottom: ${gridGap};
 
   ${PostImage} {
     flex-basis: 50%;

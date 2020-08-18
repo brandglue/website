@@ -38,11 +38,13 @@ export const Blog: FC<IProps> = ({ data }) => {
   return (
     <Box>
       <Divider />
-      <Box variant="section">
+      <Box pb={0} variant="section">
         <H1>There&apos;s a lot going on out there in the social sphere.</H1>
         <P>Here&apos;s what we&apos;ve got to say about it.</P>
         <ActionBar />
-        {renderChunks()}
+      </Box>
+      {renderChunks()}
+      <Box pt={0} variant="section">
         <LoadMore allLoaded={allLoaded} handleLoadMore={handleLoadMore} />
       </Box>
     </Box>

@@ -53,11 +53,13 @@ export const Category: FC<IProps> = ({
   return (
     <Box>
       <Divider />
-      <Box variant="section">
+      <Box pb={0} variant="section">
         <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <ActionBar />
         <H3>Category: {category}</H3>
-        {renderChunks()}
+      </Box>
+      {renderChunks()}
+      <Box pt={0} variant="section">
         <LoadMore allLoaded={allLoaded} handleLoadMore={handleLoadMore} />
       </Box>
     </Box>
