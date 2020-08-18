@@ -1,4 +1,4 @@
-import React, { FC, useContext } from 'react';
+import React, { FC, useContext, useEffect, useState } from 'react';
 
 import { Box, NavLink } from '@components/core';
 import {
@@ -43,10 +43,15 @@ const largeMenuItems: IMenuItem[] = [
 
 export const Header: FC = () => {
   const appState = useContext(AppState);
+  const [showLogo, setShowLogo] = useState(false);
+
+  useEffect(() => {
+    setShowLogo(true);
+  }, []);
 
   const smallDeviceMenu = (
     <Container>
-      <LogoLink to={`/`} variant="invisible">
+      <LogoLink showLogo={showLogo} to={`/`} variant="invisible">
         <BrandGlueLogo />
       </LogoLink>
       <SmallDeviceMenu>
@@ -68,7 +73,7 @@ export const Header: FC = () => {
   const largeDeviceMenu = (
     <Container>
       <LargeDeviceWrapper>
-        <LogoLink to={`/`} variant="invisible">
+        <LogoLink showLogo={showLogo} to={`/`} variant="invisible">
           <BrandGlueLogo />
         </LogoLink>
         <LargeDeviceMenu>
@@ -102,11 +107,16 @@ const Container = styled.header`
   `)}
 `;
 
-const LogoLink = styled(NavLink)`
+interface IStyleProps {
+  showLogo: boolean;
+}
+
+const LogoLink = styled(NavLink)<IStyleProps>`
   display: block;
   width: 50%;
   max-width: 220px;
   padding-top: 10px;
+  opacity: ${({ showLogo }) => (showLogo ? '1' : 0)};
 
   ${minMediaQuery.Medium(css`
     flex: 0 0 220px;
