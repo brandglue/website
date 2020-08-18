@@ -41,9 +41,9 @@ export const Clients: FC = () => {
           }
         }
       }
-      dsg: file(
+      intel: file(
         sourceInstanceName: { eq: "media" }
-        relativePath: { eq: "images/logo-dicks-sporting-goods.jpg" }
+        relativePath: { eq: "images/logo-intel.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1100) {
@@ -81,16 +81,16 @@ export const Clients: FC = () => {
             fluid={images?.quickbooks?.childImageSharp?.fluid as FluidObject}
           />
         )}
+        {images?.intel?.childImageSharp?.fluid && (
+          <Image
+            alt="intel"
+            fluid={images?.intel?.childImageSharp?.fluid as FluidObject}
+          />
+        )}
         {images?.kayak?.childImageSharp?.fluid && (
           <Image
             alt="kayak"
             fluid={images?.kayak?.childImageSharp?.fluid as FluidObject}
-          />
-        )}
-        {images?.dsg?.childImageSharp?.fluid && (
-          <Image
-            alt="dicks-sporting-goods"
-            fluid={images?.dsg?.childImageSharp?.fluid as FluidObject}
           />
         )}
         {images?.youtube?.childImageSharp?.fluid && (

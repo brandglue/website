@@ -122,7 +122,7 @@ export default About;
 export const aboutPage = graphql`
   query AboutPage {
     team: allMdx(
-      filter: { frontmatter: { type: { eq: "team" } } }
+      filter: { frontmatter: { type: { eq: "team" }, name: { ne: "You?" } } }
       sort: { order: ASC, fields: frontmatter___order }
     ) {
       edges {
