@@ -1,9 +1,9 @@
-import { AboutPageQuery } from '@generated/graphql';
 import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
 import { Box, Divider, H1, H2, Image, P } from '@components/core';
+import { AboutPageQuery } from '@generated/graphql';
 import { AboutBrandGlueDesktop, HiringQuestionMark } from '@media/svg';
 import { rhythm, scale, styled, css } from '@styles/index';
 
@@ -54,7 +54,12 @@ export const About: FC<IProps> = ({ data }) => {
               );
             })}
             <GridItem key="hiring">
-              <HiringQuestionMark />
+              {data.hiring?.childImageSharp?.fluid && (
+                <Image
+                  alt="hiring"
+                  fluid={data.hiring?.childImageSharp?.fluid as FluidObject}
+                />
+              )}
               <Name>You?</Name>
               <Title>A talented teammate</Title>
               <Bio>
@@ -112,7 +117,7 @@ const Bio = styled(Box)`
   `}
 `;
 
-const Name = styled(Box)`
+const Name = styled(Box)<INameProps>`
   margin-top: 0.5em;
   font-size: ${scale(0.25).fontSize};
   line-height: ${scale(0.25).lineHeight};
@@ -160,6 +165,17 @@ export const aboutPage = graphql`
               }
             }
           }
+        }
+      }
+    }
+    hiring: file(
+      sourceInstanceName: { eq: "media" }
+      relativePath: { eq: "images/hiring.jpg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 1100) {
+          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluidLimitPresentationSize
         }
       }
     }

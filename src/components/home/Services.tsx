@@ -80,6 +80,7 @@ export const Services: FC<IProps> = ({ data }) => {
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
   justify-content: center;
   align-items: flex-start;
   margin: ${rhythm(1)} 0;

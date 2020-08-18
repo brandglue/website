@@ -6,7 +6,7 @@ import React, { FC } from 'react';
 import { Box, Image, P, H5, NavLink } from '@components/core';
 import { TopLevelPages as Pages } from '@constants/routes';
 import { FeaturedCaseStudyQuery } from '@generated/graphql';
-import { css, minMediaQuery, styled } from '@styles/index';
+import { css, minMediaQuery, rhythm, styled } from '@styles/index';
 
 export const CaseStudy: FC = () => {
   const intuitLogo = useStaticQuery<FeaturedCaseStudyQuery>(graphql`
@@ -79,6 +79,7 @@ const CaseStudyTitle = styled(H5)`
   ${({ theme }) => css`
     color: ${theme.colors.gold};
     text-transform: uppercase;
+    margin-bottom: ${rhythm(0.25)};
   `};
 `;
 
