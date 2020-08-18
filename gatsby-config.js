@@ -12,7 +12,6 @@ module.exports = {
       options: {
         '@components': path.join(__dirname, 'src/components'),
         '@constants': path.join(__dirname, 'src/constants'),
-        '@generated': path.join(__dirname, '__generated__'),
         '@hooks': path.join(__dirname, 'src/hooks'),
         '@media': path.join(__dirname, 'src/media'),
         '@models': path.join(__dirname, 'src/models'),
@@ -139,12 +138,12 @@ module.exports = {
         path: `${__dirname}/src/content/services`,
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-graphql-codegen',
-    //   options: {
-    //     fileName: `./__generated__/graphql.ts`,
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-typegen',
+      options: {
+        outputPath: '__generated__/graphql.d.ts',
+      },
+    },
     // {
     //   resolve: 'gatsby-redirect-from',
     //   options: {

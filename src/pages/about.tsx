@@ -3,12 +3,11 @@ import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
 import { Box, Divider, H1, H2, Image, P } from '@components/core';
-import { AboutPageQuery } from '@generated/graphql';
-import { AboutBrandGlueDesktop, HiringQuestionMark } from '@media/svg';
+import { AboutBrandGlueDesktop } from '@media/svg';
 import { rhythm, scale, styled, css } from '@styles/index';
 
 interface IProps {
-  data: AboutPageQuery;
+  data: GatsbyTypes.AboutPageQuery;
 }
 
 export const About: FC<IProps> = ({ data }) => {
@@ -117,7 +116,7 @@ const Bio = styled(Box)`
   `}
 `;
 
-const Name = styled(Box)<INameProps>`
+const Name = styled(Box)`
   margin-top: 0.5em;
   font-size: ${scale(0.25).fontSize};
   line-height: ${scale(0.25).lineHeight};

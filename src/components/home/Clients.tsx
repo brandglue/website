@@ -1,4 +1,3 @@
-import { ClientLogosQuery } from '@generated/graphql';
 import { graphql, useStaticQuery } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
@@ -6,7 +5,7 @@ import React, { FC } from 'react';
 import { Box, Image } from '@components/core';
 
 export const Clients: FC = () => {
-  const images = useStaticQuery<ClientLogosQuery>(graphql`
+  const images = useStaticQuery<GatsbyTypes.ClientLogosQuery>(graphql`
     query ClientLogos {
       quickbooks: file(
         sourceInstanceName: { eq: "media" }

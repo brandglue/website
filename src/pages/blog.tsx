@@ -1,4 +1,3 @@
-import { BlogPageQuery } from '@generated/graphql';
 import { graphql } from 'gatsby';
 import { chunk } from 'lodash-es';
 import React, { FC, useState } from 'react';
@@ -7,7 +6,7 @@ import { ActionBar, LoadMore, Previews } from '@components/blog';
 import { Box, Divider, P, H1 } from '@components/core';
 
 interface IProps {
-  data: BlogPageQuery;
+  data: GatsbyTypes.BlogPageQuery;
 }
 
 export const Blog: FC<IProps> = ({ data }) => {

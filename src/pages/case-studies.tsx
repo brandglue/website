@@ -5,11 +5,10 @@ import React, { FC } from 'react';
 
 import { Contact } from '@components/common';
 import { Box, Divider, H1, Image, NavLink, P } from '@components/core';
-import { CaseStudiesPageQuery } from '@generated/graphql';
 import { rhythm, styled } from '@styles/index';
 
 interface IProps {
-  data: CaseStudiesPageQuery;
+  data: GatsbyTypes.CaseStudiesPageQuery;
 }
 
 export const CaseStudies: FC<IProps> = ({ data }) => {

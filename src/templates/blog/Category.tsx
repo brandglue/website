@@ -1,4 +1,3 @@
-import { BlogPostsByCategoryQuery } from '@generated/graphql';
 import { graphql } from 'gatsby';
 import { chunk } from 'lodash-es';
 import React, { FC, useEffect, useState } from 'react';
@@ -11,7 +10,7 @@ interface IProps {
   pathContext: {
     category: string;
   };
-  data: BlogPostsByCategoryQuery;
+  data: GatsbyTypes.BlogPostsByCategoryQuery;
   pageContext: any;
 }
 

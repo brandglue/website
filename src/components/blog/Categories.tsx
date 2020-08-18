@@ -2,13 +2,12 @@ import { useStaticQuery, graphql } from 'gatsby';
 import React, { FC } from 'react';
 
 import { Box } from '@components/core';
-import { BlogCategoriesQuery } from '@generated/graphql';
 import { styled } from '@styles/index';
 
 import { Category } from './Category';
 
 export const Categories: FC = () => {
-  const data = useStaticQuery<BlogCategoriesQuery>(graphql`
+  const data = useStaticQuery<GatsbyTypes.blogCategoriesQuery>(graphql`
     query blogCategories {
       allMdx {
         group(field: frontmatter___categories) {

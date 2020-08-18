@@ -1,12 +1,10 @@
 import { MDXProvider } from '@mdx-js/react';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { LoDashExplicitNumberArrayWrapper } from 'lodash';
 import React, { FC } from 'react';
 
 import { Contact } from '@components/common';
 import { Box, Divider, H1, P } from '@components/core';
-import { ServicesPageQuery } from '@generated/graphql';
 import {
   AudiencePersonas,
   CommunityManagement,
@@ -21,7 +19,7 @@ import {
 import { scale, styled } from '@styles/index';
 
 interface IProps {
-  data: ServicesPageQuery;
+  data: GatsbyTypes.ServicesPageQuery;
 }
 
 export const Services: FC<IProps> = ({ data }) => {
@@ -53,15 +51,17 @@ export const Services: FC<IProps> = ({ data }) => {
         const { frontmatter } = service;
         const isEven = index % 2 === 0;
         return (
-          <ServiceWrapper key={frontmatter.title}>
+          <ServiceWrapper key={frontmatter?.title}>
             <Service isEven={isEven} variant="section">
               <ServiceText isEven={isEven}>
-                <ServiceTitle>{frontmatter.title}</ServiceTitle>
-                <h3>{frontmatter.shortDescription}</h3>
-                <p>{frontmatter.longDescription}</p>
+                <ServiceTitle>{frontmatter?.title}</ServiceTitle>
+                <h3>{frontmatter?.shortDescription}</h3>
+                <p>{frontmatter?.longDescription}</p>
               </ServiceText>
               <ServiceImage>
-                <MDXRenderer>{frontmatter.icon}</MDXRenderer>
+                {frontmatter?.icon && (
+                  <MDXRenderer>{frontmatter.icon}</MDXRenderer>
+                )}
               </ServiceImage>
             </Service>
           </ServiceWrapper>

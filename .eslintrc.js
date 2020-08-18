@@ -27,12 +27,7 @@ const path = require('path');
     },
     rules: {
       'import/no-named-as-default': 'off',
-      'import/no-unresolved': [
-        'error',
-        {
-          ignore: ['@generated', '__generated__'],
-        },
-      ],
+      'import/no-unresolved': 'error',
       'import/order': [
         'error',
         {

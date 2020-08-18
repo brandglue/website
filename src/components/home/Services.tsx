@@ -5,7 +5,6 @@ import React, { FC } from 'react';
 
 import { Box, H2, NavLink, P } from '@components/core';
 import { TopLevelPages as Pages } from '@constants/routes';
-import { HomePageQuery } from '@generated/graphql';
 import {
   AudiencePersonas,
   CommunityManagement,
@@ -20,7 +19,7 @@ import {
 import { css, hexToRgb, minMediaQuery, rhythm, styled } from '@styles/index';
 
 interface IProps {
-  data: HomePageQuery;
+  data: GatsbyTypes.HomePageQuery;
 }
 
 export const Services: FC<IProps> = ({ data }) => {
@@ -55,13 +54,15 @@ export const Services: FC<IProps> = ({ data }) => {
           {edges.map(({ node: service }) => {
             const { frontmatter } = service;
             return (
-              <GridItem key={frontmatter.title}>
+              <GridItem key={frontmatter?.title}>
                 <GridIcon>
-                  <MDXRenderer>{frontmatter.icon}</MDXRenderer>
+                  {frontmatter?.icon && (
+                    <MDXRenderer>{frontmatter.icon}</MDXRenderer>
+                  )}
                 </GridIcon>
                 <GridText>
-                  <GridLabel>{frontmatter.title}</GridLabel>
-                  <P>{frontmatter.shortDescription}</P>
+                  <GridLabel>{frontmatter?.title}</GridLabel>
+                  <P>{frontmatter?.shortDescription}</P>
                   <Box flexGrow={0}>
                     <NavLink to={`/${Pages.Services}`}>
                       Learn more <Arrow />

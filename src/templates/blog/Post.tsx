@@ -6,11 +6,10 @@ import React from 'react';
 import { Category } from '@components/blog';
 import { Breadcrumbs } from '@components/common';
 import { Box, Divider, SwitchLink, H2, Span } from '@components/core';
-import { BlogPostQuery } from '@generated/graphql';
 import { css, rhythm, scale, styled } from '@styles/index';
 
 interface IProps {
-  data: BlogPostQuery;
+  data: GatsbyTypes.BlogPostQuery;
   pageContext: any;
 }
 

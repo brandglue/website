@@ -27,7 +27,6 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
-      "@generated/*": ["__generated__/*"],
       "@hooks/*": ["src/hooks/*"],
       "@media/*": ["src/media/*"],
       "@models/*": ["src/models/*"],

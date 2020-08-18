@@ -4,10 +4,9 @@ import React, { FC } from 'react';
 import { Contact } from '@components/common';
 import { Box, Divider } from '@components/core';
 import { CaseStudy, Clients, Hero, Services, Team } from '@components/home';
-import { HomePageQuery } from '@generated/graphql';
 
 interface IProps {
-  data: HomePageQuery;
+  data: GatsbyTypes.HomePageQuery;
 }
 
 export const Home: FC<IProps> = ({ data }) => {
