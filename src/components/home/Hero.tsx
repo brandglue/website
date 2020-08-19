@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { Box, H1 } from '@components/core';
 import heroVideo from '@media/videos/hero-homepage.mp4';
-import { css, hexToRgb, minMediaQuery, scale, styled } from '@styles/index';
+import { css, minMediaQuery, scale, styled } from '@styles/index';
 
 export const Hero: FC = () => {
   return (
