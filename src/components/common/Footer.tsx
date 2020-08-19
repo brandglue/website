@@ -33,7 +33,7 @@ export const Footer: FC = () => (
                 href="https://www.facebook.com/BrandGlue"
                 variant="invisible"
               >
-                <FacebookIcon />
+                <Facebook />
               </Anchor>
             </SocialIcon>
             <SocialIcon>
@@ -42,7 +42,7 @@ export const Footer: FC = () => (
                 href="https://twitter.com/glue"
                 variant="invisible"
               >
-                <TwitterIcon />
+                <Twitter />
               </Anchor>
             </SocialIcon>
             <SocialIcon>
@@ -51,7 +51,7 @@ export const Footer: FC = () => (
                 href="https://www.linkedin.com/company/brandglue-com"
                 variant="invisible"
               >
-                <LinkedInIcon />
+                <Linkedin />
               </Anchor>
             </SocialIcon>
           </Social>
@@ -186,24 +186,17 @@ const Social = styled.div`
 `;
 
 const SocialIcon = styled.div`
-  width: 30px;
+  color: ${({ theme }) => theme.colors.white};
   margin-right: 10px;
 
   &:last-child {
     margin-right: 0;
   }
-`;
 
-const FacebookIcon = styled(Facebook)`
-  color: ${({ theme }) => theme.colors.white};
-`;
-
-const TwitterIcon = styled(Twitter)`
-  color: ${({ theme }) => theme.colors.white};
-`;
-
-const LinkedInIcon = styled(Linkedin)`
-  color: ${({ theme }) => theme.colors.white};
+  svg {
+    width: 30px;
+    height: auto;
+  }
 `;
 
 const Links = styled.ul`
