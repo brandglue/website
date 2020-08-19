@@ -84,6 +84,10 @@ export const GlobalStyles = createGlobalStyle`
     border-bottom: 1px solid currentColor;
     text-decoration: none;
     cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
 

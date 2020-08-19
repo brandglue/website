@@ -52,9 +52,13 @@ export const NavLink = styled(WrappedLink)<StyledSystemProps>`
     variant({
       variants: {
         invisible: {
-          color: 'currentColor',
-          textDecoration: 'none',
-          border: 'none',
+          'color': 'currentColor',
+          'textDecoration': 'none',
+          'border': 'none',
+
+          '&:hover': {
+            opacity: `1`,
+          },
         },
         title: {
           'display': 'inline-block',
@@ -64,6 +68,7 @@ export const NavLink = styled(WrappedLink)<StyledSystemProps>`
 
           '&:hover': {
             color: `${theme.colors.blue}`,
+            opacity: `1`,
           },
         },
         button: {
@@ -78,6 +83,7 @@ export const NavLink = styled(WrappedLink)<StyledSystemProps>`
 
           '&:hover': {
             background: `${theme.colors.blue}`,
+            opacity: `1`,
           },
         },
         badge: {
@@ -92,7 +98,6 @@ export const NavLink = styled(WrappedLink)<StyledSystemProps>`
           '&:hover': {
             background: `${theme.colors.blue}`,
             color: `${theme.colors.white}`,
-            opacity: 0.9,
           },
         },
       },
