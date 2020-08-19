@@ -1,11 +1,10 @@
 import React, { FC, useLayoutEffect, useState } from 'react';
 
 import { Footer, Header } from '@components/common';
-import { BrandGlueLogoIconOnly } from '@media/svg';
 import { IAppState } from '@models/AppState';
 import { AppState } from '@src/AppState';
 import { GlobalStyles } from '@styles/globalStyles';
-import { Breakpoints, styled } from '@styles/index';
+import { Breakpoints } from '@styles/index';
 import { ThemeProvider } from '@styles/styled';
 import { theme } from '@styles/theme';
 
@@ -31,11 +30,7 @@ export const Layout: FC = ({ children }) => {
   };
 
   if (windowWidth === 0) {
-    return (
-      <Wrapper>
-        <BrandGlueLogoIconOnly />
-      </Wrapper>
-    );
+    return null;
   } else {
     return (
       <>
@@ -51,17 +46,5 @@ export const Layout: FC = ({ children }) => {
     );
   }
 };
-
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-
-  svg {
-    width: 100px;
-  }
-`;
 
 export default Layout;

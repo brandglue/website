@@ -100,6 +100,7 @@ const GridItem = styled.div`
     ${minMediaQuery.Medium(css`
       min-height: 200px;
       border: 1px solid ${({ theme }) => theme.colors.gray02};
+      border-radius: 3px;
 
       ${NavLink} {
         visibility: hidden;
@@ -112,7 +113,6 @@ const GridItem = styled.div`
         border: 1px solid ${theme.colors.blue};
         box-shadow: 0 0 1px 1px rgba(${hexToRgb(theme.colors.blue)}, 0.3),
           0 0 15px 0 rgba(${hexToRgb(theme.colors.gray03)}, 0.2);
-        border-radius: 3px;
         transform: scale(1.025);
         transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
           transform 0.3s ease-in-out;
