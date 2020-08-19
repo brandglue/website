@@ -1,7 +1,8 @@
 import { FluidObject } from 'gatsby-image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Box, Image, NavLink, P, H3, Span } from '@components/core';
+import { useScroll } from '@hooks/useScroll';
 import { styled, rhythm } from '@styles/index';
 
 interface IPost {

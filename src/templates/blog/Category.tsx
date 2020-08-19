@@ -21,6 +21,7 @@ export const Category: FC<IProps> = ({
 }) => {
   const [page, setPage] = useState(1);
   const [allLoaded, setAllLoaded] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const postsPerChunk = 5;
   const { edges } = data.allMdx;
@@ -31,9 +32,16 @@ export const Category: FC<IProps> = ({
     }
   }, [page, edges]);
 
+  useEffect(() => {
+    document.documentElement.scrollTop = scrollPosition;
+  }, [page, scrollPosition]);
+
   const handleLoadMore = () => {
     const pageCount = page + 1;
     setPage(pageCount);
+    setScrollPosition(
+      document.documentElement.scrollTop || document.body.scrollTop,
+    );
 
     if (pageCount * postsPerChunk >= edges.length) {
       setAllLoaded(true);

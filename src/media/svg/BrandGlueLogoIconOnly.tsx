@@ -10,8 +10,10 @@ export const BrandGlueLogoIconOnly: FC<IOwnProps> = (props) => (
   <Svg
     aria-labelledby="BrandGlueLogoIconOnlyTitle"
     className={props.className}
+    height="100"
     role="img"
     viewBox="0 0 178.1 180"
+    width="100"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title id="BrandGlueLogoIconOnlyTitle">BrandGlueLogoIconOnly Icon</title>

@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 import { chunk } from 'lodash-es';
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 
 import { ActionBar, LoadMore, Previews } from '@components/blog';
 import { Box, Divider, P, H1 } from '@components/core';
@@ -12,13 +12,21 @@ interface IProps {
 export const Blog: FC<IProps> = ({ data }) => {
   const [page, setPage] = useState(1);
   const [allLoaded, setAllLoaded] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const postsPerChunk = 5;
   const { edges } = data.blogPosts;
 
+  useEffect(() => {
+    document.documentElement.scrollTop = scrollPosition;
+  }, [page, scrollPosition]);
+
   const handleLoadMore = () => {
     const pageCount = page + 1;
     setPage(pageCount);
+    setScrollPosition(
+      document.documentElement.scrollTop || document.body.scrollTop,
+    );
 
     if (pageCount * postsPerChunk >= edges.length) {
       setAllLoaded(true);
