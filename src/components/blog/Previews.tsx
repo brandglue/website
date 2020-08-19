@@ -1,8 +1,7 @@
 import { FluidObject } from 'gatsby-image';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import { Box, Image, NavLink, P, H3, Span } from '@components/core';
-import { useScroll } from '@hooks/useScroll';
 import { styled, rhythm } from '@styles/index';
 
 interface IPost {
@@ -26,12 +25,16 @@ export const Previews: React.FC<IProps> = ({ blogPosts }) => {
   ) => (
     <>
       <PostImage variant="flexItem">
-        {frontmatter.cover_image?.childImageSharp?.fluid && (
-          <Image
-            alt={frontmatter.title}
-            fluid={frontmatter.cover_image.childImageSharp.fluid as FluidObject}
-          />
-        )}
+        <NavLink to={frontmatter.slug} variant="invisible">
+          {frontmatter.cover_image?.childImageSharp?.fluid && (
+            <Image
+              alt={frontmatter.title}
+              fluid={
+                frontmatter.cover_image.childImageSharp.fluid as FluidObject
+              }
+            />
+          )}
+        </NavLink>
       </PostImage>
       <PostContent variant="flexItem">
         <Box>

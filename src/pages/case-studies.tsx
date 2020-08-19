@@ -58,7 +58,7 @@ export const CaseStudies: FC<IProps> = ({ data }) => {
 };
 
 const CaseStudyWrapper = styled(Box)`
-  &:nth-child(odd) {
+  &:nth-child(even) {
     background: ${({ theme }) => theme.colors.gray00};
   }
 `;

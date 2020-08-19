@@ -81,6 +81,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 1fr;
+  grid-gap: 20px;
   justify-content: center;
   align-items: flex-start;
   margin: ${rhythm(1)} 0;
@@ -93,26 +94,12 @@ const Grid = styled.div`
 const GridItem = styled.div`
   ${({ theme }) => css`
     display: flex;
+    height: 100%;
     padding: ${theme.space[5]}px;
 
     ${minMediaQuery.Medium(css`
       min-height: 200px;
-      border: 1px solid transparent;
-      border-top: 1px solid ${theme.colors.gray02};
-      border-left: 1px solid ${theme.colors.gray02};
-      &:nth-child(-n + 2) {
-        border-top: 1px solid ${theme.colors.gray02};
-      }
-      &:nth-child(odd) {
-        border-left: 1px solid ${theme.colors.gray02};
-      }
-      &:nth-child(-n + 3) {
-        border-top: 1px solid transparent;
-      }
-      &:first-child,
-      &:nth-child(3n + 1) {
-        border-left: 1px solid transparent;
-      }
+      border: 1px solid ${({ theme }) => theme.colors.gray02};
 
       ${NavLink} {
         visibility: hidden;
@@ -144,6 +131,10 @@ const GridItem = styled.div`
 const GridIcon = styled.div`
   width: 200px;
   margin-right: ${({ theme }) => theme.space[4]}px;
+
+  svg {
+    width: 100px;
+  }
 `;
 
 const GridText = styled.div`

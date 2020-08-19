@@ -74,7 +74,7 @@ export const Services: FC<IProps> = ({ data }) => {
 };
 
 const ServiceWrapper = styled(Box)`
-  &:nth-child(odd) {
+  &:nth-child(even) {
     background: ${({ theme }) => theme.colors.gray00};
   }
 `;
@@ -102,6 +102,10 @@ const ServiceTitle = styled.h2`
 
 const ServiceImage = styled(Box)`
   flex-basis: 20%;
+
+  svg {
+    width: 100%;
+  }
 `;
 
 export default Services;

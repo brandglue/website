@@ -90,13 +90,6 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-
-  svg {
-    width: 1em;
-    height: 1em;
-    color: currentColor;
-  }
-
   /* Styling breadcrumbs here because the Breadcrumb plugin component doesn't give direct access to the parent wrappers */
   .breadcrumb {
     .breadcrumb__list {

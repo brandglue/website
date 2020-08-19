@@ -22,7 +22,9 @@ export const About: FC<IProps> = ({ data }) => {
           And it feels like just yesterday that we got started. Here&apos;s a
           bit of our history.
         </P>
-        <AboutBrandGlueDesktop />
+        <BrandGlueStory>
+          <AboutBrandGlueDesktop />
+        </BrandGlueStory>
       </Box>
       <Team>
         <Box variant="section">
@@ -72,6 +74,12 @@ export const About: FC<IProps> = ({ data }) => {
     </>
   );
 };
+
+const BrandGlueStory = styled(Box)`
+  svg {
+    width: 100%;
+  }
+`;
 
 const Team = styled(Box)`
   background: ${({ theme }) => theme.colors.gray00};

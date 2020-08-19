@@ -111,6 +111,10 @@ const LogoLink = styled(NavLink)`
   ${minMediaQuery.Medium(css`
     flex: 0 0 220px;
   `)}
+
+  svg {
+    width: 100%;
+  }
 `;
 
 const SmallDeviceMenu = styled.nav`

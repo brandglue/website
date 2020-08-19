@@ -9,7 +9,7 @@ export const Svg = styled.svg.attrs({
   */
   'focusable': 'false',
 })`
-  width: 100%;
+  width: 1em;
   height: auto;
   color: inherit;
   fill: currentColor;

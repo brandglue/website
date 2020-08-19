@@ -58,6 +58,10 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
+
+  svg {
+    width: 100px;
+  }
 `;
 
 export default Layout;

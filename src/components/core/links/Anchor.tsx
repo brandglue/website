@@ -9,14 +9,12 @@ interface IProps {
 }
 
 export const Anchor: FC<IProps & StyledSystemTextProps> = ({
-  children,
-  className,
   hasArrow = true,
-  variant,
+  ...props
 }) => {
   return (
-    <StyledAnchor className={className} variant={variant}>
-      {children} {hasArrow && <Arrow />}
+    <StyledAnchor {...props}>
+      {props.children} {hasArrow && <Arrow />}
     </StyledAnchor>
   );
 };
