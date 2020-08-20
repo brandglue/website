@@ -1,3 +1,4 @@
+import { useStaticQuery, graphql } from 'gatsby';
 import React, { FC } from 'react';
 
 import { Box, H1 } from '@components/core';
@@ -5,9 +6,24 @@ import heroVideo from '@media/videos/hero-homepage.mp4';
 import { css, minMediaQuery, scale, styled } from '@styles/index';
 
 export const Hero: FC = () => {
+  const { file } = useStaticQuery<GatsbyTypes.HomepageHeroPosterQuery>(graphql`
+    query HomepageHeroPoster {
+      file(
+        sourceInstanceName: { eq: "media" }
+        relativePath: { eq: "images/homepage-hero-poster.jpg" }
+      ) {
+        childImageSharp {
+          fixed {
+            src
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <Container>
-      <HeroVideo autoPlay loop muted>
+      <HeroVideo autoPlay loop muted poster={file?.childImageSharp?.fixed?.src}>
         <source src={heroVideo} type="video/mp4" />
       </HeroVideo>
       <Header>
