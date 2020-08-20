@@ -46,7 +46,7 @@ const getEmailShareUrl = (url: string) => {
 };
 
 export const Share: FC<IProps> = ({ summary, title, url }) => {
-  const data = useStaticQuery<GatsbyTypes.ShareDataQuery>(graphql`
+  const { site } = useStaticQuery<GatsbyTypes.ShareDataQuery>(graphql`
     query ShareData {
       site {
         siteMetadata {
@@ -56,7 +56,7 @@ export const Share: FC<IProps> = ({ summary, title, url }) => {
     }
   `);
 
-  const siteUrl = data.site?.siteMetadata?.siteUrl || '';
+  const siteUrl = site?.siteMetadata?.siteUrl || '';
   const shareUrl = `${siteUrl}${url}`;
 
   const facebookUrl = getFacebookShareUrl(shareUrl);

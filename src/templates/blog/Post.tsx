@@ -4,7 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 
 import { Category, Share } from '@components/blog';
-import { Breadcrumbs } from '@components/common';
+import { Breadcrumbs, Seo } from '@components/common';
 import { Box, Divider, SwitchLink, H2, Span } from '@components/core';
 import { css, rhythm, scale, styled } from '@styles/index';
 
@@ -13,48 +13,56 @@ interface IProps {
   pageContext: any;
 }
 
-export const BlogPost: React.FC<IProps> = ({ data: { mdx }, pageContext }) => {
-  if (!mdx?.frontmatter || !mdx.body) {
+export const BlogPost: React.FC<IProps> = ({ data: { post }, pageContext }) => {
+  if (!post?.frontmatter || !post.body) {
     return null;
   }
 
-  const { body, frontmatter } = mdx;
+  const { body, frontmatter } = post;
 
   return (
-    <MDXProvider
-      components={{
-        // eslint-disable-next-line react/display-name
-        a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
-          <SwitchLink {...props} />
-        ),
-      }}
-    >
-      <Divider />
-      <PostWrapper>
-        <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
-        <H2>{frontmatter.title}</H2>
-        <PostHeader variant="flex">
-          <Meta>
-            {frontmatter.author}
-            <Sep></Sep>
-            {frontmatter.date}
-          </Meta>
-          <Categories>
-            {frontmatter.categories?.map((category) => {
-              return category && <Category key={category} value={category} />;
-            })}
-          </Categories>
-        </PostHeader>
-        <PostBody>
-          <MDXRenderer>{body}</MDXRenderer>
-        </PostBody>
-        <Share
-          summary={mdx.excerpt}
-          title={frontmatter.title}
-          url={pageContext.slug}
-        />
-      </PostWrapper>
-    </MDXProvider>
+    <>
+      <Seo
+        description={post.excerpt}
+        image={frontmatter.cover_image?.childImageSharp?.resize}
+        slug={frontmatter.slug}
+        title={frontmatter.title}
+      />
+      <MDXProvider
+        components={{
+          // eslint-disable-next-line react/display-name
+          a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
+            <SwitchLink {...props} />
+          ),
+        }}
+      >
+        <Divider />
+        <PostWrapper>
+          <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
+          <H2>{frontmatter.title}</H2>
+          <PostHeader variant="flex">
+            <Meta>
+              {frontmatter.author}
+              <Sep></Sep>
+              {frontmatter.date}
+            </Meta>
+            <Categories>
+              {frontmatter.categories?.map((category) => {
+                return category && <Category key={category} value={category} />;
+              })}
+            </Categories>
+          </PostHeader>
+          <PostBody>
+            <MDXRenderer>{body}</MDXRenderer>
+          </PostBody>
+          <Share
+            summary={post.excerpt}
+            title={frontmatter.title}
+            url={pageContext.slug}
+          />
+        </PostWrapper>
+      </MDXProvider>
+    </>
   );
 };
 
@@ -109,18 +117,19 @@ export default BlogPost; // default export needed for gatsby-node
 
 export const blogPostQuery = graphql`
   query BlogPost($slug: String!) {
-    mdx(frontmatter: { slug: { eq: $slug } }) {
+    post: mdx(frontmatter: { slug: { eq: $slug } }) {
       body
-      excerpt(pruneLength: 100)
+      excerpt(pruneLength: 160)
       frontmatter {
         author
         categories
         cover_image {
           name
           childImageSharp {
-            fluid(maxWidth: 1100) {
-              ...GatsbyImageSharpFluid_withWebp
-              ...GatsbyImageSharpFluidLimitPresentationSize
+            resize(width: 1100) {
+              src
+              height
+              width
             }
           }
         }

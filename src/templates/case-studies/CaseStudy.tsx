@@ -5,7 +5,7 @@ import { FluidObject } from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 
-import { Breadcrumbs } from '@components/common';
+import { Breadcrumbs, Seo } from '@components/common';
 import { Anchor, Box, Divider, Image, SwitchLink, H1 } from '@components/core';
 import { css, hexToRgb, rhythm, styled } from '@styles/index';
 
@@ -29,51 +29,58 @@ export const CaseStudy: React.FC<IProps> = ({
   );
 
   return (
-    <MDXProvider
-      components={{
-        // eslint-disable-next-line react/display-name
-        a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
-          <SwitchLink {...props} />
-        ),
-      }}
-    >
-      <Divider />
-      <Box pb={0} variant="section">
-        <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
-      </Box>
-      <Box bg="gray00">
-        <HeaderWrapper>
-          <Header>
-            <Logo variant="flexItem">
-              {frontmatter.logo?.childImageSharp?.fluid && (
-                <Image
-                  alt={frontmatter.logo?.name}
-                  fluid={
-                    frontmatter.logo?.childImageSharp?.fluid as FluidObject
-                  }
-                />
-              )}
-            </Logo>
-            <HeaderContent variant="flexItem">
-              <H1>{frontmatter.title}</H1>
-              {download?.publicURL && (
-                <Download
-                  download={frontmatter.filename}
-                  hasArrow={false}
-                  href={download.publicURL}
-                >
-                  Download the case study
-                  <StyledFilePdf />
-                </Download>
-              )}
-            </HeaderContent>
-          </Header>
-        </HeaderWrapper>
-      </Box>
-      <Box variant="section">
-        <MDXRenderer>{body}</MDXRenderer>
-      </Box>
-    </MDXProvider>
+    <>
+      <Seo
+        description={caseStudy.excerpt}
+        slug={frontmatter.slug}
+        title={frontmatter.title}
+      />
+      <MDXProvider
+        components={{
+          // eslint-disable-next-line react/display-name
+          a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
+            <SwitchLink {...props} />
+          ),
+        }}
+      >
+        <Divider />
+        <Box pb={0} variant="section">
+          <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
+        </Box>
+        <Box bg="gray00">
+          <HeaderWrapper>
+            <Header>
+              <Logo variant="flexItem">
+                {frontmatter.logo?.childImageSharp?.fluid && (
+                  <Image
+                    alt={frontmatter.logo?.name}
+                    fluid={
+                      frontmatter.logo?.childImageSharp?.fluid as FluidObject
+                    }
+                  />
+                )}
+              </Logo>
+              <HeaderContent variant="flexItem">
+                <H1>{frontmatter.title}</H1>
+                {download?.publicURL && (
+                  <Download
+                    download={frontmatter.filename}
+                    hasArrow={false}
+                    href={download.publicURL}
+                  >
+                    Download the case study
+                    <StyledFilePdf />
+                  </Download>
+                )}
+              </HeaderContent>
+            </Header>
+          </HeaderWrapper>
+        </Box>
+        <Box variant="section">
+          <MDXRenderer>{body}</MDXRenderer>
+        </Box>
+      </MDXProvider>
+    </>
   );
 };
 
@@ -125,6 +132,7 @@ export const caseStudyQuery = graphql`
   query CaseStudy($slug: String!) {
     caseStudy: mdx(frontmatter: { slug: { eq: $slug } }) {
       body
+      excerpt(pruneLength: 160)
       frontmatter {
         attachments {
           publicURL

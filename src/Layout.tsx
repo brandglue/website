@@ -1,6 +1,6 @@
 import React, { FC, useLayoutEffect, useState } from 'react';
 
-import { Footer, Header } from '@components/common';
+import { Footer, Header, Seo } from '@components/common';
 import { IAppState } from '@models/AppState';
 import { AppState } from '@src/AppState';
 import { GlobalStyles } from '@styles/globalStyles';
@@ -37,6 +37,7 @@ export const Layout: FC = ({ children }) => {
         <AppState.Provider value={state}>
           <ThemeProvider theme={theme}>
             <GlobalStyles />
+            <Seo />
             <Header />
             {children}
             <Footer />

@@ -2,9 +2,11 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'BrandGlue',
+    author: 'BrandGlue',
     description: 'BrandGlue website',
-    siteUrl: 'https://brandglue.netlify.app',
+    keywords: ['social media', 'social media agency'],
+    siteUrl: 'https://brandglue.netlify.app', // TODO: update when go live
+    title: 'BrandGlue',
   },
   plugins: [
     {
