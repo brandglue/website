@@ -8,10 +8,11 @@ interface IProps {
   hasArrow?: boolean;
 }
 
-export const Anchor: FC<IProps & StyledSystemTextProps> = ({
-  hasArrow = true,
-  ...props
-}) => {
+type Props = IProps &
+  StyledSystemTextProps &
+  React.AnchorHTMLAttributes<HTMLAnchorElement>;
+
+export const Anchor: FC<Props> = ({ hasArrow = true, ...props }) => {
   return (
     <StyledAnchor {...props}>
       {props.children} {hasArrow && <Arrow />}

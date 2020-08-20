@@ -21,11 +21,6 @@ export const Box = styled.div<StyledSystemProps>`
           padding: `${rhythm(2)} ${rhythm(1)}`,
           margin: 'auto',
         },
-        text: {
-          maxWidth: `${theme.spacings.maxTextColWidth}`,
-          padding: `${rhythm(1)}`,
-          margin: 'auto',
-        },
         centered: {
           display: 'flex',
           justifyContent: 'center',

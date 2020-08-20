@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 
-import { Category } from '@components/blog';
+import { Category, Share } from '@components/blog';
 import { Breadcrumbs } from '@components/common';
 import { Box, Divider, SwitchLink, H2, Span } from '@components/core';
 import { css, rhythm, scale, styled } from '@styles/index';
@@ -30,7 +30,7 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx }, pageContext }) => {
       }}
     >
       <Divider />
-      <Box variant="text">
+      <PostWrapper>
         <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <H2>{frontmatter.title}</H2>
         <PostHeader variant="flex">
@@ -45,11 +45,24 @@ export const BlogPost: React.FC<IProps> = ({ data: { mdx }, pageContext }) => {
             })}
           </Categories>
         </PostHeader>
-        <MDXRenderer>{body}</MDXRenderer>
-      </Box>
+        <PostBody>
+          <MDXRenderer>{body}</MDXRenderer>
+        </PostBody>
+        <Share
+          summary={mdx.excerpt}
+          title={frontmatter.title}
+          url={pageContext.slug}
+        />
+      </PostWrapper>
     </MDXProvider>
   );
 };
+
+const PostWrapper = styled(Box)`
+  max-width: ${({ theme }) => theme.spacings.maxTextColWidth};
+  padding: ${rhythm(1)};
+  margin: auto;
+`;
 
 const PostHeader = styled(Box)`
   ${({ theme }) => css`
@@ -88,12 +101,17 @@ const Categories = styled(Span)`
   margin-left: auto;
 `;
 
+const PostBody = styled(Box)`
+  margin-bottom: ${rhythm(2)};
+`;
+
 export default BlogPost; // default export needed for gatsby-node
 
 export const blogPostQuery = graphql`
   query BlogPost($slug: String!) {
     mdx(frontmatter: { slug: { eq: $slug } }) {
       body
+      excerpt(pruneLength: 100)
       frontmatter {
         author
         categories
