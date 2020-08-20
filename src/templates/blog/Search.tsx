@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { SearchForm } from '@components/blog';
 import { Breadcrumbs } from '@components/common';
-import { Box, Divider, H3, NavLink } from '@components/core';
+import { Box, Divider, NavLink } from '@components/core';
 import { RouteParts } from '@constants/routes';
 import { rhythm, styled } from '@styles/index';
 import { getSearchResults } from '@utils/getSearchResults';
@@ -26,20 +26,18 @@ export const Search: FC<IProps> = ({ pageContext }) => {
       return (
         <div>
           {results.map((page, i) => (
-            <div key={i}>
-              <NavLink to={page.url}>
-                <h4>{page.title}</h4>
-              </NavLink>
-            </div>
+            <Result key={i}>
+              <NavLink to={page.url}>{page.title}</NavLink>
+            </Result>
           ))}
         </div>
       );
-    } else if (query.length > 2) {
-      return <div>{`No results for '${query}'`}</div>;
-    } else if (results?.length === 0 && query.length > 0) {
-      return <div>{'Please insert at least 3 characters'}</div>;
+    } else if (query.length < 3) {
+      return (
+        <div>{`No results for '${query}'. Try using at least 3 characters.`}</div>
+      );
     } else {
-      return null;
+      return <div>{`No results for '${query}'.`}</div>;
     }
   };
 
@@ -50,10 +48,8 @@ export const Search: FC<IProps> = ({ pageContext }) => {
         <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <SearchForm initialQuery={query} />
         <Results>
-          {query && <H3>{`Search results: ${query}`}</H3>}
-          <div>
-            {results.length > 0 ? <ResultList /> : 'Enter a search query.'}
-          </div>
+          {query && <h4>{`Search results:`}</h4>}
+          <ResultList />
         </Results>
       </Box>
     </Box>
@@ -61,7 +57,11 @@ export const Search: FC<IProps> = ({ pageContext }) => {
 };
 
 const Results = styled(Box)`
-  margin-top: ${rhythm(1)};
+  margin-top: ${rhythm(2)};
+`;
+
+const Result = styled(Box)`
+  margin-bottom: 1em;
 `;
 
 export default Search;

@@ -124,7 +124,7 @@ export const Footer: FC = () => (
         <StyledBrandGlueLogoIconOnly />
       </Container>
     </Wrapper>
-    <Copyright style={{ ...scale(-0.25) }}>
+    <Copyright>
       &copy; {new Date().getFullYear()} BrandGlue. All Rights Reserved.
     </Copyright>
   </>
@@ -224,7 +224,8 @@ const StyledBrandGlueLogoIconOnly = styled(BrandGlueLogoIconOnly)`
 
 const Copyright = styled.div`
   ${({ theme }) => css`
-    background: ${theme.colors.black};
+    background: ${theme.colors.gray05};
+    font-size: ${scale(-0.25).fontSize};
     color: ${theme.colors.gray03};
     text-align: center;
     padding: 15px;
