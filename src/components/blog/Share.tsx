@@ -66,7 +66,7 @@ export const Share: FC<IProps> = ({ summary, title, url }) => {
 
   return (
     <Wrapper>
-      <H4 mb={0}>Enjoy what you read? Let someone know!</H4>
+      <H4 mb={0}>Enjoy what you read? Pass it along!</H4>
       <IconWrapper>
         <Anchor
           hasArrow={false}
