@@ -7,7 +7,8 @@ fields:
   default: []
   config:
     required: false
-    options: []
+    options:
+    - blog-post
     source:
       type: simple
       section: 
