@@ -2,8 +2,17 @@
 label: Blog Post
 hide_body: false
 fields:
-- type: text
-  name: type
+- name: type
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
   label: type
 - type: text
   name: title
@@ -17,6 +26,7 @@ fields:
 - type: text
   name: slug
   label: slug
+  hidden: false
 - type: file
   name: cover_image
   label: cover_image
