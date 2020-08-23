@@ -34,3 +34,5 @@ fields:
 - type: list
   name: categories
   label: categories
+pages:
+- src/content/blog/test.md
