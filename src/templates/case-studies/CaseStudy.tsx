@@ -24,9 +24,7 @@ export const CaseStudy: React.FC<IProps> = ({
 
   const { body, frontmatter } = caseStudy;
 
-  const download = frontmatter.attachments?.find((attachment) =>
-    attachment?.publicURL?.search(/.pdf$/),
-  );
+  const download = frontmatter.attachment?.publicURL;
 
   return (
     <>
@@ -62,11 +60,11 @@ export const CaseStudy: React.FC<IProps> = ({
               </Logo>
               <HeaderContent variant="flexItem">
                 <H1>{frontmatter.title}</H1>
-                {download?.publicURL && (
+                {download && (
                   <Download
                     download={frontmatter.filename}
                     hasArrow={false}
-                    href={download.publicURL}
+                    href={download}
                   >
                     Download the case study
                     <StyledFilePdf />
@@ -134,7 +132,7 @@ export const caseStudyQuery = graphql`
       body
       excerpt(pruneLength: 160)
       frontmatter {
-        attachments {
+        attachment {
           publicURL
         }
         filename

@@ -5,6 +5,7 @@ backend:
   name: git-gateway
   squash_merges: true
 
+# Enable when using local git repo for populating cms
 # local_backend: true
 
 publish_mode: editorial_workflow
@@ -14,15 +15,16 @@ public_folder: /uploads
 
 collections:
   - name: blog
-    label: Blog
+    label: Blog Posts
     folder: src/content/blog
-    path: '{{year}}/{{month}}/{{slug}}/index'
+    path: '{{year}}/{{month}}/{{title}}/index'
     slug: '{{slug}}'
-    preview_path: blog/{{slug}}
+    preview_path: blog/{{title}}
     extension: mdx
     format: frontmatter
     create: true
     fields:
+      - { label: 'Type', name: 'type', widget: 'hidden', default: 'blog-post' }
       - { name: title, label: Title, widget: string }
       - {
           name: date,
@@ -30,5 +32,75 @@ collections:
           widget: datetime,
           format: 'MMM Do YYYY',
         }
+      - {
+          name: categories,
+          label: Categories,
+          widget: select,
+          options: ['Tips', 'News', 'Design', 'Advertising', 'Case Studies'],
+        }
       - { name: cover_image, label: Cover Image, widget: image }
       - { name: body, label: Body, widget: markdown }
+    view_filters:
+      - label: 'Published: 2020'
+        field: date
+        pattern: '2020'
+      - label: Drafts
+        field: draft
+        pattern: true
+
+  - name: case-studies
+    label: Case Studies
+    folder: src/content/case-studies
+    path: '{{title}}/index'
+    slug: '{{slug}}'
+    preview_path: case-study/{{title}}
+    extension: mdx
+    format: frontmatter
+    create: true
+    identifier_field: client
+    fields:
+      - { label: 'Type', name: 'type', widget: 'hidden', default: 'case-study' }
+      - { name: title, label: Title, widget: string }
+      - { name: client, label: Client, widget: string }
+      - { name: description, label: Description, widget: string }
+      - { name: logo, label: Logo, widget: image }
+      - { name: filename, label: Filename, widget: string }
+      - { name: attachment, label: Attachment, widget: file }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: services
+    label: Services
+    folder: src/content/services
+    path: '{{title}}/index'
+    slug: '{{slug}}'
+    extension: mdx
+    format: frontmatter
+    create: true
+    fields:
+      - { label: 'Type', name: 'type', widget: 'hidden', default: 'service' }
+      - { name: title, label: Title, widget: string }
+      - { name: shortDescription, label: Short Description, widget: string }
+      - { name: longDescription, label: Long Description, widget: string }
+      - { name: icon, label: Icon, widget: string }
+    editor:
+      preview: false
+
+  - name: team
+    label: Team
+    folder: src/content/team
+    path: '{{title}}/index'
+    slug: '{{slug}}'
+    extension: mdx
+    format: frontmatter
+    create: true
+    identifier_field: name
+    fields:
+      - { label: 'Type', name: 'type', widget: 'hidden', default: 'team' }
+      - { name: title, label: Title, widget: string }
+      - { name: name, label: Name, widget: string }
+      - { name: image, label: Image, widget: image }
+      - { name: loves, label: Loves, widget: string }
+      - { name: goals, label: Goals, widget: string }
+      - { name: order, label: Order, widget: number }
+    editor:
+      preview: false

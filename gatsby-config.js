@@ -24,7 +24,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-typescript',
-    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
     'gatsby-remark-embed-video', // must come before remark-images
     'gatsby-remark-images',
@@ -144,6 +143,13 @@ module.exports = {
       resolve: 'gatsby-plugin-typegen',
       options: {
         outputPath: '__generated__/graphql.d.ts',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        htmlTitle: 'Admin',
+        modulePath: `${__dirname}/src/admin/cms.js`,
       },
     },
     // {
