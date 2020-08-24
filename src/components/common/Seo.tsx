@@ -5,9 +5,9 @@ import { Helmet } from 'react-helmet';
 interface IProps {
   description?: string;
   image?: {
-    height: string;
+    height: string | number;
     src: string;
-    width: string;
+    width: string | number;
   };
   lang?: string;
   meta?: string[];
@@ -102,11 +102,11 @@ export const Seo: FC<IProps> = ({
                 },
                 {
                   property: 'og:image:width',
-                  content: metaImage.width,
+                  content: metaImage.width.toString(),
                 },
                 {
                   property: 'og:image:height',
-                  content: metaImage.height,
+                  content: metaImage.height.toString(),
                 },
                 {
                   name: 'twitter:card',

@@ -5,7 +5,7 @@ import React, { FC } from 'react';
 
 import { Contact } from '@components/common';
 import { Box, Divider, H1, Image, NavLink, P } from '@components/core';
-import { rhythm, scale, styled } from '@styles/index';
+import { scale, styled } from '@styles/index';
 
 interface IProps {
   data: GatsbyTypes.CaseStudiesPageQuery;
@@ -35,7 +35,7 @@ export const CaseStudies: FC<IProps> = ({ data }) => {
                 <CaseStudyTitle>{frontmatter?.client}</CaseStudyTitle>
                 <h3>{frontmatter?.title}</h3>
                 <p>{frontmatter?.description}</p>
-                <NavLink hasArrow to={frontmatter.slug}>
+                <NavLink hasArrow to={frontmatter?.slug || ''}>
                   Check out the Case Study
                 </NavLink>
               </CaseStudyText>

@@ -1,5 +1,6 @@
 import { MDXProvider } from '@mdx-js/react';
 import { graphql } from 'gatsby';
+import { FixedObject } from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 
@@ -24,7 +25,7 @@ export const BlogPost: React.FC<IProps> = ({ data: { post }, pageContext }) => {
     <>
       <Seo
         description={post.excerpt}
-        image={frontmatter.cover_image?.childImageSharp?.resize}
+        image={frontmatter.cover_image?.childImageSharp?.resize as FixedObject}
         slug={frontmatter.slug}
         title={frontmatter.title}
       />
