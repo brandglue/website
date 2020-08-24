@@ -62,7 +62,7 @@ export const CaseStudy: React.FC<IProps> = ({
                 <H1>{frontmatter.title}</H1>
                 {download && (
                   <Download
-                    download={frontmatter.filename}
+                    download={`brandglue-${frontmatter.client}-case-study`.toLowerCase()}
                     hasArrow={false}
                     href={download}
                   >
@@ -135,7 +135,7 @@ export const caseStudyQuery = graphql`
         attachment {
           publicURL
         }
-        filename
+        client
         logo {
           name
           childImageSharp {

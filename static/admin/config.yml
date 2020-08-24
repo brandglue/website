@@ -1,12 +1,12 @@
 site_url: https://brandglue.com
-# logo_url: Set this for customized CMS screen...
+# logo_url: TODO: Set this for customized CMS screen
 
 backend:
   name: git-gateway
   squash_merges: true
 
 # Enable when using local git repo for populating cms
-local_backend: true
+# local_backend: true
 
 publish_mode: editorial_workflow
 
@@ -41,7 +41,15 @@ collections:
           widget: datetime,
           format: 'YYYY-MM-DD',
         }
-      - { name: slug, label: Slug, widget: string }
+      - {
+          name: slug,
+          label: Slug,
+          widget: string,
+          hint:
+            [
+              'Determines the page url. Must be unique from all other blog posts.',
+            ],
+        }
       - { name: cover_image, label: Cover Image, widget: image }
       - {
           name: categories,
@@ -75,10 +83,19 @@ collections:
       - { name: client, label: Client, widget: string }
       - { name: title, label: Title, widget: string }
       - { name: description, label: Description, widget: string }
-      - { name: slug, label: Slug, widget: string }
-      - { name: logo, label: Logo, widget: image }
-      - { name: filename, label: Filename, widget: string }
-      - { name: attachment, label: Attachment, widget: file }
+      - {
+          name: slug,
+          label: Slug,
+          widget: string,
+          Determines the page url. Must be unique from all other case studies.,
+        }
+      - { name: logo, label: Client Logo, widget: image }
+      - {
+          name: attachment,
+          label: Download,
+          widget: file,
+          hint: ['The file should be a PDF.'],
+        }
       - { name: body, label: Body, widget: markdown }
 
   - name: services
@@ -93,9 +110,17 @@ collections:
     fields:
       - { name: 'type', label: Type, widget: hidden, default: 'service' }
       - { name: title, label: Title, widget: string }
-      - { name: shortDescription, label: Short Description, widget: string }
-      - { name: longDescription, label: Long Description, widget: string }
-      - { name: icon, label: Icon, widget: string }
+      - { name: shortDescription, label: Short Description, widget: text }
+      - { name: longDescription, label: Long Description, widget: text }
+      - {
+          name: icon,
+          label: Icon,
+          widget: string,
+          hint:
+            [
+              'Needs to correspond with an SVG icon filename that has been added separately.',
+            ],
+        }
     editor:
       preview: false
 
@@ -114,8 +139,8 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: name, label: Name, widget: string }
       - { name: image, label: Image, widget: image }
-      - { name: loves, label: Loves, widget: string }
-      - { name: goals, label: Goals, widget: string }
-      - { name: order, label: Order, widget: number }
+      - { name: loves, label: Loves, widget: text }
+      - { name: goals, label: Goals, widget: text }
+      - { name: order, label: Sort Order, widget: number }
     editor:
       preview: false
