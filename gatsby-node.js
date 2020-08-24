@@ -76,7 +76,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const caseStudies = result.data.caseStudiesMdx.edges;
   caseStudies.forEach(({ node }) => {
     createPage({
-      path: node.frontmatter.slug,
+      path: `/case-studies/${node.frontmatter.slug}`,
       component: require.resolve('./src/templates/case-studies/CaseStudy.tsx'),
       context: {
         slug: node.frontmatter.slug,

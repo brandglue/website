@@ -6,7 +6,7 @@ backend:
   squash_merges: true
 
 # Enable when using local git repo for populating cms
-# local_backend: true
+local_backend: true
 
 publish_mode: editorial_workflow
 
@@ -16,6 +16,7 @@ public_folder: /uploads
 collections:
   - name: blog
     label: Blog Posts
+    label_singular: Blog Post
     folder: src/content/blog
     path: '{{year}}/{{month}}/{{title}}/index'
     slug: '{{slug}}'
@@ -24,21 +25,31 @@ collections:
     format: frontmatter
     create: true
     fields:
-      - { label: 'Type', name: 'type', widget: 'hidden', default: 'blog-post' }
+      - { name: type, label: Type, widget: hidden, default: 'blog-post' }
       - { name: title, label: Title, widget: string }
+      - {
+          name: author,
+          label: Author,
+          widget: relation,
+          collection: 'team',
+          searchFields: ['name'],
+          valueField: 'name',
+        }
       - {
           name: date,
           label: Publish Date,
           widget: datetime,
-          format: 'MMM Do YYYY',
+          format: 'YYYY-MM-DD',
         }
+      - { name: slug, label: Slug, widget: string }
+      - { name: cover_image, label: Cover Image, widget: image }
       - {
           name: categories,
           label: Categories,
           widget: select,
+          multiple: true,
           options: ['Tips', 'News', 'Design', 'Advertising', 'Case Studies'],
         }
-      - { name: cover_image, label: Cover Image, widget: image }
       - { name: body, label: Body, widget: markdown }
     view_filters:
       - label: 'Published: 2020'
@@ -50,6 +61,7 @@ collections:
 
   - name: case-studies
     label: Case Studies
+    label_singular: Case Study
     folder: src/content/case-studies
     path: '{{title}}/index'
     slug: '{{slug}}'
@@ -59,10 +71,11 @@ collections:
     create: true
     identifier_field: client
     fields:
-      - { label: 'Type', name: 'type', widget: 'hidden', default: 'case-study' }
-      - { name: title, label: Title, widget: string }
+      - { name: type, label: Type, widget: hidden, default: 'case-study' }
       - { name: client, label: Client, widget: string }
+      - { name: title, label: Title, widget: string }
       - { name: description, label: Description, widget: string }
+      - { name: slug, label: Slug, widget: string }
       - { name: logo, label: Logo, widget: image }
       - { name: filename, label: Filename, widget: string }
       - { name: attachment, label: Attachment, widget: file }
@@ -70,6 +83,7 @@ collections:
 
   - name: services
     label: Services
+    label_singular: Service
     folder: src/content/services
     path: '{{title}}/index'
     slug: '{{slug}}'
@@ -77,7 +91,7 @@ collections:
     format: frontmatter
     create: true
     fields:
-      - { label: 'Type', name: 'type', widget: 'hidden', default: 'service' }
+      - { name: 'type', label: Type, widget: hidden, default: 'service' }
       - { name: title, label: Title, widget: string }
       - { name: shortDescription, label: Short Description, widget: string }
       - { name: longDescription, label: Long Description, widget: string }
@@ -86,7 +100,8 @@ collections:
       preview: false
 
   - name: team
-    label: Team
+    label: Team Members
+    label_singular: Team Member
     folder: src/content/team
     path: '{{title}}/index'
     slug: '{{slug}}'
@@ -95,7 +110,7 @@ collections:
     create: true
     identifier_field: name
     fields:
-      - { label: 'Type', name: 'type', widget: 'hidden', default: 'team' }
+      - { name: type, label: Type, widget: hidden, default: 'team' }
       - { name: title, label: Title, widget: string }
       - { name: name, label: Name, widget: string }
       - { name: image, label: Image, widget: image }
