@@ -11,9 +11,9 @@ import {
   H3,
   P,
 } from '@components/core';
-import { TopLevelPages as Pages } from '@constants/routes';
 import { css, hexToRgb, minMediaQuery, rhythm, styled } from '@styles/index';
 import { encodeFormData } from '@utils/encodeFormData';
+import { TopLevelPages as Pages } from '@utils/routes';
 
 interface IProps {
   isPage?: boolean;

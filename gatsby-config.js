@@ -13,7 +13,6 @@ module.exports = {
       resolve: 'gatsby-plugin-root-import',
       options: {
         '@components': path.join(__dirname, 'src/components'),
-        '@constants': path.join(__dirname, 'src/constants'),
         '@hooks': path.join(__dirname, 'src/hooks'),
         '@media': path.join(__dirname, 'src/media'),
         '@models': path.join(__dirname, 'src/models'),

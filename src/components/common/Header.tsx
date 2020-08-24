@@ -1,13 +1,13 @@
 import React, { FC, useContext } from 'react';
 
 import { Box, NavLink } from '@components/core';
-import {
-  TopLevelPages as Pages,
-  TopLevelPageLabels as PageLabels,
-} from '@constants/routes';
 import { BrandGlueLogo } from '@media/svg/BrandGlueLogo';
 import { AppState } from '@src/AppState';
 import { css, minMediaQuery, rhythm, styled } from '@styles/index';
+import {
+  TopLevelPages as Pages,
+  TopLevelPageLabels as PageLabels,
+} from '@utils/routes';
 
 interface IMenuItem {
   label: string;

@@ -2,8 +2,8 @@ import { navigate } from '@reach/router';
 import React, { FC, useState } from 'react';
 
 import { Button, Input } from '@components/core';
-import { RouteParts, TopLevelPages as Pages } from '@constants/routes';
 import { styled } from '@styles/index';
+import { RouteParts, TopLevelPages as Pages } from '@utils/routes';
 
 interface IProps {
   initialQuery?: string;

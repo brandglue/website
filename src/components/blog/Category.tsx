@@ -2,8 +2,8 @@ import { kebabCase } from 'lodash';
 import React, { FC } from 'react';
 
 import { NavLink } from '@components/core';
-import { RouteParts, TopLevelPages } from '@constants/routes';
 import { scale, styled } from '@styles/index';
+import { RouteParts, TopLevelPages } from '@utils/routes';
 
 interface IProps {
   totalCount?: number;

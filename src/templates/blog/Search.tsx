@@ -3,9 +3,9 @@ import React, { FC } from 'react';
 import { SearchForm } from '@components/blog';
 import { Breadcrumbs } from '@components/common';
 import { Box, Divider, NavLink } from '@components/core';
-import { RouteParts } from '@constants/routes';
 import { rhythm, styled } from '@styles/index';
 import { getSearchResults } from '@utils/getSearchResults';
+import { RouteParts } from '@utils/routes';
 
 interface IProps {
   pageContext: any;

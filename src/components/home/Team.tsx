@@ -2,8 +2,8 @@ import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
 import { Box, Image, H2, P, NavLink } from '@components/core';
-import { TopLevelPages as Pages } from '@constants/routes';
 import { css, hexToRgb, styled } from '@styles/index';
+import { TopLevelPages as Pages } from '@utils/routes';
 
 interface IProps {
   data: GatsbyTypes.HomePageQuery;

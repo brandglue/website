@@ -3,8 +3,8 @@ import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
 import { Box, Image, P, H5, NavLink } from '@components/core';
-import { TopLevelPages as Pages } from '@constants/routes';
 import { css, minMediaQuery, rhythm, styled } from '@styles/index';
+import { TopLevelPages as Pages } from '@utils/routes';
 
 export const CaseStudy: FC = () => {
   const intuitLogo = useStaticQuery<GatsbyTypes.FeaturedCaseStudyQuery>(graphql`

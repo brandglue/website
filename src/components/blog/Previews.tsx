@@ -3,6 +3,7 @@ import React from 'react';
 
 import { Box, Image, NavLink, P, H3, Span } from '@components/core';
 import { styled, rhythm } from '@styles/index';
+import { TopLevelPages as Pages } from '@utils/routes';
 
 interface IPost {
   node: {
@@ -25,7 +26,7 @@ export const Previews: React.FC<IProps> = ({ blogPosts }) => {
   ) => (
     <>
       <PostImage variant="flexItem">
-        <NavLink to={frontmatter.slug} variant="invisible">
+        <NavLink to={`/${Pages.Blog}/${frontmatter.slug}`} variant="invisible">
           {frontmatter.cover_image?.childImageSharp?.fluid && (
             <Image
               alt={frontmatter.title}
@@ -39,13 +40,13 @@ export const Previews: React.FC<IProps> = ({ blogPosts }) => {
       <PostContent variant="flexItem">
         <Box>
           {frontmatter?.slug && (
-            <NavLink to={frontmatter.slug} variant="title">
+            <NavLink to={`/${Pages.Blog}/${frontmatter.slug}`} variant="title">
               <H3>{frontmatter.title}</H3>
             </NavLink>
           )}
           <P>{excerpt}</P>
           {frontmatter?.slug && (
-            <NavLink to={frontmatter.slug} variant="button">
+            <NavLink to={`/${Pages.Blog}/${frontmatter.slug}`} variant="button">
               <Box variant="centered">Read More</Box>
             </NavLink>
           )}

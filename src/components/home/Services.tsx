@@ -3,7 +3,6 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React, { FC } from 'react';
 
 import { Box, H2, NavLink, P } from '@components/core';
-import { TopLevelPages as Pages } from '@constants/routes';
 import {
   AudiencePersonas,
   CommunityManagement,
@@ -16,6 +15,7 @@ import {
   SocialStrategy,
 } from '@media/svg';
 import { css, hexToRgb, minMediaQuery, rhythm, styled } from '@styles/index';
+import { TopLevelPages as Pages } from '@utils/routes';
 
 interface IProps {
   data: GatsbyTypes.HomePageQuery;

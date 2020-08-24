@@ -2,13 +2,9 @@ import { Facebook, Linkedin, Twitter } from '@styled-icons/boxicons-logos';
 import React, { FC } from 'react';
 
 import { Anchor, Box, H4, NavLink } from '@components/core';
-import {
-  RouteParts,
-  TopLevelPages,
-  TopLevelPageLabels,
-} from '@constants/routes';
 import { BrandGlueLogoIconOnly } from '@media/svg';
 import { css, minMediaQuery, scale, styled } from '@styles/index';
+import { RouteParts, TopLevelPages, TopLevelPageLabels } from '@utils/routes';
 
 export const Footer: FC = () => (
   <>

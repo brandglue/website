@@ -46,7 +46,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const blogPosts = result.data.blogPostsMdx.edges;
   blogPosts.forEach(({ node }) => {
     createPage({
-      path: node.frontmatter.slug,
+      path: `/blog/${node.frontmatter.slug}`,
       component: require.resolve('./src/templates/blog/Post.tsx'),
       context: {
         slug: node.frontmatter.slug,
