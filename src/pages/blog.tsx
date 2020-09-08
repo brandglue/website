@@ -47,7 +47,7 @@ export const Blog: FC<IProps> = ({ data }) => {
     <Box>
       <Divider />
       <Box pb={0} variant="section">
-        <H1>There&apos;s a lot going on out there in the social sphere.</H1>
+        <H1>There is a lot going on out there in the social sphere.</H1>
         <P>Here&apos;s what we&apos;ve got to say about it.</P>
         <ActionBar />
       </Box>

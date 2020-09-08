@@ -42,10 +42,13 @@ export const GlobalStyles = createGlobalStyle`
     color: ${theme.colors.darkBlue};
     text-transform: uppercase;
     white-space: pre-wrap;
+  }
+
+  h2 {
     margin-bottom: ${rhythm(1)};
   }
 
-  h3, h4, h5 {
+  h1, h3, h4, h5 {
     margin-bottom: ${rhythm(0.5)};
   }
 

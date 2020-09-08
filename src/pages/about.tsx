@@ -63,11 +63,11 @@ export const About: FC<IProps> = ({ data }) => {
       <Box variant="section">
         <H2>Join the team. It&apos;s a good one.</H2>
         <P>
-          With remote working and the ﬂexible to build your day the way you work
-          best, BrandGlue is a great place to focus on your talent and love for
-          delivering quality experiences to our clients. Check out the available
-          positions below and reach out if you’re interested! We’d love to meet
-          you.
+          With remote working and the ﬂexibility to build your day the way you
+          work best, BrandGlue is a great place to focus on your talent and love
+          for delivering quality experiences to our clients. Check out the
+          available positions below and reach out if you’re interested! We’d
+          love to meet you.
         </P>
         <P fontStyle="italic" mt="6" textAlign="center">
           No current openings.
@@ -78,6 +78,8 @@ export const About: FC<IProps> = ({ data }) => {
 };
 
 const BrandGlueStory = styled(Box)`
+  padding-top: ${rhythm(1)};
+
   svg {
     width: 100%;
   }

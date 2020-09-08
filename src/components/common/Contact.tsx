@@ -70,7 +70,7 @@ export const Contact: FC<IProps> = ({ isPage = false }) => {
         <H2>Ready to get to work? We are.</H2>
       )}
       <P pb={5}>
-        Overwhelmed with the possilibities and options of social media? Not sure
+        Overwhelmed with the possibilities and options of social media? Not sure
         where to focus your attention? We are here to help you figure that out{' '}
         <strong>for free!</strong> Just fill out the form below and {"we'll"} be
         in touch within 24hrs.

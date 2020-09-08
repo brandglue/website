@@ -66,7 +66,7 @@ export const CaseStudy: React.FC<IProps> = ({
                     hasArrow={false}
                     href={download}
                   >
-                    Download the case study
+                    Download the Case Study
                     <StyledFilePdf />
                   </Download>
                 )}

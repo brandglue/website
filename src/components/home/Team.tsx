@@ -26,9 +26,10 @@ export const Team: FC<IProps> = ({ data }) => {
                 Collectively we have over 30 years of experience with making
                 social media, marketing, and design work together to produce
                 something incredible. We are proud to be female-owned and value
-                diversity and collaboration. These folks are the team that would
-                work on your social outlets. Get to know each of us, learn a bit
-                more about the family, and if you want to, reach out!
+                diversity and collaboration. We {"don't"} sign clients and then
+                outsource the work - we are the team that would do the work for
+                your business.. Get to know each of us, learn a bit more about
+                the family, and if you want to, reach out!
               </P>
               <NavLink hasArrow to={`/${Pages.About}`}>
                 Learn More About Us

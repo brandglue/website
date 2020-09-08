@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from 'gatsby';
 import React, { FC, useContext } from 'react';
 
-import { Box, H1 } from '@components/core';
+import { Box } from '@components/core';
 import heroVideo from '@media/videos/hero-homepage.mp4';
 import { AppState } from '@src/AppState';
 import { css, minMediaQuery, scale, styled } from '@styles/index';
@@ -80,21 +80,22 @@ const Header = styled(Box)`
   `};
 `;
 
-const Tagline = styled(H1)`
+const Tagline = styled.h1`
   ${({ theme }) => css`
     color: ${theme.colors.white};
     font-size: ${scale(0.4).fontSize};
+    line-height: ${scale(0.4).lineHeight};
     margin-bottom: 0;
 
     span {
       display: inline-block;
       font-size: ${scale(0.1).fontSize};
       text-transform: none;
-      margin-top: 1em;
     }
 
     ${minMediaQuery.Medium(css`
-      font-size: ${scale(0.6).fontSize};
+      font-size: ${scale(0.8).fontSize};
+      line-height: ${scale(0.6).lineHeight};
 
       span {
         font-size: ${scale(0.2).fontSize};
@@ -103,6 +104,7 @@ const Tagline = styled(H1)`
 
     ${minMediaQuery.Large(css`
       font-size: ${scale(1).fontSize};
+      line-height: ${scale(0.6).lineHeight};
 
       span {
         font-size: ${scale(0.4).fontSize};

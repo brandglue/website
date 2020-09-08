@@ -37,7 +37,7 @@ export const CaseStudy: FC = () => {
         <Text>
           <CaseStudyTitle>Growing Twitter the Right Way</CaseStudyTitle>
           <P color="white" mb="0">
-            {`See How We Helped Intuit Accountants \n Get The Right Audience at the Right Price`}
+            {`We helped Intuit Accountants \n get the right audience at the right price`}
             <CaseStudyLink
               hasArrow
               to={`/${Pages.CaseStudies}/intuit-accountants`}
@@ -97,7 +97,7 @@ const CaseStudyTitle = styled(H5)`
 const CaseStudyLink = styled(NavLink)`
   ${({ theme }) => css`
     color: ${theme.colors.gold};
-    margin-left: 0.4em;
+    margin-left: 0.6em;
   `};
 `;
 
