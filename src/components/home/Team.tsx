@@ -2,7 +2,7 @@ import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
 import { Box, Image, H2, P, NavLink } from '@components/core';
-import { css, hexToRgb, styled } from '@styles/index';
+import { css, hexToRgb, minMediaQuery, styled } from '@styles/index';
 import { TopLevelPages as Pages } from '@utils/routes';
 
 interface IProps {
@@ -15,8 +15,8 @@ export const Team: FC<IProps> = ({ data }) => {
   return (
     <Container>
       <Box variant="section">
-        <Box alignItems="flex-start" m="auto" variant="flex">
-          <Box flex="0 0 60%" mr={7} variant="flexItem">
+        <Wrapper>
+          <Text>
             <H2>Meet the Team</H2>
             <Box mb={7}>
               <P>
@@ -34,33 +34,26 @@ export const Team: FC<IProps> = ({ data }) => {
                 Learn More About Us
               </NavLink>
             </Box>
-          </Box>
-          <Box variant="flexItem">
-            <Box
-              gridGap={4}
-              gridTemplateColumns={'repeat(auto-fit, minmax(100px, 1fr))'}
-              mb={5}
-              variant="grid"
-            >
-              {edges.map(({ node: teamMember }) => {
-                const { frontmatter } = teamMember;
+          </Text>
+          <Photos>
+            {edges.map(({ node: teamMember }) => {
+              const { frontmatter } = teamMember;
 
-                return (
-                  frontmatter?.name && (
-                    <Image
-                      key={frontmatter.name}
-                      alt={frontmatter.name}
-                      css={{ borderRadius: '5px' }}
-                      fluid={
-                        frontmatter.image?.childImageSharp?.fluid as FluidObject
-                      }
-                    />
-                  )
-                );
-              })}
-            </Box>
-          </Box>
-        </Box>
+              return (
+                frontmatter?.name && (
+                  <Image
+                    key={frontmatter.name}
+                    alt={frontmatter.name}
+                    css={{ borderRadius: '5px' }}
+                    fluid={
+                      frontmatter.image?.childImageSharp?.fluid as FluidObject
+                    }
+                  />
+                )
+              );
+            })}
+          </Photos>
+        </Wrapper>
       </Box>
     </Container>
   );
@@ -77,4 +70,35 @@ const Container = styled(Box)`
       rgba(${hexToRgb(theme.colors.gray02)}, 1) 100%
     );
   `}
+`;
+
+const Wrapper = styled(Box)`
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  margin: auto;
+
+  ${minMediaQuery.Medium(css`
+    flex-flow: row;
+  `)}
+`;
+
+const Text = styled(Box)`
+  ${minMediaQuery.Medium(css`
+    flex: 0 0 50%;
+    margin-right: 10%;
+  `)}
+`;
+
+const Photos = styled(Box)`
+  flex: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+
+  ${minMediaQuery.Medium(css`
+    width: auto;
+  `)}
 `;

@@ -1,8 +1,9 @@
 import { useStaticQuery, graphql } from 'gatsby';
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 
 import { Box, H1 } from '@components/core';
 import heroVideo from '@media/videos/hero-homepage.mp4';
+import { AppState } from '@src/AppState';
 import { css, minMediaQuery, scale, styled } from '@styles/index';
 
 export const Hero: FC = () => {
@@ -21,18 +22,25 @@ export const Hero: FC = () => {
     }
   `);
 
+  const { isSmallDevice } = useContext(AppState);
+
   return (
     <Container>
-      <HeroVideo autoPlay loop muted poster={file?.childImageSharp?.fixed?.src}>
-        <source src={heroVideo} type="video/mp4" />
-      </HeroVideo>
+      {!isSmallDevice && (
+        <HeroVideo
+          autoPlay
+          loop
+          muted
+          poster={file?.childImageSharp?.fixed?.src}
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </HeroVideo>
+      )}
       <Header>
-        <Box flexGrow={0} variant="flexItem">
-          <Tagline>
-            We are a social media agency
-            <span>Reaching your audience in the places they hang out most</span>
-          </Tagline>
-        </Box>
+        <Tagline>
+          We are a social media agency.
+          <span>Reaching your audience in the places they hang out most.</span>
+        </Tagline>
       </Header>
     </Container>
   );
@@ -40,7 +48,6 @@ export const Hero: FC = () => {
 
 const Container = styled(Box)`
   position: relative;
-  font-size: 0;
 `;
 
 const HeroVideo = styled.video`
@@ -52,12 +59,14 @@ const HeroVideo = styled.video`
 
 const Header = styled(Box)`
   ${({ theme }) => css`
-    display: flex;
     max-width: ${theme.spacings.maxContentColWidth};
     margin: auto;
+    padding: 1em;
+    background: ${theme.colors.blue};
     color: ${theme.colors.white};
 
     ${minMediaQuery.Medium(css`
+      display: flex;
       position: absolute;
       top: 0;
       left: 0;
@@ -66,6 +75,7 @@ const Header = styled(Box)`
       flex-flow: column;
       justify-content: center;
       text-align: center;
+      background: none;
     `)};
   `};
 `;
@@ -73,11 +83,30 @@ const Header = styled(Box)`
 const Tagline = styled(H1)`
   ${({ theme }) => css`
     color: ${theme.colors.white};
+    font-size: ${scale(0.4).fontSize};
+    margin-bottom: 0;
 
     span {
       display: inline-block;
-      font-size: ${scale(0.4).fontSize};
+      font-size: ${scale(0.1).fontSize};
       text-transform: none;
+      margin-top: 1em;
     }
+
+    ${minMediaQuery.Medium(css`
+      font-size: ${scale(0.6).fontSize};
+
+      span {
+        font-size: ${scale(0.2).fontSize};
+      }
+    `)}
+
+    ${minMediaQuery.Large(css`
+      font-size: ${scale(1).fontSize};
+
+      span {
+        font-size: ${scale(0.4).fontSize};
+      }
+    `)}
   `}
 `;

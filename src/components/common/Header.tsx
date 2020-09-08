@@ -1,6 +1,7 @@
-import React, { FC, useContext } from 'react';
+import { MenuAltRight, X } from '@styled-icons/boxicons-regular';
+import React, { FC, useContext, useState } from 'react';
 
-import { Box, NavLink } from '@components/core';
+import { Box, Button, NavLink } from '@components/core';
 import { BrandGlueLogo } from '@media/svg/BrandGlueLogo';
 import { AppState } from '@src/AppState';
 import { css, minMediaQuery, rhythm, styled } from '@styles/index';
@@ -14,7 +15,7 @@ interface IMenuItem {
   to: Pages;
 }
 
-const smallMenuItems: IMenuItem[] = [
+const menuItems: IMenuItem[] = [
   {
     label: PageLabels.About,
     to: Pages.About,
@@ -31,10 +32,6 @@ const smallMenuItems: IMenuItem[] = [
     label: PageLabels.Blog,
     to: Pages.Blog,
   },
-];
-
-const largeMenuItems: IMenuItem[] = [
-  ...smallMenuItems,
   {
     label: PageLabels.Contact,
     to: Pages.Contact,
@@ -42,37 +39,56 @@ const largeMenuItems: IMenuItem[] = [
 ];
 
 export const Header: FC = () => {
-  const appState = useContext(AppState);
+  const { isLargeDevice } = useContext(AppState);
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuOpen = () => {
+    setMenuOpen(!isMenuOpen);
+  };
 
   const smallDeviceMenu = (
     <Container>
-      <LogoLink to={`/`} variant="invisible">
-        <BrandGlueLogo />
-      </LogoLink>
-      <SmallDeviceMenu>
-        {smallMenuItems.map((item) => {
-          return (
-            <SmallDeviceLink
-              key={item.label}
-              to={`/${item.to}`}
-              variant="invisible"
-            >
-              {item.label}
-            </SmallDeviceLink>
-          );
-        })}
-      </SmallDeviceMenu>
+      <Wrapper>
+        <LogoLink to={`/`} variant="invisible">
+          <BrandGlueLogo />
+        </LogoLink>
+        {!isMenuOpen && (
+          <SmallMenuIconWrapper onClick={handleMenuOpen}>
+            <MenuAltRight />
+          </SmallMenuIconWrapper>
+        )}
+      </Wrapper>
+      {isMenuOpen && (
+        <SmallMenuWrapper>
+          <CloseButton onClick={handleMenuOpen}>
+            <X />
+          </CloseButton>
+          <SmallMenu>
+            {menuItems.map((item) => {
+              return (
+                <SmallLink
+                  key={item.label}
+                  to={`/${item.to}`}
+                  variant="invisible"
+                >
+                  {item.label}
+                </SmallLink>
+              );
+            })}
+          </SmallMenu>
+        </SmallMenuWrapper>
+      )}
     </Container>
   );
 
   const largeDeviceMenu = (
     <Container>
-      <LargeDeviceWrapper>
+      <Wrapper>
         <LogoLink to={`/`} variant="invisible">
           <BrandGlueLogo />
         </LogoLink>
         <LargeDeviceMenu>
-          {largeMenuItems.map((item) => {
+          {menuItems.map((item) => {
             return (
               <LargeDeviceLink
                 key={item.label}
@@ -84,11 +100,11 @@ export const Header: FC = () => {
             );
           })}
         </LargeDeviceMenu>
-      </LargeDeviceWrapper>
+      </Wrapper>
     </Container>
   );
 
-  return appState.isLargeDevice ? largeDeviceMenu : smallDeviceMenu;
+  return isLargeDevice ? largeDeviceMenu : smallDeviceMenu;
 };
 
 const Container = styled.header`
@@ -102,13 +118,22 @@ const Container = styled.header`
   `)}
 `;
 
+const Wrapper = styled(Box)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: ${({ theme }) => theme.spacings.maxContentColWidth};
+  padding: ${rhythm(1)};
+`;
+
 const LogoLink = styled(NavLink)`
   display: block;
-  width: 50%;
-  max-width: 220px;
+  max-width: 50%;
   padding-top: 10px;
 
   ${minMediaQuery.Medium(css`
+    width: 50%;
     flex: 0 0 220px;
   `)}
 
@@ -117,39 +142,51 @@ const LogoLink = styled(NavLink)`
   }
 `;
 
-const SmallDeviceMenu = styled.nav`
+const SmallMenuIconWrapper = styled.div`
+  color: ${({ theme }) => theme.colors.black};
+  width: 40px;
+`;
+
+const SmallMenuWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: ${({ theme }) => theme.colors.darkBlue};
+  border-left: 1px solid ${({ theme }) => theme.colors.white};
+  z-index: 999;
+`;
+
+const CloseButton = styled(Button)`
+  text-align: left;
+  color: ${({ theme }) => theme.colors.white};
+  padding: 1em;
+  margin-left: -2px;
+
+  svg {
+    width: 24px;
+  }
+`;
+
+const SmallMenu = styled.nav`
   display: flex;
+  flex-flow: column;
   justify-content: center;
   align-items: flex-start;
-  text-align: center;
+  padding: 1em;
 `;
 
-const SmallDeviceLink = styled(NavLink)`
+const SmallLink = styled(NavLink)`
   ${({ theme }) => css`
     flex: 1 1 auto;
-    color: ${theme.colors.black};
-    text-transform: uppercase;
-    padding: 15px;
-    border-right: 1px solid ${theme.colors.gray02};
-
-    &:last-child {
-      border: none;
-    }
+    color: ${theme.colors.white};
+    padding-bottom: 0.6em;
 
     &.isActive {
-      background: ${theme.colors.gold};
-      color: ${theme.colors.white};
+      color: ${theme.colors.gold};
     }
   `}
-`;
-
-const LargeDeviceWrapper = styled(Box)`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  max-width: ${({ theme }) => theme.spacings.maxContentColWidth};
-  padding: ${rhythm(1)};
 `;
 
 const LargeDeviceMenu = styled.nav`

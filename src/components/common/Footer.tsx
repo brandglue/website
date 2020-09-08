@@ -198,6 +198,7 @@ const SocialIcon = styled.div`
 const Links = styled.ul`
   list-style-type: none;
   color: ${({ theme }) => theme.colors.gray00};
+  margin-left: 0;
 
   li {
     margin: 0;

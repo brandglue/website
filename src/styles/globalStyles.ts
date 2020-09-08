@@ -30,6 +30,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: ${theme.colors.white};
     color: ${theme.colors.gray06};
+    overflow: hidden;
   }
 
   h1, h2, h3, h4, h5 {

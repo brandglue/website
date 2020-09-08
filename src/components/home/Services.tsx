@@ -79,7 +79,7 @@ export const Services: FC<IProps> = ({ data }) => {
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
   grid-gap: 20px;
   justify-content: center;
@@ -87,6 +87,10 @@ const Grid = styled.div`
   margin: ${rhythm(1)} 0;
 
   ${minMediaQuery.Medium(css`
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  `)}
+
+  ${minMediaQuery.Large(css`
     grid-template-columns: repeat(3, 1fr);
   `)}
 `;
@@ -94,13 +98,15 @@ const Grid = styled.div`
 const GridItem = styled.div`
   ${({ theme }) => css`
     display: flex;
+    flex-flow: column;
     height: 100%;
-    padding: ${theme.space[5]}px;
+    padding: 2em;
+    border: 1px solid ${({ theme }) => theme.colors.gray02};
+    border-radius: 3px;
 
     ${minMediaQuery.Medium(css`
+      flex-flow: row;
       min-height: 200px;
-      border: 1px solid ${({ theme }) => theme.colors.gray02};
-      border-radius: 3px;
 
       ${NavLink} {
         visibility: hidden;
@@ -129,17 +135,22 @@ const GridItem = styled.div`
 `;
 
 const GridIcon = styled.div`
-  width: 200px;
-  margin-right: ${({ theme }) => theme.space[4]}px;
+  margin-bottom: 1em;
 
   svg {
-    width: 100px;
+    width: 75px;
   }
+
+  ${minMediaQuery.Medium(css`
+    margin-bottom: 0;
+    margin-right: 1em;
+  `)}
 `;
 
 const GridText = styled.div`
   display: flex;
   flex-flow: column;
+  min-width: 0;
 `;
 
 const GridLabel = styled.h5`
@@ -149,6 +160,6 @@ const GridLabel = styled.h5`
     background: ${({ theme }) => theme.colors.darkBlue};
     height: 1px;
     width: 48px;
-    margin-top: ${({ theme }) => theme.space[2]}px;
+    margin-top: 1em;
   }
 `;

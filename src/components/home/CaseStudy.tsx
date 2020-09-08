@@ -26,7 +26,7 @@ export const CaseStudy: FC = () => {
   return (
     <Box bg="darkBlue">
       <Container variant="section">
-        <Logo variant="flexItem">
+        <Logo>
           {intuitLogo?.file?.childImageSharp?.fluid && (
             <Image
               alt="intuit-accountants"
@@ -34,7 +34,7 @@ export const CaseStudy: FC = () => {
             />
           )}
         </Logo>
-        <Box flex="0 0 500px" variant="flexItem">
+        <Text>
           <CaseStudyTitle>Growing Twitter the Right Way</CaseStudyTitle>
           <P color="white" mb="0">
             {`See How We Helped Intuit Accountants \n Get The Right Audience at the Right Price`}
@@ -45,7 +45,7 @@ export const CaseStudy: FC = () => {
               See Case Study
             </CaseStudyLink>
           </P>
-        </Box>
+        </Text>
       </Container>
     </Box>
   );
@@ -55,25 +55,35 @@ const Container = styled(Box)`
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
-  align-items: center;
 
   ${minMediaQuery.Medium(css`
     flex-flow: row;
+    align-items: center;
   `)};
 `;
 
 const Logo = styled(Box)`
   ${({ theme }) => css`
-    flex: 0 0 200px;
-    border-bottom: 1px solid ${theme.colors.white};
+    flex: auto;
+    max-width: 200px;
+    margin-bottom: 1em;
 
     ${minMediaQuery.Medium(css`
+      flex: 0 0 200px;
       border-bottom: none;
       border-right: 1px solid ${theme.colors.white};
       padding: 20px 20px 20px 0;
       margin: 20px 20px 20px 0;
     `)}
   `}
+`;
+
+const Text = styled(Box)`
+  flex: auto;
+
+  ${minMediaQuery.Medium(css`
+    flex: 0 0 500px;
+  `)};
 `;
 
 const CaseStudyTitle = styled(H5)`

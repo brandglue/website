@@ -160,11 +160,14 @@ const ContactForm = styled.form`
 `;
 
 const Group = styled.div`
-  flex: 1 1 50%;
+  flex: auto;
+  width: 100%;
   display: flex;
   flex-flow: column;
 
   ${minMediaQuery.Medium(css`
+    flex: 1 1 50%;
+
     &:first-child {
       margin-right: 25px;
     }

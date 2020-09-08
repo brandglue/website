@@ -107,10 +107,6 @@ export const Clients: FC = () => {
 const ClientGrid = styled(Box)`
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 50px;
-
-  ${minMediaQuery.Medium(css`
-    grid-template-columns: repeat(5, 1fr);
-  `)}
 `;
