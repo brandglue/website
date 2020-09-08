@@ -1,8 +1,9 @@
+import { Linkedin, Twitter } from '@styled-icons/boxicons-logos';
 import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React, { FC, useContext } from 'react';
 
-import { Box, Divider, H1, H2, Image, P } from '@components/core';
+import { Anchor, Box, Divider, H1, H2, Image, P } from '@components/core';
 import { AboutBrandGlueDesktop, AboutBrandGlueMobile } from '@media/svg';
 import { AppState } from '@src/AppState';
 import { minMediaQuery, rhythm, scale, styled, css } from '@styles/index';
@@ -51,6 +52,32 @@ export const About: FC<IProps> = ({ data }) => {
                       <Box>{frontmatter.loves}</Box>
                       <GoalsLabel>Goals</GoalsLabel>
                       <Box>{frontmatter.goals}</Box>
+                      {(frontmatter.twitter || frontmatter.linkedin) && (
+                        <Social>
+                          {frontmatter.twitter && (
+                            <SocialAnchor
+                              hasArrow={false}
+                              href={frontmatter.twitter}
+                              rel="noopener noreferrer nofollow"
+                              target="_blank"
+                              variant="invisible"
+                            >
+                              <Twitter />
+                            </SocialAnchor>
+                          )}
+                          {frontmatter.linkedin && (
+                            <SocialAnchor
+                              hasArrow={false}
+                              href={frontmatter.linkedin}
+                              rel="noopener noreferrer nofollow"
+                              target="_blank"
+                              variant="invisible"
+                            >
+                              <Linkedin />
+                            </SocialAnchor>
+                          )}
+                        </Social>
+                      )}
                     </Bio>
                   </GridItem>
                 )
@@ -141,6 +168,16 @@ const GoalsLabel = styled(Box)`
   margin-top: 1em;
 `;
 
+const Social = styled(Box)`
+  margin-top: ${rhythm(1)};
+`;
+
+const SocialAnchor = styled(Anchor)`
+  svg {
+    width: 20px;
+  }
+`;
+
 export default About;
 
 export const aboutPage = graphql`
@@ -153,9 +190,11 @@ export const aboutPage = graphql`
         node {
           frontmatter {
             goals
+            linkedin
             loves
             name
             title
+            twitter
             image {
               name
               childImageSharp {
