@@ -31,6 +31,7 @@ const WrappedLink: FC<GatsbyLinkProps<unknown> & IProps> = (props) => {
     <Link
       className={props.className}
       getProps={isActive}
+      onClick={props.onClick}
       style={props.style}
       to={props.to}
     >

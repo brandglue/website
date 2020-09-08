@@ -16,7 +16,7 @@ import {
   PaidAdvertising,
   SocialStrategy,
 } from '@media/svg';
-import { scale, styled } from '@styles/index';
+import { css, minMediaQuery, rhythm, scale, styled } from '@styles/index';
 
 interface IProps {
   data: GatsbyTypes.ServicesPageQuery;
@@ -85,14 +85,22 @@ interface IServiceProps {
 
 const Service = styled(Box)<IServiceProps>`
   display: flex;
-  align-items: center;
-  flex-direction: ${({ isEven }) => (isEven ? 'row' : 'row-reverse')};
+  flex-direction: column-reverse;
+
+  ${minMediaQuery.Small(css`
+    /* using 'any' until the minMediaQuery can be generically typed */
+    flex-direction: ${(props: any) => (props.isEven ? 'row' : 'row-reverse')};
+    align-items: center;
+  `)}
 `;
 
 const ServiceText = styled(Box)<IServiceProps>`
-  flex-basis: 70%;
-  margin-right: ${({ isEven }) => isEven && '10%'};
-  margin-left: ${({ isEven }) => !isEven && '10%'};
+  ${minMediaQuery.Small(css`
+    flex-basis: 70%;
+    /* using 'any' until the minMediaQuery can be generically typed */
+    margin-right: ${(props: any) => props.isEven && '10%'};
+    margin-left: ${(props: any) => !props.isEven && '10%'};
+  `)}
 `;
 
 const ServiceTitle = styled.h2`
@@ -101,11 +109,20 @@ const ServiceTitle = styled.h2`
 `;
 
 const ServiceImage = styled(Box)`
-  flex-basis: 20%;
+  margin-bottom: ${rhythm(1)};
 
   svg {
-    width: 100%;
+    width: 30%;
   }
+
+  ${minMediaQuery.Small(css`
+    flex-basis: 20%;
+    margin-bottom: 0;
+
+    svg {
+      width: 100%;
+    }
+  `)}
 `;
 
 export default Services;

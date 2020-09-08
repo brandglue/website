@@ -5,7 +5,7 @@ import React, { FC } from 'react';
 
 import { Contact } from '@components/common';
 import { Box, Divider, H1, Image, NavLink, P } from '@components/core';
-import { scale, styled } from '@styles/index';
+import { css, minMediaQuery, rhythm, scale, styled } from '@styles/index';
 
 interface IProps {
   data: GatsbyTypes.CaseStudiesPageQuery;
@@ -69,14 +69,22 @@ interface ICaseStudyProps {
 
 const CaseStudy = styled(Box)<ICaseStudyProps>`
   display: flex;
-  align-items: center;
-  flex-direction: ${({ isEven }) => (isEven ? 'row' : 'row-reverse')};
+  flex-direction: column-reverse;
+
+  ${minMediaQuery.Small(css`
+    /* using 'any' until the minMediaQuery can be generically typed */
+    flex-direction: ${(props: any) => (props.isEven ? 'row' : 'row-reverse')};
+    align-items: center;
+  `)}
 `;
 
 const CaseStudyText = styled(Box)<ICaseStudyProps>`
-  flex-basis: 70%;
-  margin-right: ${({ isEven }) => isEven && '10%'};
-  margin-left: ${({ isEven }) => !isEven && '10%'};
+  ${minMediaQuery.Small(css`
+    flex-basis: 70%;
+    /* using 'any' until the minMediaQuery can be generically typed */
+    margin-right: ${(props: any) => props.isEven && '10%'};
+    margin-left: ${(props: any) => !props.isEven && '10%'};
+  `)}
 `;
 
 const CaseStudyTitle = styled.h2`
@@ -85,7 +93,14 @@ const CaseStudyTitle = styled.h2`
 `;
 
 const CaseStudyImage = styled(Box)`
-  flex-basis: 20%;
+  max-width: 30%;
+  margin-bottom: ${rhythm(1)};
+
+  ${minMediaQuery.Small(css`
+    flex-basis: 20%;
+    max-width: auto;
+    margin-bottom: 0;
+  `)}
 `;
 
 export default CaseStudies;

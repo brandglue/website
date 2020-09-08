@@ -2,7 +2,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import React, { FC } from 'react';
 
 import { Box } from '@components/core';
-import { styled } from '@styles/index';
+import { css, minMediaQuery, rhythm, styled } from '@styles/index';
 
 import { Category } from './Category';
 
@@ -30,5 +30,10 @@ export const Categories: FC = () => {
 };
 
 const CategoryGroup = styled(Box)`
-  text-align: right;
+  margin-top: ${rhythm(1)};
+
+  ${minMediaQuery.Medium(css`
+    margin-top: 0;
+    text-align: right;
+  `)}
 `;

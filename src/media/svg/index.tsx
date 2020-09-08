@@ -1,4 +1,5 @@
 export { AboutBrandGlueDesktop } from './AboutBrandGlueDesktop';
+export { AboutBrandGlueMobile } from './AboutBrandGlueMobile';
 export { AudiencePersonas } from './AudiencePersonas';
 export { BrandGlueLogo } from './BrandGlueLogo';
 export { BrandGlueLogoIconOnly } from './BrandGlueLogoIconOnly';

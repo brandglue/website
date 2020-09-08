@@ -4,7 +4,8 @@ import React, { FC, useEffect, useState } from 'react';
 
 import { ActionBar, LoadMore, Previews } from '@components/blog';
 import { Breadcrumbs } from '@components/common';
-import { Box, Divider, H3 } from '@components/core';
+import { Box, Divider } from '@components/core';
+import { css, minMediaQuery, rhythm, styled } from '@styles/index';
 
 interface IProps {
   pathContext: {
@@ -64,7 +65,7 @@ export const Category: FC<IProps> = ({
       <Box pb={0} variant="section">
         <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
         <ActionBar />
-        <H3>Category: {category}</H3>
+        <CategoryTitle>Category: {category}</CategoryTitle>
       </Box>
       {renderChunks()}
       <Box pt={0} variant="section">
@@ -73,6 +74,10 @@ export const Category: FC<IProps> = ({
     </Box>
   );
 };
+
+const CategoryTitle = styled.h3`
+  margin-bottom: ${rhythm(1)};
+`;
 
 export default Category;
 

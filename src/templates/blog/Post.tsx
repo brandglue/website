@@ -7,7 +7,7 @@ import React from 'react';
 import { Category, Share } from '@components/blog';
 import { Breadcrumbs, Seo } from '@components/common';
 import { Box, Divider, SwitchLink, H2, Span } from '@components/core';
-import { css, rhythm, scale, styled } from '@styles/index';
+import { css, minMediaQuery, rhythm, scale, styled } from '@styles/index';
 
 interface IProps {
   data: GatsbyTypes.BlogPostQuery;
@@ -41,7 +41,7 @@ export const BlogPost: React.FC<IProps> = ({ data: { post }, pageContext }) => {
         <PostWrapper>
           <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
           <H2>{frontmatter.title}</H2>
-          <PostHeader variant="flex">
+          <PostHeader>
             <Meta>
               {frontmatter.author}
               <Sep></Sep>
@@ -75,26 +75,39 @@ const PostWrapper = styled(Box)`
 
 const PostHeader = styled(Box)`
   ${({ theme }) => css`
-    justify-content: space-between;
-    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
     color: ${theme.colors.gray04};
     border-bottom: 4px solid ${theme.colors.blue};
     font-size: ${scale(-0.1).fontSize};
     line-height: ${scale(-0.1).lineHeight};
     margin-bottom: ${rhythm(1)};
+
+    ${minMediaQuery.Medium(css`
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    `)}
   `}
 `;
 
 const Meta = styled.span`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: ${rhythm(0.5)};
+
+  ${minMediaQuery.Medium(css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+  `)}
 `;
 
 const Sep = styled.span`
   display: inline-block;
   position: relative;
+  vertical-align: middle;
   width: 30px;
+  height: 3px;
   margin: 0 10px;
 
   &:after {
@@ -107,7 +120,12 @@ const Sep = styled.span`
 `;
 
 const Categories = styled(Span)`
-  margin-left: auto;
+  margin-bottom: ${rhythm(0.5)};
+
+  ${minMediaQuery.Medium(css`
+    margin-left: auto;
+    margin-bottom: 0;
+  `)}
 `;
 
 const PostBody = styled(Box)`

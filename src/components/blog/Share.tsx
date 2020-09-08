@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import React, { FC } from 'react';
 
 import { Anchor, Box, H4 } from '@components/core';
-import { rhythm, styled } from '@styles/index';
+import { css, minMediaQuery, rhythm, styled } from '@styles/index';
 
 interface IProps {
   summary: string;
@@ -112,18 +112,33 @@ export const Share: FC<IProps> = ({ summary, title, url }) => {
 
 const Wrapper = styled(Box)`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   color: ${({ theme }) => theme.colors.gray06};
   border: 1px solid ${({ theme }) => theme.colors.gray02};
   border-radius: 5px;
   padding: 1em;
   margin-bottom: ${rhythm(1)};
+
+  ${minMediaQuery.Medium(css`
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  `)}
 `;
 
 const IconWrapper = styled(Box)`
+  margin-top: ${rhythm(0.5)};
+
+  ${minMediaQuery.Medium(css`
+    margin-top: 0;
+  `)}
+
   a {
-    padding-left: 0.6em;
+    padding-right: 0.6em;
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 
   svg {

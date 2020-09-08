@@ -1,16 +1,18 @@
 import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 
 import { Box, Divider, H1, H2, Image, P } from '@components/core';
-import { AboutBrandGlueDesktop } from '@media/svg';
-import { rhythm, scale, styled, css } from '@styles/index';
+import { AboutBrandGlueDesktop, AboutBrandGlueMobile } from '@media/svg';
+import { AppState } from '@src/AppState';
+import { minMediaQuery, rhythm, scale, styled, css } from '@styles/index';
 
 interface IProps {
   data: GatsbyTypes.AboutPageQuery;
 }
 
 export const About: FC<IProps> = ({ data }) => {
+  const { isLargeDevice } = useContext(AppState);
   const { edges } = data.team;
 
   return (
@@ -23,7 +25,7 @@ export const About: FC<IProps> = ({ data }) => {
           bit of our history.
         </P>
         <BrandGlueStory>
-          <AboutBrandGlueDesktop />
+          {isLargeDevice ? <AboutBrandGlueDesktop /> : <AboutBrandGlueMobile />}
         </BrandGlueStory>
       </Box>
       <Team>
@@ -87,10 +89,22 @@ const Team = styled(Box)`
 
 const Grid = styled(Box)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: 1fr;
+  grid-template-columns: minmax(250px, 380px);
   grid-gap: 60px;
   margin-bottom: ${rhythm(1)};
+
+  ${minMediaQuery.Small(css`
+    grid-template-columns: 1fr 1fr;
+  `)}
+
+  ${minMediaQuery.Medium(css`
+    grid-template-columns: repeat(2, minmax(250px, 380px));
+    grid-auto-rows: 1fr;
+  `)}
+
+  ${minMediaQuery.Large(css`
+    grid-template-columns: repeat(3, minmax(250px, 380px));
+  `)}
 `;
 
 const GridItem = styled(Box)``;

@@ -22,7 +22,7 @@ export const Category: FC<IProps> = ({ totalCount, value }) => {
 };
 
 const Link = styled(NavLink)`
-  margin: 0 0 1em 1em;
+  margin: 0 1em 1em 0;
   font-size: ${scale(-0.25).fontSize};
   line-height: ${scale(-0.25).lineHeight};
   font-weight: 700;

@@ -1,3 +1,4 @@
+import { AnyKindOfDictionary } from 'lodash';
 import * as sc from 'styled-components';
 
 import { IHex } from '@models/Hex';
@@ -7,7 +8,7 @@ import { css, Breakpoints, ITheme } from '@styles/index';
   Creates object with min-width media query functions for each breakpoint
   @returns IMediaQueries object
 */
-export const minMediaQuery = (function () {
+function minMediaQueriesFactory() {
   type IOrientation = 'landscape' | 'portrait';
   type ICss = (
     styles:
@@ -49,7 +50,9 @@ export const minMediaQuery = (function () {
   }
 
   return generateMinMediaQueries();
-})();
+}
+
+export const minMediaQuery = minMediaQueriesFactory();
 
 /*
   Convert hex (shorthand or longhand) color values to RGB

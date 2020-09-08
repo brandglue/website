@@ -1,8 +1,9 @@
 import { FluidObject } from 'gatsby-image';
-import React from 'react';
+import React, { FC, useContext } from 'react';
 
-import { Box, Image, NavLink, P, H3, Span } from '@components/core';
-import { styled, rhythm } from '@styles/index';
+import { Box, Image, NavLink, P, H3 } from '@components/core';
+import { AppState } from '@src/AppState';
+import { css, minMediaQuery, rhythm, styled } from '@styles/index';
 import { TopLevelPages as Pages } from '@utils/routes';
 
 interface IPost {
@@ -17,8 +18,17 @@ interface IProps {
   blogPosts: IPost[];
 }
 
-export const Previews: React.FC<IProps> = ({ blogPosts }) => {
-  const [featured, ...posts] = blogPosts;
+export const Previews: FC<IProps> = ({ blogPosts }) => {
+  const { isSmallDevice } = useContext(AppState);
+
+  let posts, featured;
+
+  if (isSmallDevice) {
+    posts = blogPosts;
+    featured = undefined;
+  } else {
+    [featured, ...posts] = blogPosts;
+  }
 
   const renderPost = (
     frontmatter: Partial<GatsbyTypes.MdxFrontmatter>,
@@ -58,14 +68,16 @@ export const Previews: React.FC<IProps> = ({ blogPosts }) => {
   return (
     <>
       <Box bg="gray00">
-        <FeaturedWrapper>
-          <FeaturedPost>
-            {featured?.node?.frontmatter &&
-              renderPost(featured.node.frontmatter, featured.node.excerpt)}
-          </FeaturedPost>
-        </FeaturedWrapper>
+        {!isSmallDevice && (
+          <FeaturedWrapper>
+            <FeaturedPost>
+              {featured?.node?.frontmatter &&
+                renderPost(featured.node.frontmatter, featured.node.excerpt)}
+            </FeaturedPost>
+          </FeaturedWrapper>
+        )}
       </Box>
-      <Box pb={0} variant="section">
+      <GridWrapper variant="section">
         <PostGrid>
           {posts.map(({ node: post }, index: number) => {
             const { excerpt, frontmatter } = post;
@@ -76,7 +88,7 @@ export const Previews: React.FC<IProps> = ({ blogPosts }) => {
             );
           })}
         </PostGrid>
-      </Box>
+      </GridWrapper>
     </>
   );
 };
@@ -87,13 +99,26 @@ const FeaturedWrapper = styled(Box)`
   margin: 0 auto;
 `;
 
+const GridWrapper = styled(Box)`
+  padding-bottom: 0;
+  padding-top: 0;
+
+  ${minMediaQuery.Medium(css`
+    padding-top: ${rhythm(2)};
+  `)}
+`;
+
 const PostGrid = styled(Box)`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 1fr;
-  align-items: flex-start;
+  grid-template-columns: 1fr;
   grid-gap: 60px;
   margin-bottom: ${rhythm(2)};
+
+  ${minMediaQuery.Medium(css`
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    align-items: flex-start;
+  `)}
 `;
 
 const Post = styled(Box)`
@@ -113,17 +138,6 @@ const PostContent = styled(Box)`
   flex-flow: column;
   justify-content: space-between;
   padding: ${rhythm(0.5)};
-`;
-
-const Author = styled(Span)`
-  padding-right: 10px;
-  color: ${({ theme }) => theme.colors.gray04};
-`;
-
-const Date = styled(Span)`
-  margin-right: auto;
-  padding-left: 10px;
-  color: ${({ theme }) => theme.colors.gray04};
 `;
 
 const FeaturedPost = styled(Box)`

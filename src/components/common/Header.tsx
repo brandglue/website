@@ -68,6 +68,7 @@ export const Header: FC = () => {
               return (
                 <SmallLink
                   key={item.label}
+                  onClick={handleMenuOpen}
                   to={`/${item.to}`}
                   variant="invisible"
                 >
