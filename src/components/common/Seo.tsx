@@ -13,6 +13,7 @@ interface IProps {
   meta?: string[];
   slug?: string;
   title?: string;
+  type?: string;
 }
 
 export const Seo: FC<IProps> = ({
@@ -22,6 +23,7 @@ export const Seo: FC<IProps> = ({
   meta = [],
   slug,
   title = 'Reaching Your Audience',
+  type = 'website',
 }) => {
   const { site } = useStaticQuery<GatsbyTypes.SeoMetadataQuery>(
     graphql`
@@ -42,7 +44,7 @@ export const Seo: FC<IProps> = ({
   const metaDescription = description || site?.siteMetadata?.description;
   const imageSrc =
     metaImage?.src && `${site?.siteMetadata?.siteUrl}${metaImage.src}`;
-  const canonical = slug ? `${site?.siteMetadata?.siteUrl}/${slug}` : null;
+  const canonical = slug ? `${site?.siteMetadata?.siteUrl}/${slug}` : '';
 
   return (
     <Helmet
@@ -61,7 +63,7 @@ export const Seo: FC<IProps> = ({
       }
       meta={[
         {
-          name: `description`,
+          name: 'description',
           content: metaDescription,
         },
         {
@@ -69,27 +71,31 @@ export const Seo: FC<IProps> = ({
           content: site?.siteMetadata?.keywords?.join(','),
         },
         {
-          property: `og:title`,
+          property: 'og:url',
+          content: canonical,
+        },
+        {
+          property: 'og:title',
           content: title,
         },
         {
-          property: `og:description`,
+          property: 'og:description',
           content: metaDescription,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: 'og:type',
+          content: type,
         },
         {
-          name: `twitter:creator`,
+          name: 'twitter:creator',
           content: site?.siteMetadata?.author,
         },
         {
-          name: `twitter:title`,
+          name: 'twitter:title',
           content: title,
         },
         {
-          name: `twitter:description`,
+          name: 'twitter:description',
           content: metaDescription,
         },
       ]
@@ -98,6 +104,10 @@ export const Seo: FC<IProps> = ({
             ? [
                 {
                   property: 'og:image',
+                  content: imageSrc,
+                },
+                {
+                  property: 'og:image:secure_url',
                   content: imageSrc,
                 },
                 {

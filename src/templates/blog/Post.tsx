@@ -31,6 +31,7 @@ export const BlogPost: React.FC<IProps> = ({
         image={frontmatter.cover_image?.childImageSharp?.resize as FixedObject}
         slug={frontmatter.slug}
         title={frontmatter.title}
+        type="article"
       />
       <MDXProvider
         components={{
