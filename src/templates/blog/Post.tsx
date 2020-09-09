@@ -11,11 +11,13 @@ import { css, minMediaQuery, rhythm, scale, styled } from '@styles/index';
 
 interface IProps {
   data: GatsbyTypes.BlogPostQuery;
+  location: any;
   pageContext: any;
 }
 
 export const BlogPost: React.FC<IProps> = ({
   data: { post, site },
+  location,
   pageContext,
 }) => {
   if (!post?.frontmatter || !post.body) {
@@ -29,7 +31,7 @@ export const BlogPost: React.FC<IProps> = ({
       <Seo
         description={post.excerpt}
         image={frontmatter.cover_image?.childImageSharp?.resize as FixedObject}
-        slug={frontmatter.slug}
+        path={location.pathname}
         title={frontmatter.title}
         type="article"
       />

@@ -11,7 +11,7 @@ interface IProps {
   };
   lang?: string;
   meta?: string[];
-  slug?: string;
+  path?: string;
   title?: string;
   type?: string;
 }
@@ -21,7 +21,7 @@ export const Seo: FC<IProps> = ({
   image: metaImage,
   lang = 'en',
   meta = [],
-  slug,
+  path = '',
   title = 'Reaching Your Audience',
   type = 'website',
 }) => {
@@ -44,7 +44,9 @@ export const Seo: FC<IProps> = ({
   const metaDescription = description || site?.siteMetadata?.description;
   const imageSrc =
     metaImage?.src && `${site?.siteMetadata?.siteUrl}${metaImage.src}`;
-  const canonical = slug ? `${site?.siteMetadata?.siteUrl}/${slug}` : '';
+  const canonical = path
+    ? `${site?.siteMetadata?.siteUrl}${path}`
+    : `${site?.siteMetadata?.siteUrl}`;
 
   return (
     <Helmet

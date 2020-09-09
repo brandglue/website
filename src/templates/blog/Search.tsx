@@ -1,17 +1,18 @@
 import React, { FC } from 'react';
 
 import { SearchForm } from '@components/blog';
-import { Breadcrumbs } from '@components/common';
+import { Breadcrumbs, Seo } from '@components/common';
 import { Box, Divider, NavLink } from '@components/core';
 import { rhythm, styled } from '@styles/index';
 import { getSearchResults } from '@utils/getSearchResults';
 import { RouteParts } from '@utils/routes';
 
 interface IProps {
+  location: any;
   pageContext: any;
 }
 
-export const Search: FC<IProps> = ({ pageContext }) => {
+export const Search: FC<IProps> = ({ location, pageContext }) => {
   let query = '';
 
   if (typeof window !== 'undefined') {
@@ -42,17 +43,25 @@ export const Search: FC<IProps> = ({ pageContext }) => {
   };
 
   return (
-    <Box>
-      <Divider />
-      <Box variant="section">
-        <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
-        <SearchForm initialQuery={query} />
-        <Results>
-          {query && <h4>{`Search results:`}</h4>}
-          <ResultList />
-        </Results>
+    <>
+      <Seo
+        description="BrandGlue blog search"
+        path={location.pathname}
+        title="Blog Search"
+        type="website"
+      />
+      <Box>
+        <Divider />
+        <Box variant="section">
+          <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
+          <SearchForm initialQuery={query} />
+          <Results>
+            {query && <h4>{`Search results:`}</h4>}
+            <ResultList />
+          </Results>
+        </Box>
       </Box>
-    </Box>
+    </>
   );
 };
 

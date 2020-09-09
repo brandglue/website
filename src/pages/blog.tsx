@@ -3,13 +3,15 @@ import { chunk } from 'lodash-es';
 import React, { FC, useEffect, useState } from 'react';
 
 import { ActionBar, LoadMore, Previews } from '@components/blog';
+import { Seo } from '@components/common';
 import { Box, Divider, P, H1 } from '@components/core';
 
 interface IProps {
   data: GatsbyTypes.BlogPageQuery;
+  location: any;
 }
 
-export const Blog: FC<IProps> = ({ data }) => {
+export const Blog: FC<IProps> = ({ data, location }) => {
   const [page, setPage] = useState(1);
   const [allLoaded, setAllLoaded] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -44,18 +46,26 @@ export const Blog: FC<IProps> = ({ data }) => {
   };
 
   return (
-    <Box>
-      <Divider />
-      <Box pb={0} variant="section">
-        <H1>There is a lot going on out there in the social sphere.</H1>
-        <P>Here&apos;s what we&apos;ve got to say about it.</P>
-        <ActionBar />
+    <>
+      <Seo
+        description="BrandGlue blog"
+        path={location.pathname}
+        title="Blog"
+        type="website"
+      />
+      <Box>
+        <Divider />
+        <Box pb={0} variant="section">
+          <H1>There is a lot going on out there in the social sphere.</H1>
+          <P>Here&apos;s what we&apos;ve got to say about it.</P>
+          <ActionBar />
+        </Box>
+        {renderChunks()}
+        <Box pt={0} variant="section">
+          <LoadMore allLoaded={allLoaded} handleLoadMore={handleLoadMore} />
+        </Box>
       </Box>
-      {renderChunks()}
-      <Box pt={0} variant="section">
-        <LoadMore allLoaded={allLoaded} handleLoadMore={handleLoadMore} />
-      </Box>
-    </Box>
+    </>
   );
 };
 

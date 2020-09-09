@@ -3,19 +3,26 @@ import { FluidObject } from 'gatsby-image';
 import { kebabCase } from 'lodash-es';
 import React, { FC } from 'react';
 
-import { Contact } from '@components/common';
+import { Contact, Seo } from '@components/common';
 import { Box, Divider, H1, Image, NavLink, P } from '@components/core';
 import { css, minMediaQuery, rhythm, scale, styled } from '@styles/index';
 
 interface IProps {
   data: GatsbyTypes.CaseStudiesPageQuery;
+  location: any;
 }
 
-export const CaseStudies: FC<IProps> = ({ data }) => {
+export const CaseStudies: FC<IProps> = ({ data, location }) => {
   const { edges } = data.caseStudies;
 
   return (
     <>
+      <Seo
+        description="BrandGlue case studies"
+        path={location.pathname}
+        title="Case Studies"
+        type="website"
+      />
       <Divider />
       <Box pb={0} variant="section">
         <H1>See how we&apos;ve helped our clients.</H1>

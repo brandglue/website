@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React, { FC, useContext } from 'react';
 
+import { Seo } from '@components/common';
 import { Anchor, Box, Divider, H1, H2, Image, P } from '@components/core';
 import { AboutBrandGlueDesktop, AboutBrandGlueMobile } from '@media/svg';
 import { AppState } from '@src/AppState';
@@ -10,14 +11,21 @@ import { minMediaQuery, rhythm, scale, styled, css } from '@styles/index';
 
 interface IProps {
   data: GatsbyTypes.AboutPageQuery;
+  location: any;
 }
 
-export const About: FC<IProps> = ({ data }) => {
+export const About: FC<IProps> = ({ data, location }) => {
   const { isLargeDevice } = useContext(AppState);
   const { edges } = data.team;
 
   return (
     <>
+      <Seo
+        description="About BrandGlue"
+        path={location.pathname}
+        title="About"
+        type="website"
+      />
       <Divider />
       <Box variant="section">
         <H1>We&apos;ve come a long way.</H1>

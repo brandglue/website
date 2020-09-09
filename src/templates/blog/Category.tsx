@@ -3,20 +3,22 @@ import { chunk } from 'lodash-es';
 import React, { FC, useEffect, useState } from 'react';
 
 import { ActionBar, LoadMore, Previews } from '@components/blog';
-import { Breadcrumbs } from '@components/common';
+import { Breadcrumbs, Seo } from '@components/common';
 import { Box, Divider } from '@components/core';
-import { css, minMediaQuery, rhythm, styled } from '@styles/index';
+import { rhythm, styled } from '@styles/index';
 
 interface IProps {
+  data: GatsbyTypes.BlogPostsByCategoryQuery;
+  location: any;
+  pageContext: any;
   pathContext: {
     category: string;
   };
-  data: GatsbyTypes.BlogPostsByCategoryQuery;
-  pageContext: any;
 }
 
 export const Category: FC<IProps> = ({
   data,
+  location,
   pathContext: { category },
   pageContext,
 }) => {
@@ -60,18 +62,26 @@ export const Category: FC<IProps> = ({
   };
 
   return (
-    <Box>
-      <Divider />
-      <Box pb={0} variant="section">
-        <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
-        <ActionBar />
-        <CategoryTitle>Category: {category}</CategoryTitle>
+    <>
+      <Seo
+        description={`BrandGlue blog | category: ${category}`}
+        path={location.pathname}
+        title={`Category: ${category}`}
+        type="website"
+      />
+      <Box>
+        <Divider />
+        <Box pb={0} variant="section">
+          <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
+          <ActionBar />
+          <CategoryTitle>Category: {category}</CategoryTitle>
+        </Box>
+        {renderChunks()}
+        <Box pt={0} variant="section">
+          <LoadMore allLoaded={allLoaded} handleLoadMore={handleLoadMore} />
+        </Box>
       </Box>
-      {renderChunks()}
-      <Box pt={0} variant="section">
-        <LoadMore allLoaded={allLoaded} handleLoadMore={handleLoadMore} />
-      </Box>
-    </Box>
+    </>
   );
 };
 

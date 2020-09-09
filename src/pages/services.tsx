@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React, { FC } from 'react';
 
-import { Contact } from '@components/common';
+import { Contact, Seo } from '@components/common';
 import { Box, Divider, H1, P } from '@components/core';
 import {
   AudiencePersonas,
@@ -20,56 +20,65 @@ import { css, minMediaQuery, rhythm, scale, styled } from '@styles/index';
 
 interface IProps {
   data: GatsbyTypes.ServicesPageQuery;
+  location: any;
 }
 
-export const Services: FC<IProps> = ({ data }) => {
+export const Services: FC<IProps> = ({ data, location }) => {
   const { edges } = data.allServices;
 
   return (
-    <MDXProvider
-      components={{
-        AudiencePersonas,
-        CommunityManagement,
-        ContentStrategy,
-        CustomerService,
-        DataAnalysis,
-        GraphicDesign,
-        NewsfeedOptimization,
-        PaidAdvertising,
-        SocialStrategy,
-      }}
-    >
-      <Divider />
-      <Box pb={0} variant="section">
-        <H1>There are a lot of ways we can help your brand get noticed.</H1>
-        <P>
-          When you&apos;re putting your brand on the line, you&apos;ll want the
-          experts to handle it. Here&apos;s how we can help.
-        </P>
-      </Box>
-      {edges.map(({ node: service }, index) => {
-        const { frontmatter } = service;
-        const isEven = index % 2 === 0;
-        return (
-          <ServiceWrapper key={frontmatter?.title}>
-            <Service isEven={isEven} variant="section">
-              <ServiceText isEven={isEven}>
-                <ServiceTitle>{frontmatter?.title}</ServiceTitle>
-                <h3>{frontmatter?.shortDescription}</h3>
-                <p>{frontmatter?.longDescription}</p>
-              </ServiceText>
-              <ServiceImage>
-                {frontmatter?.icon && (
-                  <MDXRenderer>{frontmatter.icon}</MDXRenderer>
-                )}
-              </ServiceImage>
-            </Service>
-          </ServiceWrapper>
-        );
-      })}
-      <Divider />
-      <Contact />
-    </MDXProvider>
+    <>
+      <Seo
+        description="BrandGlue Services"
+        path={location.pathname}
+        title="Services"
+        type="website"
+      />
+      <MDXProvider
+        components={{
+          AudiencePersonas,
+          CommunityManagement,
+          ContentStrategy,
+          CustomerService,
+          DataAnalysis,
+          GraphicDesign,
+          NewsfeedOptimization,
+          PaidAdvertising,
+          SocialStrategy,
+        }}
+      >
+        <Divider />
+        <Box pb={0} variant="section">
+          <H1>There are a lot of ways we can help your brand get noticed.</H1>
+          <P>
+            When you&apos;re putting your brand on the line, you&apos;ll want
+            the experts to handle it. Here&apos;s how we can help.
+          </P>
+        </Box>
+        {edges.map(({ node: service }, index) => {
+          const { frontmatter } = service;
+          const isEven = index % 2 === 0;
+          return (
+            <ServiceWrapper key={frontmatter?.title}>
+              <Service isEven={isEven} variant="section">
+                <ServiceText isEven={isEven}>
+                  <ServiceTitle>{frontmatter?.title}</ServiceTitle>
+                  <h3>{frontmatter?.shortDescription}</h3>
+                  <p>{frontmatter?.longDescription}</p>
+                </ServiceText>
+                <ServiceImage>
+                  {frontmatter?.icon && (
+                    <MDXRenderer>{frontmatter.icon}</MDXRenderer>
+                  )}
+                </ServiceImage>
+              </Service>
+            </ServiceWrapper>
+          );
+        })}
+        <Divider />
+        <Contact />
+      </MDXProvider>
+    </>
   );
 };
 

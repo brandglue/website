@@ -11,11 +11,13 @@ import { css, hexToRgb, rhythm, styled } from '@styles/index';
 
 interface IProps {
   data: GatsbyTypes.CaseStudyQuery;
+  location: any;
   pageContext: any;
 }
 
 export const CaseStudy: React.FC<IProps> = ({
   data: { caseStudy },
+  location,
   pageContext,
 }) => {
   if (!caseStudy?.frontmatter || !caseStudy.body) {
@@ -30,7 +32,7 @@ export const CaseStudy: React.FC<IProps> = ({
     <>
       <Seo
         description={caseStudy.excerpt}
-        slug={frontmatter.slug}
+        path={location.pathname}
         title={frontmatter.title}
       />
       <MDXProvider
