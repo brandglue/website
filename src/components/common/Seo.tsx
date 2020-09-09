@@ -42,7 +42,7 @@ export const Seo: FC<IProps> = ({
   const metaDescription = description || site?.siteMetadata?.description;
   const imageSrc =
     metaImage?.src && `${site?.siteMetadata?.siteUrl}${metaImage.src}`;
-  const canonical = slug ? `${site?.siteMetadata?.siteUrl}${slug}` : null;
+  const canonical = slug ? `${site?.siteMetadata?.siteUrl}/${slug}` : null;
 
   return (
     <Helmet

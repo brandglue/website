@@ -1,12 +1,12 @@
 import { Facebook, Linkedin, Twitter } from '@styled-icons/boxicons-logos';
 import { MailSend } from '@styled-icons/boxicons-regular';
-import { useStaticQuery, graphql } from 'gatsby';
 import React, { FC } from 'react';
 
 import { Anchor, Box, H4 } from '@components/core';
 import { css, minMediaQuery, rhythm, styled } from '@styles/index';
 
 interface IProps {
+  siteUrl?: string;
   summary: string;
   title: string;
   url: string;
@@ -35,7 +35,7 @@ const getTwitterShareUrl = (url: string) => {
   const text = 'Check this out:';
   return `https://twitter.com/intent/tweet/?text=${encodeURIComponent(
     text,
-  )}&url=${encodeURIComponent(url)}'&via=glue`;
+  )}&url=${encodeURIComponent(url)}&via=glue`;
 };
 
 const getEmailShareUrl = (url: string) => {
@@ -45,24 +45,16 @@ const getEmailShareUrl = (url: string) => {
   )}`;
 };
 
-export const Share: FC<IProps> = ({ summary, title, url }) => {
-  const { site } = useStaticQuery<GatsbyTypes.ShareDataQuery>(graphql`
-    query ShareData {
-      site {
-        siteMetadata {
-          siteUrl
-        }
-      }
-    }
-  `);
-
-  const siteUrl = site?.siteMetadata?.siteUrl || '';
-  const shareUrl = `${siteUrl}${url}`;
-
-  const facebookUrl = getFacebookShareUrl(shareUrl);
-  const linkedInUrl = getLinkedInShareUrl(shareUrl, title, siteUrl, summary);
-  const twitterUrl = getTwitterShareUrl(shareUrl);
-  const emailUrl = getEmailShareUrl(shareUrl);
+export const Share: FC<IProps> = ({
+  siteUrl = '',
+  summary,
+  title,
+  url = '',
+}) => {
+  const facebookUrl = getFacebookShareUrl(url);
+  const linkedInUrl = getLinkedInShareUrl(url, title, siteUrl, summary);
+  const twitterUrl = getTwitterShareUrl(url);
+  const emailUrl = getEmailShareUrl(url);
 
   return (
     <Wrapper>

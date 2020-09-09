@@ -14,7 +14,10 @@ interface IProps {
   pageContext: any;
 }
 
-export const BlogPost: React.FC<IProps> = ({ data: { post }, pageContext }) => {
+export const BlogPost: React.FC<IProps> = ({
+  data: { post, site },
+  pageContext,
+}) => {
   if (!post?.frontmatter || !post.body) {
     return null;
   }
@@ -57,9 +60,10 @@ export const BlogPost: React.FC<IProps> = ({ data: { post }, pageContext }) => {
             <MDXRenderer>{body}</MDXRenderer>
           </PostBody>
           <Share
+            siteUrl={site?.siteMetadata?.siteUrl}
             summary={post.excerpt}
             title={frontmatter.title}
-            url={pageContext.slug}
+            url={`${site?.siteMetadata?.siteUrl}/${pageContext.slug}`}
           />
         </PostWrapper>
       </MDXProvider>
@@ -155,6 +159,11 @@ export const blogPostQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+      }
+    }
+    site {
+      siteMetadata {
+        siteUrl
       }
     }
   }

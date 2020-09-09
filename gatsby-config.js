@@ -5,7 +5,7 @@ module.exports = {
     author: 'BrandGlue',
     description: 'BrandGlue website',
     keywords: ['social media', 'social media agency'],
-    siteUrl: 'https://brandglue.netlify.app', // TODO: update when go live
+    siteUrl: 'https://brandglue.netlify.app', // TODO: update when go live, no trailing slash
     title: 'BrandGlue',
   },
   plugins: [
