@@ -1,49 +1,42 @@
 import React, { FC, useState } from 'react';
 
-import {
-  Button,
-  Box,
-  Input,
-  TextArea,
-  NavLink,
-  H1,
-  H2,
-  H3,
-  P,
-} from '@components/core';
+import { Button, Box, Input, P, TextArea } from '@components/core';
 import { css, hexToRgb, minMediaQuery, rhythm, styled } from '@styles/index';
 import { encodeFormData } from '@utils/encodeFormData';
-import { TopLevelPages as Pages } from '@utils/routes';
 
 interface IProps {
   isPage?: boolean;
 }
 
-export const Contact: FC<IProps> = ({ isPage = false }) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [company, setCompany] = useState('');
-  const [title, setTitle] = useState('');
-  const [message, setMessage] = useState('');
-  const [hasSubmitted, setSubmitted] = useState(false);
-  const [formError, setFormError] = useState(undefined);
+const initialState = {
+  company: '',
+  email: '',
+  message: '',
+  name: '',
+  title: '',
+  formError: undefined,
+  hasSubmitted: false,
+};
 
-  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setName(e.target.value);
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setEmail(e.target.value);
-  const handleCompanyChange = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setCompany(e.target.value);
-  const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setTitle(e.target.value);
-  const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) =>
-    setMessage(e.target.value);
+export const Contact: FC<IProps> = ({ isPage = false }) => {
+  const [state, setState] = useState(initialState);
+  const {
+    company,
+    email,
+    message,
+    name,
+    title,
+    formError,
+    hasSubmitted,
+  } = state;
 
   const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (formError) {
-      setFormError(undefined);
+      setState((prevState) => {
+        return { ...prevState, formError: undefined };
+      });
     }
 
     fetch('/', {
@@ -51,23 +44,31 @@ export const Contact: FC<IProps> = ({ isPage = false }) => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encodeFormData({
         'form-name': 'contact',
-        name,
         email,
         company,
-        title,
         message,
+        name,
+        title,
       }),
     })
-      .then(() => setSubmitted(true))
-      .catch((error) => setFormError(error));
+      .then(() =>
+        setState((prevState) => {
+          return { ...prevState, hasSubmitted: true };
+        }),
+      )
+      .catch((error) =>
+        setState((prevState) => {
+          return { ...prevState, formError: error };
+        }),
+      );
   };
 
   return (
     <Box variant="section">
       {isPage ? (
-        <H1>Ready to get to work? We are.</H1>
+        <h1>Ready to get to work? We are.</h1>
       ) : (
-        <H2>Ready to get to work? We are.</H2>
+        <h2>Ready to get to work? We are.</h2>
       )}
       <P pb={5}>
         Overwhelmed with the possibilities and options of social media? Not sure
@@ -84,24 +85,22 @@ export const Contact: FC<IProps> = ({ isPage = false }) => {
       >
         {!hasSubmitted ? (
           <>
-            <Box
-              alignItems="flex-start"
-              flexDirection={['column', null, 'row']}
-              variant="flex"
-            >
+            <Fields>
               <Group>
                 <input name="contact" type="hidden" value="contact" />
                 <Input
                   aria-label="Name"
                   name="name"
-                  onChange={handleNameChange}
+                  onChange={(e) => setState({ ...state, name: e.target.value })}
                   placeholder="Name"
                   value={name}
                 />
                 <Input
                   aria-label="email"
                   name="email"
-                  onChange={handleEmailChange}
+                  onChange={(e) =>
+                    setState({ ...state, email: e.target.value })
+                  }
                   placeholder="Email"
                   type="email"
                   value={email}
@@ -109,14 +108,18 @@ export const Contact: FC<IProps> = ({ isPage = false }) => {
                 <Input
                   aria-label="company"
                   name="company"
-                  onChange={handleCompanyChange}
+                  onChange={(e) =>
+                    setState({ ...state, company: e.target.value })
+                  }
                   placeholder="Company"
                   value={company}
                 />
                 <Input
                   aria-label="title"
                   name="title"
-                  onChange={handleTitleChange}
+                  onChange={(e) =>
+                    setState({ ...state, title: e.target.value })
+                  }
                   placeholder="Title"
                   value={title}
                 />
@@ -125,7 +128,9 @@ export const Contact: FC<IProps> = ({ isPage = false }) => {
                 <TextArea
                   aria-label="message"
                   name="message"
-                  onChange={handleMessageChange}
+                  onChange={(e) =>
+                    setState({ ...state, message: e.target.value })
+                  }
                   placeholder="In a few words, what are your needs?"
                   value={message}
                 />
@@ -133,20 +138,15 @@ export const Contact: FC<IProps> = ({ isPage = false }) => {
                   Request Assessment
                 </Button>
               </Group>
-            </Box>
+            </Fields>
             {formError && <Error>{formError}</Error>}
           </>
         ) : (
           <Success>
-            <H3>Thank You!</H3>
-            <P>Your assessment is on {"it's"} way to us.</P>
-            <P>{"We'll"} reach out soon to follow-up with you.</P>
-            <P>
-              In the meanwhile, check out our{' '}
-              <NavLink to={`/${Pages.Blog}`}>blog</NavLink> or{' '}
-              <NavLink to={`/${Pages.CaseStudies}`}>case studies</NavLink> to
-              learn more.
-            </P>
+            <h3>Thank You!</h3>
+            <p>
+              We&apos;ve received your message. We&apos;ll be in touch soon.
+            </p>
           </Success>
         )}
       </ContactForm>
@@ -157,6 +157,16 @@ export const Contact: FC<IProps> = ({ isPage = false }) => {
 const ContactForm = styled.form`
   display: flex;
   flex-flow: column;
+`;
+
+const Fields = styled.div`
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  ${minMediaQuery.Medium(css`
+    flex-direction: row;
+  `)}
 `;
 
 const Group = styled.div`
@@ -190,7 +200,7 @@ const Success = styled.div`
 const Error = styled.div`
   ${({ theme }) => css`
     background: rgba(${hexToRgb(theme.colors.red)}, 0.5);
-    color: ${theme.colors.red};
+    color: ${theme.colors.black};
     border: 1px solid ${theme.colors.red};
     padding: 0.6em;
     margin-top: ${rhythm(0.5)};
