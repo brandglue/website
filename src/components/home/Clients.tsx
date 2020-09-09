@@ -3,7 +3,7 @@ import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
 import { Box, Image } from '@components/core';
-import { css, minMediaQuery, styled } from '@styles/index';
+import { styled } from '@styles/index';
 
 export const Clients: FC = () => {
   const images = useStaticQuery<GatsbyTypes.ClientLogosQuery>(graphql`
@@ -41,9 +41,9 @@ export const Clients: FC = () => {
           }
         }
       }
-      intel: file(
+      intuit: file(
         sourceInstanceName: { eq: "media" }
-        relativePath: { eq: "images/logo-intel.png" }
+        relativePath: { eq: "images/logo-intuit.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1100) {
@@ -81,10 +81,10 @@ export const Clients: FC = () => {
             fluid={images?.quickbooks?.childImageSharp?.fluid as FluidObject}
           />
         )}
-        {images?.intel?.childImageSharp?.fluid && (
+        {images?.intuit?.childImageSharp?.fluid && (
           <Image
-            alt="intel"
-            fluid={images?.intel?.childImageSharp?.fluid as FluidObject}
+            alt="intuit"
+            fluid={images?.intuit?.childImageSharp?.fluid as FluidObject}
           />
         )}
         {images?.kayak?.childImageSharp?.fluid && (

@@ -7,11 +7,13 @@ import { css, minMediaQuery, rhythm, styled } from '@styles/index';
 import { TopLevelPages as Pages } from '@utils/routes';
 
 export const CaseStudy: FC = () => {
-  const intuitLogo = useStaticQuery<GatsbyTypes.FeaturedCaseStudyQuery>(graphql`
+  const whiteHatLogo = useStaticQuery<
+    GatsbyTypes.FeaturedCaseStudyQuery
+  >(graphql`
     query FeaturedCaseStudy {
       file(
         sourceInstanceName: { eq: "media" }
-        relativePath: { eq: "images/logo-intuit.png" }
+        relativePath: { eq: "images/logo-whitehat-security-white.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1100) {
@@ -27,20 +29,20 @@ export const CaseStudy: FC = () => {
     <Box bg="darkBlue">
       <Container variant="section">
         <Logo>
-          {intuitLogo?.file?.childImageSharp?.fluid && (
+          {whiteHatLogo?.file?.childImageSharp?.fluid && (
             <Image
-              alt="intuit-accountants"
-              fluid={intuitLogo?.file?.childImageSharp?.fluid as FluidObject}
+              alt="whitehat-security"
+              fluid={whiteHatLogo?.file?.childImageSharp?.fluid as FluidObject}
             />
           )}
         </Logo>
         <Text>
-          <CaseStudyTitle>Growing Twitter the Right Way</CaseStudyTitle>
+          <CaseStudyTitle>Developing a wholistic strategy</CaseStudyTitle>
           <P color="white" mb="0">
-            {`We helped Intuit Accountants \n get the right audience at the right price`}
+            {`How we boosted brand awareness \n and organic engagement for WhiteHat Security.`}
             <CaseStudyLink
               hasArrow
-              to={`/${Pages.CaseStudies}/intuit-accountants`}
+              to={`/${Pages.CaseStudies}/whitehat-security`}
             >
               See Case Study
             </CaseStudyLink>
