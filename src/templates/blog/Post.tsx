@@ -62,12 +62,7 @@ export const BlogPost: React.FC<IProps> = ({
           <PostBody>
             <MDXRenderer>{body}</MDXRenderer>
           </PostBody>
-          <Share
-            absoluteUrl={`${site?.siteMetadata?.siteUrl}${location.pathname}`}
-            siteUrl={site?.siteMetadata?.siteUrl}
-            summary={post.excerpt}
-            title={frontmatter.title}
-          />
+          <Share url={`${site?.siteMetadata?.siteUrl}${location.pathname}`} />
         </PostWrapper>
       </MDXProvider>
     </>
@@ -152,7 +147,7 @@ export const blogPostQuery = graphql`
         cover_image {
           name
           childImageSharp {
-            resize(width: 1100) {
+            resize(width: 1200) {
               src
               height
               width

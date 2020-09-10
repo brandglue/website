@@ -6,27 +6,15 @@ import { Anchor, Box, H4 } from '@components/core';
 import { css, minMediaQuery, rhythm, styled } from '@styles/index';
 
 interface IProps {
-  absoluteUrl: string;
-  siteUrl?: string;
-  summary: string;
-  title: string;
+  url: string;
 }
 
 const getFacebookShareUrl = (url: string) => {
   return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
 };
 
-const getLinkedInShareUrl = (
-  url: string,
-  title: string,
-  source: string,
-  summary: string,
-) => {
-  return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${encodeURIComponent(
-    title,
-  )}&source=${encodeURIComponent(source)}&summary=${encodeURIComponent(
-    summary,
-  )}`;
+const getLinkedInShareUrl = (url: string) => {
+  return `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
 };
 
 const getTwitterShareUrl = (url: string) => {
@@ -41,16 +29,11 @@ const getEmailShareUrl = (url: string) => {
   return `mailto:?subject=${encodeURIComponent(text)}&body=${url}`;
 };
 
-export const Share: FC<IProps> = ({
-  absoluteUrl = '',
-  siteUrl = '',
-  summary,
-  title,
-}) => {
-  const facebookUrl = getFacebookShareUrl(absoluteUrl);
-  const linkedInUrl = getLinkedInShareUrl(absoluteUrl, title, siteUrl, summary);
-  const twitterUrl = getTwitterShareUrl(absoluteUrl);
-  const emailUrl = getEmailShareUrl(absoluteUrl);
+export const Share: FC<IProps> = ({ url = '' }) => {
+  const facebookUrl = getFacebookShareUrl(url);
+  const linkedInUrl = getLinkedInShareUrl(url);
+  const twitterUrl = getTwitterShareUrl(url);
+  const emailUrl = getEmailShareUrl(url);
 
   return (
     <Wrapper>
