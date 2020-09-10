@@ -46,7 +46,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const blogPosts = result.data.blogPostsMdx.edges;
   blogPosts.forEach(({ node }) => {
     createPage({
-      path: `/blog/${node.frontmatter.slug}`,
+      path: `/blog/${node.frontmatter.slug}/`,
       component: require.resolve('./src/templates/blog/Post.tsx'),
       context: {
         slug: node.frontmatter.slug,
@@ -58,7 +58,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const blogCategories = result.data.blogPostCategories.group;
   blogCategories.forEach((category) => {
     createPage({
-      path: `/blog/category/${kebabCase(category.value)}`,
+      path: `/blog/category/${kebabCase(category.value)}/`,
       component: require.resolve('./src/templates/blog/Category.tsx'),
       context: {
         category: category.value,
@@ -68,7 +68,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   // create blog search page
   createPage({
-    path: '/blog/search',
+    path: '/blog/search/',
     component: require.resolve('./src/templates/blog/Search.tsx'),
   });
 
@@ -76,7 +76,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const caseStudies = result.data.caseStudiesMdx.edges;
   caseStudies.forEach(({ node }) => {
     createPage({
-      path: `/case-studies/${node.frontmatter.slug}`,
+      path: `/case-studies/${node.frontmatter.slug}/`,
       component: require.resolve('./src/templates/case-studies/CaseStudy.tsx'),
       context: {
         slug: node.frontmatter.slug,
@@ -86,8 +86,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   // redirects
   createRedirect({
-    fromPath: '/blog/category',
-    toPath: '/blog',
+    fromPath: '/blog/category/',
+    toPath: '/blog/',
     redirectInBrowser: true,
     isPermanent: true,
   });

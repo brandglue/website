@@ -13,7 +13,7 @@ interface IProps {
 export const Category: FC<IProps> = ({ totalCount, value }) => {
   return (
     <Link
-      to={`/${TopLevelPages.Blog}/${RouteParts.Category}/${kebabCase(value)}`}
+      to={`/${TopLevelPages.Blog}/${RouteParts.Category}/${kebabCase(value)}/`}
       variant="badge"
     >
       {value} {totalCount && <Count>{totalCount}</Count>}

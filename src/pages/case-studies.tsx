@@ -42,7 +42,7 @@ export const CaseStudies: FC<IProps> = ({ data, location }) => {
                 <CaseStudyTitle>{frontmatter?.client}</CaseStudyTitle>
                 <h3>{frontmatter?.title}</h3>
                 <p>{frontmatter?.description}</p>
-                <NavLink hasArrow to={frontmatter?.slug || ''}>
+                <NavLink hasArrow to={`${frontmatter?.slug}/` || ''}>
                   Check out the case study
                 </NavLink>
               </CaseStudyText>

@@ -28,7 +28,7 @@ export const Search: FC<IProps> = ({ location, pageContext }) => {
         <div>
           {results.map((page, i) => (
             <Result key={i}>
-              <NavLink to={page.url}>{page.title}</NavLink>
+              <NavLink to={`/${page.url}/`}>{page.title}</NavLink>
             </Result>
           ))}
         </div>

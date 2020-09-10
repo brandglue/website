@@ -63,7 +63,7 @@ export const Services: FC<IProps> = ({ data }) => {
                   <GridLabel>{frontmatter?.title}</GridLabel>
                   <P>{frontmatter?.shortDescription}</P>
                   <Box flexGrow={0}>
-                    <NavLink hasArrow to={`/${Pages.Services}`}>
+                    <NavLink hasArrow to={`/${Pages.Services}/`}>
                       Learn more
                     </NavLink>
                   </Box>

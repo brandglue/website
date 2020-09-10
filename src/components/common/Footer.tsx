@@ -55,7 +55,7 @@ export const Footer: FC = () => (
         <Links>
           <li>
             <FooterLink
-              to={`/${TopLevelPages.About}`}
+              to={`/${TopLevelPages.About}/`}
               variant="textLinkCurrent"
             >
               {TopLevelPageLabels.About}
@@ -63,7 +63,7 @@ export const Footer: FC = () => (
           </li>
           <li>
             <FooterLink
-              to={`/${TopLevelPages.Services}`}
+              to={`/${TopLevelPages.Services}/`}
               variant="textLinkCurrent"
             >
               {TopLevelPageLabels.Services}
@@ -71,14 +71,17 @@ export const Footer: FC = () => (
           </li>
           <li>
             <FooterLink
-              to={`/${TopLevelPages.CaseStudies}`}
+              to={`/${TopLevelPages.CaseStudies}/`}
               variant="textLinkCurrent"
             >
               {TopLevelPageLabels.CaseStudies}
             </FooterLink>
           </li>
           <li>
-            <FooterLink to={`/${TopLevelPages.Blog}`} variant="textLinkCurrent">
+            <FooterLink
+              to={`/${TopLevelPages.Blog}/`}
+              variant="textLinkCurrent"
+            >
               {TopLevelPageLabels.Blog}
             </FooterLink>
           </li>
@@ -86,7 +89,7 @@ export const Footer: FC = () => (
         <Links>
           <li>
             <FooterLink
-              to={`/${TopLevelPages.CaseStudies}/${RouteParts.CaseStudy}/eloqua`}
+              to={`/${TopLevelPages.CaseStudies}/eloqua/`}
               variant="textLinkCurrent"
             >
               Eloqua Case Study
@@ -94,7 +97,7 @@ export const Footer: FC = () => (
           </li>
           <li>
             <FooterLink
-              to={`/${TopLevelPages.CaseStudies}/${RouteParts.CaseStudy}/intuit-accountants`}
+              to={`/${TopLevelPages.CaseStudies}/intuit-accountants/`}
               variant="textLinkCurrent"
             >
               Intuit Case Study
@@ -102,7 +105,7 @@ export const Footer: FC = () => (
           </li>
           <li>
             <FooterLink
-              to={`/${TopLevelPages.CaseStudies}/${RouteParts.CaseStudy}/whitehat-security`}
+              to={`/${TopLevelPages.CaseStudies}/whitehat-security/`}
               variant="textLinkCurrent"
             >
               WhiteHat Case Study
@@ -110,7 +113,7 @@ export const Footer: FC = () => (
           </li>
           <li>
             <FooterLink
-              to={`/${TopLevelPages.CaseStudies}/${RouteParts.CaseStudy}/pgi`}
+              to={`/${TopLevelPages.CaseStudies}/pgi/`}
               variant="textLinkCurrent"
             >
               PGi Case Study

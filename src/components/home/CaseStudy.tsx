@@ -42,7 +42,7 @@ export const CaseStudy: FC = () => {
             {`How we boosted brand awareness \n and organic engagement for WhiteHat Security.`}
             <CaseStudyLink
               hasArrow
-              to={`/${Pages.CaseStudies}/whitehat-security`}
+              to={`/${Pages.CaseStudies}/whitehat-security/`}
             >
               See Case Study
             </CaseStudyLink>

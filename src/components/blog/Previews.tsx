@@ -36,7 +36,7 @@ export const Previews: FC<IProps> = ({ blogPosts }) => {
   ) => (
     <>
       <PostImage variant="flexItem">
-        <NavLink to={`/${Pages.Blog}/${frontmatter.slug}`} variant="invisible">
+        <NavLink to={`/${Pages.Blog}/${frontmatter.slug}/`} variant="invisible">
           {frontmatter.cover_image?.childImageSharp?.fluid && (
             <Image
               alt={frontmatter.title}
@@ -50,13 +50,16 @@ export const Previews: FC<IProps> = ({ blogPosts }) => {
       <PostContent variant="flexItem">
         <Box>
           {frontmatter?.slug && (
-            <NavLink to={`/${Pages.Blog}/${frontmatter.slug}`} variant="title">
+            <NavLink to={`/${Pages.Blog}/${frontmatter.slug}/`} variant="title">
               <H3>{frontmatter.title}</H3>
             </NavLink>
           )}
           <P>{excerpt}</P>
           {frontmatter?.slug && (
-            <NavLink to={`/${Pages.Blog}/${frontmatter.slug}`} variant="button">
+            <NavLink
+              to={`/${Pages.Blog}/${frontmatter.slug}/`}
+              variant="button"
+            >
               <Box variant="centered">Read More</Box>
             </NavLink>
           )}

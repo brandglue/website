@@ -5,7 +5,7 @@ module.exports = {
     author: 'BrandGlue',
     description: 'BrandGlue website',
     keywords: ['social media', 'social media agency'],
-    siteUrl: 'https://brandglue.netlify.app', // TODO: update when go live, no trailing slash
+    siteUrl: 'https://brandglue.netlify.app', // TODO: update when go live, don't include trailing slash
     title: 'BrandGlue',
   },
   plugins: [
@@ -24,6 +24,7 @@ module.exports = {
     },
     'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-force-trailing-slashes',
     'gatsby-remark-embed-video', // must come before remark-images
     'gatsby-remark-images',
     'gatsby-plugin-sharp',
@@ -101,6 +102,7 @@ module.exports = {
       resolve: 'gatsby-plugin-breadcrumb',
       options: {
         useAutoGen: true,
+        trailingSlashes: true,
       },
     },
     {

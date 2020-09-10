@@ -69,7 +69,7 @@ export const Header: FC = () => {
                 <SmallLink
                   key={item.label}
                   onClick={handleMenuOpen}
-                  to={`/${item.to}`}
+                  to={`/${item.to}/`}
                   variant="invisible"
                 >
                   {item.label}
@@ -93,7 +93,7 @@ export const Header: FC = () => {
             return (
               <LargeDeviceLink
                 key={item.label}
-                to={`/${item.to}`}
+                to={`/${item.to}/`}
                 variant="invisible"
               >
                 {item.label}

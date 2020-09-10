@@ -19,7 +19,7 @@ export const SearchForm: FC<IProps> = ({ initialQuery = '' }) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     navigate(
-      `/${Pages.Blog}/${RouteParts.Search}?${RouteParts.QueryString}=${query}`,
+      `/${Pages.Blog}/${RouteParts.Search}/?${RouteParts.QueryString}=${query}`,
     );
   };
 

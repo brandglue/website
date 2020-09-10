@@ -31,7 +31,7 @@ export const Team: FC<IProps> = ({ data }) => {
                 your business.. Get to know each of us, learn a bit more about
                 the family, and if you want to, reach out!
               </P>
-              <NavLink hasArrow to={`/${Pages.About}`}>
+              <NavLink hasArrow to={`/${Pages.About}/`}>
                 Learn More About Us
               </NavLink>
             </Box>
