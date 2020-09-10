@@ -6,16 +6,14 @@ import { Anchor, Box, H4 } from '@components/core';
 import { css, minMediaQuery, rhythm, styled } from '@styles/index';
 
 interface IProps {
+  absoluteUrl: string;
   siteUrl?: string;
   summary: string;
   title: string;
-  url: string;
 }
 
 const getFacebookShareUrl = (url: string) => {
-  return `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-    url,
-  )}`;
+  return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
 };
 
 const getLinkedInShareUrl = (
@@ -24,37 +22,35 @@ const getLinkedInShareUrl = (
   source: string,
   summary: string,
 ) => {
-  return `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-    url,
-  )}&title=${encodeURIComponent(title)}&source=${encodeURIComponent(
-    source,
-  )}&summary=${encodeURIComponent(summary)}`;
+  return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${encodeURIComponent(
+    title,
+  )}&source=${encodeURIComponent(source)}&summary=${encodeURIComponent(
+    summary,
+  )}`;
 };
 
 const getTwitterShareUrl = (url: string) => {
   const text = 'Check this out:';
   return `https://twitter.com/intent/tweet/?text=${encodeURIComponent(
     text,
-  )}&url=${encodeURIComponent(url)}&via=glue`;
+  )}&url=${url}&via=glue`;
 };
 
 const getEmailShareUrl = (url: string) => {
   const text = 'Check this out:';
-  return `mailto:?subject=${encodeURIComponent(text)}&body=${encodeURIComponent(
-    url,
-  )}`;
+  return `mailto:?subject=${encodeURIComponent(text)}&body=${url}`;
 };
 
 export const Share: FC<IProps> = ({
+  absoluteUrl = '',
   siteUrl = '',
   summary,
   title,
-  url = '',
 }) => {
-  const facebookUrl = getFacebookShareUrl(url);
-  const linkedInUrl = getLinkedInShareUrl(url, title, siteUrl, summary);
-  const twitterUrl = getTwitterShareUrl(url);
-  const emailUrl = getEmailShareUrl(url);
+  const facebookUrl = getFacebookShareUrl(absoluteUrl);
+  const linkedInUrl = getLinkedInShareUrl(absoluteUrl, title, siteUrl, summary);
+  const twitterUrl = getTwitterShareUrl(absoluteUrl);
+  const emailUrl = getEmailShareUrl(absoluteUrl);
 
   return (
     <Wrapper>

@@ -63,10 +63,10 @@ export const BlogPost: React.FC<IProps> = ({
             <MDXRenderer>{body}</MDXRenderer>
           </PostBody>
           <Share
+            absoluteUrl={`${site?.siteMetadata?.siteUrl}${location.pathname}`}
             siteUrl={site?.siteMetadata?.siteUrl}
             summary={post.excerpt}
             title={frontmatter.title}
-            url={`${site?.siteMetadata?.siteUrl}/${pageContext.slug}`}
           />
         </PostWrapper>
       </MDXProvider>
