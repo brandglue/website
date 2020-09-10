@@ -27,13 +27,17 @@ const WrappedLink: FC<GatsbyLinkProps<unknown> & IProps> = (props) => {
     return { className };
   };
 
+  const toWithTrailingSlash = props.to.endsWith('/')
+    ? props.to
+    : `${props.to}/`;
+
   return (
     <Link
       className={props.className}
       getProps={isActive}
       onClick={props.onClick}
       style={props.style}
-      to={props.to}
+      to={toWithTrailingSlash}
     >
       {props.children} {props.hasArrow && <Arrow />}
     </Link>

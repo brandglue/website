@@ -6,6 +6,7 @@ import React, { FC } from 'react';
 import { Contact, Seo } from '@components/common';
 import { Box, Divider, H1, Image, NavLink, P } from '@components/core';
 import { css, minMediaQuery, rhythm, scale, styled } from '@styles/index';
+import { TopLevelPages as Pages } from '@utils/routes';
 
 interface IProps {
   data: GatsbyTypes.CaseStudiesPageQuery;
@@ -42,7 +43,10 @@ export const CaseStudies: FC<IProps> = ({ data, location }) => {
                 <CaseStudyTitle>{frontmatter?.client}</CaseStudyTitle>
                 <h3>{frontmatter?.title}</h3>
                 <p>{frontmatter?.description}</p>
-                <NavLink hasArrow to={`${frontmatter?.slug}/` || ''}>
+                <NavLink
+                  hasArrow
+                  to={`/${Pages.CaseStudies}/${frontmatter?.slug}/`}
+                >
                   Check out the case study
                 </NavLink>
               </CaseStudyText>

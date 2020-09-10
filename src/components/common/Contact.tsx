@@ -72,9 +72,8 @@ export const Contact: FC<IProps> = ({ isPage = false }) => {
       )}
       <P pb={5}>
         Overwhelmed with the possibilities and options of social media? Not sure
-        where to focus your attention? We are here to help you figure that out{' '}
-        <strong>for free!</strong> Just fill out the form below and {"we'll"} be
-        in touch within 24hrs.
+        where to focus your attention? We are here to help you figure that out!
+        Just fill out the form below and we&apos;ll be in touch within 24hrs.
       </P>
       <ContactForm
         data-netlify="true"
