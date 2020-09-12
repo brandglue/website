@@ -1,4 +1,12 @@
-/blog/tips/* /blog/*
-/blog/case-studies/* /blog/*
-/blog/media-design/* /blog/*
-/blog/news/* /blog/*
+# top-level pages
+/free-assessment /contact
+
+# blog posts
+/blog/tips/* /blog/:splat
+/blog/case-studies/* /blog/:splat
+/blog/media-design/* /blog/:splat
+/blog/news/* /blog/:splat
+
+# blog categories
+/blog/category/media-design /blog/category/design
+/blog/category/careers /blog

@@ -159,13 +159,13 @@ module.exports = {
         trackingId: 'UA-4139092-4',
       },
     },
+    'gatsby-plugin-netlify',
     // {
     //   resolve: 'gatsby-redirect-from',
     //   options: {
     //     query: 'allMdx',
     //   },
     // },
-    // 'gatsby-plugin-netlify',
     // 'gatsby-plugin-meta-redirect', // must be last
   ],
 };
