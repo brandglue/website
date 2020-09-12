@@ -27,6 +27,12 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    &.no-js {
+      visibility: hidden;
+    }
+  }
+
   body {
     background: ${theme.colors.white};
     color: ${theme.colors.gray06};

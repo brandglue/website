@@ -8,10 +8,13 @@ import Layout from './Layout';
 // /* ref: https://github.com/DefinitelyTyped/DefinitelyTyped/issues/31245 */
 /// <reference types="styled-components/cssprop" />
 
+const isSsr = typeof window === 'undefined';
+
 export const RootWrapper = ({ element }: { element: ReactNode }) => {
   return (
     <>
       <Helmet>
+        <html className={isSsr ? 'no-js' : 'js'} />
         <meta charSet="utf-8" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Helmet>

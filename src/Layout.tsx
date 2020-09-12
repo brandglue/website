@@ -17,6 +17,10 @@ export const Layout: FC = ({ children }) => {
 
       handleResize();
 
+      if (document.documentElement.classList.contains('no-js')) {
+        document.documentElement.classList.remove('no-js');
+      }
+
       window.addEventListener('resize', handleResize);
       return () => window.removeEventListener('resize', handleResize);
     }
@@ -31,6 +35,10 @@ export const Layout: FC = ({ children }) => {
 
   return (
     <>
+      <noscript>
+        <style>{'html { visibility: visible !important; }'}</style>
+        <div>This site works better with JavaScript enabled.</div>
+      </noscript>
       <AppState.Provider value={state}>
         <ThemeProvider theme={theme}>
           <GlobalStyles />
