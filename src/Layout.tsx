@@ -37,7 +37,9 @@ export const Layout: FC = ({ children }) => {
     <>
       <noscript>
         <style>{'html { visibility: visible !important; }'}</style>
-        <div>This site works better with JavaScript enabled.</div>
+        <div className="no-js-message">
+          This site works better with JavaScript enabled.
+        </div>
       </noscript>
       <AppState.Provider value={state}>
         <ThemeProvider theme={theme}>
