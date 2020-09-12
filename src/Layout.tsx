@@ -4,7 +4,7 @@ import { Footer, Header } from '@components/common';
 import { IAppState } from '@models/AppState';
 import { AppState } from '@src/AppState';
 import { GlobalStyles } from '@styles/globalStyles';
-import { Breakpoints } from '@styles/index';
+import { Breakpoints, styled } from '@styles/index';
 import { ThemeProvider } from '@styles/styled';
 import { theme } from '@styles/theme';
 
@@ -37,9 +37,7 @@ export const Layout: FC = ({ children }) => {
     <>
       <noscript>
         <style>{'html { visibility: visible !important; }'}</style>
-        <div className="no-js-message">
-          This site works better with JavaScript enabled.
-        </div>
+        <NoJs>This site works better with JavaScript enabled.</NoJs>
       </noscript>
       <AppState.Provider value={state}>
         <ThemeProvider theme={theme}>
@@ -52,5 +50,12 @@ export const Layout: FC = ({ children }) => {
     </>
   );
 };
+
+const NoJs = styled.div`
+  display: flex;
+  justify-content: center;
+  background: ${theme.colors.gray04};
+  color: ${theme.colors.white};
+`;
 
 export default Layout;

@@ -31,13 +31,6 @@ export const GlobalStyles = createGlobalStyle`
     &.no-js {
       visibility: hidden;
     }
-    
-    .no-js-message {
-      display: flex;
-      justify-content: center;
-      background: ${theme.colors.gray04};
-      color: ${theme.colors.white};
-    }
   }
 
   body {
