@@ -1,4 +1,5 @@
 import { BoxArrowUpRight } from '@styled-icons/bootstrap';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React, { FC } from 'react';
 import { color, space, typography, variant } from 'styled-system';
 
@@ -24,7 +25,7 @@ Anchor.defaultProps = {
   className: '',
 };
 
-const StyledAnchor = styled.a<StyledSystemTextProps>`
+const StyledAnchor = styled(OutboundLink)<StyledSystemTextProps>`
   ${() =>
     variant({
       variants: {

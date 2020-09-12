@@ -153,6 +153,12 @@ module.exports = {
         modulePath: `${__dirname}/src/admin/cms.js`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-4139092-4',
+      },
+    },
     // {
     //   resolve: 'gatsby-redirect-from',
     //   options: {
