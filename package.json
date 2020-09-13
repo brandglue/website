@@ -25,11 +25,11 @@
     "test:e2e": "is-ci \"test:e2e:ci\" \"test:e2e:dev\"",
     "test:e2e:ci": "start-server-and-test start http://localhost:3000 cy:run",
     "test:e2e:dev": "start-server-and-test start http://localhost:3000 cy:open",
-    "validate": "npm run check-types && npm run check-format && npm run lint && npm run build && npm run test:coverage && npm run test:e2e:ci"
+    "validate": "npm run check-types && npm run check-format && npm run lint && npm run build"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "(git-branch-is master && npm run check-types && lint-staged && npm run build) || true"
+      "pre-commit": "(git-branch-is master && npm run validate) || true"
     }
   },
   "lint-staged": {

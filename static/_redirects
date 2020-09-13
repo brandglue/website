@@ -2,6 +2,7 @@
 /free-assessment /contact
 
 # blog posts
+/blog/advertising/* /blog/:splat
 /blog/tips/* /blog/:splat
 /blog/case-studies/* /blog/:splat
 /blog/media-design/* /blog/:splat

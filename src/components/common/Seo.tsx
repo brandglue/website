@@ -10,7 +10,6 @@ interface IProps {
     width: string | number;
   };
   lang?: string;
-  meta?: string[];
   path?: string;
   title?: string;
   type?: string;
@@ -20,7 +19,6 @@ export const Seo: FC<IProps> = ({
   description = '',
   image: metaImage,
   lang = 'en',
-  meta = [],
   path = '',
   title = 'Reaching Your Audience',
   type = 'website',
@@ -100,39 +98,37 @@ export const Seo: FC<IProps> = ({
           name: 'twitter:description',
           content: metaDescription,
         },
-      ]
-        .concat(
-          metaImage
-            ? [
-                {
-                  property: 'og:image',
-                  content: imageSrc,
-                },
-                {
-                  property: 'og:image:secure_url',
-                  content: imageSrc,
-                },
-                {
-                  property: 'og:image:width',
-                  content: metaImage.width.toString(),
-                },
-                {
-                  property: 'og:image:height',
-                  content: metaImage.height.toString(),
-                },
-                {
-                  name: 'twitter:card',
-                  content: 'summary_large_image',
-                },
-              ]
-            : [
-                {
-                  name: 'twitter:card',
-                  content: 'summary',
-                },
-              ],
-        )
-        .concat(meta as any)}
+      ].concat(
+        metaImage
+          ? [
+              {
+                property: 'og:image',
+                content: imageSrc,
+              },
+              {
+                property: 'og:image:secure_url',
+                content: imageSrc,
+              },
+              {
+                property: 'og:image:width',
+                content: metaImage.width.toString(),
+              },
+              {
+                property: 'og:image:height',
+                content: metaImage.height.toString(),
+              },
+              {
+                name: 'twitter:card',
+                content: 'summary_large_image',
+              },
+            ]
+          : [
+              {
+                name: 'twitter:card',
+                content: 'summary',
+              },
+            ],
+      )}
       title={title}
       titleTemplate={`${site?.siteMetadata?.title} | %s`}
     />
