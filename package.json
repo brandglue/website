@@ -29,7 +29,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "(git-branch-is master && npm run validate) || true"
+      "pre-commit": "(git-branch-is master && npm run validate) || true",
+      "pre-merge-commit": "(git-branch-is master && npm run validate) || true"
     }
   },
   "lint-staged": {
