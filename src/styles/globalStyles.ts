@@ -79,6 +79,12 @@ export const GlobalStyles = createGlobalStyle`
     margin-bottom: 0;
   }
 
+  blockquote {
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: 3px solid ${theme.colors.gray02};
+  }
+
   em {
     font-style: italic;
   }

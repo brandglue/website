@@ -5,7 +5,7 @@ import { Breadcrumbs, Seo } from '@components/common';
 import { Box, Divider, NavLink } from '@components/core';
 import { rhythm, styled } from '@styles/index';
 import { getSearchResults } from '@utils/getSearchResults';
-import { RouteParts } from '@utils/routes';
+import { RouteParts, TopLevelPages as Pages } from '@utils/routes';
 
 interface IProps {
   location: any;
@@ -28,7 +28,7 @@ export const Search: FC<IProps> = ({ location, pageContext }) => {
         <div>
           {results.map((page, i) => (
             <Result key={i}>
-              <NavLink to={`/${page.url}/`}>{page.title}</NavLink>
+              <NavLink to={`/${Pages.Blog}/${page.url}/`}>{page.title}</NavLink>
             </Result>
           ))}
         </div>
