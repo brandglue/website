@@ -1,5 +1,5 @@
 import { Linkedin, Twitter } from '@styled-icons/boxicons-logos';
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React, { FC, useContext } from 'react';
 
@@ -9,12 +9,9 @@ import { AboutBrandGlueDesktop, AboutBrandGlueMobile } from '@media/svg';
 import { AppState } from '@src/AppState';
 import { minMediaQuery, rhythm, scale, styled, css } from '@styles/index';
 
-interface IProps {
-  data: GatsbyTypes.AboutPageQuery;
-  location: any;
-}
+type Props = PageProps<GatsbyTypes.AboutPageQuery>;
 
-export const About: FC<IProps> = ({ data, location }) => {
+export const About: FC<Props> = ({ data, location }) => {
   const { isLargeDevice } = useContext(AppState);
   const { edges } = data.team;
 

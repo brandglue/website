@@ -1,6 +1,6 @@
 import { MDXProvider } from '@mdx-js/react';
 import { FilePdf } from '@styled-icons/boxicons-solid';
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
@@ -9,13 +9,13 @@ import { Breadcrumbs, Seo } from '@components/common';
 import { Anchor, Box, Divider, Image, SwitchLink, H1 } from '@components/core';
 import { css, hexToRgb, rhythm, styled } from '@styles/index';
 
-interface IProps {
-  data: GatsbyTypes.CaseStudyQuery;
-  location: any;
-  pageContext: any;
+interface IPageContext {
+  breadcrumb: IBreadcrumb;
 }
 
-export const CaseStudy: React.FC<IProps> = ({
+type Props = PageProps<GatsbyTypes.CaseStudyQuery, IPageContext>;
+
+export const CaseStudy: React.FC<Props> = ({
   data: { caseStudy },
   location,
   pageContext,

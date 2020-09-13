@@ -160,6 +160,9 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify',
+    /*
+     * TODO: enable these plugins to add user-configurable redirects (the redirect field would also need to be added to the admin yaml.). The redirect-from plugin needs to also have changes in gatsby-node to ensure the right slug is getting passed.
+     */
     // {
     //   resolve: 'gatsby-redirect-from',
     //   options: {

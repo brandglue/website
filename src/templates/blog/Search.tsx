@@ -1,3 +1,4 @@
+import { PageProps } from 'gatsby';
 import React, { FC } from 'react';
 
 import { SearchForm } from '@components/blog';
@@ -7,12 +8,13 @@ import { rhythm, styled } from '@styles/index';
 import { getSearchResults } from '@utils/getSearchResults';
 import { RouteParts, TopLevelPages as Pages } from '@utils/routes';
 
-interface IProps {
-  location: any;
-  pageContext: any;
+interface IPageContext {
+  breadcrumb: IBreadcrumb;
 }
 
-export const Search: FC<IProps> = ({ location, pageContext }) => {
+type Props = PageProps<null, IPageContext>;
+
+export const Search: FC<Props> = ({ location, pageContext }) => {
   let query = '';
 
   if (typeof window !== 'undefined') {

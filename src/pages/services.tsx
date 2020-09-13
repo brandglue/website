@@ -1,5 +1,5 @@
 import { MDXProvider } from '@mdx-js/react';
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React, { FC } from 'react';
 
@@ -18,12 +18,9 @@ import {
 } from '@media/svg';
 import { css, minMediaQuery, rhythm, scale, styled } from '@styles/index';
 
-interface IProps {
-  data: GatsbyTypes.ServicesPageQuery;
-  location: any;
-}
+type Props = PageProps<GatsbyTypes.ServicesPageQuery>;
 
-export const Services: FC<IProps> = ({ data, location }) => {
+export const Services: FC<Props> = ({ data, location }) => {
   const { edges } = data.allServices;
 
   return (

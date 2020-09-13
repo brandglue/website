@@ -1,5 +1,5 @@
 import { MDXProvider } from '@mdx-js/react';
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import { FixedObject } from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
@@ -9,13 +9,13 @@ import { Breadcrumbs, Seo } from '@components/common';
 import { Box, Divider, SwitchLink, H2, Span } from '@components/core';
 import { css, minMediaQuery, rhythm, scale, styled } from '@styles/index';
 
-interface IProps {
-  data: GatsbyTypes.BlogPostQuery;
-  location: any;
-  pageContext: any;
+interface IPageContext {
+  breadcrumb: IBreadcrumb;
 }
 
-export const BlogPost: React.FC<IProps> = ({
+type Props = PageProps<GatsbyTypes.BlogPostQuery, IPageContext>;
+
+export const BlogPost: React.FC<Props> = ({
   data: { post, site },
   location,
   pageContext,

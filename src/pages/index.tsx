@@ -1,15 +1,13 @@
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import React, { FC } from 'react';
 
 import { Contact } from '@components/common';
 import { Box, Divider } from '@components/core';
 import { CaseStudy, Clients, Hero, Services, Team } from '@components/home';
 
-interface IProps {
-  data: GatsbyTypes.HomePageQuery;
-}
+type Props = PageProps<GatsbyTypes.HomePageQuery>;
 
-export const Home: FC<IProps> = ({ data }) => {
+export const Home: FC<Props> = ({ data }) => {
   return (
     <Box>
       <Hero />

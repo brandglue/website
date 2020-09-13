@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import { kebabCase } from 'lodash-es';
 import React, { FC } from 'react';
@@ -8,12 +8,9 @@ import { Box, Divider, H1, Image, NavLink, P } from '@components/core';
 import { css, minMediaQuery, rhythm, scale, styled } from '@styles/index';
 import { TopLevelPages as Pages } from '@utils/routes';
 
-interface IProps {
-  data: GatsbyTypes.CaseStudiesPageQuery;
-  location: any;
-}
+type Props = PageProps<GatsbyTypes.CaseStudiesPageQuery>;
 
-export const CaseStudies: FC<IProps> = ({ data, location }) => {
+export const CaseStudies: FC<Props> = ({ data, location }) => {
   const { edges } = data.caseStudies;
 
   return (

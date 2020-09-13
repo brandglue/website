@@ -4,7 +4,7 @@ import React, { FC } from 'react';
 import { Anchor, Box, H4, NavLink } from '@components/core';
 import { BrandGlueLogoIconOnly } from '@media/svg';
 import { css, minMediaQuery, scale, styled } from '@styles/index';
-import { RouteParts, TopLevelPages, TopLevelPageLabels } from '@utils/routes';
+import { TopLevelPages, TopLevelPageLabels } from '@utils/routes';
 
 export const Footer: FC = () => (
   <>

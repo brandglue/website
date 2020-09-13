@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import { chunk } from 'lodash-es';
 import React, { FC, useEffect, useState } from 'react';
 
@@ -6,12 +6,9 @@ import { ActionBar, LoadMore, Previews } from '@components/blog';
 import { Seo } from '@components/common';
 import { Box, Divider, P, H1 } from '@components/core';
 
-interface IProps {
-  data: GatsbyTypes.BlogPageQuery;
-  location: any;
-}
+type Props = PageProps<GatsbyTypes.BlogPageQuery>;
 
-export const Blog: FC<IProps> = ({ data, location }) => {
+export const Blog: FC<Props> = ({ data, location }) => {
   const [page, setPage] = useState(1);
   const [allLoaded, setAllLoaded] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);

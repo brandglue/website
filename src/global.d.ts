@@ -66,12 +66,12 @@ interface IFlexSearchNode {
   url: string;
 }
 
-interface IBreadcrumbs {
-  crumbs: ICrumbs[];
+interface IBreadcrumb {
+  crumbs: ICrumb[];
   location: string;
 }
 
-interface ICrumbs {
+interface ICrumb {
   crumbLabel: string;
   pathname: string;
 }

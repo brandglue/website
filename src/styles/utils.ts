@@ -1,4 +1,3 @@
-import { AnyKindOfDictionary } from 'lodash';
 import * as sc from 'styled-components';
 
 import { IHex } from '@models/Hex';

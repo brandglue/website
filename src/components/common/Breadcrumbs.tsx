@@ -3,7 +3,7 @@ import { camelCase, startCase } from 'lodash-es';
 import React, { FC } from 'react';
 
 interface IProps {
-  breadcrumb: IBreadcrumbs;
+  breadcrumb: IBreadcrumb;
 }
 
 export const Breadcrumbs: FC<IProps> = ({ breadcrumb }) => {

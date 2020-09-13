@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import { chunk } from 'lodash-es';
 import React, { FC, useEffect, useState } from 'react';
 
@@ -7,20 +7,17 @@ import { Breadcrumbs, Seo } from '@components/common';
 import { Box, Divider } from '@components/core';
 import { rhythm, styled } from '@styles/index';
 
-interface IProps {
-  data: GatsbyTypes.BlogPostsByCategoryQuery;
-  location: any;
-  pageContext: any;
-  pathContext: {
-    category: string;
-  };
+interface IPageContext {
+  breadcrumb: IBreadcrumb;
+  category: string;
 }
 
-export const Category: FC<IProps> = ({
+type Props = PageProps<GatsbyTypes.BlogPostsByCategoryQuery, IPageContext>;
+
+export const Category: FC<Props> = ({
   data,
   location,
-  pathContext: { category },
-  pageContext,
+  pageContext: { breadcrumb, category },
 }) => {
   const [page, setPage] = useState(1);
   const [allLoaded, setAllLoaded] = useState(false);
@@ -72,7 +69,7 @@ export const Category: FC<IProps> = ({
       <Box>
         <Divider />
         <Box pb={0} variant="section">
-          <Breadcrumbs breadcrumb={pageContext.breadcrumb} />
+          <Breadcrumbs breadcrumb={breadcrumb} />
           <ActionBar />
           <CategoryTitle>Category: {category}</CategoryTitle>
         </Box>

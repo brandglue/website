@@ -1,13 +1,10 @@
+import { PageProps } from 'gatsby';
 import React, { FC } from 'react';
 
 import { Contact as ContactForm, Seo } from '@components/common';
 import { Divider } from '@components/core';
 
-interface IProps {
-  location: any;
-}
-
-export const Contact: FC<IProps> = ({ location }) => {
+export const Contact: FC<PageProps> = ({ location }) => {
   return (
     <>
       <Seo
