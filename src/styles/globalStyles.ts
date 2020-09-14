@@ -37,72 +37,72 @@ export const GlobalStyles = createGlobalStyle`
     background: ${theme.colors.white};
     color: ${theme.colors.gray06};
     overflow: hidden;
-  }
 
-  h1, h2, h3, h4, h5 {
-    font-weight: 700;
-    line-height: 1.3;
-  }
+    h1, h2, h3, h4, h5 {
+      font-weight: 700;
+      line-height: 1.3;
+    }
 
-  h1, h2 {
-    color: ${theme.colors.darkBlue};
-    text-transform: uppercase;
-    white-space: pre-wrap;
-  }
+    h1, h2 {
+      color: ${theme.colors.darkBlue};
+      text-transform: uppercase;
+      white-space: pre-wrap;
+    }
 
-  h2 {
-    margin-bottom: ${rhythm(1)};
-  }
+    h2 {
+      margin-bottom: ${rhythm(1)};
+    }
 
-  h1, h3, h4, h5 {
-    margin-bottom: ${rhythm(0.5)};
-  }
+    h1, h3, h4, h5 {
+      margin-bottom: ${rhythm(0.5)};
+    }
 
-  h5 {
-    text-transform: uppercase;
-  }
+    h5 {
+      text-transform: uppercase;
+    }
 
-  p {
-    font-weight: 400;
-  }
+    p {
+      font-weight: 400;
+    }
 
-  ul {
-    list-style: disc;
-  }
+    ul {
+      list-style: disc;
+    }
 
-  ol {
-    list-style: decimal;
-  }
+    ol {
+      list-style: decimal;
+    }
 
-  li > ol, li > ul {
-    margin-left: 20px;
-    margin-bottom: 0;
-  }
+    li > ol, li > ul {
+      margin-left: 20px;
+      margin-bottom: 0;
+    }
 
-  blockquote {
-    margin-left: 1em;
-    padding-left: 1em;
-    border-left: 3px solid ${theme.colors.gray02};
-  }
+    blockquote {
+      margin-left: 1em;
+      padding-left: 1em;
+      border-left: 3px solid ${theme.colors.gray02};
+    }
 
-  em {
-    font-style: italic;
-  }
+    em {
+      font-style: italic;
+    }
 
-  strong {
-    font-weight: 700;
-  }
+    strong {
+      font-weight: 700;
+    }
 
-  a {
-    display: inline;
-    color: ${theme.colors.blue};
-    padding-bottom: 1px;
-    border-bottom: 1px solid currentColor;
-    text-decoration: none;
-    cursor: pointer;
+    a {
+      display: inline;
+      color: ${theme.colors.blue};
+      padding-bottom: 1px;
+      border-bottom: 1px solid currentColor;
+      text-decoration: none;
+      cursor: pointer;
 
-    &:hover {
-      opacity: 0.8;
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 
