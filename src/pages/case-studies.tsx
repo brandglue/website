@@ -30,35 +30,37 @@ export const CaseStudies: FC<Props> = ({ data, location }) => {
           below.
         </P>
       </Box>
-      {edges.map(({ node: caseStudy }, index) => {
-        const { frontmatter } = caseStudy;
-        const isEven = index % 2 === 0;
-        return (
-          <CaseStudyWrapper key={frontmatter?.client}>
-            <CaseStudy isEven={isEven} variant="section">
-              <CaseStudyText isEven={isEven}>
-                <CaseStudyTitle>{frontmatter?.client}</CaseStudyTitle>
-                <h3>{frontmatter?.title}</h3>
-                <p>{frontmatter?.description}</p>
-                <NavLink
-                  hasArrow
-                  to={`/${Pages.CaseStudies}/${frontmatter?.slug}/`}
-                >
-                  Check out the case study
-                </NavLink>
-              </CaseStudyText>
-              <CaseStudyImage>
-                <Image
-                  alt={kebabCase(frontmatter?.client)}
-                  fluid={
-                    frontmatter?.logo?.childImageSharp?.fluid as FluidObject
-                  }
-                />
-              </CaseStudyImage>
-            </CaseStudy>
-          </CaseStudyWrapper>
-        );
-      })}
+      <Box>
+        {edges.map(({ node: caseStudy }, index) => {
+          const { frontmatter } = caseStudy;
+          const isEven = index % 2 === 0;
+          return (
+            <CaseStudyWrapper key={frontmatter?.client}>
+              <CaseStudy isEven={isEven} variant="section">
+                <CaseStudyText isEven={isEven}>
+                  <CaseStudyTitle>{frontmatter?.client}</CaseStudyTitle>
+                  <h3>{frontmatter?.title}</h3>
+                  <p>{frontmatter?.description}</p>
+                  <NavLink
+                    hasArrow
+                    to={`/${Pages.CaseStudies}/${frontmatter?.slug}/`}
+                  >
+                    Check out the case study
+                  </NavLink>
+                </CaseStudyText>
+                <CaseStudyImage>
+                  <Image
+                    alt={kebabCase(frontmatter?.client)}
+                    fluid={
+                      frontmatter?.logo?.childImageSharp?.fluid as FluidObject
+                    }
+                  />
+                </CaseStudyImage>
+              </CaseStudy>
+            </CaseStudyWrapper>
+          );
+        })}
+      </Box>
       <Divider />
       <Contact />
     </>
@@ -66,7 +68,7 @@ export const CaseStudies: FC<Props> = ({ data, location }) => {
 };
 
 const CaseStudyWrapper = styled(Box)`
-  &:nth-child(even) {
+  &:nth-child(odd) {
     background: ${({ theme }) => theme.colors.gray00};
   }
 `;

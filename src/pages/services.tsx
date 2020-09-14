@@ -52,26 +52,28 @@ export const Services: FC<Props> = ({ data, location }) => {
             the experts to handle it. Here&apos;s how we can help.
           </P>
         </Box>
-        {edges.map(({ node: service }, index) => {
-          const { frontmatter } = service;
-          const isEven = index % 2 === 0;
-          return (
-            <ServiceWrapper key={frontmatter?.title}>
-              <Service isEven={isEven} variant="section">
-                <ServiceText isEven={isEven}>
-                  <ServiceTitle>{frontmatter?.title}</ServiceTitle>
-                  <h3>{frontmatter?.shortDescription}</h3>
-                  <p>{frontmatter?.longDescription}</p>
-                </ServiceText>
-                <ServiceImage>
-                  {frontmatter?.icon && (
-                    <MDXRenderer>{frontmatter.icon}</MDXRenderer>
-                  )}
-                </ServiceImage>
-              </Service>
-            </ServiceWrapper>
-          );
-        })}
+        <Box>
+          {edges.map(({ node: service }, index) => {
+            const { frontmatter } = service;
+            const isEven = index % 2 === 0;
+            return (
+              <ServiceWrapper key={frontmatter?.title}>
+                <Service isEven={isEven} variant="section">
+                  <ServiceText isEven={isEven}>
+                    <ServiceTitle>{frontmatter?.title}</ServiceTitle>
+                    <h3>{frontmatter?.shortDescription}</h3>
+                    <p>{frontmatter?.longDescription}</p>
+                  </ServiceText>
+                  <ServiceImage>
+                    {frontmatter?.icon && (
+                      <MDXRenderer>{frontmatter.icon}</MDXRenderer>
+                    )}
+                  </ServiceImage>
+                </Service>
+              </ServiceWrapper>
+            );
+          })}
+        </Box>
         <Divider />
         <Contact />
       </MDXProvider>
@@ -80,7 +82,7 @@ export const Services: FC<Props> = ({ data, location }) => {
 };
 
 const ServiceWrapper = styled(Box)`
-  &:nth-child(even) {
+  &:nth-child(odd) {
     background: ${({ theme }) => theme.colors.gray00};
   }
 `;
