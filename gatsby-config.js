@@ -5,7 +5,7 @@ module.exports = {
     author: 'BrandGlue',
     description: 'BrandGlue website',
     keywords: ['social media', 'social media agency'],
-    siteUrl: 'https://brandglue.netlify.app', // TODO: update when go live, don't include trailing slash
+    siteUrl: 'https://brandglue.com',
     title: 'BrandGlue',
   },
   plugins: [
@@ -27,7 +27,9 @@ module.exports = {
     'gatsby-plugin-force-trailing-slashes',
     'gatsby-remark-embed-video', // must come before remark-images
     'gatsby-remark-images',
+    'gatsby-plugin-netlify',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-styled-components',
     'gatsby-transformer-sharp',
     'gatsby-plugin-mdx-frontmatter',
@@ -159,7 +161,27 @@ module.exports = {
         trackingId: 'UA-4139092-4',
       },
     },
-    'gatsby-plugin-netlify',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          'production': {
+            policy: [{ userAgent: '*' }],
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
+        },
+      },
+    },
     /*
      * TODO: enable these plugins to add user-configurable redirects (the redirect field would also need to be added to the admin yaml.). The redirect-from plugin needs to also have changes in gatsby-node to ensure the right slug is getting passed.
      */
