@@ -50,13 +50,11 @@ export const About: FC<Props> = ({ data, location }) => {
                         frontmatter.image?.childImageSharp?.fluid as FluidObject
                       }
                     />
-                    <Name>{frontmatter.name}</Name>
-                    <Title>{frontmatter.title}</Title>
-                    <Bio>
-                      <LovesLabel>Loves</LovesLabel>
-                      <Box>{frontmatter.loves}</Box>
-                      <GoalsLabel>Goals</GoalsLabel>
-                      <Box>{frontmatter.goals}</Box>
+                    <Meta>
+                      <NameWrapper>
+                        <Name>{frontmatter.name}</Name>
+                        <Title>{frontmatter.title}</Title>
+                      </NameWrapper>
                       {(frontmatter.twitter || frontmatter.linkedin) && (
                         <Social>
                           {frontmatter.twitter && (
@@ -83,6 +81,12 @@ export const About: FC<Props> = ({ data, location }) => {
                           )}
                         </Social>
                       )}
+                    </Meta>
+                    <Bio>
+                      <LovesLabel>Loves</LovesLabel>
+                      <Box>{frontmatter.loves}</Box>
+                      <GoalsLabel>Goals</GoalsLabel>
+                      <Box>{frontmatter.goals}</Box>
                     </Bio>
                   </GridItem>
                 )
@@ -133,7 +137,6 @@ const Grid = styled(Box)`
 
   ${minMediaQuery.Medium(css`
     grid-template-columns: repeat(2, minmax(250px, 380px));
-    grid-auto-rows: 1fr;
   `)}
 
   ${minMediaQuery.Large(css`
@@ -143,11 +146,21 @@ const Grid = styled(Box)`
 
 const GridItem = styled(Box)``;
 
-const Bio = styled(Box)`
-  ${({ theme }) => css`
-    background: ${theme.colors.lightBlue};
-    padding: 1em;
-  `}
+const Meta = styled(Box)`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  ${minMediaQuery.Medium(css`
+    flex-direction: row;
+    margin-right: auto;
+  `)}
+`;
+
+const NameWrapper = styled(Box)`
+  ${minMediaQuery.Medium(css`
+    margin-right: auto;
+  `)}
 `;
 
 const Name = styled(Box)`
@@ -157,9 +170,34 @@ const Name = styled(Box)`
 `;
 
 const Title = styled(Box)`
-  margin-bottom: 1em;
   font-size: ${scale(-0.25).fontSize};
   line-height: ${scale(-0.25).lineHeight};
+
+  ${minMediaQuery.Medium(css`
+    margin-bottom: 1em;
+  `)}
+`;
+
+const Social = styled(Box)`
+  margin-bottom: 1em;
+
+  ${minMediaQuery.Medium(css`
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  `)}
+`;
+
+const SocialAnchor = styled(Anchor)`
+  svg {
+    width: 20px;
+  }
+`;
+
+const Bio = styled(Box)`
+  ${({ theme }) => css`
+    background: ${theme.colors.lightBlue};
+    padding: 1em;
+  `}
 `;
 
 const LovesLabel = styled(Box)`
@@ -171,16 +209,6 @@ const GoalsLabel = styled(Box)`
   color: ${({ theme }) => theme.colors.blue};
   text-transform: uppercase;
   margin-top: 1em;
-`;
-
-const Social = styled(Box)`
-  margin-top: ${rhythm(1)};
-`;
-
-const SocialAnchor = styled(Anchor)`
-  svg {
-    width: 20px;
-  }
 `;
 
 export default About;
