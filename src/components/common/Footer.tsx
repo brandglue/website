@@ -1,9 +1,9 @@
 import { Facebook, Linkedin, Twitter } from '@styled-icons/boxicons-logos';
 import React, { FC } from 'react';
 
-import { Anchor, Box, H4, NavLink } from '@components/core';
+import { Anchor, Box, NavLink } from '@components/core';
 import { BrandGlueLogoIconOnly } from '@media/svg';
-import { css, minMediaQuery, scale, styled } from '@styles/index';
+import { css, minMediaQuery, rhythm, scale, styled } from '@styles/index';
 import { TopLevelPages, TopLevelPageLabels } from '@utils/routes';
 
 export const Footer: FC = () => (
@@ -157,10 +157,12 @@ const Contact = styled.address`
   flex-flow: column;
 `;
 
-const Title = styled(H4)`
+const Title = styled.p`
   ${({ theme }) => css`
     color: ${theme.colors.gold};
     text-transform: uppercase;
+    margin-bottom: ${rhythm(0.5)};
+    font-weight: 700;
   `}
 `;
 
@@ -226,7 +228,7 @@ const Copyright = styled.div`
   ${({ theme }) => css`
     background: ${theme.colors.gray05};
     font-size: ${scale(-0.25).fontSize};
-    color: ${theme.colors.gray03};
+    color: ${theme.colors.gray01};
     text-align: center;
     padding: 15px;
   `}

@@ -1,5 +1,5 @@
 site_url: https://brandglue.com
-# logo_url: TODO: Set this for customized CMS screen
+logo_url: /admin/BrandGlueLogo.svg
 
 backend:
   name: git-gateway

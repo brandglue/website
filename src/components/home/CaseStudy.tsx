@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
-import { Box, Image, P, H5, NavLink } from '@components/core';
+import { Box, Image, P, NavLink } from '@components/core';
 import { css, minMediaQuery, rhythm, styled } from '@styles/index';
 import { TopLevelPages as Pages } from '@utils/routes';
 
@@ -88,7 +88,7 @@ const Text = styled(Box)`
   `)};
 `;
 
-const CaseStudyTitle = styled(H5)`
+const CaseStudyTitle = styled.h5`
   ${({ theme }) => css`
     color: ${theme.colors.gold};
     text-transform: uppercase;
