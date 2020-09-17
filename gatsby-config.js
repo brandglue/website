@@ -1,5 +1,7 @@
 const path = require('path');
 
+const { NODE_ENV, CONTEXT: NETLIFY_ENV = NODE_ENV } = process.env;
+
 module.exports = {
   siteMetadata: {
     author: 'BrandGlue',
@@ -161,29 +163,27 @@ module.exports = {
         trackingId: 'UA-4139092-4',
       },
     },
-    // TODO: Uncomment the robots plugin once this issue is resolved:
-    // https://github.com/mdreizin/gatsby-plugin-robots-txt/issues/273
-    // {
-    //   resolve: 'gatsby-plugin-robots-txt',
-    //   options: {
-    //     resolveEnv: () => NETLIFY_ENV,
-    //     env: {
-    //       'production': {
-    //         policy: [{ userAgent: '*' }],
-    //       },
-    //       'branch-deploy': {
-    //         policy: [{ userAgent: '*', disallow: ['/'] }],
-    //         sitemap: null,
-    //         host: null,
-    //       },
-    //       'deploy-preview': {
-    //         policy: [{ userAgent: '*', disallow: ['/'] }],
-    //         sitemap: null,
-    //         host: null,
-    //       },
-    //     },
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          'production': {
+            policy: [{ userAgent: '*' }],
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
+        },
+      },
+    },
     /*
      * TODO: enable these plugins to add user-configurable redirects (the redirect field would also need to be added to the admin yaml.). The redirect-from plugin needs to also have changes in gatsby-node to ensure the right slug is getting passed.
      */
