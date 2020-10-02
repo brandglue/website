@@ -28,7 +28,7 @@ export const Team: FC<IProps> = ({ data }) => {
                 something incredible. We are proud to be female-owned and value
                 diversity and collaboration. We don&apos;t sign clients and then
                 outsource the work - we are the team that would do the work for
-                your business.. Get to know each of us, learn a bit more about
+                your business. Get to know each of us, learn a bit more about
                 the family, and if you want to, reach out!
               </P>
               <NavLink hasArrow to={`/${Pages.About}/`}>

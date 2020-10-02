@@ -37,7 +37,7 @@ export const CaseStudy: FC = () => {
           )}
         </Logo>
         <Text>
-          <CaseStudyTitle>Developing a wholistic strategy</CaseStudyTitle>
+          <CaseStudyTitle>Developing a holistic strategy</CaseStudyTitle>
           <P color="white" mb="0">
             {`How we boosted brand awareness \n and organic engagement for WhiteHat Security.`}
             <CaseStudyLink
