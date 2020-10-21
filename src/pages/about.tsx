@@ -4,16 +4,34 @@ import { FluidObject } from 'gatsby-image';
 import React, { FC, useContext } from 'react';
 
 import { Seo } from '@components/common';
-import { Anchor, Box, Divider, H1, H2, Image, P } from '@components/core';
+import {
+  Anchor,
+  Box,
+  Divider,
+  H1,
+  H2,
+  Image,
+  NavLink,
+  P,
+} from '@components/core';
 import { AboutBrandGlueDesktop, AboutBrandGlueMobile } from '@media/svg';
 import { AppState } from '@src/AppState';
-import { minMediaQuery, rhythm, scale, styled, css } from '@styles/index';
+import {
+  hexToRgb,
+  minMediaQuery,
+  rhythm,
+  scale,
+  styled,
+  css,
+} from '@styles/index';
+import { TopLevelPages as Pages } from '@utils/routes';
 
 type Props = PageProps<GatsbyTypes.AboutPageQuery>;
 
 export const About: FC<Props> = ({ data, location }) => {
   const { isLargeDevice } = useContext(AppState);
-  const { edges } = data.team;
+  const { edges: team } = data.team;
+  const { edges: jobs } = data.jobs;
 
   return (
     <>
@@ -38,12 +56,12 @@ export const About: FC<Props> = ({ data, location }) => {
         <Box variant="section">
           <H2>So, who makes the team?</H2>
           <Grid>
-            {edges.map(({ node: teamMember }) => {
+            {team.map(({ node: teamMember }) => {
               const { frontmatter } = teamMember;
 
               return (
                 frontmatter?.name && (
-                  <GridItem key={frontmatter.name}>
+                  <TeamMember key={frontmatter.name}>
                     <Image
                       alt={frontmatter.name}
                       fluid={
@@ -88,7 +106,7 @@ export const About: FC<Props> = ({ data, location }) => {
                       <GoalsLabel>Goals</GoalsLabel>
                       <Box>{frontmatter.goals}</Box>
                     </Bio>
-                  </GridItem>
+                  </TeamMember>
                 )
               );
             })}
@@ -105,9 +123,33 @@ export const About: FC<Props> = ({ data, location }) => {
           available positions below and reach out if you’re interested! We’d
           love to meet you.
         </P>
-        <P fontStyle="italic" mt="6" textAlign="center">
-          No current openings.
-        </P>
+        {jobs.length > 0 ? (
+          <>
+            <P fontStyle="italic">Current openings:</P>
+            <Grid>
+              {jobs.map(({ node: job }) => {
+                const { frontmatter } = job;
+
+                return (
+                  frontmatter?.title && (
+                    <Job key={frontmatter.title}>
+                      <h4>{frontmatter.title}</h4>
+                      {frontmatter?.link && (
+                        <NavLink to={`/${Pages.Blog}/${frontmatter.link}`}>
+                          Learn more
+                        </NavLink>
+                      )}
+                    </Job>
+                  )
+                );
+              })}
+            </Grid>
+          </>
+        ) : (
+          <P fontStyle="italic" mt="6" textAlign="center">
+            No current openings. Check back soon!
+          </P>
+        )}
       </Box>
     </>
   );
@@ -144,7 +186,7 @@ const Grid = styled(Box)`
   `)}
 `;
 
-const GridItem = styled(Box)``;
+const TeamMember = styled(Box)``;
 
 const Meta = styled(Box)`
   display: flex;
@@ -211,6 +253,25 @@ const GoalsLabel = styled(Box)`
   margin-top: 1em;
 `;
 
+const Job = styled(Box)`
+  ${({ theme }) => css`
+    border: 1px solid ${theme.colors.gray02};
+    border-radius: 5px;
+    padding: 2em;
+
+    &:hover {
+      cursor: pointer;
+      border: 1px solid ${theme.colors.blue};
+      box-shadow: 0 0 1px 1px rgba(${hexToRgb(theme.colors.blue)}, 0.3),
+        0 0 15px 0 rgba(${hexToRgb(theme.colors.gray03)}, 0.2);
+      transform: scale(1.025);
+      transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+        transform 0.3s ease-in-out;
+      z-index: 1;
+    }
+  `}
+`;
+
 export default About;
 
 export const aboutPage = graphql`
@@ -241,14 +302,16 @@ export const aboutPage = graphql`
         }
       }
     }
-    hiring: file(
-      sourceInstanceName: { eq: "media" }
-      relativePath: { eq: "images/hiring.jpg" }
+    jobs: allMdx(
+      filter: { frontmatter: { type: { eq: "job" }, isActive: { eq: true } } }
+      sort: { order: ASC, fields: frontmatter___title }
     ) {
-      childImageSharp {
-        fluid(maxWidth: 1100) {
-          ...GatsbyImageSharpFluid_withWebp
-          ...GatsbyImageSharpFluidLimitPresentationSize
+      edges {
+        node {
+          frontmatter {
+            link
+            title
+          }
         }
       }
     }

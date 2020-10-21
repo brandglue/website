@@ -47,7 +47,7 @@ collections:
           widget: string,
           hint:
             [
-              'Determines the page url. Must be unique from all other blog posts.',
+              'The final part of the page url. Must be unique from all other blog posts. Example: put "my-blogpost" as the Slug if you want the final url to be https://brandglue.com/blog/my-blogpost',
             ],
         }
       - { name: cover_image, label: Cover Image, widget: image }
@@ -97,6 +97,23 @@ collections:
           hint: ['The file should be a PDF.'],
         }
       - { name: body, label: Body, widget: markdown }
+
+  - name: jobs
+    label: Jobs
+    label_singular: Job
+    folder: src/content/jobs
+    path: '{{title}}/index'
+    slug: '{{slug}}'
+    extension: mdx
+    format: frontmatter
+    create: true
+    identifier_field: title
+    fields:
+      - { name: type, label: Type, widget: hidden, default: 'job' }
+      - { name: title, label: Title, widget: string }
+      - { name: link, label: Link, widget: string }
+    editor:
+      preview: false
 
   - name: services
     label: Services
