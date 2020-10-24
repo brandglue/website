@@ -26,17 +26,9 @@ export const Box = styled.div<StyledSystemProps>`
           justifyContent: 'center',
           alignItems: 'center',
         },
-        flex: {
-          display: 'flex',
-        },
         flexItem: {
           flex: 'auto',
           minWidth: '0',
-        },
-        grid: {
-          display: 'grid',
-          alignItems: 'center',
-          justifyContent: 'center',
         },
       },
     })}

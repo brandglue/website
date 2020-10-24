@@ -14,7 +14,6 @@ export const AboutBrandGlueMobile: FC<IOwnProps> = ({ className = '' }) => (
     viewBox="0 0 640 1164.86"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <defs></defs>
     <clipPath id="SVGID_2_">
       <path d="M36.42 1242.77h562.53v370.43H36.42z" id="SVGID_4_" />
     </clipPath>

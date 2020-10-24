@@ -4,16 +4,7 @@ import { FluidObject } from 'gatsby-image';
 import React, { FC, useContext } from 'react';
 
 import { Seo } from '@components/common';
-import {
-  Anchor,
-  Box,
-  Divider,
-  H1,
-  H2,
-  Image,
-  NavLink,
-  P,
-} from '@components/core';
+import { Anchor, Box, Divider, Image, NavLink, P } from '@components/core';
 import { AboutBrandGlueDesktop, AboutBrandGlueMobile } from '@media/svg';
 import { AppState } from '@src/AppState';
 import {
@@ -43,25 +34,25 @@ export const About: FC<Props> = ({ data, location }) => {
       />
       <Divider />
       <Box variant="section">
-        <H1>We&apos;ve come a long way.</H1>
-        <P>
+        <h1>We&apos;ve come a long way.</h1>
+        <p>
           And it feels like just yesterday that we got started. Here&apos;s a
           bit of our history.
-        </P>
+        </p>
         <BrandGlueStory>
           {isLargeDevice ? <AboutBrandGlueDesktop /> : <AboutBrandGlueMobile />}
         </BrandGlueStory>
       </Box>
       <Team>
         <Box variant="section">
-          <H2>So, who makes the team?</H2>
-          <Grid>
+          <h2>So, who makes the team?</h2>
+          <TeamGrid>
             {team.map(({ node: teamMember }) => {
               const { frontmatter } = teamMember;
 
               return (
                 frontmatter?.name && (
-                  <TeamMember key={frontmatter.name}>
+                  <div key={frontmatter.name}>
                     <Image
                       alt={frontmatter.name}
                       fluid={
@@ -106,27 +97,27 @@ export const About: FC<Props> = ({ data, location }) => {
                       <GoalsLabel>Goals</GoalsLabel>
                       <Box>{frontmatter.goals}</Box>
                     </Bio>
-                  </TeamMember>
+                  </div>
                 )
               );
             })}
-          </Grid>
+          </TeamGrid>
         </Box>
       </Team>
       <Divider />
       <Box variant="section">
-        <H2>Join the team. It&apos;s a good one.</H2>
-        <P>
+        <h2>Join the team. It&apos;s a good one.</h2>
+        <p>
           With remote working and the ﬂexibility to build your day the way you
           work best, BrandGlue is a great place to focus on your talent and love
           for delivering quality experiences to our clients. Check out the
           available positions below and reach out if you’re interested! We’d
           love to meet you.
-        </P>
+        </p>
         {jobs.length > 0 ? (
           <>
             <P fontStyle="italic">Current openings:</P>
-            <Grid>
+            <JobsGrid>
               {jobs.map(({ node: job }) => {
                 const { frontmatter } = job;
 
@@ -143,7 +134,7 @@ export const About: FC<Props> = ({ data, location }) => {
                   )
                 );
               })}
-            </Grid>
+            </JobsGrid>
           </>
         ) : (
           <P fontStyle="italic" mt="6" textAlign="center">
@@ -155,7 +146,7 @@ export const About: FC<Props> = ({ data, location }) => {
   );
 };
 
-const BrandGlueStory = styled(Box)`
+const BrandGlueStory = styled.div`
   padding-top: ${rhythm(1)};
 
   svg {
@@ -163,11 +154,11 @@ const BrandGlueStory = styled(Box)`
   }
 `;
 
-const Team = styled(Box)`
+const Team = styled.div`
   background: ${({ theme }) => theme.colors.gray00};
 `;
 
-const Grid = styled(Box)`
+const TeamGrid = styled.div`
   display: grid;
   grid-template-columns: minmax(250px, 380px);
   grid-gap: 60px;
@@ -186,9 +177,7 @@ const Grid = styled(Box)`
   `)}
 `;
 
-const TeamMember = styled(Box)``;
-
-const Meta = styled(Box)`
+const Meta = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -199,19 +188,19 @@ const Meta = styled(Box)`
   `)}
 `;
 
-const NameWrapper = styled(Box)`
+const NameWrapper = styled.div`
   ${minMediaQuery.Medium(css`
     margin-right: auto;
   `)}
 `;
 
-const Name = styled(Box)`
+const Name = styled.div`
   margin-top: 0.5em;
   font-size: ${scale(0.25).fontSize};
   line-height: ${scale(0.25).lineHeight};
 `;
 
-const Title = styled(Box)`
+const Title = styled.div`
   font-size: ${scale(-0.25).fontSize};
   line-height: ${scale(-0.25).lineHeight};
 
@@ -220,7 +209,7 @@ const Title = styled(Box)`
   `)}
 `;
 
-const Social = styled(Box)`
+const Social = styled.div`
   margin-bottom: 1em;
 
   ${minMediaQuery.Medium(css`
@@ -235,25 +224,25 @@ const SocialAnchor = styled(Anchor)`
   }
 `;
 
-const Bio = styled(Box)`
+const Bio = styled.div`
   ${({ theme }) => css`
     background: ${theme.colors.lightBlue};
     padding: 1em;
   `}
 `;
 
-const LovesLabel = styled(Box)`
+const LovesLabel = styled.div`
   color: ${({ theme }) => theme.colors.blue};
   text-transform: uppercase;
 `;
 
-const GoalsLabel = styled(Box)`
+const GoalsLabel = styled.div`
   color: ${({ theme }) => theme.colors.blue};
   text-transform: uppercase;
   margin-top: 1em;
 `;
 
-const Job = styled(Box)`
+const Job = styled.div`
   ${({ theme }) => css`
     border: 1px solid ${theme.colors.gray02};
     border-radius: 5px;
@@ -270,6 +259,12 @@ const Job = styled(Box)`
       z-index: 1;
     }
   `}
+`;
+
+const JobsGrid = styled.div`
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
 `;
 
 export default About;
