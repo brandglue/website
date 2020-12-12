@@ -1,23 +1,33 @@
 import { graphql, PageProps } from 'gatsby';
+import { FixedObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
-import { Contact } from '@components/common';
+import { Contact, Seo } from '@components/common';
 import { Box, Divider } from '@components/core';
 import { CaseStudy, Clients, Hero, Services, Team } from '@components/home';
 
 type Props = PageProps<GatsbyTypes.HomePageQuery>;
 
-export const Home: FC<Props> = ({ data }) => {
+export const Home: FC<Props> = ({ data, location }) => {
   return (
-    <Box>
-      <Hero />
-      <Team data={data} />
-      <Clients />
-      <CaseStudy />
-      <Services data={data} />
-      <Divider />
-      <Contact />
-    </Box>
+    <>
+      <Seo
+        description="BrandGlue Home"
+        image={data.homepageHeroPoster?.childImageSharp?.resize as FixedObject}
+        path={location.pathname}
+        title="Home"
+        type="website"
+      />
+      <Box>
+        <Hero />
+        <Team data={data} />
+        <Clients />
+        <CaseStudy />
+        <Services data={data} />
+        <Divider />
+        <Contact />
+      </Box>
+    </>
   );
 };
 
@@ -57,6 +67,18 @@ export const homePageQuery = graphql`
             shortDescription
             icon
           }
+        }
+      }
+    }
+    homepageHeroPoster: file(
+      sourceInstanceName: { eq: "media" }
+      relativePath: { eq: "images/homepage-hero-poster.jpg" }
+    ) {
+      childImageSharp {
+        resize(width: 1200) {
+          src
+          height
+          width
         }
       }
     }
