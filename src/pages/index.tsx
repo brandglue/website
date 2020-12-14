@@ -1,5 +1,4 @@
 import { graphql, PageProps } from 'gatsby';
-import { FixedObject } from 'gatsby-image';
 import React, { FC } from 'react';
 
 import { Contact, Seo } from '@components/common';
@@ -13,7 +12,6 @@ export const Home: FC<Props> = ({ data, location }) => {
     <>
       <Seo
         description="BrandGlue Home"
-        image={data.homepageHeroPoster?.childImageSharp?.resize as FixedObject}
         path={location.pathname}
         title="Home"
         type="website"
@@ -67,18 +65,6 @@ export const homePageQuery = graphql`
             shortDescription
             icon
           }
-        }
-      }
-    }
-    homepageHeroPoster: file(
-      sourceInstanceName: { eq: "media" }
-      relativePath: { eq: "images/homepage-hero-poster.jpg" }
-    ) {
-      childImageSharp {
-        resize(width: 1200) {
-          src
-          height
-          width
         }
       }
     }

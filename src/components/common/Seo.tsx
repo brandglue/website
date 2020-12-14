@@ -23,7 +23,7 @@ export const Seo: FC<IProps> = ({
   title = 'Reaching Your Audience',
   type = 'website',
 }) => {
-  const { site } = useStaticQuery<GatsbyTypes.SeoMetadataQuery>(
+  const { defaultImage, site } = useStaticQuery<GatsbyTypes.SeoMetadataQuery>(
     graphql`
       query SeoMetadata {
         site {
@@ -35,16 +35,30 @@ export const Seo: FC<IProps> = ({
             title
           }
         }
+        defaultImage: file(
+          sourceInstanceName: { eq: "media" }
+          relativePath: { eq: "images/homepage-hero-poster.jpg" }
+        ) {
+          childImageSharp {
+            resize(width: 1200) {
+              src
+              height
+              width
+            }
+          }
+        }
       }
     `,
   );
 
   const metaDescription = description || site?.siteMetadata?.description;
-  const imageSrc =
-    metaImage?.src && `${site?.siteMetadata?.siteUrl}${metaImage.src}`;
   const canonical = path
     ? `${site?.siteMetadata?.siteUrl}${path}`
     : `${site?.siteMetadata?.siteUrl}`;
+
+  const imageObj = metaImage || defaultImage?.childImageSharp?.resize;
+  const imageSrc =
+    imageObj?.src && `${site?.siteMetadata?.siteUrl}${imageObj.src}`;
 
   return (
     <Helmet
@@ -99,7 +113,7 @@ export const Seo: FC<IProps> = ({
           content: metaDescription,
         },
       ].concat(
-        metaImage
+        imageObj
           ? [
               {
                 property: 'og:image',
@@ -111,23 +125,18 @@ export const Seo: FC<IProps> = ({
               },
               {
                 property: 'og:image:width',
-                content: metaImage.width.toString(),
+                content: imageObj.width?.toString(),
               },
               {
                 property: 'og:image:height',
-                content: metaImage.height.toString(),
+                content: imageObj.height?.toString(),
               },
               {
                 name: 'twitter:card',
                 content: 'summary_large_image',
               },
             ]
-          : [
-              {
-                name: 'twitter:card',
-                content: 'summary',
-              },
-            ],
+          : [],
       )}
       title={title}
       titleTemplate={`${site?.siteMetadata?.title} | %s`}
