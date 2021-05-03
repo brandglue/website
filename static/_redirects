@@ -1,5 +1,6 @@
 # top-level pages
 /free-assessment /contact
+/team /about
 
 # blog posts
 /blog/advertising/* /blog/:splat
