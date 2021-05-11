@@ -81,7 +81,7 @@
     "gatsby-source-filesystem": "2.3.11",
     "gatsby-transformer-sharp": "2.5.5",
     "gray-percentage": "2.0.0",
-    "lodash": "4.17.15",
+    "lodash": "4.17.21",
     "lodash-es": "4.17.15",
     "netlify-cms-app": "2.12.14",
     "react": "16.13.1",
