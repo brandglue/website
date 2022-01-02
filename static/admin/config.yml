@@ -45,10 +45,7 @@ collections:
           name: slug,
           label: Slug,
           widget: string,
-          hint:
-            [
-              'The final part of the page url. Must be unique from all other blog posts. Example: put "my-blogpost" as the Slug if you want the final url to be https://brandglue.com/blog/my-blogpost',
-            ],
+          hint: 'The final part of the page url. Must be unique from all other blog posts. Example: put "my-blogpost" as the Slug if you want the final url to be https://brandglue.com/blog/my-blogpost',
         }
       - { name: cover_image, label: Cover Image, widget: image }
       - {
@@ -94,7 +91,7 @@ collections:
           name: attachment,
           label: Download,
           widget: file,
-          hint: ['The file should be a PDF.'],
+          hint: 'The file should be a PDF.',
         }
       - { name: body, label: Body, widget: markdown }
 
@@ -134,10 +131,7 @@ collections:
           name: icon,
           label: Icon,
           widget: string,
-          hint:
-            [
-              'Needs to correspond with an SVG icon filename that has been added separately.',
-            ],
+          hint: 'Needs to correspond with an SVG icon filename that has been added separately.',
         }
     editor:
       preview: false
