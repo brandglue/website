@@ -165,10 +165,12 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingId: 'UA-4139092-4',
-      },
+        trackingIds: [
+          'UA-4139092-4', // Google Analytics
+        ],
+      }
     },
     {
       resolve: 'gatsby-plugin-robots-txt',
