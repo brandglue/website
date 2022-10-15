@@ -169,6 +169,7 @@ module.exports = {
       options: {
         trackingIds: [
           'UA-4139092-4', // Google Analytics
+          'G-E3CD8VEZNZ', // Google GA4
         ],
       }
     },
