@@ -1,5 +1,5 @@
 import { LinkGetProps } from '@reach/router';
-import { ArrowRight } from '@styled-icons/bootstrap';
+import { ArrowRight } from 'styled-icons/bootstrap';
 import cx from 'classnames';
 import { Link, GatsbyLinkProps } from 'gatsby';
 import React, { FC } from 'react';

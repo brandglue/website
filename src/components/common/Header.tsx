@@ -1,4 +1,4 @@
-import { MenuAltRight, X } from '@styled-icons/boxicons-regular';
+import { MenuAltRight, X } from 'styled-icons/boxicons-regular';
 import React, { FC, useContext, useState } from 'react';
 
 import { Box, Button, NavLink } from '@components/core';

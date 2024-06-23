@@ -12,3 +12,4 @@ export { HiringQuestionMark } from './HiringQuestionMark';
 export { NewsfeedOptimization } from './NewsfeedOptimization';
 export { PaidAdvertising } from './PaidAdvertising';
 export { SocialStrategy } from './SocialStrategy';
+export { X } from './XLogo'

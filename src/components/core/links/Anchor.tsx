@@ -1,4 +1,4 @@
-import { BoxArrowUpRight } from '@styled-icons/bootstrap';
+import { BoxArrowUpRight } from 'styled-icons/bootstrap';
 import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import React, { FC } from 'react';
 import { color, space, typography, variant } from 'styled-system';

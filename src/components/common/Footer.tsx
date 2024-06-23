@@ -1,8 +1,8 @@
-import { Facebook, Linkedin, Twitter } from '@styled-icons/boxicons-logos';
+import { Facebook, Linkedin } from 'styled-icons/boxicons-logos';
 import React, { FC } from 'react';
 
 import { Anchor, Box, NavLink } from '@components/core';
-import { BrandGlueLogoIconOnly } from '@media/svg';
+import { BrandGlueLogoIconOnly, X } from '@media/svg';
 import { css, minMediaQuery, rhythm, scale, styled } from '@styles/index';
 import { TopLevelPages, TopLevelPageLabels } from '@utils/routes';
 
@@ -23,6 +23,24 @@ export const Footer: FC = () => (
             hello@brandglue.com
           </Info>
           <Social>
+          <SocialIcon>
+              <Anchor
+                hasArrow={false}
+                href="https://www.linkedin.com/company/brandglue-com"
+                variant="invisible"
+              >
+                <Linkedin />
+              </Anchor>
+            </SocialIcon>
+            <SocialIcon>
+              <Anchor
+                hasArrow={false}
+                href="https://x.com/BrandGlueAgency"
+                variant="invisible"
+              >
+                <X className="x-logo"/>
+              </Anchor>
+            </SocialIcon>
             <SocialIcon>
               <Anchor
                 hasArrow={false}
@@ -32,24 +50,7 @@ export const Footer: FC = () => (
                 <Facebook />
               </Anchor>
             </SocialIcon>
-            <SocialIcon>
-              <Anchor
-                hasArrow={false}
-                href="https://twitter.com/glue"
-                variant="invisible"
-              >
-                <Twitter />
-              </Anchor>
-            </SocialIcon>
-            <SocialIcon>
-              <Anchor
-                hasArrow={false}
-                href="https://www.linkedin.com/company/brandglue-com"
-                variant="invisible"
-              >
-                <Linkedin />
-              </Anchor>
-            </SocialIcon>
+
           </Social>
         </Contact>
         <Links>
@@ -197,6 +198,11 @@ const SocialIcon = styled.div`
   svg {
     width: 30px;
     height: auto;
+
+    &.x-logo {
+      width: 20px;
+      vertical-align: middle
+    }
   }
 `;
 

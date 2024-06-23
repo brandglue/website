@@ -1,11 +1,11 @@
-import { Linkedin, Twitter } from '@styled-icons/boxicons-logos';
+import { Linkedin } from 'styled-icons/boxicons-logos';
 import { graphql, PageProps } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React, { FC, useContext } from 'react';
 
 import { Seo } from '@components/common';
 import { Anchor, Box, Divider, Image, NavLink, P } from '@components/core';
-import { AboutBrandGlueDesktop, AboutBrandGlueMobile } from '@media/svg';
+import { AboutBrandGlueDesktop, AboutBrandGlueMobile, X } from '@media/svg';
 import { AppState } from '@src/AppState';
 import {
   hexToRgb,
@@ -74,7 +74,7 @@ export const About: FC<Props> = ({ data, location }) => {
                               target="_blank"
                               variant="invisible"
                             >
-                              <Twitter />
+                              <X className="x-logo" fill="black" />
                             </SocialAnchor>
                           )}
                           {frontmatter.linkedin && (
@@ -221,6 +221,11 @@ const Social = styled.div`
 const SocialAnchor = styled(Anchor)`
   svg {
     width: 20px;
+
+    &.x-logo {
+      width: 15px;
+      vertical-align: middle;
+    }
   }
 `;
 

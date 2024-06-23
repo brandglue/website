@@ -1,5 +1,5 @@
 import { MDXProvider } from '@mdx-js/react';
-import { FilePdf } from '@styled-icons/boxicons-solid';
+import { FilePdf } from 'styled-icons/boxicons-solid';
 import { graphql, PageProps } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';

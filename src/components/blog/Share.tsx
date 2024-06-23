@@ -1,8 +1,9 @@
-import { Facebook, Linkedin, Twitter } from '@styled-icons/boxicons-logos';
-import { MailSend } from '@styled-icons/boxicons-regular';
+import { Facebook, Linkedin } from 'styled-icons/boxicons-logos';
+import { MailSend } from 'styled-icons/boxicons-regular';
 import React, { FC } from 'react';
 
 import { Anchor, Box, H4 } from '@components/core';
+import { X } from '@media/svg';
 import { css, minMediaQuery, rhythm, styled } from '@styles/index';
 
 interface IProps {
@@ -19,9 +20,9 @@ const getLinkedInShareUrl = (url: string) => {
 
 const getTwitterShareUrl = (url: string) => {
   const text = 'Check this out:';
-  return `https://twitter.com/intent/tweet/?text=${encodeURIComponent(
+  return `https://x.com/intent/tweet/?text=${encodeURIComponent(
     text,
-  )}&url=${url}&via=glue`;
+  )}&url=${url}&via=BrandGlueAgency`;
 };
 
 const getEmailShareUrl = (url: string) => {
@@ -55,7 +56,7 @@ export const Share: FC<IProps> = ({ url = '' }) => {
           target="_blank"
           variant="invisible"
         >
-          <Twitter />
+          <X fill="black" className="x-logo"/>
         </Anchor>
         <Anchor
           hasArrow={false}
@@ -114,5 +115,10 @@ const IconWrapper = styled(Box)`
 
   svg {
     width: 25px;
+
+    &.x-logo {
+      width: 17px;
+      vertical-align: middle;
+    }
   }
 `;
