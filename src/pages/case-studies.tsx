@@ -103,12 +103,11 @@ const CaseStudyTitle = styled.h2`
 `;
 
 const CaseStudyImage = styled(Box)`
-  max-width: 30%;
+  max-width: fit-content;
   margin-bottom: ${rhythm(1)};
 
   ${minMediaQuery.Small(css`
     flex-basis: 20%;
-    max-width: auto;
     margin-bottom: 0;
   `)}
 `;

@@ -23,7 +23,7 @@ export const Footer: FC = () => (
             hello@brandglue.com
           </Info>
           <Social>
-          <SocialIcon>
+            <SocialIcon>
               <Anchor
                 hasArrow={false}
                 href="https://www.linkedin.com/company/brandglue-com"
@@ -38,7 +38,7 @@ export const Footer: FC = () => (
                 href="https://x.com/BrandGlueAgency"
                 variant="invisible"
               >
-                <X className="x-logo"/>
+                <X className="x-logo" />
               </Anchor>
             </SocialIcon>
             <SocialIcon>
@@ -50,7 +50,6 @@ export const Footer: FC = () => (
                 <Facebook />
               </Anchor>
             </SocialIcon>
-
           </Social>
         </Contact>
         <Links>
@@ -70,12 +69,14 @@ export const Footer: FC = () => (
               {TopLevelPageLabels.Services}
             </FooterLink>
           </li>
+        </Links>
+        <Links>
           <li>
             <FooterLink
-              to={`/${TopLevelPages.CaseStudies}/`}
+              to={`/${TopLevelPages.Clients}/`}
               variant="textLinkCurrent"
             >
-              {TopLevelPageLabels.CaseStudies}
+              {TopLevelPageLabels.Clients}
             </FooterLink>
           </li>
           <li>
@@ -84,40 +85,6 @@ export const Footer: FC = () => (
               variant="textLinkCurrent"
             >
               {TopLevelPageLabels.Blog}
-            </FooterLink>
-          </li>
-        </Links>
-        <Links>
-          <li>
-            <FooterLink
-              to={`/${TopLevelPages.CaseStudies}/eloqua/`}
-              variant="textLinkCurrent"
-            >
-              Eloqua Case Study
-            </FooterLink>
-          </li>
-          <li>
-            <FooterLink
-              to={`/${TopLevelPages.CaseStudies}/intuit-accountants/`}
-              variant="textLinkCurrent"
-            >
-              Intuit Case Study
-            </FooterLink>
-          </li>
-          <li>
-            <FooterLink
-              to={`/${TopLevelPages.CaseStudies}/whitehat-security/`}
-              variant="textLinkCurrent"
-            >
-              WhiteHat Case Study
-            </FooterLink>
-          </li>
-          <li>
-            <FooterLink
-              to={`/${TopLevelPages.CaseStudies}/pgi/`}
-              variant="textLinkCurrent"
-            >
-              PGi Case Study
             </FooterLink>
           </li>
         </Links>
@@ -201,7 +168,7 @@ const SocialIcon = styled.div`
 
     &.x-logo {
       width: 20px;
-      vertical-align: middle
+      vertical-align: middle;
     }
   }
 `;

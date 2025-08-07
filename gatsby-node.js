@@ -1,7 +1,7 @@
 const { kebabCase } = require('lodash');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage, createRedirect } = actions;
+  const { createPage } = actions;
 
   const result = await graphql(`
     {
@@ -82,14 +82,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         slug: node.frontmatter.slug,
       },
     });
-  });
-
-  // redirects
-  createRedirect({
-    fromPath: '/blog/category/',
-    toPath: '/blog/',
-    redirectInBrowser: true,
-    isPermanent: true,
   });
 };
 

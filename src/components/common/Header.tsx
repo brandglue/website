@@ -24,9 +24,9 @@ const menuItems: IMenuItem[] = [
     label: PageLabels.Services,
     to: Pages.Services,
   },
-  {
-    label: PageLabels.CaseStudies,
-    to: Pages.CaseStudies,
+    {
+    label: PageLabels.Clients,
+    to: Pages.Clients,
   },
   {
     label: PageLabels.Blog,
