@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 
 import { Contact, Seo } from '@components/common';
 import { Box, Divider } from '@components/core';
-import { CaseStudy, Clients, Hero, Services, Team } from '@components/home';
+import { BlogPost, Clients, Hero, Services, Team } from '@components/home';
 
 type Props = PageProps<GatsbyTypes.HomePageQuery>;
 
@@ -20,7 +20,7 @@ export const Home: FC<Props> = ({ data, location }) => {
         <Hero />
         <Team data={data} />
         <Clients />
-        <CaseStudy />
+        <BlogPost data={data} />
         <Services data={data} />
         <Divider />
         <Contact />
@@ -42,6 +42,30 @@ export const homePageQuery = graphql`
           frontmatter {
             name
             image {
+              name
+              childImageSharp {
+                fluid(maxWidth: 1100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                  ...GatsbyImageSharpFluidLimitPresentationSize
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    latestBlogPost: allMdx(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { frontmatter: { type: { eq: "blog-post" } } }
+      limit: 1
+    ) {
+      edges {
+        node {
+          frontmatter {
+            slug
+            title
+            date(formatString: "MMMM DD, YYYY")
+            cover_image {
               name
               childImageSharp {
                 fluid(maxWidth: 1100) {
