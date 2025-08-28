@@ -158,3 +158,21 @@ collections:
       - { name: order, label: Sort Order, widget: number }
     editor:
       preview: false
+
+  - name: client
+    label: Clients
+    label_singular: Client
+    folder: src/content/clients
+    path: '{{name}}/index'
+    slug: '{{slug}}'
+    extension: mdx
+    format: frontmatter
+    create: true
+    identifier_field: name
+    fields:
+      - { name: type, label: Type, widget: hidden, default: 'client' }
+      - { name: name, label: Name, widget: string }
+      - { name: logo, label: Logo, widget: image }
+      - { name: order, label: Sort Order, widget: number }
+    editor:
+      preview: false
