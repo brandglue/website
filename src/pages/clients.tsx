@@ -57,7 +57,7 @@ const ClientGrid = styled.div`
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-auto-rows: minmax(20px, 150px);
-  grid-gap: 60px;
+  grid-gap: 20px;
   margin-bottom: ${rhythm(1)};
 
   ${minMediaQuery.Small(css`
@@ -79,10 +79,10 @@ const ClientLogoWrapper = styled(Box)`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-bottom: ${rhythm(1)};
 
   & .gatsby-image-wrapper {
     flex: 1 1 0;
+    max-width: 200px !important;
     min-height: 20px;
     max-height: 100% !important;
   }
