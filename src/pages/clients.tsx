@@ -56,7 +56,7 @@ export const Clients: FC<Props> = ({ data, location }) => {
 const ClientGrid = styled.div`
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  grid-auto-rows: minmax(20px, auto);
+  grid-auto-rows: minmax(20px, 150px);
   grid-gap: 60px;
   margin-bottom: ${rhythm(1)};
 
@@ -84,6 +84,11 @@ const ClientLogoWrapper = styled(Box)`
   & .gatsby-image-wrapper {
     flex: 1 1 0;
     min-height: 20px;
+    max-height: 100% !important;
+  }
+
+  & img {
+    object-fit: contain !important;
   }
 
   ${minMediaQuery.Small(css`

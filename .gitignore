@@ -7,3 +7,4 @@ cypress/screenshots
 coverage
 __generated__
 node_modules
+.DS_Store
