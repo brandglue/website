@@ -16,6 +16,7 @@
     "local-cms": "npx netlify-cms-proxy-server",
     "pretest:e2e:ci": "npm run build",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx|yaml)\"",
+    "scripts:convert-svg": "node ./scripts/svg-class-to-attrs",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "is-ci \"test:coverage\" \"test:watch\"",
@@ -114,6 +115,7 @@
     "@typescript-eslint/parser": "5.8.1",
     "babel-plugin-styled-components": "2.0.2",
     "babel-preset-gatsby": "2.4.0",
+    "css": "3.0.0",
     "cypress": "9.2.0",
     "eslint": "8.6.0",
     "eslint-config-prettier": "8.3.0",
@@ -146,6 +148,7 @@
     "ts-loader": "9.2.6",
     "typescript": "4.5.4",
     "webpack": "5.65.0",
+    "xmldom": "0.6.0",
     "yaml": "1.10.2"
   }
 }
