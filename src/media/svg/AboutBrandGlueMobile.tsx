@@ -11,204 +11,327 @@ export const AboutBrandGlueMobile: FC<IOwnProps> = ({ className = '' }) => (
     aria-labelledby="brandglueLogoTitle"
     className={className}
     role="img"
-    viewBox="0 0 640 1935.1"
+    viewBox="0 0 640 2046.1"
     xmlns="http://www.w3.org/2000/svg"
   >
   <defs>
-    <linearGradient id="a" x1="40" x2="40" y1="-802.8" y2="-2521.9" gradientTransform="translate(0 2664)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient" x1="40" y1="629.5" x2="40" y2="2457.9" gradientTransform="translate(0 2600) scale(1 -1)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#2a7de1"/>
       <stop offset=".5" stop-color="#5981b1"/>
       <stop offset=".8" stop-color="#778392"/>
       <stop offset="1" stop-color="#828487"/>
     </linearGradient>
   </defs>
-  <path fill="none" d="M127.4 106.1h306.5v100H127.4z"/>
-  <text fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20" font-weight="700" transform="translate(127.4 121)"><tspan x="0" y="0">2009</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(127.4 139)"><tspan x="0" y="0">BrandGlue is born!</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(127.4 165)"><tspan xmlSpace="preserve" x="0" y="0">Started in a college dorm room,  </tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(127.4 183)"><tspan x="0" y="0">focused solely on Facebook marketing</tspan></text>
-  <path fill="none" d="M127.4 240.7h269.3v100H127.4z"/>
-  <text fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20" font-weight="700" transform="translate(127.4 255.6)"><tspan x="0" y="0">2011</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(127.4 273.6)"><tspan x="0" y="0">Helped the Washington Football</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(127.4 291.6)"><tspan x="0" y="0">Club become the fastest growing</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(127.4 309.6)"><tspan x="0" y="0">NFL team on Facebook</tspan></text>
-  <path fill="none" d="M132 375.4h228v100H132z"/>
-  <text fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20" font-weight="700" transform="translate(132 390.2)"><tspan x="0" y="0">2012</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 408.2)"><tspan xmlSpace="preserve" x="0" y="0">Helped YouTube become  </tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 426.2)"><tspan x="0" y="0">the fastest growing fan page</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 444.2)"><tspan x="0" y="0">on all of Facebook</tspan></text>
-  <path fill="none" d="M132 510h228v100H132z"/>
-  <text fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20" font-weight="700" transform="translate(132 524.8)"><tspan x="0" y="0">2013</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 542.8)"><tspan xmlSpace="preserve" x="0" y="0">Team grows to 6 people,  </tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 560.8)"><tspan x="0" y="0">4 cats, 1 dog, 1 horse,</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 578.8)"><tspan x="0" y="0">expands to Instagram</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 596.8)"><tspan x="0" y="0">marketing</tspan></text>
-  <path fill="none" d="M132 644.6h165.1v100H132z"/>
-  <text fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20" font-weight="700" transform="translate(132 659.5)"><tspan x="0" y="0">2015</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 677.5)"><tspan x="0" y="0">Helped grow</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 695.5)"><tspan x="0" y="0">Eloqua&apos;s Facebook</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 713.5)"><tspan x="0" y="0">community by</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 731.5)"><tspan x="0" y="0">2,500%</tspan></text>
-  <path fill="none" d="M132 793.7h189.1v100H132z"/>
-  <text fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20" font-weight="700" transform="translate(132 808.5)"><tspan x="0" y="0">2018</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 826.5)"><tspan x="0" y="0">Team grows to 10</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 844.5)"><tspan xmlSpace="preserve" x="0" y="0">people, 4 cats, 3 dog,  </tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 862.5)"><tspan x="0" y="0">1 horse, 2 babies</tspan></text>
-  <path fill="none" d="M132 1058.2h279.6v78.8H132z"/>
-  <text fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20" font-weight="700" transform="translate(132 1073.1)"><tspan x="0" y="0">2020</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 1091.1)"><tspan x="0" y="0">Team helps all clients survive and</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 1109.1)"><tspan x="0" y="0">thrive with social media efforts</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 1127.1)"><tspan x="0" y="0">during the Coronavirus pandemic.</tspan></text>
-  <path fill="none" d="M132 1329.3h279.6v100H132z"/>
-  <text fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20" font-weight="700" transform="translate(132 1344.2)"><tspan x="0" y="0">2022</tspan></text>
+  <rect x="127.4" y="106.1" width="306.5" height="100" fill="none"/>
+  <text transform="translate(127.4 121)" fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20px" font-weight="700"><tspan x="0" y="0">2009</tspan></text>
+  <text transform="translate(127.4 139)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">BrandGlue is born!</tspan></text>
+  <text transform="translate(127.4 165)" font-size="18px" font-family="Lato-Light, Lato" font-weight="300"><tspan x="0" y="0" xmlSpace="preserve">Started in a college dorm room,  </tspan></text>
+  <text transform="translate(127.4 183)" font-size="18px" font-family="Lato-Light, Lato" font-weight="300"><tspan x="0" y="0">focused solely on Facebook marketing</tspan></text>
+  <rect x="127.4" y="240.7" width="269.3" height="100" fill="none"/>
+  <text transform="translate(127.4 255.6)" fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20px" font-weight="700"><tspan x="0" y="0">2011</tspan></text>
+  <text transform="translate(127.4 273.6)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">Helped the Washington Football </tspan></text>
+  <text transform="translate(127.4 291.6)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">Club become the fastest growing </tspan></text>
+  <text transform="translate(127.4 309.6)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">NFL team on Facebook</tspan></text>
+  <rect x="132" y="375.4" width="228" height="100" fill="none"/>
+  <text transform="translate(132 390.2)" fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20px" font-weight="700"><tspan x="0" y="0">2012</tspan></text>
+  <text transform="translate(132 408.2)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0" xmlSpace="preserve">Helped YouTube become  </tspan></text>
+  <text transform="translate(132 426.2)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">the fastest growing fan page </tspan></text>
+  <text transform="translate(132 444.2)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">on all of Facebook</tspan></text>
+  <rect x="132" y="510" width="228" height="100" fill="none"/>
+  <text transform="translate(132 524.8)" fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20px" font-weight="700"><tspan x="0" y="0">2013</tspan></text>
+  <text transform="translate(132 542.8)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0" xmlSpace="preserve">Team grows to 6 people,  </tspan></text>
+  <text transform="translate(132 560.8)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">4 cats, 1 dog, 1 horse, </tspan></text>
+  <text transform="translate(132 578.8)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">expands to Instagram </tspan></text>
+  <text transform="translate(132 596.8)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">marketing</tspan></text>
+  <rect x="132" y="644.6" width="165.1" height="100" fill="none"/>
+  <text transform="translate(132 659.5)" fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20px" font-weight="700"><tspan x="0" y="0">2015</tspan></text>
+  <text transform="translate(132 677.5)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">Helped grow </tspan></text>
+  <text transform="translate(132 695.5)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">Eloqua's Facebook </tspan></text>
+  <text transform="translate(132 713.5)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">community by </tspan></text>
+  <text transform="translate(132 731.5)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">2,500%</tspan></text>
+  <rect x="132" y="793.7" width="189.1" height="100" fill="none"/>
+  <text transform="translate(132 808.5)" fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20px" font-weight="700"><tspan x="0" y="0">2018</tspan></text>
+  <text transform="translate(132 826.5)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">Team grows to 10 </tspan></text>
+  <text transform="translate(132 844.5)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0" xmlSpace="preserve">people, 4 cats, 3 dog,  </tspan></text>
+  <text transform="translate(132 862.5)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">1 horse, 2 babies</tspan></text>
+  <rect x="132" y="1058.2" width="279.6" height="78.8" fill="none"/>
+  <text transform="translate(132 1073.1)" fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20px" font-weight="700"><tspan x="0" y="0">2020</tspan></text>
+  <text transform="translate(132 1091.1)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">Team helps all clients survive and </tspan></text>
+  <text transform="translate(132 1109.1)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">thrive with social media efforts </tspan></text>
+  <text transform="translate(132 1127.1)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">during the Coronavirus pandemic.</tspan></text>
+  <rect x="132" y="1329.3" width="279.6" height="100" fill="none"/>
+  <text transform="translate(132 1344.2)" fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20px" font-weight="700"><tspan x="0" y="0">2022</tspan></text>
   <g>
-    <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 1362.2)"><tspan x="0" y="0">Multiple clients invest in</tspan></text>
-    <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 1383.8)"><tspan x="0" y="0">executive social media efforts.</tspan></text>
+    <text transform="translate(132 1362.2)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">Multiple clients invest in</tspan></text>
+    <text transform="translate(132 1383.8)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">executive social media efforts.</tspan></text>
   </g>
-  <path fill="#b09f8e" d="M418.2 411.1h6v23.5h-6z"/>
-  <path fill="#3b7558" d="m409.4 399.6 12-32 11.9 32h-23.9z"/>
-  <path fill="#3b7558" d="m404 422.9 17.4-46.5 17.4 46.5H404z"/>
-  <path fill="#b09f8e" d="M473.9 109.1h6v23.5h-6z"/>
-  <path fill="#3b7558" d="m465.1 97.6 12-32 11.9 32h-23.9z"/>
-  <path fill="#3b7558" d="m459.7 120.8 17.4-46.4 17.4 46.4h-34.8z"/>
-  <path fill="#b09f8e" d="M491.3 109.1h6v23.5h-6z"/>
-  <path fill="#3b7558" d="m482.5 125.1 12-32 12 32h-24z"/>
-  <path fill="#b09f8e" d="M479.6 860.5h9.1V896h-9.1z"/>
-  <path fill="#3b7558" d="m466.3 843.2 18-48.3 18.1 48.3h-36.1z"/>
-  <path fill="#3b7558" d="m458.1 878.2 26.2-70.1 26.3 70.1h-52.5z"/>
-  <path fill="#a9c4ab" d="M463 434.6c.5-.9.8-1.9.8-3 0-2.6-1.8-4.9-4.5-6-1.1-2.9-4.4-5-8.2-5s-8.6 3.2-8.6 7.2.1 1.4.4 2.1c-2.4.4-4.2 2.1-4.2 4.1v.5H463Z"/>
-  <path fill="#b09f8e" d="M455.6 1163h6v23.5h-6z"/>
-  <path fill="#3b7558" d="m446.7 1151.5 12-32 12 32h-24z"/>
-  <path fill="#3b7558" d="m441.3 1174.7 17.4-46.5 17.4 46.5h-34.8z"/>
-  <path fill="#b09f8e" d="M476.3 1444.1h6v23.5h-6z"/>
-  <path fill="#3b7558" d="m467.4 1432.6 12-32 12 32h-24z"/>
-  <path fill="#3b7558" d="m462 1455.9 17.4-46.5 17.4 46.5H462z"/>
-  <path fill="#a9c4ab" d="M500.4 1186.5c.5-.9.8-1.9.8-3 0-2.7-1.8-4.9-4.5-6-1.1-2.9-4.4-5-8.2-5s-8.6 3.2-8.6 7.2.1 1.4.4 2.1c-2.4.4-4.2 2.1-4.2 4.2v.5h24.3Z"/>
-  <path fill="#b09f8e" d="M575.2 1310.5h6v23.5h-6z"/>
-  <path fill="#3b7558" d="m590.1 1299-12-32-12 32h24z"/>
-  <path fill="#3b7558" d="m595.5 1322.2-17.4-46.4-17.4 46.4h34.8z"/>
-  <path fill="#a9c4ab" d="M536.4 1334c-.5-.9-.8-1.9-.8-3 0-2.7 1.8-4.9 4.5-6 1.1-2.9 4.4-5 8.2-5s8.6 3.2 8.6 7.2 0 1.4-.4 2.1c2.4.4 4.2 2.1 4.2 4.2v.5h-24.3ZM509.2 1519.3c-.5-.9-.8-1.9-.8-3 0-2.7 1.8-4.9 4.4-6 1.1-2.9 4.4-5 8.2-5s8.6 3.2 8.6 7.2 0 1.4-.4 2.1c2.4.4 4.2 2.1 4.2 4.2v.5h-24.2ZM553.1 1022.4c.5-.9.8-1.9.8-3 0-2.7-1.8-4.9-4.5-6-1.1-2.9-4.4-5-8.2-5s-8.6 3.2-8.6 7.2 0 1.4.4 2.1c-2.4.4-4.2 2.1-4.2 4.2v.5h24.3ZM511.6 1001.3c1.1-1.8 1.7-3.9 1.7-6.2 0-5.4-3.7-10.1-9.1-12.4-2.3-5.9-9-10.2-16.8-10.2s-17.7 6.7-17.7 14.9.3 3 .8 4.3c-5 .9-8.7 4.3-8.7 8.5s0 .7.1 1h49.7ZM545.4 1165.8c1.1-1.8 1.7-3.9 1.7-6.2 0-5.4-3.7-10.1-9.1-12.4-2.3-5.9-9-10.2-16.8-10.2s-17.7 6.7-17.7 14.9.3 3 .8 4.3c-5 .9-8.7 4.3-8.7 8.5s0 .7.1 1h49.7ZM549 175.1c-.5-.9-.8-1.9-.8-3 0-2.6 1.8-4.9 4.5-6 1.1-2.9 4.4-5 8.2-5s8.6 3.2 8.6 7.2 0 1.4-.4 2.1c2.4.4 4.2 2.1 4.2 4.1v.5H549Z"/>
-  <path fill="#4d4d4d" d="M529.5 289.6c.6-1.5 1.5-2.9 2.9-4 1.3-1 3.1-1.7 4.8-1.6 1.8.1 3.3 1.1 4.6 2 1.3 1 2.4 2.1 3.5 3.3h-.9c.7-1.4 1.7-2.8 3.1-3.8 1.3-1 3.1-1.7 4.8-1.7s3.5.7 4.8 1.8c.7.5 1.2 1.1 1.7 1.8.2.3.5.7.7 1l.3.5v.3h.2v.3c-.2.1 0 0 0 0h-.2c0-.1-.2-.3-.2-.3l-.4-.4c-.3-.3-.6-.5-.9-.7-.6-.5-1.2-.9-1.8-1.2-1.3-.6-2.6-1-3.9-.9-1.3 0-2.6.5-3.8 1.2s-2.2 1.7-3.2 2.9l-.6.7-.3-.7c-.7-1.4-1.6-2.6-2.9-3.4-1.3-.8-2.8-1-4.2-.9s-2.7.5-4 1.2-2.4 1.7-3.6 2.8l-.3-.2h-.2ZM553.3 304c.2-1.1.8-2.1 1.6-3 .8-.8 2.1-1.4 3.4-1.3 1.3.1 2.3 1 3.1 1.7s1.5 1.5 2.3 2.4h-1c.4-1 1-2 1.9-2.8s2.1-1.4 3.4-1.4 2.5.6 3.4 1.5c.2.2.4.4.6.7.2.2.3.5.5.7 0 .2.3.5.3.8v.4l.2.2c-.2.2 0 .1 0 .1 0-.1-.2-.2-.2-.2l-.3-.3c-.2-.2-.4-.3-.6-.5-.4-.3-.8-.6-1.2-.8-.8-.4-1.6-.6-2.4-.6-.8.1-1.5.3-2.3.8-.7.5-1.4 1.2-2.1 1.9l-.7.8-.3-.8c-.3-1-.9-1.9-1.7-2.4-.8-.6-1.9-.6-2.7-.5s-1.6.4-2.4.9c-.8.5-1.5 1.1-2.4 1.8h-.4ZM565.5 281.1c.4-1.4 1.2-2.7 2.3-3.8 1.1-1 2.7-1.8 4.4-1.7 1.7.2 3 1.1 4.1 2.1s2.1 2 3 3.2h-1c.6-1.3 1.4-2.6 2.6-3.7 1.2-1 2.7-1.8 4.4-1.8s3.3.8 4.4 1.8l.8.8c.2.3.5.6.6.9.2.3.4.6.5 1l.2.5v.4c-.2.1 0 0 0 0 0-.1-.2-.3-.2-.3l-.4-.4c-.2-.3-.5-.5-.8-.7-.5-.4-1-.8-1.6-1.2-1.1-.6-2.2-1-3.4-.9-1.1.1-2.2.5-3.3 1.2-1 .7-1.9 1.7-2.8 2.8l-.6.8-.3-.8c-.5-1.3-1.3-2.5-2.4-3.3-1.1-.8-2.5-1-3.7-.9s-2.3.5-3.4 1.3c-1.1.7-2 1.7-3.1 2.7h-.3ZM511.1 776.1c.6-1.5 1.5-2.9 2.9-4 1.3-1 3.1-1.7 4.8-1.6 1.8.2 3.3 1.1 4.6 2 1.3 1 2.4 2.1 3.5 3.3h-.9c.7-1.4 1.7-2.8 3.1-3.8 1.3-1 3.1-1.7 4.8-1.7s3.5.7 4.8 1.8c.7.5 1.2 1.1 1.7 1.8.2.3.5.7.7 1l.3.5v.3h.2v.2c-.2 0 0 0 0 0h-.2l-.2-.3-.4-.4c-.3-.3-.6-.5-.9-.7-.6-.5-1.2-.9-1.8-1.2-1.3-.6-2.6-1-3.9-.9-1.3 0-2.6.5-3.8 1.2s-2.2 1.7-3.2 2.9l-.6.7-.3-.7c-.7-1.4-1.6-2.6-2.9-3.4-1.3-.8-2.8-1-4.2-.9s-2.7.5-4 1.2-2.4 1.7-3.6 2.8l-.3-.2h-.2ZM535 790.6c.2-1.1.8-2.1 1.6-3 .8-.8 2.1-1.4 3.4-1.3 1.3.2 2.3 1 3.1 1.7s1.5 1.5 2.3 2.4h-1c.4-1 1-2 1.9-2.8s2.1-1.4 3.4-1.4 2.5.6 3.4 1.5.4.4.6.7c.2.2.3.5.5.7 0 .2.3.5.3.8v.4l.2.2c-.2 0 0 0 0 0l-.2-.2-.3-.3c-.2-.2-.4-.3-.6-.5-.4-.3-.8-.6-1.2-.8-.8-.4-1.6-.6-2.4-.6s-1.5.3-2.3.8c-.7.5-1.4 1.2-2.1 1.9l-.7.8-.3-.8c-.3-1-.9-1.8-1.7-2.4-.8-.6-1.9-.7-2.7-.5s-1.6.4-2.4.9c-.8.5-1.5 1.1-2.4 1.8h-.4ZM430.2 1331.7c1.1-3.1 4.2-5.8 7.7-5.6 3.5.4 5.9 2.9 8.1 5.3h-1c3.1-6.6 11.4-7.7 15.1-1 .1.3.4.8.5 1.1s.1 0-.1 0h-.1c-.1 0-.3-.3-.4-.4-4.6-4.6-10-4.2-14.1.8l-.6.7-.3-.7c-2-4.6-7-5.4-11.1-3-1.3.7-2.4 1.7-3.6 2.8v-.2h-.1v.2ZM454 1346.2c.4-2.2 2.5-4.4 5-4.3 2.5.5 3.8 2.4 5.4 4h-1c.4-1 1-2 1.9-2.8 3.1-3 7.5-1 8.4 2.9h-.2c-.2 0-.4-.4-.6-.5-3.7-3.3-6.4-1.8-9.2 1.6l-.3-.8c-1.1-3.3-4.1-3.7-6.8-2.1-.8.5-1.5 1.1-2.4 1.8h-.2v.2ZM579.5 824.4c.2-1.1.8-2.1 1.6-3 .8-.8 2.1-1.4 3.4-1.3 1.3.2 2.3 1 3.1 1.7s1.5 1.5 2.3 2.4h-1c.4-1 1-2 1.9-2.8s2.1-1.4 3.4-1.4 2.5.6 3.4 1.5.4.4.6.7c.2.2.3.5.5.7 0 .2.3.5.3.8v.4l.2.2c-.2 0 0 0 0 0l-.2-.2-.3-.3c-.2-.2-.4-.3-.6-.5-.4-.3-.8-.6-1.2-.8-.8-.4-1.6-.6-2.4-.6s-1.5.3-2.3.8c-.7.5-1.4 1.2-2.1 1.9l-.7.8-.3-.8c-.3-1-.9-1.8-1.7-2.4-.8-.6-1.9-.7-2.7-.5s-1.6.4-2.4.9c-.8.5-1.5 1.1-2.4 1.8h-.4ZM547.1 767.6c.4-1.4 1.2-2.7 2.3-3.8 1.1-1 2.7-1.8 4.4-1.7 1.7.2 3 1.1 4.1 2.1s2.1 2 3 3.2h-1c.6-1.3 1.4-2.7 2.6-3.7 1.2-1 2.7-1.8 4.4-1.8s3.3.8 4.4 1.8l.8.8c.2.3.5.6.6.9.2.3.4.6.5 1l.2.5v.2c-.2 0 0 0 0 0l-.2-.3-.4-.4c-.2-.3-.5-.5-.8-.7-.5-.4-1-.8-1.6-1.2-1.1-.6-2.2-1-3.4-.9-1.1 0-2.2.5-3.3 1.2-1 .7-1.9 1.7-2.8 2.8l-.6.8-.3-.8c-.5-1.3-1.3-2.5-2.4-3.3-1.1-.8-2.5-1-3.7-.9-1.2.2-2.3.5-3.4 1.3-1.1.7-2 1.7-3.1 2.7l-.2.2Z"/>
-  <g fill="#7cb0c2">
-    <path d="M529.3 635.7c-1.2-1.7-.6-4 1-5.2 6.7-4.8 10.9-13.8 10.9-19.4 0-14.7-20.1-25.6-38.8-18.3-18 7-.7 20.3-33.7 20.1-35.8-.3-64.5 15.6-64.5 34.9s28.9 34.9 64.5 34.9 64.5-15.6 64.5-34.9-1.3-8.4-3.9-12.1Z"/>
-    <ellipse cx="553.2" cy="682.8" rx="24.3" ry="14"/>
+  <g>
+    <rect x="418.2" y="411.1" width="6" height="23.5" fill="#b09f8e"/>
+    <polygon points="409.4 399.6 421.4 367.6 433.3 399.6 409.4 399.6" fill="#3b7558"/>
+    <polygon points="404 422.9 421.4 376.4 438.8 422.9 404 422.9" fill="#3b7558"/>
   </g>
-  <path fill="#2d5615" d="M487.9 590.5c-1.2 1.5-2.2 3.2-3 5s-1.5 3.6-2.1 5.4-1 3.8-1.2 5.7c-.3 1.9-.3 3.8-.2 5.8h-1c0-2 .2-4 .5-5.9.3-2 .8-3.8 1.4-5.7s1.4-3.7 2.3-5.4c.9-1.8 2-3.4 3.3-4.9ZM482 586.5c-1.3 4.8-2.4 9.7-3.1 14.6-.8 4.9-1.2 9.9-1.1 14.8h-1c0-5 .6-10 1.6-15 .9-4.8 2.1-9.7 3.6-14.4ZM471.2 595.1c1.3 1.2 2.3 2.7 3.1 4.2.8 1.6 1.3 3.3 1.6 5 .4 1.7.5 3.5.5 5.3s-.1 1.8-.1 2.6l-.3 2.6-1-.2.4-2.5c.1-.9.2-1.7.2-2.6.1-1.7.1-3.5-.2-5.2-.3-1.7-.7-3.4-1.4-5-.6-1.5-1.5-3-2.8-4.2Z"/>
-  <path fill="#2d5615" d="M474.6 591.7c1.3 1.4 2.2 3.2 3 4.9.8 1.8 1.3 3.7 1.7 5.5.4 1.9.6 3.8.7 5.8v5.8h-1.1l.3-2.8c0-1 .1-1.9.1-2.8 0-1.9-.1-3.8-.4-5.7s-.7-3.8-1.4-5.5c-.9-1.8-1.7-3.6-2.9-5.1ZM454.5 661.4c-1.2 1.5-2.2 3.2-3 5s-1.5 3.6-2.1 5.4-1 3.8-1.2 5.7c-.3 1.9-.3 3.8-.2 5.8h-1c0-2 .2-4 .5-5.9.3-2 .8-3.8 1.4-5.7s1.4-3.7 2.3-5.4c1-1.7 2.1-3.4 3.3-4.9ZM446.7 655.9c-1.3 4.8-2.4 9.7-3.1 14.6-.8 4.9-1.2 9.9-1.1 14.8h-1c0-5 .6-10 1.6-15 .9-4.7 2.1-9.6 3.6-14.4Z"/>
-  <path fill="#2d5615" d="M440.6 665.6c1.3 1.2 2.3 2.7 3.1 4.2.8 1.6 1.3 3.3 1.6 5 .4 1.7.5 3.5.5 5.3s-.1 1.8-.1 2.6l-.3 2.6-1-.2.4-2.5c.1-.9.2-1.7.2-2.6.1-1.7.1-3.5-.2-5.2-.3-1.7-.7-3.4-1.4-5-.7-1.5-1.6-3-2.8-4.2ZM443.9 662.2c1.3 1.4 2.2 3.2 3 4.9.8 1.8 1.3 3.7 1.7 5.5.4 1.9.6 3.8.7 5.8v5.8h-1.1l.3-2.8c0-1 .1-1.9.1-2.8 0-1.9-.1-3.8-.4-5.7s-.7-3.8-1.4-5.5c-.8-1.8-1.7-3.6-2.9-5.1ZM465.5 661c-1.2 1.5-2.2 3.2-3 5s-1.5 3.6-2.1 5.4-1 3.8-1.2 5.7c-.3 1.9-.3 3.8-.2 5.8h-1c0-2 .2-4 .5-5.9.3-2 .8-3.8 1.4-5.7s1.4-3.7 2.3-5.4c1-1.8 2-3.4 3.3-4.9ZM459.2 655.9c-1.3 4.8-2.4 9.7-3.1 14.6-.8 4.9-1.2 9.9-1.1 14.8h-1c0-5 .6-10 1.6-15 .9-4.7 2.1-9.6 3.6-14.4ZM448.1 667.1c1.3 1.2 2.3 2.7 3.1 4.2.8 1.6 1.3 3.3 1.6 5 .4 1.7.5 3.5.5 5.3s-.1 1.8-.1 2.6l-.3 2.6-1-.2.4-2.5c.1-.9.2-1.7.2-2.6.1-1.7.1-3.5-.2-5.2-.3-1.7-.7-3.4-1.4-5-.7-1.4-1.6-3-2.8-4.2Z"/>
-  <path fill="#2d5615" d="M457 665.2c1.3 1.4 2.2 3.2 3 4.9.8 1.8 1.3 3.7 1.7 5.5.4 1.9.6 3.8.7 5.8v5.8h-1.1l.3-2.8c0-1 .1-1.9.1-2.8 0-1.9-.1-3.8-.4-5.7s-.7-3.8-1.4-5.5c-.8-1.9-1.7-3.6-2.9-5.1Z"/>
-  <path fill="#2d5615" d="M466.5 668.6c-1.2 1.5-2.2 3.2-3 5s-1.5 3.6-2.1 5.4-1 3.8-1.2 5.7c-.3 1.9-.3 3.8-.2 5.8h-1c0-2 .2-4 .5-5.9.3-2 .8-3.8 1.4-5.7s1.4-3.7 2.3-5.4c1-1.7 2-3.4 3.3-4.9ZM454.6 661.4c-1.3 4.8-2.4 9.7-3.1 14.6-.8 4.9-1.2 9.9-1.1 14.8h-1c0-5 .6-10 1.6-15 .9-4.7 2.1-9.6 3.6-14.4ZM441.5 668.6c1.3 1.2 2.3 2.7 3.1 4.2.8 1.6 1.3 3.3 1.6 5 .4 1.7.5 3.5.5 5.3s-.1 1.8-.1 2.6l-.3 2.6-1-.2.4-2.5c.1-.9.2-1.7.2-2.6.1-1.7.1-3.5-.2-5.2-.3-1.7-.7-3.4-1.4-5-.6-1.4-1.5-3-2.8-4.2Z"/>
-  <path fill="#2d5615" d="M451.9 667.5c1.3 1.4 2.2 3.2 3 4.9.8 1.8 1.3 3.7 1.7 5.5.4 1.9.6 3.8.7 5.8v5.8h-1.1l.3-2.8c0-1 .1-1.9.1-2.8 0-1.9-.1-3.8-.4-5.7s-.7-3.8-1.4-5.5c-.8-1.9-1.7-3.6-2.9-5.1ZM517.5 1160.5c-1.2 1.5-2.2 3.2-3 5s-1.5 3.6-2.1 5.4c-.5 1.9-1 3.8-1.2 5.7-.3 1.9-.3 3.8-.2 5.8h-1c0-2 .2-3.9.5-5.9.3-1.9.8-3.8 1.4-5.7.6-1.9 1.4-3.7 2.3-5.4 1-1.8 2.1-3.5 3.3-4.9ZM509.6 1155c-1.3 4.8-2.4 9.7-3.1 14.6-.8 4.9-1.2 9.9-1.1 14.8h-1c0-5 .6-10 1.6-14.9s2.2-9.8 3.6-14.5Z"/>
-  <path fill="#2d5615" d="M503.6 1164.6c1.3 1.2 2.3 2.7 3.1 4.2.8 1.6 1.3 3.3 1.6 5 .4 1.7.5 3.5.5 5.3s-.1 1.8-.1 2.6l-.3 2.6-1-.2.4-2.5c.1-.9.2-1.7.2-2.6.1-1.7.1-3.4-.2-5.2-.3-1.7-.7-3.4-1.4-5-.7-1.5-1.6-3-2.8-4.2ZM506.9 1161.2c1.3 1.4 2.2 3.2 3 4.9.8 1.8 1.3 3.7 1.7 5.5.4 1.9.6 3.8.7 5.8v5.8h-1.1l.3-2.8c0-.9.1-1.9.1-2.8 0-1.9-.1-3.8-.4-5.7-.3-1.9-.7-3.8-1.4-5.5-.8-1.8-1.7-3.6-2.9-5.1ZM528.5 1160c-1.2 1.5-2.2 3.2-3 5s-1.5 3.6-2.1 5.4-1 3.8-1.2 5.7c-.3 1.9-.3 3.8-.2 5.8h-1c0-2 .2-3.9.5-5.9.3-1.9.8-3.8 1.4-5.7s1.4-3.7 2.3-5.4c1-1.7 2-3.4 3.3-4.9ZM522.2 1155c-1.3 4.8-2.3 9.7-3.1 14.6s-1.2 9.9-1.1 14.8h-1c0-5 .7-10 1.6-14.9s2.1-9.8 3.6-14.5ZM511 1166.2c1.3 1.2 2.3 2.7 3.1 4.2.8 1.6 1.3 3.3 1.6 5 .4 1.7.5 3.5.5 5.3v2.6l-.3 2.6-1-.2.4-2.5c0-.9.2-1.7.2-2.6 0-1.7 0-3.4-.2-5.2-.3-1.7-.7-3.4-1.4-5-.6-1.5-1.5-3-2.8-4.2Z"/>
-  <path fill="#2d5615" d="M520 1164.2c1.3 1.4 2.2 3.2 3 4.9.8 1.8 1.3 3.7 1.7 5.5.4 1.9.6 3.8.7 5.8v5.8h-1.1l.3-2.8v-2.8c0-1.9 0-3.8-.4-5.7-.3-1.9-.7-3.8-1.4-5.5-.8-1.8-1.7-3.6-2.9-5.1h.1Z"/>
-  <path fill="#2d5615" d="M529.5 1167.7c-1.2 1.5-2.2 3.2-3 5s-1.5 3.6-2.1 5.4-1 3.8-1.2 5.7c-.3 1.9-.3 3.8-.2 5.8h-1c0-2 .2-3.9.5-5.9.3-1.9.8-3.8 1.4-5.7s1.4-3.7 2.3-5.4c1-1.8 2-3.4 3.3-4.9ZM517.5 1160.5c-1.3 4.8-2.3 9.7-3.1 14.6s-1.2 9.9-1.1 14.8h-1c0-5 .7-10 1.6-14.9 1-4.9 2.2-9.8 3.6-14.5ZM504.5 1167.7c1.3 1.2 2.3 2.7 3.1 4.2.8 1.6 1.3 3.3 1.6 5 .4 1.7.5 3.5.5 5.3s-.1 1.8-.1 2.6l-.3 2.6-1-.2.4-2.5c.1-.9.2-1.7.2-2.6.1-1.7.1-3.4-.2-5.2-.3-1.7-.7-3.4-1.4-5-.7-1.5-1.5-3-2.8-4.2Z"/>
-  <path fill="#2d5615" d="M514.9 1166.5c1.3 1.4 2.2 3.2 3 4.9.8 1.8 1.3 3.7 1.7 5.5.4 1.9.6 3.8.7 5.8v5.8h-1.1l.3-2.8v-2.8c0-1.9 0-3.8-.4-5.7-.3-1.9-.7-3.8-1.4-5.5-.8-1.8-1.7-3.6-2.9-5.1h.1Z"/>
-  <path fill="#fff" d="M512.1 650.5v-.3c0-3.1-3.5-5.7-7.9-5.7s-7.9 2.5-7.9 5.7v.3h15.8Z"/>
-  <path fill="#fff" d="M500.1 638.6s-1.2-.8-2.4-.3c-1.1.4-1.8 1.3-1.5 2s1.4 1 2.5.5c.5-.2.9-.5 1.1-.8.5.7.7 1.7-.2 3.1-2 3-3.5 4.6-3.2 7.4h1.2c-.2-2.8 1.6-4.1 3.2-7.4 1.5-3-.7-4.5-.7-4.5Z"/>
-  <path fill="#333" d="M496.2 640.8s0 1.3-.5 2.1c1.1-.3 1.9-1.8 1.9-1.8l-1.2-.6s-.5-.2-.2.3Z"/>
-  <path fill="none" stroke="url(#a)" stroke-miterlimit="10" stroke-width="9" d="M40 142.1v1719.1"/>
+  <g>
+    <rect x="473.9" y="109.1" width="6" height="23.5" fill="#b09f8e"/>
+    <polygon points="465.1 97.6 477.1 65.6 489 97.6 465.1 97.6" fill="#3b7558"/>
+    <polygon points="459.7 120.8 477.1 74.4 494.5 120.8 459.7 120.8" fill="#3b7558"/>
+  </g>
+  <g>
+    <rect x="491.3" y="109.1" width="6" height="23.5" fill="#b09f8e"/>
+    <polygon points="482.5 125.1 494.5 93.1 506.5 125.1 482.5 125.1" fill="#3b7558"/>
+  </g>
+  <g>
+    <rect x="479.6" y="860.5" width="9.1" height="35.5" fill="#b09f8e"/>
+    <polygon points="466.3 843.2 484.3 794.9 502.4 843.2 466.3 843.2" fill="#3b7558"/>
+    <polygon points="458.1 878.2 484.3 808.1 510.6 878.2 458.1 878.2" fill="#3b7558"/>
+  </g>
+  <path d="M463,434.6c.5-.9.8-1.9.8-3,0-2.6-1.8-4.9-4.5-6-1.1-2.9-4.4-5-8.2-5s-8.6,3.2-8.6,7.2.1,1.4.4,2.1c-2.4.4-4.2,2.1-4.2,4.1v.5h24.3Z" fill="#a9c4ab"/>
+  <g>
+    <rect x="455.6" y="1163" width="6" height="23.5" fill="#b09f8e"/>
+    <polygon points="446.7 1151.5 458.7 1119.5 470.7 1151.5 446.7 1151.5" fill="#3b7558"/>
+    <polygon points="441.3 1174.7 458.7 1128.2 476.1 1174.7 441.3 1174.7" fill="#3b7558"/>
+  </g>
+  <g>
+    <rect x="476.3" y="1444.1" width="6" height="23.5" fill="#b09f8e"/>
+    <polygon points="467.4 1432.6 479.4 1400.6 491.4 1432.6 467.4 1432.6" fill="#3b7558"/>
+    <polygon points="462 1455.9 479.4 1409.4 496.8 1455.9 462 1455.9" fill="#3b7558"/>
+  </g>
+  <g>
+    <rect x="578.3" y="1970.1" width="6" height="23.5" fill="#b09f8e"/>
+    <polygon points="569.4 1958.6 581.4 1926.6 593.4 1958.6 569.4 1958.6" fill="#3b7558"/>
+    <polygon points="564 1981.9 581.4 1935.4 598.8 1981.9 564 1981.9" fill="#3b7558"/>
+  </g>
+  <path d="M500.4,1186.5c.5-.9.8-1.9.8-3,0-2.7-1.8-4.9-4.5-6-1.1-2.9-4.4-5-8.2-5s-8.6,3.2-8.6,7.2.1,1.4.4,2.1c-2.4.4-4.2,2.1-4.2,4.2v.5h24.3Z" fill="#a9c4ab"/>
+  <g>
+    <rect x="575.2" y="1310.5" width="6" height="23.5" fill="#b09f8e"/>
+    <polygon points="590.1 1299 578.1 1267 566.1 1299 590.1 1299" fill="#3b7558"/>
+    <polygon points="595.5 1322.2 578.1 1275.8 560.7 1322.2 595.5 1322.2" fill="#3b7558"/>
+  </g>
+  <path d="M536.4,1334c-.5-.9-.8-1.9-.8-3,0-2.7,1.8-4.9,4.5-6,1.1-2.9,4.4-5,8.2-5s8.6,3.2,8.6,7.2,0,1.4-.4,2.1c2.4.4,4.2,2.1,4.2,4.2v.5h-24.3Z" fill="#a9c4ab"/>
+  <path d="M509.2,1519.3c-.5-.9-.8-1.9-.8-3,0-2.7,1.8-4.9,4.4-6,1.1-2.9,4.4-5,8.2-5s8.6,3.2,8.6,7.2,0,1.4-.4,2.1c2.4.4,4.2,2.1,4.2,4.2v.5h-24.2Z" fill="#a9c4ab"/>
+  <path d="M400.4,1919c-.5-.9-.8-1.9-.8-3,0-2.7,1.8-4.9,4.4-6,1.1-2.9,4.4-5,8.2-5s8.6,3.2,8.6,7.2,0,1.4-.4,2.1c2.4.4,4.2,2.1,4.2,4.2v.5h-24.2Z" fill="#a9c4ab"/>
+  <path d="M553.1,1022.4c.5-.9.8-1.9.8-3,0-2.7-1.8-4.9-4.5-6-1.1-2.9-4.4-5-8.2-5s-8.6,3.2-8.6,7.2,0,1.4.4,2.1c-2.4.4-4.2,2.1-4.2,4.2v.5h24.3Z" fill="#a9c4ab"/>
+  <path d="M511.6,1001.3c1.1-1.8,1.7-3.9,1.7-6.2,0-5.4-3.7-10.1-9.1-12.4-2.3-5.9-9-10.2-16.8-10.2s-17.7,6.7-17.7,14.9.3,3,.8,4.3c-5,.9-8.7,4.3-8.7,8.5s0,.7.1,1h49.7Z" fill="#a9c4ab"/>
+  <path d="M545.4,1165.8c1.1-1.8,1.7-3.9,1.7-6.2,0-5.4-3.7-10.1-9.1-12.4-2.3-5.9-9-10.2-16.8-10.2s-17.7,6.7-17.7,14.9.3,3,.8,4.3c-5,.9-8.7,4.3-8.7,8.5s0,.7.1,1h49.7Z" fill="#a9c4ab"/>
+  <path d="M549,175.1c-.5-.9-.8-1.9-.8-3,0-2.6,1.8-4.9,4.5-6,1.1-2.9,4.4-5,8.2-5s8.6,3.2,8.6,7.2,0,1.4-.4,2.1c2.4.4,4.2,2.1,4.2,4.1v.5h-24.3Z" fill="#a9c4ab"/>
+  <path d="M529.5,289.6c.6-1.5,1.5-2.9,2.9-4,1.3-1,3.1-1.7,4.8-1.6,1.8.1,3.3,1.1,4.6,2,1.3,1,2.4,2.1,3.5,3.3h-.9c.7-1.4,1.7-2.8,3.1-3.8,1.3-1,3.1-1.7,4.8-1.7s3.5.7,4.8,1.8c.7.5,1.2,1.1,1.7,1.8.2.3.5.7.7,1l.3.5v.3c0,0,.2.1.2.1h0c0,.1,0,.1,0,.2-.2.1,0,0,0,0h-.2c0-.1-.2-.3-.2-.3l-.4-.4c-.3-.3-.6-.5-.9-.7-.6-.5-1.2-.9-1.8-1.2-1.3-.6-2.6-1-3.9-.9-1.3,0-2.6.5-3.8,1.2s-2.2,1.7-3.2,2.9l-.6.7-.3-.7c-.7-1.4-1.6-2.6-2.9-3.4-1.3-.8-2.8-1-4.2-.9-1.4.1-2.7.5-4,1.2-1.3.7-2.4,1.7-3.6,2.8l-.3-.2Z" fill="#4d4d4d"/>
+  <path d="M553.3,304c.2-1.1.8-2.1,1.6-3,.8-.8,2.1-1.4,3.4-1.3,1.3.1,2.3,1,3.1,1.7s1.5,1.5,2.3,2.4h-1c.4-1,1-2,1.9-2.8s2.1-1.4,3.4-1.4,2.5.6,3.4,1.5c.2.2.4.4.6.7.2.2.3.5.5.7,0,.2.3.5.3.8v.4c0,0,.2.2.2.2h0c0,.1,0,.1,0,.1-.2.1,0,0,0,0h0c0-.1-.2-.2-.2-.2l-.3-.3c-.2-.2-.4-.3-.6-.5-.4-.3-.8-.6-1.2-.8-.8-.4-1.6-.6-2.4-.6-.8.1-1.5.3-2.3.8-.7.5-1.4,1.2-2.1,1.9l-.7.8-.3-.8c-.3-1-.9-1.9-1.7-2.4-.8-.6-1.9-.6-2.7-.5s-1.6.4-2.4.9c-.8.5-1.5,1.1-2.4,1.8h0Z" fill="#4d4d4d"/>
+  <path d="M565.5,281.1c.4-1.4,1.2-2.7,2.3-3.8,1.1-1,2.7-1.8,4.4-1.7,1.7.2,3,1.1,4.1,2.1s2.1,2,3,3.2h-1c.6-1.3,1.4-2.6,2.6-3.7,1.2-1,2.7-1.8,4.4-1.8s3.3.8,4.4,1.8l.8.8c.2.3.5.6.6.9.2.3.4.6.5,1l.2.5v.2c0,0,0,.1,0,.1h0c0,.1,0,.1,0,.1-.2.1,0,0,0,0h0c0-.1-.2-.3-.2-.3l-.4-.4c-.2-.3-.5-.5-.8-.7-.5-.4-1-.8-1.6-1.2-1.1-.6-2.2-1-3.4-.9-1.1.1-2.2.5-3.3,1.2-1,.7-1.9,1.7-2.8,2.8l-.6.8-.3-.8c-.5-1.3-1.3-2.5-2.4-3.3-1.1-.8-2.5-1-3.7-.9-1.2.1-2.3.5-3.4,1.3-1.1.7-2,1.7-3.1,2.7h-.1Z" fill="#4d4d4d"/>
+  <path d="M511.1,776.1c.6-1.5,1.5-2.9,2.9-4,1.3-1,3.1-1.7,4.8-1.6,1.8.2,3.3,1.1,4.6,2,1.3,1,2.4,2.1,3.5,3.3h-.9c.7-1.4,1.7-2.8,3.1-3.8,1.3-1,3.1-1.7,4.8-1.7s3.5.7,4.8,1.8c.7.5,1.2,1.1,1.7,1.8.2.3.5.7.7,1l.3.5v.3c0,0,.2,0,.2,0h0c0,0,0,0,0,.2-.2,0,0,0,0,0h-.2c0,0-.2-.3-.2-.3l-.4-.4c-.3-.3-.6-.5-.9-.7-.6-.5-1.2-.9-1.8-1.2-1.3-.6-2.6-1-3.9-.9-1.3,0-2.6.5-3.8,1.2s-2.2,1.7-3.2,2.9l-.6.7-.3-.7c-.7-1.4-1.6-2.6-2.9-3.4-1.3-.8-2.8-1-4.2-.9s-2.7.5-4,1.2-2.4,1.7-3.6,2.8l-.3-.2Z" fill="#4d4d4d"/>
+  <path d="M535,790.6c.2-1.1.8-2.1,1.6-3,.8-.8,2.1-1.4,3.4-1.3,1.3.2,2.3,1,3.1,1.7s1.5,1.5,2.3,2.4h-1c.4-1,1-2,1.9-2.8s2.1-1.4,3.4-1.4,2.5.6,3.4,1.5.4.4.6.7c.2.2.3.5.5.7,0,.2.3.5.3.8v.4c0,0,.2.2.2.2h0c0,0,0,0,0,0-.2,0,0,0,0,0h0c0,0-.2-.2-.2-.2l-.3-.3c-.2-.2-.4-.3-.6-.5-.4-.3-.8-.6-1.2-.8-.8-.4-1.6-.6-2.4-.6-.8,0-1.5.3-2.3.8-.7.5-1.4,1.2-2.1,1.9l-.7.8-.3-.8c-.3-1-.9-1.8-1.7-2.4-.8-.6-1.9-.7-2.7-.5s-1.6.4-2.4.9c-.8.5-1.5,1.1-2.4,1.8h0Z" fill="#4d4d4d"/>
+  <path d="M430.2,1331.7c1.1-3.1,4.2-5.8,7.7-5.6,3.5.4,5.9,2.9,8.1,5.3h-1c3.1-6.6,11.4-7.7,15.1-1,.1.3.4.8.5,1.1h0s.1,0-.1,0c-.2,0,0,0-.1,0h0c-.1,0-.3-.3-.4-.4-4.6-4.6-10-4.2-14.1.8l-.6.7-.3-.7c-2-4.6-7-5.4-11.1-3-1.3.7-2.4,1.7-3.6,2.8v-.2h-.1Z" fill="#4d4d4d"/>
+  <path d="M454,1346.2c.4-2.2,2.5-4.4,5-4.3,2.5.5,3.8,2.4,5.4,4h-1c.4-1,1-2,1.9-2.8,3.1-3,7.5-1,8.4,2.9,0,0,.1,0-.1,0-.2,0,0,0-.1,0-.2,0-.4-.4-.6-.5-3.7-3.3-6.4-1.8-9.2,1.6l-.3-.8c-1.1-3.3-4.1-3.7-6.8-2.1-.8.5-1.5,1.1-2.4,1.8h-.2Z" fill="#4d4d4d"/>
+  <path d="M579.5,824.4c.2-1.1.8-2.1,1.6-3,.8-.8,2.1-1.4,3.4-1.3,1.3.2,2.3,1,3.1,1.7s1.5,1.5,2.3,2.4h-1c.4-1,1-2,1.9-2.8s2.1-1.4,3.4-1.4,2.5.6,3.4,1.5.4.4.6.7c.2.2.3.5.5.7,0,.2.3.5.3.8v.4c0,0,.2.2.2.2h0c0,0,0,0,0,0-.2,0,0,0,0,0h0c0,0-.2-.2-.2-.2l-.3-.3c-.2-.2-.4-.3-.6-.5-.4-.3-.8-.6-1.2-.8-.8-.4-1.6-.6-2.4-.6-.8,0-1.5.3-2.3.8-.7.5-1.4,1.2-2.1,1.9l-.7.8-.3-.8c-.3-1-.9-1.8-1.7-2.4-.8-.6-1.9-.7-2.7-.5s-1.6.4-2.4.9c-.8.5-1.5,1.1-2.4,1.8h0Z" fill="#4d4d4d"/>
+  <path d="M547.1,767.6c.4-1.4,1.2-2.7,2.3-3.8,1.1-1,2.7-1.8,4.4-1.7,1.7.2,3,1.1,4.1,2.1s2.1,2,3,3.2h-1c.6-1.3,1.4-2.7,2.6-3.7,1.2-1,2.7-1.8,4.4-1.8s3.3.8,4.4,1.8l.8.8c.2.3.5.6.6.9.2.3.4.6.5,1l.2.5v.2c0,0,0,0,0,0h0c0,0,0,0,0,0-.2,0,0,0,0,0h0c0,0-.2-.3-.2-.3l-.4-.4c-.2-.3-.5-.5-.8-.7-.5-.4-1-.8-1.6-1.2-1.1-.6-2.2-1-3.4-.9-1.1,0-2.2.5-3.3,1.2-1,.7-1.9,1.7-2.8,2.8l-.6.8-.3-.8c-.5-1.3-1.3-2.5-2.4-3.3-1.1-.8-2.5-1-3.7-.9-1.2.2-2.3.5-3.4,1.3-1.1.7-2,1.7-3.1,2.7h-.1Z" fill="#4d4d4d"/>
+  <g>
+    <path d="M529.3,635.7c-1.2-1.7-.6-4,1-5.2,6.7-4.8,10.9-13.8,10.9-19.4,0-14.7-20.1-25.6-38.8-18.3-18,7-.7,20.3-33.7,20.1-35.8-.3-64.5,15.6-64.5,34.9s28.9,34.9,64.5,34.9,64.5-15.6,64.5-34.9c0-4.3-1.3-8.4-3.9-12.1Z" fill="#7cb0c2"/>
+    <ellipse cx="553.2" cy="682.8" rx="24.3" ry="14" fill="#7cb0c2"/>
+  </g>
+  <path d="M487.9,590.5c-1.2,1.5-2.2,3.2-3,5s-1.5,3.6-2.1,5.4-1,3.8-1.2,5.7c-.3,1.9-.3,3.8-.2,5.8h-1c0-2,.2-4,.5-5.9.3-2,.8-3.8,1.4-5.7s1.4-3.7,2.3-5.4c.9-1.8,2-3.4,3.3-4.9Z" fill="#2d5615"/>
+  <path d="M482,586.5c-1.3,4.8-2.4,9.7-3.1,14.6-.8,4.9-1.2,9.9-1.1,14.8h-1c0-5,.6-10,1.6-15,.9-4.8,2.1-9.7,3.6-14.4Z" fill="#2d5615"/>
+  <path d="M471.2,595.1c1.3,1.2,2.3,2.7,3.1,4.2.8,1.6,1.3,3.3,1.6,5,.4,1.7.5,3.5.5,5.3s-.1,1.8-.1,2.6l-.3,2.6-1-.2.4-2.5c.1-.9.2-1.7.2-2.6.1-1.7.1-3.5-.2-5.2-.3-1.7-.7-3.4-1.4-5-.6-1.5-1.5-3-2.8-4.2Z" fill="#2d5615"/>
+  <path d="M474.6,591.7c1.3,1.4,2.2,3.2,3,4.9.8,1.8,1.3,3.7,1.7,5.5.4,1.9.6,3.8.7,5.8v5.8c-.1,0-1.1,0-1.1,0l.3-2.8c0-1,.1-1.9.1-2.8,0-1.9-.1-3.8-.4-5.7s-.7-3.8-1.4-5.5c-.9-1.8-1.7-3.6-2.9-5.1Z" fill="#2d5615"/>
+  <path d="M454.5,661.4c-1.2,1.5-2.2,3.2-3,5s-1.5,3.6-2.1,5.4-1,3.8-1.2,5.7c-.3,1.9-.3,3.8-.2,5.8h-1c0-2,.2-4,.5-5.9.3-2,.8-3.8,1.4-5.7s1.4-3.7,2.3-5.4c1-1.7,2.1-3.4,3.3-4.9Z" fill="#2d5615"/>
+  <path d="M446.7,655.9c-1.3,4.8-2.4,9.7-3.1,14.6-.8,4.9-1.2,9.9-1.1,14.8h-1c0-5,.6-10,1.6-15,.9-4.7,2.1-9.6,3.6-14.4Z" fill="#2d5615"/>
+  <path d="M440.6,665.6c1.3,1.2,2.3,2.7,3.1,4.2.8,1.6,1.3,3.3,1.6,5,.4,1.7.5,3.5.5,5.3s-.1,1.8-.1,2.6l-.3,2.6-1-.2.4-2.5c.1-.9.2-1.7.2-2.6.1-1.7.1-3.5-.2-5.2-.3-1.7-.7-3.4-1.4-5-.7-1.5-1.6-3-2.8-4.2Z" fill="#2d5615"/>
+  <path d="M443.9,662.2c1.3,1.4,2.2,3.2,3,4.9.8,1.8,1.3,3.7,1.7,5.5.4,1.9.6,3.8.7,5.8v5.8c-.1,0-1.1,0-1.1,0l.3-2.8c0-1,.1-1.9.1-2.8,0-1.9-.1-3.8-.4-5.7s-.7-3.8-1.4-5.5c-.8-1.8-1.7-3.6-2.9-5.1Z" fill="#2d5615"/>
+  <path d="M465.5,661c-1.2,1.5-2.2,3.2-3,5s-1.5,3.6-2.1,5.4-1,3.8-1.2,5.7c-.3,1.9-.3,3.8-.2,5.8h-1c0-2,.2-4,.5-5.9.3-2,.8-3.8,1.4-5.7s1.4-3.7,2.3-5.4c1-1.8,2-3.4,3.3-4.9Z" fill="#2d5615"/>
+  <path d="M459.2,655.9c-1.3,4.8-2.4,9.7-3.1,14.6-.8,4.9-1.2,9.9-1.1,14.8h-1c0-5,.6-10,1.6-15,.9-4.7,2.1-9.6,3.6-14.4Z" fill="#2d5615"/>
+  <path d="M448.1,667.1c1.3,1.2,2.3,2.7,3.1,4.2.8,1.6,1.3,3.3,1.6,5,.4,1.7.5,3.5.5,5.3s-.1,1.8-.1,2.6l-.3,2.6-1-.2.4-2.5c.1-.9.2-1.7.2-2.6.1-1.7.1-3.5-.2-5.2-.3-1.7-.7-3.4-1.4-5-.7-1.4-1.6-3-2.8-4.2Z" fill="#2d5615"/>
+  <path d="M457,665.2c1.3,1.4,2.2,3.2,3,4.9.8,1.8,1.3,3.7,1.7,5.5.4,1.9.6,3.8.7,5.8v5.8c-.1,0-1.1,0-1.1,0l.3-2.8c0-1,.1-1.9.1-2.8,0-1.9-.1-3.8-.4-5.7s-.7-3.8-1.4-5.5c-.8-1.9-1.7-3.6-2.9-5.1Z" fill="#2d5615"/>
+  <path d="M466.5,668.6c-1.2,1.5-2.2,3.2-3,5s-1.5,3.6-2.1,5.4-1,3.8-1.2,5.7c-.3,1.9-.3,3.8-.2,5.8h-1c0-2,.2-4,.5-5.9.3-2,.8-3.8,1.4-5.7s1.4-3.7,2.3-5.4c1-1.7,2-3.4,3.3-4.9Z" fill="#2d5615"/>
+  <path d="M454.6,661.4c-1.3,4.8-2.4,9.7-3.1,14.6-.8,4.9-1.2,9.9-1.1,14.8h-1c0-5,.6-10,1.6-15,.9-4.7,2.1-9.6,3.6-14.4Z" fill="#2d5615"/>
+  <path d="M441.5,668.6c1.3,1.2,2.3,2.7,3.1,4.2.8,1.6,1.3,3.3,1.6,5,.4,1.7.5,3.5.5,5.3s-.1,1.8-.1,2.6l-.3,2.6-1-.2.4-2.5c.1-.9.2-1.7.2-2.6.1-1.7.1-3.5-.2-5.2-.3-1.7-.7-3.4-1.4-5-.6-1.4-1.5-3-2.8-4.2Z" fill="#2d5615"/>
+  <path d="M451.9,667.5c1.3,1.4,2.2,3.2,3,4.9.8,1.8,1.3,3.7,1.7,5.5.4,1.9.6,3.8.7,5.8v5.8c-.1,0-1.1,0-1.1,0l.3-2.8c0-1,.1-1.9.1-2.8,0-1.9-.1-3.8-.4-5.7s-.7-3.8-1.4-5.5c-.8-1.9-1.7-3.6-2.9-5.1Z" fill="#2d5615"/>
+  <path d="M517.5,1160.5c-1.2,1.5-2.2,3.2-3,5s-1.5,3.6-2.1,5.4c-.5,1.9-1,3.8-1.2,5.7-.3,1.9-.3,3.8-.2,5.8h-1c0-2,.2-3.9.5-5.9.3-1.9.8-3.8,1.4-5.7.6-1.9,1.4-3.7,2.3-5.4,1-1.8,2.1-3.5,3.3-4.9Z" fill="#2d5615"/>
+  <path d="M509.6,1155c-1.3,4.8-2.4,9.7-3.1,14.6-.8,4.9-1.2,9.9-1.1,14.8h-1c0-5,.6-10,1.6-14.9s2.2-9.8,3.6-14.5Z" fill="#2d5615"/>
+  <path d="M503.6,1164.6c1.3,1.2,2.3,2.7,3.1,4.2.8,1.6,1.3,3.3,1.6,5,.4,1.7.5,3.5.5,5.3s-.1,1.8-.1,2.6l-.3,2.6-1-.2.4-2.5c.1-.9.2-1.7.2-2.6.1-1.7.1-3.4-.2-5.2-.3-1.7-.7-3.4-1.4-5-.7-1.5-1.6-3-2.8-4.2Z" fill="#2d5615"/>
+  <path d="M506.9,1161.2c1.3,1.4,2.2,3.2,3,4.9.8,1.8,1.3,3.7,1.7,5.5.4,1.9.6,3.8.7,5.8v5.8c0,0-1.1,0-1.1,0l.3-2.8c0-.9.1-1.9.1-2.8,0-1.9-.1-3.8-.4-5.7-.3-1.9-.7-3.8-1.4-5.5-.8-1.8-1.7-3.6-2.9-5.1Z" fill="#2d5615"/>
+  <path d="M528.5,1160c-1.2,1.5-2.2,3.2-3,5s-1.5,3.6-2.1,5.4-1,3.8-1.2,5.7c-.3,1.9-.3,3.8-.2,5.8h-1c0-2,.2-3.9.5-5.9.3-1.9.8-3.8,1.4-5.7s1.4-3.7,2.3-5.4c1-1.7,2-3.4,3.3-4.9Z" fill="#2d5615"/>
+  <path d="M522.2,1155c-1.3,4.8-2.3,9.7-3.1,14.6s-1.2,9.9-1.1,14.8h-1c0-5,.7-10,1.6-14.9s2.1-9.8,3.6-14.5Z" fill="#2d5615"/>
+  <path d="M511,1166.2c1.3,1.2,2.3,2.7,3.1,4.2.8,1.6,1.3,3.3,1.6,5,.4,1.7.5,3.5.5,5.3s0,1.8,0,2.6l-.3,2.6-1-.2.4-2.5c0-.9.2-1.7.2-2.6,0-1.7,0-3.4-.2-5.2-.3-1.7-.7-3.4-1.4-5-.6-1.5-1.5-3-2.8-4.2Z" fill="#2d5615"/>
+  <path d="M520,1164.2c1.3,1.4,2.2,3.2,3,4.9.8,1.8,1.3,3.7,1.7,5.5.4,1.9.6,3.8.7,5.8v5.8c0,0-1.1,0-1.1,0l.3-2.8c0-.9,0-1.9,0-2.8,0-1.9,0-3.8-.4-5.7-.3-1.9-.7-3.8-1.4-5.5-.8-1.8-1.7-3.6-2.9-5.1Z" fill="#2d5615"/>
+  <path d="M529.5,1167.7c-1.2,1.5-2.2,3.2-3,5s-1.5,3.6-2.1,5.4-1,3.8-1.2,5.7c-.3,1.9-.3,3.8-.2,5.8h-1c0-2,.2-3.9.5-5.9.3-1.9.8-3.8,1.4-5.7s1.4-3.7,2.3-5.4c1-1.8,2-3.4,3.3-4.9Z" fill="#2d5615"/>
+  <path d="M517.5,1160.5c-1.3,4.8-2.3,9.7-3.1,14.6s-1.2,9.9-1.1,14.8h-1c0-5,.7-10,1.6-14.9,1-4.9,2.2-9.8,3.6-14.5Z" fill="#2d5615"/>
+  <path d="M504.5,1167.7c1.3,1.2,2.3,2.7,3.1,4.2.8,1.6,1.3,3.3,1.6,5,.4,1.7.5,3.5.5,5.3s-.1,1.8-.1,2.6l-.3,2.6-1-.2.4-2.5c.1-.9.2-1.7.2-2.6.1-1.7.1-3.4-.2-5.2-.3-1.7-.7-3.4-1.4-5-.7-1.5-1.5-3-2.8-4.2Z" fill="#2d5615"/>
+  <path d="M514.9,1166.5c1.3,1.4,2.2,3.2,3,4.9.8,1.8,1.3,3.7,1.7,5.5.4,1.9.6,3.8.7,5.8v5.8c0,0-1.1,0-1.1,0l.3-2.8c0-.9,0-1.9,0-2.8,0-1.9,0-3.8-.4-5.7-.3-1.9-.7-3.8-1.4-5.5-.8-1.8-1.7-3.6-2.9-5.1Z" fill="#2d5615"/>
+  <path d="M512.1,650.5v-.3c0-3.1-3.5-5.7-7.9-5.7s-7.9,2.5-7.9,5.7v.3h15.8Z" fill="#fff"/>
+  <path d="M500.1,638.6s-1.2-.8-2.4-.3c-1.1.4-1.8,1.3-1.5,2s1.4,1,2.5.5c.5-.2.9-.5,1.1-.8.5.7.7,1.7-.2,3.1-2,3-3.5,4.6-3.2,7.4h1.2c-.2-2.8,1.6-4.1,3.2-7.4,1.5-3-.7-4.5-.7-4.5Z" fill="#fff"/>
+  <path d="M496.2,640.8s0,1.3-.5,2.1c1.1-.3,1.9-1.8,1.9-1.8l-1.2-.6c0,0-.5-.2-.2.3Z" fill="#333"/>
+  <line x1="40" y1="142.1" x2="40" y2="1970.5" fill="none" stroke="url(#linear-gradient)" stroke-miterlimit="10" stroke-width="9px"/>
   <circle cx="40" cy="142.1" r="66" fill="#005ada"/>
   <circle cx="40" cy="276.4" r="26" fill="#ffad00"/>
   <circle cx="40" cy="690.7" r="66" fill="#005ada"/>
   <circle cx="40" cy="548.1" r="26" fill="#ffad00"/>
   <circle cx="40" cy="826.4" r="26" fill="#ffad00"/>
-  <path fill="none" d="M132 901.8h254.6v124.3H132z"/>
-  <text fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20" font-weight="700" transform="translate(132 916.7)"><tspan x="0" y="0">2019</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 934.7)"><tspan x="0" y="0">Clients spread across the B2B</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 952.7)"><tspan x="0" y="0">tech landscape.</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 982.7)"><tspan x="0" y="0">Instagram influencer program</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 1000.7)"><tspan x="0" y="0">for B2B companies a big</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 1018.7)"><tspan x="0" y="0">success.</tspan></text>
+  <rect x="132" y="901.8" width="254.6" height="124.3" fill="none"/>
+  <text transform="translate(132 916.7)" fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20px" font-weight="700"><tspan x="0" y="0">2019</tspan></text>
+  <text transform="translate(132 934.7)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">Clients spread across the B2B </tspan></text>
+  <text transform="translate(132 952.7)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">tech landscape. </tspan></text>
+  <text transform="translate(132 982.7)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">Instagram influencer program </tspan></text>
+  <text transform="translate(132 1000.7)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">for B2B companies a big </tspan></text>
+  <text transform="translate(132 1018.7)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">success.</tspan></text>
   <circle cx="40" cy="934.6" r="26" fill="#ffad00"/>
   <circle cx="40" cy="1093.5" r="26" fill="#ffad00"/>
-  <path fill="none" d="M132 1186.5h279.6v99.3H132z"/>
-  <text fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20" font-weight="700" transform="translate(132 1201.4)"><tspan x="0" y="0">2021</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 1219.4)"><tspan x="0" y="0">B2B client list grows across</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 1237.4)"><tspan x="0" y="0">sectors, from cybersecurity to</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 1255.4)"><tspan x="0" y="0">multi-cloud networking to</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 1273.4)"><tspan x="0" y="0">healthcare.</tspan></text>
+  <rect x="132" y="1186.5" width="279.6" height="99.3" fill="none"/>
+  <text transform="translate(132 1201.4)" fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20px" font-weight="700"><tspan x="0" y="0">2021</tspan></text>
+  <text transform="translate(132 1219.4)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">B2B client list grows across </tspan></text>
+  <text transform="translate(132 1237.4)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">sectors, from cybersecurity to </tspan></text>
+  <text transform="translate(132 1255.4)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">multi-cloud networking to </tspan></text>
+  <text transform="translate(132 1273.4)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">healthcare.</tspan></text>
   <circle cx="40" cy="1214.8" r="26" fill="#ffad00"/>
   <circle cx="40" cy="1371.7" r="26" fill="#ffad00"/>
   <circle cx="40" cy="1501.4" r="26" fill="#ffad00"/>
   <circle cx="40" cy="411.1" r="66" fill="#005ada"/>
-  <path fill="#a37c52" d="M584.7 1525.7c-3.9 1.4-6.2 3-9.8 4.3-2.2-.8-23.1-8.1-25.2-9.1-.4-.2-.6-1.5-.5-2.2 0-.9.4-1.9.9-2.7 1.1-1.8 2.1-2 3.7-1.4 4 1.5 8.1 2.9 12.2 4.3.3.2 18.1 6.6 18.7 6.8Z"/>
-  <path fill="#a37c52" d="M583.1 1533.1c-4.2-1.5-13.4-4.9-17.6-6.4 2.1-.8 9.2.7 11 0 1.1-.4 2.3-.6 3.3-1.2 2-1.1 3.8-.6 5.7.4-2 1.9-2.9 4.3-2.4 7.2ZM549 1528.5c.3-.4.6-1.4 1.3-1.8.9-.6 1.8.2 2.4 1 1.1 1.4 1.6 2.9 1.2 4.6-.4 1.6-1.5 2-2.8 1-1.4-1.1-1.9-2.6-2.1-4.8Z"/>
-  <path fill="#b09f8e" d="M589 1528.5c-.2 2.1-.6 3.6-1.8 4.7-1.3 1.3-2.7.8-3-.9-.3-1.7.2-3.1 1.2-4.4.6-.8 1.4-1.7 2.4-1.1.7.3 1 1.3 1.2 1.7Z"/>
-  <path fill="#ffad00" d="M568 1476.6c1.8 2.2 3 4.5 4 6.8 1.6 3.9 2.2 7.9 2.1 12.1 0 .4.2.9.3 1.3.4-.2.8-.3 1.1-.6.7-.7 1.4-1.5 2.2-2.3 3.4 3.4 4.8 7.3 4 11.9-.7 4.1-3 7.1-6.7 9.2.2-.8.3-1.4.3-2 .2-1.9-.3-3.7-1.7-5.1-2-2.1-3.1-4.6-3.5-7.5 0-.4-.3-.7-.5-1-.3.2-.7.4-1 .7-1.7 2.2-2.6 4.7-2.8 7.7-.8-.8-1.3-.3-1.8.2-1.6 1.8-2 3.8-1.5 6 0 .2 0 .4.2.7v.2c-2.2-1.2-3.9-2.9-5.1-5.1-2.7-4.9-2.1-10.9 1.7-14.9 5-5.2 8-11.1 8.8-18.3Z"/>
-  <path fill="#b09f8e" d="M555 1533c.5-2.8-.3-5.1-2.5-7.1 1.8-.6 3.5-1.2 5.1-1.8 9-3.2 18-6.3 27-9.4 1.4-.5 2.1-.3 3 .8 1.2 1.5 1.8 3.1 1.2 5-.2.5-.7 1.1-1.2 1.2-10.8 3.8-21.6 7.6-32.4 11.3-7.2 2.5-7.3 2.5-.2 0Z"/>
-  <text fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20" font-weight="700" transform="translate(129.7 1663.5)"><tspan x="0" y="0">2024</tspan></text>
-  <circle cx="40" cy="1842.7" r="66" fill="#828487"/>
-  <text fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20" font-weight="700" transform="translate(129.7 1813.5)"><tspan x="0" y="0">Today</tspan></text>
-  <path fill="#b09f8e" d="M470.5 1625.8h5.2v20.5h-5.2z"/>
-  <path fill="#3b7558" d="m462.8 1615.8 10.4-27.9 10.4 27.9h-20.8z"/>
-  <path fill="#3b7558" d="m458 1636 15.2-40.5 15.2 40.5H458z"/>
-  <path fill="#b09f8e" d="M560.8 1711.8h7.7v30h-7.7z"/>
-  <path fill="#3b7558" d="m549.5 1697.1 15.3-40.8 15.3 40.8h-30.6z"/>
-  <path fill="#3b7558" d="m542.5 1726.8 22.3-59.3 22.2 59.3h-44.5z"/>
-  <path fill="#a9c4ab" d="M498.1 1696c-.5-.9-.8-1.9-.8-3 0-2.7 1.8-4.9 4.4-6 1.1-2.9 4.4-5 8.2-5s8.6 3.2 8.6 7.2 0 1.4-.4 2.1c2.4.4 4.2 2.1 4.2 4.1v.5h-24.2v.1Z"/>
-  <path fill="#4d4d4d" d="M587.4 1640.9c3.8-4.4 10-6.2 12.6.2l.3.8.6-.8c3.4-4.6 7.6-5.4 11.8-1.1.2.2.5.5.8.7.2 0 0 0 0 0-.9-2.9-3.4-5.5-6.7-5.6-3.3 0-5.8 2.7-7 5.5h1c-2.8-3.6-7.1-7.6-11.4-3.6-1.1 1.1-1.9 2.4-2.3 3.8v.2h.3Z"/>
-  <path fill="none" d="m129.7 1452.9 318.2 17v71l-318.2 40v-128z"/>
-  <text fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20" font-weight="700" transform="translate(129.7 1467.8)"><tspan x="0" y="0">2023</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(129.7 1489.4)"><tspan x="0" y="0">Helped clients manage social media at</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(129.7 1511)"><tspan x="0" y="0">in-person events.</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(129.7 1542.6)"><tspan x="0" y="0">Provided trainings for clients on</tspan></text>
-  <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(129.7 1564.2)"><tspan x="0" y="0">employee social engagement platforms.</tspan></text>
+  <g>
+    <path d="M584.7,1525.7c-3.9,1.4-6.2,3-9.8,4.3-2.2-.8-23.1-8.1-25.2-9.1-.4-.2-.6-1.5-.5-2.2,0-.9.4-1.9.9-2.7,1.1-1.8,2.1-2,3.7-1.4,4,1.5,8.1,2.9,12.2,4.3.3.2,18.1,6.6,18.7,6.8Z" fill="#a37c52"/>
+    <path d="M583.1,1533.1c-4.2-1.5-13.4-4.9-17.6-6.4,2.1-.8,9.2.7,11,0,1.1-.4,2.3-.6,3.3-1.2,2-1.1,3.8-.6,5.7.4-2,1.9-2.9,4.3-2.4,7.2Z" fill="#a37c52"/>
+    <path d="M549,1528.5c.3-.4.6-1.4,1.3-1.8.9-.6,1.8.2,2.4,1,1.1,1.4,1.6,2.9,1.2,4.6-.4,1.6-1.5,2-2.8,1-1.4-1.1-1.9-2.6-2.1-4.8Z" fill="#a37c52"/>
+    <path d="M589,1528.5c-.2,2.1-.6,3.6-1.8,4.7-1.3,1.3-2.7.8-3-.9-.3-1.7.2-3.1,1.2-4.4.6-.8,1.4-1.7,2.4-1.1.7.3,1,1.3,1.2,1.7Z" fill="#b09f8e"/>
+    <path d="M568,1476.6c1.8,2.2,3,4.5,4,6.8,1.6,3.9,2.2,7.9,2.1,12.1,0,.4.2.9.3,1.3.4-.2.8-.3,1.1-.6.7-.7,1.4-1.5,2.2-2.3,3.4,3.4,4.8,7.3,4,11.9-.7,4.1-3,7.1-6.7,9.2.2-.8.3-1.4.3-2,.2-1.9-.3-3.7-1.7-5.1-2-2.1-3.1-4.6-3.5-7.5,0-.4-.3-.7-.5-1-.3.2-.7.4-1,.7-1.7,2.2-2.6,4.7-2.8,7.7-.8-.8-1.3-.3-1.8.2-1.6,1.8-2,3.8-1.5,6,0,.2,0,.4.2.7,0,0,0,0,0,.2-2.2-1.2-3.9-2.9-5.1-5.1-2.7-4.9-2.1-10.9,1.7-14.9,5-5.2,8-11.1,8.8-18.3Z" fill="#ffad00"/>
+    <path d="M555,1533c.5-2.8-.3-5.1-2.5-7.1,1.8-.6,3.5-1.2,5.1-1.8,9-3.2,18-6.3,27-9.4,1.4-.5,2.1-.3,3,.8,1.2,1.5,1.8,3.1,1.2,5-.2.5-.7,1.1-1.2,1.2-10.8,3.8-21.6,7.6-32.4,11.3t-.2,0Z" fill="#b09f8e"/>
+  </g>
+  <circle cx="40" cy="1952.5" r="66" fill="#828487"/>
+  <g>
+    <g>
+      <rect x="470.5" y="1625.8" width="5.2" height="20.5" fill="#b09f8e"/>
+      <polygon points="462.8 1615.8 473.2 1587.9 483.6 1615.8 462.8 1615.8" fill="#3b7558"/>
+      <polygon points="458 1636 473.2 1595.5 488.4 1636 458 1636" fill="#3b7558"/>
+    </g>
+    <g>
+      <rect x="560.8" y="1711.8" width="7.7" height="30" fill="#b09f8e"/>
+      <polygon points="549.5 1697.1 564.8 1656.3 580.1 1697.1 549.5 1697.1" fill="#3b7558"/>
+      <polygon points="542.5 1726.8 564.8 1667.5 587 1726.8 542.5 1726.8" fill="#3b7558"/>
+    </g>
+    <path d="M498.1,1696c-.5-.9-.8-1.9-.8-3,0-2.7,1.8-4.9,4.4-6,1.1-2.9,4.4-5,8.2-5s8.6,3.2,8.6,7.2,0,1.4-.4,2.1c2.4.4,4.2,2.1,4.2,4.1v.5h-24.2q0,.1,0,.1Z" fill="#a9c4ab"/>
+    <path d="M587.4,1640.9c3.8-4.4,10-6.2,12.6.2l.3.8.6-.8c3.4-4.6,7.6-5.4,11.8-1.1.2.2.5.5.8.7h0s0,0,0,0c.2,0,0,0,0,0-.9-2.9-3.4-5.5-6.7-5.6-3.3,0-5.8,2.7-7,5.5h1c-2.8-3.6-7.1-7.6-11.4-3.6-1.1,1.1-1.9,2.4-2.3,3.8v.2h.1Z" fill="#4d4d4d"/>
+  </g>
+  <polygon points="129.7 1452.9 447.9 1469.9 447.9 1540.9 129.7 1580.9 129.7 1452.9" fill="none"/>
+  <text transform="translate(129.7 1467.8)" fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20px" font-weight="700"><tspan x="0" y="0">2023</tspan></text>
+  <text transform="translate(129.7 1489.4)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">Helped clients manage social media at </tspan></text>
+  <text transform="translate(129.7 1511)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">in-person events.</tspan></text>
+  <text transform="translate(129.7 1542.6)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">Provided trainings for clients on </tspan></text>
+  <text transform="translate(129.7 1564.2)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">employee social engagement platforms.</tspan></text>
   <circle cx="40" cy="956.6" r="66" fill="#005ada"/>
   <circle cx="40" cy="1224.8" r="66" fill="#005ada"/>
   <circle cx="40" cy="1501.4" r="66" fill="#005ada"/>
-  <circle cx="40" cy="1682.7" r="26" fill="#ffad00"/>
+  <circle cx="40" cy="1769.6" r="66" fill="#005ada"/>
+  <circle cx="40" cy="1638.3" r="26" fill="#ffad00"/>
   <g>
-    <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 1685.3)"><tspan x="0" y="0">Team helps B2B clients with social</tspan></text>
-    <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(132 1706.9)"><tspan x="0" y="0">influencer strategies and campaigns.</tspan></text>
+    <text transform="translate(129.7 1628)" fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20px" font-weight="700"><tspan x="0" y="0">2024</tspan></text>
+    <text transform="translate(129.7 1649.8)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">Team helps B2B clients with social </tspan><tspan x="0" y="21.6">influencer strategies and campaigns.</tspan></text>
   </g>
-  <path fill="#b09f8e" d="M530.8 1823h5.1v19.8h-5.1z"/>
-  <path fill="#3b7558" d="m523.2 1813.3 10.1-27 10.1 27h-20.2z"/>
-  <path fill="#3b7558" d="m518.6 1832.9 14.7-39.2 14.7 39.2h-29.4z"/>
-  <g fill="#b09f8e">
-    <path d="M450 1736.4c.4-.2 1-.7 1.2-.9s1.1-.8 2.5-1.1c1.4-.3 2.4-.5 2.5.2s-.9 1.6-1.2 2.2c-.3.6-1.3 2.2-3.5 2.4-2.2.3-1.5-2.8-1.5-2.8Z"/>
-    <path d="M450.3 1736.9c.2-.2 1-.7 1.6-1.1s3.2-1.3 3.2-.9-.8 1.7-1.1 2.2c-.3.5-2.3 1.5-2.9 1.6-.5 0-.9-1.8-.8-1.8Z"/>
-    <path d="M450.4 1736.9c.1 0 .2 0 .4-.2h.4s.1 0 0 0h-.3.4c.1 0 .2 0 .2-.2.1 0 .3-.2.4-.3h1-1.4.5-.5s-.3 0-.3.2h-.3c-.2 0-.3.2-.5.2.2 0 .4 0 .6-.2h.3s.2 0 .3-.2c0 0 0-.2 0 0h-.6c-.2 0-.4.2-.7.3 0 0 0 .2 0 0 .2 0 .3 0 .5-.2h.4v-.2h.6-.4 1.2-.7c-.2 0-.4 0-.6.2s-.4.3-.6.4c0 0-.2 0-.2.2h.1-.3.3-.8s0 .2 0 0l.6.2v-.2ZM452.8 1735.4h1.2-.4 1.6s0-.2 0 0h-1.6s0 .2 0 0h.5-.4c-.3 0-.6 0-.9.2 0 0 0 .2 0 0v-.2Z"/>
-    <path d="M455.1 1735.6v-.5h-.1v.2c0 .2-.1.4-.1.5s0-.3.1-.4h.1v-.5h-.1v.5h.1v.2ZM451.9 1738.6c.1 0 .3-.2.4-.3h-.1v.2h.1c.2 0 .3-.2.4-.3.1 0 .2-.3.4-.3h-.3s0 .2 0 0c.2 0 .4-.2.5-.3.2 0 .2-.3.4-.4h-.1.1c.2 0 .3-.3.4-.6h-.1v.2h.1c.1-.2.2-.5.4-.7.1-.2.3-.3.4-.5h-.1c0 .2-.2.4-.4.5l-.3.6h.1v-.2h-.1c0 .2-.1.4-.3.5h.1-.1c-.2 0-.3.3-.4.4-.2 0-.4.2-.5.3h.3-.2c-.1 0-.2.2-.4.3-.1 0-.3.2-.5.4h.1v-.2c-.1 0-.3.2-.4.3 0 0 0 .2 0 0h.1Z"/>
-  </g>
-  <path fill="#b09f8e" d="M402.2 1764.2c-.1.2-.2.3-.3.5 0 0 .1.2.2.2l.6-.6h-.3v.2s0 .3.1.2c.3 0 .4-.4.5-.6h-.2.2s.1 0 .2-.2v-.5c0 .2.2.2.3 0 .4-.6.5-1.4.5-2.1s-.3-.2-.3 0c0 .7 0 1.4-.5 2h.3c0-.2-.2-.3-.3-.2 0 0-.1.2-.2.3v.4h.2-.2c-.1 0-.2.4-.4.5 0 0 0 .2.1.2s.2-.2.1-.4c0 0-.2-.2-.3 0-.1.2-.3.4-.5.5l.2.2c0-.2 0-.3.2-.4.1 0 0-.3-.2-.2Z"/>
-  <path fill="#a37c52" d="M403.4 1751.4c-.7.7-2 1.7-2.4 3.3-.3 1.6 0 4.6.3 5.8.3 1.1 1 3.1.6 4.4 0 0 1.5-.6 2.1-2.9.6-2.2.4-5.6.4-5.6l-1-5.1Z"/>
-  <path fill="#a37c52" d="M404.3 1750.6h-.2c-.6.4-1.1.8-1.6 1.2v.2s-.5.6-.6.7c-.2.2-.3.5-.5.8-.3.5-.6 1.1-.8 1.7 0 0 0 .3.2.2 0 .8 0 1.7-.2 2.5 0 0 0 .2.2.2v.7c0 .3.1.5.2.8 0 .2 0 .3.2.5v2.5l.2.2v1.1h.1c0 .3 0 .5-.1.8h.3c.1-.3.2-.4.2-.6 0-.5.1-1.2 0-2-.2-.8-.3-1-.5-1.6v-1c-.2-1.6-.4-3.1-.2-4.3.1-.7.3-1.4.6-1.9 0-.2.2-.3.3-.4l.2-.2c.5-.4.8-1 1-1.2l.9-.6v-.2s.1 0 0 0v-.2Z"/>
-  <g fill="#a37c52">
-    <path d="M448.4 1735.9c.6-.7 3.3-4.1 3.3-5.2s-2.3-3.1-3.1-4.1c-.8-1-1-1.8-.5-1.4s3.8 4.4 4.2 3.4c.4-.9.4-1.9-.4-2.9s-4.2-3.7-3.1-3.5 4 3.3 4 2.6-2-2.4-1.7-2.8 1.5.3 2.3 1.5 1.3 4.3 1.1 5.2c-.2.9-2.6 4.7-3.4 5.8-.7 1.1-1.6 2.2-2 2s-.7-.7-.7-.7Z"/>
-    <path d="M449.7 1735.5c0-.3-.5-.8-.8-1.8s.4-2.5.6-2.3-.1 1.6.1 2.1c.3.5.7 1.1.7 1.1l-.6.9Z"/>
-  </g>
-  <path fill="#a37c52" d="M430.4 1767.9c0 .8.5 5.1 1.1 7.5.5 2.4.4 8.6.4 8.6s-.3 3 0 3.6.7 2 1.4 2.2c.6.2 2.5.2 2.4-.4s-.6-1.4-1.2-2.3-.8-2.4-.5-5 .9-3.7 1.2-7.8-2.7-9.8-2.7-9.8l-2.1 3.5ZM410.2 1770.8s-1.8 2.4-2 2.8 0 1.5.8 2.1 5.7 9.1 6.2 10.2c.4 1.1.8 2 1.2 2.4.4.4.2 1 1 1.2.9.2 2.3.2 2.3 0 0-1-1.5-2.2-1.8-2.7s-3.6-7.4-4-8.5-.8-3.2 0-4.3 2.3-3 2.4-4.1c0-1.1.7-1.3 1.3-2.2.6-.9 1.1-2.3 1.2-2.8s1.4-2.9 1.4-2.9H413l-1.8 3.6-.9 5.2h-.1Z"/>
-  <path fill="#b09f8e" d="M449.4 1743.9c0-.5-3.1-3.3-3.1-3.3l-2.2.5-.2-.8s-1.4-.9-1.6-.4c-.3.5-.5 1.6-.5 1.8-.3 1.2 0 2.2-.4 3.2-.3 1.1-1 3.3-2.2 3.6-1.2.3-2.9-.8-5.5-.8s-16.6-1-19.9-.6-10 3.1-10.7 4.3c-.7 1.2-1.3 3.6 0 6s2.1 5.1 2.6 5.9c.4.8.7 2.5.5 3.2-.1.7-1.6 2.8-2.9 3.7-1.3.9-1.5.8-1.3 2.5.2 1.6-.2 10.7-.3 11.9 0 1.2.5 2.5.7 3s-.1 1.9.8 1.9 2.5.2 2.5-.2c0-1-1.1-2.2-1.3-2.9-.2-.7-.5-7.6.3-9.6s1.4-2.4 1.9-3.2c.4-.8 1.7-1 3.3-2.4 1.6-1.3 4.1-3.3 5.7-5.1 1.6-1.8 1.8-1.8 1.8-1.8s.7 2 4.5 3.1c3.1.9 9.5.3 11.1.3s6.7-.7 8.7-2.6c1.9-1.9 2.2-4 3.4-5.7 1.3-1.7 2.2-2.6 3-5.6s1.2-5.4 1.2-6.6.2-3.1.2-3.6v.3h-.1Z"/>
-  <path fill="#b09f8e" d="M453.4 1744.6c0 .2-.2.9-.5 1.1-.4.2-1.1.3-1.7 0-.6-.2-.4 0-1.2 0s-3.5-1.4-3.5-1.4l4.6-.5 2.4.8ZM431.5 1766.3c.3 1 1.8 7.1 2.7 8.5.9 1.4 1.8 4 2 4.8s.9 4.5 1 5.5c0 1 .2 2.9.6 3.1s.6.7.8 1.5c.3.8 3.1.6 3.2 0 0-.9-1.1-1.4-1.6-2.3-.5-.8-1.3-3.3-1.5-6.1-.2-2.8.3-3.9.1-5.3-.1-1.4-.5-5.8-.3-7.1.2-1.3 1.6-6.6 1.6-6.6l-8.5 4h-.1Z"/>
-  <path fill="#b09f8e" d="M446.5 1735.5c.7 0 1.1.3 1.7.2s1.7 0 2.1.7.2 1.2.6 1.4c.4.2.9.7 1 1.4.1.7-.1 1.5-.1 1.6s.4.7.6 1c.3.4 1.5 1.3 1.5 1.8s-.1 1.5-.5 1.5h-2.8c-.8 0-1.9.9-3.5.8-1.5 0-2.8 0-3.4-1s-1.2-3.7-1.4-4c-.1-.3-.4-.7-.7-1.2-.2-.5-.3-.5-1-.7-.8-.2-1.7-1-2.2-2.4-.5-1.5-1.4-2.4-.8-2.6s2.1.3 2.9.6c.7.3 1.1.8 1.5 1.2s0 .4.5.5c.5 0 1 .2 1.3 0s.5 0 1-.5 1.2-.4 1.7-.3Z"/>
-  <path fill="#b09f8e" d="M449.1 1745.8c-.1 0-1.3.3-2.4.2-1.2 0-1.6 0-2.2-.5s-.7-1-.7-.9.2 1.2.8 1.7c.6.4 1.9.3 2.6.4.7 0 2.1.6 2.1.6s-.1-.6 0-1.5h-.3.1Z"/>
-  <path fill="#b09f8e" d="M446.9 1746c0 .2 0 3.1-.9 5.3s-2.6 6.2-3.7 7.6c-1 1.4-2.5 4.3-2.6 4.5s-.5 3-.5 3v.3s2.2 0 4.2-3.7c2-3.6 1.5-2.8 2.9-4.9s2.6-6.2 2.8-8.6c.2-2.1.2-3.9.2-3.9s-.7.5-2 .4h-.5.1Z"/>
-  <path fill="#b09f8e" d="M449.1 1745.8c-.1 0-.9.2-1.8.2h-.5v.6h.3c.7 0 2.1.6 2.1.6v-1.5h-.2.1ZM447.8 1739.7c-.8-1.2-1.3-1.2-2-1.3s-1.6.4-1.6.5.1 1.6 1.4 2.4c.7.4 1.4.6 2.3.7h1.2c0-.2-.5-1-1.3-2.2ZM451.8 1741.9s-.7.8-.9 1c-.3.2-.3.4-.2.8s.3.8.5 1h-.9c-.3.2-1.5.4-1.9.4H447s.9.5 1.5.5.9 0 1.4-.2.8-.4 1.6-.4h1.9c.2 0 .6-.9.6-1.2s-.3-.9-.5-1.1c-.3-.2-.5-.5-.6-.5h-.4c-.3-.2-.4-.3-.5-.4h-.2ZM451.8 1741.5c-.2-.3-.8-1.1-.9-1.8 0-.5.5-1.3.8-1.3s.4.9.4 1.2-.2 1-.1 1.2.5 1.1.4 1.1c0 0-.3 0-.5-.4Z"/>
-  <g fill="#b09f8e">
-    <path d="M447.7 1740.3c-.3-.4-.2-1.1-1-1.2-.7 0-1.4.8-1.3.8.2 0 .4-.3.4-.2s-.1.4.2.5 1-.2 1.2 0c.2 0 .3.8.4.7s0-.5 0-.5Z"/>
-    <path d="M446.6 1739.3c-.2 0-.4 0-.5.3v.5h.8c.3 0 .4-.2.3-.3s-.2-.4-.6-.4Z"/>
-  </g>
-  <path fill="#b09f8e" d="M453.9 1744.4c0-.2-.1-.3.1-.2.1-.4-.1-.9-.5-1.2 0 0 0 .6-1 .6s-.9-.2-1-.4h-.3c-.3.2-.1.6.2.8.4.2.5 0 .8 0s-.5.4-.4.6c0 .3.3.4 1 .4s.9 0 1.1-.5v-.3.2ZM451.8 1740.7s-.1-.8 0-1 .2-.3.3-.2h.2-.3v.7c0 .3-.2.4-.2.4Z"/>
-  <path fill="#b09f8e" d="M452 1739.7v.8s.2-.2.2-.4 0-.4-.1-.4h-.1Z"/>
-  <g fill="#b09f8e">
-    <path d="M445.1 1735.2c-.6-.5-3.1-2.3-4.6-4s-1.8-4.2.2-6.6c2-2.5 2.8-2.8 2.5-2.9-.4 0-2.6 1.4-3.2 1.8s-.5-1.7 0-2.6-.5-.7-.9 0-1.2 2.3-1 4.6c0 1.1.1 1.5-.2 1.3s-.9-1.4-.7-2.5c.2-1.1-.8-.3-.8.7s.3 2.6.7 3.4c.4.9.2.5 1.2 2.3.4.9 1.8 2.5 2.7 3.3.9.8 3.1 2.4 3.4 3s.3-.3.8-.8c0 0 .3-.2.4-.3.1 0 .1-.2 0-.3-.1 0-.3-.3-.4-.4h-.1Z"/>
-    <path d="M443.2 1735.1c.4-.3 1.6-.5 1.7-1.4s0-3 .3-2.8.6 2.3.5 3.3-1.1 1.4-1.1 1.4l-1.3-.5h-.1Z"/>
-  </g>
-  <path fill="#b09f8e" d="M442.3 1737.7c-.1-.2 0-.8-1.2-1.7-1.1-.9-2.8-1.3-2.8-1.1s.2.3.6 1.2.5 1.8 1.3 2.1c.7.2 1.5 1 1.7.6s.3-1.1.3-1.1h.1ZM438.9 1766.9s.2-2.1.8-3.4v3.2s-.4 0-.9.2h.1ZM432 1768s-.8-1.8-.7-2.4c.1-.6.2-3.5.2-3.5s-.8 1.8-1.6 2.3c-.6.4-3.6 1.6-6.9.3-2.8-1.1-3.7-3.6-4-3.7-.3 0-2.6 4.7-3.4 5.4l1.7-1.7s1.5 3 6.7 3.5c5.1.4 8 0 8 0v-.2Z"/>
-  <g fill="#b09f8e">
-    <path d="M410.8 1756.8c-.2-.3-.5-.8-1-.8s-.5.8-.2 1.2c.2.3.6.4.8.6.2 0 .4.3.6.4.3 0 .5 0 .5-.4s-.5-.6-.7-.9Zm.5.6Zm-.1 0Zm-.4-.5Zm-.1-.1Zm.1 1ZM416.6 1758.3c-1.6-.2-2.2.8-3.8 0-.5-.2-.8.4-.4.7 1 .6 2.4.7 3.4.4.4 0 .8 0 1.1-.3.4-.3.1-.8-.3-.9ZM419.7 1758.4c-.3-.2-.8 0-1.2 0-.7 0-.8.7 0 .8.1 0 .3 0 .4.2h.6c.2 0 .4 0 .5-.3.1-.2 0-.4-.2-.5v-.2ZM422.8 1756.8c-.3-.2-.8-.2-1.2-.2h-.4c-.2 0-.3.4-.1.5.2.2.5.3.7.3h1c.4 0 .3-.5 0-.7ZM427.5 1756.9c-.2 0-.4 0-.6-.2h-2.1c-.7.2-.5.8.2.8s1.7.3 2.5-.2c.2 0 .2-.4 0-.5ZM430.3 1757.3H429c-.6 0-.6.8 0 .8s.6.2.8.2.3 0 .4-.2c.1 0 .3-.2.3-.3 0-.2 0-.4-.3-.5h.1ZM435.9 1756.7c-.7 0-1.4.4-2.1.5h-1.1c-.4 0-.7.5-.2.7h1.5c.7-.2 1.5-.2 2-.6.2-.2.2-.6-.1-.6ZM437.8 1757.3h-.6c-.3 0-.5.6-.3.9.5.4 1.4-.5.9-1ZM438.3 1756.4c-.3-.2-.9 0-1.1 0-.2.2-.1.5.1.6.4 0 1.4 0 1-.7ZM415.6 1754.6c-.4 0-.3.7 0 .9.1.2.3.3.5.3.7-.2.1-1.3-.4-1.2h-.1ZM412.9 1753.9c-.6 0-.4.7-.4 1.2s.4.8.9.6c.3 0 .3-.4.3-.7v-.6c-.1-.3-.4-.5-.7-.5ZM409.7 1749.8c.1 0 .3 0 .4-.2.2-.2.2-.5 0-.6-.3-.3-1 .2-1.2.5 0 .2 0 .4.2.5h.6v-.2ZM410.5 1751.3c.2.6 1.1.2 1-.4 0-.2-.3-.3-.6-.3s-.5.4-.4.7ZM409 1754.3c-.4-.3-1.2 0-.9.6.3.4 1.3 0 .9-.6ZM412.3 1752.9c.4.3 1.2-.3.7-.7h-.3c-.2 0-.4 0-.6.2-.1.2 0 .4.1.5ZM415.6 1749.6c0-.6-.7-.8-.9 0-.2.5.4 1.4 1 1.1.2 0 .2-.3.2-.5s-.2-.3-.2-.4h-.1v-.2ZM414.5 1752.8c.2.2.5.2.7.2s.4 0 .5-.2c.2-.4-.2-1.1-.7-1.1s-1.1.6-.6 1h.1ZM418.3 1751.2c0-.2-.2-.3-.3-.5-.2-.2-.1-.6-.4-.7-.2 0-.4 0-.5.3-.3.5.1.6.3 1 0 0 .2.3.3.3.2 0 .5 0 .5-.3h.1ZM420.9 1751.4c.3-.2.5-.7.1-1-.2-.2-.5-.2-.8-.3-.4 0-.6.4-.3.6 0 0 .2 0 .3.2 0 0 0 .2.1.3.1.2.4.2.5 0v.2ZM423.5 1753.7c-.2 0-.5-.2-.7-.3-.4 0-.7 0-1.1-.2-.3 0-.9-1-1.2-.4 0 .2 0 .5.2.7.4.4.8.7 1.3.7s.9.3 1.3.2c.3 0 .4-.4.1-.6h.1Zm-2.2.1ZM418.6 1753.8l.3.3c.2 0 .3.3.5.3.4 0 .4-.7.2-1.1-.1-.2-.3-.3-.6-.2-.2 0-.5.5-.4.7ZM424.7 1752c0-.3-.3-.5-.6-.5h-.7c-.2.2-.2.7 0 .8h.5c.2 0 .6 0 .7-.3h.1ZM422.3 1750.2c.1.2.4.2.6 0 .2 0 .2-.4 0-.6-.3-.4-.9.2-.7.6h.1ZM439.2 1753.7s-.2 0-.3-.2c-.1 0-.3-.2-.4-.2-.3 0-.3.3-.3.5v.4c.2.2.6 0 .8 0s.3-.4.1-.6ZM427 1751.2c-.3 0-.4.4-.2.6.2 0 .5 0 .7.2h.8c.3-.2.1-.6-.2-.7H427ZM429.1 1750.6c.1.4.6.4.8 0 .1 0 .3-.2.3-.4-.1-.6-1.2-.3-1.1.3ZM426.6 1749.7c.1.4.8.3.8 0 0-.6-1-.5-.8 0ZM432.3 1749.5c.2.2.4.3.7.4.4 0 .6-.4.3-.7-.2 0-.4-.3-.7-.3s-.4.4-.3.6ZM431.1 1752.2c.2.6 1.1.2.7-.4-.3-.4-.8 0-.7.3ZM433.7 1749.3c.2.2.3.5.6.4.4 0 .6-.5.3-.7-.2 0-.5-.3-.7-.2-.2 0-.3.3-.2.5ZM436.2 1751.2c.1 0 .2 0 .3.2h.3s.2 0 .3-.2c.2-.5-.5-.8-.9-.6-.2 0-.2.4 0 .5Zm.8-.4ZM423.4 1748.5c.2.2.5.2.7 0 .2 0 .2-.4 0-.5-.1 0-.2-.2-.4-.3-.4 0-.6.4-.3.7ZM414.7 1748.5c.3.2.7 0 1 0h.3c.2-.2.1-.5 0-.6-.2-.2-.5 0-.7 0s-.5 0-.6.2 0 .4 0 .5ZM418.6 1748.7c.2.2.5.3.7.4.3 0 .5-.3.4-.6-.1-.3-.4-.4-.7-.4s-.6.3-.4.6ZM434.1 1753.9c-.4 0-.6.3-.4.6.1.3.5.4.8.4s.7 0 .6-.4c0-.2-.3-.3-.5-.4-.2 0-.3 0-.5-.2ZM432.7 1755c.3-.2.3-.5 0-.6-.4 0-.7 0-1.1-.2-.5 0-.8-.3-1.3-.4h-1.1c-.6 0-1.2-.3-1.9-.2-.3 0-.5.4-.2.6h1c.2 0 .4 0 .6.2.6.3 1.4.4 2.1.4s.6.2.9.2h1ZM429.2 1748.9h.5c.3 0 .6.3.8.2.3 0 .4-.5.1-.6s-.7-.3-1-.3-.5 0-.6.2c-.1 0 0 .4 0 .5h.2ZM437 1754.6c.5-.3 0-1.3-.6-1.1-.2 0-.4.4-.3.7.2.2.5.5.8.4h.1Z"/>
-  </g>
-  <path fill="#b09f8e" d="M404.3 1760.2s-.6-1.2-1-2.4c-.4-1.3-.6-1.6-.6-1.6s1.1 1.7 1.5 2.7c.4.9 1 3.6 1 3.6s-.9-2-.8-2.1v-.2h-.1Z"/>
-  <path fill="#a37c52" d="M402.6 1788.5h1.7c.6 0 1.1-.2 1.2 0 .1 0 .5 1.2.4 1.3h-2c-.6 0-1 0-1.2-.4s-.2-.9 0-.9h-.1ZM416.6 1788.6h1.9c.5 0 .6-.3.6-.3s.6.8.5 1c0 .2-.3.3-.7.3s-1.7 0-1.9-.2c-.2 0-.4-.5-.4-.7v-.2ZM432.4 1788.6c.2 0 2 .2 2.4.2s.5-.4.5-.3c0 0 .5.9.4 1 0 0-.4.6-1.7.5-1.3 0-1.2-.3-1.4-.6-.2-.3-.3-.7-.3-.7h.1ZM438.3 1788.9c.2 0 1.8.2 2.3 0 .5 0 .6-.3.7-.3 0 0 .5.5.5.9s-.2.6-1.3.7c-1.1 0-1.9 0-2-.3-.1-.2-.2-1-.2-1Z"/>
-  <path fill="#b09f8e" d="M413.5 1747.3c-1.1 0-2.1.2-3.2.2s-.4.2-.3.5c0 .2.2.4.4.4v-.7c-.6 0-1.1.3-1.7.5-.5.2-1 .5-1.5.8 0 0-.2.2-.3.2h-.3c-.3 0-.5 0-.8.2-.1 0-.3 0-.4.2 0 0-.1.2-.2.3-.1.2-.4.3-.6.4-.4.2 0 .9.4.6.2 0 .4-.3.6-.4l.3-.3.2-.2c.2 0 .5-.2.8-.2s.5-.2.8-.4c.4-.3.9-.6 1.4-.8.5-.2 1-.4 1.6-.5.2 0 .3-.2.3-.3s-.1-.3-.3-.3c-.1.2-.2.3-.3.5 1.1 0 2.1-.2 3.2-.2s.4-.2.4-.4-.2-.4-.4-.4v.3h-.1Z"/>
-  <path fill="#a37c52" d="M403.8 1761.8v.5s.2.2.3 0c0-.2.1-.3.1-.5v-.6h-.3.3c0-.4.1-.7.1-1.1s-.3-.2-.3 0v1h.3c0-.2-.3 0-.3 0v.6c0 .2 0 .3-.1.5h.3v-.5c0-.2-.3-.2-.3 0h-.1Z"/>
-  <path fill="#b09f8e" d="M442.5 1737.5H442.2V1738.1h.2-.2s0 .2-.1.3h-.3c-.1 0-.2.2 0 .3h.3v-.3c-.2 0-.4 0-.6-.2v.2-.2c-.3-.2-.7-.4-1.1-.4s-.2.2 0 .3c.2 0 .5.2.7.3.2 0 .5.2.8.2s.2-.3 0-.3h-.7c-.2 0-.5-.2-.7-.3v.3c.3 0 .7.2 1 .4v-.2.2c.2.2.5.3.8.3s.2-.2 0-.3h-.3v.3c.1 0 .2 0 .2-.2h-.1.6c.1 0 .2-.3.2-.5h-.2.2v-.8h-.2.1c.1 0 .3 0 .2-.2l-.5-.2v.4Z"/>
-  <path fill="#b09f8e" d="M442.5 1737.6c0-.3-.2-.5-.4-.7 0 0 0 .2-.1.2h.3c.1 0 .2 0 .2-.2s-.3-.4-.5-.5c0 0 0 .2-.1.2.1 0 .2 0 .2-.2s-.2-.2-.3-.3c-.1 0-.2-.2-.3-.4l-.3-.3h-.4s0 .2-.1.2h.3c.1 0 .1-.2 0-.3h-.9v-.2c-.3 0-.5 0-.6-.2v.3h.8v-.2h-.3c-.2 0-.3.2-.1.2s.3.2.6 0c0 0 .2-.2 0-.2h-1c-.2 0-.2.2 0 .3h.5c.1 0 .3 0 .4.2h.5v-.3h-.2c-.1 0-.2.2-.1.2h.7l.3.3.2.2s.2 0 .2.2l.2-.2c-.1 0-.3 0-.1.2.1 0 .4.3.5.4l.2-.2h-.3c-.1 0-.3 0-.1.2.2 0 .3.3.3.5s.3.2.3 0l-.5.4v.2ZM439.5 1734.7h-1.3s-.1 0 0 .2h.2s.1 0 0-.2h1.1v-.2.2Z"/>
-  <path fill="#b09f8e" d="M438.1 1734.8c.1.4.4.7.6 1.1l.2-.2s-.1 0-.2-.2h-.2c0 .2.2.4.3.6.1.2.2.3.3.5 0 .2.3 0 .3 0 0-.2-.2-.4-.3-.5l-.3-.6h-.2l.3.3h.2v-.2c-.2-.3-.4-.6-.5-1 0-.2-.3 0-.3 0h-.2v.2ZM439.5 1737.5v-.3s-.1 0-.2-.2v.6c0 .2.1.4.2.5h.3v-.4h-.3s0 .3.2.4c0 0 .1.2.3.3h.2c.1 0 .2.2.3.3h.2v-.2c-.1 0-.2 0-.3-.2 0 0-.2-.2-.3-.2h-.1c0-.2-.1-.3-.1-.4s-.3 0-.3 0v.3h.3c0-.2-.1-.4-.2-.5 0-.2 0-.3-.1-.5h-.2c-.1 0-.1.2-.1.3v.4c0 .2.3.2.3 0v-.2Z"/>
   <g>
-    <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(129.7 1836.3)"><tspan x="0" y="0">Large team managing over 112 social</tspan></text>
-    <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(129.7 1857.9)"><tspan x="0" y="0">profiles, 14 Hootsuite accounts, 21 animals,</tspan></text>
-    <text font-family="Lato-Medium, Lato" font-size="18" font-weight="500" transform="translate(129.7 1879.5)"><tspan x="0" y="0">and 14 kids.</tspan></text>
+    <text transform="translate(129.7 1750)" fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20px" font-weight="700"><tspan x="0" y="0">2025</tspan></text>
+    <text transform="translate(129.7 1771.8)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">In the year of AI, the team helps </tspan><tspan x="0" y="21.6">clients smartly navigate social tools </tspan><tspan x="0" y="43.2">and strategies.</tspan></text>
+  </g>
+  <g>
+    <rect x="530.8" y="1823" width="5.1" height="19.8" fill="#b09f8e"/>
+    <polygon points="523.2 1813.3 533.3 1786.3 543.4 1813.3 523.2 1813.3" fill="#3b7558"/>
+    <polygon points="518.6 1832.9 533.3 1793.7 548 1832.9 518.6 1832.9" fill="#3b7558"/>
+  </g>
+  <g>
+    <g>
+      <path d="M476.1,1735.5c.4-.2,1-.7,1.2-.9s1.1-.8,2.5-1.1c1.4-.3,2.4-.5,2.5.2s-.9,1.6-1.2,2.2c-.3.6-1.3,2.2-3.5,2.4-2.2.3-1.5-2.8-1.5-2.8Z" fill="#b09f8e"/>
+      <path d="M476.4,1736c.2-.2,1-.7,1.6-1.1s3.2-1.3,3.2-.9c0,.4-.8,1.7-1.1,2.2-.3.5-2.3,1.5-2.9,1.6-.5,0-.9-1.8-.8-1.8Z" fill="#b09f8e"/>
+      <path d="M476.5,1736c.1,0,.2-.1.4-.2.1,0,.3,0,.4,0,0,0,.1-.1,0-.1h-.3s0,0,0,0c0,0,.2,0,.3,0,0,0,0-.1,0-.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,.1,0,0,0,.2-.1.2-.2.1,0,.3-.2.4-.3.2,0,.3-.1.5-.1.2,0,.4,0,.5-.1,0,0,0-.1,0-.1-.2,0-.5,0-.7,0-.1,0-.2,0-.4.1-.1,0-.2,0-.3,0,0,0,0,0,0,.1.2,0,.3,0,.5,0h0c-.2,0-.3,0-.5,0,0,0-.3,0-.3.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0-.1,0,0,0-.2,0-.2.1-.2,0-.3.2-.5.2,0,0,0,0,0,.1.2-.1.4-.2.6-.3,0,0,.2,0,.3-.1,0,0,.2-.1.3-.2,0,0,0-.2,0-.1,0,0-.2,0-.3.1,0,0-.2,0-.3.1-.2,0-.4.2-.7.3,0,0,0,.2,0,.1.2,0,.3-.1.5-.2,0,0,.2,0,.2-.1,0,0,.1,0,.2-.1,0,0,0,0,0-.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,.1,0,.2,0,.3,0,.5,0,0,0,0-.1,0-.1-.1,0-.3,0-.4,0h0c0,0,.2,0,.3,0,.1,0,.2,0,.3,0,.2,0,.4-.1.6,0h0c-.2,0-.5,0-.7,0-.2,0-.4.1-.6.2-.2.1-.4.3-.6.4,0,0-.2,0-.2.2,0,0,0,.1.1.1,0,0,0,0,0-.1,0,0-.2,0-.3,0,0,0,0,.1,0,.1,0,0,.2,0,.3,0,0,0,0,0,0-.1-.2,0-.3,0-.4,0,0,0-.1,0-.2,0,0,0-.1,0-.2.1,0,0,0,.2,0,.1h0Z" fill="#b09f8e"/>
+      <path d="M479,1734.5c.1,0,.3,0,.4,0,.1,0,.3,0,.4,0,0,0,.2,0,.3,0,0,0,0,0,0-.1,0,0,0,0,.1,0,0,0,0,0,0-.1-.1,0-.3.1-.4.1,0,0,0,0,0,.1.3,0,.5-.2.8-.1.3,0,.5,0,.8-.1,0,0,0-.2,0-.1-.1,0-.3,0-.4,0-.1,0-.3,0-.4,0-.1,0-.2,0-.4,0-.1,0-.3,0-.4.1,0,0,0,.2,0,.1.2,0,.3,0,.5-.1,0,0,0-.1,0-.1,0,0-.2,0-.2,0,0,0,0,.1,0,.1,0,0-.1,0-.2,0-.3,0-.6.1-.9.2,0,0,0,.2,0,.1h0Z" fill="#b09f8e"/>
+      <path d="M481.2,1734.7c0-.2,0-.3,0-.5,0,0-.1,0-.1,0,0,0,0,.1,0,.2,0,0,0,0,0,.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,.1-.1.3-.1.4,0,0,0,0,0,0,0,0,0,0,0,0,0-.1,0-.3.1-.4,0,0,0,0,0,0,0,0,.1,0,.1,0,0,0,0,0,0-.1,0-.1,0-.2,0-.4h-.1c0,.2,0,.3,0,.5,0,0,.1.1.1,0h0Z" fill="#b09f8e"/>
+      <path d="M481,1734s0,0,0,0c0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0-.1,0-.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0-.1,0,0,0,0-.1,0,0,0-.1,0-.2,0,0,0-.1,0-.2.1,0,0,0,0,.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0-.1,0,0,0,0-.1,0,0,0,0,0,0,.1,0,0,0,0,.1,0h0Z" fill="#b09f8e"/>
+      <path d="M478,1737.7c.1,0,.3-.2.4-.3,0,0,0,0-.1,0,0,0,0,.1,0,.2,0,0,0,.1.1,0,.2-.1.3-.2.4-.3.1-.1.2-.3.4-.3,0,0,0,0,0,0,0,0-.1,0-.1,0,0,0-.1,0-.2,0,0,0,0,.2,0,.1.2-.1.4-.2.5-.3.2-.1.2-.3.4-.4,0,0,0,0-.1,0,0,0,0,0,0,0,0,0,0,.1.1,0,.2-.1.3-.3.4-.6h-.1c0,0,0,.1,0,.2,0,0,.1,0,.1,0,.1-.2.2-.5.4-.7.1-.2.3-.3.4-.5,0,0-.1-.1-.1,0,0,.2-.2.4-.4.5-.1.2-.2.4-.3.6,0,0,0,0,.1,0,0,0,0-.1,0-.2,0,0-.1,0-.1,0,0,.2-.1.4-.3.5,0,0,0,0,.1,0,0,0,0,0,0,0,0,0,0-.1-.1,0-.2,0-.3.3-.4.4-.2.1-.4.2-.5.3,0,0,0,0,0,.1,0,0,.1,0,.2,0,0,0,.1,0,.1-.1,0,0,0-.1,0-.1,0,0-.1,0-.2,0-.1,0-.2.2-.4.3-.1.1-.3.2-.5.4,0,0,0,0,.1,0v-.2c0,0,0-.1,0,0-.1,0-.3.2-.4.3,0,0,0,.2,0,.1h0Z" fill="#b09f8e"/>
+    </g>
+    <g>
+      <path d="M428.3,1763.3c-.1.2-.2.3-.3.5,0,.1.1.2.2.2.2-.2.4-.4.6-.6,0,0-.2,0-.3,0,0,0,0,.1,0,.2,0,0,0,.3.1.2.3-.1.4-.4.5-.6h-.2s0,0,0,0c0,0,0,.1.2,0,.1,0,.1-.1.2-.2,0,0,0-.1,0-.2,0,0,0,0,0-.1,0,0,0-.1,0-.2,0,.2.2.2.3.1.4-.6.5-1.4.5-2.1,0-.2-.3-.2-.3,0,0,.7,0,1.4-.5,2,0,0,.2,0,.3.1,0-.2-.2-.3-.3-.2,0,0-.1.2-.2.3,0,0,0,.1,0,.2,0,0,0,.2,0,.2,0,0,.1,0,.2,0,0,0,0,0,0-.1,0,0-.2,0-.2,0-.1.1-.2.4-.4.5,0,0,0,.2.1.2.1-.1.2-.2.1-.4,0-.1-.2-.2-.3,0-.1.2-.3.4-.5.5,0,0,.1.1.2.2,0-.2,0-.3.2-.4.1-.1,0-.3-.2-.2h0Z" fill="#b09f8e"/>
+      <path d="M429.5,1750.5c-.7.7-2,1.7-2.4,3.3-.3,1.6,0,4.6.3,5.8.3,1.1,1,3.1.6,4.4,0,0,1.5-.6,2.1-2.9.6-2.2.4-5.6.4-5.6l-1-5.1Z" fill="#a37c52"/>
+      <path d="M430.4,1749.7s0,0-.1,0c0,0,0,0-.1,0-.6.4-1.1.8-1.6,1.2,0,0,0,.2,0,.2,0,0-.5.6-.6.7-.2.2-.3.5-.5.8-.3.5-.6,1.1-.8,1.7,0,.1,0,.3.2.2,0,0,0,0,0,0,0,.8,0,1.7-.2,2.5,0,.1,0,.2.2.2,0,.2,0,.5,0,.7,0,.3.1.5.2.8,0,.2,0,.3.2.5,0,.3,0,.5,0,.8,0,.1,0,.3,0,.4,0,0,0,.1,0,.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,.1,0,.2,0,0,0,0,0,.1,0,0,0,0,0,0,0,.1,0,.3,0,.4,0,.1,0,.3,0,.4,0,0,0,.1.2.2,0,0,0,0,0,0,0,0,0,.1,0,.2,0,.3,0,.6,0,.9,0,0,0,.1.1.1,0,0,0,0,0,0,0,.3,0,.5-.1.8,0,0,0,.1.1.1,0,0,0,0,0,0,0,0,.1,0,.1,0,0,0,0,0,.1-.1.1-.2.2-.3.2-.5,0,0,0-.1,0-.1,0-.4.1-1.1,0-1.9-.2-.8-.3-1-.5-1.6,0-.2,0-.4,0-.5,0,0,0,0,0,0,0-.1,0-.3,0-.5-.2-1.6-.4-3.1-.2-4.3.1-.7.3-1.4.6-1.9,0,0,0,0,0,0,0-.2.2-.3.3-.4,0,0,.1-.1.2-.2.5-.4.8-1,1-1.2.3-.2.6-.4.9-.6,0,0,0-.2,0-.2,0,0,.1-.1,0-.1Z" fill="#a37c52"/>
+    </g>
+    <g>
+      <path d="M474.5,1735c.6-.7,3.3-4.1,3.3-5.2s-2.3-3.1-3.1-4.1c-.8-1-1-1.8-.5-1.4.5.4,3.8,4.4,4.2,3.4.4-.9.4-1.9-.4-2.9-.8-1-4.2-3.7-3.1-3.5,1.1.2,4,3.3,4,2.6,0-.7-2-2.4-1.7-2.8.3-.4,1.5.3,2.3,1.5.8,1.2,1.3,4.3,1.1,5.2-.2.9-2.6,4.7-3.4,5.8-.7,1.1-1.6,2.2-2,2-.4-.2-.7-.7-.7-.7Z" fill="#a37c52"/>
+      <path d="M475.8,1734.6c0-.3-.5-.8-.8-1.8-.3-1,.4-2.5.6-2.3.2.2-.1,1.6.1,2.1.3.5.7,1.1.7,1.1l-.6.9Z" fill="#a37c52"/>
+    </g>
+    <path d="M456.5,1767c0,.8.5,5.1,1.1,7.5.5,2.4.4,8.6.4,8.6,0,0-.3,3,0,3.6s.7,2,1.4,2.2c.6.2,2.5.2,2.4-.4s-.6-1.4-1.2-2.3c-.6-.9-.8-2.4-.5-5,.3-2.6.9-3.7,1.2-7.8s-2.7-9.8-2.7-9.8l-2.1,3.5Z" fill="#a37c52"/>
+    <path d="M436.3,1769.9c0,0-1.8,2.4-2,2.8-.2.4,0,1.5.8,2.1.8.6,5.7,9.1,6.2,10.2.4,1.1.8,2,1.2,2.4.4.4.2,1,1,1.2.9.2,2.3.2,2.3,0,0-1-1.5-2.2-1.8-2.7-.3-.5-3.6-7.4-4-8.5s-.8-3.2,0-4.3,2.3-3,2.4-4.1c0-1.1.7-1.3,1.3-2.2.6-.9,1.1-2.3,1.2-2.8.1-.5,1.4-2.9,1.4-2.9h-7.2s-1.8,3.6-1.8,3.6l-.9,5.2Z" fill="#a37c52"/>
+    <path d="M475.5,1743c0-.5-3.1-3.3-3.1-3.3l-2.2.5-.2-.8s-1.4-.9-1.6-.4c-.3.5-.5,1.6-.5,1.8,0,0,0,0,0,.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0-.3,1.1,0,2.1-.4,3.1-.3,1.1-1,3.3-2.2,3.6-1.2.3-2.9-.8-5.5-.8s-16.6-1-19.9-.6c-3.3.4-10,3.1-10.7,4.3-.7,1.2-1.3,3.6,0,6,1.3,2.4,2.1,5.1,2.6,5.9.4.8.7,2.5.5,3.2-.1.7-1.6,2.8-2.9,3.7-1.3.9-1.5.8-1.3,2.5.2,1.6-.2,10.7-.3,11.9,0,1.2.5,2.5.7,3,.2.5-.1,1.9.8,1.9s2.5.2,2.5-.2c0-1-1.1-2.2-1.3-2.9-.2-.7-.5-7.6.3-9.6.8-2,1.4-2.4,1.9-3.2.4-.8,1.7-1,3.3-2.4,1.6-1.3,4.1-3.3,5.7-5.1,1.6-1.8,1.8-1.8,1.8-1.8,0,0,.7,2,4.5,3.1,3.1.9,9.5.3,11.1.3s6.7-.7,8.7-2.6c1.9-1.9,2.2-4,3.4-5.7,1.3-1.7,2.2-2.6,3-5.6s1.2-5.4,1.2-6.6c0-1.2.2-3.1.2-3.6Z" fill="#b09f8e"/>
+    <path d="M479.5,1743.7c0,.2-.2.9-.5,1.1-.4.2-1.1.3-1.7.1-.6-.2-.4,0-1.2,0s-3.5-1.4-3.5-1.4l4.6-.5,2.4.8Z" fill="#b09f8e"/>
+    <path d="M457.6,1765.4c.3,1,1.8,7.1,2.7,8.5.9,1.4,1.8,4,2,4.8s.9,4.5,1,5.5c0,1,.2,2.9.6,3.1.4.2.6.7.8,1.5.3.8,3.1.6,3.2,0,0-.9-1.1-1.4-1.6-2.3-.5-.8-1.3-3.3-1.5-6.1-.2-2.8.3-3.9.1-5.3-.1-1.4-.5-5.8-.3-7.1.2-1.3,1.6-6.6,1.6-6.6l-8.5,4Z" fill="#b09f8e"/>
+    <path d="M472.6,1734.6c.7,0,1.1.3,1.7.2s1.7,0,2.1.7c.4.7.2,1.2.6,1.4.4.2.9.7,1,1.4.1.7-.1,1.5-.1,1.6s.4.7.6,1c.3.4,1.5,1.3,1.5,1.8,0,.5-.1,1.5-.5,1.5-.4,0-2-.1-2.8.1s-1.9.9-3.5.8c-1.5,0-2.8-.1-3.4-1-.6-.9-1.2-3.7-1.4-4-.1-.3-.4-.7-.7-1.2-.2-.5-.3-.5-1-.7-.8-.2-1.7-1-2.2-2.4-.5-1.5-1.4-2.4-.8-2.6.6-.2,2.1.3,2.9.6.7.3,1.1.8,1.5,1.2s0,.4.5.5c.5,0,1,.2,1.3,0,.3-.2.5,0,1-.5.5-.5,1.2-.4,1.7-.3Z" fill="#b09f8e"/>
+    <path d="M475.2,1744.8c-.1,0-1.3.3-2.4.2-1.2,0-1.6,0-2.2-.5-.6-.5-.7-1-.7-.9s.2,1.2.8,1.7c.6.4,1.9.3,2.6.4.7,0,2.1.6,2.1.6,0,0-.1-.6,0-1.5,0,0-.1,0-.3,0Z" fill="#b09f8e"/>
+    <path d="M473,1745.1c0,.2,0,3.1-.9,5.3s-2.6,6.2-3.7,7.6c-1,1.4-2.5,4.3-2.6,4.5-.1.2-.5,3-.5,3v.3s2.2,0,4.2-3.7c2-3.6,1.5-2.8,2.9-4.9,1.4-2.1,2.6-6.2,2.8-8.6.2-2.1.2-3.9.2-3.9,0,0-.7.5-2,.4,0,0-.5,0-.5,0Z" fill="#b09f8e"/>
+    <path d="M475.2,1744.8c-.1,0-.9.2-1.8.2h0s0,0,0,0c-.1,0-.3,0-.5,0h0c0,.1,0,.3,0,.6.1,0,.2,0,.3,0,.7,0,2.1.6,2.1.6,0,0,0,0,0-.2,0-.8,0-1.3,0-1.3h0c0,0-.1,0-.2,0Z" fill="#b09f8e"/>
+    <path d="M473.9,1738.8c-.8-1.2-1.3-1.2-2-1.3s-1.6.4-1.6.5c0,.1.1,1.6,1.4,2.4.7.4,1.4.6,2.3.7,1.3.1,1.3.1,1.2-.1,0-.2-.5-1-1.3-2.2Z" fill="#b09f8e"/>
+    <path d="M477.9,1741c0,.1-.7.8-.9,1-.3.2-.3.4-.2.8s.3.8.5,1c0,0-.6,0-.9,0-.3.2-1.5.4-1.9.4-.4,0-1.4,0-1.4,0,0,0,.9.5,1.5.5s.9,0,1.4-.2c.5-.2.8-.4,1.6-.4s1.7,0,1.9,0c.2,0,.6-.9.6-1.2s-.3-.9-.5-1.1c-.3-.2-.5-.5-.6-.5,0,0,0,0-.4-.1-.3-.1-.4-.2-.5-.3-.1,0-.2,0-.2,0Z" fill="#b09f8e"/>
+    <path d="M477.9,1740.6c-.2-.3-.8-1.1-.9-1.8,0-.5.5-1.3.8-1.3.2,0,.4.9.4,1.2,0,.2-.2,1-.1,1.2.1.2.5,1.1.4,1.1,0,0-.3-.1-.5-.4Z" fill="#b09f8e"/>
+    <g>
+      <path d="M473.8,1739.4c-.3-.4-.2-1.1-1-1.2-.7-.1-1.4.8-1.3.8.2,0,.4-.3.4-.2s-.1.4.2.5,1-.2,1.2,0c.2.1.3.8.4.7s0-.5,0-.5Z" fill="#b09f8e"/>
+      <path d="M472.7,1738.4c-.2,0-.4.1-.5.3,0,.1,0,.4,0,.5.1.1.5.1.8,0,.3,0,.4-.2.3-.3s-.2-.4-.6-.4Z" fill="#b09f8e"/>
+      <path d="M473,1738.7s0,0,0,0c0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0Z" fill="#b09f8e"/>
+      <path d="M472.9,1738.5s0,0,0,0c0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0Z" fill="#b09f8e"/>
+    </g>
+    <path d="M480,1743.5c0-.2-.1-.3.1-.2.1-.4-.1-.9-.5-1.2,0,0,0,.6-1,.6-.9,0-.9-.2-1-.4,0,0,0-.1-.3,0-.3.2-.1.6.2.8.4.2.5.1.8.1s-.5.4-.4.6c0,.3.3.4,1,.4.6,0,.9,0,1.1-.5,0-.1,0-.2,0-.3Z" fill="#b09f8e"/>
+    <path d="M477.9,1739.8c0-.1-.1-.8,0-1s.2-.3.3-.2c.1,0,.3,0,.2,0s-.3,0-.3,0c0,0,0,.4,0,.7s-.2.4-.2.4Z" fill="#b09f8e"/>
+    <path d="M478.1,1738.8s0,.1,0,.3c0,.2,0,.5,0,.5,0,0,.2-.2.2-.4,0-.2,0-.4-.1-.4Z" fill="#b09f8e"/>
+    <g>
+      <path d="M471.3,1734.3c-.6-.5-3.1-2.3-4.6-4s-1.8-4.2.2-6.6c2-2.5,2.8-2.8,2.5-2.9-.4-.1-2.6,1.4-3.2,1.8s-.5-1.7,0-2.6-.5-.7-.9,0c-.4.7-1.2,2.3-1,4.6,0,1.1.1,1.5-.2,1.3s-.9-1.4-.7-2.5c.2-1.1-.8-.3-.8.7,0,1,.3,2.6.7,3.4.4.9.2.5,1.2,2.3.4.9,1.8,2.5,2.7,3.3.9.8,3.1,2.4,3.4,3,.2.4.3-.3.8-.8,0,0,.3-.2.4-.3.1,0,.1-.2,0-.3-.1-.1-.3-.3-.4-.4Z" fill="#b09f8e"/>
+      <path d="M469.4,1734.1c.4-.3,1.6-.5,1.7-1.4.1-.9,0-3,.3-2.8.3.2.6,2.3.5,3.3-.1,1-1.1,1.4-1.1,1.4l-1.3-.5Z" fill="#b09f8e"/>
+    </g>
+    <path d="M468.4,1736.8c-.1-.2,0-.8-1.2-1.7-1.1-.9-2.8-1.3-2.8-1.1s.2.3.6,1.2.5,1.8,1.3,2.1c.7.2,1.5,1,1.7.6s.3-1.1.3-1.1Z" fill="#b09f8e"/>
+    <path d="M465,1765.9s.2-2.1.8-3.4c0,0,0,2.7,0,3.2,0,0-.4.1-.9.2Z" fill="#b09f8e"/>
+    <path d="M458.1,1767.1s-.8-1.8-.7-2.4c.1-.6.2-3.5.2-3.5,0,0-.8,1.8-1.6,2.3-.6.4-3.6,1.6-6.9.3-2.8-1.1-3.7-3.6-4-3.7-.3,0-2.6,4.7-3.4,5.4,0,0,1.7-1.7,1.7-1.7,0,0,1.5,3,6.7,3.5,5.1.4,8-.1,8-.1Z" fill="#b09f8e"/>
+    <g>
+      <path d="M437,1755.9c-.2-.3-.5-.8-1-.8-.7,0-.5.8-.2,1.2.2.3.6.4.8.6.2.1.4.3.6.4.3,0,.5-.1.5-.4,0-.4-.5-.6-.7-.9h0ZM437.4,1756.5s0,0,0,0c0,0,0,0,0,0,0,0,0,0,0,0ZM437.3,1756.5s0,0,0,0c0,0,0,0,0,0ZM436.9,1756s0,0,0,0c0,0,0,0,0,0ZM436.8,1755.9s0,0,0,0h0ZM436.9,1756.9s0,0,0,0c0,0,0,0,0,0,0,0,0,0,0,0Z" fill="#b09f8e"/>
+      <path d="M442.7,1757.4c-1.6-.2-2.2.8-3.8,0-.5-.2-.8.4-.4.7,1,.6,2.4.7,3.4.4.4-.1.8,0,1.1-.3.4-.3.1-.8-.3-.9h0Z" fill="#b09f8e"/>
+      <path d="M445.8,1757.5c-.3-.2-.8-.1-1.2,0-.7,0-.8.7,0,.8.1,0,.3.1.4.2.2,0,.4,0,.6-.1.2,0,.4-.1.5-.3.1-.2,0-.4-.2-.5h0Z" fill="#b09f8e"/>
+      <path d="M448.9,1755.9c-.3-.2-.8-.2-1.2-.2-.1,0-.3,0-.4,0-.2,0-.3.4-.1.5.2.2.5.3.7.3.3,0,.7,0,1,0,.4-.1.3-.5,0-.7h0Z" fill="#b09f8e"/>
+      <path d="M453.7,1756c-.2-.1-.4-.1-.6-.2-.7,0-1.4,0-2.1.1-.7.2-.5.8.2.8.8,0,1.7.3,2.5-.2.2-.1.2-.4,0-.5h0Z" fill="#b09f8e"/>
+      <path d="M456.5,1756.4c-.4,0-.9,0-1.3,0-.6,0-.6.8,0,.8.3,0,.6.2.8.2.2,0,.3-.1.4-.2.1,0,.3-.2.3-.3,0-.2,0-.4-.3-.5h0Z" fill="#b09f8e"/>
+      <path d="M462,1755.8c-.7,0-1.4.4-2.1.5-.4,0-.7,0-1.1,0-.4,0-.7.5-.2.7.5,0,1,0,1.5,0,.7-.2,1.5-.2,2-.6.2-.2.2-.6-.1-.6h0Z" fill="#b09f8e"/>
+      <path d="M463.9,1756.4c-.2-.1-.4,0-.6,0-.3.1-.5.6-.3.9.5.4,1.4-.5.9-1h0Z" fill="#b09f8e"/>
+      <path d="M464.4,1755.5c-.3-.2-.9,0-1.1.1-.2.2-.1.5.1.6.4.1,1.4-.1,1-.7h0Z" fill="#b09f8e"/>
+      <path d="M441.8,1753.7c-.4.1-.3.7,0,.9.1.2.3.3.5.3.7-.2.1-1.3-.4-1.2h0Z" fill="#b09f8e"/>
+      <path d="M439,1753c-.6,0-.4.7-.4,1.2,0,.6.4.8.9.6.3-.1.3-.4.3-.7,0-.2,0-.4,0-.6-.1-.3-.4-.5-.7-.5h0Z" fill="#b09f8e"/>
+      <path d="M435.8,1748.9c.1,0,.3-.1.4-.2.2-.2.2-.5,0-.6-.3-.3-1,.2-1.2.5,0,.2,0,.4.2.5.2,0,.4,0,.6-.1h0Z" fill="#b09f8e"/>
+      <path d="M436.6,1750.3c.2.6,1.1.2,1-.4,0-.2-.3-.3-.6-.3-.3,0-.5.4-.4.7h0Z" fill="#b09f8e"/>
+      <path d="M435.1,1753.4c-.4-.3-1.2,0-.9.6.3.4,1.3,0,.9-.6h0Z" fill="#b09f8e"/>
+      <path d="M438.4,1752c.4.3,1.2-.3.7-.7,0,0-.2,0-.3,0-.2,0-.4,0-.6.2-.1.2,0,.4.1.5h0Z" fill="#b09f8e"/>
+      <path d="M441.7,1748.7c0-.6-.7-.8-.9-.1-.2.5.4,1.4,1,1.1.2,0,.2-.3.2-.5,0-.2-.2-.3-.2-.4h0Z" fill="#b09f8e"/>
+      <path d="M440.6,1751.9c.2.2.5.2.7.2.2,0,.4,0,.5-.2.2-.4-.2-1.1-.7-1.1-.4,0-1.1.6-.6,1h0Z" fill="#b09f8e"/>
+      <path d="M444.4,1750.3c0-.2-.2-.3-.3-.5-.2-.2-.1-.6-.4-.7-.2,0-.4,0-.5.3-.3.5.1.6.3,1,0,.1.2.3.3.3.2,0,.5,0,.5-.3h0Z" fill="#b09f8e"/>
+      <path d="M447,1750.4c.3-.2.5-.7.1-1-.2-.2-.5-.2-.8-.3-.4,0-.6.4-.3.6,0,0,.2.1.3.2,0,0,0,.2.1.3.1.2.4.2.5,0h0Z" fill="#b09f8e"/>
+      <path d="M449.6,1752.8c-.2-.1-.5-.2-.7-.3-.4-.1-.7,0-1.1-.2-.3-.1-.9-1-1.2-.4,0,.2,0,.5.2.7.4.4.8.7,1.3.7.4,0,.9.3,1.3.2.3,0,.4-.4.1-.6h0ZM447.4,1752.8s0,0,0,0c0,0,0,0,0,0Z" fill="#b09f8e"/>
+      <path d="M444.7,1752.9c0,0,.2.2.3.3.2.1.3.3.5.3.4-.1.4-.7.2-1.1-.1-.2-.3-.3-.6-.2-.2.1-.5.5-.4.7h0Z" fill="#b09f8e"/>
+      <path d="M450.8,1751.1c0-.3-.3-.5-.6-.5-.2,0-.5,0-.7.1-.2.2-.2.7,0,.8.2,0,.4-.1.5-.1.2,0,.6,0,.7-.3h0Z" fill="#b09f8e"/>
+      <path d="M448.4,1749.3c.1.2.4.2.6,0,.2-.1.2-.4,0-.6-.3-.4-.9.2-.7.6h0Z" fill="#b09f8e"/>
+      <path d="M465.3,1752.8c0,0-.2,0-.3-.2-.1,0-.3-.2-.4-.2-.3,0-.3.3-.3.5,0,.1,0,.3,0,.4.2.2.6.1.8,0,.2,0,.3-.4.1-.6h0Z" fill="#b09f8e"/>
+      <path d="M453.1,1750.3c-.3,0-.4.4-.2.6.2.1.5.1.7.2.3,0,.6,0,.8,0,.3-.2.1-.6-.2-.7-.1,0-.3,0-.4,0-.2,0-.4,0-.6,0h0Z" fill="#b09f8e"/>
+      <path d="M455.2,1749.7c.1.4.6.4.8.1.1,0,.3-.2.3-.4-.1-.6-1.2-.3-1.1.3h0Z" fill="#b09f8e"/>
+      <path d="M452.7,1748.8c.1.4.8.3.8-.1,0-.6-1-.5-.8.1h0Z" fill="#b09f8e"/>
+      <path d="M458.4,1748.6c.2.2.4.3.7.4.4,0,.6-.4.3-.7-.2-.1-.4-.3-.7-.3-.3,0-.4.4-.3.6h0Z" fill="#b09f8e"/>
+      <path d="M457.2,1751.3c.2.6,1.1.2.7-.4-.3-.4-.8,0-.7.3h0Z" fill="#b09f8e"/>
+      <path d="M459.8,1748.4c.2.2.3.5.6.4.4,0,.6-.5.3-.7-.2-.1-.5-.3-.7-.2-.2,0-.3.3-.2.5h0Z" fill="#b09f8e"/>
+      <path d="M462.3,1750.3c.1,0,.2,0,.3.2,0,0,.2.1.3.1.1,0,.2-.1.3-.2.2-.5-.5-.8-.9-.6-.2.1-.2.4,0,.5h0ZM463.1,1749.9s0,0,0,0c0,0,0,0,0,0,0,0,0,0,0,0Z" fill="#b09f8e"/>
+      <path d="M449.5,1747.6c.2.2.5.2.7,0,.2-.1.2-.4,0-.5-.1,0-.2-.2-.4-.3-.4,0-.6.4-.3.7h0Z" fill="#b09f8e"/>
+      <path d="M440.8,1747.6c.3.2.7.1,1,0,.1,0,.2,0,.3-.1.2-.2.1-.5,0-.6-.2-.2-.5-.1-.7-.1-.2,0-.5,0-.6.2-.1.2,0,.4,0,.5h0Z" fill="#b09f8e"/>
+      <path d="M444.8,1747.8c.2.2.5.3.7.4.3,0,.5-.3.4-.6-.1-.3-.4-.4-.7-.4-.3,0-.6.3-.4.6h0Z" fill="#b09f8e"/>
+      <path d="M460.2,1753c-.4-.1-.6.3-.4.6.1.3.5.4.8.4.3,0,.7-.1.6-.4,0-.2-.3-.3-.5-.4-.2,0-.3-.1-.5-.2h0Z" fill="#b09f8e"/>
+      <path d="M458.8,1754.1c.3-.2.3-.5,0-.6-.4,0-.7,0-1.1-.2-.5,0-.8-.3-1.3-.4-.4,0-.7,0-1.1,0-.6,0-1.2-.3-1.9-.2-.3,0-.5.4-.2.6.3.1.7,0,1,.1.2,0,.4.1.6.2.6.3,1.4.4,2.1.4.3,0,.6.2.9.2.3,0,.6,0,.8-.1h0Z" fill="#b09f8e"/>
+      <path d="M455.3,1748c.2.1.3,0,.5,0,.3,0,.6.3.8.2.3,0,.4-.5.1-.6-.3-.1-.7-.3-1-.3-.2,0-.5,0-.6.2-.1.1,0,.4,0,.5h0Z" fill="#b09f8e"/>
+      <path d="M463.1,1753.7c.5-.3,0-1.3-.6-1.1-.2.1-.4.4-.3.7.2.2.5.5.8.4h0Z" fill="#b09f8e"/>
+    </g>
+    <path d="M430.5,1759.3c0,0-.6-1.2-1-2.4-.4-1.3-.6-1.6-.6-1.6,0,0,1.1,1.7,1.5,2.7.4.9,1,3.6,1,3.6,0,0-.9-2-.8-2.1Z" fill="#b09f8e"/>
+    <path d="M428.7,1787.6c0,0,1.1.1,1.7,0,.6-.1,1.1-.2,1.2,0,.1,0,.5,1.2.4,1.3-.2,0-1.4.1-2,.1-.6,0-1,0-1.2-.4-.2-.4-.2-.9,0-.9Z" fill="#a37c52"/>
+    <path d="M442.7,1787.7c.1,0,1.5,0,1.9,0,.5,0,.6-.3.6-.3s.6.8.5,1c0,.2-.3.3-.7.3-.4,0-1.7,0-1.9-.2-.2-.1-.4-.5-.4-.7,0-.2,0-.2,0-.2Z" fill="#a37c52"/>
+    <path d="M458.5,1787.7c.2,0,2,.2,2.4.2.4,0,.5-.4.5-.3,0,0,.5.9.4,1,0,.1-.4.6-1.7.5-1.3-.1-1.2-.3-1.4-.6-.2-.3-.3-.7-.3-.7Z" fill="#a37c52"/>
+    <path d="M464.4,1788c.2,0,1.8.2,2.3.1.5,0,.6-.3.7-.3,0,0,.5.5.5.9s-.2.6-1.3.7c-1.1,0-1.9-.1-2-.3-.1-.2-.2-1-.2-1Z" fill="#a37c52"/>
+    <path d="M439.6,1746.4c-1.1,0-2.1.2-3.2.2-.2,0-.4.2-.3.5,0,.2.2.4.4.4v-.7c-.6,0-1.1.3-1.7.5-.5.2-1,.5-1.5.8,0,0-.2.2-.3.2-.1,0-.2,0-.3,0-.3,0-.5.1-.8.2-.1,0-.3.1-.4.2,0,0-.1.2-.2.3-.1.2-.4.3-.6.4-.4.2,0,.9.4.6.2-.1.4-.3.6-.4,0,0,.2-.2.3-.3,0-.1,0-.1.2-.2.2-.1.5-.2.8-.2.3,0,.5-.2.8-.4.4-.3.9-.6,1.4-.8.5-.2,1-.4,1.6-.5.2,0,.3-.2.3-.3s-.1-.3-.3-.3c0,0,0,0,0,0-.1.2-.2.3-.3.5,1.1,0,2.1-.2,3.2-.2.2,0,.4-.2.4-.4s-.2-.4-.4-.4h0Z" fill="#b09f8e"/>
+    <path d="M429.9,1760.9c0,.2,0,.3,0,.5,0,.1.2.2.3,0,0-.2.1-.3.1-.5,0-.2,0-.4,0-.6,0,0-.2,0-.3,0,0,0,0,0,0,0,0,.1.3.1.3,0,0-.4.1-.7.1-1.1,0-.2-.3-.2-.3,0,0,.3,0,.7,0,1h.3s0,0,0,0c0-.2-.3-.1-.3,0,0,.2,0,.4,0,.6,0,.2,0,.3-.1.5,0,0,.2,0,.3,0,0-.2,0-.3,0-.5,0-.2-.3-.2-.3,0h0Z" fill="#a37c52"/>
+    <path d="M468.6,1736.6s0,0-.1,0c-.1,0-.3,0-.2.1,0,0,0,.1,0,.2,0,0,0,0,0,.1,0,.1,0,.2,0,.3,0,0,.1,0,.2,0,0,0,0,0,0,0,0,0-.2,0-.2.1,0,.1,0,.2-.1.3,0,0,0,0,0,0,0,0,0,0,0,0,0,0-.1,0-.2,0,0,0-.1,0-.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0-.1,0-.2.2,0,.3,0,0,.2,0,.3.1,0,0,0-.2,0-.3-.2,0-.4,0-.6-.2v.2s0,0,0,0c0,0,0-.2,0-.2-.3-.2-.7-.4-1.1-.4-.1,0-.2.2,0,.3.2.1.5.2.7.3.2,0,.5.2.8.2.2,0,.2-.3,0-.3-.1,0-.2,0-.3,0-.1,0-.2,0-.4-.1-.2,0-.5-.2-.7-.3,0,0,0,.2,0,.3.3,0,.7.2,1,.4v-.2s0,0,0,0c0,0,0,.2,0,.2.2.2.5.3.8.3.2,0,.2-.2,0-.3,0,0-.2,0-.3,0,0,0,0,.2,0,.3.1,0,.2-.1.2-.2h0c0,0,0,0,0,0,0,0,0,0-.1,0,0,0,.2.1.3.1.1,0,.2,0,.3-.1.1-.1.2-.3.2-.5,0,0-.1,0-.2.1,0,0,0,0,0,0,0,0,.2,0,.2,0,0,0,0-.1,0-.2,0,0,0,0,0-.2,0-.1,0-.3,0-.4,0,0-.2,0-.2.1,0,0,0,0,.1,0,.1.1.3,0,.2-.2h0Z" fill="#b09f8e"/>
+    <path d="M468.6,1736.7c0-.3-.2-.5-.4-.7,0,0,0,.2-.1.2,0,0,.2,0,.3,0,.1,0,.2-.1.2-.2,0-.2-.3-.4-.5-.5,0,0,0,.2-.1.2,0,0,0,0,0,0,.1,0,.2,0,.2-.2,0-.2-.2-.2-.3-.3-.1-.1-.2-.2-.3-.4,0-.1-.2-.2-.3-.3,0,0-.1,0-.2,0,0,0-.2,0-.2,0,0,0,0,.2-.1.2,0,0,.2,0,.3,0,.1,0,.1-.2,0-.3-.1,0-.3-.1-.4-.1-.1,0-.3,0-.5-.1,0,0,0,0,0,.1,0-.1,0-.2-.1-.3-.2,0-.4-.1-.5-.2,0,0,0,.2,0,.3.1,0,.3,0,.4,0,0,0,.2,0,.2,0,0,0,.1,0,.2,0,0,0,0-.2,0-.2-.1,0-.2,0-.3-.1-.2,0-.3.2-.1.2.2.1.3.2.6.1,0,0,.2-.2,0-.2-.1,0-.2,0-.4,0-.2,0-.4,0-.6,0-.2,0-.2.2,0,.3.1,0,.2,0,.3.1,0,0,.2,0,.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,.1.1,0,.3,0,.4.1.2,0,.3,0,.5.1,0,0,0-.2,0-.3,0,0-.1,0-.2,0-.1,0-.2.2-.1.2,0,0,.2.1.3.1.2,0,.3,0,.4.1,0,.1.2.2.3.3,0,0,.1.1.2.2,0,0,.2,0,.2.2,0,0,.1-.1.2-.2,0,0,0,0,0,0-.1,0-.3.1-.1.2.1.1.4.3.5.4,0,0,.1-.1.2-.2,0,0-.2,0-.3,0-.1,0-.3.1-.1.2.2.1.3.3.3.5,0,.2.3.2.3,0h0Z" fill="#b09f8e"/>
+    <path d="M465.6,1733.8c-.1,0-.2,0-.4,0,0,0-.1,0-.2,0,0,0-.1,0-.2,0-.1,0-.2,0-.3,0,0,0-.1,0-.2,0,0,0-.1.1,0,.2,0,0,0,.1.2,0,0,0,.1-.1,0-.2,0,0,0,0,0,0h0c0,0,0,0,0,0h0c0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,.1,0,0,0,.2,0,.2,0,.2,0,.4,0,.6.1,0,0,.2,0,.2,0,0,0,0-.2,0-.2h0Z" fill="#b09f8e"/>
+    <path d="M464.3,1733.9c.1.4.4.7.6,1.1,0,0,.1-.1.2-.2,0,0-.1,0-.2-.2-.1-.1-.3,0-.2.1,0,.2.2.4.3.6.1.2.2.3.3.5,0,.2.3.1.3,0,0-.2-.2-.4-.3-.5-.1-.2-.2-.4-.3-.6,0,0-.2,0-.2.1,0,.1.2.2.3.3,0,0,.1,0,.2,0,0,0,0-.1,0-.2-.2-.3-.4-.6-.5-1,0-.2-.3-.1-.3,0h0Z" fill="#b09f8e"/>
+    <path d="M465.6,1736.6c0,0,0-.2,0-.3,0,0,0,0,0-.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0h0c0,0-.1,0-.2-.1,0,0,0,.2,0,.3,0,0,0,.2,0,.3,0,.2.1.4.2.5,0,.1.2,0,.3,0,0-.1,0-.3,0-.4,0,0-.2,0-.3,0,0,.1,0,.3.2.4,0,.1.1.2.3.3,0,0,0,0,.1,0,0,0,0,0,.1.1.1,0,.2.1.3.2,0,0,.2,0,.2,0,0,0,0-.2,0-.2-.1,0-.2-.1-.3-.2,0,0-.2-.2-.3-.2,0,0,0,0-.1,0,0,0,0,0,0-.1,0-.1-.1-.2-.1-.3,0-.1-.3-.1-.3,0,0,.1,0,.2,0,.3h.3c0-.2-.1-.4-.2-.5,0-.2,0-.3-.1-.5,0,0,0-.1-.2,0-.1,0-.1.2-.1.3,0,.1,0,.3,0,.4,0,.2.3.2.3,0h0Z" fill="#b09f8e"/>
+  </g>
+  <g>
+    <text transform="translate(129.7 1925.9)" fill="#2a7de1" font-family="Lato-Bold, Lato" font-size="20px" font-weight="700"><tspan x="0" y="0">Today</tspan></text>
+    <text transform="translate(129.7 1948.6)" font-size="18px" font-family="Lato-Regular, Lato"><tspan x="0" y="0">Large team managing over</tspan><tspan x="0" y="21.6">112 social profiles, 14 Hootsuite accounts, </tspan><tspan x="0" y="43.2">21 animals, and 14 kids.</tspan></text>
   </g>
   </Svg>
 );
